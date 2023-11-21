@@ -64,6 +64,7 @@ function Main() {
                 <div className='lg:flex justify-between items-center'>
                     <div className='sm:min-w-[600px]'>
                         <h1 className='text-[28px] sm:text-[64px] md:text-[72px] font-bold' dangerouslySetInnerHTML={{ __html: languageData?.HeaderTitle }}></h1>
+                        <p className='mt-4 text-[14px] md:text-[16px]'>{languageData?.HeaderSubTitle}</p>
                         <div className='w-full h-[2px] gradient-line mt-[40px] mb-[50px]'></div>
 
                         <div className='max-w-[1135px] p-5 m-auto mt-[20px] md:mt-[50px] bg-gray/25 rounded-[14px] border-[1px] border-[#088CD9]'>
