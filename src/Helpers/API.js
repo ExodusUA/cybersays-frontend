@@ -5,4 +5,4 @@ async function getUserCountry() {
     return res.data.Data.country
 }
 
-export default getUserCountry
+export default { getUserCountry }
