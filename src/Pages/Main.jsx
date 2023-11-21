@@ -51,7 +51,7 @@ function Main() {
         <div className='bg-dark relative'>
             <img className='left-0 top-0 absolute select-none' src={green} alt="Green" />
 
-            <div className='max-w-[1440px] m-auto w-[90%] relative z-10 h-screen'>
+            <div className='max-w-[1440px] m-auto w-[90%] relative z-10 h-screen overflow-hidden'>
 
                 <div className='flex md:justify-center py-5 relative'>
                     <img src={logotype} className='w-[128px]' alt="Logotype" />
