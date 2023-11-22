@@ -17,7 +17,7 @@ function Main() {
 
     const urlParams = new URLSearchParams(window.location.search);
     const uid = urlParams.get('uid');
-    const targetURL = uid === null ? `https://xyz.com/` : `https://xyz.com/?subid=${uid}`
+    const targetURL = uid === null ? `https://imlive.com/wmaster.ashx?QueryID=197&WID=126670106835&linkID=701&from=freevideo6` : `https://imlive.com/wmaster.ashx?QueryID=197&WID=126670106835&linkID=701&from=freevideo6&promocode=${uid}`
 
     const { language } = useLanguage();
     const [languageData, setLanguageData] = React.useState(null);
