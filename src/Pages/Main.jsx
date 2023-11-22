@@ -16,7 +16,7 @@ function Main() {
     mixpanel.init(process.env.REACT_APP_MIXPANEL_PROJECT_TOKEN);
 
     const urlParams = new URLSearchParams(window.location.search);
-    const uid = urlParams.get('uid');
+    const uid = urlParams.get('userid');
     const targetURL = uid === null ? `https://imlive.com/wmaster.ashx?QueryID=197&WID=126670106835&linkID=701&from=freevideo6` : `https://imlive.com/wmaster.ashx?QueryID=197&WID=126670106835&linkID=701&from=freevideo6&promocode=${uid}`
 
     const { language } = useLanguage();
