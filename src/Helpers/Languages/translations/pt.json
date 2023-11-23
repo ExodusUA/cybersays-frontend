@@ -7,6 +7,12 @@
     "LatestOffers": "Últimas Ofertas",
     "OfferTitle": "Netflix - Assista e Ganhe Recompensas",
     "OfferDescription": "Junte-se à Netflix, verifique seu endereço de e-mail e assista a qualquer 5 vídeos para ganhar crédito. Os créditos são concedidos a cada 24 horas. Apenas para novos usuários!",
+    "listTexts": [
+        "Register on ImLive",
+        "Buy 5 credits and get another 5 for free",
+        "Enjoy using the full 10 credits on ImLive",
+        "Get 10$ from CyberSays - doubling the 5$ you spent!"
+    ],
     "OfferButton": "Ir Agora",
     "CopyLink": "Copiar Link",
     "TreatCoins": "Moedas Treat",
