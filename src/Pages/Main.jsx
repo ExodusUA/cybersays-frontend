@@ -2,17 +2,21 @@ import React from 'react'
 import logotype from '../images/logotype.svg'
 import hero from '../images/hero.png'
 import green from '../images/green.svg'
-import netflix from '../images/product.jpeg'
-import coin from '../images/coin.png'
 import purple from '../images/purple.png'
 import Language from '../Components/Language/Language'
 import { useLanguage } from '../Helpers/Languages/LanguageContext'
 import { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import left from '../images/left.svg'
+import right from '../images/right.svg'
+import Slide from '../Components/Language/Slide'
+import { useState } from 'react';
 var mixpanel = require('mixpanel-browser');
+
 
 function Main() {
 
@@ -25,7 +29,7 @@ function Main() {
 
     const { language } = useLanguage();
     const [languageData, setLanguageData] = React.useState(null);
-    const [isLinkCopied, setIsLinkCopied] = React.useState(false);
+
 
     const scrollToAnchor = (anchorName) => {
         if (anchorName) {
@@ -43,25 +47,26 @@ function Main() {
         es: require('../Helpers/Languages/translations/es.json'),
     };
 
-
     useEffect(() => {
         let langData = languages[language];
         setLanguageData(langData);
     }, [language]);
-
-    function handleCopy() {
-        navigator.clipboard.writeText(targetURL);
-        setIsLinkCopied(true);
-        setTimeout(() => {
-            setIsLinkCopied(false);
-        }, 3000);
-    }
 
     useEffect(() => {
         mixpanel.track("page_view_cyber_says", {
             distinct_id: uid || 'not_set'
         });
     }, [])
+
+    const [swiperRef, setSwiperRef] = useState(null);
+
+    const [isBeginning, setIsBeginning] = useState(true);
+    const [isEnd, setIsEnd] = useState(false);
+
+    const handleSlideChange = () => {
+        setIsBeginning(swiperRef?.isBeginning);
+        setIsEnd(swiperRef?.isEnd);
+    };
 
     return (
         <>
@@ -93,37 +98,36 @@ function Main() {
                             <p className='mt-4 text-[14px] md:text-[16px]'>{languageData?.HeaderSubTitle}</p>
                             <div className='w-full h-[2px] gradient-line mt-[40px] mb-[50px]'></div>
 
-                            <div className='max-w-[1135px] p-5 m-auto mt-[20px] md:mt-[50px] bg-gray/25 rounded-[14px] border-[1px] border-[#088CD9]'>
-                                <div className='flex items-center gap-3'>
-                                    <img className=' h-[60px]' src={netflix} alt="Image" />
-                                    <p className='text-white font-bold text-[18px]'>{languageData?.OfferTitle}</p>
+                            <div className='relative'>
+                                <div className='absolute z-20 left-[100px] md:left-[-50px] flex md:h-full md:align-middle mt-5 bottom-[-60px] md:bottom-[unset] md:top-0  buttonPrev' onClick={e => swiperRef?.slidePrev()}>
+                                    <img className='w-10 cursor-pointer' src={left} alt="Left" style={{ opacity: isBeginning ? 0.7 : 1 }} />
                                 </div>
 
-                                <div className='gradient-line w-full h-[2px] my-4'></div>
+                                <Swiper
+                                    onSwiper={(swiper) => {
+                                        setSwiperRef(swiper);
+                                        setIsBeginning(swiper?.isBeginning);
+                                        setIsEnd(swiper?.isEnd);
+                                    }}
+                                    modules={[Navigation]}
+                                    spaceBetween={50}
+                                    slidesPerView={1}
+                                    navigation={{
+                                        prevEl: '.buttonPrev',
+                                        nextEl: '.buttonNext',
+                                    }}
+                                    onSlideChange={handleSlideChange}
+                                >
+                                    <SwiperSlide><Slide languageData={languageData} targetURL={targetURL} uid={uid} /></SwiperSlide>
+                                    <SwiperSlide><Slide languageData={languageData} targetURL={targetURL} uid={uid} /></SwiperSlide>
+                                  
+                                </Swiper>
 
-                                <p className='text-white text-[14px] font-regular saira h-[70px] mb-6 md:mb-0'>{languageData?.OfferDescription}</p>
-                                <div className='flex justify-between items-center'>
-                                    <div>
-                                        <div className='flex gap-2'>
-                                            <img src={coin} className='w-6 h-6' alt="Coin" />
-                                            <p className='font-bold text-[18px] text-white'>0.33</p>
-
-                                        </div>
-                                        <p className='saira text-[16px]'>{languageData?.TreatCoins}</p>
-                                    </div>
-
-                                    <div>
-                                        <a href={targetURL} onClick={e => {
-                                            e.preventDefault();
-                                            mixpanel.track("cyber_says_click", {
-                                                distinct_id: uid || 'not_set'
-                                            });
-                                            window.location.replace(targetURL);
-                                        }}> <button className='px-[25px] py-[10px] saira gradient'>{languageData?.OfferButton}</button></a>
-                                        <p onClick={e => handleCopy()} className={`underline saira text-center text-[12px] text-white mt-2 duration-300 cursor-pointer ${isLinkCopied === true ? 'text-[#088CD9]' : 'text-white'}`}>{isLinkCopied === true ? languageData?.LinkCopied : languageData?.CopyLink}</p>
-                                    </div>
+                                <div className='absolute z-20 right-[100px] md:right-[-50px] flex md:h-full md:align-middle mt-5 bottom-[-60px] md:bottom-[unset] md:top-0 buttonNext ' onClick={e => swiperRef?.slideNext()}>
+                                    <img className='w-10 cursor-pointer' src={right} alt="Right" style={{ opacity: isEnd ? 0.7 : 1 }} />
                                 </div>
                             </div>
+
                         </div>
 
                         <div className='relative'>
