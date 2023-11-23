@@ -9,6 +9,9 @@ import Language from '../Components/Language/Language'
 import { useLanguage } from '../Helpers/Languages/LanguageContext'
 import { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
 var mixpanel = require('mixpanel-browser');
 
 function Main() {
@@ -16,9 +19,7 @@ function Main() {
     const urlParams = new URLSearchParams(window.location.search);
     const uid = urlParams.get('userid');
 
-    mixpanel.init(process.env.REACT_APP_MIXPANEL_PROJECT_TOKEN, {
-        distinct_id: uid || 'not_set'
-    });
+    mixpanel.init(process.env.REACT_APP_MIXPANEL_PROJECT_TOKEN);
 
     const targetURL = uid === null ? `https://imlive.com/wmaster.ashx?QueryID=197&WID=126670106835&linkID=701&from=freevideo6` : `https://imlive.com/wmaster.ashx?QueryID=197&WID=126670106835&linkID=701&from=freevideo6&promocode=${uid}`
 
@@ -114,7 +115,9 @@ function Main() {
                                     <div>
                                         <a href={targetURL} onClick={e => {
                                             e.preventDefault();
-                                            mixpanel.track("cyber_says_click");
+                                            mixpanel.track("cyber_says_click", {
+                                                distinct_id: uid || 'not_set'
+                                            });
                                             window.location.replace(targetURL);
                                         }}> <button className='px-[25px] py-[10px] saira gradient'>{languageData?.OfferButton}</button></a>
                                         <p onClick={e => handleCopy()} className={`underline saira text-center text-[12px] text-white mt-2 duration-300 cursor-pointer ${isLinkCopied === true ? 'text-[#088CD9]' : 'text-white'}`}>{isLinkCopied === true ? languageData?.LinkCopied : languageData?.CopyLink}</p>
