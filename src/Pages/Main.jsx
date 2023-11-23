@@ -30,17 +30,6 @@ function Main() {
     const { language } = useLanguage();
     const [languageData, setLanguageData] = React.useState(null);
 
-
-    const scrollToAnchor = (anchorName) => {
-        if (anchorName) {
-            const anchorElement = document.getElementById(anchorName);
-
-            if (anchorElement) {
-                anchorElement.scrollIntoView({ behavior: "smooth" });
-            }
-        }
-    };
-
     const languages = {
         en: require('../Helpers/Languages/translations/en.json'),
         pt: require('../Helpers/Languages/translations/pt.json'),
