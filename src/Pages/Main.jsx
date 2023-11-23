@@ -108,7 +108,7 @@ function Main() {
                                     onSlideChange={handleSlideChange}
                                 >
                                     <SwiperSlide><Slide languageData={languageData} targetURL={targetURL} uid={uid} /></SwiperSlide>
-                                    <SwiperSlide><Slide languageData={languageData} targetURL={targetURL} uid={uid} /></SwiperSlide>
+                                  
                                   
                                 </Swiper>
 
