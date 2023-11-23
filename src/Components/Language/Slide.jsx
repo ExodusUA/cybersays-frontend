@@ -24,12 +24,12 @@ function Slide({ languageData, targetURL, uid }) {
 
             <div className='gradient-line w-full h-[2px] my-4'></div>
 
-            <p className='text-white text-[14px] font-regular saira h-[70px] mb-6 md:mb-0'>{languageData?.OfferDescription}</p>
+            <p className='text-white text-[14px] font-regular saira min-h-[70px] mb-6 md:mb-4'>{languageData?.OfferDescription}</p>
             <div className='flex justify-between items-center'>
                 <div>
                     <div className='flex gap-2'>
                         <img src={coin} className='w-6 h-6' alt="Coin" />
-                        <p className='font-bold text-[18px] text-white'>0.33</p>
+                        <p className='font-bold text-[18px] text-white'>1,000</p>
 
                     </div>
                     <p className='saira text-[16px]'>{languageData?.TreatCoins}</p>

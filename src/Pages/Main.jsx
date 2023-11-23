@@ -83,9 +83,9 @@ function Main() {
 
                     <div className='lg:flex justify-between items-center'>
                         <div className='sm:min-w-[600px]'>
-                            <h1 className='text-[28px] sm:text-[64px] md:text-[72px] font-bold' dangerouslySetInnerHTML={{ __html: languageData?.HeaderTitle }}></h1>
+                            <h1 className='text-[28px] sm:text-[64px] md:text-[72px] font-bold xl:w-[1000px]' dangerouslySetInnerHTML={{ __html: languageData?.HeaderTitle }}></h1>
                             <p className='mt-4 text-[14px] md:text-[16px]'>{languageData?.HeaderSubTitle}</p>
-                            <div className='w-full h-[2px] gradient-line mt-[10px] mb-[20px] md:mt-[40px] md:mb-[50px]'></div>
+                            <div className='w-full h-[2px] gradient-line mt-[10px] mb-[20px] md:mt-[20px] md:mb-[0px]'></div>
 
                             <div className='relative'>
                                 <div className='absolute z-20 left-[100px] md:left-[-50px] flex md:h-full md:align-middle mt-5 bottom-[-60px] md:bottom-[unset] md:top-0  buttonPrev' onClick={e => swiperRef?.slidePrev()}>
