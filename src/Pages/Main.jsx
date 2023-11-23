@@ -74,7 +74,7 @@ function Main() {
                 <div className='max-w-[1440px] m-auto w-[90%] relative z-10 h-screen overflow-hidden md:overflow-visible'>
 
                     <div className='flex md:justify-center py-2 relative'>
-                        <img src={logotype} className='w-[110px]' alt="Logotype" />
+                        <img src={logotype} className='w-[128px]' alt="Logotype" />
 
                         <div className='absolute right-0 top-0 flex items-center align-middle h-full z-20'>
                             <Language />
