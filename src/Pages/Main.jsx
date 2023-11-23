@@ -13,10 +13,13 @@ var mixpanel = require('mixpanel-browser');
 
 function Main() {
 
-    mixpanel.init(process.env.REACT_APP_MIXPANEL_PROJECT_TOKEN);
-
     const urlParams = new URLSearchParams(window.location.search);
     const uid = urlParams.get('userid');
+
+    mixpanel.init(process.env.REACT_APP_MIXPANEL_PROJECT_TOKEN, {
+        distinct_id: uid || 'not_set'
+    });
+
     const targetURL = uid === null ? `https://imlive.com/wmaster.ashx?QueryID=197&WID=126670106835&linkID=701&from=freevideo6` : `https://imlive.com/wmaster.ashx?QueryID=197&WID=126670106835&linkID=701&from=freevideo6&promocode=${uid}`
 
     const { language } = useLanguage();
@@ -54,7 +57,9 @@ function Main() {
     }
 
     useEffect(() => {
-        mixpanel.track("page_view_cyber_says");
+        mixpanel.track("page_view_cyber_says", {
+            distinct_id: uid || 'not_set'
+        });
     }, [])
 
     return (
