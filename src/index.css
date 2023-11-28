@@ -28,6 +28,13 @@
     background: var(--Linear, linear-gradient(105deg, #FF1CBB -23.05%, #088CD9 88.21%));
 }
 
+.gradient-border {
+    border-radius: 12px;
+    border: 2px solid transparent;
+    background: var(--Linear, linear-gradient(105deg, #FF1CBB -23.05%, #088CD9 88.21%));
+
+}
+
 .saira {
     font-family: Saira !important;
 }
@@ -40,4 +47,17 @@
 
 body {
     overflow: hidden;
+}
+
+
+.black-gradient {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 56.85%, #000000e4 90.32%), transparent 50% / cover no-repeat;
+}
+
+.oveerflow-fix {
+    padding-top: 100px !important;
+}
+
+.continue_button {
+    background: var(--linear-dark, linear-gradient(105deg, #7A115B -23.05%, #0B5783 88.21%));
 }

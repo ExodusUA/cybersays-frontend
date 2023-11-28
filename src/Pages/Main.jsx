@@ -4,7 +4,6 @@ import hero from '../images/hero.png'
 import green from '../images/green.svg'
 import purple from '../images/purple.png'
 import Language from '../Components/Language/Language'
-import { useLanguage } from '../Helpers/Languages/LanguageContext'
 import { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -13,33 +12,12 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import left from '../images/left.svg'
 import right from '../images/right.svg'
-import Slide from '../Components/Language/Slide'
+import Slide from '../Components/Slide'
 import { useState } from 'react';
 var mixpanel = require('mixpanel-browser');
 
 
-function Main() {
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const uid = urlParams.get('userid');
-
-    mixpanel.init(process.env.REACT_APP_MIXPANEL_PROJECT_TOKEN);
-
-    const targetURL = uid === null ? `https://imlive.com/wmaster.ashx?QueryID=197&WID=126670106835&linkID=701&from=freevideo6` : `https://imlive.com/wmaster.ashx?QueryID=197&WID=126670106835&linkID=701&from=freevideo6&promocode=${uid}`
-
-    const { language } = useLanguage();
-    const [languageData, setLanguageData] = React.useState(null);
-
-    const languages = {
-        en: require('../Helpers/Languages/translations/en.json'),
-        pt: require('../Helpers/Languages/translations/pt.json'),
-        es: require('../Helpers/Languages/translations/es.json'),
-    };
-
-    useEffect(() => {
-        let langData = languages[language];
-        setLanguageData(langData);
-    }, [language]);
+function Main({ languageData, targetURL, uid }) {
 
     useEffect(() => {
         mixpanel.track("page_view_cyber_says", {
@@ -107,8 +85,8 @@ function Main() {
                                     onSlideChange={handleSlideChange}
                                 >
                                     <SwiperSlide><Slide languageData={languageData} targetURL={targetURL} uid={uid} /></SwiperSlide>
-                                  
-                                  
+
+
                                 </Swiper>
 
                                 <div className='absolute z-20 right-[100px] md:right-[-50px] flex md:h-full md:align-middle mt-5 bottom-[-60px] md:bottom-[unset] md:top-0 buttonNext ' onClick={e => swiperRef?.slideNext()}>

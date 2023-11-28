@@ -1,7 +1,6 @@
 import React from 'react'
-import netflix from '../../images/product.jpeg'
-import coin from '../../images/coin.png'
-import checkmark from '../../images/checkmark.png'
+import netflix from '../images/product.jpeg'
+import coin from '../images/coin.png'
 var mixpanel = require('mixpanel-browser');
 
 function Slide({ languageData, targetURL, uid }) {

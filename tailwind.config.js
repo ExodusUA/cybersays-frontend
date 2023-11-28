@@ -13,7 +13,11 @@ module.exports = {
         gray: '#83869B',
         white: '#F5F5F5',
       },
-    }
+    },
+    backgroundImage: theme => ({
+      'modal': "url('./images/landing/modal_bg.png')",
+      'mobile': "url('./images/landing/mobile-bg.png')",
+    })
   },
   plugins: [],
 }
