@@ -7,8 +7,10 @@ function RegisterModal() {
     const [otpCode, setOtpCode] = useState('');
     const [regEmail, setRegEmail] = useState('');
     const [regPassword, setRegPassword] = useState('');
+    const [agree, setAgree] = useState('');
     const [agreeEmail, setAgreeEmail] = useState('');
     const [agreeTerms, setAgreeTerms] = useState('');
+
 
     return (
         <div className='w-screen h-screen bg-modal fixed left-0 top-0 z-[99] bg-cover flex items-center justify-center'>
@@ -38,7 +40,7 @@ function RegisterModal() {
                     <input
                         id='agreeEmail'
                         checked={agreeEmail}
-                        onChange={e => setAgreeEmail(e.target.value)}
+                        onChange={e => setAgreeEmail(e.target.checked)}
                         type="checkbox"
                         className=' hidden'
                     />
@@ -56,12 +58,12 @@ function RegisterModal() {
                     <input
                         id='agreeTerms'
                         checked={agreeTerms}
-                        onChange={e => setAgreeTerms(e.target.value)}
+                        onChange={e => setAgreeTerms(e.target.checked)}
                         type="checkbox"
                         className=' hidden'
                     />
 
-                    <label className=' border-[3px] border-[#F5F5F5] w-[24px] h-[24px] rounded-[6px] flex items-center justify-center ' htmlFor="agreeEmail">
+                    <label className=' border-[3px] border-[#F5F5F5] w-[24px] h-[24px] rounded-[6px] flex items-center justify-center ' htmlFor="agreeTerms">
                         {agreeTerms && (
                             <div className="w-[24px] h-[24px] bg-tramsparent rounded-[4px] flex justify-center items-center ">
                                 <img src={check} alt="check" />
