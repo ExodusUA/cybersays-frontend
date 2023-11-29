@@ -1,12 +1,14 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { LanguageProvider } from './Helpers/Languages/LanguageContext';
 import Main from './Pages/Main';
-import Homepage from './Pages/Homepage';
 import { useLanguage } from './Helpers/Languages/LanguageContext';
 import React, { useEffect } from 'react';
 import mixpanel from 'mixpanel-browser';
+import Auth from './Pages/Auth';
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 
 function App() {
+
+  const queryClient = new QueryClient()
 
   const urlParams = new URLSearchParams(window.location.search);
   const uid = urlParams.get('userid');
@@ -30,12 +32,14 @@ function App() {
   }, [language]);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/offer" element={<Main languageData={languageData} targetURL={targetURL} uid={uid} />} />
-        <Route path="/" element={<Homepage languageData={languageData} />} />
-      </Routes>
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main languageData={languageData} targetURL={targetURL} uid={uid} />} />
+          <Route path="/login" element={<Auth languageData={languageData} />} />
+        </Routes>
+      </BrowserRouter>
+    </QueryClientProvider>
   );
 }
 

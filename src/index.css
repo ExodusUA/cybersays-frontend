@@ -22,12 +22,14 @@
     border-radius: 12px;
     border: 2px solid transparent;
 }
+
 .gradient-userButton {
-    background: linear-gradient(#83869b, #83869b) padding-box,
+    background: linear-gradient(#28364C, #28364C) padding-box,
         linear-gradient(to right, #FF1CBB, #088CD9) border-box;
     border-radius: 12px;
     border: 2px solid transparent;
 }
+
 .gradient-line {
     border-radius: 50px;
     background: var(--Linear, linear-gradient(105deg, #FF1CBB -23.05%, #088CD9 88.21%));

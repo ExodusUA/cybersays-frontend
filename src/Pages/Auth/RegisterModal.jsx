@@ -2,14 +2,33 @@ import React, { useState } from 'react';
 import logotype from '../../images/logotype.svg';
 import check from '../../images/checkbox.png';
 import { Link } from 'react-router-dom';
+import { registerUser } from '../../Requests/auth';
+import { useNavigate } from 'react-router-dom';
 
-function RegisterModal() {
-    const [otpCode, setOtpCode] = useState('');
-    const [regEmail, setRegEmail] = useState('');
-    const [regPassword, setRegPassword] = useState('');
-    const [agree, setAgree] = useState('');
+function RegisterModal({ recaptchaRef, refferalCode, email }) {
+
+    const navigate = useNavigate();
+
+    const [userName, setUserName] = useState('');
+    const [password, setPassword] = useState('');
+
     const [agreeEmail, setAgreeEmail] = useState('');
     const [agreeTerms, setAgreeTerms] = useState('');
+
+    const regUser = async () => {
+
+        if (userName === '') return alert('Please enter your username')
+        if (password === '') return alert('Please enter your password')
+
+        const token = await recaptchaRef.current.executeAsync();
+
+        const res = await registerUser(token, email, password, userName, refferalCode);
+
+        if (res.status === 200) {
+            localStorage.setItem('token', res.data.token);
+            navigate('/')
+        }
+    }
 
 
     return (
@@ -21,8 +40,8 @@ function RegisterModal() {
                 <p className='py-8 text-[24px] font-bold'>Create an account on CyberSays</p>
                 <input
                     className='saira px-5 bg-white text-gray h-[52px] rounded-[12px] w-full sm:w-[485px] outline-none'
-                    value={regEmail}
-                    onChange={e => setRegEmail(e.target.value)}
+                    value={userName}
+                    onChange={e => setUserName(e.target.value)}
                     type="text"
                     placeholder='Enter your username'
                 />
@@ -30,8 +49,8 @@ function RegisterModal() {
                 <div className='w-full items-center flex justify-center gap-2 mt-5'>
                     <input
                         className='saira px-5 bg-white text-gray h-[52px] rounded-[12px] w-full sm:w-[485px] outline-none'
-                        value={regPassword}
-                        onChange={e => setRegPassword(e.target.value)}
+                        value={password}
+                        onChange={e => setPassword(e.target.value)}
                         type="text"
                         placeholder='Password'
                     />
@@ -45,7 +64,7 @@ function RegisterModal() {
                         className=' hidden'
                     />
 
-                    <label className=' border-[3px] border-[#F5F5F5] w-[24px] h-[24px] rounded-[6px] flex items-center justify-center ' htmlFor="agreeEmail">
+                    <label className=' border-[3px] border-[#F5F5F5] w-[24px] h-[24px] rounded-[6px] flex items-center justify-center cursor-pointer' htmlFor="agreeEmail">
                         {agreeEmail && (
                             <div className="w-[24px] h-[24px] bg-tramsparent rounded-[4px] flex justify-center items-center ">
                                 <img src={check} alt="check" />
@@ -60,10 +79,10 @@ function RegisterModal() {
                         checked={agreeTerms}
                         onChange={e => setAgreeTerms(e.target.checked)}
                         type="checkbox"
-                        className=' hidden'
+                        className='hidden'
                     />
 
-                    <label className=' border-[3px] border-[#F5F5F5] w-[24px] h-[24px] rounded-[6px] flex items-center justify-center ' htmlFor="agreeTerms">
+                    <label className=' border-[3px] border-[#F5F5F5] w-[24px] h-[24px] rounded-[6px] flex items-center justify-center cursor-pointer' htmlFor="agreeTerms">
                         {agreeTerms && (
                             <div className="w-[24px] h-[24px] bg-tramsparent rounded-[4px] flex justify-center items-center ">
                                 <img src={check} alt="check" />
@@ -72,7 +91,7 @@ function RegisterModal() {
                     </label>
                     <label htmlFor="agreeTerms" className='select-none cursor-pointer text-[16px] saira font-normal ml-3'>I agree with the <span className='text-[#9D3EFD] saira font-semibold'>Terms of use</span> and <span className='text-[#9D3EFD] saira font-semibold'>Privacy policy</span> </label>
                 </div>
-                <button className='continue_button w-full h-[52px] rounded-[12px] saira mt-5 duration-200 disabled:opacity-80' disabled={true}>Create an account</button>
+                <button className='continue_button w-full h-[52px] rounded-[12px] saira mt-5 duration-200 disabled:opacity-70' disabled={!agreeTerms} onClick={e => regUser()}>Create an account</button>
 
                 <p className='saira mt-5'>Already have an account? <Link className='text-[#9D3EFD] saira' to={'/login'}>Sign in</Link></p>
             </div>

@@ -9,7 +9,7 @@ function FacebookButton({ loginViaFacebook, setLoading }) {
     }
 
     return (
-        <LoginSocialFacebook className='mt-4 lg:mt-0 w-full' scope='email' fields='email' appId='356492313416801' onResolve={(response) => {
+        <LoginSocialFacebook className='mt-4 lg:mt-0 w-full' scope='email' fields='email' appId={process.env.REACT_APP_FACEBOOK_APP_ID} onResolve={(response) => {
             console.log(response)
             getFacebookEmail(response)
         }}

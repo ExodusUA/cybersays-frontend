@@ -6,15 +6,12 @@ import Language from '../Components/Language/Language'
 import logotype from '../images/logotype.svg'
 import 'swiper/css';
 import 'swiper/css/navigation';
-import Slider from './Homepage/Slider';
-import LoginForm from './Homepage/LoginForm';
-import UserMenuModal from '../Components/UserMenuModal';
-import UserMenuButton from '../Components/UserMenuButton';
+import Slider from './Auth/Slider';
+import LoginForm from './Auth/LoginForm';
 
-function Homepage({ languageData }) {
+function Auth({ languageData }) {
 
    
-
     return (
         <>
             <Helmet>
@@ -45,10 +42,6 @@ function Homepage({ languageData }) {
                                 <p className='w-[100%] text-center lg:text-left text-[24px] leading-7 font-bold lg:text-[30px] text-white lg:leading-9 lg:border-b-2 border-[#A8AFF2] py-4 lg:py-8 lg:pt-6'>CyberSays: Double Your Money, Double Your Gains!</p>
                                 <LoginForm />
                             </div>
-
-
-                            <UserMenuButton  />
-                            
                         </div>
                     </div>
                 </div>
@@ -60,4 +53,4 @@ function Homepage({ languageData }) {
     )
 }
 
-export default Homepage
+export default Auth

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import user from '../images/userBtn.png';
-import UserMenuModal from '../Components/UserMenuModal';
+import userImage from '../images/userBtn.png';
+import UserMenu from './UserMenu';
 
-function UserMenuButton() {
+function UserMenuButton({ user }) {
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -22,11 +22,11 @@ function UserMenuButton() {
 
   return (
     <div ref={menuRef}>
-      <button className='bg-[#83869b] bg-opacity-25 flex items-center gap-2 px-[25px] py-[10px] border-[1px] border-[#FF1CBB] rounded-[12px]' onClick={() => setUserMenuOpen(true)}>
-        <p className='text-white font-normal text-[14px] saira'>Welcome back, &#123;Use Name&#125;</p>
-        <img className='w-[20px]' src={user} alt="user" />
+      <button className='bg-[#83869b] bg-opacity-25 flex items-center gap-2 px-[25px] py-[13px] border-[1px] border-[#FF1CBB] rounded-[12px] gradient-userButton' onClick={() => setUserMenuOpen(!userMenuOpen)}>
+        <p className='text-white font-normal text-[14px] saira max-w-[200px] truncate'>Welcome back, {user?.username === null ? user?.email : user?.username}</p>
+        <img className='w-[20px]' src={userImage} alt="user" />
       </button>
-      {userMenuOpen && <UserMenuModal setUserMenuOpen={setUserMenuOpen} />}
+      {userMenuOpen && <UserMenu setUserMenuOpen={setUserMenuOpen} />}
     </div>
   );
 }
