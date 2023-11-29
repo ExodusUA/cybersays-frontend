@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -8,8 +8,12 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import Slider from './Homepage/Slider';
 import LoginForm from './Homepage/LoginForm';
+import UserMenuModal from '../Components/UserMenuModal';
+import UserMenuButton from '../Components/UserMenuButton';
 
 function Homepage({ languageData }) {
+
+   
 
     return (
         <>
@@ -41,6 +45,10 @@ function Homepage({ languageData }) {
                                 <p className='w-[100%] text-center lg:text-left text-[24px] leading-7 font-bold lg:text-[30px] text-white lg:leading-9 lg:border-b-2 border-[#A8AFF2] py-4 lg:py-8 lg:pt-6'>CyberSays: Double Your Money, Double Your Gains!</p>
                                 <LoginForm />
                             </div>
+
+
+                            <UserMenuButton  />
+                            
                         </div>
                     </div>
                 </div>

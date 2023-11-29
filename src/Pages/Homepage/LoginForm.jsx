@@ -5,6 +5,7 @@ import { authUser } from '../../Requests/auth';
 import GoogleAuth from '../../Components/Buttons/GoogleButton';
 import FacebookButton from '../../Components/Buttons/FacebookButton';
 import OTPModal from './OTPModal';
+import RegisterModal from './RegisterModal';
 
 function LoginForm() {
 
@@ -60,7 +61,7 @@ function LoginForm() {
             </ReCAPTCHA>
 
             {
-                isModalOpen && <OTPModal setIsModalOpen={setIsModalOpen} />
+                isModalOpen && <RegisterModal setIsModalOpen={setIsModalOpen} />
             }
         </>
     )

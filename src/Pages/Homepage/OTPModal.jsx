@@ -14,7 +14,7 @@ function OTPModal() {
 
                 <p className='py-8 text-[24px] font-bold'>Verify your account</p>
                 <input
-                    className='saira px-5 bg-white text-[] h-[52px] rounded-[12px] w-full sm:w-[485px]'
+                    className='saira px-5 bg-white text-gray h-[52px] rounded-[12px] w-full sm:w-[485px]'
                     value={otpCode}
                     onChange={e => setOtpCode(e.target.value)}
                     type="text"
