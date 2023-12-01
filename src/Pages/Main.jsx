@@ -3,7 +3,6 @@ import logotype from '../images/logotype.svg'
 import hero from '../images/hero.png'
 import green from '../images/green.svg'
 import purple from '../images/purple.png'
-import Language from '../Components/Language/Language'
 import { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,15 +13,36 @@ import left from '../images/left.svg'
 import right from '../images/right.svg'
 import Slide from '../Components/Slide'
 import { useState } from 'react';
+import UserMenuButton from '../Components/UserMenuButton'
+import LoginButton from '../Components/Buttons/LoginButton'
+import userAPI from '../Requests/user'
 var mixpanel = require('mixpanel-browser');
 
 
 function Main({ languageData, targetURL, uid }) {
 
+    const [userData, setUserData] = useState(null);
+
     useEffect(() => {
+
+        /* MIXPANEL */
+
         mixpanel.track("page_view_cyber_says", {
             distinct_id: uid || 'not_set'
         });
+
+        /* USER DATA */
+
+        let token = localStorage.getItem('token');
+
+        if (token === null) return;
+
+        const res = userAPI.getUserData();
+
+        res.then((data) => {
+            setUserData(data)
+        })
+
     }, [])
 
     const [swiperRef, setSwiperRef] = useState(null);
@@ -55,7 +75,11 @@ function Main({ languageData, targetURL, uid }) {
                         <img src={logotype} className='w-[128px]' alt="Logotype" />
 
                         <div className='absolute right-0 top-0 flex items-center align-middle h-full z-20'>
-                            <Language />
+                            {
+                                localStorage.getItem('token') === null
+                                    ? <LoginButton />
+                                    : <UserMenuButton user={userData} />
+                            }
                         </div>
                     </div>
 
@@ -102,6 +126,7 @@ function Main({ languageData, targetURL, uid }) {
                     </div>
                 </div>
                 <img className='absolute bottom-0 left-0 ' src={purple} alt="Purple" />
+                
             </div>
         </>
 

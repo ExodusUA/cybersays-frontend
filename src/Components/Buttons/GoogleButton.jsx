@@ -6,7 +6,7 @@ function GoogleButton({ loginViaGoogle }) {
 
     return (
         <>
-            <LoginSocialGoogle className='w-full' scope='https://www.googleapis.com/auth/userinfo.email' client_id='539052354588-6lpssquossom75ju3kudcm1hn2e88udq.apps.googleusercontent.com' onResolve={(response) => {
+            <LoginSocialGoogle className='w-full' scope='https://www.googleapis.com/auth/userinfo.email' client_id={process.env.REACT_APP_GOOGLE_CLIENT_ID} onResolve={(response) => {
                 console.log(response.data)
                 console.log('Google Email: ', response.data.email)
                 loginViaGoogle(response.data.email)
