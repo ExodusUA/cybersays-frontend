@@ -18,8 +18,8 @@ function LoginForm() {
     let refferalCode = queryParams.get('ref');
     let special = queryParams.get('special');
 
-    if (special === undefined || special === null) special = ''
-    if (refferalCode === undefined || refferalCode === null) refferalCode = ''
+    if (special === undefined || special === null) special = null
+    if (refferalCode === undefined || refferalCode === null) refferalCode = null
 
     const [email, setEmail] = useState('');
 
