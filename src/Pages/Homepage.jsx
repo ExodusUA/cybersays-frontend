@@ -6,13 +6,14 @@ import Language from '../Components/Language/Language'
 import logotype from '../images/logotype.svg'
 import 'swiper/css';
 import 'swiper/css/navigation';
-import Slider from './Auth/Slider';
-import LoginForm from './Auth/LoginForm';
+import Slider from './Homepage/Slider';
+import LoginForm from './Homepage/LoginForm';
+import UserMenuModal from '../Components/UserMenuModal';
+import UserMenuButton from '../Components/UserMenuButton';
 import InviteFriends from '../Components/InviteFriends';
-import OTPModal from './Homepage/OTPModal';
 
+function Homepage({ languageData }) {
 
-function Auth({ languageData }) {
 
 
     return (
@@ -45,10 +46,13 @@ function Auth({ languageData }) {
                                 <p className='w-[100%] text-center lg:text-left text-[24px] leading-7 font-bold lg:text-[30px] text-white lg:leading-9 lg:border-b-2 border-[#A8AFF2] py-4 lg:py-8 lg:pt-6'>CyberSays: Double Your Money, Double Your Gains!</p>
                                 <LoginForm />
                             </div>
+
+                           
+
                         </div>
                     </div>
                 </div>
-            
+
                 <div className='w-[1000px] h-[1000px] absolute right-[-100px] bottom-[-700px] bg-[#530A59] blur-[100px] z-1 rounded-[1000px]'></div>
             </section>
         </>
@@ -56,4 +60,4 @@ function Auth({ languageData }) {
     )
 }
 
-export default Auth
+export default Homepage

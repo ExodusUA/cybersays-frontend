@@ -29,7 +29,12 @@
     border-radius: 12px;
     border: 2px solid transparent;
 }
-
+.gradient-number {
+    background: linear-gradient(#405C68, #405C68) padding-box,
+        linear-gradient(to right, #FF1CBB, #088CD9) border-box;
+    border-radius: 100%;
+    border: 1px solid transparent;
+}
 .gradient-line {
     border-radius: 50px;
     background: var(--Linear, linear-gradient(105deg, #FF1CBB -23.05%, #088CD9 88.21%));
