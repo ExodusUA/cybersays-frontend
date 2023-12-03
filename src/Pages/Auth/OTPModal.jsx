@@ -4,18 +4,21 @@ import clock from '../../images//landing/clock.png';
 import { Link } from 'react-router-dom';
 import { otpVerify } from '../../Requests/auth';
 import moment from 'moment';
+import { useNavigate } from 'react-router-dom';
 
-function OTPModal({ recaptchaRef, setActiveModal }) {
+function OTPModal({ recaptchaRef, email, refferalCode, special }) {
     const [otpCode, setOtpCode] = useState('');
     const [isCodeWrong, setIsCodeWrong] = useState(false);
+    const navigate = useNavigate();
 
     const handleVerify = async () => {
 
         const token = await recaptchaRef.current.executeAsync();
 
         try {
-            const verify = await otpVerify(token, otpCode);
-            setActiveModal('register')
+            const res = await otpVerify(token, otpCode, refferalCode, email, special);
+            localStorage.setItem('token', res.data.token);
+            navigate('/')
         } catch (error) {
             setIsCodeWrong(true)
         }
