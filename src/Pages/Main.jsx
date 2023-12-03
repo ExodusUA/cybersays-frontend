@@ -16,7 +16,6 @@ import { useState } from 'react';
 import UserMenuButton from '../Components/UserMenuButton'
 import LoginButton from '../Components/Buttons/LoginButton'
 import userAPI from '../Requests/user'
-import FinishSteps from './FinishSteps'
 var mixpanel = require('mixpanel-browser');
 
 

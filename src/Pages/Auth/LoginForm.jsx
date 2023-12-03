@@ -5,8 +5,8 @@ import { otpSending, socialUserAuth } from '../../Requests/auth';
 import GoogleAuth from '../../Components/Buttons/GoogleButton';
 import FacebookButton from '../../Components/Buttons/FacebookButton';
 import OTPModal from './OTPModal';
-import RegisterModal from './RegisterModal';
 import { useNavigate } from 'react-router-dom';
+import AuthEmailNotification from './AuthEmailNotification';
 
 function LoginForm() {
 
@@ -16,6 +16,9 @@ function LoginForm() {
     const [activeModal, setActiveModal] = useState(null);
     const queryParams = new URLSearchParams(window.location.search);
     let refferalCode = queryParams.get('ref');
+    let special = queryParams.get('special');
+
+    if (special === undefined) special = null
 
     const [email, setEmail] = useState('');
 
@@ -28,8 +31,13 @@ function LoginForm() {
         const token = await recaptchaRef.current.executeAsync();
 
         try {
-            const res = await otpSending(token, email)
-            setActiveModal('otp')
+            const res = await otpSending(token, email, refferalCode)
+
+            if (res.data === "Auth link sended") {
+                setActiveModal('notification')
+            } else {
+                setActiveModal('otp')
+            }
         } catch (error) {
             alert('Error: ', error.message)
         }
@@ -50,7 +58,7 @@ function LoginForm() {
 
     async function socialAuth(email, token) {
         try {
-            const res = await socialUserAuth(email, token, refferalCode);
+            const res = await socialUserAuth(email, token, refferalCode, special);
             localStorage.setItem('token', res.token);
             navigate('/')
         } catch (error) {
@@ -61,9 +69,9 @@ function LoginForm() {
     const getCurrentModal = () => {
         switch (activeModal) {
             case 'otp':
-                return <OTPModal setActiveModal={setActiveModal} recaptchaRef={recaptchaRef} />
-            case 'register':
-                return <RegisterModal recaptchaRef={recaptchaRef} email={email} refferalCode={refferalCode} setActiveModal={setActiveModal} />
+                return <OTPModal recaptchaRef={recaptchaRef} email={email} refferalCode={refferalCode} special={special} />
+            case 'notification':
+                return <AuthEmailNotification />
             default:
                 return null
         }

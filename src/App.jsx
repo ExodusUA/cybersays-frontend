@@ -5,6 +5,7 @@ import React, { useEffect } from 'react';
 import mixpanel from 'mixpanel-browser';
 import Auth from './Pages/Auth';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
+import Token from './Pages/Token';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main languageData={languageData} targetURL={targetURL} uid={uid} />} />
           <Route path="/login" element={<Auth languageData={languageData} />} />
+          <Route path="/token/*" element={<Token  />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
