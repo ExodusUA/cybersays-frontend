@@ -35,6 +35,12 @@
     border-radius: 100%;
     border: 1px solid transparent;
 }
+.gradient-gift {
+    background: linear-gradient(#3D3456, #3D3456) padding-box,
+        linear-gradient(to right, #FF1CBB, #088CD9) border-box;
+    border-radius: 100%;
+    border: 1px solid transparent;
+}
 .gradient-line {
     border-radius: 50px;
     background: var(--Linear, linear-gradient(105deg, #FF1CBB -23.05%, #088CD9 88.21%));

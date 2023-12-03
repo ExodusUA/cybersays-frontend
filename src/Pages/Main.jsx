@@ -16,7 +16,6 @@ import { useState } from 'react';
 import UserMenuButton from '../Components/UserMenuButton'
 import LoginButton from '../Components/Buttons/LoginButton'
 import userAPI from '../Requests/user'
-import FinishSteps from './FinishSteps'
 var mixpanel = require('mixpanel-browser');
 
 
@@ -127,7 +126,9 @@ function Main({ languageData, targetURL, uid }) {
                     </div>
                 </div>
                 <img className='absolute bottom-0 left-0 ' src={purple} alt="Purple" />
-                
+                {/*
+                <FinishSteps languageData={languageData} targetURL={targetURL} uid={uid} />
+                */}
             </div>
         </>
 
