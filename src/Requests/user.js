@@ -14,5 +14,16 @@ async function getUserData() {
 
 }
 
+/* DELETE USER */
 
-export default { getUserData };
+async function deleteUser() {
+    const response = await axios.delete(process.env.REACT_APP_API_URL + '/user', {
+        headers: {
+            token: `${getToken()}`
+        }
+    });
+    return response;
+}
+
+
+export default { getUserData, deleteUser };

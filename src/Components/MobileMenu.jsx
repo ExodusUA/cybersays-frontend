@@ -31,16 +31,16 @@ function MobileMenu() {
 
 
     return (
-        <div className='flex justify-center w-screen fixed bottom-10 z-[999]'>
+        <div className='flex justify-center w-screen fixed bottom-5 md:bottom-10 z-[999]'>
             <div className=' bg-[#DDD2DD] flex justify-between items-center rounded-[50px] px-[10px] py-[5px] '>
-                <Link to='#'>
+                <Link to='/'>
                     <img className='w-[32px] h-[32px] mx-[5px] cursor-pointer'
                         src={activePage === 'menu' ? link1 : link1}
                         alt="link1" />
                 </Link>
                 <Link to='/gifts'>
                     <img className='w-[32px] h-[32px] mx-[5px] cursor-pointer'
-                        src={activePage === 'gifts' === 2 ? activeLink2 : link2}
+                        src={activePage === 'gifts' ? activeLink2 : link2}
                         alt="link1" />
                 </Link>
                 <Link to='/tasks'>
