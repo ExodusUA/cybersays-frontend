@@ -40,7 +40,7 @@ function MobileMenu() {
                 </Link>
                 <Link to='/gifts'>
                     <img className='w-[32px] h-[32px] mx-[5px] cursor-pointer'
-                        src={activePage === 'gifts' === 2 ? activeLink2 : link2}
+                        src={activePage === 'gifts' ? activeLink2 : link2}
                         alt="link1" />
                 </Link>
                 <Link to='/tasks'>

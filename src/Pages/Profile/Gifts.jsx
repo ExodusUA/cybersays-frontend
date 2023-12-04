@@ -8,7 +8,7 @@ import selectGift2 from '../../images/selectGift2.png'
 import selectGift3 from '../../images/selectGift3.png'
 import selectGift4 from '../../images/selectGift4.png'
 
-function GiftProvider() {
+function Gifts({setSelectPayment}) {
     return (
         <div className='w-screen h-screen bg-modal fixed left-0 top-0 z-[99] bg-cover flex items-center justify-center'>
 
@@ -60,10 +60,10 @@ function GiftProvider() {
                         <p className=' ml-2  text-white text-[16px] font-bold saira'>Refer</p>
                     </div>
                 </div>
-                <button className='px-[30px] py-[14px] saira gradient text-[16px] w-full font-semibold mt-4'>Choose How to Get Paid</button>
+                <button onClick={e => setSelectPayment(true)} className='px-[30px] py-[14px] saira gradient text-[16px] w-full font-semibold mt-4'>Choose How to Get Paid</button>
             </div>
         </div>
     )
 }
 
-export default GiftProvider
+export default Gifts
