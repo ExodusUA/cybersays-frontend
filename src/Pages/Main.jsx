@@ -16,6 +16,8 @@ import { useState } from 'react';
 import UserMenuButton from '../Components/UserMenuButton'
 import LoginButton from '../Components/Buttons/LoginButton'
 import userAPI from '../Requests/user'
+import FinishSteps from './Gift/FinishSteps'
+import MyProfile from './Gift/MyProfile'
 var mixpanel = require('mixpanel-browser');
 
 
@@ -129,6 +131,7 @@ function Main({ languageData, targetURL, uid }) {
                 {/*
                 <FinishSteps languageData={languageData} targetURL={targetURL} uid={uid} />
                 */}
+                <MyProfile />
             </div>
         </>
 

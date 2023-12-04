@@ -1,7 +1,7 @@
 {
   "name": "cybersays-frontend",
   "version": "0.1.0",
-  "homepage": ".",
+  "homepage": "https://cybersays-frontend.vercel.app",
   "private": true,
   "dependencies": {
     "@tanstack/react-query": "^5.10.0",

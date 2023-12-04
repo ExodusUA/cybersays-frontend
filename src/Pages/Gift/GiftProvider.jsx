@@ -12,7 +12,7 @@ function GiftProvider() {
     return (
         <div className='w-screen h-screen bg-modal fixed left-0 top-0 z-[99] bg-cover flex items-center justify-center'>
 
-            <div className='max-w-[400px] mx-3  m-auto mt-[20px] md:mt-[50px]  rounded-[14px]  '>
+            <div className='max-w-[375px] mx-3  m-auto mt-[20px] md:mt-[50px]  rounded-[14px]  '>
                 <div className='flex items-center gap-3'>
                     <img className=' w-[95px] mb-[-5px]' src={logoCyber} alt="Image" />
                     <p className='text-white font-bold text-[18px]'>double your <span className='text-gradient'>money</span> 🤑</p>
@@ -21,21 +21,21 @@ function GiftProvider() {
                 <p className=' font-bold text-[16px] text-center mb-4 uppercase'>And your gift provider is...</p>
                 <div className='relative'>
                     <div className=' absolute  flex w-full'>
-                        <img className=' h-[30px] absolute left-[40px] top-[8px]' src={selectGift1} alt="selectGift1" />
-                        <img className=' h-[30px] absolute right-[50px] top-[8px]' src={selectGift2} alt="selectGift2" />
+                        <img className=' h-[30px] absolute left-[40px] top-[8px] cursor-pointer' src={selectGift1} alt="selectGift1" />
+                        <img className=' h-[30px] absolute right-[50px] top-[8px] cursor-pointer' src={selectGift2} alt="selectGift2" />
                     </div>
-                    <img className='  w-full select-none pointer-events-none' src={giftFields} alt="giftFields" />
+                    <img className='  w-full select-none pointer-events-none ' src={giftFields} alt="giftFields" />
                     <div className=' absolute  flex w-full'>
-                        <img className=' h-[30px] absolute left-[30px] bottom-[15px]' src={selectGift3} alt="selectGift3" />
-                        <img className=' h-[40px] absolute right-[40px] bottom-[14px]' src={selectGift4} alt="selectGift4" />
+                        <img className=' h-[30px] absolute left-[30px] bottom-[15px] cursor-pointer' src={selectGift3} alt="selectGift3" />
+                        <img className=' h-[40px] absolute right-[40px] bottom-[14px] cursor-pointer' src={selectGift4} alt="selectGift4" />
                     </div>
                 </div>
                 <div className='relative'>
                     <img className=' w-[200px] mb-[-60px] m-auto' src={woman} alt="image" />
-                    <div className='flex justify-between absolute w-full'>
-                        <div className='w-[100px] h-[50px] !rounded-none gradient-gift absolute left-0 rotate-[-15deg]'>
+                    <div className='flex justify-between absolute w-full mt-[5px] h-[100px] overflow-hidden pt-3'>
+                        <div className='w-[100px] h-[50px] !rounded-none gradient-gift absolute left-[-20px] rotate-[-15deg]'>
                         </div>
-                        <div className='w-[100px] h-[50px] !rounded-none gradient-gift absolute right-0 rotate-[15deg]'>
+                        <div className='w-[100px] h-[50px] !rounded-none gradient-gift absolute right-[-20px] rotate-[15deg]'>
                         </div>
                     </div>
                     <div className='px-5 py-1 !rounded-[20px] gradient-gift  w-[255px] sm:w-auto border-[1px] border-[#FF1CBB] relative z-20 m-auto'>
