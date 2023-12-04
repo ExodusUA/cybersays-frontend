@@ -81,7 +81,7 @@ function Profile({ languageData, userData }) {
 
                 <div className='flex items-center mt-1'>
                     <img className='w-[32px] h-[32px] mr-3' src={fingerUp} alt="fingerUp" />
-                    <p className='text-[14px] saira font-normal'>1$ per each friend that completes the 4 steps. You’ll get paid in $ 'clock'</p>
+                    <p className='text-[14px] saira font-normal my-2'>1$ per each friend that completes the 4 steps. You’ll get paid in $ 'clock'</p>
                 </div>
                 <div className='w-full bg-[#2C2F45] rounded-[20px] flex justify-between items-center px-6 mt-2'>
                     <div>
@@ -102,7 +102,7 @@ function Profile({ languageData, userData }) {
                     <img onClick={e => setSelectGif(4)} className={`${selectGif === 4 && '  gradient '}   rounded-[12px] w-[120px]  p-[2px] mx-1`} src={gif1} alt="gif1" />
                     <img onClick={e => setSelectGif(5)} className={`${selectGif === 5 && '  gradient '}   rounded-[12px] w-[120px]  p-[2px] mx-1`} src={gif1} alt="gif1" />
                 </div>
-                <p className='text-[12px] saira font-normal text-center mt-[-10px]'>Don’t promote anywhere that can spam people</p>
+                <p className='text-[12px] saira font-normal text-center my-2'>Don’t promote anywhere that can spam people</p>
                 <div className='flex justify-between items-center mt-1'>
                     <div className='w-full'>
                         <button onClick={e => shareRefferalLink()} className='px-[30px] py-[14px] saira gradient text-[16px] w-full font-semibold '>Share Referral Link!</button>
