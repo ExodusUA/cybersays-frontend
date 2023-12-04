@@ -16,12 +16,19 @@ import { useState } from 'react';
 import UserMenuButton from '../Components/UserMenuButton'
 import LoginButton from '../Components/Buttons/LoginButton'
 import userAPI from '../Requests/user'
-import FinishSteps from './Gift/FinishSteps'
-import MyProfile from './Gift/MyProfile'
+import { Route, Routes } from 'react-router-dom'
+import Profile from './Profile/Profile'
+import Offer from './Profile/Offer'
+import SiteMenu from '../Components/SiteMenu'
+import Tasks from './Profile/Tasks'
+import MobileMenu from '../Components/MobileMenu'
 var mixpanel = require('mixpanel-browser');
 
 
-function Main({ languageData, targetURL, uid }) {
+function Main({ languageData }) {
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const uid = urlParams.get('userid');
 
     const [userData, setUserData] = useState(null);
 
@@ -47,15 +54,6 @@ function Main({ languageData, targetURL, uid }) {
 
     }, [])
 
-    const [swiperRef, setSwiperRef] = useState(null);
-
-    const [isBeginning, setIsBeginning] = useState(true);
-    const [isEnd, setIsEnd] = useState(false);
-
-    const handleSlideChange = () => {
-        setIsBeginning(swiperRef?.isBeginning);
-        setIsEnd(swiperRef?.isEnd);
-    };
 
     return (
         <>
@@ -68,71 +66,17 @@ function Main({ languageData, targetURL, uid }) {
                     content={languageData?.metaDescription} />
             </Helmet>
 
-            <div className='bg-dark relative'>
-                <img className='left-0 top-0 absolute select-none' src={green} alt="Green" />
+            <SiteMenu userData={userData} />
 
-                <div className='max-w-[1440px] m-auto w-[90%] relative z-10 h-screen overflow-hidden md:overflow-visible'>
-
-                    <div className='flex md:justify-center py-2 relative'>
-                        <img src={logotype} className='w-[128px]' alt="Logotype" />
-
-                        <div className='absolute right-0 top-0 flex items-center align-middle h-full z-20'>
-                            {
-                                localStorage.getItem('token') === null
-                                    ? <LoginButton />
-                                    : <UserMenuButton user={userData} />
-                            }
-                        </div>
-                    </div>
-
-                    <div className='lg:flex justify-between items-center'>
-                        <div className='sm:min-w-[600px]'>
-                            <h1 className='text-[28px] sm:text-[64px] md:text-[72px] font-bold xl:w-[1000px]' dangerouslySetInnerHTML={{ __html: languageData?.HeaderTitle }}></h1>
-                            <div className='w-full h-[2px] gradient-line mt-[10px] mb-[0px] md:mt-[20px] md:mb-[0px]'></div>
-
-                            <div className='relative'>
-                                <div className='absolute z-20 left-[100px] md:left-[-50px] flex md:h-full md:align-middle mt-5 bottom-[-60px] md:bottom-[unset] md:top-0  buttonPrev' onClick={e => swiperRef?.slidePrev()}>
-                                    <img className='w-10 cursor-pointer' src={left} alt="Left" style={{ opacity: isBeginning ? 0.7 : 1 }} />
-                                </div>
-
-                                <Swiper
-                                    onSwiper={(swiper) => {
-                                        setSwiperRef(swiper);
-                                        setIsBeginning(swiper?.isBeginning);
-                                        setIsEnd(swiper?.isEnd);
-                                    }}
-                                    modules={[Navigation]}
-                                    spaceBetween={50}
-                                    slidesPerView={1}
-                                    navigation={{
-                                        prevEl: '.buttonPrev',
-                                        nextEl: '.buttonNext',
-                                    }}
-                                    onSlideChange={handleSlideChange}
-                                >
-                                    <SwiperSlide><Slide languageData={languageData} targetURL={targetURL} uid={uid} /></SwiperSlide>
+            <Routes>
+                <Route path="/" element={<Offer languageData={languageData} />} />
+                <Route path="/offer" element={<Offer index languageData={languageData} />} />
+                <Route path="/profile" element={<Profile languageData={languageData} userData={userData} />} />
+                <Route path="/tasks" element={<Tasks languageData={languageData} userData={userData} />} />
+            </Routes>
 
 
-                                </Swiper>
-
-                                <div className='absolute z-20 right-[100px] md:right-[-50px] flex md:h-full md:align-middle mt-5 bottom-[-60px] md:bottom-[unset] md:top-0 buttonNext ' onClick={e => swiperRef?.slideNext()}>
-                                    <img className='w-10 cursor-pointer' src={right} alt="Right" style={{ opacity: isEnd ? 0.7 : 1 }} />
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div className='relative'>
-                            <img className='left-0 top-0 select-none pointer-events-none hidden lg:block' src={hero} alt="Hero" />
-                        </div>
-                    </div>
-                </div>
-                <img className='absolute bottom-0 left-0 ' src={purple} alt="Purple" />
-                {/*
-                <FinishSteps languageData={languageData} targetURL={targetURL} uid={uid} />
-                */}
-                <MyProfile />
-            </div>
+            <MobileMenu />
         </>
 
     )

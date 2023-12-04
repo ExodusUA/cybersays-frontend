@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logoCyber from '../../images/CyberSaysLogo.png'
 var mixpanel = require('mixpanel-browser');
 
-function FinishSteps({ languageData, targetURL, uid }) {
+function Tasks({ languageData, targetURL, uid, userData }) {
 
     const [isLinkCopied, setIsLinkCopied] = React.useState(false);
 
@@ -13,7 +13,23 @@ function FinishSteps({ languageData, targetURL, uid }) {
             setIsLinkCopied(false);
         }, 3000);
     }
-    {/*  console.log(languageData.listTexts[0])  */ }
+
+    const [tasks, setTasks] = React.useState(null);
+
+    useEffect(() => {
+        if (userData === null || languageData === null) return;
+
+        let completed_tasks = JSON.parse(userData.completed_tasks);
+        let tasksList = languageData?.listTexts.map((item, index) => {
+            return {
+                text: item,
+                completed: completed_tasks?.includes(index + 1) === true ? true : false
+            }
+        });
+        setTasks(tasksList);
+
+    }, [languageData, userData]);
+
     return (
         <div className='w-screen h-screen bg-modal fixed left-0 top-0 z-[99] bg-cover flex items-center justify-center'>
 
@@ -27,14 +43,14 @@ function FinishSteps({ languageData, targetURL, uid }) {
                 <p className=' font-normal saira text-[16px] text-center mb-4'>A '✅' will appear for each step <span className='font-bold saira'>completed.</span></p>
                 <ul>
                     {
-                        languageData?.listTexts.map((item, index) => (
+                        tasks?.map((item, index) => (
 
                             <div key={index} className='flex items-center justify-between gap-1 bg-gray/25 rounded-[14px] p-3 mb-5 mx-2'>
                                 <div className=' flex items-center justify-between  w-full'>
                                     <div className='border-[1px] border-[#088CD9] bg-gray/25 !rounded-full gradient-number p-2 w-[32px] h-[32px] flex items-center justify-center'>
                                         {index + 1}
                                     </div>
-                                    <p className=' flex justify-between ml-2 w-full'><p className='text-white text-[16px] font-bold saira'>{item}</p> <div className=' flex justify-end'>✅</div></p>  
+                                    <p className=' flex justify-between ml-2 w-full'><p className='text-white text-[16px] font-bold saira'>{item.text}</p> <div className=' flex justify-end'>{item.completed === true ? '✅' : '🏁'}</div></p>
                                 </div>
 
                             </div>
@@ -45,7 +61,7 @@ function FinishSteps({ languageData, targetURL, uid }) {
                 <div className='flex justify-between items-center mt-4'>
 
 
-                    <div className='w-full'> 
+                    <div className='w-full'>
                         <a href={targetURL} onClick={e => {
                             e.preventDefault();
                             mixpanel.track("cyber_says_click", {
@@ -61,4 +77,4 @@ function FinishSteps({ languageData, targetURL, uid }) {
     );
 }
 
-export default FinishSteps;
+export default Tasks;
