@@ -33,7 +33,7 @@ function MobileMenu() {
     return (
         <div className='flex justify-center w-screen fixed bottom-10 z-[999]'>
             <div className=' bg-[#DDD2DD] flex justify-between items-center rounded-[50px] px-[10px] py-[5px] '>
-                <Link to='#'>
+                <Link to='/'>
                     <img className='w-[32px] h-[32px] mx-[5px] cursor-pointer'
                         src={activePage === 'menu' ? link1 : link1}
                         alt="link1" />

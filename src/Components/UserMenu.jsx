@@ -4,7 +4,7 @@ import logout from '../images/logout.png'
 import deleteAccount from '../images/deleteAccount.png'
 import { Link } from 'react-router-dom'
 
-function UserMenu({ setUserMenuOpen }) {
+function UserMenu({ setUserMenuOpen, setAccountDelete }) {
 
     return (
         <div className=' absolute right-0 top-[100px] z-30'>
@@ -19,7 +19,7 @@ function UserMenu({ setUserMenuOpen }) {
                 }} className='text-white font-semibold text-[14px] saira flex items-center cursor-pointer'><img className='w-[20px] mr-2' src={logout} alt="logout" />Logout</Link>
                 <div className='h-[2px] gradient-line my-4' ></div>
 
-                <p className='text-[#FF4B60] font-semibold text-[14px] saira flex items-center cursor-pointer'><img className='w-[20px] mr-2' src={deleteAccount} alt="deleteAccount" />Delete account</p>
+                <p onClick={e => setAccountDelete(true)} className='text-[#FF4B60] font-semibold text-[14px] saira flex items-center cursor-pointer'><img className='w-[20px] mr-2' src={deleteAccount} alt="deleteAccount" />Delete account</p>
 
             </div>
         </div>

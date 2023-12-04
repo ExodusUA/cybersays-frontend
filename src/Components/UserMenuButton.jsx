@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import userImage from '../images/userBtn.png';
 import UserMenu from './UserMenu';
 
-function UserMenuButton({ user }) {
+function UserMenuButton({ user, setAccountDelete }) {
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -26,7 +26,7 @@ function UserMenuButton({ user }) {
         <p className='text-white font-normal text-[14px] saira max-w-[200px] truncate'>Welcome back, {user?.email}</p>
         <img className='w-[20px]' src={userImage} alt="user" />
       </button>
-      {userMenuOpen && <UserMenu setUserMenuOpen={setUserMenuOpen} />}
+      {userMenuOpen && <UserMenu setUserMenuOpen={setUserMenuOpen} setAccountDelete={setAccountDelete} />}
     </div>
   );
 }

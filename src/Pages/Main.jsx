@@ -13,6 +13,7 @@ import Tasks from './Profile/Tasks'
 import MobileMenu from '../Components/MobileMenu'
 import Gifts from './Profile/Gifts'
 import PaymentChoose from '../Components/PaymentChoose'
+import DeleteConfirm from '../Components/DeleteConfirm';
 var mixpanel = require('mixpanel-browser');
 
 
@@ -22,6 +23,7 @@ function Main({ languageData }) {
     const uid = urlParams.get('userid');
 
     const [selectPayment, setSelectPayment] = useState(false);
+    const [accountDelete, setAccountDelete] = useState(false);
 
     const [userData, setUserData] = useState(null);
 
@@ -59,7 +61,7 @@ function Main({ languageData }) {
                     content={languageData?.metaDescription} />
             </Helmet>
 
-            <SiteMenu userData={userData} />
+            <SiteMenu userData={userData} setAccountDelete={setAccountDelete} />
 
             <Routes>
                 <Route path="/" element={<Offer languageData={languageData} />} />
@@ -73,6 +75,10 @@ function Main({ languageData }) {
             <MobileMenu />
             {
                 selectPayment && <PaymentChoose setSelectPayment={setSelectPayment} />
+            }
+
+            {
+                accountDelete && <DeleteConfirm setAccountDelete={setAccountDelete} />
             }
         </>
 
