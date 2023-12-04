@@ -39,7 +39,7 @@ function Offer({ languageData }) {
 
                 <div className='lg:flex justify-between items-center'>
                     <div className='sm:min-w-[600px]'>
-                        <h1 className='text-[28px] sm:text-[64px] md:text-[72px] font-bold xl:w-[1000px]' dangerouslySetInnerHTML={{ __html: languageData?.HeaderTitle }}></h1>
+                        <h1 className='text-[28px] sm:text-[64px] md:text-[72px] font-bold xl:w-[1000px] pt-[75px] leading-8 sm:leading-[unset]' dangerouslySetInnerHTML={{ __html: languageData?.HeaderTitle }}></h1>
                         <div className='w-full h-[2px] gradient-line mt-[10px] mb-[0px] md:mt-[20px] md:mb-[0px]'></div>
 
                         <div className='relative'>

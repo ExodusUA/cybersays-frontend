@@ -22,8 +22,8 @@ function UserMenuButton({ user, setAccountDelete }) {
 
   return (
     <div ref={menuRef}>
-      <button className='bg-[#83869b] bg-opacity-25 flex items-center gap-2 px-[25px] py-[13px] border-[1px] border-[#FF1CBB] rounded-[12px] gradient-userButton' onClick={() => setUserMenuOpen(!userMenuOpen)}>
-        <p className='text-white font-normal text-[14px] saira max-w-[200px] truncate'>Welcome back, {user?.email}</p>
+      <button className='bg-[#83869b] bg-opacity-25 flex items-center gap-2 px-[10px] lg:px-[25px]  py-[13px] border-[1px] border-[#FF1CBB] rounded-[12px] gradient-userButton' onClick={() => setUserMenuOpen(!userMenuOpen)}>
+        <p className='text-white font-normal text-[14px] saira max-w-[170px] lg:max-w-[200px] truncate'>Welcome back, {user?.email}</p>
         <img className='w-[20px]' src={userImage} alt="user" />
       </button>
       {userMenuOpen && <UserMenu setUserMenuOpen={setUserMenuOpen} setAccountDelete={setAccountDelete} />}

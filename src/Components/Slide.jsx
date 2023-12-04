@@ -16,10 +16,10 @@ function Slide({ languageData, targetURL, uid }) {
     }
 
     return (
-        <div className='max-w-[1135px] p-5 m-auto mt-[20px] md:mt-[50px] bg-gray/25 rounded-[14px] border-[1px] border-[#088CD9]'>
+        <div className='max-w-[1135px] px-5 py-2 md:py-5 m-auto mt-[10px] md:mt-[50px] bg-gray/25 rounded-[14px] border-[1px] border-[#088CD9]'>
             <div className='flex items-center gap-3'>
                 <img className=' h-[45px]' src={netflix} alt="Image" />
-                <p className='text-white font-bold text-[18px]'>{languageData?.OfferTitle}</p>
+                <p className='text-white font-bold text-[17px] sm:text-[18px]'>{languageData?.OfferTitle}</p>
             </div>
 
             <div className='gradient-line w-full h-[2px] my-4'></div>
