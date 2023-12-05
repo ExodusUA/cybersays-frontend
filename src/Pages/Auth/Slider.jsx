@@ -7,7 +7,7 @@ import left from '../../images/landing/left.png'
 import right from '../../images/landing/right.png'
 
 
-function Slider() {
+function Slider({ onSlideChange }) {
     let swiperRef;
 
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -22,9 +22,14 @@ function Slider() {
         };
     }, [screenWidth]);
 
+    console.log(onSlideChange)
+
     return (
         <div className='lg:w-[45%] relative'>
+            
             <Swiper
+            
+               
                 className='h-[40vh] md:h-[45vh] lg:h-full'
                 onSwiper={(swiper) => {
                     swiperRef = swiper;
@@ -33,6 +38,7 @@ function Slider() {
                 spaceBetween={0}
                 slidesPerView={1}
                 loop={true}
+                onSlideChange={(swiper) => onSlideChange(swiper)}
                 navigation={{
                     prevEl: '.buttonPrev',
                     nextEl: '.buttonNext',
