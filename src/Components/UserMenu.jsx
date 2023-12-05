@@ -8,7 +8,7 @@ function UserMenu({ setUserMenuOpen, setAccountDelete }) {
 
     return (
         <div className=' absolute right-0 top-[100px] z-30'>
-            <div className='bg-[#83869b] bg-opacity-25 items-center gap-2 px-[25px] py-[15px] border-[1px] border-[#FF1CBB] rounded-[12px]'>
+            <div className='bg-[#83869b] backdrop-blur-xl bg-opacity-25 items-center gap-2 px-[25px] py-[15px] border-[1px] border-[#FF1CBB] rounded-[12px]'>
                 <Link to='/profile' onClick={() => setUserMenuOpen(false)} className='text-white font-semibold text-[14px] saira flex items-center cursor-pointer'><img className='w-[20px] mr-2' src={myAccount} alt="myAccount" />My account</Link>
                 
                 <div className='h-[2px] gradient-line my-4'></div>

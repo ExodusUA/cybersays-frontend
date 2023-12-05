@@ -7,6 +7,7 @@ import FacebookButton from '../../Components/Buttons/FacebookButton';
 import OTPModal from './OTPModal';
 import { useNavigate } from 'react-router-dom';
 import AuthEmailNotification from './AuthEmailNotification';
+import Loader from '../../Components/Loader';
 
 function LoginForm() {
 
@@ -23,9 +24,11 @@ function LoginForm() {
 
     const [email, setEmail] = useState('');
 
+    const [loading, setLoading] = useState(false);
+
     const handleSubmit = async (e) => {
         e.preventDefault()
-
+        setLoading(true)
         if (email === '') return alert('Please enter your email')
         if (!email.includes('@')) return alert('Please enter a valid email')
 
@@ -39,31 +42,37 @@ function LoginForm() {
             } else {
                 setActiveModal('otp')
             }
+            setLoading(false)
         } catch (error) {
+            setLoading(false)
             alert('Error: ', error.message)
         }
 
     };
 
     const loginViaFacebook = async (email) => {
+        setLoading(true)
         console.log('Facebook Email: ', email)
         const token = await recaptchaRef.current.executeAsync();
         socialAuth(email, token)
     }
 
     const loginViaGoogle = async (email) => {
+        setLoading(true)
         console.log('Google Email: ', email)
         const token = await recaptchaRef.current.executeAsync();
         socialAuth(email, token)
     }
 
     async function socialAuth(email, token) {
+        
         try {
             const res = await socialUserAuth(email, token, refferalCode, special);
             localStorage.setItem('token', res.token);
             navigate('/')
         } catch (error) {
             console.log(error)
+            setLoading(false)
         }
     }
 
@@ -97,6 +106,9 @@ function LoginForm() {
 
             {
                 getCurrentModal()
+            }
+            {
+                loading && <Loader />
             }
         </>
     )

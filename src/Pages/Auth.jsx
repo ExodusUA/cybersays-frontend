@@ -10,9 +10,17 @@ import Slider from './Auth/Slider';
 import LoginForm from './Auth/LoginForm';
 import InviteFriends from '../Components/InviteFriends';
 import OTPModal from './Homepage/OTPModal';
+import Loader from '../Components/Loader';
 
 
 function Auth({ languageData }) {
+
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const slideChange = (swiper) => {
+        setCurrentSlide(swiper.realIndex);
+        console.log(swiper.realIndex)
+    };
 
 
     return (
@@ -31,7 +39,7 @@ function Auth({ languageData }) {
                 <div className='w-[400px] h-[400px] absolute right-12 top-12 bg-[#0A4A48] blur-[100px]'></div>
 
                 <div className='lg:flex h-full'>
-                    <Slider />
+                    <Slider onSlideChange={slideChange} />
 
                     <div className='w-full text-center bg-dark lg:w-[55%] h-full'>
                         <div className='w-[90%] lg:w-[80%] m-auto lg:relative z-10'>
@@ -42,13 +50,18 @@ function Auth({ languageData }) {
 
                             <div className='pt-[3vh] lg:pt-[15vh] w-full relative z-[10]'>
                                 <img className='w-[125px] md:w-[200px] lg:w-[250px] m-auto lg:m-0' src={logotype} alt="Logotype" />
-                                <p className='w-[100%] text-center lg:text-left text-[24px] leading-7 font-bold lg:text-[30px] text-white lg:leading-9 lg:border-b-2 border-[#A8AFF2] py-4 lg:py-8 lg:pt-6'>CyberSays: Double Your Money, Double Your Gains!</p>
+                                <p className='w-[100%] text-center lg:text-left text-[24px] leading-7 font-bold lg:text-[30px] text-white lg:leading-9 lg:border-b-2 border-[#A8AFF2] py-4 lg:py-8 lg:pt-6'>
+                                    {currentSlide === 0 && 'CyberSays: Double Your Money, Double Your Gains!'}
+                                    {currentSlide === 1 && 'Your Money, Your Rules – Choose How You Get Paid'}
+                                    {currentSlide === 2 && 'Complete a $5 Offer and Watch Your Earnings Soar'}
+                                    {currentSlide === 3 && 'Double your money: Earn $10 instantly and claim now!'}
+                                </p>
                                 <LoginForm />
                             </div>
                         </div>
                     </div>
                 </div>
-            
+
                 <div className='w-[1000px] h-[1000px] absolute right-[-100px] bottom-[-700px] bg-[#530A59] blur-[100px] z-1 rounded-[1000px]'></div>
             </section>
         </>
