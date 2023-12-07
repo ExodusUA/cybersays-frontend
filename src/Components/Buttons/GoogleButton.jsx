@@ -7,10 +7,11 @@ function GoogleButton({ loginViaGoogle }) {
     return (
         <>
             <LoginSocialGoogle className='w-full' scope='https://www.googleapis.com/auth/userinfo.email' client_id={process.env.REACT_APP_GOOGLE_CLIENT_ID} onResolve={(response) => {
-                console.log(response.data)
-                console.log('Google Email: ', response.data.email)
+                console.log(response)
                 loginViaGoogle(response.data.email)
             }}
+            
+               
                 onReject={(response) => {
                     console.log(response)
                 }}

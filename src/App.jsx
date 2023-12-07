@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Main from './Pages/Main';
 import { useLanguage } from './Helpers/Languages/LanguageContext';
 import React, { useEffect } from 'react';
 import mixpanel from 'mixpanel-browser';
 import Auth from './Pages/Auth';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import Token from './Pages/Token';
+import Main from './Pages/Main';
 
 function App() {
 
