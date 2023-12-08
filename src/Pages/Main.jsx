@@ -6,7 +6,7 @@ function Main() {
     return (
         <>
             <Routes>
-                <Route path="/" element={<Homepage />} />
+                <Route path="/" element={<Homepage  />} />
             </Routes>
         </>
     )

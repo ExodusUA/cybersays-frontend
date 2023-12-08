@@ -70,6 +70,25 @@
 
 }
 
+.gradient-milestone1 {
+    background: var(--New-linear-3, linear-gradient(143deg, #02DF85 0%, #7D318E 47.76%, #2104D5 94.54%));
+}
+
+.gradient-milestone2 {
+    background: var(--New-liner, linear-gradient(143deg, #E4034F 0%, #9E3DB3 47.76%, #0BE1DE 94.54%));
+}
+
+.gradient-milestone3 {
+    background: linear-gradient(143deg, #F29B3C 0%, #F359BF 47.76%, #D40059 94.54%);
+}
+
+.gradient-milestoneBtn {
+    border-radius: 12px;
+    border: 1px solid var(--Common-white, #F5F5F5);
+    background: var(--Linear, linear-gradient(105deg, #FF1CBB -23.05%, #088CD9 88.21%));
+    box-shadow: 0px 4px 20px 0px rgba(107, 74, 219, 0.70);
+}
+
 .saira {
     font-family: Saira !important;
 }
@@ -80,9 +99,7 @@
     box-shadow: 0px 4px 20px 0px rgba(107, 74, 219, 0.70);
 }
 
-body {
-    overflow: hidden;
-}
+body {}
 
 
 .black-gradient {
