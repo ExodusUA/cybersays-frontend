@@ -82,6 +82,14 @@
     background: linear-gradient(143deg, #F29B3C 0%, #F359BF 47.76%, #D40059 94.54%);
 }
 
+.gradient-milestoneHeader {
+    background: var(--Linear, linear-gradient(105deg, #FF1CBB -23.05%, #088CD9 88.21%));
+}
+
+.bg-milestone {
+    background: var(--bg2, linear-gradient(171deg, #1D123B 0%, #1B325E 51.63%, #1D123B 99.13%));
+}
+
 .gradient-milestoneBtn {
     border-radius: 12px;
     border: 1px solid var(--Common-white, #F5F5F5);
