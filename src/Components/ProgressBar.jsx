@@ -1,19 +1,59 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react';
 
 function ProgressBar() {
     const gradientId = 'progressGradient';
 
     const gradientStops = [
-        { offset: '0%', color: 'rgb(255,0,0)', opacity: 1 },
-        { offset: '100%', color: 'rgb(255,0,0)', opacity: 1 },
+        { offset: '0%', color: '#63DEA8', opacity: 1 },
+        { offset: '100%', color: '#DFE758', opacity: 1 },
     ];
 
+    const animateRef = useRef();
+    const percentage = 60;
+
+    useEffect(() => {
+        if (animateRef.current) {
+            animateRef.current.beginElement();
+        }
+    }, [percentage]);
     return (
         <div>
             <svg width="770" height="307" viewBox="0 0 770 307" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter="url(#filter0_d_457_11253)">
+                <svg width="750" height="307" viewBox="0 0 770 307" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id={gradientId} x1="26.431" y1="0.378903" x2="453.103" y2="70.8617" gradientUnits="userSpaceOnUse">
+                            {gradientStops.map((stop, index) => (
+                                <stop key={index} offset={stop.offset} stopColor={stop.color} />
+                            ))}
+                        </linearGradient>
+                    </defs>
 
-                    <path  d="M42.6552 75.3789H727.345L750 145.862H20L42.6552 75.3789Z" fill="url(#paint0_linear_457_11257)" />
+                    <g filter="url(#filter0_d_457_11253)">
+                        <path d="M42.6552 75.3789H727.345L750 145.862H20L42.6552 75.3789Z" fill={`url(#${gradientId})`} />
+                    </g>
+
+
+                    <rect x="20" y="145.863" width={`${percentage}%`} height="110" fill={`url(#${gradientId})`} />
+                </svg>
+                <g filter="url(#filter0_d_457_11253)">
+                    <svg width="750" height="307" viewBox="0 0 770 307" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id={gradientId} x1="26.431" y1="0.378903" x2="453.103" y2="70.8617" gradientUnits="userSpaceOnUse">
+                                {gradientStops.map((stop, index) => (
+                                    <stop key={index} offset={stop.offset} stopColor={stop.color} />
+                                ))}
+                            </linearGradient>
+                        </defs>
+
+                        <g filter="url(#filter0_d_457_11253)">
+                            <path d="M42.6552 75.3789H727.345L750 145.862H20L42.6552 75.3789Z" fill={`url(#${gradientId})`} />
+                        </g>
+
+                        <rect x="20" y="145.863" width={`750px`} height="110" fill={`url(#${gradientId})`} />
+
+                        <rect x="20" y="145.863" width={`700px`} height="110" fill={`url(#${gradientId})`} />
+                    </svg>
+                    <path d="M42.6552 75.3789H727.345L750 145.862H20L42.6552 75.3789Z" fill="url(#paint0_linear_457_11257)" />
                     <defs>
                         <linearGradient id="paint0_linear_457_11257" x1="26.431" y1="0.378903" x2="453.103" y2="70.8617" gradientUnits="userSpaceOnUse">
                             <stop offset="0.343102" stop-color="#63DEA8" />
@@ -93,6 +133,8 @@ function ProgressBar() {
                         <feGaussianBlur stdDeviation="25.1724" result="effect1_foregroundBlur_457_11253" />
                     </filter>
                 </defs>
+
+
             </svg>
 
 
