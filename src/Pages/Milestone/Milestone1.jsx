@@ -78,7 +78,7 @@ function Milestone1({ userData, languageData, imLiveURL }) {
                                     nextEl: '.buttonNext',
                                 }}
                                 spaceBetween={0}
-                                loop={true}
+                                
                                 breakpoints={{
                                     0: {
                                         slidesPerView: 1.2,

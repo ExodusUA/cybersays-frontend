@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderProfile from './HeaderProfile'
+import HeaderProfile from '../Components/HeaderProfile'
 
 function Terms() {
     return (

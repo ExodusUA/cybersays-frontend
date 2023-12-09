@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import close from '../images/closeBtn.png'
 import { Link } from 'react-router-dom'
 
-function DeleteConfirm({ setAccountDelete, setModalOpen, setDeleteOpen }) {
-    const [deletingStep, setDeletingStep] = useState(false);
+function DeleteConfirm({ setDeleteOpen }) {
+    const [deletingStep, setDeletingStep] = useState(1);
     const navigate = useNavigate();
 
     const deleteAccountHandler = async () => {
@@ -24,32 +24,24 @@ function DeleteConfirm({ setAccountDelete, setModalOpen, setDeleteOpen }) {
                 <div className=' flex justify-end '>
                     <img onClick={e => {
                         setDeleteOpen(false)
-                        setModalOpen(true)
+
                     }} className='w-[34px] cursor-pointer' src={close} alt="close" />
                 </div>
-                {deletingStep ? (
+                {deletingStep === 2 ? (
                     <div>
                         <p className='py-8 text-[24px] font-bold max-w-[500px] w-full text-center text-[#FF4B60]'>
                             Are you sure you want to delete your account?
                         </p>
 
                         <div className='flex justify-end gap-4'>
-
-                            <button onClick={e => {
-                                setDeleteOpen(false)
-                                setModalOpen(true)
-                            }}
-                                className='gradient-milestoneHeader w-full h-[52px] text-[16px] font-semibold rounded-[12px] saira mt-5 duration-200 disabled:opacity-80 cursor-pointer'
-
-                            >
+                            <button onClick={e => {setDeleteOpen(false)}}className='gradient-milestoneHeader w-full h-[52px] text-[16px] font-semibold rounded-[12px] saira mt-5 duration-200 disabled:opacity-80 cursor-pointer'>
                                 No
                             </button>
 
-                            <Link to='/formDeleteConfirm'
+                            <button
+                                onClick={e => deleteAccountHandler()}
                                 className='gradient-milestoneHeader w-full h-[52px] text-[16px] font-semibold rounded-[12px] saira mt-5 duration-200 disabled:opacity-80 cursor-pointer flex justify-center items-center'
-                            >
-                                Yes, delete now!
-                            </Link>
+                            >Yes, delete now!</button>
                         </div>
                     </div>
                 ) : (
@@ -60,7 +52,7 @@ function DeleteConfirm({ setAccountDelete, setModalOpen, setDeleteOpen }) {
 
                         <div className='flex justify-end gap-4'>
                             <button className='gradient-milestoneHeader w-full h-[52px] text-[16px] font-semibold rounded-[12px] saira mt-5 duration-200 disabled:opacity-80 cursor-pointer'
-                                onClick={e => setDeletingStep(true)}
+                                onClick={e => setDeletingStep(2)}
                             >
                                 Continue
                             </button>

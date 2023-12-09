@@ -61,17 +61,20 @@ function Milestone2({ languageData, userData, imLiveURL }) {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setTimeLeft(getTimeLeft());
-
-
-            let daysSeconds = 24 * 60 * 60;
-            let seconds = getTimeLeft().seconds;
-
-            let percentage = 100 - ((seconds / daysSeconds) * 100).toFixed(2);
-            setPercentage(Number(percentage))
         }, 1000);
 
         return () => clearInterval(intervalId);
     }, [userData]);
+
+    useEffect(() => {
+        const updatePercentage = () => {
+            let hoursNow = getTimeLeft().hours;
+            let hours = (hoursNow / 24) * 100;
+            setPercentage(hours);
+        };
+
+        updatePercentage();
+    }, [timeLeft]);
 
     function getTimeLeft() {
 

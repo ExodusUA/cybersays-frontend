@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import HeaderProfile from './HeaderProfile'
+import HeaderProfile from '../Components/HeaderProfile'
+import DeleteConfirm from '../Components/DeleteConfirm';
 
-function FormDeleteConfirm() {
+function Profile() {
 
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
@@ -18,6 +19,8 @@ function FormDeleteConfirm() {
             setError(false);
         }
     }
+
+    const [deleteOpen, setDeleteOpen] = useState(false);
 
     return (
         <div>
@@ -46,12 +49,16 @@ function FormDeleteConfirm() {
                 <button onClick={handleApply} className='gradient-milestoneHeader w-full h-[52px] text-[16px] font-semibold rounded-[12px] saira mt-5 duration-200 disabled:opacity-80 cursor-pointer' >
                     Apply changes
                 </button>
-                <p className='text-[#FF4B60] font-semibold text-[16px] saira flex items-center cursor-pointer justify-center mt-5'>
+                <p onClick={e => setDeleteOpen(true)} className='text-[#FF4B60] font-semibold text-[16px] saira flex items-center cursor-pointer justify-center mt-5'>
                     Delete account
                 </p>
             </div>
+
+            {
+              deleteOpen && <DeleteConfirm deleteOpen={deleteOpen} setDeleteOpen={setDeleteOpen} />
+            }
         </div>
     )
 }
 
-export default FormDeleteConfirm
+export default Profile
