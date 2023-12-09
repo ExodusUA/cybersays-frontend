@@ -8,6 +8,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import Slider from './Auth/Slider';
 import LoginForm from './Auth/LoginForm';
+import InviteFriends from '../Components/InviteFriends';
+import OTPModal from './Homepage/OTPModal';
+import Loader from '../Components/Loader';
 
 
 function Auth({ languageData }) {
