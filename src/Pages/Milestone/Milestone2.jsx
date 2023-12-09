@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logoCyber from '../../images/logoCyberYellow.png'
 import man from '../../images/smileMan.png'
 import sticker from '../../images/sticker1.png'
@@ -15,14 +15,82 @@ import gif1 from '../../images/exampleGif1.png'
 import { Navigation } from 'swiper/modules';
 import left from '../../images/sliderBtnLeft.png'
 import right from '../../images/sliderBtnRight.png'
+import { Link } from 'react-router-dom';
+import moment from 'moment-timezone';
 
-function Milestone2() {
+function Milestone2({ languageData, userData, imLiveURL }) {
+
+    let userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    moment.tz.setDefault(userTimezone)
+
 
     let swiperRef;
 
     const [selectedButton, setSelectedButton] = useState(1);
     const [selectedGif, setSelectedGif] = useState(1);
     const [percentage, setPercentage] = useState(35);
+    const [isLinkCopied, setIsLinkCopied] = useState(false);
+
+    const shareRefferalLink = () => {
+        if (navigator.share) {
+            navigator
+                .share({
+                    title: document.title,
+                    text: 'Sharing',
+                    url: window.location.hostname + '?uid=' + userData?.refferal_code,
+                })
+                .then(() => console.log('Successful share! 🎉'))
+                .catch(err => console.error(err));
+        } else {
+            console.error('navigator.share is not supported in this browser');
+        }
+    }
+
+    const copyToClipboard = () => {
+        let link = window.location.host + '?uid=' + userData?.refferal_code;
+        setIsLinkCopied(true)
+        navigator.clipboard.writeText(link);
+
+        setTimeout(() => {
+            setIsLinkCopied(false)
+        }, 3000);
+    }
+
+    const [timeLeft, setTimeLeft] = useState(getTimeLeft());
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setTimeLeft(getTimeLeft());
+
+
+            let daysSeconds = 24 * 60 * 60;
+            let seconds = getTimeLeft().seconds;
+
+            let percentage = 100 - ((seconds / daysSeconds) * 100).toFixed(2);
+            setPercentage(Number(percentage))
+        }, 1000);
+
+        return () => clearInterval(intervalId);
+    }, [userData]);
+
+    function getTimeLeft() {
+
+        let userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        const now = moment().tz(userTimezone);
+        const duration = moment.duration(moment.unix(Number(userData?.timestamp)).tz(userTimezone).add(1, 'days').diff(now));
+
+        return {
+            days: duration.days(),
+            hours: duration.hours(),
+            minutes: duration.minutes(),
+            seconds: duration.seconds(),
+        };
+    }
+
+
+    function formatTime(value) {
+        return value < 10 ? `0${value}` : value;
+    }
 
     return (
         <div className='px-5 lg:px-11 md:mt-14'>
@@ -64,15 +132,17 @@ function Milestone2() {
                                     <div className=''>
                                         <div className=' lg:w-[unset] absolute top-[7px] lg:top-[12px] left-[35px] lg:left-[75px] cursor-pointer'>
                                             <p className='text-[12px] lg:text-[16px] text-[#1E1E1E] font-normal saira text-center mb-[-3px]'>Deposits I made:</p>
-                                            <p className='text-[12px] lg:text-[16px] text-gradient font-semibold saira text-center'>12 deposits</p>
+                                            <p className='text-[12px] lg:text-[16px] text-gradient font-semibold saira text-center'>{userData?.deposits} deposits</p>
                                         </div>
                                         <img className='w-[73px] lg:w-[111px] absolute top-[7px] right-[35px] lg:right-[80px] cursor-pointer' src={imLive} alt="imLive" />
                                     </div>
                                 </div>
-                                <button className='px-[30px] py-[14px] saira gradient-milestoneBtn text-[16px] w-full font-semibold flex justify-center md:max-w-[250px] m-auto'>
-                                    Make a deposit
-                                    <img className='w-[24px] h-[24px] ml-4' src={arrowBtn} alt="arrowBtn" />
-                                </button>
+                                <Link to={imLiveURL}>
+                                    <button className='px-[30px] py-[14px] saira gradient-milestoneBtn text-[16px] w-full font-semibold flex justify-center md:max-w-[250px] m-auto'>
+                                        Make a deposit
+                                        <img className='w-[24px] h-[24px] ml-4' src={arrowBtn} alt="arrowBtn" />
+                                    </button>
+                                </Link>
                             </div>
                         )}
                         {selectedButton === 2 && (
@@ -91,8 +161,11 @@ function Milestone2() {
 
                                     </div>
                                     <div className=' flex justify-between '>
-                                        <p className='text-[12px] lg:text-[14px]  text-white font-semibold saira w-[100px] lg:w-[unset] leading-4'>24 hours to refer your friends</p>
-                                        <p className='text-[14px] lg:text-[16px] text-white font-semibold saira  leading-4'>00:09:59</p>
+                                        <p className='text-[12px] lg:text-[14px]  text-white font-semibold saira w-[100px] lg:w-[unset] leading-4'>{formatTime(timeLeft.hours)} hours to refer your friends</p>
+                                        <p className='text-[14px] lg:text-[16px] text-white font-semibold saira  leading-4'>{
+                                            timeLeft.seconds > 0 ? `${formatTime(timeLeft.hours)}:${formatTime(timeLeft.minutes)}:${formatTime(timeLeft.seconds)}` : 'Ended'
+                                        }</p>
+
                                     </div>
                                     <p className='text-[14px] lg:text-[16px] text-white font-normal saira leading-4 text-center mx-8 lg:mx-0 mt-5'>1$ per each friend that completes the 4 steps. You’ll get paid in $'clock'</p>
 
@@ -104,11 +177,11 @@ function Milestone2() {
                                     <div className=''>
                                         <div className=' absolute top-[7px] lg:top-[10px] left-[25px] lg:left-[65px] cursor-pointer w-[100px] lg:w-[unset]'>
                                             <p className='text-[12px] lg:text-[14px] text-[#1E1E1E] font-normal saira text-center  leading-4'>Friends you referred 🏆</p>
-                                            <p className='text-[12px] lg:text-[14px] text-gradient font-semibold saira text-center'>23 friedns</p>
+                                            <p className='text-[12px] lg:text-[14px] text-gradient font-semibold saira text-center'>{userData?.refferals ? JSON.parse(userData?.refferals).length : 0} friedns</p>
                                         </div>
                                         <div className=' absolute top-[7px] lg:top-[10px] right-[25px] lg:right-[55px] cursor-pointer w-[100px] lg:w-[unset]'>
                                             <p className='text-[12px] lg:text-[14px] text-[#1E1E1E] font-normal saira text-center leading-4'>Money you’ve made 💸</p>
-                                            <p className='text-[12px] lg:text-[14px] text-gradient font-semibold saira text-center'>$23</p>
+                                            <p className='text-[12px] lg:text-[14px] text-gradient font-semibold saira text-center'>${userData?.earned}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -167,11 +240,13 @@ function Milestone2() {
                                     </Swiper>
                                 </div>
                                 <p className='text-[12px] text-white font-normal saira leading-4 text-center mt-3 mb-1'>Don’t promote anywhere that can spam people</p>
-                                <button className='px-[20px] py-[14px] saira gradient-milestoneBtn text-[16px] w-full font-semibold flex justify-center md:max-w-[250px] m-auto'>
+
+                                <button onClick={e => shareRefferalLink()} className='px-[20px] py-[14px] saira gradient-milestoneBtn text-[16px] w-full font-semibold flex justify-center md:max-w-[250px] m-auto'>
                                     Share Referral Link! 🙋
                                     <img className='w-[24px] h-[24px] ml-2' src={arrowBtn} alt="arrowBtn" />
                                 </button>
-                                <p className='underline saira text-center text-[16px] font-semibold text-white mt-2 duration-300 cursor-pointer '>Copy Link</p>
+
+                                <p onClick={e => copyToClipboard()} className='underline saira text-center text-[16px] font-semibold text-white mt-2 duration-300 cursor-pointer '>{isLinkCopied === true ? 'Link Copied!' : 'Copy Link'}</p>
                             </div>
                         )}
                     </div>

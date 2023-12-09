@@ -7,7 +7,7 @@ import imLive from '../../images/ImLiveLogo.png'
 import field from '../../images/fieldMilestone.png'
 import fieldDesctop2 from '../../images/fieldDesctop2.png'
 
-function MileStone3() {
+function MileStone3({ userData, languageData}) {
     return (
         <div className='px-5 lg:px-11 md:mt-14'>
             <h2 className='text-white text-[24px] font-bold text-center my-5'>Milestone #3:</h2>
@@ -42,7 +42,7 @@ function MileStone3() {
                             <div className=''>
                                 <div className=' absolute top-[7px] lg:top-[10px] left-[30px] lg:left-[100px]  cursor-pointer'>
                                     <p className='text-[12px] lg:text-[14px] text-[#1E1E1E] font-normal saira text-center mb-[-3px]'>Deposits I made:</p>
-                                    <p className='text-[12px] lg:text-[14px] text-gradient font-semibold saira text-center'>12 deposits</p>
+                                    <p className='text-[12px] lg:text-[14px] text-gradient font-semibold saira text-center'>{userData?.deposits} deposits</p>
                                 </div>
                                 <img className='w-[73px] lg:w-[85px]  absolute top-[7px] lg:top-[10px] right-[35px] lg:right-[110px] cursor-pointer' src={imLive} alt="imLive" />
                             </div>

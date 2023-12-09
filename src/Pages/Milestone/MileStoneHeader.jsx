@@ -2,7 +2,7 @@ import React from 'react'
 import logoCyber from '../../images/logoCyberYellow.png'
 import field from '../../images/fieldProfile.png'
 
-function MileStoneHeader() {
+function MileStoneHeader({ userData }) {
     return (
         <div>
             <div className=' gradient-milestoneHeader py-3 '>
@@ -19,19 +19,19 @@ function MileStoneHeader() {
                         <div >
                             <div className=' lg:w-[unset] absolute top-[7px] lg:top-[9px] left-[70px] cursor-pointer flex'>
                                 <div className='w-[90px] leading-4 ml-1'>
-                                    <p className='text-[16px]  text-[#1E1E1E] font-normal saira text-center '>💵</p>
-                                    <p className='text-[14px]  text-[#1E1E1E] font-normal saira text-center '>USD Earned:</p>
-                                    <p className='text-[14px]   text-[#1E1E1E] font-normal saira text-center '>25</p>
+                                    <p className='text-[16px]  text-[#1E1E1E] font-normal saira text-center mb-0.5'>💵</p>
+                                    <p className='text-[14px]  text-[#1E1E1E] font-normal saira text-center mb-0.5'>USD Earned:</p>
+                                    <p className='text-[14px]   text-[#1E1E1E] font-normal saira text-center '>{userData?.earned}</p>
                                 </div>
                                 <div className='w-[90px] leading-4 ml-1'>
-                                    <p className='text-[16px]  text-[#1E1E1E] font-normal saira text-center '>👬</p>
-                                    <p className='text-[14px]   text-[#1E1E1E] font-normal saira text-center '>Refferals:</p>
-                                    <p className='text-[14px]   text-[#1E1E1E] font-normal saira text-center '>25</p>
+                                    <p className='text-[16px]  text-[#1E1E1E] font-normal saira text-center mb-0.5'>👬</p>
+                                    <p className='text-[14px]   text-[#1E1E1E] font-normal saira text-center mb-0.5'>Refferals:</p>
+                                    <p className='text-[14px]   text-[#1E1E1E] font-normal saira text-center '>{userData?.refferals ? JSON.parse(userData?.refferals).length : 0}</p>
                                 </div>
                                 <div className='w-[90px] leading-4 ml-1'>
-                                    <p className='text-[16px]  text-[#1E1E1E] font-normal saira text-center '>🃏</p>
-                                    <p className='text-[14px]   text-[#1E1E1E] font-normal saira text-center '>Raffle Tickets:</p>
-                                    <p className='text-[14px]   text-[#1E1E1E] font-normal saira text-center '>25</p>
+                                    <p className='text-[16px]  text-[#1E1E1E] font-normal saira text-center mb-0.5'>🃏</p>
+                                    <p className='text-[14px]   text-[#1E1E1E] font-normal saira text-center mb-0.5'>Raffle Tickets:</p>
+                                    <p className='text-[14px]   text-[#1E1E1E] font-normal saira text-center '>{userData?.raffle_tickets}</p>
                                 </div>
                             </div>
                         </div>
