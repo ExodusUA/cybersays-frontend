@@ -4,6 +4,7 @@ import Milestone1 from './Milestone/Milestone1'
 import Milestone2 from './Milestone/Milestone2'
 import MileStone3 from './Milestone/MileStone3'
 import MileStoneHeader from './Milestone/MileStoneHeader'
+import ProgressBar from '../Components/ProgressBar'
 
 function Homepage() {
 
@@ -14,6 +15,7 @@ function Homepage() {
 
 
       <MileStoneHeader />
+      <ProgressBar />
       <Milestone1 />
       <Milestone2 />
       <MileStone3 />

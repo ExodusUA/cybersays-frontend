@@ -27,8 +27,6 @@ function DeleteConfirm({ setAccountDelete }) {
                         <button className='continue_button w-full h-[52px] rounded-[12px] saira mt-5 duration-200 disabled:opacity-80 cursor-pointer' onClick={e => setAccountDelete(false)}>No</button>
                         <button className='continue_button w-full h-[52px] rounded-[12px] saira mt-5 duration-200 disabled:opacity-80 cursor-pointer' onClick={e => deleteAccountHandler()}>Yes, delete now!</button>
                     </div>
-
-
                 </div>
             }
         </div>
