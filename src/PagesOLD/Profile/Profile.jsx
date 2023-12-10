@@ -72,7 +72,7 @@ function Profile({ languageData, userData }) {
                     <div className='gradient-circle w-[120px] h-[120px] flex justify-center items-center'>
                         <div>
                             <p className='text-[14px] saira text-center font-normal mb-1'>
-                                {formatTime(timeLeft.hours)}:{formatTime(timeLeft.minutes)}<span className='saira text-[#9D3EFD]'>:{formatTime(timeLeft.seconds)}</span>
+                                {formatTime(timeLeft.hours)}:{formatTime(timeLeft.minutes)}:{formatTime(timeLeft.seconds)}
                             </p>
                             <p className='text-[12px] saira text-center font-normal'>24 hours to refer your friends</p>
                         </div>

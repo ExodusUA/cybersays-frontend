@@ -4,27 +4,31 @@ import Milestone2 from './Milestone/Milestone2'
 import MileStone3 from './Milestone/MileStone3'
 import MileStoneHeader from './Milestone/MileStoneHeader'
 import ProgressBar from '../Components/ProgressBar'
-import MenuModal from '../Components/MenuModal'
-import DeleteConfirm from '../Components/DeleteConfirm'
+import { useQuery } from '@tanstack/react-query'
+import userAPI from '../Requests/user'
 
-function Homepage() {
+function Homepage({languageData}) {
 
-  const [userModalOpen, setModalOpen] = useState(false);
-  const [deleteOpen, setDeleteOpen] = useState(false);
+  const [userData, setUserData] = useState(null)
+  const [imLiveURL, setImLiveURL] = useState(null);
+
+  useQuery({
+    queryKey: ['userData'],
+    queryFn: async () => {
+      const res = await userAPI.getUserData()
+      setUserData(res)
+      setImLiveURL(`https://imlive.com/wmaster.ashx?QueryID=197&WID=126670106835&linkID=701&from=freevideo6&promocode=${res?.id}`)
+      return res
+    }
+  })
 
   return (
-    <div className=' bg-milestone'>
-
-      <button onClick={e => setModalOpen(true)} >open</button>
-      <MileStoneHeader />
+    <div className='bg-milestone'>
+      <MileStoneHeader userData={userData} />
       <ProgressBar />
-      <Milestone1 />
-      <Milestone2 />
-      <MileStone3 />
-
-
-      {userModalOpen && <MenuModal setModalOpen={setModalOpen} setDeleteOpen={setDeleteOpen} />}
-      {deleteOpen && <DeleteConfirm setModalOpen={setModalOpen} setDeleteOpen={setDeleteOpen} />}
+      <Milestone1 userData={userData} languageData={languageData} imLiveURL={imLiveURL} />
+      <Milestone2 userData={userData} languageData={languageData} imLiveURL={imLiveURL} />
+      <MileStone3 userData={userData} languageData={languageData} />
     </div>
 
 

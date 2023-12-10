@@ -87,6 +87,10 @@
     background: var(--Linear, linear-gradient(105deg, #FF1CBB -23.05%, #088CD9 88.21%));
 }
 
+.gradient-progressBarBg {
+    background: var(--Spectrum, linear-gradient(180deg, rgba(100, 97, 89, 0.05) 21.45%, rgba(255, 234, 180, 0.25) 100%));
+}
+
 .bg-milestone {
     background: var(--bg2, linear-gradient(171deg, #1D123B 0%, #1B325E 51.63%, #1D123B 99.13%));
 }

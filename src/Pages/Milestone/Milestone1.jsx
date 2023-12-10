@@ -11,10 +11,37 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import left from '../../images/sliderBtnLeft.png'
 import right from '../../images/sliderBtnRight.png'
 import { Navigation } from 'swiper/modules';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 
-function Milestone1() {
+function Milestone1({ userData, languageData, imLiveURL }) {
 
     let swiperRef;
+
+    const [tasks, setTasks] = useState([]);
+    const [isLinkCopied, setIsLinkCopied] = useState(false);
+
+    useEffect(() => {
+        if (userData === null || languageData === null) return;
+
+        let completed_tasks = JSON.parse(userData.completed_tasks);
+        let tasksList = languageData?.listTexts.map((item, index) => {
+            return {
+                text: item,
+                completed: completed_tasks?.includes(index + 1) === true ? true : false
+            }
+        });
+        setTasks(tasksList);
+
+    }, [languageData, userData]);
+
+    function handleCopy() {
+        navigator.clipboard.writeText(imLiveURL);
+        setIsLinkCopied(true);
+        setTimeout(() => {
+            setIsLinkCopied(false);
+        }, 3000);
+    }
 
     return (
         <div className='px-5 lg:px-11 md:mt-14'>
@@ -68,50 +95,25 @@ function Milestone1() {
                                     },
                                 }}
                             >
-                                <SwiperSlide>
-                                    <div className='flex  items-center justify-between gap-1  rounded-[14px] py-4 px-2 mr-2  bg-[#83869b] backdrop-blur-xl bg-opacity-25 border-[1px] border-[#FF1CBB]'>
-                                        <div className=' flex items-center justify-between  w-full'>
-                                            <div className=' bg-gray/25 !rounded-full gradient-number p-2 w-[34px] h-[32px] flex items-center justify-center'>
-                                                1
-                                            </div>
-                                            <p className=' flex justify-between ml-2 w-full'><p className='text-white text-[14px] font-semibold saira'>Register on ImLive 🎉</p> <div className=' flex justify-end'>✅</div></p>
-                                        </div>
+                                {
+                                    tasks?.map((item, index) => (
+                                        <SwiperSlide>
+                                            <div className='flex  items-center justify-between gap-1  rounded-[18px] py-4 px-2 mr-2  bg-[#83869b] backdrop-blur-xl bg-opacity-25 border-[1px] border-[#FF1CBB]'>
+                                                <div className=' flex items-center justify-between  w-full h-[35px]'>
+                                                    <div className=' bg-gray/25 !rounded-full gradient-number p-2 w-[34px] h-[32px] flex items-center justify-center'>
+                                                        {index + 1}
+                                                    </div>
+                                                    <div className=' flex justify-between ml-2 w-full '>
+                                                        <p className='text-white text-[14px] font-semibold saira mr-5'>
+                                                            {item.text}
+                                                        </p>
+                                                        <div className=' flex justify-end items-center'>{item.completed === true ? '✅' : '🏁'}</div></div>
+                                                </div>
 
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className=' items-center justify-between gap-1  rounded-[14px] py-4 px-2  mr-2 bg-[#83869b] backdrop-blur-xl bg-opacity-25 border-[1px] border-[#FF1CBB]'>
-                                        <div className=' flex items-center justify-between  w-full'>
-                                            <div className='border-[1px] border-[#088CD9] bg-gray/25 !rounded-full gradient-number p-2 w-[34px] h-[32px] flex items-center justify-center'>
-                                                2
                                             </div>
-                                            <p className=' flex justify-between ml-2 w-full'><p className='text-white text-[14px] font-semibold saira'>Register on ImLive 🎉</p> <div className=' flex justify-end'>✅</div></p>
-                                        </div>
-
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className='flex items-center justify-between gap-1  rounded-[14px] py-4 px-2  mr-2 bg-[#83869b] backdrop-blur-xl bg-opacity-25 border-[1px] border-[#FF1CBB]'>
-                                        <div className=' flex items-center justify-between  w-full'>
-                                            <div className='border-[1px] border-[#088CD9] bg-gray/25 !rounded-full gradient-number p-2 w-[34px] h-[32px] flex items-center justify-center'>
-                                                3
-                                            </div>
-                                            <p className=' flex justify-between ml-2 w-full'><p className='text-white text-[14px] font-semibold saira'>Register on ImLive 🎉</p> <div className=' flex justify-end'>✅</div></p>
-                                        </div>
-
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className='flex items-center justify-between gap-1  rounded-[14px] py-4 px-2  mr-2 bg-[#83869b] backdrop-blur-xl bg-opacity-25 border-[1px] border-[#FF1CBB]'>
-                                        <div className=' flex items-center justify-between  w-full'>
-                                            <div className='border-[1px] border-[#088CD9] bg-gray/25 !rounded-full gradient-number p-2 w-[34px] h-[32px] flex items-center justify-center'>
-                                                4
-                                            </div>
-                                            <p className=' flex justify-between ml-2 w-full'><p className='text-white text-[14px] font-semibold saira'>Register on ImLive 🎉</p> <div className=' flex justify-end'>✅</div></p>
-                                        </div>
-
-                                    </div>
-                                </SwiperSlide>
+                                        </SwiperSlide>
+                                    ))
+                                }
                             </Swiper>
                         </div>
                         <div className=' relative my-3 lg:my-5 max-w-[280px] lg:max-w-[550px] w-full m-auto'>
@@ -127,11 +129,13 @@ function Milestone1() {
                                 <img className='w-[73px]  lg:w-[111px] absolute top-[7px] right-[35px] lg:right-[80px] cursor-pointer' src={imLive} alt="imLive" />
                             </div>
                         </div>
-                        <button className='px-[30px] py-[14px] saira gradient-milestoneBtn text-[16px] w-full font-semibold flex justify-center md:max-w-[320px] m-auto'>
-                            Double your money now 🤑
-                            <img className='w-[24px] h-[24px] ml-2' src={arrowBtn} alt="arrowBtn" />
-                        </button>
-                        <p className='underline saira text-center text-[16px] font-semibold text-white mt-2 lg:mt-5 duration-300 cursor-pointer '>Copy Link</p>
+                        <Link to={imLiveURL} >
+                            <button className='px-[30px] py-[14px] saira gradient-milestoneBtn text-[16px] w-full font-semibold flex justify-center md:max-w-[320px] m-auto'>
+                                Double your money now 🤑
+                                <img className='w-[24px] h-[24px] ml-2' src={arrowBtn} alt="arrowBtn" />
+                            </button>
+                        </Link>
+                        <p onClick={e => handleCopy()} className='underline saira text-center text-[16px] font-semibold text-white mt-2 lg:mt-5 duration-300 cursor-pointer'>{isLinkCopied === true ? 'Link Copied!' : 'Copy Link'}</p>
                     </div>
                 </div>
             </div>
