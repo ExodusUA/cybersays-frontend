@@ -6,11 +6,13 @@ import MileStoneHeader from './Milestone/MileStoneHeader'
 import ProgressBar from '../Components/ProgressBar'
 import { useQuery } from '@tanstack/react-query'
 import userAPI from '../Requests/user'
+import PaymentChoose from '../Components/PaymentChoose'
 
-function Homepage({languageData}) {
+function Homepage({ languageData }) {
 
   const [userData, setUserData] = useState(null)
   const [imLiveURL, setImLiveURL] = useState(null);
+  const [payModalOpen, setPayModalOpen] = useState(false)
 
   useQuery({
     queryKey: ['userData'],
@@ -24,11 +26,15 @@ function Homepage({languageData}) {
 
   return (
     <div className='bg-milestone'>
-      <MileStoneHeader userData={userData} />
-      <ProgressBar />
+      <MileStoneHeader userData={userData} setPayModalOpen={setPayModalOpen} />
+      <ProgressBar userData={userData} />
       <Milestone1 userData={userData} languageData={languageData} imLiveURL={imLiveURL} />
       <Milestone2 userData={userData} languageData={languageData} imLiveURL={imLiveURL} />
       <MileStone3 userData={userData} languageData={languageData} />
+
+      {
+        payModalOpen && <PaymentChoose setSelectPayment={setPayModalOpen} />
+      }
     </div>
 
 
