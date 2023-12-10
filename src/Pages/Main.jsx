@@ -14,6 +14,7 @@ function Main({ languageData }) {
             {
                 menuOpen && <MenuModal setModalOpen={setMenuOpen} />
             }
+           
             <Routes>
                 <Route path="/" element={<AuthCheck><Homepage languageData={languageData} /></AuthCheck>} />
                 <Route path="/profile" element={<AuthCheck><Profile languageData={languageData} /></AuthCheck>} />

@@ -109,7 +109,6 @@ function Milestone1({ userData, languageData, imLiveURL }) {
                                                         </p>
                                                         <div className=' flex justify-end items-center'>{item.completed === true ? '✅' : '🏁'}</div></div>
                                                 </div>
-
                                             </div>
                                         </SwiperSlide>
                                     ))

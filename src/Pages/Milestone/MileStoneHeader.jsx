@@ -2,7 +2,7 @@ import React from 'react'
 import logoCyber from '../../images/logoCyberYellow.png'
 import field from '../../images/fieldProfile.png'
 
-function MileStoneHeader({ userData }) {
+function MileStoneHeader({ userData, setPayModalOpen }) {
     return (
         <div>
             <div className=' gradient-milestoneHeader py-3 '>
@@ -35,7 +35,7 @@ function MileStoneHeader({ userData }) {
                                 </div>
                             </div>
                         </div>
-                        <p className='underline saira text-end text-[14px] font-semibold text-white mt-2 duration-300 cursor-pointer mr-4'>Choose your way to get paid immediately</p>
+                        <p className='underline saira text-end text-[14px] font-semibold text-white mt-2 duration-300 cursor-pointer mr-4' onClick={e => setPayModalOpen(true)}>Choose your way to get paid immediately</p>
                     </div>
                 </div>
             </div>
