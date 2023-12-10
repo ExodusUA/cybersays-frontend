@@ -9,7 +9,7 @@ function ProgressBar() {
     ];
 
     const animateRef = useRef();
-    const percentage = 60;
+    const percentage = 70;
 
     useEffect(() => {
         if (animateRef.current) {
@@ -17,51 +17,36 @@ function ProgressBar() {
         }
     }, [percentage]);
     return (
-        <div>
-            <svg width="770" height="307" viewBox="0 0 770 307" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <svg width="750" height="307" viewBox="0 0 770 307" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id={gradientId} x1="26.431" y1="0.378903" x2="453.103" y2="70.8617" gradientUnits="userSpaceOnUse">
-                            {gradientStops.map((stop, index) => (
-                                <stop key={index} offset={stop.offset} stopColor={stop.color} />
-                            ))}
-                        </linearGradient>
-                    </defs>
-
-                    <g filter="url(#filter0_d_457_11253)">
-                        <path d="M42.6552 75.3789H727.345L750 145.862H20L42.6552 75.3789Z" fill={`url(#${gradientId})`} />
-                    </g>
-
-
-                    <rect x="20" y="145.863" width={`${percentage}%`} height="110" fill={`url(#${gradientId})`} />
-                </svg>
+        <div className='px-5 lg:px-11 md:mt-14'>
+            <h2 className='text-white text-[24px] font-bold text-center my-5'>3 milestones:</h2>
+            <div className='gradient-milestone2 max-w-[770px] xl:w-full p-2 pb-0 lg:p-5 lg:pb-0 m-auto rounded-[16px] '>
+                <div className=' flex justify-between'>
+                    <div className='gradient-progressBarBg px-2 py-10 max-w-[235px] w-full text-[12px] lg:text-[14px] text-center saira mx-1 font-semibold'>Make the easiest 10$ of your life</div>
+                    <div className='gradient-progressBarBg px-2 py-10 max-w-[235px] w-full text-[12px] lg:text-[14px] text-center saira mx-1 font-semibold'>Make raffle tickets to be able to be the one to go to Vegas</div>
+                    <div className='gradient-progressBarBg px-2 py-10 max-w-[235px] w-full text-[12px] lg:text-[14px] text-center saira mx-1 font-semibold'>Take your friends to the craziest weekend ever in Vegas</div>
+                </div>
+                {/*
+            <svg className=' relative' width="750" height="307" viewBox="0 0 770 307" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d_457_11253)">
-                    <svg width="750" height="307" viewBox="0 0 770 307" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="750" height="300" xmlns="http://www.w3.org/2000/svg">
+                            <linearGradient id="paint0_linear_457_11257" x1="26.431" y1="0.378903" x2="453.103" y2="70.8617" gradientUnits="userSpaceOnUse">
+                                <stop offset="0.343102" stop-color="#63DEA8" />
+                                <stop offset="1" stop-color="#DFE758" />
+                            </linearGradient>
+                        <path d="M42.6552 75.3789H727.345L750 145.862H20L42.6552 75.3789Z" fill="url(#paint0_linear_457_11257)" />
+                    </svg>
+                    <svg  width="750" height="407" viewBox="0 0 770 307" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <linearGradient id={gradientId} x1="26.431" y1="0.378903" x2="453.103" y2="70.8617" gradientUnits="userSpaceOnUse">
-                                {gradientStops.map((stop, index) => (
-                                    <stop key={index} offset={stop.offset} stopColor={stop.color} />
-                                ))}
+                            <stop offset="0.343102" stop-color="#63DEA8" />
+                                <stop offset="1" stop-color="#DFE758" />
                             </linearGradient>
                         </defs>
-
-                        <g filter="url(#filter0_d_457_11253)">
-                            <path d="M42.6552 75.3789H727.345L750 145.862H20L42.6552 75.3789Z" fill={`url(#${gradientId})`} />
-                        </g>
-
-                        <rect x="20" y="145.863" width={`750px`} height="110" fill={`url(#${gradientId})`} />
-
-                        <rect x="20" y="145.863" width={`700px`} height="110" fill={`url(#${gradientId})`} />
+                       
+                        <rect x="20" y="145.863" width={`${percentage}%`} height="110"  fill={`url(#${gradientId})`} />
                     </svg>
-                    <path d="M42.6552 75.3789H727.345L750 145.862H20L42.6552 75.3789Z" fill="url(#paint0_linear_457_11257)" />
-                    <defs>
-                        <linearGradient id="paint0_linear_457_11257" x1="26.431" y1="0.378903" x2="453.103" y2="70.8617" gradientUnits="userSpaceOnUse">
-                            <stop offset="0.343102" stop-color="#63DEA8" />
-                            <stop offset="1" stop-color="#EEE74E" />
-                        </linearGradient>
-                    </defs>
-
-
+                    
+                    
                     <path d="M20 145.863H750L724.828 256.622H45.1724L20 145.863Z" fill="url(#paint1_linear_457_11253)" />
                     <path d="M20 145.863H750L724.828 256.622H45.1724L20 145.863Z" fill="url(#paint2_linear_457_11253)" fill-opacity="0.2" />
                     <g filter="url(#filter1_f_457_11253)">
@@ -136,8 +121,9 @@ function ProgressBar() {
 
 
             </svg>
+*/}
 
-
+            </div>
         </div>
     )
 }

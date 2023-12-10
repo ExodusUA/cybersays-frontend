@@ -78,7 +78,7 @@ function Milestone1({ userData, languageData, imLiveURL }) {
                                     nextEl: '.buttonNext',
                                 }}
                                 spaceBetween={0}
-                                
+                                loop={true}
                                 breakpoints={{
                                     0: {
                                         slidesPerView: 1.2,
@@ -98,12 +98,16 @@ function Milestone1({ userData, languageData, imLiveURL }) {
                                 {
                                     tasks?.map((item, index) => (
                                         <SwiperSlide>
-                                            <div className='flex  items-center justify-between gap-1  rounded-[14px] py-4 px-2 mr-2  bg-[#83869b] backdrop-blur-xl bg-opacity-25 border-[1px] border-[#FF1CBB]'>
-                                                <div className=' flex items-center justify-between  w-full'>
+                                            <div className='flex  items-center justify-between gap-1  rounded-[18px] py-4 px-2 mr-2  bg-[#83869b] backdrop-blur-xl bg-opacity-25 border-[1px] border-[#FF1CBB]'>
+                                                <div className=' flex items-center justify-between  w-full h-[35px]'>
                                                     <div className=' bg-gray/25 !rounded-full gradient-number p-2 w-[34px] h-[32px] flex items-center justify-center'>
                                                         {index + 1}
                                                     </div>
-                                                    <p className=' flex justify-between ml-2 w-full'><p className='text-white text-[14px] font-semibold saira'>{item.text}</p> <div className=' flex justify-end'>{item.completed === true ? '✅' : '🏁'}</div></p>
+                                                    <div className=' flex justify-between ml-2 w-full '>
+                                                        <p className='text-white text-[14px] font-semibold saira mr-5'>
+                                                            {item.text}
+                                                        </p>
+                                                        <div className=' flex justify-end items-center'>{item.completed === true ? '✅' : '🏁'}</div></div>
                                                 </div>
 
                                             </div>

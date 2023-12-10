@@ -12,7 +12,7 @@ import imLive from '../../images/ImLiveLogo.png'
 import share from '../../images/shareIcon.png'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import gif1 from '../../images/exampleGif1.png'
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import left from '../../images/sliderBtnLeft.png'
 import right from '../../images/sliderBtnRight.png'
 import { Link } from 'react-router-dom';
@@ -20,16 +20,19 @@ import moment from 'moment-timezone';
 
 function Milestone2({ languageData, userData, imLiveURL }) {
 
+
     let userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     moment.tz.setDefault(userTimezone)
 
 
+
     let swiperRef;
 
-    const [selectedButton, setSelectedButton] = useState(1);
-    const [selectedGif, setSelectedGif] = useState(1);
+    const [selectedButton, setSelectedButton] = useState(2);
+    const [selectedGif, setSelectedGif] = useState(3);
     const [percentage, setPercentage] = useState(35);
     const [isLinkCopied, setIsLinkCopied] = useState(false);
+    const [activeSlide, setActiveSlide] = useState(0);
 
     const shareRefferalLink = () => {
         if (navigator.share) {
@@ -61,20 +64,17 @@ function Milestone2({ languageData, userData, imLiveURL }) {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setTimeLeft(getTimeLeft());
+
+
+            let daysSeconds = 24 * 60 * 60;
+            let seconds = getTimeLeft().seconds;
+
+            let percentage = 100 - ((seconds / daysSeconds) * 100).toFixed(2);
+            setPercentage(Number(percentage))
         }, 1000);
 
         return () => clearInterval(intervalId);
     }, [userData]);
-
-    useEffect(() => {
-        const updatePercentage = () => {
-            let hoursNow = getTimeLeft().hours;
-            let hours = (hoursNow / 24) * 100;
-            setPercentage(hours);
-        };
-
-        updatePercentage();
-    }, [timeLeft]);
 
     function getTimeLeft() {
 
@@ -178,12 +178,12 @@ function Milestone2({ languageData, userData, imLiveURL }) {
                                     <img className='block lg:hidden' src={field2} alt="field2" />
                                     <img className='hidden lg:block ' src={fieldDesctop2} alt="fieldDesctop2" />
                                     <div className=''>
-                                        <div className=' absolute top-[7px] lg:top-[10px] left-[25px] lg:left-[65px] cursor-pointer w-[100px] lg:w-[unset]'>
-                                            <p className='text-[12px] lg:text-[14px] text-[#1E1E1E] font-normal saira text-center  leading-4'>Friends you referred 🏆</p>
+                                        <div className=' absolute top-[7px] lg:top-[10px] left-[20px] lg:left-[65px] cursor-pointer w-[100px] lg:w-[unset]'>
+                                            <p className='text-[12px] lg:text-[14px] text-[#1E1E1E] font-normal saira text-center  leading-[14px]'>Friends you referred 🏆</p>
                                             <p className='text-[12px] lg:text-[14px] text-gradient font-semibold saira text-center'>{userData?.refferals ? JSON.parse(userData?.refferals).length : 0} friedns</p>
                                         </div>
-                                        <div className=' absolute top-[7px] lg:top-[10px] right-[25px] lg:right-[55px] cursor-pointer w-[100px] lg:w-[unset]'>
-                                            <p className='text-[12px] lg:text-[14px] text-[#1E1E1E] font-normal saira text-center leading-4'>Money you’ve made 💸</p>
+                                        <div className=' absolute top-[7px] lg:top-[10px] right-[15px] lg:right-[55px] cursor-pointer w-[100px] lg:w-[unset]'>
+                                            <p className='text-[12px] lg:text-[14px] text-[#1E1E1E] font-normal saira text-center leading-[14px]'>Money you’ve made 💸</p>
                                             <p className='text-[12px] lg:text-[14px] text-gradient font-semibold saira text-center'>${userData?.earned}</p>
                                         </div>
                                     </div>
@@ -204,10 +204,16 @@ function Milestone2({ languageData, userData, imLiveURL }) {
                                             prevEl: '.buttonPrev',
                                             nextEl: '.buttonNext',
                                         }}
+                                        onSlideChange={(swiper) => {
+                                            const realIndex = swiper.realIndex;
+                                            setSelectedGif(realIndex);
+                                        }}
 
                                         loop={true}
+
                                         breakpoints={{
                                             0: {
+
                                                 slidesPerView: 2.3,
                                                 spaceBetween: 0,
                                             },
@@ -219,9 +225,11 @@ function Milestone2({ languageData, userData, imLiveURL }) {
                                             1025: {
                                                 slidesPerView: 4.1,
                                                 spaceBetween: 0,
+
                                             },
                                         }}
                                     >
+
                                         <SwiperSlide>
                                             <img onClick={e => setSelectedGif(1)} className={`${selectedGif === 1 && '  gradient opacity-[1]'}   rounded-[12px] w-[120px] h-[100px] opacity-[0.5] p-[2px] cursor-pointer`} src={gif1} alt="gif1" />
                                         </SwiperSlide>
@@ -241,6 +249,8 @@ function Milestone2({ languageData, userData, imLiveURL }) {
                                             <img onClick={e => setSelectedGif(6)} className={`${selectedGif === 6 && '  gradient opacity-[1]'}   rounded-[12px] w-[120px] h-[100px] opacity-[0.5] p-[2px] cursor-pointer`} src={gif1} alt="gif1" />
                                         </SwiperSlide>
                                     </Swiper>
+
+
                                 </div>
                                 <p className='text-[12px] text-white font-normal saira leading-4 text-center mt-3 mb-1'>Don’t promote anywhere that can spam people</p>
 
