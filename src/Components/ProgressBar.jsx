@@ -5,12 +5,6 @@ import gradientThird from '../images/progress/66.png'
 import gradientFourth from '../images/progress/100.png'
 
 function ProgressBar() {
-    const gradientId = 'progressGradient';
-
-    const gradientStops = [
-        { offset: '0%', color: '#63DEA8', opacity: 1 },
-        { offset: '100%', color: '#DFE758', opacity: 1 },
-    ];
 
     const animateRef = useRef();
     const percentage = 70;
@@ -21,7 +15,7 @@ function ProgressBar() {
         }
     }, [percentage]);
 
-    const [pointState, setPointState] = useState(2);
+    const [pointState, setPointState] = useState(1);
 
     return (
         <div className='px-5 lg:px-11 md:mt-14'>

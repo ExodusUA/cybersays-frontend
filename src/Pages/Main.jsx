@@ -16,7 +16,7 @@ function Main({ languageData }) {
             }
            
             <Routes>
-                <Route path="/" element={<AuthCheck><Homepage languageData={languageData} /></AuthCheck>} />
+                <Route path="/" element={<AuthCheck><Homepage setMenuOpen={setMenuOpen} languageData={languageData} /></AuthCheck>} />
                 <Route path="/profile" element={<AuthCheck><Profile languageData={languageData} /></AuthCheck>} />
 
             </Routes>
