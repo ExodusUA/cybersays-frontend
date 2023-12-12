@@ -17,9 +17,11 @@ function MenuModal({ setModalOpen, setDeleteOpen }) {
                     <img onClick={() => setModalOpen(false)} className='w-[34px] cursor-pointer' src={close} alt="close" />
                 </div>
                 <div className='w-full'>
+                    {/*
                     <Link to='/profile' onClick={() => setModalOpen(false)} className='text-white font-semibold text-[24px] saira flex items-center cursor-pointer justify-center'>
                         <img className='w-[24px] mr-2' src={myAccount} alt="myAccount" />My account
                     </Link>
+                    */}
                     <Link to='/login' onClick={() => {
                         localStorage.removeItem('token')
                         setModalOpen(false)

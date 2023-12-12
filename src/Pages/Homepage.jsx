@@ -25,7 +25,7 @@ function Homepage({ languageData, setMenuOpen }) {
   })
 
   return (
-    <div className='bg-milestone'>
+    <div className='bg-milestone pb-10'>
       <MileStoneHeader userData={userData} setPayModalOpen={setPayModalOpen} setMenuOpen={setMenuOpen} />
       <ProgressBar userData={userData} />
       <Milestone1 userData={userData} languageData={languageData} imLiveURL={imLiveURL} />
