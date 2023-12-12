@@ -4,15 +4,21 @@ import Homepage from './Homepage'
 import AuthCheck from '../hoc/AuthCheck'
 import MenuModal from '../Components/MenuModal'
 import Profile from './Profile'
+import DeleteConfirm from '../Components/DeleteConfirm'
 
 function Main({ languageData }) {
 
     const [menuOpen, setMenuOpen] = useState(false)
+    const [deleteOpen, setDeleteOpen] = useState(false)
 
     return (
         <>
             {
-                menuOpen && <MenuModal setModalOpen={setMenuOpen} />
+                menuOpen && <MenuModal setModalOpen={setMenuOpen} setDeleteOpen={setDeleteOpen} />
+            }
+
+            {
+                deleteOpen && <DeleteConfirm setDeleteOpen={setDeleteOpen} />
             }
            
             <Routes>
