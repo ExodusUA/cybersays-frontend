@@ -24,14 +24,18 @@ function Milestone1({ userData, languageData, imLiveURL }) {
     useEffect(() => {
         if (userData === null || languageData === null) return;
 
-        let completed_tasks = JSON.parse(userData.completed_tasks);
-        let tasksList = languageData?.listTexts.map((item, index) => {
-            return {
-                text: item,
-                completed: completed_tasks?.includes(index + 1) === true ? true : false
-            }
-        });
-        setTasks(tasksList);
+        try {
+            let completed_tasks = JSON.parse(userData.completed_tasks);
+            let tasksList = languageData?.listTexts.map((item, index) => {
+                return {
+                    text: item,
+                    completed: completed_tasks?.includes(index + 1) === true ? true : false
+                }
+            });
+            setTasks(tasksList);
+        } catch (error) {
+console.log(error)
+        }
 
     }, [languageData, userData]);
 

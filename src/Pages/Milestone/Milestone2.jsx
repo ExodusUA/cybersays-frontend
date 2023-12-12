@@ -40,7 +40,7 @@ function Milestone2({ languageData, userData, imLiveURL }) {
                 .share({
                     title: document.title,
                     text: 'Sharing',
-                    url: window.location.hostname + '?uid=' + userData?.refferal_code,
+                    url: window.location.hostname + '?ref=' + userData?.refferal_code,
                 })
                 .then(() => console.log('Successful share! 🎉'))
                 .catch(err => console.error(err));
@@ -50,7 +50,7 @@ function Milestone2({ languageData, userData, imLiveURL }) {
     }
 
     const copyToClipboard = () => {
-        let link = window.location.host + '?uid=' + userData?.refferal_code;
+        let link = window.location.host + '?ref=' + userData?.refferal_code;
         setIsLinkCopied(true)
         navigator.clipboard.writeText(link);
 

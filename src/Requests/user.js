@@ -25,5 +25,18 @@ async function deleteUser() {
     return response;
 }
 
+/* CHANGE PAYMENT TYPE */
 
-export default { getUserData, deleteUser };
+async function changePaymentType(payment) {
+    const response = await axios.put(process.env.REACT_APP_API_URL + '/user/payment', {
+        payment
+    }, {
+        headers: {
+            token: `${getToken()}`
+        }
+    });
+    return response;
+}
+
+
+export default { getUserData, deleteUser, changePaymentType };

@@ -11,6 +11,10 @@ import Terms from './Pages/Terms';
 
 function App() {
 
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get('ref')) window.localStorage.setItem('ref', params.get('ref'));
+
   const queryClient = new QueryClient()
 
   mixpanel.init(process.env.REACT_APP_MIXPANEL_PROJECT_TOKEN);

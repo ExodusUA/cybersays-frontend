@@ -16,7 +16,7 @@ function LoginForm() {
 
     const [activeModal, setActiveModal] = useState(null);
     const queryParams = new URLSearchParams(window.location.search);
-    let refferalCode = queryParams.get('ref');
+    let refferalCode = queryParams.get('ref') || window.localStorage.getItem('ref');
     let special = queryParams.get('special');
 
     if (special === undefined || special === null) special = null
