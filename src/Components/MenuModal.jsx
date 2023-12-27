@@ -4,7 +4,7 @@ import logout from '../images/logout.png'
 import deleteAccount from '../images/deleteAccount.png'
 import close from '../images/closeBtn.png'
 import { Link } from 'react-router-dom'
-import DeleteConfirm from './DeleteConfirm'
+import DeleteConfirm from '../Components/DeleteConfirm'
 
 function MenuModal({ setModalOpen, setDeleteOpen }) {
 

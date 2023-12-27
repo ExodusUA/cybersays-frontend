@@ -1,63 +1,44 @@
-import React, { useRef, useState } from 'react'
-import { Helmet } from 'react-helmet'
-import 'swiper/css';
-import 'swiper/css/navigation';
-import Language from '../Components/Language/Language'
-import logotype from '../images/logotype.svg'
-import 'swiper/css';
-import 'swiper/css/navigation';
-import Slider from './Homepage/Slider';
-import LoginForm from './Homepage/LoginForm';
-import UserMenuModal from '../Components/UserMenuModal';
-import UserMenuButton from '../Components/UserMenuButton';
-import InviteFriends from '../Components/InviteFriends';
+import React, { useState } from 'react'
+import Milestone1 from './Milestone/Milestone1'
+import Milestone2 from './Milestone/Milestone2'
+import MileStone3 from './Milestone/MileStone3'
+import MileStoneHeader from './Milestone/MileStoneHeader'
+import ProgressBar from '../ComponentsOLD/ProgressBar'
+import { useQuery } from '@tanstack/react-query'
+import userAPI from '../Requests/user'
+import PaymentChoose from '../ComponentsOLD/PaymentChoose'
 
-function Homepage({ languageData }) {
+function Homepage({ languageData, setMenuOpen }) {
+
+  const [userData, setUserData] = useState(null)
+  const [imLiveURL, setImLiveURL] = useState(null);
+  const [payModalOpen, setPayModalOpen] = useState(false)
+
+  useQuery({
+    queryKey: ['userData'],
+    queryFn: async () => {
+      const res = await userAPI.getUserData()
+      setUserData(res)
+      setImLiveURL(`https://imlive.com/wmaster.ashx?QueryID=197&WID=126670106835&linkID=701&from=freevideo6&promocode=${res?.id}`)
+      return res
+    }
+  })
+
+  return (
+    <div className='bg-milestone pb-10'>
+      <MileStoneHeader userData={userData} setPayModalOpen={setPayModalOpen} setMenuOpen={setMenuOpen} />
+      <ProgressBar userData={userData} />
+      <Milestone1 userData={userData} languageData={languageData} imLiveURL={imLiveURL} />
+      <Milestone2 userData={userData} languageData={languageData} imLiveURL={imLiveURL} />
+      <MileStone3 userData={userData} languageData={languageData} />
+
+      {
+        payModalOpen && <PaymentChoose setSelectPayment={setPayModalOpen} />
+      }
+    </div>
 
 
-
-    return (
-        <>
-            <Helmet>
-                <title>{languageData?.siteTitle}</title>
-                <meta name="description"
-                    content={languageData?.metaDescription} />
-                <meta property="og:title" content={languageData?.siteTitle} />
-                <meta property="og:description"
-                    content={languageData?.metaDescription} />
-            </Helmet>
-
-
-            <section className='w-screen h-screen relative overflow-hidden'>
-                <div className='w-[400px] h-[400px] absolute right-12 top-12 bg-[#0A4A48] blur-[100px]'></div>
-
-                <div className='lg:flex h-full'>
-                    <Slider />
-
-                    <div className='w-full text-center bg-dark lg:w-[55%] h-full'>
-                        <div className='w-[90%] lg:w-[80%] m-auto lg:relative z-10'>
-
-                            <div className='absolute right-0 top-5 flex items-center align-start z-20'>
-                                <Language />
-                            </div>
-
-                            <div className='pt-[3vh] lg:pt-[15vh] w-full relative z-[10]'>
-                                <img className='w-[125px] md:w-[200px] lg:w-[250px] m-auto lg:m-0' src={logotype} alt="Logotype" />
-                                <p className='w-[100%] text-center lg:text-left text-[24px] leading-7 font-bold lg:text-[30px] text-white lg:leading-9 lg:border-b-2 border-[#A8AFF2] py-4 lg:py-8 lg:pt-6'>CyberSays: Double Your Money, Double Your Gains!</p>
-                                <LoginForm />
-                            </div>
-
-                           
-
-                        </div>
-                    </div>
-                </div>
-
-                <div className='w-[1000px] h-[1000px] absolute right-[-100px] bottom-[-700px] bg-[#530A59] blur-[100px] z-1 rounded-[1000px]'></div>
-            </section>
-        </>
-
-    )
+  )
 }
 
 export default Homepage

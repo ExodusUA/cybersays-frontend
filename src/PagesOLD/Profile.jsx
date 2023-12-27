@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import HeaderProfile from '../Components/HeaderProfile'
-import DeleteConfirm from '../Components/DeleteConfirm';
+import DeleteConfirm from '../ComponentsOLD/DeleteConfirm';
 
 function Profile() {
 

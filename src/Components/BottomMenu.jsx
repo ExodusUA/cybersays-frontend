@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import LanguageSlide from '../../ComponentsOLD/HomepageSlide';
-import slides from '../../Helpers/images.json'
-import left from '../../images/landing/left.png'
-import right from '../../images/landing/right.png'
+import left from '../images/landing/left.png'
+import right from '../images/landing/right.png'
 
+function BottomMenu() {
 
-function Slider({ onSlideChange }) {
     let swiperRef;
 
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -22,39 +20,43 @@ function Slider({ onSlideChange }) {
         };
     }, [screenWidth]);
 
-    console.log(onSlideChange)
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const slideChange = (swiper) => {
+        console.log(swiper)
+        setCurrentSlide(swiper.realIndex);
+    };
 
     return (
-        <div className='lg:w-[45%] relative'>
-            
+        <div className='relative'>
+
             <Swiper
-            
-               
                 className='h-[40vh] md:h-[45vh] lg:h-full'
                 onSwiper={(swiper) => {
                     swiperRef = swiper;
                 }}
                 modules={[Navigation]}
                 spaceBetween={0}
-                slidesPerView={1}
+                centeredSlides={true}
+                slidesPerView={3}
                 loop={true}
-                onSlideChange={(swiper) => onSlideChange(swiper)}
+                onSlideChange={(swiper) => slideChange(swiper)}
                 navigation={{
                     prevEl: '.buttonPrev',
                     nextEl: '.buttonNext',
                 }}
             >
                 <SwiperSlide>
-                    <LanguageSlide data={slides.slide1} screenWidth={screenWidth} />
+                    <p className={`text-black relative text-center duration-200 ${currentSlide === 0 ? 'top-0' : 'top-4'}`}>Меню 1</p>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <LanguageSlide data={slides.slide2} screenWidth={screenWidth} />
+                    <p className={`text-black relative text-center duration-200 ${currentSlide === 1 ? 'top-0' : 'top-4'}`}>Меню 2</p>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <LanguageSlide data={slides.slide3} screenWidth={screenWidth} />
+                    <p className={`text-black relative text-center duration-200 ${currentSlide === 2 ? 'top-0' : 'top-4'}`}>Меню 3</p>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <LanguageSlide data={slides.slide4} screenWidth={screenWidth} />
+                    <p className={`text-black relative text-center duration-200 ${currentSlide === 3 ? 'top-0' : 'top-4'}`}>Меню 4</p>
                 </SwiperSlide>
 
             </Swiper>
@@ -65,8 +67,9 @@ function Slider({ onSlideChange }) {
                     <img className='w-[40px] lg:w-[64px] cursor-pointer buttonNext' src={right} alt="Right" onClick={e => swiperRef?.slideNext()} />
                 </div>
             </div>
+
         </div>
     )
 }
 
-export default Slider
+export default BottomMenu

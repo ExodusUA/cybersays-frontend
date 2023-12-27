@@ -2,12 +2,12 @@ import React, { useRef } from 'react'
 import { useState } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import { otpSending, socialUserAuth } from '../../Requests/auth';
-import GoogleAuth from '../../Components/Buttons/GoogleButton';
-import FacebookButton from '../../Components/Buttons/FacebookButton';
+import GoogleAuth from '../../ComponentsOLD/Buttons/GoogleButton';
+import FacebookButton from '../../ComponentsOLD/Buttons/FacebookButton';
 import OTPModal from './OTPModal';
 import { useNavigate } from 'react-router-dom';
 import AuthEmailNotification from './AuthEmailNotification';
-import Loader from '../../Components/Loader';
+import Loader from '../../ComponentsOLD/Loader';
 
 function LoginForm() {
 
