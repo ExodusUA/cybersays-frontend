@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import left from '../images/landing/left.png'
-import right from '../images/landing/right.png'
+import left from '../images/CyberSaysPage/leftBtnMenu.png'
+import right from '../images/CyberSaysPage/rightBtnMenu.png'
+import link1 from '../images/CyberSaysPage/iconHomepage.png'
+import link2 from '../images/CyberSaysPage/iconRaffle.png'
+import link3 from '../images/CyberSaysPage/iconDouble.png'
+import link4 from '../images/CyberSaysPage/iconRefferals.png'
 
 function BottomMenu() {
 
@@ -28,46 +32,68 @@ function BottomMenu() {
     };
 
     return (
-        <div className='relative'>
-
-            <Swiper
-                className='h-[40vh] md:h-[45vh] lg:h-full'
-                onSwiper={(swiper) => {
-                    swiperRef = swiper;
-                }}
-                modules={[Navigation]}
-                spaceBetween={0}
-                centeredSlides={true}
-                slidesPerView={3}
-                loop={true}
-                onSlideChange={(swiper) => slideChange(swiper)}
-                navigation={{
-                    prevEl: '.buttonPrev',
-                    nextEl: '.buttonNext',
-                }}
-            >
-                <SwiperSlide>
-                    <p className={`text-black relative text-center duration-200 ${currentSlide === 0 ? 'top-0' : 'top-4'}`}>Меню 1</p>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <p className={`text-black relative text-center duration-200 ${currentSlide === 1 ? 'top-0' : 'top-4'}`}>Меню 2</p>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <p className={`text-black relative text-center duration-200 ${currentSlide === 2 ? 'top-0' : 'top-4'}`}>Меню 3</p>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <p className={`text-black relative text-center duration-200 ${currentSlide === 3 ? 'top-0' : 'top-4'}`}>Меню 4</p>
-                </SwiperSlide>
-
-            </Swiper>
-
-            <div className='absolute w-full bottom-10 z-[10]'>
-                <div className='mb-6 justify-center flex'>
-                    <img className='w-[40px] lg:w-[64px] cursor-pointer buttonPrev' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
-                    <img className='w-[40px] lg:w-[64px] cursor-pointer buttonNext' src={right} alt="Right" onClick={e => swiperRef?.slideNext()} />
+        <div className='flex justify-center'>
+            <div className=' fixed bottom-0 z-50 w-[375px]'>
+                <div className=' w-full bottom-10 '>
+                    <div className='justify-between flex mx-5 mb-[-40px] relative z-40'>
+                        <img className='w-[24px] lg:w-[64px] cursor-pointer buttonPrev' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
+                        <img className='w-[24px] lg:w-[64px] cursor-pointer buttonNext' src={right} alt="Right" onClick={e => swiperRef?.slideNext()} />
+                    </div>
                 </div>
-            </div>
+                <Swiper
+                    className='w-[335px] relative z-10 '
+                    onSwiper={(swiper) => {
+                        swiperRef = swiper;
+                    }}
+                    modules={[Navigation]}
+                    spaceBetween={0}
+                    centeredSlides={true}
+                    slidesPerView={3}
+                    loop={true}
+                    onSlideChange={(swiper) => slideChange(swiper)}
+                    navigation={{
+                        prevEl: '.buttonPrev',
+                        nextEl: '.buttonNext',
+                    }}
+                >
+                    <SwiperSlide>
+                        <div className={`text-black relative text-center duration-200 flex justify-center ${currentSlide === 0 ? 'top-0' : 'top-8'}`}>
+                            <div>
+                                <img className='w-[32px] h-[32px] m-auto' src={link1} alt="link1" />
+                                <p className='saira text-[12px] font-semibold'>Homepage</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className={`text-black relative text-center duration-200 flex justify-center  ${currentSlide === 1 ? 'top-0' : 'top-8'}`}>
+                            <div>
+                                <img className='w-[32px] h-[32px] m-auto' src={link2} alt="link2" />
+                                <p className='saira text-[12px] font-semibold'>Raffle tickets</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className={`text-black relative text-center duration-200 flex justify-center  ${currentSlide === 2 ? 'top-0' : 'top-8'}`}>
+                            <div>
+                                <img className='w-[32px] h-[32px] m-auto' src={link3} alt="link3" />
+                                <p className='saira text-[12px] font-semibold'>Double your money</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className={`text-black relative text-center duration-200 flex justify-center ${currentSlide === 3 ? 'top-0' : 'top-8'}`}>
+                            <div>
+                                <img className='w-[32px] h-[32px] m-auto' src={link4} alt="link4" />
+                                <p className='saira text-[12px] font-semibold'>My referrals</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
 
+                </Swiper>
+
+
+
+            </div>
         </div>
     )
 }

@@ -17,6 +17,8 @@ module.exports = {
     backgroundImage: theme => ({
       'modal': "url('./images/landing/modal_bg.png')",
       'mobile': "url('./images/landing/mobile-bg.png')",
+      'mobile-bg-homepage': "url('./images/CyberSaysPage/mobile-bg-homepage.jpg')",
+      'mobile-bg-raffle': "url('./images/CyberSaysPage/mobile-bg-raffle.jpg')",
     })
   },
   plugins: [],
