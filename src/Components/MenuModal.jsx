@@ -8,8 +8,6 @@ import DeleteConfirm from '../Components/DeleteConfirm'
 
 function MenuModal({ setModalOpen, setDeleteOpen }) {
 
-    
-
     return (
         <div className=' fixed right-0 w-screen h-screen top-0 z-30 bg-[#1b1f3f] backdrop-blur-sm bg-opacity-70 flex justify-center items-center'>
             <div className=' items-center gap-2 px-[25px] py-[15px] w-[300px]'>

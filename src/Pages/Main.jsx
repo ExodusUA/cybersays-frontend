@@ -8,6 +8,7 @@ import HeaderMenu from '../Components/HeaderMenu'
 import CyberSaysMobileMenu from '../Components/CyberSaysMobileMenu'
 import RaffleTickets from './CyberSaysPages/RaffleTickets'
 import LeaderboardModal from '../Components/LeaderboardModal'
+import AvatarModal from '../Components/AvatarModal'
 
 function Main({ languageData }) {
 
@@ -38,7 +39,11 @@ function Main({ languageData }) {
             {
               menuOpen === true && <CyberSaysMobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             }
-            <LeaderboardModal />
+            {
+                //<LeaderboardModal />
+            }
+
+<AvatarModal />
         </>
     )
 }

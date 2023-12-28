@@ -38,5 +38,22 @@ async function changePaymentType(payment) {
     return response;
 }
 
+/* UPDATE USER AVATAR */
 
-export default { getUserData, deleteUser, changePaymentType };
+async function updateUserAvatar(avatar) {
+    let formData = new FormData();
+
+    formData.append('file', avatar);
+
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/user/avatar', formData, {
+        headers: {
+            token: `${getToken()}`,
+            'Content-Type': 'multipart/form-data'
+        }
+    });
+
+    return response;
+}
+
+
+export default { getUserData, deleteUser, changePaymentType, updateUserAvatar };
