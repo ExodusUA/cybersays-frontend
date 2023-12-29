@@ -55,5 +55,15 @@ async function updateUserAvatar(avatar) {
     return response;
 }
 
+/* GET REFERRALS LIST */
 
-export default { getUserData, deleteUser, changePaymentType, updateUserAvatar };
+async function getReferralsList() {
+    const response = await axios.get(process.env.REACT_APP_API_URL + '/user/referrals', {
+        headers: {
+            token: `${getToken()}`
+        }
+    });
+    return response;
+}
+
+export default { getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList };
