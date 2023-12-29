@@ -1,15 +1,44 @@
-import React, { useState } from 'react';
-import { Tooltip } from 'react-tooltip'
+import React, { useEffect, useState } from 'react';
 import logoCyber from '../../images/CyberSaysPage/logoMain.png'
-import moreInfo from '../../images/CyberSaysPage/moreInfo.png'
-import hero from '../../images/CyberSaysPage/heroRaffle.png'
-import notReady from '../../images/CyberSaysPage/card_notReady.png'
-import done from '../../images/CyberSaysPage/card_done.png'
 import TimeCounter from '../../Components/TimeCounter'
 import TaskCard from '../../Components/DoubleMoneyPage/TaskCard';
 
-function Double() {
+function Double({ languageData, user }) {
     const [isOpen, setIsOpen] = useState(false)
+
+    const [taskStatus, setTaskStatus] = useState(null)
+
+    const getTaskStatus = (task) => {
+        if (user && user === undefined) return 'inactive'
+        if (user?.completed_tasks === null) return 'inactive'
+
+        let finishedTasks = JSON.parse(user?.completed_tasks) || []
+        let sortedTasks = finishedTasks.sort((a, b) => a - b)
+        let lastTask = sortedTasks[sortedTasks.length - 1]
+
+        if (finishedTasks.includes(task)) {
+            return 'finished'
+        } else {
+            if (lastTask === task - 1) {
+                return 'active'
+            } else {
+                return 'inactive'
+            }
+
+        }
+    }
+
+    useEffect(() => {
+        if (user && user !== undefined) {
+            let taskStatusArray = []
+
+            for (let i = 1; i <= 4; i++) {
+                taskStatusArray.push(getTaskStatus(i))
+                setTaskStatus(taskStatusArray)
+            }
+        }
+    }, [user])
+
     return (
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-double.jpg)] bg-cover bg-no-repeat bg-center relative z-10' onClick={() => setIsOpen(false)}>
             <div className='pt-[60px] px-4' >
@@ -26,15 +55,20 @@ function Double() {
                     </span>
                     will appear after task is completed
                 </p>
-                <TaskCard state={'finished'} background={'#B9A1E1'} />
-                <TaskCard state={'active'} background={'#93CC8E'} />
-                <TaskCard state={'inactive'} background={'#EA7C7C'} />
-                <TaskCard state={'inactive'} background={'#76C2E3'} />
-                
+                {
+                    taskStatus !== null && <>
+                        <TaskCard data={languageData?.tasks?.task1} state={taskStatus[0]} background={'#B9A1E1'} index={1} />
+                        <TaskCard data={languageData?.tasks?.task2} state={taskStatus[1]} background={'#93CC8E'} index={2} />
+                        <TaskCard data={languageData?.tasks?.task3} state={taskStatus[2]} background={'#EA7C7C'} index={3} />
+                        <TaskCard data={languageData?.tasks?.task4} state={taskStatus[3]} background={'#76C2E3'} index={4} />
+                    </>
+                }
+
+
             </div>
 
 
-            <TimeCounter  />
+            <TimeCounter />
 
         </div>
     )

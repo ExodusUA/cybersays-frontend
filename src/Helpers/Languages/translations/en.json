@@ -17,10 +17,78 @@
     "CopyLink": "Copy Link",
     "TreatCoins": "Treat Coins",
     "LinkCopied": "Link Copied!",
-    "task": {
-       "task1": {
-        "tastTitle": "Register to ImLive  🎉",
-        "taslcard1": "The Ultimate Adult Webcam Experience!"
-       }
+    "tasks": {
+        "task1": {
+            "taskTitle": "Register to ImLive  🎉",
+            "taskBlocks": [
+                {
+                    "taskImage": "images/meta.png",
+                    "taskText": "The Ultimate Adult Webcam Experience!"
+                },
+                {
+                    "taskImage": "images/meta.png",
+                    "taskText": "Double Your Money, Be Treated Like a king on ImLive!"
+                },
+                {
+                    "taskImage": "images/meta.png",
+                    "taskText": "Dive into Your Wildest Fantasies Now!"
+                }
+            ],
+            "taskButton": "1/4 Register!"
+        },
+        "task2": {
+            "taskTitle": "Register to ImLive  🎉",
+            "taskBlocks": [
+                {
+                    "taskImage": "images/meta.png",
+                    "taskText": "The Ultimate Adult Webcam Experience!"
+                },
+                {
+                    "taskImage": "images/meta.png",
+                    "taskText": "Double Your Money, Be Treated Like a king on ImLive!"
+                },
+                {
+                    "taskImage": "images/meta.png",
+                    "taskText": "Dive into Your Wildest Fantasies Now!"
+                }
+            ],
+            "taskButton": "1/4 Register!"
+        },
+        "task3": {
+            "taskTitle": "Register to ImLive  🎉",
+            "taskBlocks": [
+                {
+                    "taskImage": "images/meta.png",
+                    "taskText": "The Ultimate Adult Webcam Experience!"
+                },
+                {
+                    "taskImage": "images/meta.png",
+                    "taskText": "Double Your Money, Be Treated Like a king on ImLive!"
+                },
+                {
+                    "taskImage": "images/meta.png",
+                    "taskText": "Dive into Your Wildest Fantasies Now!"
+                }
+            ],
+            "taskButton": "1/4 Register!"
+        },
+        "task4": {
+            "taskTitle": "Register to ImLive  🎉",
+            "taskBlocks": [
+                {
+                    "taskImage": "images/meta.png",
+                    "taskText": "The Ultimate Adult Webcam Experience!"
+                },
+                {
+                    "taskImage": "images/meta.png",
+                    "taskText": "Double Your Money, Be Treated Like a king on ImLive!"
+                },
+                {
+                    "taskImage": "images/meta.png",
+                    "taskText": "Dive into Your Wildest Fantasies Now!"
+                }
+            ],
+            "taskButton": "1/4 Register!"
+        }
     }
 }
