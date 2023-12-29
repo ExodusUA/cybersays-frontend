@@ -8,9 +8,14 @@ import CyberSaysMobileMenu from '../Components/CyberSaysMobileMenu'
 import RaffleTickets from './CyberSaysPages/RaffleTickets'
 import AvatarModal from '../Components/Profile and Refferals Page/AvatarModal'
 import Double from './CyberSaysPages/Double'
-
 import MyReferralsModal from '../Components/Profile and Refferals Page/MyReferralsModal'
 import BottomMenu from '../Components/HomePage/BottomMenu'
+import History from '../Components/Transactions/History'
+import MyTickets from '../Components/Transactions/MyTickets'
+import Withdraw from '../Components/Transactions/Withdraw'
+import Terms from './CyberSaysPages/Terms'
+import Refferals from './CyberSaysPages/Refferals'
+import Competition from './CyberSaysPages/Competition'
 
 function Main({ languageData }) {
 
@@ -36,17 +41,12 @@ function Main({ languageData }) {
         */
             }
             <HeaderMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            <RaffleTickets />
+           <Competition />
             <BottomMenu />
             {
                 menuOpen === true && <CyberSaysMobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             }
-
            
-
-          
-
-          
 
         </>
     )

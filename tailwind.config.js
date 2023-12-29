@@ -20,6 +20,7 @@ module.exports = {
       'mobile-bg-homepage': "url('./images/CyberSaysPage/mobile-bg-homepage.jpg')",
       'mobile-bg-raffle': "url('./images/CyberSaysPage/mobile-bg-raffle.jpg')",
       'mobile-bg-double': "url('./images/CyberSaysPage/mobile-bg-double.jpg')",
+      'mobile-bg-terms': "url('./images/CyberSaysPage/mobile-bg-terms.jpg')",
     })
   },
   plugins: [],
