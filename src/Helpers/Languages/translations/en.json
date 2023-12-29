@@ -16,5 +16,11 @@
     "OfferButton": "Earn X2 Now!",
     "CopyLink": "Copy Link",
     "TreatCoins": "Treat Coins",
-    "LinkCopied": "Link Copied!"
+    "LinkCopied": "Link Copied!",
+    "task": {
+       "task1": {
+        "tastTitle": "Register to ImLive  🎉",
+        "taslcard1": "The Ultimate Adult Webcam Experience!"
+       }
+    }
 }

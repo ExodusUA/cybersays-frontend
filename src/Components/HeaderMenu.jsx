@@ -6,7 +6,7 @@ function HeaderMenu({ setMenuOpen }) {
     return (
         <div className=' fixed top-0 z-50 p-2 px-4 w-full'>
             <div className=' flex items-center justify-between'>
-                <img onClick={() => setMenuOpen(true)} className='w-[24px] h-[24px]' src={btnMenu} alt="btnMenu" />
+                <img onClick={() => setMenuOpen(true)} className='w-[24px] h-[24px] cursor-pointer' src={btnMenu} alt="btnMenu" />
                 <div  className='bg-[#EAEAEA] bg-opacity-20 border-[2px] border-[#FFED63] backdrop-blur-lg rounded-[50px]'>
                     <div >
                         <div className=' flex px-2 py-[2px]'>

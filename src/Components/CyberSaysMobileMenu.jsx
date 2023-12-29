@@ -13,7 +13,7 @@ function CyberSaysMobileMenu({ setMenuOpen }) {
     <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
       <div className='max-w-[365px] w-full m-auto'>
         <div className='flex justify-end'>
-          <img onClick={() => setMenuOpen(false)} className='w-[24px] h-[24px]' src={close} alt="close" />
+          <img onClick={() => setMenuOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
 
         </div>
         <div className='gap-7 grid mt-8 '>

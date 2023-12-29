@@ -9,6 +9,10 @@ import CyberSaysMobileMenu from '../Components/CyberSaysMobileMenu'
 import RaffleTickets from './CyberSaysPages/RaffleTickets'
 import LeaderboardModal from '../Components/LeaderboardModal'
 import AvatarModal from '../Components/AvatarModal'
+import Double from './CyberSaysPages/Double'
+import MyReferralsModal from '../Components/MyReferralsModal'
+import TourModal from '../Components/TourModal'
+import Congrats from '../Components/Congrats'
 
 function Main({ languageData }) {
 
@@ -34,16 +38,18 @@ function Main({ languageData }) {
         */
             }
             <HeaderMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            <RaffleTickets />
+            <Double />
             <BottomMenu />
             {
-              menuOpen === true && <CyberSaysMobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            }
-            {
-                //<LeaderboardModal />
+                menuOpen === true && <CyberSaysMobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             }
 
-<AvatarModal />
+            {/* <MyReferralsModal /> */}
+
+            {/* <TourModal /> */}
+
+            <Congrats />
+
         </>
     )
 }

@@ -130,3 +130,13 @@ body {}
 .scrollOff::-webkit-scrollbar {
     width: 0;
 }
+.swiper-pagination-bullet {
+    background-color: white !important;
+    opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+    background-color: #FFED63 !important;
+}
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+
+}
