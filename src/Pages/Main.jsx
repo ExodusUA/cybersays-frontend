@@ -2,17 +2,15 @@ import React, { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import MenuModal from '../Components/MenuModal'
 import DeleteConfirm from '../Components/DeleteConfirm'
-import BottomMenu from '../Components/BottomMenu'
 import Homepage from './CyberSaysPages/Homepage'
-import HeaderMenu from '../Components/HeaderMenu'
+import HeaderMenu from '../Components/HomePage/HeaderMenu'
 import CyberSaysMobileMenu from '../Components/CyberSaysMobileMenu'
 import RaffleTickets from './CyberSaysPages/RaffleTickets'
-import LeaderboardModal from '../Components/LeaderboardModal'
-import AvatarModal from '../Components/AvatarModal'
+import AvatarModal from '../Components/Profile and Refferals Page/AvatarModal'
 import Double from './CyberSaysPages/Double'
-import MyReferralsModal from '../Components/MyReferralsModal'
-import TourModal from '../Components/TourModal'
-import Congrats from '../Components/Congrats'
+
+import MyReferralsModal from '../Components/Profile and Refferals Page/MyReferralsModal'
+import BottomMenu from '../Components/HomePage/BottomMenu'
 
 function Main({ languageData }) {
 
@@ -38,17 +36,17 @@ function Main({ languageData }) {
         */
             }
             <HeaderMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            <Double />
+            <RaffleTickets />
             <BottomMenu />
             {
                 menuOpen === true && <CyberSaysMobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             }
 
-            {/* <MyReferralsModal /> */}
+           
 
-            {/* <TourModal /> */}
+          
 
-            <Congrats />
+          
 
         </>
     )

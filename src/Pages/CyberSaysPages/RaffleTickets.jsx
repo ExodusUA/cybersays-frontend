@@ -38,6 +38,7 @@ function RaffleTickets() {
                 <div>
                     <img className='w-[345px]' src={hero} alt="heroRaffle" />
                     <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[30px] text-center flex py-3 px-2 mt-[-20px]'>
+                        {/* 2 КНОПКИ
                         <div className='text-center w-full'>
                             <button className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2'>Enjoy ImLive 💃</button>
                             <p className='saira text-[12px] font-medium'>1 credit bought = </p>
@@ -47,6 +48,12 @@ function RaffleTickets() {
                             <button className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2'>Refer friends 🤑</button>
                             <p className='saira text-[12px] font-medium'>Friend doubled money = </p>
                             <p className='saira text-[12px] font-medium'>30 raffle tickets</p>
+                        </div>
+                        */}
+                        <div>
+                            <p className='text-[18px] font-medium saira text-center mx-4'>Complete double the money offer to take part in raffle </p>
+                            <button className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2 w-full mt-2'>Double your money 🤑</button>
+                            
                         </div>
                     </div>
                 </div>
@@ -73,7 +80,7 @@ function RaffleTickets() {
                 </p>
             </Tooltip>
             <TimeCounter />
-            
+
         </div>
     )
 }

@@ -6,7 +6,7 @@ import hero from '../../images/CyberSaysPage/heroRaffle.png'
 import notReady from '../../images/CyberSaysPage/card_notReady.png'
 import done from '../../images/CyberSaysPage/card_done.png'
 import TimeCounter from '../../Components/TimeCounter'
-import TaskCard from '../../Components/TaskCard';
+import TaskCard from '../../Components/DoubleMoneyPage/TaskCard';
 
 function Double() {
     const [isOpen, setIsOpen] = useState(false)
@@ -30,6 +30,7 @@ function Double() {
                 <TaskCard state={'active'} background={'#93CC8E'} />
                 <TaskCard state={'inactive'} background={'#EA7C7C'} />
                 <TaskCard state={'inactive'} background={'#76C2E3'} />
+                
             </div>
 
 
