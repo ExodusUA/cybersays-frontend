@@ -22,7 +22,7 @@ function TransactionHistory() {
     const getMarkup = (type, datetime, amount) => {
         switch (type) {
             case 'doubling_referral': return <div className='flex justify-between items-center mt-4'>
-                
+
                 <img className='w-[32px] h-[32px] mr-2' src={transaction} alt="transaction" />
                 <div className='w-[200px]'>
                     <p className='text-[12px] font-semibold saira  leading-4 mb-2'>Your friend doubled his money!</p>
@@ -78,9 +78,14 @@ function TransactionHistory() {
             <div className='m-auto max-w-[345px] w-full mt-3 h-[470px] overflow-scroll'>
 
                 {
-                    transactionsData?.map((transaction, index) => {
-                        return getMarkup(transaction.type, transaction.datetime, transaction.amount)
-                    })
+                    transactionsData?.length > 0
+                        ? transactionsData?.map((transaction, index) => {
+                            return getMarkup(transaction.type, transaction.datetime, transaction.amount)
+                        })
+                        : <div className='flex justify-center items-center h-[470px]'>
+                            <p className='text-[18px] font-semibold text-center'>No transactions</p>
+                        </div>
+
                 }
 
             </div>

@@ -1,31 +1,25 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import MenuModal from '../Components/MenuModal'
-import DeleteConfirm from '../Components/DeleteConfirm'
 import Homepage from './CyberSaysPages/Homepage'
 import HeaderMenu from '../Components/HomePage/HeaderMenu'
 import CyberSaysMobileMenu from '../Components/CyberSaysMobileMenu'
 import RaffleTickets from './CyberSaysPages/RaffleTickets'
-import AvatarModal from '../Components/ProfileReferrals/AvatarModal'
 import Double from './CyberSaysPages/Double'
 import { Helmet } from 'react-helmet'
 import userAPI from '../Requests/user'
-import MyReferralsModal from '../Components/ProfileReferrals/MyReferralsModal'
 import BottomMenu from '../Components/HomePage/BottomMenu'
 import { useQuery } from '@tanstack/react-query'
-import TransactionHistory from '../Components/Transactions/TransactionHistory'
-import TicketsHistory from '../Components/Transactions/TicketsHistory'
-import Withdraw from '../Components/Transactions/Withdraw'
-import TourModal from '../Components/DoubleMoneyPage/TourModal'
 import AuthCheck from '../hoc/AuthCheck'
 import Competition from './CyberSaysPages/Competition'
 import { useSwipeable } from 'react-swipeable';
 import Refferals from './CyberSaysPages/Refferals'
-import History from '../Components/Transactions/History'
+import Terms from './CyberSaysPages/Terms'
 var mixpanel = require('mixpanel-browser');
 
 
 function Main({ languageData }) {
+
+    const [imLiveURL, setImLiveURL] = useState(null);
 
     const urlParams = new URLSearchParams(window.location.search);
     const uid = urlParams.get('userid');
@@ -40,6 +34,7 @@ function Main({ languageData }) {
         queryFn: async () => {
             const res = await userAPI.getUserData();
             setUserData(res)
+            setImLiveURL(`https://imlive.com/wmaster.ashx?QueryID=197&WID=126670106835&linkID=701&from=freevideo6&promocode=${res?.id}`)
             return res
         }
     })
@@ -92,6 +87,21 @@ function Main({ languageData }) {
 
 
 
+    const HomepageSwiper = () => {
+
+        return (
+            <div className='overflow-y-hidden overflow-x-hidden'>
+                <HeaderMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
+                <div {...handlers} className='transition-custom flex w-[400vw] overflow-y-hidden overflow-x-hidden h-screen' style={{ transform: `translateX(${activePageIndex < 4 && activePageIndex * 100}vw)` ? `translateX(-${activePageIndex < 4 && activePageIndex * 100}vw)` : undefined }}>
+                    <Homepage menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
+                    <RaffleTickets menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
+                    <Double menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
+                    <Refferals menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
+                </div>
+                <BottomMenu menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
+            </div>
+        )
+    }
 
     return (
         <>
@@ -103,37 +113,19 @@ function Main({ languageData }) {
                 <meta property="og:description"
                     content={languageData?.metaDescription} />
             </Helmet>
-            {
-                /*
-        {
-            menuOpen && <MenuModal setModalOpen={setMenuOpen} setDeleteOpen={setDeleteOpen} />
-        }
 
-        {
-            deleteOpen && <DeleteConfirm setDeleteOpen={setDeleteOpen} />
-        }
+            <Routes>
+                <Route path="/" element={<AuthCheck>{HomepageSwiper()}</AuthCheck>} />
+                <Route path="/competition" element={<AuthCheck><Competition imLiveURL={imLiveURL} user={userData} /></AuthCheck>} />
+                <Route path="/terms" element={<Terms languageData={languageData} />} />
+            </Routes >
 
-       
-        */
-                <Routes>
-                    <Route path="/tickets" element={<AuthCheck><RaffleTickets /></AuthCheck>} />
-                    <Route path="/competition" element={<AuthCheck><Competition /></AuthCheck>} />
-                </Routes >
-            }
-            <div className='overflow-y-hidden overflow-x-hidden'>
-                <HeaderMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
-                <div {...handlers} className='transition-custom flex w-[400vw] overflow-y-hidden overflow-x-hidden h-screen' style={{ transform: `translateX(${activePageIndex < 4 && activePageIndex * 100}vw)` ? `translateX(-${activePageIndex < 4 && activePageIndex * 100}vw)` : undefined }}>
-                    <Homepage menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
-                    <RaffleTickets menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
-                    <Double menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
-                    <Refferals menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
-                </div>
-                <BottomMenu menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
-            </div>
+
+
             {
                 menuOpen === true && <CyberSaysMobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             }
-<TransactionHistory />
+
         </>
     )
 }

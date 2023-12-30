@@ -128,9 +128,6 @@ function BottomMenu({ setActivePageIndex, activePageIndex, menuScroll }) {
                     </SwiperSlide>
 
                 </Swiper>
-
-
-
             </div>
         </div>
     )

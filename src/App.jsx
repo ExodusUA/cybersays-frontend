@@ -7,7 +7,6 @@ import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import Token from './Pages/Token';
 import Main from './Pages/Main';
 import Privacy from './Pages/Privacy';
-import Terms from './Pages/Terms';
 
 function App() {
 
@@ -40,7 +39,6 @@ function App() {
           <Route path="/*" element={<Main languageData={languageData} />} />
           <Route path="/login" element={<Auth languageData={languageData} />} />
           <Route path="/privacy" element={<Privacy languageData={languageData} />} />
-          <Route path="/terms" element={<Terms languageData={languageData} />} />
           <Route path="/token/*" element={<Token  />} />
         </Routes>
       </BrowserRouter>

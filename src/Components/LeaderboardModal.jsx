@@ -1,27 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import close from '../images/CyberSaysPage/closeMenu.png'
 import oneSt from '../images/CyberSaysPage/1st.png'
 import twoSt from '../images/CyberSaysPage/2st.png'
 import threeSt from '../images/CyberSaysPage/3st.png'
 import crown from '../images/CyberSaysPage/crown1st.png'
-import infoAPI from '../Requests/info'
+
 import no_avatar from '../images/CyberSaysPage/no_avatar.png'
 
-function LeaderboardModal({ setOpen }) {
-
-    const [loading, setLoading] = useState(true)
-    const [leaderboardData, setLeaderboardData] = useState([])
-
-    useEffect(() => {
-
-        const fetchData = async () => {
-            const res = await infoAPI.getLeaderboardData()
-            setLeaderboardData(res.data)
-            setLoading(false)
-        }
-
-        fetchData()
-    }, [])
+function LeaderboardModal({ setOpen, leaderboardData, loading }) {
 
     return (
         <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
