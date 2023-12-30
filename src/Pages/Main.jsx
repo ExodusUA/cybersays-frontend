@@ -93,10 +93,10 @@ function Main({ languageData }) {
             <div className='overflow-y-hidden overflow-x-hidden'>
                 <HeaderMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
                 <div {...handlers} className='transition-custom flex w-[400vw] overflow-y-hidden overflow-x-hidden h-screen' style={{ transform: `translateX(${activePageIndex < 4 && activePageIndex * 100}vw)` ? `translateX(-${activePageIndex < 4 && activePageIndex * 100}vw)` : undefined }}>
-                    <Homepage menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
+                    <Homepage menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} imLiveURL={imLiveURL} />
                     <RaffleTickets menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
                     <Double menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
-                    <Refferals menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
+                    <Refferals menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} />
                 </div>
                 <BottomMenu menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
             </div>
@@ -119,8 +119,6 @@ function Main({ languageData }) {
                 <Route path="/competition" element={<AuthCheck><Competition imLiveURL={imLiveURL} user={userData} /></AuthCheck>} />
                 <Route path="/terms" element={<Terms languageData={languageData} />} />
             </Routes >
-
-
 
             {
                 menuOpen === true && <CyberSaysMobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
