@@ -8,10 +8,10 @@ import TourModal from '../../Components/DoubleMoneyPage/TourModal';
 import ready from '../../images/CyberSaysPage/offerTrue.png'
 import notReady from '../../images/CyberSaysPage/offerFalse.png'
 
-function RaffleTickets() {
+function RaffleTickets({ setTourModal }) {
     const [isOpen, setIsOpen] = useState(false)
 
-    const [tourModal, setTourModal] = useState(false)
+    
     return (
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] bg-cover bg-no-repeat bg-center relative z-10' onClick={() => setIsOpen(false)}>
             <Tooltip
@@ -34,7 +34,7 @@ function RaffleTickets() {
             </Tooltip>
             <div className='pt-[60px] px-4' >
                 <img className='w-[310px] m-auto' src={logoCyber} alt="logoCyber" />
-                {/*
+                {/* 
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center mx-5'>
                     <p className='text-[18px] font-semibold'>“Win the Vegas weekend!”</p>
                     <p className='text-[12px] font-medium saira flex justify-center items-center'>
@@ -112,9 +112,7 @@ function RaffleTickets() {
 
             <TimeCounter />
 
-            {
-                tourModal && <TourModal setOpen={setTourModal} />
-            }
+            
         </div>
     )
 }
