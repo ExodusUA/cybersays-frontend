@@ -4,41 +4,40 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import gif1 from '../../images/exampleGif1.png'
 import logoCyber from '../../images/CyberSaysPage/logoMain.png'
 
-function Refferals() {
+function Refferals({ user }) {
 
     const [selectedGif, setSelectedGif] = useState(null);
     const [selectedMessage, setSelectedMassege] = useState(null);
 
+    const [isLinkCopied, setIsLinkCopied] = useState(false);
+
+    const shareRefferalLink = () => {
+        if (navigator.share) {
+            navigator
+                .share({
+                    title: document.title,
+                    text: 'Sharing',
+                    url: window.location.hostname + '?uid=' + user?.refferal_code,
+                })
+                .then(() => console.log('Successful share! 🎉'))
+                .catch(err => console.error(err));
+        } else {
+            console.error('navigator.share is not supported in this browser');
+        }
+    }
+
+    const copyToClipboard = () => {
+        let link = window.location.host + '?ref=' + user?.refferal_code;
+        setIsLinkCopied(true)
+        navigator.clipboard.writeText(link);
+
+        setTimeout(() => {
+            setIsLinkCopied(false)
+        }, 3000);
+    }
+
     return (
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-terms.jpg)] bg-cover bg-no-repeat bg-center relative z-10' >
-            <Tooltip
-
-
-                id="my-tooltip-inline2"
-                style={{ backgroundColor: "white", color: "black", maxWidth: "360px", width: "100%", borderRadius: "22px", zIndex: "999" }}
-            >
-                <div>
-                    <p className='text-[14px] font-semibold text-center text-black my-2'>Be the king</p>
-                    <div className='flex justify-between'>
-                        <div className='flex items-start w-[80px]'>
-                            <p className='text-black  text-[12px] saira font-medium'>1.</p>
-                            <p className='text-black text-[12px] saira font-medium'>You will be the kind that sends your friends to double their money and have fun 👬</p>
-                        </div>
-                        <div className='w-[2px] h-[130px] bg-[#FFED63]'></div>
-                        <div className='flex items-start w-[80px]'>
-                            <p className='text-black  text-[12px] saira font-medium'>2.</p>
-                            <p className='text-black text-[12px] saira font-medium'>For eveery friend that doubles the money you will get 30 raffle tickets and 1$ 🃏</p>
-                        </div>
-                        <div className='w-[2px] h-[130px] bg-[#FFED63]'></div>
-                        <div className='flex items-start w-[130px] leading-[15px]'>
-                            <p className='text-black  text-[12px] saira font-medium'>3.</p>
-                            <p className='text-black text-[12px] saira font-medium'>If your friends double their money, you can take them to Vegas if you win the raffle, and they can take you if they win and you took the double-the-money offer</p>
-                        </div>
-
-                    </div>
-
-                </div>
-            </Tooltip>
             <div className='pt-[60px] px-4' >
                 <img className='w-[310px] m-auto' src={logoCyber} alt="logoCyber" />
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center mx-12 py-1'>
@@ -47,7 +46,7 @@ function Refferals() {
                         Learn more
 
                         <a
-                            data-tooltip-id="my-tooltip-inline2"
+                            data-tooltip-id="my-tooltip-inline"
 
                         >
                             <svg className='ml-1 cursor-pointer' width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -190,11 +189,38 @@ function Refferals() {
 
                 </div>
                 <p className='text-center text-[12px] saira font-semibold underline mt-2 mb-5'>Choose personalize experience</p>
-                <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2'>Share Referral Link!</button>
-                <p className='text-center text-[16px] saira font-semibold underline my-1'>Copy link</p>
+                <button onClick={e => shareRefferalLink()} className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2'>Share Referral Link!</button>
+                <p className={`cursor-pointer text-center text-[16px] saira font-semibold underline my-1 ${isLinkCopied === true ? 'opacity-70' : 'opacity-100'}`} onClick={e => copyToClipboard()}>Copy link</p>
 
 
+                <Tooltip
 
+
+                    id="my-tooltip-inline"
+                    style={{ backgroundColor: "white", color: "black", maxWidth: "360px", width: "100%", borderRadius: "22px" }}
+                >
+                    <div>
+                        <p className='text-[14px] font-semibold text-center text-black my-2'>Be the king</p>
+                        <div className='flex justify-between'>
+                            <div className='flex items-start w-[80px]'>
+                                <p className='text-black  text-[12px] saira font-medium'>1.</p>
+                                <p className='text-black text-[12px] saira font-medium'>You will be the kind that sends your friends to double their money and have fun 👬</p>
+                            </div>
+                            <div className='w-[2px] h-[130px] bg-[#FFED63]'></div>
+                            <div className='flex items-start w-[80px]'>
+                                <p className='text-black  text-[12px] saira font-medium'>2.</p>
+                                <p className='text-black text-[12px] saira font-medium'>For eveery friend that doubles the money you will get 30 raffle tickets and 1$ 🃏</p>
+                            </div>
+                            <div className='w-[2px] h-[130px] bg-[#FFED63]'></div>
+                            <div className='flex items-start w-[130px] leading-[15px]'>
+                                <p className='text-black  text-[12px] saira font-medium'>3.</p>
+                                <p className='text-black text-[12px] saira font-medium'>If your friends double their money, you can take them to Vegas if you win the raffle, and they can take you if they win and you took the double-the-money offer</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </Tooltip>
             </div>
         </div>
     )
