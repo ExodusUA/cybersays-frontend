@@ -57,21 +57,20 @@ function Withdraw({ user }) {
             </div>
             <p className='text-[18px] font-semibold text-center my-2'>We are paying via xoxoDAY</p>
             <div className='max-h-[320px] overflow-scroll border-b-[2px] border-[#FFED63]'>
-                <div className='flex justify-between mt-2'>
-                    <img className='w-[110px] h-[140px] cursor-pointer' src={social1} alt="social1" />
-                    <img className='w-[110px] h-[140px] cursor-pointer' src={social2} alt="social2" />
-                    <img className='w-[110px] h-[140px] cursor-pointer' src={social3} alt="social3" />
+                <div className='flex flex-wrap justify-between mt-2 max-w-[375px] m-auto'>
+                    {paymentMethods.map((item, index) => (
+                        <div key={index} className='w-[33%] mb-2'>
+                            <img
+                                onClick={e => setSelectedPayment(index)}
+                                className={`${selectedPayment === index && 'border-[2px] !border-[#FFED63]'} w-[110px] h-[140px] cursor-pointer rounded-[20px]`}
+                                src={item.image}
+                                alt="social"
+                            />
+                        </div>
+                    ))}
+
                 </div>
-                <div className='flex justify-between mt-2'>
-                    <img className='w-[110px] h-[140px] cursor-pointer' src={social1} alt="social1" />
-                    <img className='w-[110px] h-[140px] cursor-pointer' src={social2} alt="social2" />
-                    <img className='w-[110px] h-[140px] cursor-pointer' src={social3} alt="social3" />
-                </div>
-                <div className='flex justify-between mt-2'>
-                    <img className='w-[110px] h-[140px] cursor-pointer' src={social1} alt="social1" />
-                    <img className='w-[110px] h-[140px] cursor-pointer' src={social2} alt="social2" />
-                    <img className='w-[110px] h-[140px] cursor-pointer' src={social3} alt="social3" />
-                </div>
+
             </div>
             <p className='text-[12px] font-semibold underline text-center saira cursor-pointer mx-[80px] my-2'>Click to see what payment methods
                 are avaliable in your country</p>

@@ -147,3 +147,7 @@ body {
     width: 0px;  
     background: transparent;  
 }
+.swiper-pagination {
+    position: relative !important;
+    margin-top: 10px;
+}

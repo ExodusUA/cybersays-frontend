@@ -57,7 +57,7 @@ function Double({ languageData, user }) {
                 </p>
                 {
                     taskStatus !== null && <>
-                        <TaskCard data={languageData?.tasks?.task1} state={taskStatus[0]} background={'#B9A1E1'} index={1} />
+                        <TaskCard data={languageData?.tasks?.task1} state={taskStatus[0]}  background={'#B9A1E1'} index={1} />
                         <TaskCard data={languageData?.tasks?.task2} state={taskStatus[1]} background={'#93CC8E'} index={2} />
                         <TaskCard data={languageData?.tasks?.task3} state={taskStatus[2]} background={'#EA7C7C'} index={3} />
                         <TaskCard data={languageData?.tasks?.task4} state={taskStatus[3]} background={'#76C2E3'} index={4} />

@@ -43,6 +43,10 @@ function Competition({ imLiveURL, user }) {
 
     return (
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] bg-cover bg-no-repeat bg-center relative z-10'>
+            {
+                leaderboardModal && <LeaderboardModal setOpen={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} />
+
+            }
             <div className='pt-[60px] px-4' >
                 <img className='w-[310px] m-auto' src={logoCyber} alt="logoCyber" />
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[30px] text-center  py-3 px-2 '>
@@ -51,7 +55,7 @@ function Competition({ imLiveURL, user }) {
                         loading === false && <div className='flex justify-around items-center my-2 max-w-[250px] w-full m-auto'>
                             <div>
                                 <p className='text-[16px] saira font-bold'>2</p>
-                                <img className='w-[24px] h-[24px] m-auto' src={
+                                <img className='w-[26px] h-[26px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={
                                     leaderboardData.leaderboard[1].avatar === null
                                         ? no_avatar
                                         : leaderboardData.leaderboard[1].avatar
@@ -61,7 +65,7 @@ function Competition({ imLiveURL, user }) {
                             </div>
                             <div>
                                 <p className='text-[16px] saira font-bold'>1</p>
-                                <img className='w-[32px] h-[32px] m-auto' src={
+                                <img className='w-[34px] h-[34px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={
                                     leaderboardData.leaderboard[0].avatar === null
                                         ? no_avatar
                                         : leaderboardData.leaderboard[0].avatar
@@ -71,7 +75,7 @@ function Competition({ imLiveURL, user }) {
                             </div>
                             <div>
                                 <p className='text-[16px] saira font-bold'>2</p>
-                                <img className='w-[24px] h-[24px] m-auto' src={
+                                <img className='w-[26px] h-[26px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={
                                     leaderboardData.leaderboard[2].avatar === null
                                         ? no_avatar
                                         : leaderboardData.leaderboard[2].avatar
@@ -103,10 +107,7 @@ function Competition({ imLiveURL, user }) {
                 <TimeCounter />
             </div>
 
-            {
-                leaderboardModal && <LeaderboardModal setOpen={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} />
-
-            }
+            
         </div>
     )
 }

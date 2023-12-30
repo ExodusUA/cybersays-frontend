@@ -16,24 +16,25 @@ function TaskCard({ state, background, data, index }) {
     const activeState = () => {
         return <>
             <div className='flex justify-between items-center'>
-                <p className='saira text-[12px] font-medium'>{index}. {data?.taskTitle}</p>
+                <p className='saira text-[12px] font-medium'>{index}. {data?.taskTitleOpen}</p>
                 <img className='w-[18px] h-[18px]' src={notReady} alt="notReady" />
             </div>
 
             <div className='flex justify-between'>
                 {
                     data?.taskBlocks?.map((task, index) => {
-                        return <div key={index} className='flex flex-col items-center'>
-                            <img className='w-[50px]' src={task?.taskImage} alt="Task Icon" />
-                            <p className='saira text-[12px] font-medium'>{task?.taskText}</p>
+                        return <div key={index} className='flex flex-col items-center mt-2'>
+                            <img className='w-[20px]' src={task?.taskImage} alt="Task Icon" />
+                            <p className='saira text-[12px] font-medium text-center'>{task?.taskText}</p>
                         </div>
                     })
                 }
             </div>
 
-            <div className='flex justify-center my-4'>
-                <button className='px-4 py-2 bg-red-300'>{data?.taskButton}</button>
+            <div className='flex justify-center my-2'>
+                <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-1'>{data?.taskButton}</button>
             </div>
+            
         </>
     }
 

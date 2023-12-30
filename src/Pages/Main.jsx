@@ -14,6 +14,7 @@ import Competition from './CyberSaysPages/Competition'
 import { useSwipeable } from 'react-swipeable';
 import Refferals from './CyberSaysPages/Refferals'
 import Terms from './CyberSaysPages/Terms'
+import Withdraw from '../Components/Transactions/Withdraw'
 var mixpanel = require('mixpanel-browser');
 
 
@@ -95,10 +96,11 @@ function Main({ languageData }) {
                 <div {...handlers} className='transition-custom flex w-[400vw] overflow-y-hidden overflow-x-hidden h-screen' style={{ transform: `translateX(${activePageIndex < 4 && activePageIndex * 100}vw)` ? `translateX(-${activePageIndex < 4 && activePageIndex * 100}vw)` : undefined }}>
                     <Homepage menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
                     <RaffleTickets menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
-                    <Double menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
+                    <Double languageData={languageData} user={userData} menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
                     <Refferals menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
                 </div>
                 <BottomMenu menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
+                
             </div>
         )
     }
