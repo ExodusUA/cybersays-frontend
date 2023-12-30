@@ -8,11 +8,23 @@ import link2 from '../../images/CyberSaysPage/iconRaffle.png'
 import link3 from '../../images/CyberSaysPage/iconDouble.png'
 import link4 from '../../images/CyberSaysPage/iconRefferals.png'
 
-function BottomMenu() {
+function BottomMenu({ setActivePageIndex, activePageIndex, menuScroll }) {
 
     let swiperRef;
 
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    const [topIndex, setTopIndex] = useState(0);
+    
+    const handleRotateRight = () => {
+    
+        setTopIndex((topIndex + 1) % 4);
+
+    };
+
+    const handleRotateLeft = () => {
+
+        setTopIndex((topIndex - 1 + 4) % 4);
+    };
 
     useEffect(() => {
         const handleResize = () => {
@@ -27,21 +39,47 @@ function BottomMenu() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const slideChange = (swiper) => {
-        console.log(swiper)
         setCurrentSlide(swiper.realIndex);
     };
+
+    useEffect(() => {
+
+        setActivePageIndex(topIndex)
+
+
+    }, [topIndex])
+
+    useEffect(() => {
+        if (menuScroll !== true) {
+            if (activePageIndex !== topIndex) {
+                if (activePageIndex < topIndex) {
+                    handleRotateLeft()
+                } else {
+                    handleRotateRight()
+                }
+            }
+        } 
+
+    }, [activePageIndex])
 
     return (
         <div className='flex justify-center'>
             <div className=' fixed bottom-0 z-50 w-[375px]'>
                 <div className=' w-full bottom-10 '>
                     <div className='justify-between flex mx-5 mb-[-40px] relative z-40'>
-                        <img className='w-[24px] lg:w-[64px] cursor-pointer buttonPrev' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
-                        <img className='w-[24px] lg:w-[64px] cursor-pointer buttonNext' src={right} alt="Right" onClick={e => swiperRef?.slideNext()} />
+                        <img  className='w-[24px] lg:w-[64px] cursor-pointer buttonPrev' src={left} alt="Left" onClick={e => {
+                            swiperRef?.slidePrev()
+                            handleRotateLeft()
+                            }} />
+                        <img className='w-[24px] lg:w-[64px] cursor-pointer buttonNext' src={right} alt="Right" onClick={e => {
+                            swiperRef?.slideNext()
+                            handleRotateRight()
+                            }} />
                     </div>
                 </div>
                 <Swiper
                     className='w-[335px] relative z-10 '
+                    initialSlide={topIndex}
                     onSwiper={(swiper) => {
                         swiperRef = swiper;
                     }}

@@ -21,47 +21,48 @@ function TransactionHistory() {
 
     const getMarkup = (type, datetime, amount) => {
         switch (type) {
-            case 'doubling_referral': return <div className='flex justify-between items-center mt-2'>
-                <img className='w-[32px] h-[32px]' src={transaction} alt="transaction" />
+            case 'doubling_referral': return <div className='flex justify-between items-center mt-4'>
+                
+                <img className='w-[32px] h-[32px] mr-2' src={transaction} alt="transaction" />
                 <div className='w-[200px]'>
-                    <p className='text-[12px] font-semibold saira  leading-4'>Your friend doubled his money!</p>
+                    <p className='text-[12px] font-semibold saira  leading-4 mb-2'>Your friend doubled his money!</p>
                     <p className='text-[12px] font-normal saira '>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                 </div>
-                <div className='w-[100px]'>
-                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right'>+{amount}$</p>
+                <div className='w-[100px] leading-[18px]'>
+                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}$</p>
                     <p className='text-[12px] font-normal saira  text-right'>Doubling money</p>
                 </div>
             </div>
-            case 'doubling': return <div className='flex justify-between items-center mt-2'>
-                <img className='w-[32px] h-[32px]' src={transaction} alt="transaction" />
+            case 'doubling': return <div className='flex justify-between items-center mt-4'>
+                <img className='w-[32px] h-[32px]  mr-2' src={transaction} alt="transaction" />
                 <div className='w-[200px]'>
                     <p className='text-[12px] font-semibold saira w-[200px] leading-4'>Doubling you money and enjoying ImLive!</p>
                     <p className='text-[12px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                 </div>
-                <div className='w-[90px]'>
-                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right'>+{amount}$</p>
+                <div className='w-[100px] leading-[18px]'>
+                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}$</p>
                     <p className='text-[12px] font-normal saira text-right'>Doubling money</p>
                 </div>
             </div>
-            case 'withdrawal': return <div className='flex justify-between items-center mt-2'>
-                <img className='w-[32px] h-[32px]' src={transaction} alt="transaction" />
+            case 'withdrawal': return <div className='flex justify-between items-center mt-4'>
+                <img className='w-[32px] h-[32px]  mr-2' src={transaction} alt="transaction" />
                 <div className='w-[200px]'>
                     <p className='text-[12px] font-semibold saira w-[200px] leading-4'>Money withdrawn</p>
                     <p className='text-[12px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                 </div>
-                <div className='w-[100px]'>
-                    <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right'>-{amount}$</p>
+                <div className='w-[100px] leading-[18px]'>
+                    <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right mb-1'>-{amount}$</p>
                     <p className='text-[12px] font-normal saira  text-right'>Withdrawn</p>
                 </div>
             </div>
-            case 'competition': return <div className='flex justify-between items-center mt-2'>
-                <img className='w-[32px] h-[32px]' src={transaction} alt="transaction" />
+            case 'competition': return <div className='flex justify-between items-center mt-4'>
+                <img className='w-[32px] h-[32px]  mr-2' src={transaction} alt="transaction" />
                 <div className='w-[200px]'>
                     <p className='text-[12px] font-semibold saira w-[200px] leading-4'>Your won competition</p>
                     <p className='text-[12px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                 </div>
-                <div className='w-[100px]'>
-                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right'>+{amount}$</p>
+                <div className='w-[100px] leading-[18px]'>
+                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}$</p>
                     <p className='text-[12px] font-normal saira  text-right'>Competition</p>
                 </div>
             </div>
@@ -69,7 +70,7 @@ function TransactionHistory() {
     }
 
     return (
-        <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
+        <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 scrollbarHidden'>
             <div className='flex justify-end'>
                 <img className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
             </div>

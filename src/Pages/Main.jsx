@@ -19,6 +19,9 @@ import Withdraw from '../Components/Transactions/Withdraw'
 import TourModal from '../Components/DoubleMoneyPage/TourModal'
 import AuthCheck from '../hoc/AuthCheck'
 import Competition from './CyberSaysPages/Competition'
+import { useSwipeable } from 'react-swipeable';
+import Refferals from './CyberSaysPages/Refferals'
+import History from '../Components/Transactions/History'
 var mixpanel = require('mixpanel-browser');
 
 
@@ -51,6 +54,45 @@ function Main({ languageData }) {
 
     }, [])
 
+    const [activePageIndex, setActivePageIndex] = React.useState(0)
+    const [menuScroll, setMenuScroll] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setMenuScroll(false);
+        }, 500);
+    }, [menuScroll]);
+
+    let config = {
+        delta: 10,
+        preventScrollOnSwipe: false,
+        trackTouch: true,
+        trackMouse: false,
+        rotationAngle: 0,
+        swipeDuration: Infinity,
+        touchEventOptions: { passive: true },
+    }
+
+    const handlers = useSwipeable({
+        onSwiped: (eventData) => calculatePageIndex(eventData),
+        ...config,
+    });
+
+    function calculatePageIndex(data) {
+
+        let activePage = activePageIndex
+
+        if (data.dir === 'Left') {
+            setActivePageIndex(400)
+
+        } else if (data.dir === 'Right') {
+            setActivePageIndex(-400)
+        }
+    }
+
+
+
+
     return (
         <>
             <Helmet>
@@ -78,13 +120,20 @@ function Main({ languageData }) {
                     <Route path="/competition" element={<AuthCheck><Competition /></AuthCheck>} />
                 </Routes >
             }
-            <HeaderMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
-
-            <BottomMenu />
+            <div className='overflow-y-hidden overflow-x-hidden'>
+                <HeaderMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
+                <div {...handlers} className='transition-custom flex w-[400vw] overflow-y-hidden overflow-x-hidden h-screen' style={{ transform: `translateX(${activePageIndex < 4 && activePageIndex * 100}vw)` ? `translateX(-${activePageIndex < 4 && activePageIndex * 100}vw)` : undefined }}>
+                    <Homepage menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
+                    <RaffleTickets menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
+                    <Double menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
+                    <Refferals menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
+                </div>
+                <BottomMenu menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
+            </div>
             {
                 menuOpen === true && <CyberSaysMobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             }
-
+<TransactionHistory />
         </>
     )
 }

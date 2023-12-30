@@ -112,8 +112,14 @@
     box-shadow: 0px 4px 20px 0px rgba(107, 74, 219, 0.70);
 }
 
-body {}
-
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.transition-custom {
+    transition-timing-function: cubic-bezier(1, 0.01, 0.31, 0.98);
+    transition: 0.5s;
+}
 
 .black-gradient {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 56.85%, #000000e4 90.32%), transparent 50% / cover no-repeat;
@@ -137,6 +143,7 @@ body {}
 .swiper-pagination-bullet-active {
     background-color: #FFED63 !important;
 }
-.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
-
+::-webkit-scrollbar {
+    width: 0px;  
+    background: transparent;  
 }
