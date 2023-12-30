@@ -6,7 +6,7 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
 
 
-function TourModal() {
+function TourModal({ setOpen }) {
 
     const dataShort = [
         {
@@ -32,7 +32,7 @@ function TourModal() {
     return (
         <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
             <div className='flex justify-end'>
-                <img className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
+                <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
             </div>
             <div class=" justify-center flex my-2">
                 <div class="flex border-[1px] border-[#FFED63] m-auto  rounded-[50px] ">

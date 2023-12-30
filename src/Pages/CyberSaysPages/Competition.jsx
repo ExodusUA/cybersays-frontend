@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logoCyber from '../../images/CyberSaysPage/logoMain.png'
 import TimeCounter from '../../Components/TimeCounter'
 import cup1 from '../../images/CyberSaysPage/cup1st.png'
 import cup2 from '../../images/CyberSaysPage/cup2st.png'
-import cup3 from '../../images/CyberSaysPage/cup3st.png'
+import LeaderboardModal from '../../Components/LeaderboardModal'
 
 function Competition() {
+
+    const [leaderboardModal, setLeaderboardModal] = useState(false)
+
     return (
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] bg-cover bg-no-repeat bg-center relative z-10'>
             <div className='pt-[60px] px-4' >
@@ -45,12 +48,17 @@ function Competition() {
                             <p className='saira text-[12px] font-medium'>10 points</p>
                         </div>
                     </div>
-                    <p className='text-center text-[12px] saira font-semibold underline mt-3'>Leaderboards</p>
+                    <p className='text-center text-[12px] saira font-semibold underline mt-3' onClick={e => setLeaderboardModal(true)}>Leaderboards</p>
 
                 </div>
                 <p className='text-center text-[12px] text-[#FFED63] saira font-semibold underline mt-7 mb-2'>Rules of the competition</p>
                 <TimeCounter />
             </div>
+
+            {
+                leaderboardModal && <LeaderboardModal setOpen={setLeaderboardModal} />
+
+            }
         </div>
     )
 }

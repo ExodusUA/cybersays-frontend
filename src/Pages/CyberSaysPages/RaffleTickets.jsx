@@ -4,9 +4,12 @@ import logoCyber from '../../images/CyberSaysPage/logoMain.png'
 import moreInfo from '../../images/CyberSaysPage/moreInfo.png'
 import hero from '../../images/CyberSaysPage/heroRaffle.png'
 import TimeCounter from '../../Components/TimeCounter'
+import TourModal from '../../Components/DoubleMoneyPage/TourModal';
 
 function RaffleTickets() {
     const [isOpen, setIsOpen] = useState(false)
+
+    const [tourModal, setTourModal] = useState(false)
     return (
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] bg-cover bg-no-repeat bg-center relative z-10' onClick={() => setIsOpen(false)}>
             <div className='pt-[60px] px-4' >
@@ -53,13 +56,13 @@ function RaffleTickets() {
                         <div>
                             <p className='text-[18px] font-medium saira text-center mx-4'>Complete double the money offer to take part in raffle </p>
                             <button className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2 w-full mt-2'>Double your money 🤑</button>
-                            
+
                         </div>
                     </div>
                 </div>
 
             </div>
-            <p className='text-[12px] saira text-[#FFED63] text-center cursor-pointer underline py-3'>Raffle rules</p>
+            <p className='text-[12px] saira text-[#FFED63] text-center cursor-pointer underline py-3' onClick={e => setTourModal(true)}>Raffle rules</p>
             <Tooltip
 
                 isOpen={isOpen}
@@ -81,6 +84,9 @@ function RaffleTickets() {
             </Tooltip>
             <TimeCounter />
 
+            {
+                tourModal && <TourModal setOpen={setTourModal} />
+            }
         </div>
     )
 }

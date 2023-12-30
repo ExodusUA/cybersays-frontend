@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import close from '../images/CyberSaysPage/closeMenu.png'
 import link1 from '../images/CyberSaysPage/mobileMenuLink/link1.png'
 import link2 from '../images/CyberSaysPage/mobileMenuLink/link2.png'
@@ -8,12 +8,17 @@ import link5 from '../images/CyberSaysPage/mobileMenuLink/link5.png'
 import link6 from '../images/CyberSaysPage/mobileMenuLink/link6.png'
 import link7 from '../images/CyberSaysPage/mobileMenuLink/link7.png'
 import NewLanguageButton from './Language/NewLanguageButton'
+import TourModal from './DoubleMoneyPage/TourModal'
+
 function CyberSaysMobileMenu({ setMenuOpen }) {
+
+  const [tourModal, setTourModal] = useState(false)
+
   return (
     <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
       <div className='max-w-[365px] w-full m-auto'>
         <div className='flex justify-between items-center'>
-        <NewLanguageButton />
+          <NewLanguageButton />
           <img onClick={() => setMenuOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
 
         </div>
@@ -26,7 +31,7 @@ function CyberSaysMobileMenu({ setMenuOpen }) {
             <img className='w-[32px] h-[32px] mr-2' src={link2} alt="link2" />
             <p className='saira text-[20px] font-semibold'>Double your money</p>
           </div>
-          <div className='flex items-center'>
+          <div className='flex items-center' onClick={e => setTourModal(true)}>
             <img className='w-[32px] h-[32px] mr-2' src={link3} alt="link3" />
             <p className='saira text-[20px] font-semibold cursor-pointer'>The  Vegas weekend</p>
           </div>
@@ -58,6 +63,10 @@ function CyberSaysMobileMenu({ setMenuOpen }) {
           <p className='saira text-[16px] font-semibold cursor-pointer'>Contact Us</p>
         </div>
       </div>
+
+      {
+        tourModal && <TourModal setOpen={setTourModal} />
+      }
     </div>
   )
 }

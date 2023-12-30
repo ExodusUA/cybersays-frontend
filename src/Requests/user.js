@@ -66,4 +66,28 @@ async function getReferralsList() {
     return response;
 }
 
-export default { getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList };
+/* GET TRANSACTIONS */
+
+async function getTransactions() {
+    const response = await axios.get(process.env.REACT_APP_API_URL + '/user/transactions', {
+        headers: {
+            token: `${getToken()}`
+        }
+    });
+    return response;
+
+}
+
+/* GET TICKETS & POINTS */
+
+async function getTicketsAndPoints() {
+    const response = await axios.get(process.env.REACT_APP_API_URL + '/user/tickets-points', {
+        headers: {
+            token: `${getToken()}`
+        }
+    });
+    return response;
+
+}
+
+export default { getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTicketsAndPoints };

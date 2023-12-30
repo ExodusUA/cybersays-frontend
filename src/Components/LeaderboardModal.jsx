@@ -7,7 +7,7 @@ import crown from '../images/CyberSaysPage/crown1st.png'
 import infoAPI from '../Requests/info'
 import no_avatar from '../images/CyberSaysPage/no_avatar.png'
 
-function LeaderboardModal() {
+function LeaderboardModal({ setOpen }) {
 
     const [loading, setLoading] = useState(true)
     const [leaderboardData, setLeaderboardData] = useState([])
@@ -26,7 +26,7 @@ function LeaderboardModal() {
     return (
         <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
             <div className='flex justify-end'>
-                <img className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
+                <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
             </div>
 
             {
