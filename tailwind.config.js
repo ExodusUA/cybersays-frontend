@@ -21,6 +21,10 @@ module.exports = {
       'mobile-bg-raffle': "url('./images/CyberSaysPage/mobile-bg-raffle.jpg')",
       'mobile-bg-double': "url('./images/CyberSaysPage/mobile-bg-double.jpg')",
       'mobile-bg-terms': "url('./images/CyberSaysPage/mobile-bg-terms.jpg')",
+      'bg-homepage': "url('./images/CyberSaysPage/bg-homepage.jpg')",
+      'bg-raffle': "url('./images/CyberSaysPage/bg-raffle.jpg')",
+      'bg-double': "url('./images/CyberSaysPage/bg-double.jpg')",
+      'bg-terms': "url('./images/CyberSaysPage/bg-terms.jpg')",
     })
   },
   plugins: [],

@@ -29,15 +29,15 @@ function TimeCounter({ translatedText }) {
 
     return (
         <div>
-            <p className='text-[18px] font-semibold text-center mx-4'>“Win an amazing trip to Vegas money can’t buy:”</p>
-            <div className='flex justify-center items-center leading-5 gap-[18px]'>
-                <div className='text-center'><h2 className='text-[18px] font-black text-[#FFED63]'>{daysRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>Days</p></div>
+            <p className='text-[18px] lg:text-[32px] font-semibold text-center lg:text-left mx-4'>“Win an amazing trip to Vegas money can’t buy:”</p>
+            <div className='flex justify-center lg:justify-between items-center leading-5 gap-[18px] lg:ml-5 lg:mt-5 lg:w-[420px]'>
+                <div className='text-center'><h2 className='text-[18px] md:text-[24px] md: font-black text-[#FFED63]'>{daysRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>Days</p></div>
                 <p className='text-[#FFED63] text-[18px]'>:</p>
-                <div className='text-center'><h2 className='text-[18px] font-black text-[#FFED63]'>{hoursRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>Hours</p></div>
+                <div className='text-center'><h2 className='text-[18px] md:text-[24px] font-black text-[#FFED63]'>{hoursRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>Hours</p></div>
                 <p className='text-[#FFED63] text-[18px]'>:</p>
-                <div className='text-center'><h2 className='text-[18px] font-black text-[#FFED63]'>{minutesRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>Minutes</p></div>
+                <div className='text-center'><h2 className='text-[18px] md:text-[24px] font-black text-[#FFED63]'>{minutesRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>Minutes</p></div>
                 <p className='text-[#FFED63] text-[18px]'>:</p>
-                <div className='text-center'><h2 className='text-[18px] font-black text-[#FFED63]'>{secondsRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>Seconds</p></div>
+                <div className='text-center'><h2 className='text-[18px] md:text-[24px] font-black text-[#FFED63]'>{secondsRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>Seconds</p></div>
             </div>
 
         </div>

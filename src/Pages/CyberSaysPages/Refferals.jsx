@@ -46,7 +46,7 @@ function Refferals({ user }) {
                         Learn more
 
                         <a
-                            data-tooltip-id="my-tooltip-inline"
+                            data-tooltip-id="my-tooltip-inline2"
 
                         >
                             <svg className='ml-1 cursor-pointer' width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -196,8 +196,8 @@ function Refferals({ user }) {
                 <Tooltip
 
 
-                    id="my-tooltip-inline"
-                    style={{ backgroundColor: "white", color: "black", maxWidth: "360px", width: "100%", borderRadius: "22px" }}
+                    id="my-tooltip-inline2"
+                    style={{ backgroundColor: "white", color: "black", maxWidth: "360px", width: "100%", borderRadius: "22px", zIndex: "999" }}
                 >
                     <div>
                         <p className='text-[14px] font-semibold text-center text-black my-2'>Be the king</p>
