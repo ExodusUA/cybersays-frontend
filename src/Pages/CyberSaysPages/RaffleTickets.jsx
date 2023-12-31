@@ -87,7 +87,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
                             </p>
                             <p className='text-[12px] font-medium underline cursor-pointer saira'>How do I win the vegas weekend?</p>
                         </div>
-                        : <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center mx-5'>
+                        : <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] md:rounded-[100px] text-center mx-5 md:py-2'>
                             <p className='text-[18px] md:text-[32px] font-semibold'>“Win the Vegas weekend!”</p>
                             <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center '>
                                 Eligible to go to vegas
@@ -109,7 +109,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
                                 </a>
 
                             </p>
-                            <p className='text-[12px] font-medium underline cursor-pointer saira'>How do I win the vegas weekend raffle?</p>
+                            <p className='text-[12px] md:text-[14px] font-medium underline cursor-pointer saira'>How do I win the vegas weekend raffle?</p>
                         </div>
                 }
 
