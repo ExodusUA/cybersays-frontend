@@ -8,23 +8,11 @@ import link2 from '../../images/CyberSaysPage/iconRaffle.png'
 import link3 from '../../images/CyberSaysPage/iconDouble.png'
 import link4 from '../../images/CyberSaysPage/iconRefferals.png'
 
-function BottomMenu({ setActivePageIndex, activePageIndex, menuScroll }) {
+function BottomMenu({ setActivePageIndex, activePageIndex }) {
 
-    let swiperRef;
+    let [swiper, setSwiper] = useState(null);
 
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const [topIndex, setTopIndex] = useState(0);
-    
-    const handleRotateRight = () => {
-    
-        setTopIndex((topIndex + 1) % 5);
-
-    };
-
-    const handleRotateLeft = () => {
-
-        setTopIndex((topIndex - 1 + 5) % 5);
-    };
 
     useEffect(() => {
         const handleResize = () => {
@@ -38,44 +26,39 @@ function BottomMenu({ setActivePageIndex, activePageIndex, menuScroll }) {
 
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    const slideChange = (swiper) => {
-        setCurrentSlide(swiper.realIndex);
-    };
+    function slideChange(swiper) {
+        setCurrentSlide(swiper.realIndex)
+       // setActivePageIndex(swiper.realIndex)
+    }
 
     useEffect(() => {
-
-        setActivePageIndex(topIndex)
-
-
-    }, [topIndex])
-
-    useEffect(() => {
-        if (menuScroll !== true) {
-            if (activePageIndex !== topIndex) {
-                if (activePageIndex < topIndex) {
-                    handleRotateLeft()
-                } else {
-                    handleRotateRight()
-                }
-            }
-        } 
-
+        if (swiper) {
+            swiper.slideTo(activePageIndex);
+        }
     }, [activePageIndex])
 
+    function swipeLeft () {
+        if (activePageIndex === 0) return
+        setActivePageIndex(activePageIndex - 1)
+    }
 
-    
+    function swipeRight () {
+        if (activePageIndex === 4) return
+        setActivePageIndex(activePageIndex + 1)
+    }
+
     return (
         <div className='flex justify-center'>
             <div className=' fixed bottom-0 z-50 w-[375px]'>
                 <div className=' w-full bottom-10 '>
                     <div className='justify-between flex mx-5 mb-[-40px] relative z-40'>
                         <img  className='w-[24px] lg:w-[64px] cursor-pointer buttonPrev' src={left} alt="Left" onClick={e => {
-                            swiperRef?.slidePrev()
-                            handleRotateLeft()
+                            swiper.slidePrev()
+                            swipeLeft()
                             }} />
                         <img className='w-[24px] lg:w-[64px] cursor-pointer buttonNext' src={right} alt="Right" onClick={e => {
-                            swiperRef?.slideNext()
-                            handleRotateRight()
+                            swiper.slideNext()
+                            swipeRight()
                             }} />
                     </div>
                 </div>
@@ -83,13 +66,13 @@ function BottomMenu({ setActivePageIndex, activePageIndex, menuScroll }) {
                     className='w-[335px] relative z-10 '
                     initialSlide={activePageIndex}
                     onSwiper={(swiper) => {
-                        swiperRef = swiper;
+                        setSwiper(swiper)
                     }}
                     modules={[Navigation]}
                     spaceBetween={0}
                     centeredSlides={true}
                     slidesPerView={3}
-                    loop={true}
+                    loop={false}
                     onSlideChange={(swiper) => slideChange(swiper)}
                     navigation={{
                         prevEl: '.buttonPrev',

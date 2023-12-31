@@ -9,7 +9,7 @@ function Refferals({ user }) {
     const [selectedGif, setSelectedGif] = useState(null);
     const [selectedMessage, setSelectedMassege] = useState(null);
 
-    const [isLinkCopied, setIsLinkCopied] = useState(false);
+    
 
     const shareRefferalLink = () => {
         if (navigator.share) {
@@ -26,6 +26,8 @@ function Refferals({ user }) {
         }
     }
 
+    const [isLinkCopied, setIsLinkCopied] = useState(false);
+    
     const copyToClipboard = () => {
         let link = window.location.host + '?ref=' + user?.refferal_code;
         setIsLinkCopied(true)
@@ -194,8 +196,6 @@ function Refferals({ user }) {
 
 
                 <Tooltip
-
-
                     id="my-tooltip-inline"
                     style={{ backgroundColor: "white", color: "black", maxWidth: "360px", width: "100%", borderRadius: "22px" }}
                 >

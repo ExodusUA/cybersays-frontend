@@ -17,6 +17,8 @@ import Terms from './CyberSaysPages/Terms'
 import Withdraw from '../Components/Transactions/Withdraw'
 import TourModal from '../Components/DoubleMoneyPage/TourModal'
 import LeaderboardModal from '../Components/LeaderboardModal'
+import { SwiperSlide } from 'swiper/react'
+import { Swiper } from 'swiper/react';
 var mixpanel = require('mixpanel-browser');
 
 
@@ -31,9 +33,7 @@ function Main({ languageData }) {
     const [deleteOpen, setDeleteOpen] = useState(false)
 
     const [userData, setUserData] = useState(null);
-
     const [tourModal, setTourModal] = useState(false)
-
     const [leaderboardModal, setLeaderboardModal] = useState(false)
 
     const [loading, setLoading] = useState(true)
@@ -60,56 +60,60 @@ function Main({ languageData }) {
     }, [])
 
     const [activePageIndex, setActivePageIndex] = React.useState(0)
-    const [menuScroll, setMenuScroll] = useState(false);
+
+    async function scrollToPage(pageIndex) {
+        setMenuOpen(false)
+        setActivePageIndex(pageIndex)
+    }
+
+    function handleSwiperChange(swiper) {
+        setActivePageIndex(swiper.realIndex)
+    }
+
+    const [mainSwiper, setMainSwiper] = useState(null);
 
     useEffect(() => {
-        setTimeout(() => {
-            setMenuScroll(false);
-        }, 500);
-    }, [menuScroll]);
-
-    let config = {
-        delta: 10,
-        preventScrollOnSwipe: false,
-        trackTouch: true,
-        trackMouse: false,
-        rotationAngle: 0,
-        swipeDuration: Infinity,
-        touchEventOptions: { passive: true },
-    }
-
-    const handlers = useSwipeable({
-        onSwiped: (eventData) => calculatePageIndex(eventData),
-        ...config,
-    });
-
-    function calculatePageIndex(data) {
-
-        let activePage = activePageIndex
-
-        if (data.dir === 'Left') {
-            setActivePageIndex(400)
-
-        } else if (data.dir === 'Right') {
-            setActivePageIndex(-400)
+        console.log(activePageIndex)
+        if (mainSwiper) {
+            mainSwiper.slideTo(activePageIndex);
         }
-    }
-
-
+    }, [activePageIndex])
 
     const HomepageSwiper = () => {
 
         return (
             <div className='overflow-y-hidden overflow-x-hidden'>
                 <HeaderMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
-                <div {...handlers} className='transition-custom flex w-[500vw] overflow-y-hidden overflow-x-hidden h-screen' style={{ transform: `translateX(${activePageIndex < 5 && activePageIndex * 100}vw)` ? `translateX(-${activePageIndex < 5 && activePageIndex * 100}vw)` : undefined }}>
-                    <Homepage menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} imLiveURL={imLiveURL} />
-                    <RaffleTickets menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} imLiveURL={imLiveURL} setTourModal={setTourModal} />
-                    <Double menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} />
-                    <Refferals menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} />
-                    <Competition imLiveURL={imLiveURL} user={userData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading}/>
-                </div>
-                <BottomMenu menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
+
+                <Swiper
+                    className='w-screen h-screen'
+                    initialSlide={activePageIndex}
+                    onSwiper={(swiper) => {
+                        setMainSwiper(swiper);
+                    }}
+                    spaceBetween={0}
+                    slidesPerView={1}
+                    loop={false}
+                    onSlideChange={(swiper) => handleSwiperChange(swiper)}
+                >
+                    <SwiperSlide>
+                        <Homepage setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} imLiveURL={imLiveURL} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <RaffleTickets setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} imLiveURL={imLiveURL} setTourModal={setTourModal} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Double setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Refferals setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Competition imLiveURL={imLiveURL} user={userData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading} />
+                    </SwiperSlide>
+
+                </Swiper>
+                <BottomMenu activePageIndex={activePageIndex} setActivePageIndex={setActivePageIndex} />
 
             </div>
         )
@@ -136,12 +140,12 @@ function Main({ languageData }) {
 
             }
             {
-                menuOpen === true && <CyberSaysMobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+                menuOpen === true && <CyberSaysMobileMenu scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             }
             {
                 tourModal && <TourModal setOpen={setTourModal} />
             }
-            
+
         </>
     )
 }

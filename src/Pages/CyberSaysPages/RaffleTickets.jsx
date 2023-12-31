@@ -30,6 +30,21 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
 
     }, [user])
 
+    const shareRefferalLink = () => {
+        if (navigator.share) {
+            navigator
+                .share({
+                    title: document.title,
+                    text: 'Sharing',
+                    url: window.location.hostname + '?uid=' + user?.refferal_code,
+                })
+                .then(() => console.log('Successful share! 🎉'))
+                .catch(err => console.error(err));
+        } else {
+            console.error('navigator.share is not supported in this browser');
+        }
+    }
+
     const getButtonMarkup = (task) => {
         switch (task) {
             case 0: return <Link to={imLiveURL}><button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2'>Double your money 🤑</button></Link>
@@ -121,12 +136,12 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
                             isTaskCompleted === true
                                 ? <div className='flex justify-between items-start w-full'>
                                     <div className='text-center w-full'>
-                                        <button className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2'>Enjoy ImLive 💃</button>
+                                    <Link to={imLiveURL}><button className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2'>Enjoy ImLive 💃</button></Link>
                                         <p className='saira text-[12px] font-medium'>1 credit bought = </p>
                                         <p className='saira text-[12px] font-medium'>1  raffle ticket</p>
                                     </div>
                                     <div className='text-center w-full'>
-                                        <button className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2'>Refer friends 🤑</button>
+                                        <button onClick={e => shareRefferalLink()} className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2'>Refer friends 🤑</button>
                                         <p className='saira text-[12px] font-medium'>Friend doubled money = </p>
                                         <p className='saira text-[12px] font-medium'>30 raffle tickets</p>
                                     </div>
