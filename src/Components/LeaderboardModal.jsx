@@ -10,7 +10,7 @@ import no_avatar from '../images/CyberSaysPage/no_avatar.png'
 function LeaderboardModal({ setOpen, leaderboardData, loading }) {
 
     return (
-        <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
+        <div className='w-screen h-screen fixed top-0 z-[99999] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
             <div className='flex justify-end'>
                 <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
             </div>

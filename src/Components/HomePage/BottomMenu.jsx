@@ -17,13 +17,13 @@ function BottomMenu({ setActivePageIndex, activePageIndex, menuScroll }) {
     
     const handleRotateRight = () => {
     
-        setTopIndex((topIndex + 1) % 4);
+        setTopIndex((topIndex + 1) % 5);
 
     };
 
     const handleRotateLeft = () => {
 
-        setTopIndex((topIndex - 1 + 4) % 4);
+        setTopIndex((topIndex - 1 + 5) % 5);
     };
 
     useEffect(() => {
@@ -62,6 +62,8 @@ function BottomMenu({ setActivePageIndex, activePageIndex, menuScroll }) {
 
     }, [activePageIndex])
 
+
+    
     return (
         <div className='flex justify-center'>
             <div className=' fixed bottom-0 z-50 w-[375px]'>
@@ -79,7 +81,7 @@ function BottomMenu({ setActivePageIndex, activePageIndex, menuScroll }) {
                 </div>
                 <Swiper
                     className='w-[335px] relative z-10 '
-                    initialSlide={topIndex}
+                    initialSlide={activePageIndex}
                     onSwiper={(swiper) => {
                         swiperRef = swiper;
                     }}
@@ -126,7 +128,14 @@ function BottomMenu({ setActivePageIndex, activePageIndex, menuScroll }) {
                             </div>
                         </div>
                     </SwiperSlide>
-
+                    <SwiperSlide>
+                        <div className={`text-black relative text-center duration-200 flex justify-center  ${currentSlide === 4 ? 'top-0' : 'top-8'}`}>
+                            <div>
+                                <img className='w-[32px] h-[32px] m-auto' src={link2} alt="link2" />
+                                <p className='saira text-[12px] font-semibold'>Competition</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
                 </Swiper>
             </div>
         </div>

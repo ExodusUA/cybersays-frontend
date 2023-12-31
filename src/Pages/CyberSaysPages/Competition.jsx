@@ -8,12 +8,9 @@ import infoAPI from '../../Requests/info'
 import no_avatar from '../../images/CyberSaysPage/no_avatar.png'
 import { Link } from 'react-router-dom'
 
-function Competition({ imLiveURL, user }) {
+function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading, leaderboardData, setLeaderboardData }) {
 
-    const [leaderboardModal, setLeaderboardModal] = useState(false)
 
-    const [loading, setLoading] = useState(true)
-    const [leaderboardData, setLeaderboardData] = useState([])
 
     useEffect(() => {
 
@@ -43,10 +40,7 @@ function Competition({ imLiveURL, user }) {
 
     return (
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] bg-cover bg-no-repeat bg-center relative z-10'>
-            {
-                leaderboardModal && <LeaderboardModal setOpen={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} />
 
-            }
             <div className='pt-[60px] px-4' >
                 <img className='w-[310px] m-auto' src={logoCyber} alt="logoCyber" />
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[30px] text-center  py-3 px-2 '>
@@ -107,7 +101,7 @@ function Competition({ imLiveURL, user }) {
                 <TimeCounter />
             </div>
 
-            
+
         </div>
     )
 }

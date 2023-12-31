@@ -16,6 +16,7 @@ import Refferals from './CyberSaysPages/Refferals'
 import Terms from './CyberSaysPages/Terms'
 import Withdraw from '../Components/Transactions/Withdraw'
 import TourModal from '../Components/DoubleMoneyPage/TourModal'
+import LeaderboardModal from '../Components/LeaderboardModal'
 var mixpanel = require('mixpanel-browser');
 
 
@@ -33,6 +34,10 @@ function Main({ languageData }) {
 
     const [tourModal, setTourModal] = useState(false)
 
+    const [leaderboardModal, setLeaderboardModal] = useState(false)
+
+    const [loading, setLoading] = useState(true)
+    const [leaderboardData, setLeaderboardData] = useState([])
 
     useQuery({
         queryKey: ['userData'],
@@ -97,11 +102,12 @@ function Main({ languageData }) {
         return (
             <div className='overflow-y-hidden overflow-x-hidden'>
                 <HeaderMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
-                <div {...handlers} className='transition-custom flex w-[400vw] overflow-y-hidden overflow-x-hidden h-screen' style={{ transform: `translateX(${activePageIndex < 4 && activePageIndex * 100}vw)` ? `translateX(-${activePageIndex < 4 && activePageIndex * 100}vw)` : undefined }}>
+                <div {...handlers} className='transition-custom flex w-[500vw] overflow-y-hidden overflow-x-hidden h-screen' style={{ transform: `translateX(${activePageIndex < 5 && activePageIndex * 100}vw)` ? `translateX(-${activePageIndex < 5 && activePageIndex * 100}vw)` : undefined }}>
                     <Homepage menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} imLiveURL={imLiveURL} />
                     <RaffleTickets menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} imLiveURL={imLiveURL} setTourModal={setTourModal} />
                     <Double menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} />
                     <Refferals menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} />
+                    <Competition imLiveURL={imLiveURL} user={userData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading}/>
                 </div>
                 <BottomMenu menuScroll={menuScroll} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} />
 
@@ -125,13 +131,17 @@ function Main({ languageData }) {
                 <Route path="/competition" element={<AuthCheck><Competition imLiveURL={imLiveURL} user={userData} /></AuthCheck>} />
                 <Route path="/terms" element={<Terms languageData={languageData} />} />
             </Routes >
+            {
+                leaderboardModal && <LeaderboardModal setOpen={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} />
 
+            }
             {
                 menuOpen === true && <CyberSaysMobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             }
             {
                 tourModal && <TourModal setOpen={setTourModal} />
             }
+            
         </>
     )
 }
