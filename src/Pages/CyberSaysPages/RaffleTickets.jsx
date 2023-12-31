@@ -19,14 +19,19 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
     useEffect(() => {
         if (user === null) return
         let tasks = JSON.parse(user?.completed_tasks)
+        if (tasks === null) {
+            setLastTask(0)
+            return
+        } else {
+            let sortedTasks = tasks.sort((a, b) => a - b)
+            let lastTask = sortedTasks[sortedTasks.length - 1]
+            setLastTask(lastTask)
 
-        let sortedTasks = tasks.sort((a, b) => a - b)
-        let lastTask = sortedTasks[sortedTasks.length - 1]
-        setLastTask(lastTask)
-
-        if (tasks.includes(4)) {
-            setIsTaskCompleted(true)
+            if (tasks.includes(4)) {
+                setIsTaskCompleted(true)
+            }
         }
+
 
     }, [user])
 
