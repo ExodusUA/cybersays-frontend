@@ -10,7 +10,7 @@ import link7 from '../images/CyberSaysPage/mobileMenuLink/link7.png'
 import NewLanguageButton from './Language/NewLanguageButton'
 import TourModal from './DoubleMoneyPage/TourModal'
 
-function CyberSaysMobileMenu({ setMenuOpen }) {
+function CyberSaysMobileMenu({ setMenuOpen, scrollToPage }) {
 
   const [tourModal, setTourModal] = useState(false)
 
@@ -24,11 +24,11 @@ function CyberSaysMobileMenu({ setMenuOpen }) {
 
           </div>
           <div className='gap-7 grid mt-8 '>
-            <div className='flex items-center'>
+            <div className='flex items-center' onClick={e => scrollToPage(0)}>
               <img className='w-[32px] h-[32px] mr-2' src={link1} alt="link1" />
               <p className='saira text-[20px] font-semibold  cursor-pointer'>Home page</p>
             </div>
-            <div className='flex items-center'>
+            <div className='flex items-center cursor-pointer' onClick={e => scrollToPage(2)}>
               <img className='w-[32px] h-[32px] mr-2' src={link2} alt="link2" />
               <p className='saira text-[20px] font-semibold'>Double your money</p>
             </div>
@@ -37,15 +37,15 @@ function CyberSaysMobileMenu({ setMenuOpen }) {
               <p className='saira text-[20px] font-semibold cursor-pointer'>The  Vegas weekend</p>
             </div>
             <div className='flex items-center'>
-              <img className='w-[32px] h-[32px] mr-2' src={link4} alt="link4" />
+              <img className='w-[32px] h-[32px] mr-2' src={link4} alt="link4" onClick={e => scrollToPage(1)} />
               <p className='saira text-[20px] font-semibold cursor-pointer'>Refer to get tickets</p>
             </div>
             <div className='flex items-center'>
-              <img className='w-[32px] h-[32px] mr-2' src={link5} alt="link5" />
+              <img className='w-[32px] h-[32px] mr-2' src={link5} alt="link5" onClick={e => scrollToPage(3)} />
               <p className='saira text-[20px] font-semibold cursor-pointer'>Your referrals</p>
             </div>
 
-            <div className='flex items-center'>
+            <div className='flex items-center cursor-pointer' onClick={e => scrollToPage(4)}>
               <img className='w-[32px] h-[32px] mr-2' src={link6} alt="link6" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>The 69 Daily competition</p>
             </div>

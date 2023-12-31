@@ -9,7 +9,7 @@ function Refferals({ user }) {
     const [selectedGif, setSelectedGif] = useState(null);
     const [selectedMessage, setSelectedMassege] = useState(null);
 
-    const [isLinkCopied, setIsLinkCopied] = useState(false);
+    
 
     const shareRefferalLink = () => {
         if (navigator.share) {
@@ -26,6 +26,8 @@ function Refferals({ user }) {
         }
     }
 
+    const [isLinkCopied, setIsLinkCopied] = useState(false);
+    
     const copyToClipboard = () => {
         let link = window.location.host + '?ref=' + user?.refferal_code;
         setIsLinkCopied(true)
