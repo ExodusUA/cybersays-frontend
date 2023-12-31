@@ -47,10 +47,10 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
 
     const getButtonMarkup = (task) => {
         switch (task) {
-            case 0: return <Link to={imLiveURL}><button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2'>Double your money 🤑</button></Link>
-            case 1: return <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2'>2/4: Deposit for 200% Cashback 🤑</button>
-            case 2: return <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2'>3/4: Spend for 200% Cashback 🤑</button>
-            case 3: return <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2'>Win the Vegas Weekend 💃</button>
+            case 0: return <Link to={imLiveURL}><button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 md:py-3'>Double your money 🤑</button></Link>
+            case 1: return <button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 md:py-3'>2/4: Deposit for 200% Cashback 🤑</button>
+            case 2: return <button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 md:py-3'>3/4: Spend for 200% Cashback 🤑</button>
+            case 3: return <button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 md:py-3'>Win the Vegas Weekend 💃</button>
         }
     }
 
@@ -74,15 +74,15 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
                 </p>
             </Tooltip>
             <div className='pt-[60px]  md:pt-[90px] px-4 max-w-[1170px] m-auto' >
-                <img className='w-[310px]  md:w-[500px] m-auto' src={logoCyber} alt="logoCyber" />
+                <img className='w-[310px]  md:w-[500px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
                 {
 
                     isTaskCompleted === true
-                        ? <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center mx-1'>
-                            <p className='text-[18px] font-semibold'>“Win the Vegas weekend!”</p>
-                            <p className='text-[12px] font-medium saira flex justify-center items-center mx-8'>
+                        ? <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[50px] text-center mx-1 md:mx-0 md:py-2'>
+                            <p className='text-[18px] md:text-[32px] font-semibold'>“Win the Vegas weekend!”</p>
+                            <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center mx-8'>
                                 If you took ImLive's double-your-money offer, you can be picked by your referral or referrer to go to Vegas if they win.
-                                <img className='w-[12px] h-[12px] mr-[2px]' src={ready} alt="ready" />
+                                <img className='w-[12px] md:w-[24px] h-[12px] md:h-[24px] mr-[2px]' src={ready} alt="ready" />
                                 <a
                                     data-tooltip-id="my-tooltip-inline"
 
@@ -102,9 +102,9 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
                             </p>
                             <p className='text-[12px] font-medium underline cursor-pointer saira'>How do I win the vegas weekend?</p>
                         </div>
-                        : <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] md:rounded-[100px] text-center mx-5 md:py-2'>
+                        : <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[50px] md:rounded-[100px] text-center mx-5 md:mx-0 md:py-2'>
                             <p className='text-[18px] md:text-[32px] font-semibold'>“Win the Vegas weekend!”</p>
-                            <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center '>
+                            <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center md:my-1'>
                                 Eligible to go to vegas
                                 <img className='w-[12px] md:w-[24px] h-[12px] md:h-[24px] mx-[2px] md:ml-1' src={notReady} alt="notReady" />
                                 <a
@@ -129,34 +129,36 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
                 }
 
                 <div>
-                    <img className='w-[345px]' src={hero} alt="heroRaffle" />
-                    <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[30px] text-center flex py-3 px-2 mt-[-20px]'>
+                    <img className='w-[345px] md:w-[770px] m-auto md:mt-[-100px]' src={hero} alt="heroRaffle" />
+                    <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[30px] text-center flex py-3 md:py-5 px-2 mt-[-20px] md:mt-[-80px] justify-center' >
                         {
 
                             isTaskCompleted === true
                                 ? <div className='flex justify-between items-start w-full'>
                                     <div className='text-center w-full'>
-                                    <Link to={imLiveURL}><button className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2'>Enjoy ImLive 💃</button></Link>
-                                        <p className='saira text-[12px] font-medium'>1 credit bought = </p>
-                                        <p className='saira text-[12px] font-medium'>1  raffle ticket</p>
+                                        <Link to={imLiveURL}><button className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2 md:py-3 md:w-full'>Enjoy ImLive 💃</button></Link>
+                                        <p className='saira text-[12px] md:text-[14px] font-medium'>1 credit bought = </p>
+                                        <p className='saira text-[12px] md:text-[14px] font-medium'>1  raffle ticket</p>
                                     </div>
                                     <div className='text-center w-full'>
-                                        <button onClick={e => shareRefferalLink()} className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2'>Refer friends 🤑</button>
-                                        <p className='saira text-[12px] font-medium'>Friend doubled money = </p>
-                                        <p className='saira text-[12px] font-medium'>30 raffle tickets</p>
+                                        <button onClick={e => shareRefferalLink()} className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2 md:py-3 md:w-full'>Refer friends 🤑</button>
+                                        <p className='saira text-[12px] md:text-[14px] font-medium'>Friend doubled money = </p>
+                                        <p className='saira text-[12px] md:text-[14px] font-medium'>30 raffle tickets</p>
                                     </div>
                                 </div>
-                                : <div>
-                                    <p className='text-[18px] font-medium saira text-center mx-4 mb-4'>Complete double the money offer to take part in raffle </p>
-                                    {
-                                        getButtonMarkup(lastTask)
-                                    }
+                                : <div className='flex justify-center'>
+                                    <div>
+                                        <p className='text-[18px] md:text-[24px] font-medium saira text-center mx-4 mb-4 md:text-center'>Complete double the money offer to take part in raffle </p>
+                                        {
+                                            getButtonMarkup(lastTask)
+                                        }
+                                    </div>
                                 </div>
                         }
 
                     </div>
                 </div>
-                <p className='text-[12px] saira text-[#FFED63] text-center cursor-pointer underline py-3' onClick={e => setTourModal(true)}>Raffle rules</p>
+                <p className='text-[12px] md:text-[14px] saira text-[#FFED63] text-center cursor-pointer underline py-3' onClick={e => setTourModal(true)}>Raffle rules</p>
 
                 <TimeCounter />
             </div>

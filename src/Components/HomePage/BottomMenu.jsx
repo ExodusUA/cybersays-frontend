@@ -28,7 +28,7 @@ function BottomMenu({ setActivePageIndex, activePageIndex }) {
 
     function slideChange(swiper) {
         setCurrentSlide(swiper.realIndex)
-       // setActivePageIndex(swiper.realIndex)
+        // setActivePageIndex(swiper.realIndex)
     }
 
     useEffect(() => {
@@ -37,89 +37,91 @@ function BottomMenu({ setActivePageIndex, activePageIndex }) {
         }
     }, [activePageIndex])
 
-    function swipeLeft () {
+    function swipeLeft() {
         if (activePageIndex === 0) return
         setActivePageIndex(activePageIndex - 1)
     }
 
-    function swipeRight () {
+    function swipeRight() {
         if (activePageIndex === 4) return
         setActivePageIndex(activePageIndex + 1)
     }
 
     return (
         <div className='flex justify-center'>
-            <div className=' fixed bottom-0 z-50 w-[375px]'>
+            <div className=' fixed bottom-0 z-50 w-[375px] md:w-[500px]'>
                 <div className=' w-full bottom-10 '>
                     <div className='justify-between flex mx-5 mb-[-40px] relative z-40'>
-                        <img  className='w-[24px] lg:w-[64px] cursor-pointer buttonPrev' src={left} alt="Left" onClick={e => {
+                        <img className='w-[24px] lg:w-[32px] cursor-pointer buttonPrev' src={left} alt="Left" onClick={e => {
                             swiper.slidePrev()
                             swipeLeft()
-                            }} />
-                        <img className='w-[24px] lg:w-[64px] cursor-pointer buttonNext' src={right} alt="Right" onClick={e => {
+                        }} />
+                        <img className='w-[24px] lg:w-[32px] cursor-pointer buttonNext' src={right} alt="Right" onClick={e => {
                             swiper.slideNext()
                             swipeRight()
-                            }} />
+                        }} />
                     </div>
                 </div>
-                <Swiper
-                    className='w-[335px] relative z-10 '
-                    initialSlide={activePageIndex}
-                    onSwiper={(swiper) => {
-                        setSwiper(swiper)
-                    }}
-                    modules={[Navigation]}
-                    spaceBetween={0}
-                    centeredSlides={true}
-                    slidesPerView={3}
-                    loop={false}
-                    onSlideChange={(swiper) => slideChange(swiper)}
-                    navigation={{
-                        prevEl: '.buttonPrev',
-                        nextEl: '.buttonNext',
-                    }}
-                >
-                    <SwiperSlide>
-                        <div className={`text-black relative text-center duration-200 flex justify-center ${currentSlide === 0 ? 'top-0' : 'top-8'}`}>
-                            <div>
-                                <img className='w-[32px] h-[32px] m-auto' src={link1} alt="link1" />
-                                <p className='saira text-[12px] font-semibold'>Homepage</p>
+                
+                    <Swiper
+                        className='w-[335px] md:w-[500px] md:!pb-[20px] relative z-10 '
+                        initialSlide={activePageIndex}
+                        onSwiper={(swiper) => {
+                            setSwiper(swiper)
+                        }}
+                        modules={[Navigation]}
+                        spaceBetween={0}
+                        centeredSlides={true}
+                        slidesPerView={3}
+                        loop={false}
+                        onSlideChange={(swiper) => slideChange(swiper)}
+                        navigation={{
+                            prevEl: '.buttonPrev',
+                            nextEl: '.buttonNext',
+                        }}
+                    >
+                        <SwiperSlide>
+                            <div className={`text-black relative text-center duration-200 flex justify-center ${currentSlide === 0 ? 'top-0' : 'top-8 md:top-[70px]'}`}>
+                                <div>
+                                    <img className='w-[32px] h-[32px] md:w-[48px] md:h-[48px] m-auto' src={link1} alt="link1" />
+                                    <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>Homepage</p>
+                                </div>
                             </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className={`text-black relative text-center duration-200 flex justify-center  ${currentSlide === 1 ? 'top-0' : 'top-8'}`}>
-                            <div>
-                                <img className='w-[32px] h-[32px] m-auto' src={link2} alt="link2" />
-                                <p className='saira text-[12px] font-semibold'>Raffle tickets</p>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className={`text-black relative text-center duration-200 flex justify-center  ${currentSlide === 1 ? 'top-0' : 'top-8 md:top-[70px]'}`}>
+                                <div>
+                                    <img className='w-[32px] h-[32px] md:w-[48px] md:h-[48px] m-auto' src={link2} alt="link2" />
+                                    <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>Raffle tickets</p>
+                                </div>
                             </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className={`text-black relative text-center duration-200 flex justify-center  ${currentSlide === 2 ? 'top-0' : 'top-8'}`}>
-                            <div>
-                                <img className='w-[32px] h-[32px] m-auto' src={link3} alt="link3" />
-                                <p className='saira text-[12px] font-semibold'>Double your money</p>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className={`text-black relative text-center duration-200 flex justify-center  m-auto  ${currentSlide === 2 ? 'top-0' : 'top-8 md:top-[70px]'}`}>
+                                <div>
+                                    <img className='w-[32px] h-[32px] md:w-[48px] md:h-[48px] m-auto' src={link3} alt="link3" />
+                                    <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2 '>Double your money</p>
+                                </div>
                             </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className={`text-black relative text-center duration-200 flex justify-center ${currentSlide === 3 ? 'top-0' : 'top-8'}`}>
-                            <div>
-                                <img className='w-[32px] h-[32px] m-auto' src={link4} alt="link4" />
-                                <p className='saira text-[12px] font-semibold'>My referrals</p>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className={`text-black relative text-center duration-200 flex justify-center ${currentSlide === 3 ? 'top-0' : 'top-8 md:top-[70px]'}`}>
+                                <div>
+                                    <img className='w-[32px] h-[32px] md:w-[48px] md:h-[48px] m-auto' src={link4} alt="link4" />
+                                    <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>My referrals</p>
+                                </div>
                             </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className={`text-black relative text-center duration-200 flex justify-center  ${currentSlide === 4 ? 'top-0' : 'top-8'}`}>
-                            <div>
-                                <img className='w-[32px] h-[32px] m-auto' src={link2} alt="link2" />
-                                <p className='saira text-[12px] font-semibold'>Competition</p>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className={`text-black relative text-center duration-200 flex justify-center  ${currentSlide === 4 ? 'top-0' : 'top-8 md:top-[70px]'}`}>
+                                <div>
+                                    <img className='w-[32px] h-[32px] md:w-[48px] md:h-[48px] m-auto' src={link2} alt="link2" />
+                                    <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>Competition</p>
+                                </div>
                             </div>
-                        </div>
-                    </SwiperSlide>
-                </Swiper>
+                        </SwiperSlide>
+                    </Swiper>
+               
             </div>
         </div>
     )
