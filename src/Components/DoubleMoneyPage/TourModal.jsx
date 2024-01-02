@@ -77,7 +77,7 @@ function TourModal({ setOpen }) {
                 </div>
             )}
             {selectedButton === 2 && (
-                <div>
+                <div className='max-w-[400px] m-auto'>
                     <p className=' text-[16px] font-semibold text-center'>Lorem ipsum</p>
                     <img className='w-[375px] m-auto mt-3' src={hero} alt="hero" />
                     <Swiper
@@ -87,7 +87,7 @@ function TourModal({ setOpen }) {
                         breakpoints={{
                             0: {
                                 slidesPerView: 1,
-                                spaceBetween: 0,
+                                spaceBetween: 10,
                             }
                         }}
                     >

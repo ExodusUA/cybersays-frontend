@@ -70,8 +70,8 @@ function TransactionHistory({ setOpen }) {
     }
 
     return (
-        <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 scrollbarHidden'>
-            <div className='flex justify-end'>
+        <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 scrollbarHidden '>
+            <div className='flex justify-end max-w-[400px] m-auto'>
                 <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
             </div>
             <p className='text-[18px] font-semibold text-center'>Transaction History</p>
@@ -89,8 +89,9 @@ function TransactionHistory({ setOpen }) {
                 }
 
             </div>
-            <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 mt-3'>Withdrawn</button>
-
+            <div className='flex justify-center'>
+                <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 mt-3 max-w-[370px]'>Withdrawn</button>
+            </div>
         </div>
     )
 }
