@@ -23,16 +23,8 @@
             "taskTitleOpen": "Register to ImLive  🎉",
             "taskBlocks": [
                 {
-                    "taskImage": "images/taskIcon1.png",
-                    "taskText": "The Ultimate Adult Webcam Experience!"
-                },
-                {
-                    "taskImage": "images/taskIcon2.png",
-                    "taskText": "Double Your Money, Be Treated Like a king on ImLive!"
-                },
-                {
-                    "taskImage": "images/taskIcon3.png",
-                    "taskText": "Dive into Your Wildest Fantasies Now!"
+                    "taskImage": "images/bg-mobile-Task1.png",
+                    "taskText": "Enjoy ImLive, be treated like a KING 👑 - and fulfill your wildest fantasies!"
                 }
             ],
             "taskButton": "1/4 Register!"
@@ -42,16 +34,8 @@
             "taskTitleOpen": "A King’s intro to ImLive: deposit 5$, get 10$ back and:",
             "taskBlocks": [
                 {
-                    "taskImage": "images/taskIcon1.png",
-                    "taskText": "Get More Bang for Your Buck: 10 Credits for $5 on ImLive!"
-                },
-                {
-                    "taskImage": "images/taskIcon2.png",
-                    "taskText": "Get a king’s treatment with Your 10 Credits on ImLive!"
-                },
-                {
-                    "taskImage": "images/taskIcon3.png",
-                    "taskText": "Double the Thrill: Receive $10 Cash immediately when you’re done spending!"
+                    "taskImage": "images/bg-mobile-Task2.png",
+                    "taskText": "Deposit $5... ImLive will double the credit. CyberSays will double the dollars!"
                 }
             ],
             "taskButton": "2/4 Deposit!"
@@ -61,12 +45,8 @@
             "taskTitleOpen": "Spend your credits and double your money:",
             "taskBlocks": [
                 {
-                    "taskImage": "images/taskIcon2.png",
-                    "taskText": "Pick Your Favorite Model and Dive In: Spend Your 10 Credits on ImLive!"
-                },
-                {
-                    "taskImage": "images/taskIcon3.png",
-                    "taskText": "Seamless Rewards: After You’re Done, CyberSays Gifts You $10 Cash Automatically!"
+                    "taskImage": "images/bg-mobile-Task3.png",
+                    "taskText": "Spend your 10 ImLive credits, be treated like a king, and get $10 cash when you’re done!"
                 }
             ],
             "taskButton": "Spend"
@@ -76,12 +56,8 @@
             "taskTitleOpen": "Get 10$ from CyberSays immediately to ${emailAddress}",
             "taskBlocks": [
                 {
-                    "taskImage": "images/taskIcon2.png",
-                    "taskText": "Flexible Payouts: Choose from PayPal, Amazon, Digital Visa Card, and More to Receive Your Money!"
-                },
-                {
-                    "taskImage": "images/taskIcon3.png",
-                    "taskText": "Get it Cash: Enjoy $10 to Use However You Want!"
+                    "taskImage": "images/bg-mobile-Task4.png",
+                    "taskText": "ImLive doubles your credit, we double your money – it's a win-win for you with an extra $10 in your wallet!"
                 }
             ],
             "taskButton": "Get $10 from CyberSays"

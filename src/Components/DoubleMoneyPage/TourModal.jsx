@@ -45,7 +45,7 @@ function TourModal({ setOpen }) {
                 </div>
             </div>
             {selectedButton === 1 && (
-                <div>
+                <div className='max-w-[400px] m-auto'>
                     <p className=' text-[16px] font-semibold text-center'>Lorem ipsum</p>
                     <img className='w-[375px] m-auto mt-3' src={hero} alt="hero" />
                     <Swiper
@@ -55,13 +55,13 @@ function TourModal({ setOpen }) {
                         breakpoints={{
                             0: {
                                 slidesPerView: 1,
-                                spaceBetween: 0,
+                                spaceBetween: 10,
                             }
                         }}
                     >
                         {dataShort.map((item, index) => (
                             <SwiperSlide key={item}>
-                                <p className='saira font-medium text-center text-[14px]'>{item.desc}</p>
+                                <p className='saira font-medium text-center text-[14px] mx-2'>{item.desc}</p>
                             </SwiperSlide>
                         ))}
 

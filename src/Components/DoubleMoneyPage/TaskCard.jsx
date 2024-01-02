@@ -12,11 +12,11 @@ function TaskCard({ state, background, data, index }) {
             default: return null
         }
     }
-
+    {/*
     const activeState = () => {
         return <>
             <div className='flex justify-between items-center'>
-                <p className='saira text-[12px] font-medium'>{index}. {data?.taskTitleOpen}</p>
+                <p className='saira text-[12px] md:text-[14px] font-medium'>{index}. {data?.taskTitleOpen}</p>
                 <img className='w-[18px] h-[18px]' src={notReady} alt="notReady" />
             </div>
 
@@ -24,8 +24,8 @@ function TaskCard({ state, background, data, index }) {
                 {
                     data?.taskBlocks?.map((task, index) => {
                         return <div key={index} className='flex flex-col items-center mt-2'>
-                            <img className='w-[20px]' src={task?.taskImage} alt="Task Icon" />
-                            <p className='saira text-[12px] font-medium text-center'>{task?.taskText}</p>
+                            <img className='w-[20px] md:w-[30px]' src={task?.taskImage} alt="Task Icon" />
+                            <p className='saira text-[12px] md:text-[14px] font-medium text-center'>{task?.taskText}</p>
                         </div>
                     })
                 }
@@ -37,17 +37,47 @@ function TaskCard({ state, background, data, index }) {
             
         </>
     }
+*/}
+    const activeState = () => {
+        return <>
+            <div className='flex justify-between items-center mx-1  sm:mx-3'>
+                <p className='saira text-[12px] md:text-[14px] font-medium '>{index}. {data?.taskTitleOpen}</p>
+                <img className='w-[18px] h-[18px]' src={notReady} alt="notReady" />
+            </div>
+
+            <div className='flex justify-center'>
+                {
+                    data?.taskBlocks?.map((task, key) => {
+                        return <div key={key} className='flex flex-col items-center mt-2 relative'>
+                            <img className='w-[330px] sm:w-[555px] m-auto relative' src={task?.taskImage} alt="Task Icon" />
+                            <p className={`saira text-[10px] sm:text-[17px] text-black font-medium absolute text-left leading-[12px] sm:leading-[20px] ${
+                                index === 1 ? 'w-[150px] sm:w-[265px] top-[15px] sm:top-[25px] right-[25px] sm:right-[45px]' :
+                                    index === 2 ? 'w-[140px] sm:w-[235px]  top-[15px] sm:top-[25px] left-[35px] sm:left-[55px]' :
+                                        index === 3 ? 'w-[160px] sm:w-[270px] top-[15px] sm:top-[25px] right-[35px] sm:right-[65px]' :
+                                            index === 4 ? 'w-[165px] sm:w-[280px] top-[10px] sm:top-[15px] left-[60px] sm:left-[100px]' :
+                                                ''}`}>{task?.taskText}</p>
+                        </div>
+                    })
+                }
+            </div>
+
+            <div className='flex justify-center mt-[-20px] md:mt-[-30px] relative z-50 max-w-[330px] w-full sm:max-w-[555px] m-auto'>
+                <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-1 sm:py-2'>{data?.taskButton}</button>
+            </div>
+            <p className='saira text-[14px] cursor-pointer underline text-center mb-[-5px]'>Copy link</p>
+        </>
+    }
 
     const finishedState = () => {
-        return <div className='flex justify-between items-center'>
-            <p className='saira text-[12px] font-medium'>{index}. {data?.taskTitle}</p>
+        return <div className='flex justify-between items-center mx-1 sm:mx-3'>
+            <p className='saira text-[12px] md:text-[14px] font-medium'>{index}. {data?.taskTitle}</p>
             <img className='w-[18px] h-[18px]' src={done} alt="done" />
         </div>
     }
 
     const inactiveState = () => {
-        return <div className='flex justify-between items-center'>
-            <p className='saira text-[12px] font-medium'>{index}. {data?.taskTitle}</p>
+        return <div className='flex justify-between items-center mx-1  sm:mx-3'>
+            <p className='saira text-[12px] md:text-[14px] font-medium'>{index}. {data?.taskTitle}</p>
             <img className='w-[18px] h-[18px]' src={notReady} alt="notReady" />
         </div>
     }
@@ -55,10 +85,11 @@ function TaskCard({ state, background, data, index }) {
 
     return (
 
-        <div style={{ background: background }} className={`w-full rounded-[20px] p-2 my-2 ${state === 'finished' ? 'opacity-50' : state === 'inactive' ? 'opacity-70' : 'opacity-100'}`}>
+        <div style={{ background: background }} className={`w-full rounded-[20px] p-2 my-2 `}>
             {
                 getMarkup()
             }
+
         </div>
 
     )
