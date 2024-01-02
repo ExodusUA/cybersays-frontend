@@ -12,7 +12,10 @@ function App() {
 
   const params = new URLSearchParams(window.location.search);
 
-  if (params.get('ref')) window.localStorage.setItem('ref', params.get('ref'));
+  if (params.get('ref')) {
+    window.localStorage.setItem('ref', params.get('ref'))
+    window.location.href = '/login'
+  };
 
   const queryClient = new QueryClient()
 
@@ -39,7 +42,7 @@ function App() {
           <Route path="/*" element={<Main languageData={languageData} />} />
           <Route path="/login" element={<Auth languageData={languageData} />} />
           <Route path="/privacy" element={<Privacy languageData={languageData} />} />
-          <Route path="/token/*" element={<Token  />} />
+          <Route path="/token/*" element={<Token />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
