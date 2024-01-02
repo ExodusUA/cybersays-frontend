@@ -142,12 +142,12 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
                                 ? <div className='flex justify-between items-start w-full'>
                                     <div className='text-center w-full'>
                                         <Link to={imLiveURL}><button className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2 md:py-3 md:w-full'>Enjoy ImLive 💃</button></Link>
-                                        <p className='saira text-[12px] md:text-[14px] font-medium'>1 credit bought = </p>
+                                        <p className='saira text-[12px] md:text-[14px] font-medium mt-2'>1 credit bought = </p>
                                         <p className='saira text-[12px] md:text-[14px] font-medium'>1  raffle ticket</p>
                                     </div>
                                     <div className='text-center w-full'>
                                         <button onClick={e => shareRefferalLink()} className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2 md:py-3 md:w-full'>Refer friends 🤑</button>
-                                        <p className='saira text-[12px] md:text-[14px] font-medium'>Friend doubled money = </p>
+                                        <p className='saira text-[12px] md:text-[14px] font-medium mt-2'>Friend doubled money = </p>
                                         <p className='saira text-[12px] md:text-[14px] font-medium'>30 raffle tickets</p>
                                     </div>
                                 </div>

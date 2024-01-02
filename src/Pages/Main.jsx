@@ -19,6 +19,7 @@ import TourModal from '../Components/DoubleMoneyPage/TourModal'
 import LeaderboardModal from '../Components/LeaderboardModal'
 import { SwiperSlide } from 'swiper/react'
 import { Swiper } from 'swiper/react';
+import user from '../Requests/user'
 var mixpanel = require('mixpanel-browser');
 
 
@@ -141,7 +142,7 @@ function Main({ languageData }) {
 
             }
             {
-                menuOpen === true && <CyberSaysMobileMenu scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+                menuOpen === true && <CyberSaysMobileMenu scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
             }
             {
                 tourModal && <TourModal setOpen={setTourModal} />

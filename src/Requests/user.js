@@ -90,4 +90,17 @@ async function getTicketsAndPoints() {
 
 }
 
-export default { getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTicketsAndPoints };
+/* SEND EMAIL */
+
+async function sendEmail(email, userID) {
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/user/sendEmail', {
+        email, userID
+    }, {
+        headers: {
+            token: `${getToken()}`
+        }
+    });
+    return response;
+}
+
+export default { getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTicketsAndPoints, sendEmail };

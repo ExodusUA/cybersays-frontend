@@ -12,8 +12,8 @@ function HeaderMenu({ setMenuOpen, user }) {
             <div className=' flex items-center justify-between'>
                 <img onClick={() => setMenuOpen(true)} className='w-[24px] sm:w-[32px] h-[24px] sm:h-[32px] cursor-pointer' src={btnMenu} alt="btnMenu" />
                 <div className='bg-[#EAEAEA] bg-opacity-20 border-[2px] border-[#FFED63] backdrop-blur-lg rounded-[50px]'>
-                    <div >
-                        <div className=' flex px-2 sm:px-4 py-[2px] sm:py-[6px]'>
+                    <div>
+                        <div className='xl:gap-4 flex px-2 sm:px-4 py-[2px] sm:py-[6px]'>
                             <div className=' leading-4 md:leading-5 mx-1'>
                                 <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-medium saira text-center '>USD Earned:</p>
                                 <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-medium saira text-center '>💵 {user?.earned || 0}</p>

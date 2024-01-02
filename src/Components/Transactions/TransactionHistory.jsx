@@ -6,7 +6,7 @@ import userAPI from '../../Requests/user'
 import moment from 'moment'
 
 
-function TransactionHistory() {
+function TransactionHistory({ setOpen }) {
 
     const [transactionsData, setTransactionsData] = useState(null)
 
@@ -72,7 +72,7 @@ function TransactionHistory() {
     return (
         <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 scrollbarHidden'>
             <div className='flex justify-end'>
-                <img className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
+                <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
             </div>
             <p className='text-[18px] font-semibold text-center'>Transaction History</p>
             <div className='m-auto max-w-[345px] w-full mt-3 h-[470px] overflow-scroll'>

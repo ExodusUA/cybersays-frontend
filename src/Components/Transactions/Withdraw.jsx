@@ -3,8 +3,10 @@ import close from '../../images/CyberSaysPage/closeMenu.png'
 import social1 from '../../images/CyberSaysPage/socialApple.png'
 import social2 from '../../images/CyberSaysPage/socialNetflix.png'
 import social3 from '../../images/CyberSaysPage/socialSpotify.png'
+import TransactionHistory from './TransactionHistory'
+import TicketsHistory from './TicketsHistory'
 
-function Withdraw({ user }) {
+function Withdraw({ user, setOpen }) {
 
     const [selectedPayment, setSelectedPayment] = useState(null)
 
@@ -42,10 +44,13 @@ function Withdraw({ user }) {
 
     ]
 
+    const [transactionsModal, setTransactionsModal] = useState(false)
+    const [ticketsModal, setTicketsModal] = useState(false)
+
     return (
         <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
             <div className='flex justify-end'>
-                <img className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
+                <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
             </div>
             <p className='text-[18px] font-semibold text-center'>Withdraw</p>
             <p className='text-[12px] text-[#FFED63] font-medium text-center saira'>Can withdrwa all or nothing</p>
@@ -76,6 +81,19 @@ function Withdraw({ user }) {
                 are avaliable in your country</p>
             <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2'>Withdrawn</button>
 
+
+            <div className='text-center mt-4'>
+                <p className='saira' onClick={e => setTransactionsModal(true)}>Transaction History</p>
+                <p className='saira' onClick={e => setTicketsModal(true)}>My Tickets & Points</p>
+            </div>
+
+            {
+                transactionsModal && <TransactionHistory setOpen={setTransactionsModal} />
+            }
+
+            {
+                ticketsModal && <TicketsHistory setOpen={setTicketsModal} />
+            }
         </div>
     )
 }

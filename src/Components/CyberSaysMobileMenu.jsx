@@ -9,10 +9,14 @@ import link6 from '../images/CyberSaysPage/mobileMenuLink/link6.png'
 import link7 from '../images/CyberSaysPage/mobileMenuLink/link7.png'
 import NewLanguageButton from './Language/NewLanguageButton'
 import TourModal from './DoubleMoneyPage/TourModal'
+import MyReferralsModal from './ProfileReferrals/MyReferralsModal'
+import Withdraw from './Transactions/Withdraw'
 
-function CyberSaysMobileMenu({ setMenuOpen, scrollToPage }) {
+function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user }) {
 
   const [tourModal, setTourModal] = useState(false)
+  const [referralsModal, setReferralsModal] = useState(false)
+  const [withdrawModal, setWithdrawModal] = useState(false)
 
   return (
     <div>
@@ -36,12 +40,12 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage }) {
               <img className='w-[32px] h-[32px] mr-2' src={link3} alt="link3" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>The  Vegas weekend</p>
             </div>
-            <div className='flex items-center'>
-              <img className='w-[32px] h-[32px] mr-2' src={link4} alt="link4" onClick={e => scrollToPage(1)} />
+            <div className='flex items-center' onClick={e => scrollToPage(1)} >
+              <img className='w-[32px] h-[32px] mr-2' src={link4} alt="link4" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>Refer to get tickets</p>
             </div>
-            <div className='flex items-center'>
-              <img className='w-[32px] h-[32px] mr-2' src={link5} alt="link5" onClick={e => scrollToPage(3)} />
+            <div className='flex items-center' onClick={e => setReferralsModal(true)} >
+              <img className='w-[32px] h-[32px] mr-2' src={link5} alt="link5" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>Your referrals</p>
             </div>
 
@@ -49,7 +53,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage }) {
               <img className='w-[32px] h-[32px] mr-2' src={link6} alt="link6" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>The 69 Daily competition</p>
             </div>
-            <div className='flex items-center'>
+            <div className='flex items-center' onClick={e => setWithdrawModal(true)}>
               <img className='w-[32px] h-[32px] mr-2' src={link7} alt="link7" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>Choose your way to get paid</p>
             </div>
@@ -69,6 +73,12 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage }) {
       </div>
       {
         tourModal && <TourModal setOpen={setTourModal} />
+      }
+      {
+        referralsModal && <MyReferralsModal setOpen={setReferralsModal} />
+      }
+      {
+        withdrawModal && <Withdraw setOpen={setWithdrawModal} user={user} />
       }
     </div>
   )

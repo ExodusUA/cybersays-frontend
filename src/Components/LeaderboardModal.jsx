@@ -74,13 +74,13 @@ function LeaderboardModal({ setOpen, leaderboardData, loading }) {
                                         : leaderboardData.leaderboard.slice(3).map((user, index) => (
                                             <div className='bg-[#EAEAEA] bg-opacity-40 backdrop-blur-lg rounded-[30px] text-center flex pr-3  justify-between items-center mt-2'>
                                                 <img className=' rounded-full w-[40px] h-[40px]' src={twoSt} alt="twoSt" />
-                                                <p className='saira text-[12px] font-medium text-center ml-[-25px] truncate'>@(User_name)</p>
+                                                <p className='saira text-[12px] font-medium text-center ml-[-25px] truncate w-[120px]'>{user?.email}</p>
                                                 <div className='leading-[14px]'>
-                                                    <p className='saira text-[12px] font-medium text-[#FFED63]'>6.90$</p>
+                                                    <p className='saira text-[12px] font-medium text-[#FFED63]'>{user?.earned}$</p>
                                                     <p className='saira text-[12px] font-medium'>Prize</p>
                                                 </div>
                                                 <div className='leading-[14px]'>
-                                                    <p className='saira text-[12px] font-medium text-[#FFED63]'>1234</p>
+                                                    <p className='saira text-[12px] font-medium text-[#FFED63]'>{user?.points}</p>
                                                     <p className='saira text-[12px] font-medium'>Points</p>
                                                 </div>
                                                 <p className='saira text-[16px] font-bold text-[#FFED63]'>#4</p>

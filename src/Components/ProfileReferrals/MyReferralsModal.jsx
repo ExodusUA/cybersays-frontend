@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import close from '../../images/CyberSaysPage/closeMenu.png'
 import offerTrue from '../../images/CyberSaysPage/offerTrue.png'
 import offerFalse from '../../images/CyberSaysPage/offerFalse.png'
-import { useQuery } from '@tanstack/react-query'
+import { useQuery, useQueryClient } from '@tanstack/react-query'
 import userAPI from '../../Requests/user'
 
-function MyReferralsModal() {
+function MyReferralsModal({ setOpen }) {
 
     const [referralData, setReferralData] = useState([])
+    const queryClient = useQueryClient()
 
     useQuery({
         queryKey: ['referralData'],
@@ -18,20 +19,33 @@ function MyReferralsModal() {
         }
     })
 
+    async function sendEmail(email, userID) {
+        try {
+            const res = await userAPI.sendEmail(email, userID)
+            if (res.data === 'Email sent') {
+                queryClient.invalidateQueries('referralData')
+            }
+        } catch (error) {
+            alert(error)
+        }
+    }
+
     return (
         <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
             <div className='flex justify-end'>
-                <img className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
+                <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
             </div>
             {
                 referralData.referrals && referralData.referrals.length > 0
                     ? <>
                         <p className='text-[18px] font-semibold text-center mt-4'>My referrals</p>
                         <p className='saira text-[16px] font-semibold text-center'>See if your referred friends took the ImLive double-money offer—only then can you take them to Vegas if you win</p>
-                        <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center py-1 mt-3'>
-                            <p className='text-[14px] font-semibold text-center flex justify-center'>You’re eferred by: <p className='ml-1 truncate w-[100px]'>{referralData.referredBy}</p></p>
-                            <p className='saira text-[12px] font-semibold text-center mx-5'>If your referrer took ImLive's double-money offer, you can pick them for a Vegas trip if you win.</p>
-                        </div>
+                        {
+                            referralData.referredBy && <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center py-1 mt-3'>
+                                <p className='text-[14px] font-semibold text-center flex justify-center'>You’re eferred by: <p className='ml-1 truncate w-[100px]'>{referralData.referredBy}</p></p>
+                                <p className='saira text-[12px] font-semibold text-center mx-5'>If your referrer took ImLive's double-money offer, you can pick them for a Vegas trip if you win.</p>
+                            </div>
+                        }
                         <div className='mt-4'>
                             <div className=' flex justify-between items-center'>
                                 <div className='w-[25px]'>
@@ -76,7 +90,7 @@ function MyReferralsModal() {
                                         {
                                             item.got_email === 'true'
                                                 ? <img className='w-[24px] h-[24px] m-auto' src={offerTrue} alt="offerTrue" />
-                                                : <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold cursor-pointer'>Send</button>
+                                                : <button onClick={e => sendEmail(item.email, item.id)} className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold cursor-pointer'>Send</button>
                                         }
                                     </div>
 
