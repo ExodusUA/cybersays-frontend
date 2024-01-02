@@ -94,7 +94,7 @@ function LoginForm() {
                     <div className='grid grid-cols-1 lg:block mt-4 lg:mt-[20vh]  lg:max-w-full m-auto lg:m-left p-5 bg-[#83869b] bg-opacity-20 border-[1px] border-[#FF1CBB] backdrop-blur-lg rounded-[24px]'>
                         <div className='text-left mt-4 relative'>
                             <input onChange={e => setEmail(e.target.value)} value={email} type="email" className='w-full h-[52px] rounded-[12px] px-4 text-gray saira' placeholder='Enter your e-mail' />
-                            <button type='submit' onClick={e => handleSubmit(e)} className='w-full absolute right-1 top-1 continue_button h-[44px] rounded-[12px] saira font-bold max-w-[155px]'>Continue</button>
+                            <button type='submit' onClick={e => handleSubmit(e)} className='w-full absolute right-1 top-1 continue_button h-[44px] text-[14px] md:text-[16px] rounded-[12px] saira font-bold max-w-[125px] md:max-w-[155px]'>Continue</button>
                         </div>
                         <div className='lg:flex items-center w-full mt-4 gap-4'>
                             <GoogleAuth loginViaGoogle={loginViaGoogle} />

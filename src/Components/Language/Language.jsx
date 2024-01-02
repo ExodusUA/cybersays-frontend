@@ -22,8 +22,8 @@ function Language() {
     return (
         <div>
             <div>
-                <button onClick={() => setLangOpen(!langOpen)} className='gradient-button flex items-center gap-2 px-[25px] py-[10px]'>
-                    <p className='text-white font-bold text-[18px]'>{getLanguageName()}</p>
+                <button onClick={() => setLangOpen(!langOpen)} className='gradient-button flex items-center gap-2 px-[25px] py-[10px] mr-4'>
+                    <p className='text-white font-bold text-[14px] md:text-[18px]'>{getLanguageName()}</p>
                     <img className='w-[20px]' src="https://img.icons8.com/ios-filled/50/ffffff/expand-arrow--v1.png" alt="Arrow" />
                 </button>
             </div>

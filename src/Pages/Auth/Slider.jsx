@@ -30,7 +30,7 @@ function Slider({ onSlideChange }) {
             <Swiper
             
                
-                className='h-[40vh] md:h-[45vh] lg:h-full'
+                className='h-[30vh] md:h-[45vh] lg:h-full'
                 onSwiper={(swiper) => {
                     swiperRef = swiper;
                 }}

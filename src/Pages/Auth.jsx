@@ -46,7 +46,7 @@ function Auth({ languageData }) {
                             </div>
 
                             <div className='pt-[3vh] lg:pt-[15vh] w-full relative z-[10]'>
-                                <img className='w-[125px] md:w-[200px] lg:w-[250px] m-auto lg:m-0' src={logotype} alt="Logotype" />
+                                <img className='w-[100px] md:w-[200px] lg:w-[250px] m-auto lg:m-0' src={logotype} alt="Logotype" />
                                 <p className='w-[100%] text-center lg:text-left text-[24px] leading-7 font-bold lg:text-[30px] text-white lg:leading-9 lg:border-b-2 border-[#A8AFF2] py-4 lg:py-8 lg:pt-6'>
                                     {currentSlide === 0 && 'CyberSays: Double Your Money, Double Your Gains!'}
                                     {currentSlide === 1 && 'Your Money, Your Rules – Choose How You Get Paid'}
