@@ -4,7 +4,7 @@ import TimeCounter from '../../Components/TimeCounter'
 import TaskCard from '../../Components/DoubleMoneyPage/TaskCard';
 import congrats from '../../images/CyberSaysPage/congrats.png'
 
-function Double({ languageData, user }) {
+function Double({ languageData, user, imLiveURL }) {
     const [isOpen, setIsOpen] = useState(false)
 
     const [taskStatus, setTaskStatus] = useState(null)
@@ -60,10 +60,10 @@ function Double({ languageData, user }) {
                 <div className='max-w-[600px] m-auto'>
                     {
                         taskStatus !== null && <>
-                            <TaskCard data={languageData?.tasks?.task1} state={taskStatus[0]} background={'#B9A1E1'} index={1} />
-                            <TaskCard data={languageData?.tasks?.task2} state={taskStatus[1]} background={'#93CC8E'} index={2} />
-                            <TaskCard data={languageData?.tasks?.task3} state={taskStatus[2]} background={'#EA7C7C'} index={3} />
-                            <TaskCard data={languageData?.tasks?.task4} state={taskStatus[3]} background={'#76C2E3'} index={4} />
+                            <TaskCard data={languageData?.tasks?.task1} state={taskStatus[0]} background={'#B9A1E1'} index={1} imLiveURL={imLiveURL} />
+                            <TaskCard data={languageData?.tasks?.task2} state={taskStatus[1]} background={'#93CC8E'} index={2} imLiveURL={imLiveURL} />
+                            <TaskCard data={languageData?.tasks?.task3} state={taskStatus[2]} background={'#EA7C7C'} index={3} imLiveURL={imLiveURL} />
+                            <TaskCard data={languageData?.tasks?.task4} state={taskStatus[3]} background={'#76C2E3'} index={4} imLiveURL={imLiveURL} />
                         </>
                     }
                 </div>

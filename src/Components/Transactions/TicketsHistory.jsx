@@ -128,9 +128,13 @@ function TicketsHistory({ setOpen }) {
             <p className='text-[18px] font-semibold text-center'>My Tickets & Points</p>
             <div className='m-auto max-w-[345px] w-full mt-3 h-[470px] overflow-scroll'>
                 {
-                    ticketsData !== null && ticketsData?.map(ticket => {
-                        return ticket.name === 'ticket' ? getTicketsMarkup(ticket.type, ticket.datetime, ticket.amount) : getPointsMarkup(ticket.type, ticket.datetime, ticket.amount)
-                    })
+                    ticketsData?.length > 0
+                        ? ticketsData !== null && ticketsData?.map(ticket => {
+                            return ticket.name === 'ticket' ? getTicketsMarkup(ticket.type, ticket.datetime, ticket.amount) : getPointsMarkup(ticket.type, ticket.datetime, ticket.amount)
+                        })
+                        : <div className='flex justify-center items-center h-[470px]'>
+                            <p className='text-[18px] font-semibold text-center'>No transactions</p>
+                        </div>
                 }
             </div>
 
