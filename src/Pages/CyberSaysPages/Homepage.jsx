@@ -22,6 +22,7 @@ function Homepage({ user, imLiveURL }) {
         if (user === null) return setLastTask(0)
 
         let tasks = JSON.parse(user?.completed_tasks)
+        if (tasks === null) return setLastTask(0)
         let lastTask = tasks[tasks.length - 1]
         setLastTask(lastTask)
     }, [user])

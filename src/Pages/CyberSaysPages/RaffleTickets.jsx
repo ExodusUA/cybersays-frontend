@@ -20,6 +20,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
         if (user === null) return
         let tasks = JSON.parse(user?.completed_tasks)
 
+        if (tasks === null) return setLastTask(0)
         let sortedTasks = tasks.sort((a, b) => a - b)
         let lastTask = sortedTasks[sortedTasks.length - 1]
         setLastTask(lastTask)

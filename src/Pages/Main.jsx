@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import Homepage from './CyberSaysPages/Homepage'
 import HeaderMenu from '../Components/HomePage/HeaderMenu'
 import CyberSaysMobileMenu from '../Components/CyberSaysMobileMenu'
@@ -25,7 +25,7 @@ var mixpanel = require('mixpanel-browser');
 function Main({ languageData }) {
 
     const [imLiveURL, setImLiveURL] = useState(null);
-
+    const navigate = useNavigate()
     const urlParams = new URLSearchParams(window.location.search);
     const uid = urlParams.get('userid');
 
@@ -43,6 +43,7 @@ function Main({ languageData }) {
         queryKey: ['userData'],
         queryFn: async () => {
             const res = await userAPI.getUserData();
+            if (res.id === undefined) return navigate('/login')
             setUserData(res)
             setImLiveURL(`https://imlive.com/wmaster.ashx?QueryID=197&WID=126670106835&linkID=701&from=freevideo6&promocode=${res?.id}`)
             return res
