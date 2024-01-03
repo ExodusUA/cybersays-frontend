@@ -164,8 +164,9 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
                     </div>
                 </div>
                 <p className='text-[12px] md:text-[14px] saira text-[#FFED63] text-center cursor-pointer underline py-3' onClick={e => setTourModal(true)}>Raffle rules</p>
-
-                <TimeCounter />
+                <div className='flex absolute bottom-14 sm:bottom-20 md:bottom-28 justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
+                    <TimeCounter />
+                </div>
             </div>
 
 

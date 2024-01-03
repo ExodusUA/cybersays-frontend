@@ -55,7 +55,7 @@ function Homepage({ user, imLiveURL }) {
                     }
                 </div>
             </div>
-            <div className='block md:hidden'>
+            <div className='flex md:hidden absolute bottom-14 justify-center w-full max-w-[760px] m-auto'>
                 <TimeCounter />
             </div>
         </div>
