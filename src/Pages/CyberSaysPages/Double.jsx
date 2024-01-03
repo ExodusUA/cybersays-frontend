@@ -43,12 +43,12 @@ function Double({ languageData, user, imLiveURL }) {
     return (
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-double.jpg)] bg-cover bg-no-repeat bg-center relative z-10' onClick={() => setIsOpen(false)}>
             <div className='pt-[60px] px-4  md:pt-[90px] max-w-[1170px] m-auto' >
-                <img className='w-[310px]  md:w-[500px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
+                <img className='custombp:w-[230px] custombp:mb-[-5px] w-[310px]  md:w-[500px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[100px] text-center mx-[50px] md:mx-[100px] px-4 md:py-2'>
-                    <p className='text-[14px] md:text-[32px] font-semibold md:mx-[40px]'>“Double your money and get your raffle eligibility”</p>
+                    <p className='text-[14px] md:text-[32px] font-semibold md:mx-[40px] custombp:leading-4'>“Double your money and get your raffle eligibility”</p>
 
                 </div>
-                <p className='text-[12px] md:text-[14px] text-[#FFED63] text-center cursor-pointer flex items-center justify-center md:py-2'>
+                <p className='text-[12px] md:text-[14px] text-[#FFED63] text-center cursor-pointer flex items-center justify-center  md:py-2'>
                     A
                     <span className='mx-1'>
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +80,7 @@ function Double({ languageData, user, imLiveURL }) {
             </div>
 
 
-            <div className='flex absolute bottom-14 sm:bottom-20 md:bottom-28 justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
+            <div className='flex fixed bottom-[56px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
                 <TimeCounter />
             </div>
 

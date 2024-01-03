@@ -42,8 +42,8 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] bg-cover bg-no-repeat bg-center relative z-10'>
 
             <div className='pt-[60px]  md:pt-[90px] px-4 max-w-[1170px] m-auto' >
-                <img className='w-[310px]  md:w-[500px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
-                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[30px] text-center  py-3 px-2 sm:max-w-[600px] m-auto'>
+                <img className='custombp:w-[230px] custombp:mb-[-5px] w-[310px]  md:w-[500px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
+                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[30px] text-center custombp:py-1 py-3 px-2 sm:max-w-[600px] m-auto'>
                     <p className='text-center text-[14px] sm:text-[18px] font-semibold'>The 69 daily competition</p>
                     {
                         loading === false && <div className='flex justify-around items-center my-2 max-w-[250px] sm:max-w-[350px] w-full m-auto'>
@@ -94,11 +94,11 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                             <p className='saira text-[12px] sm:text-[14px] font-medium'>10 points</p>
                         </div>
                     </div>
-                    <p className='text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-3 cursor-pointer' onClick={e => setLeaderboardModal(true)}>Leaderboards</p>
+                    <p className='text-center text-[12px] sm:text-[14px] saira font-semibold underline custombp:mt-0 mt-3 cursor-pointer' onClick={e => setLeaderboardModal(true)}>Leaderboards</p>
 
                 </div>
-                <p className='text-center text-[12px] sm:text-[14px] text-[#FFED63] saira font-semibold underline mt-7 mb-2 cursor-pointer'>Rules of the competition</p>
-                <div className='flex absolute bottom-14 sm:bottom-20 md:bottom-28 justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
+                <p className='text-center text-[12px] sm:text-[14px] text-[#FFED63] saira font-semibold underline custombp:mt-2 mt-7 mb-2 cursor-pointer'>Rules of the competition</p>
+                <div className='flex fixed bottom-[56px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
                     <TimeCounter />
                 </div>
             </div>

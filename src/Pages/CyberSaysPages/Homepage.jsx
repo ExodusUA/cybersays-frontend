@@ -11,10 +11,10 @@ function Homepage({ user, imLiveURL }) {
 
     const getButtonMarkup = (task) => {
         switch (task) {
-            case 0: return <Link to={imLiveURL}><button className='w-full sm:w-[350px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold py-2 md:py-3'>Double your money 🤑</button></Link>
-            case 1: return <button className='w-full sm:w-[350px]  bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold py-2 md:py-3'>2/4: Deposit for 200% Cashback 🤑</button>
-            case 2: return <button className='w-full  sm:w-[350px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold py-2 md:py-3'>3/4: Spend for 200% Cashback 🤑</button>
-            case 3: return <button className='w-full sm:w-[350px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold py-2 md:py-3'>Win the Vegas Weekend 💃</button>
+            case 0: return <Link to={imLiveURL}><button className='w-full sm:w-[350px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold custombp:py-[6px] py-2 md:py-3'>Double your money 🤑</button></Link>
+            case 1: return <button className='w-full sm:w-[350px]  bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold py-2 custombp:py-[6px] md:py-3'>2/4: Deposit for 200% Cashback 🤑</button>
+            case 2: return <button className='w-full  sm:w-[350px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold py-2 custombp:py-[6px] md:py-3'>3/4: Spend for 200% Cashback 🤑</button>
+            case 3: return <button className='w-full sm:w-[350px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold py-2 custombp:py-[6px] md:py-3'>Win the Vegas Weekend 💃</button>
         }
     }
 
@@ -31,7 +31,7 @@ function Homepage({ user, imLiveURL }) {
     return (
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-homepage.jpg)] md:bg-[url(./images/CyberSaysPage/bg-homepage.jpg)] bg-cover bg-no-repeat bg-center relative z-10'>
             <div className='pt-[60px] md:pt-[90px] px-4 pb-12 max-w-[1170px] m-auto'>
-                <img className=' w-[200px] mob:w-[310px] md:w-[500px] m-auto' src={logoCyber} alt="logoCyber" />
+                <img className='custombp:w-[230px] custombp:mb-[-5px] w-[200px] mob:w-[310px] md:w-[500px] m-auto' src={logoCyber} alt="logoCyber" />
                 <div className='flex justify-between items-end md:items-center  mt-3'>
                     <div>
                         <img className='w-[180px] sm:w-[200px] md:w-[350px]' src={girlOK} alt="girlOK" />
@@ -55,7 +55,7 @@ function Homepage({ user, imLiveURL }) {
                     }
                 </div>
             </div>
-            <div className='flex md:hidden absolute bottom-14 justify-center w-full max-w-[760px] m-auto'>
+            <div className='flex md:hidden fixed bottom-[56px] justify-center w-full max-w-[760px] m-auto'>
                 <TimeCounter />
             </div>
         </div>

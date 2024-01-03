@@ -79,7 +79,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
                 </p>
             </Tooltip>
             <div className='pt-[60px]  md:pt-[90px] px-4 max-w-[1170px] m-auto' >
-                <img className='custombp:w-[230px] custombp:mb-[-5px] w-[310px]  md:w-[500px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
+                <img className='custombp:w-[230px] custombp:mb-[-5px] w-[310px]  md:w-[500px] m-auto md:mb-[-20px] ' src={logoCyber} alt="logoCyber" />
                 {
 
                     isTaskCompleted === false
@@ -109,7 +109,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
                         </div>
                         : <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[50px] md:rounded-[100px] text-center mx-5 md:mx-0 md:py-2'>
                             <p className='custombp:text-[14px] text-[18px] md:text-[32px] font-semibold'>“Win the Vegas weekend!”</p>
-                            <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center md:my-1'>
+                            <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center md:my-1 custombp:leading-[14px]'>
                                 Eligible to go to vegas
                                 <img className='w-[12px] md:w-[24px] h-[12px] md:h-[24px] mx-[2px] md:ml-1' src={notReady} alt="notReady" />
                                 <a
@@ -134,7 +134,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
                 }
 
                 <div>
-                    <img className='custombp:w-[280px] w-[345px] md:w-[770px] mt-[-40px] mob:mt-0 m-auto md:mt-[-100px]' src={hero} alt="heroRaffle" />
+                    <img className='custombp:w-[280px] w-[345px] md:w-[770px] mt-[-40px] mob:mt-0 m-auto md:mt-[-100px] custombp:mt-[-30px]' src={hero} alt="heroRaffle" />
                     <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[30px] text-center flex py-3 md:py-5 px-2 mt-[-20px] md:mt-[-80px] justify-center' >
                         {
 
@@ -164,7 +164,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
                     </div>
                 </div>
                 <p className='text-[12px] md:text-[14px] saira text-[#FFED63] text-center cursor-pointer underline custombp:py-1 py-3' onClick={e => setTourModal(true)}>Raffle rules</p>
-                <div className='flex absolute bottom-14 sm:bottom-20 md:bottom-28 justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
+                <div className='flex fixed bottom-[56px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
                     <TimeCounter />
                 </div>
             </div>
