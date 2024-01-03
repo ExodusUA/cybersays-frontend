@@ -4,6 +4,24 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    screens: {
+      'mob': '374px',
+
+      'mobMax': { 'max': '374px' },
+
+      'custombp': { 'raw': '(max-height: 632px)' },
+
+      'sm': '640px',
+
+      'md': '768px',
+
+      'lg': '1024px',
+
+      'xl': '1280px',
+
+      '2xl': '1536px',
+
+    },
     extend: {
       linearGradientColors: {
         'pink-blue': ['105deg', '#FF1CBB -23.05%', '#088CD9 88.21%'],

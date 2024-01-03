@@ -52,10 +52,10 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
 
     const getButtonMarkup = (task) => {
         switch (task) {
-            case 0: return <Link to={imLiveURL}><button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 md:py-3'>Double your money 🤑</button></Link>
-            case 1: return <button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 md:py-3'>2/4: Deposit for 200% Cashback 🤑</button>
-            case 2: return <button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 md:py-3'>3/4: Spend for 200% Cashback 🤑</button>
-            case 3: return <button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 md:py-3'>Win the Vegas Weekend 💃</button>
+            case 0: return <Link to={imLiveURL}><button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold custombp:py-[6px] py-2 md:py-3'>Double your money 🤑</button></Link>
+            case 1: return <button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black mobMax:text-[16px] text-[18px] saira font-semibold custombp:py-[6px] py-2 md:py-3'>2/4: Deposit for 200% Cashback 🤑</button>
+            case 2: return <button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black mobMax:text-[16px] text-[18px] saira font-semibold custombp:py-[6px] py-2 md:py-3'>3/4: Spend for 200% Cashback 🤑</button>
+            case 3: return <button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold custombp:py-[6px] py-2 md:py-3'>Win the Vegas Weekend 💃</button>
         }
     }
 
@@ -79,13 +79,13 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
                 </p>
             </Tooltip>
             <div className='pt-[60px]  md:pt-[90px] px-4 max-w-[1170px] m-auto' >
-                <img className='w-[310px]  md:w-[500px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
+                <img className='custombp:w-[230px] custombp:mb-[-5px] w-[310px]  md:w-[500px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
                 {
 
-                    isTaskCompleted === true
+                    isTaskCompleted === false
                         ? <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[50px] text-center mx-1 md:mx-0 md:py-2'>
                             <p className='text-[18px] md:text-[32px] font-semibold'>“Win the Vegas weekend!”</p>
-                            <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center mx-8'>
+                            <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center mx-8 custombp:leading-[14px]'>
                                 If you took ImLive's double-your-money offer, you can be picked by your referral or referrer to go to Vegas if they win.
                                 <img className='w-[12px] md:w-[24px] h-[12px] md:h-[24px] mr-[2px]' src={ready} alt="ready" />
                                 <a
@@ -108,7 +108,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
                             <p className='text-[12px] font-medium underline cursor-pointer saira'>How do I win the vegas weekend?</p>
                         </div>
                         : <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[50px] md:rounded-[100px] text-center mx-5 md:mx-0 md:py-2'>
-                            <p className='text-[18px] md:text-[32px] font-semibold'>“Win the Vegas weekend!”</p>
+                            <p className='custombp:text-[14px] text-[18px] md:text-[32px] font-semibold'>“Win the Vegas weekend!”</p>
                             <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center md:my-1'>
                                 Eligible to go to vegas
                                 <img className='w-[12px] md:w-[24px] h-[12px] md:h-[24px] mx-[2px] md:ml-1' src={notReady} alt="notReady" />
@@ -134,7 +134,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
                 }
 
                 <div>
-                    <img className='w-[345px] md:w-[770px] m-auto md:mt-[-100px]' src={hero} alt="heroRaffle" />
+                    <img className='custombp:w-[280px] w-[345px] md:w-[770px] mt-[-40px] mob:mt-0 m-auto md:mt-[-100px]' src={hero} alt="heroRaffle" />
                     <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[30px] text-center flex py-3 md:py-5 px-2 mt-[-20px] md:mt-[-80px] justify-center' >
                         {
 
@@ -153,7 +153,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
                                 </div>
                                 : <div className='flex justify-center'>
                                     <div>
-                                        <p className='text-[18px] md:text-[24px] font-medium saira text-center mx-4 mb-4 md:text-center'>Complete double the money offer to take part in raffle </p>
+                                        <p className='text-[18px] md:text-[24px] font-medium saira text-center mx-4 custombp:mb-0 mb-4 md:text-center'>Complete double the money offer to take part in raffle </p>
                                         {
                                             getButtonMarkup(lastTask)
                                         }
@@ -163,7 +163,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
 
                     </div>
                 </div>
-                <p className='text-[12px] md:text-[14px] saira text-[#FFED63] text-center cursor-pointer underline py-3' onClick={e => setTourModal(true)}>Raffle rules</p>
+                <p className='text-[12px] md:text-[14px] saira text-[#FFED63] text-center cursor-pointer underline custombp:py-1 py-3' onClick={e => setTourModal(true)}>Raffle rules</p>
                 <div className='flex absolute bottom-14 sm:bottom-20 md:bottom-28 justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
                     <TimeCounter />
                 </div>

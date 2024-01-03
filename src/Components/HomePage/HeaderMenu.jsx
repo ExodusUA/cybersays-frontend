@@ -18,7 +18,7 @@ function HeaderMenu({ setMenuOpen, user }) {
                                 <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-medium saira text-center '>USD Earned:</p>
                                 <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-medium saira text-center '>💵 {user?.earned || 0}</p>
                             </div>
-                            <div className=' leading-4 md:leading-5 mx-1'>
+                            <div className='leading-4 md:leading-5 mx-1'>
                                 <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-medium saira text-center '>Refferals:</p>
                                 <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-medium saira text-center '>
                                     👬 {user && user.refferals ? JSON.parse(user.refferals).length : 0}

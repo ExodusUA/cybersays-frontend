@@ -29,7 +29,7 @@ function TimeCounter({ translatedText }) {
 
     return (
         <div>
-            <p className='text-[18px] lg:text-[32px] font-semibold text-center  mx-4'>“Win an amazing trip to Vegas money can’t buy:”</p>
+            <p className='text-[18px] lg:text-[32px] font-semibold text-center  mx-4 custombp:leading-5'>“Win an amazing trip to Vegas money can’t buy:”</p>
             <div className='lg:w-[420px] m-auto'>
                 <div className='flex justify-center lg:justify-between items-center leading-5 gap-[18px] lg:ml-5 lg:mt-5 '>
                     <div className='text-center'><h2 className='text-[18px] md:text-[24px] md: font-black text-[#FFED63]'>{daysRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>Days</p></div>
