@@ -9,9 +9,9 @@ module.exports = {
 
       'mobMax': { 'max': '374px' },
 
-      'custombp': { 'raw': '(max-height: 670px)' },
+      'se': { 'raw': '(min-width: 360px)' },
 
-      'custombp2': { 'raw': '(min-height: 670px)' },
+      'iphone': { 'raw': '(min-width: 380px)' },
 
       'sm': '640px',
 

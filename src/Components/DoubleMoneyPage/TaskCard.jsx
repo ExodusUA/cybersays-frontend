@@ -67,7 +67,7 @@ function TaskCard({ state, background, data, index, imLiveURL }) {
             <div className='flex justify-center'>
                 {
                     data?.taskBlocks?.map((task, key) => {
-                        return <div key={key} className='flex flex-col items-center custombp:mt-1 mt-2 relative'>
+                        return <div key={key} className='flex flex-col items-center se:mt-1 mt-2 relative'>
                             <img className='w-[330px] sm:w-[555px] m-auto relative' src={task?.taskImage} alt="Task Icon" />
                             <p className={`saira text-[10px] sm:text-[17px] text-black font-medium absolute text-left leading-[12px] sm:leading-[20px] ${index === 1 ? 'w-[150px] sm:w-[265px] top-[15px] sm:top-[25px] right-[25px] sm:right-[45px]' :
                                 index === 2 ? 'w-[140px] sm:w-[235px]  top-[15px] sm:top-[25px] left-[35px] sm:left-[55px]' :
@@ -103,7 +103,7 @@ function TaskCard({ state, background, data, index, imLiveURL }) {
 
     return (
 
-        <div style={{ background: background }} className={`w-full rounded-[20px]  custombp:p-[6px] p-2 custombp:my-1 my-2 `}>
+        <div style={{ background: background }} className={`w-full rounded-[20px]  se:p-[6px] p-2 se:my-1 my-2 `}>
             {
                 getMarkup()
             }

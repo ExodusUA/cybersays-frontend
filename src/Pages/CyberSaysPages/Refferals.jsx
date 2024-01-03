@@ -93,10 +93,10 @@ function Refferals({ user }) {
     return (
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-terms.jpg)] bg-cover bg-no-repeat bg-center relative z-10' >
             <div className='pt-[60px]  md:pt-[90px] px-4 max-w-[1170px] m-auto' >
-                <img className='custombp:w-[230px] custombp:mb-[-5px] w-[310px]  md:w-[500px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
+                <img className='se:w-[230px] se:mb-[-5px] w-[310px]  md:w-[500px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
                 <div className=' flex justify-center'>
                     <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center max-w-[800px] w-full py-1 px-2'>
-                        <p className='text-[14px]  sm:text-[24px]  font-semibold max-w-[540px] m-auto custombp:leading-[16px]'>“Share with your friends to be the kind
+                        <p className='text-[14px]  sm:text-[24px]  font-semibold max-w-[540px] m-auto se:leading-[16px]'>“Share with your friends to be the kind
                             to make them earn and go to Vegas”</p>
                         <p className='text-[12px] sm:text-[14px] font-medium saira flex justify-center items-center underline'>
                             Learn more
@@ -120,7 +120,7 @@ function Refferals({ user }) {
                         </p>
                     </div>
                 </div>
-                <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] custombp:my-1 my-3 mx-14 sm:mx-0 custombp:leading-[16px]'>Choose text and image or keep it simple and without</p>
+                <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 my-3 mx-14 sm:mx-0 se:leading-[16px]'>Choose text and image or keep it simple and without</p>
                 <div className=' w-full hidden lg:block pr-2'>
                     <div className=' justify-between flex my-3 mb-[-43px] mx-10'>
                         <img className='w-[44px] mr-3 cursor-pointer buttonPrevMessage' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
@@ -166,7 +166,7 @@ function Refferals({ user }) {
                         {dataMessage.map((item, index) => (
                             <SwiperSlide>
                                 <div key={index} onClick={e => setSelectedMassege(index)}
-                                    className={`${selectedMessage === index && 'border-[2px] !border-[#FFED63]'} flex justify-between items-center custombp:p-1 p-2 rounded-[50px] border-[2px] border-white cursor-pointer max-w-[220px] w-full`} >
+                                    className={`${selectedMessage === index && 'border-[2px] !border-[#FFED63]'} flex justify-between items-center se:p-1 p-2 rounded-[50px] border-[2px] border-white cursor-pointer max-w-[220px] w-full`} >
                                     <p className='w-[150px] truncate saira text-[14px] font-medium'>{item.desc}</p>
                                     <svg className='cursor-pointer mr-2' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7 9.667C7 8.95967 7.28099 8.28131 7.78115 7.78115C8.28131 7.28099 8.95967 7 9.667 7H18.333C18.6832 7 19.03 7.06898 19.3536 7.20301C19.6772 7.33704 19.9712 7.53349 20.2189 7.78115C20.4665 8.0288 20.663 8.32281 20.797 8.64638C20.931 8.96996 21 9.31676 21 9.667V18.333C21 18.6832 20.931 19.03 20.797 19.3536C20.663 19.6772 20.4665 19.9712 20.2189 20.2189C19.9712 20.4665 19.6772 20.663 19.3536 20.797C19.03 20.931 18.6832 21 18.333 21H9.667C9.31676 21 8.96996 20.931 8.64638 20.797C8.32281 20.663 8.0288 20.4665 7.78115 20.2189C7.53349 19.9712 7.33704 19.6772 7.20301 19.3536C7.06898 19.03 7 18.6832 7 18.333V9.667Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -181,7 +181,7 @@ function Refferals({ user }) {
                         ))}
                     </Swiper>
                 </div>
-                <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] custombp:my-1 my-3 '>Chosse an image</p>
+                <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 my-3 '>Chosse an image</p>
                 <div className='lg:mt-[80px]'>
                     <div className=' w-full hidden lg:block mb-[-100px] pr-2'>
                         <div className=' justify-between flex my-3  mx-10'>
@@ -260,9 +260,9 @@ function Refferals({ user }) {
 
                     </div>
                 </div>
-                <p className='text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 custombp:mb-2 mb-5'>Choose personalize experience</p>
+                <p className='text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 mb-5'>Choose personalize experience</p>
                 <div className='flex justify-center'>
-                    <button onClick={e => shareRefferalLink()} className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold custombp:py-1 py-2 sm:max-w-[350px]'>Share Referral Link!</button>
+                    <button onClick={e => shareRefferalLink()} className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold se:py-1 py-2 sm:max-w-[350px]'>Share Referral Link!</button>
                 </div>
                 <p className={`cursor-pointer text-center text-[16px] saira font-semibold underline my-1 ${isLinkCopied === true ? 'opacity-70' : 'opacity-100'}`} onClick={e => copyToClipboard()}>Copy link</p>
 
