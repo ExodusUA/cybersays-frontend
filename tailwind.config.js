@@ -8,6 +8,7 @@ module.exports = {
       'mob': '374px',
 
       'mobMax': { 'max': '374px' },
+      'seMax': { 'raw': '(max-height: 670px)' },
 
       'se': { 'raw': '(min-width: 360px)' },
 
