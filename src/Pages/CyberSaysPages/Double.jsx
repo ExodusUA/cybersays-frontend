@@ -80,7 +80,7 @@ function Double({ languageData, user, imLiveURL }) {
             </div>
 
 
-            <div className='flex fixed custombp2:bottom-[60px] custombp:bottom-[100px] bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
+            <div className='flex fixed custombp2:bottom-[60px] custombp:bottom-[125px] bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
                 <TimeCounter />
             </div>
 
