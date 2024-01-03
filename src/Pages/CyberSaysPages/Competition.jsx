@@ -98,7 +98,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
 
                 </div>
                 <p className='text-center text-[12px] sm:text-[14px] text-[#FFED63] saira font-semibold underline custombp:mt-2 mt-7 mb-2 cursor-pointer'>Rules of the competition</p>
-                <div className='flex fixed custombp2:bottom-[60px] bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
+                <div className='flex fixed custombp2:bottom-[60px] custombp:bottom-[100px] bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
                     <TimeCounter />
                 </div>
             </div>
