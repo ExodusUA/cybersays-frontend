@@ -44,9 +44,18 @@ async function checkTokenValidity(token) {
         headers: {
             token: `${token}`
         }
-    
+
     });
     return response;
 }
 
-export { socialUserAuth, otpSending, otpVerify, checkTokenValidity };
+/* DISCORD AUTH */
+
+async function discordUserAuth(access_token, type, country, refferalCode) {
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/auth/discord', {
+        access_token, type, country, refferalCode
+    });
+    return response;
+}
+
+export { socialUserAuth, otpSending, otpVerify, checkTokenValidity, discordUserAuth };

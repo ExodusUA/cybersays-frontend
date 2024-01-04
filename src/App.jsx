@@ -7,6 +7,7 @@ import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import Token from './Pages/Token';
 import Main from './Pages/Main';
 import Privacy from './Pages/Privacy';
+import DiscordAuth from './Pages/Auth/DiscordAuth';
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
         <Routes>
           <Route path="/*" element={<Main languageData={languageData} />} />
           <Route path="/login" element={<Auth languageData={languageData} />} />
+          <Route path="/auth/discord/callback" element={<DiscordAuth />} />
           <Route path="/privacy" element={<Privacy languageData={languageData} />} />
           <Route path="/token/*" element={<Token />} />
         </Routes>

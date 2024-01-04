@@ -10,6 +10,7 @@ import AuthEmailNotification from './AuthEmailNotification';
 import Loader from '../../ComponentsOLD/Loader';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { getUserCountry } from '../../Requests/utills';
+import DiscordButton from '../../Components/Buttons/DiscordButton';
 
 function LoginForm() {
 
@@ -114,6 +115,7 @@ function LoginForm() {
                                 <GoogleAuth loginViaGoogle={loginViaGoogle} />
                                 <FacebookButton loginViaFacebook={loginViaFacebook} />
                             </div>
+                            <DiscordButton />
                         </div>
                     </form>
                 </ReCAPTCHA>

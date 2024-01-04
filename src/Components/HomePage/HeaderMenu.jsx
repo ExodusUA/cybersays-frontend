@@ -15,7 +15,7 @@ function HeaderMenu({ setMenuOpen, user }) {
                     <div>
                         <div className='xl:gap-4 flex px-2 sm:px-4 py-[2px] sm:py-[6px]'>
                             <div className=' leading-4 md:leading-5 mx-1'>
-                                <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-medium saira text-center '>USD Earned:</p>
+                                <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-medium saira text-center '>{user?.currency} Earned:</p>
                                 <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-medium saira text-center '>💵 {user?.earned || 0}</p>
                             </div>
                             <div className='leading-4 md:leading-5 mx-1'>
