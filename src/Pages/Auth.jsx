@@ -36,9 +36,9 @@ function Auth({ languageData }) {
                 <div className='w-[400px] h-[400px] absolute right-12 top-12 bg-[#0A4A48] blur-[100px]'></div>
 
                 <div className='lg:flex h-full'>
-                    <div className='iphone:block se:hidden'>
+                   
                         <Slider onSlideChange={slideChange} />
-                    </div>
+                    
 
 
                     <div className='w-full text-center bg-dark lg:w-[55%] h-full'>
