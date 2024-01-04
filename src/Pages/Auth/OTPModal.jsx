@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { otpVerify } from '../../Requests/auth';
 import moment from 'moment';
 import { useNavigate } from 'react-router-dom';
+import { getUserCountry } from '../../Requests/utills';
 
 function OTPModal({ recaptchaRef, email, refferalCode, special }) {
     const [otpCode, setOtpCode] = useState('');
@@ -16,7 +17,8 @@ function OTPModal({ recaptchaRef, email, refferalCode, special }) {
         const token = await recaptchaRef.current.executeAsync();
 
         try {
-            const res = await otpVerify(token, otpCode, refferalCode, email, special);
+            let userCountry = await getUserData();
+            const res = await otpVerify(token, otpCode, refferalCode, email, special, userCountry.country);
             localStorage.setItem('token', res.data.token);
             navigate('/')
         } catch (error) {
@@ -43,6 +45,15 @@ function OTPModal({ recaptchaRef, email, refferalCode, special }) {
 
         return () => clearInterval(timer);
     }, []);
+
+    const getUserData = async () => {
+        try {
+            const res = await getUserCountry();
+            return res.data.Data
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     return (
         <div className='w-screen h-screen bg-modal fixed left-0 top-0 z-[99] bg-cover flex items-center justify-center'>

@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import AuthEmailNotification from './AuthEmailNotification';
 import Loader from '../../ComponentsOLD/Loader';
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import { getUserCountry } from '../../Requests/utills';
 
 function LoginForm() {
 
@@ -68,7 +69,9 @@ function LoginForm() {
     async function socialAuth(email, token) {
 
         try {
-            const res = await socialUserAuth(email, token, refferalCode, special);
+            let userCountry = await getUserData();
+            console.log('User Country: ', userCountry)
+            const res = await socialUserAuth(email, token, refferalCode, special, userCountry.country);
             localStorage.setItem('token', res.token);
             navigate('/')
         } catch (error) {
@@ -85,6 +88,15 @@ function LoginForm() {
                 return <AuthEmailNotification />
             default:
                 return null
+        }
+    }
+
+    const getUserData = async () => {
+        try {
+            const res = await getUserCountry();
+            return res.data.Data
+        } catch (error) {
+            console.log(error)
         }
     }
 

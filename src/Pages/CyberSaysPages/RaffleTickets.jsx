@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Tooltip } from 'react-tooltip'
 import logoCyber from '../../images/CyberSaysPage/logoMain.png'
-import moreInfo from '../../images/CyberSaysPage/moreInfo.png'
 import hero from '../../images/CyberSaysPage/heroRaffle.png'
 import TimeCounter from '../../Components/TimeCounter'
-import TourModal from '../../Components/DoubleMoneyPage/TourModal';
 import ready from '../../images/CyberSaysPage/offerTrue.png'
 import notReady from '../../images/CyberSaysPage/offerFalse.png'
 import { Link } from 'react-router-dom';

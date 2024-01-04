@@ -3,12 +3,13 @@ import axios from "axios";
 
 /* SOCIAL AUTH */
 
-async function socialUserAuth(email, token, refferalCode, special) {
+async function socialUserAuth(email, token, refferalCode, special, country) {
     const response = await axios.post(process.env.REACT_APP_API_URL + '/auth/social', {
         email,
         token,
         refferalCode,
-        special
+        special,
+        country
     });
     return response.data;
 }
@@ -26,13 +27,14 @@ async function otpSending(token, email, refferalCode) {
 
 /* OTP VERIFY */
 
-async function otpVerify(token, code, refferalCode, email, special) {
+async function otpVerify(token, code, refferalCode, email, special, country) {
     const response = await axios.post(process.env.REACT_APP_API_URL + '/auth/verify', {
         token,
         code,
         refferalCode,
         email,
-        special
+        special,
+        country
     });
     return response;
 }
