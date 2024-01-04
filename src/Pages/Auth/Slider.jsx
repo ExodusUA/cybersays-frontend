@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import LanguageSlide from '../../ComponentsOLD/HomepageSlide';
 import slides from '../../Helpers/images.json'
 import left from '../../images/landing/left.png'
@@ -26,15 +26,18 @@ function Slider({ onSlideChange }) {
 
     return (
         <div className='lg:w-[45%] relative se:hidden iphone:block'>
-            
+
             <Swiper
-            
-               
+
+
                 className='h-[30vh] md:h-[45vh] lg:h-full'
                 onSwiper={(swiper) => {
                     swiperRef = swiper;
                 }}
-                modules={[Navigation]}
+            
+                
+                modules={[Navigation, Autoplay]}
+                autoplay={{ delay: 4000 }}
                 spaceBetween={0}
                 slidesPerView={1}
                 loop={true}

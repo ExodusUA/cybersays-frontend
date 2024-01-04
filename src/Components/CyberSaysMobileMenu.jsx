@@ -21,7 +21,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user }) {
   return (
     <div>
       <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
-        <div className='flex justify-between items-center max-w-[1170px] m-auto'>
+        <div className='flex justify-between items-center max-w-[1170px] m-auto md:px-4'>
           <img onClick={() => setMenuOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
           <NewLanguageButton />
         </div>

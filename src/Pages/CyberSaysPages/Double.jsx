@@ -41,7 +41,7 @@ function Double({ languageData, user, imLiveURL }) {
     }, [user])
 
     return (
-        <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-double.jpg)] bg-cover bg-no-repeat bg-center relative z-10' onClick={() => setIsOpen(false)}>
+        <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-double.jpg)] md:bg-[url(./images/CyberSaysPage/bg-double.jpg)] bg-cover bg-no-repeat bg-center relative z-10' onClick={() => setIsOpen(false)}>
             <div className='pt-[60px] px-4  md:pt-[90px] max-w-[1170px] m-auto' >
                 <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[100px] text-center mx-[50px] md:mx-[100px] px-4 md:py-2'>

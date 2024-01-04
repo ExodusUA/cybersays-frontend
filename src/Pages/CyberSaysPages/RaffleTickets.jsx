@@ -58,7 +58,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
     }
 
     return (
-        <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] bg-cover bg-no-repeat bg-center relative z-10' onClick={() => setIsOpen(false)}>
+        <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] md:bg-[url(./images/CyberSaysPage/bg-raffle.jpg)] bg-cover bg-no-repeat bg-center relative z-10' onClick={() => setIsOpen(false)}>
             <Tooltip
                 id="my-tooltip-inline"
                 style={{ backgroundColor: "white", color: "black", width: "360px", borderRadius: "22px", zIndex: "999" }}

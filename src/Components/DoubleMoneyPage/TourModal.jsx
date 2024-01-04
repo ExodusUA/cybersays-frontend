@@ -31,26 +31,27 @@ function TourModal({ setOpen }) {
     const [selectedButton, setSelectedButton] = useState(1);
     return (
         <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
-            <div className='flex justify-end'>
+            <div className='flex justify-end max-w-[600px] m-auto md:my-4'>
                 <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
             </div>
             <div class=" justify-center flex my-2">
                 <div class="flex border-[1px] border-[#FFED63] m-auto  rounded-[50px] ">
-                    <div onClick={e => setSelectedButton(1)} className={`${selectedButton === 1 && 'bg-[#FFED63]'}  rounded-[50px] px-[20px] py-[5px] lg:py-[2px] cursor-pointer`}>
+                    <div onClick={e => setSelectedButton(1)} className={`${selectedButton === 1 && 'bg-[#FFED63]'}  rounded-[50px] px-[20px] py-[5px] md:py-[8px]  cursor-pointer`}>
                         <p className={`${selectedButton === 1 && '!text-black'} text-white saira font-bold text-[14px]`}>Short version</p>
                     </div>
-                    <div onClick={e => setSelectedButton(2)} className={`${selectedButton === 2 && 'bg-[#FFED63]'} rounded-[50px] px-[20px] py-[5px] lg:py-[2px] cursor-pointer`}>
+                    <div onClick={e => setSelectedButton(2)} className={`${selectedButton === 2 && 'bg-[#FFED63]'} rounded-[50px] px-[20px] py-[5px] md:py-[8px] cursor-pointer`}>
                         <p className={`${selectedButton === 2 && '!text-black'} text-white saira font-bold text-[14px]`}>Long version</p>
                     </div>
                 </div>
             </div>
             {selectedButton === 1 && (
-                <div className='max-w-[400px] m-auto'>
-                    <p className=' text-[16px] font-semibold text-center'>Lorem ipsum</p>
-                    <img className='w-[375px] m-auto mt-3' src={hero} alt="hero" />
+                <div className='max-w-[375px] md:max-w-[600px] m-auto'>
+                    <p className=' text-[16px] md:text-[24px] font-semibold text-center'>Lorem ipsum</p>
+                    <img className='w-[375px] md:w-full m-auto mt-3' src={hero} alt="hero" />
                     <Swiper
                         pagination={{ clickable: true }}
                         modules={[Pagination]}
+                        
                         loop={true}
                         breakpoints={{
                             0: {
@@ -77,9 +78,9 @@ function TourModal({ setOpen }) {
                 </div>
             )}
             {selectedButton === 2 && (
-                <div className='max-w-[400px] m-auto'>
-                    <p className=' text-[16px] font-semibold text-center'>Lorem ipsum</p>
-                    <img className='w-[375px] m-auto mt-3' src={hero} alt="hero" />
+                <div className='max-w-[375px] md:max-w-[600px]  m-auto'>
+                    <p className=' text-[16px] md:text-[24px] font-semibold text-center'>Lorem ipsum</p>
+                    <img className='w-[375px] md:w-full m-auto mt-3' src={hero} alt="hero" />
                     <Swiper
                         pagination={{ clickable: true }}
                         modules={[Pagination]}

@@ -4,8 +4,29 @@ import girlOK from '../../images/CyberSaysPage/girl_OK.png'
 import imLiveLogo from '../../images/CyberSaysPage/imLiveLogo.png'
 import TimeCounter from '../../Components/TimeCounter'
 import { Link } from 'react-router-dom'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+
 
 function Homepage({ user, imLiveURL }) {
+
+    const dataTitle = [
+        {
+            desc: '“Spend 5$, get 10$ cash and win the Vegas weekend!“',
+        },
+        {
+            desc: '“Get 200% cashback cash and win the Vegas weekend!“',
+        },
+        {
+            desc: '“Deposit 5$ get double back cash and win the Vegas weekend!“',
+        },
+        {
+            desc: '“Double your money and win the Vegas weekend!“',
+        },
+        {
+            desc: '“Get the king treatment in ImLive and win the Vegas weekend“',
+        },
+    ]
 
     const [lastTask, setLastTask] = useState(0)
 
@@ -31,6 +52,10 @@ function Homepage({ user, imLiveURL }) {
     return (
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-homepage.jpg)] md:bg-[url(./images/CyberSaysPage/bg-homepage.jpg)] bg-cover bg-no-repeat bg-center relative z-10'>
             <div className='pt-[60px] md:pt-[90px] px-4 pb-12 max-w-[1170px] m-auto'>
+                <div className='max-w-[300px] m-auto'>
+
+                    <p className=' text-[18px] md:text-[32px] font-semibold'></p>
+                </div>
                 <img className='se:w-[230px] se:mb-[-5px] w-[200px] iphone:w-[310px] md:w-[500px] m-auto' src={logoCyber} alt="logoCyber" />
                 <div className='flex justify-between items-end md:items-center  mt-3'>
                     <div>
@@ -42,7 +67,27 @@ function Homepage({ user, imLiveURL }) {
                         </div>
                     </div>
                     <div className='ml-1 md:ml-10 w-[200px] sm:w-[unset] mb-4 md:mb-[unset]'>
-                        <p className=' text-[18px] md:text-[32px] font-semibold'>“Double your money and win the Vegas weekend!“</p>
+                        <div className='max-w-[300px] md:max-w-[600px]'>
+                            <Swiper
+                                modules={[Autoplay]}
+                                autoplay={{ delay: 4000 }}
+                                loop={true}
+                                breakpoints={{
+                                    0: {
+                                        slidesPerView: 1,
+                                        spaceBetween: 10,
+                                    }
+                                }}
+
+                            >
+                                {dataTitle.map((item, index) => (
+                                    <SwiperSlide key={item}>
+                                        <p className=' text-[18px] md:text-[32px] font-semibold'>{item.desc}</p>
+                                    </SwiperSlide>
+                                ))}
+
+                            </Swiper>
+                        </div>
                         <img className='w-[160px] md:w-[200px] md:mt-5' src={imLiveLogo} alt="imLiveLogo" />
                         <div className='md:block hidden mt-[100px]'>
                             <TimeCounter />

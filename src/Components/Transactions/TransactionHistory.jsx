@@ -21,12 +21,13 @@ function TransactionHistory({ setOpen }) {
 
     const getMarkup = (type, datetime, amount) => {
         switch (type) {
-            case 'doubling_referral': return <div className='flex justify-between items-center mt-4'>
-
-                <img className='w-[32px] h-[32px] mr-2' src={transaction} alt="transaction" />
-                <div className='w-[200px]'>
-                    <p className='text-[12px] font-semibold saira  leading-4 mb-2'>Your friend doubled his money!</p>
-                    <p className='text-[12px] font-normal saira '>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
+            case 'doubling_referral': return <div className='flex justify-between items-center mt-4 '>
+                <div className='flex items-center'>
+                    <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={transaction} alt="transaction" />
+                    <div className='w-[200px]'>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira  leading-4 mb-2'>Your friend doubled his money!</p>
+                        <p className='text-[12px] md:text-[14px] font-normal saira '>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
+                    </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
                     <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}$</p>
@@ -34,10 +35,12 @@ function TransactionHistory({ setOpen }) {
                 </div>
             </div>
             case 'doubling': return <div className='flex justify-between items-center mt-4'>
-                <img className='w-[32px] h-[32px]  mr-2' src={transaction} alt="transaction" />
-                <div className='w-[200px]'>
-                    <p className='text-[12px] font-semibold saira w-[200px] leading-4'>Doubling you money and enjoying ImLive!</p>
-                    <p className='text-[12px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
+                <div className='flex items-center'>
+                    <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
+                    <div className='w-[200px] '>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>Doubling you money and enjoying ImLive!</p>
+                        <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
+                    </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
                     <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}$</p>
@@ -45,10 +48,12 @@ function TransactionHistory({ setOpen }) {
                 </div>
             </div>
             case 'withdrawal': return <div className='flex justify-between items-center mt-4'>
-                <img className='w-[32px] h-[32px]  mr-2' src={transaction} alt="transaction" />
-                <div className='w-[200px]'>
-                    <p className='text-[12px] font-semibold saira w-[200px] leading-4'>Money withdrawn</p>
-                    <p className='text-[12px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
+                <div className='flex items-center'>
+                    <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
+                    <div className='w-[200px]'>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>Money withdrawn</p>
+                        <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
+                    </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
                     <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right mb-1'>-{amount}$</p>
@@ -56,10 +61,12 @@ function TransactionHistory({ setOpen }) {
                 </div>
             </div>
             case 'competition': return <div className='flex justify-between items-center mt-4'>
-                <img className='w-[32px] h-[32px]  mr-2' src={transaction} alt="transaction" />
-                <div className='w-[200px]'>
-                    <p className='text-[12px] font-semibold saira w-[200px] leading-4'>Your won competition</p>
-                    <p className='text-[12px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
+                <div className='flex items-center'>
+                    <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
+                    <div className='w-[200px]'>
+                        <p className='text-[12px]  md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>Your won competition</p>
+                        <p className='text-[12px]  md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
+                    </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
                     <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}$</p>
@@ -71,11 +78,11 @@ function TransactionHistory({ setOpen }) {
 
     return (
         <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 scrollbarHidden '>
-            <div className='flex justify-end max-w-[400px] m-auto'>
+            <div className='flex justify-end max-w-[600px] m-auto md:my-4'>
                 <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
             </div>
-            <p className='text-[18px] font-semibold text-center'>Transaction History</p>
-            <div className='m-auto max-w-[345px] w-full mt-3 h-[470px] overflow-scroll'>
+            <p className='text-[18px] md:text-[32px] font-semibold text-center'>Transaction History</p>
+            <div className='m-auto max-w-[345px] md:max-w-[600px] w-full mt-3 h-[470px] overflow-scroll'>
 
                 {
                     transactionsData?.length > 0
