@@ -96,7 +96,7 @@ function Refferals({ user }) {
                 <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
                 <div className=' flex justify-center'>
                     <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center max-w-[800px] w-full py-1 px-2'>
-                        <p className='text-[14px]  sm:text-[24px]  font-semibold max-w-[540px] m-auto iphone:leading-[14px] se:leading-[16px]'>“Share with your friends to be the kind
+                        <p className='text-[14px]  sm:text-[24px]  font-semibold max-w-[540px] m-auto iphone:leading-[unset] se:leading-[16px]'>“Share with your friends to be the kind
                             to make them earn and go to Vegas”</p>
                         <p className='text-[12px] sm:text-[14px] font-medium saira flex justify-center items-center underline'>
                             Learn more
