@@ -20,6 +20,7 @@ import LeaderboardModal from '../Components/LeaderboardModal'
 import { SwiperSlide } from 'swiper/react'
 import { Swiper } from 'swiper/react';
 import user from '../Requests/user'
+import ChatDev from './ChatDev'
 var mixpanel = require('mixpanel-browser');
 
 
@@ -136,6 +137,7 @@ function Main({ languageData }) {
                 <Route path="/" element={<AuthCheck>{HomepageSwiper()}</AuthCheck>} />
                 <Route path="/competition" element={<AuthCheck><Competition imLiveURL={imLiveURL} user={userData} /></AuthCheck>} />
                 <Route path="/terms" element={<Terms languageData={languageData} />} />
+                <Route path="/chat" element={<ChatDev user={userData} />} />
             </Routes >
             {
                 leaderboardModal && <LeaderboardModal setOpen={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} />
