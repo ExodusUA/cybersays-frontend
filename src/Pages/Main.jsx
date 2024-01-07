@@ -20,6 +20,7 @@ import LeaderboardModal from '../Components/LeaderboardModal'
 import { SwiperSlide } from 'swiper/react'
 import { Swiper } from 'swiper/react';
 import user from '../Requests/user'
+import ChatModal from '../Components/ChatModal'
 var mixpanel = require('mixpanel-browser');
 
 
@@ -147,7 +148,7 @@ function Main({ languageData }) {
             {
                 tourModal && <TourModal setOpen={setTourModal} />
             }
-
+            <ChatModal />
         </>
     )
 }
