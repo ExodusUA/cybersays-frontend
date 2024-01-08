@@ -5,7 +5,7 @@ import close from '../images/CyberSaysPage/closeMenu.png'
 import avatar from '../images/CyberSaysPage/1st.png'
 import send from '../images/CyberSaysPage/send.png'
 
-function ChatModal({ user }) {
+function ChatModal({ user, setOpen }) {
 
     const socket = io(process.env.REACT_APP_CHAT_URL, {
         query: {
@@ -76,7 +76,7 @@ function ChatModal({ user }) {
                         </svg>
                         <p className='text-[16px] saira font-medium ml-2'>{online} online</p>
                     </div>
-                    <img className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
+                    <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
                 </div>
                 <p className=' text-[18px] md:text-[32px] font-semibold text-center mt-3'>Chat Room</p>
                 <div className='h-[500px] overflow-y-scroll  duration-300' ref={chatContainer}

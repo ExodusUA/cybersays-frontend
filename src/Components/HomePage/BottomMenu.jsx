@@ -7,6 +7,7 @@ import link1 from '../../images/CyberSaysPage/iconHomepage.png'
 import link2 from '../../images/CyberSaysPage/iconRaffle.png'
 import link3 from '../../images/CyberSaysPage/iconDouble.png'
 import link4 from '../../images/CyberSaysPage/iconRefferals.png'
+import link5 from '../../images/CyberSaysPage/iconTicket.png'
 
 function BottomMenu({ setActivePageIndex, activePageIndex }) {
 
@@ -91,7 +92,7 @@ function BottomMenu({ setActivePageIndex, activePageIndex }) {
                         <SwiperSlide>
                             <div className={`text-black relative text-center duration-200 flex justify-center  ${currentSlide === 1 ? 'top-0' : 'top-8 md:top-[70px]'}`}>
                                 <div>
-                                    <img className='w-[32px] h-[32px] md:w-[48px] md:h-[48px] m-auto' src={link2} alt="link2" />
+                                    <img className='w-[32px] h-[32px] md:w-[48px] md:h-[48px] m-auto' src={link5} alt="link5" />
                                     <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>Raffle tickets</p>
                                 </div>
                             </div>

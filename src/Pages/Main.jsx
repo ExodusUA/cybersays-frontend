@@ -137,7 +137,7 @@ function Main({ languageData }) {
                 <Route path="/" element={<AuthCheck>{HomepageSwiper()}</AuthCheck>} />
                 <Route path="/competition" element={<AuthCheck><Competition imLiveURL={imLiveURL} user={userData} /></AuthCheck>} />
                 <Route path="/terms" element={<Terms languageData={languageData} />} />
-                <Route path="/chat" element={<AuthCheck><ChatModal user={userData} /></AuthCheck>} />
+               
             </Routes >
             {
                 leaderboardModal && <LeaderboardModal setOpen={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} />

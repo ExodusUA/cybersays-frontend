@@ -7,21 +7,30 @@ import link4 from '../images/CyberSaysPage/mobileMenuLink/link4.png'
 import link5 from '../images/CyberSaysPage/mobileMenuLink/link5.png'
 import link6 from '../images/CyberSaysPage/mobileMenuLink/link6.png'
 import link7 from '../images/CyberSaysPage/mobileMenuLink/link7.png'
+import link8 from '../images/CyberSaysPage/mobileMenuLink/link8.png'
+import link9 from '../images/CyberSaysPage/mobileMenuLink/link9.png'
+import link10 from '../images/CyberSaysPage/mobileMenuLink/link10.png'
 import NewLanguageButton from './Language/NewLanguageButton'
 import TourModal from './DoubleMoneyPage/TourModal'
 import MyReferralsModal from './ProfileReferrals/MyReferralsModal'
 import Withdraw from './Transactions/Withdraw'
+import TransactionHistory from './Transactions/TransactionHistory'
+import TicketsHistory from './Transactions/TicketsHistory'
+import ChatModal from './ChatModal'
 
 function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user }) {
 
   const [tourModal, setTourModal] = useState(false)
   const [referralsModal, setReferralsModal] = useState(false)
   const [withdrawModal, setWithdrawModal] = useState(false)
+  const [transactionsModal, setTransactionsModal] = useState(false)
+  const [ticketsModal, setTicketsModal] = useState(false)
+  const [chatModal, setChatModal] = useState(false)
 
   return (
     <div>
       <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
-        <div className='flex justify-between items-center max-w-[1170px] m-auto md:px-4'>
+        <div className='flex justify-between items-center max-w-[1170px] m-auto md:px-4 '>
           <img onClick={() => setMenuOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
           <NewLanguageButton />
         </div>
@@ -54,8 +63,20 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user }) {
               <p className='saira text-[20px] font-semibold cursor-pointer'>The 69 Daily competition</p>
             </div>
             <div className='flex items-center' onClick={e => setWithdrawModal(true)}>
-              <img className='w-[32px] h-[32px] mr-2' src={link7} alt="link7" />
+              <img className='w-[32px] h-[32px] mr-2' src={link8} alt="link7" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>Choose your way to get paid</p>
+            </div>
+            <div className='flex items-center'  onClick={e => setChatModal(true)} >
+              <img className='w-[32px] h-[32px] mr-2' src={link9} alt="link7" />
+              <p className='saira text-[20px] font-semibold cursor-pointer'>Chat room</p>
+            </div>
+            <div className='flex items-center' onClick={e => setTransactionsModal(true)} >
+              <img className='w-[32px] h-[32px] mr-2' src={link7} alt="link7"  />
+              <p className='saira text-[20px] font-semibold cursor-pointer'>Transition history</p>
+            </div>
+            <div className='flex items-center' onClick={e => setTicketsModal(true)} >
+              <img className='w-[32px] h-[32px] mr-2' src={link10} alt="link10" />
+              <p className='saira text-[20px] font-semibold cursor-pointer'>My Tickets & Points</p>
             </div>
           </div>
           <div className=' absolute bottom-4 flex justify-around items-center max-w-[330px] w-full '>
@@ -79,6 +100,16 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user }) {
       }
       {
         withdrawModal && <Withdraw setOpen={setWithdrawModal} user={user} />
+      }
+      {
+        transactionsModal && <TransactionHistory setOpen={setTransactionsModal} />
+      }
+
+      {
+        ticketsModal && <TicketsHistory setOpen={setTicketsModal} />
+      }
+      {
+        chatModal && <ChatModal setOpen={setChatModal} user={user} />
       }
     </div>
   )
