@@ -7,7 +7,7 @@ import ready from '../../images/CyberSaysPage/offerTrue.png'
 import notReady from '../../images/CyberSaysPage/offerFalse.png'
 import { Link } from 'react-router-dom';
 
-function RaffleTickets({ setTourModal, user, imLiveURL }) {
+function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
 
     const [isOpen, setIsOpen] = useState(false)
 
@@ -50,10 +50,10 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
 
     const getButtonMarkup = (task) => {
         switch (task) {
-            case 0: return <Link to={imLiveURL}><button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold se:py-[6px] py-2 md:py-3'>Double your money 🤑</button></Link>
-            case 1: return <button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black mobMax:text-[16px] text-[18px] saira font-semibold se:py-[6px] py-2 md:py-3'>2/4: Deposit for 200% Cashback 🤑</button>
-            case 2: return <button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black mobMax:text-[16px] text-[18px] saira font-semibold se:py-[6px] py-2 md:py-3'>3/4: Spend for 200% Cashback 🤑</button>
-            case 3: return <button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold se:py-[6px] py-2 md:py-3'>Win the Vegas Weekend 💃</button>
+            case 0: return <Link to={imLiveURL}><button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold se:py-[6px] py-2 md:py-3'>{languageData?.homepageBtn1}</button></Link>
+            case 1: return <button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black mobMax:text-[16px] text-[18px] saira font-semibold se:py-[6px] py-2 md:py-3'>{languageData?.homepageBtn2}</button>
+            case 2: return <button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black mobMax:text-[16px] text-[18px] saira font-semibold se:py-[6px] py-2 md:py-3'>{languageData?.homepageBtn3}</button>
+            case 3: return <button className='w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold se:py-[6px] py-2 md:py-3'>{languageData?.homepageBtn4}</button>
         }
     }
 
@@ -64,16 +64,16 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
                 style={{ backgroundColor: "white", color: "black", width: "360px", borderRadius: "22px", zIndex: "999" }}
             >
                 <p className='text-black text-left saira text-[12px] md:text-[14px] font-medium leading-[15px]'>
-                    Vegas eligibility indicates that you, your referred friends, or the friend who referred you are qualified to take part in the Vegas raffle through one of two methods:
+                    {languageData?.raffleInfoTitle1}
                 </p>
                 <p className='text-black text-left saira text-[12px] md:text-[14px] font-medium leading-[15px] mt-3 ml-2'>
-                    1. <span className='saira font-bold text-black'>Selection for a Trip to Vegas:</span>If your friend or your referrer have won, you may be chosen to go to Vegas.
+                    1. <span className='saira font-bold text-black'>{languageData?.raffleInfoTitle2} </span>{languageData?.raffleInfoTitle2Span}
                 </p>
                 <p className='text-black text-left saira text-[12px] md:text-[14px] font-medium leading-[15px] mt-3 ml-2'>
-                    2. <span className='saira font-bold text-black'>Raffle Participation:</span>Alternatively, you can participate in the raffle by possessing raffle tickets.
+                    2. <span className='saira font-bold text-black'>{languageData?.raffleInfoTitle3} </span>{languageData?.raffleInfoTitle3Span}
                 </p>
                 <p className='text-black text-left saira text-[12px] md:text-[14px] font-medium leading-[15px] mt-3'>
-                    For additional information, please refer to the <span className='saira underline text-black cursor-pointer'>competition details.</span>
+                    {languageData?.raffleInfoTitle4} <span className='saira underline text-black cursor-pointer'>{languageData?.raffleInfoTitle4Span}</span>
                 </p>
             </Tooltip>
             <div className='pt-[60px]  md:pt-[90px] px-4 max-w-[1170px] m-auto' >
@@ -163,7 +163,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL }) {
                 </div>
                 <p className='text-[12px] md:text-[14px] saira text-[#FFED63] text-center cursor-pointer underline se:py-1 iphone:py-3 ' onClick={e => setTourModal(true)}>Raffle rules</p>
                 <div className='flex absolute se:bottom-[130px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
-                    <TimeCounter />
+                    <TimeCounter languageData={languageData} />
                 </div>
             </div>
 

@@ -113,19 +113,19 @@ function Main({ languageData }) {
                     onSlideChange={(swiper) => handleSwiperChange(swiper)}
                 >
                     <SwiperSlide>
-                        <Homepage setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} imLiveURL={imLiveURL} />
+                        <Homepage setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <RaffleTickets setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} imLiveURL={imLiveURL} setTourModal={setTourModal} />
+                        <RaffleTickets setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} setTourModal={setTourModal} />
                     </SwiperSlide>
                     <SwiperSlide>
                         <Double setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Refferals setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} />
+                        <Refferals setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Competition siteData={siteData} imLiveURL={imLiveURL} user={userData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading} />
+                        <Competition siteData={siteData} imLiveURL={imLiveURL} user={userData} languageData={languageData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading} />
                     </SwiperSlide>
 
                 </Swiper>

@@ -7,7 +7,7 @@ import left from '../../images/CyberSaysPage/swiperBtnDesctopLeft.png'
 import right from '../../images/CyberSaysPage/swiperBtnDesctopRight.png'
 import { Navigation } from 'swiper/modules';
 
-function Refferals({ user }) {
+function Refferals({ user, languageData }) {
 
     let swiperRef;
 

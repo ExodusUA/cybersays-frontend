@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 const moment = require('moment-timezone');
 
-function TimeCounter({ translatedText }) {
+function TimeCounter({ languageData }) {
     const endDate = moment.tz('2024-01-12 10:00', 'America/Sao_Paulo');
     const [formattedEndDate, setFormattedEndDate] = useState(endDate.format('YY/MM/DD HH:mm:ss'));
     const [daysRemaining, setDaysRemaining] = useState(endDate.diff(moment(), 'days'));
@@ -29,16 +29,16 @@ function TimeCounter({ translatedText }) {
 
     return (
         <div>
-            <p className='text-[18px] lg:text-[32px] font-semibold text-center  mx-4 iphone:leading-[unset] se:leading-5'>“Win an amazing trip to Vegas money can’t buy:”</p>
+            <p className='text-[18px] lg:text-[32px] font-semibold text-center  mx-4 iphone:leading-[unset] se:leading-5'>{languageData?.timeCounterTitle}</p>
             <div className='lg:w-[420px] m-auto'>
                 <div className='flex justify-center lg:justify-between items-center leading-5 gap-[18px] lg:ml-5 lg:mt-5 '>
-                    <div className='text-center'><h2 className='text-[18px] md:text-[24px] md: font-black text-[#FFED63]'>{daysRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>Days</p></div>
+                    <div className='text-center'><h2 className='text-[18px] md:text-[24px] md: font-black text-[#FFED63]'>{daysRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>{languageData?.timeCounterDays}</p></div>
                     <p className='text-[#FFED63] text-[18px]'>:</p>
-                    <div className='text-center'><h2 className='text-[18px] md:text-[24px] font-black text-[#FFED63]'>{hoursRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>Hours</p></div>
+                    <div className='text-center'><h2 className='text-[18px] md:text-[24px] font-black text-[#FFED63]'>{hoursRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>{languageData?.timeCounterHours}</p></div>
                     <p className='text-[#FFED63] text-[18px]'>:</p>
-                    <div className='text-center'><h2 className='text-[18px] md:text-[24px] font-black text-[#FFED63]'>{minutesRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>Minutes</p></div>
+                    <div className='text-center'><h2 className='text-[18px] md:text-[24px] font-black text-[#FFED63]'>{minutesRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>{languageData?.timeCounterMinutes}</p></div>
                     <p className='text-[#FFED63] text-[18px]'>:</p>
-                    <div className='text-center'><h2 className='text-[18px] md:text-[24px] font-black text-[#FFED63]'>{secondsRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>Seconds</p></div>
+                    <div className='text-center'><h2 className='text-[18px] md:text-[24px] font-black text-[#FFED63]'>{secondsRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>{languageData?.timeCounterSeconds}</p></div>
                 </div>
             </div>
         </div>

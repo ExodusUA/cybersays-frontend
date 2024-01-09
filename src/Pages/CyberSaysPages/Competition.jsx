@@ -8,7 +8,7 @@ import infoAPI from '../../Requests/info'
 import no_avatar from '../../images/CyberSaysPage/no_avatar.png'
 import { Link } from 'react-router-dom'
 
-function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading, leaderboardData, setLeaderboardData, siteData }) {
+function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading, leaderboardData, setLeaderboardData, siteData, languageData }) {
 
     useEffect(() => {
 
@@ -97,7 +97,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                 </div>
                 <p className='text-center text-[12px] sm:text-[14px] text-[#FFED63] saira font-semibold underline se:mt-2 iphone:mt-7 mb-2 cursor-pointer'>Rules of the competition</p>
                 <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
-                    <TimeCounter />
+                    <TimeCounter languageData={languageData} />
                 </div>
             </div>
 

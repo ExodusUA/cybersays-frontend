@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Terms() {
+function Terms({ languageData }) {
     return (
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-terms.jpg)] bg-cover bg-no-repeat bg-center relative z-10'>
             <div className='pt-[60px] px-4 pb-12'>

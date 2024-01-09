@@ -62,5 +62,28 @@
             ],
             "taskButton": "Get $10 from CyberSays"
         }
-    }
+    },
+    "homepageTitle1": "“Spend 5$, get 10$ cash and win the Vegas weekend!“",
+    "homepageTitle2": "“Get 200% cashback cash and win the Vegas weekend!“",
+    "homepageTitle3": "“Deposit 5$ get double back cash and win the Vegas weekend!“",
+    "homepageTitle4": "“Double your money and win the Vegas weekend!“",
+    "homepageTitle5": "“Get the king treatment in ImLive and win the Vegas weekend“",
+    "homepageBtn1": "Double your money 🤑",
+    "homepageBtn2": "2/4: Deposit for 200% Cashback 🤑",
+    "homepageBtn3": "3/4: Spend for 200% Cashback 🤑",
+    "homepageBtn4": "Win the Vegas Weekend 💃",
+    "timeCounterTitle": "“Win an amazing trip to Vegas money can’t buy:”",
+    "timeCounterDays": "Days",
+    "timeCounterHours": "Hours",
+    "timeCounterMinutes": "Minutes",
+    "timeCounterSeconds": "Seconds",
+    "raffleInfoTitle1": "Vegas eligibility indicates that you, your referred friends, or the friend who referred you are qualified to take part in the Vegas raffle through one of two methods:",
+    "raffleInfoTitle2": "Selection for a Trip to Vegas:",
+    "raffleInfoTitle2Span": "If your friend or your referrer have won, you may be chosen to go to Vegas.",
+    "raffleInfoTitle3": "Raffle Participation:",
+    "raffleInfoTitle3Span": "Alternatively, you can participate in the raffle by possessing raffle tickets.",
+    "raffleInfoTitle4": " For additional information, please refer to the",
+    "raffleInfoTitle4Span": "competition details."
+
+    
 }

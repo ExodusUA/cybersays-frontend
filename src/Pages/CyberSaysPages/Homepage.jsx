@@ -8,23 +8,23 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 
 
-function Homepage({ user, imLiveURL }) {
+function Homepage({ user, imLiveURL, languageData }) {
 
     const dataTitle = [
         {
-            desc: '“Spend 5$, get 10$ cash and win the Vegas weekend!“',
+            desc: languageData?.homepageTitle1,
         },
         {
-            desc: '“Get 200% cashback cash and win the Vegas weekend!“',
+            desc: languageData?.homepageTitle2,
         },
         {
-            desc: '“Deposit 5$ get double back cash and win the Vegas weekend!“',
+            desc: languageData?.homepageTitle3,
         },
         {
-            desc: '“Double your money and win the Vegas weekend!“',
+            desc: languageData?.homepageTitle4,
         },
         {
-            desc: '“Get the king treatment in ImLive and win the Vegas weekend“',
+            desc: languageData?.homepageTitle5,
         },
     ]
 
@@ -32,10 +32,10 @@ function Homepage({ user, imLiveURL }) {
 
     const getButtonMarkup = (task) => {
         switch (task) {
-            case 0: return <Link to={imLiveURL}><button className='w-full sm:w-[350px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold se:py-[6px] py-2 md:py-3'>Double your money 🤑</button></Link>
-            case 1: return <button className='w-full sm:w-[350px]  bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold py-2 se:py-[6px] md:py-3'>2/4: Deposit for 200% Cashback 🤑</button>
-            case 2: return <button className='w-full  sm:w-[350px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold py-2 se:py-[6px] md:py-3'>3/4: Spend for 200% Cashback 🤑</button>
-            case 3: return <button className='w-full sm:w-[350px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold py-2 se:py-[6px] md:py-3'>Win the Vegas Weekend 💃</button>
+            case 0: return <Link to={imLiveURL}><button className='w-full sm:w-[350px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold se:py-[6px] py-2 md:py-3'>{languageData?.homepageBtn1}</button></Link>
+            case 1: return <button className='w-full sm:w-[350px]  bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold py-2 se:py-[6px] md:py-3'>{languageData?.homepageBtn2}</button>
+            case 2: return <button className='w-full  sm:w-[350px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold py-2 se:py-[6px] md:py-3'>{languageData?.homepageBtn3}</button>
+            case 3: return <button className='w-full sm:w-[350px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold py-2 se:py-[6px] md:py-3'>{languageData?.homepageBtn4}</button>
         }
     }
 
@@ -90,7 +90,7 @@ function Homepage({ user, imLiveURL }) {
                         </div>
                         <img className='w-[160px] md:w-[200px] md:mt-5' src={imLiveLogo} alt="imLiveLogo" />
                         <div className='md:block hidden mt-[100px]'>
-                            <TimeCounter />
+                            <TimeCounter languageData={languageData} />
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@ function Homepage({ user, imLiveURL }) {
                 </div>
             </div>
             <div className='flex md:hidden absolute se:bottom-[160px] iphone:bottom-[156px] justify-center w-full max-w-[760px] m-auto'>
-                <TimeCounter />
+                <TimeCounter languageData={languageData} />
             </div>
         </div>
     )
