@@ -10,4 +10,13 @@ async function getLeaderboardData() {
     return response;
 }
 
-export default { getLeaderboardData };
+async function getInfoData() {
+    const response = await axios.get(process.env.REACT_APP_API_URL + '/info/main', {
+        headers: {
+            token: `${getToken()}`
+        }
+    });
+    return response;
+}
+
+export default { getLeaderboardData, getInfoData };

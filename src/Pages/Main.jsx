@@ -21,6 +21,7 @@ import { SwiperSlide } from 'swiper/react'
 import { Swiper } from 'swiper/react';
 import user from '../Requests/user'
 import ChatModal from '../Components/ChatModal'
+import infoAPI from '../Requests/info'
 var mixpanel = require('mixpanel-browser');
 
 
@@ -41,6 +42,8 @@ function Main({ languageData }) {
     const [loading, setLoading] = useState(true)
     const [leaderboardData, setLeaderboardData] = useState([])
 
+    const [siteData, setSiteData] = useState(null)
+
     useQuery({
         queryKey: ['userData'],
         queryFn: async () => {
@@ -48,6 +51,16 @@ function Main({ languageData }) {
             if (res.id === undefined) return navigate('/login')
             setUserData(res)
             setImLiveURL(`https://imlive.com/wmaster.ashx?QueryID=197&WID=126670106835&linkID=701&from=freevideo6&promocode=${res?.id}`)
+            return res
+        }
+    })
+
+    useQuery({
+        queryKey: ['siteData'],
+        queryFn: async () => {
+            const res = await infoAPI.getInfoData();
+            console.log(res.data)
+            setSiteData(res.data)
             return res
         }
     })
@@ -112,7 +125,7 @@ function Main({ languageData }) {
                         <Refferals setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Competition imLiveURL={imLiveURL} user={userData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading} />
+                        <Competition siteData={siteData} imLiveURL={imLiveURL} user={userData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading} />
                     </SwiperSlide>
 
                 </Swiper>
@@ -144,7 +157,7 @@ function Main({ languageData }) {
 
             }
             {
-                menuOpen === true && <CyberSaysMobileMenu scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
+                menuOpen === true && <CyberSaysMobileMenu siteData={siteData} scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
             }
             {
                 tourModal && <TourModal setOpen={setTourModal} />

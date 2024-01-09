@@ -18,7 +18,7 @@ import TransactionHistory from './Transactions/TransactionHistory'
 import TicketsHistory from './Transactions/TicketsHistory'
 import ChatModal from './ChatModal'
 
-function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user }) {
+function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData }) {
 
   const [tourModal, setTourModal] = useState(false)
   const [referralsModal, setReferralsModal] = useState(false)
@@ -60,18 +60,18 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user }) {
 
             <div className='flex items-center cursor-pointer' onClick={e => scrollToPage(4)}>
               <img className='w-[32px] h-[32px] mr-2' src={link6} alt="link6" />
-              <p className='saira text-[20px] font-semibold cursor-pointer'>The 69 Daily competition</p>
+              <p className='saira text-[20px] font-semibold cursor-pointer'>The {siteData?.currentDay} Daily competition</p>
             </div>
             <div className='flex items-center' onClick={e => setWithdrawModal(true)}>
               <img className='w-[32px] h-[32px] mr-2' src={link8} alt="link7" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>Choose your way to get paid</p>
             </div>
-            <div className='flex items-center'  onClick={e => setChatModal(true)} >
+            <div className='flex items-center' onClick={e => setChatModal(true)} >
               <img className='w-[32px] h-[32px] mr-2' src={link9} alt="link7" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>Chat room</p>
             </div>
             <div className='flex items-center' onClick={e => setTransactionsModal(true)} >
-              <img className='w-[32px] h-[32px] mr-2' src={link7} alt="link7"  />
+              <img className='w-[32px] h-[32px] mr-2' src={link7} alt="link7" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>Transition history</p>
             </div>
             <div className='flex items-center' onClick={e => setTicketsModal(true)} >
@@ -104,7 +104,6 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user }) {
       {
         transactionsModal && <TransactionHistory setOpen={setTransactionsModal} />
       }
-
       {
         ticketsModal && <TicketsHistory setOpen={setTicketsModal} />
       }
