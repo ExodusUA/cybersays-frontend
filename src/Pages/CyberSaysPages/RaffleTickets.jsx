@@ -82,7 +82,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
 
                     isTaskCompleted === false
                         ? <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[50px] text-center mx-1 md:mx-0 md:py-2'>
-                            <p className='text-[18px] md:text-[32px] font-semibold'>“Win the Vegas weekend!”</p>
+                            <p className='text-[18px] md:text-[32px] font-semibold'>Win the Vegas weekend!</p>
                             <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center mx-8 iphone:leading-4 se:leading-[14px]'>
                                 If you took ImLive's double-your-money offer, you can be picked by your referral or referrer to go to Vegas if they win.
                                 <img className='w-[12px] md:w-[24px] h-[12px] md:h-[24px] mr-[2px]' src={ready} alt="ready" />
@@ -106,7 +106,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                             <p className='text-[12px] font-medium underline cursor-pointer saira'>How do I win the vegas weekend?</p>
                         </div>
                         : <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[50px] md:rounded-[100px] text-center mx-5 md:mx-0 md:py-2'>
-                            <p className='se:text-[14px] iphone:text-[18px] md:text-[32px] font-semibold'>“Win the Vegas weekend!”</p>
+                            <p className='se:text-[14px] iphone:text-[18px] md:text-[32px] font-semibold'>Win the Vegas weekend!</p>
                             <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center md:my-1 se:leading-[14px]'>
                                 Eligible to go to vegas
                                 <img className='w-[12px] md:w-[24px] h-[12px] md:h-[24px] mx-[2px] md:ml-1' src={notReady} alt="notReady" />

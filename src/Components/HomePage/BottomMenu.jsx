@@ -122,7 +122,9 @@ function BottomMenu({ setActivePageIndex, activePageIndex }) {
                             </div>
                         </SwiperSlide>
                     </Swiper>
-               
+               <div className='w-[380px] h-[380px] md:w-[500px] md:h-[500px] rounded-full border-[2px] border-white absolute bottom-[-345px] md:bottom-[-425px]'>
+
+               </div>
             </div>
         </div>
     )

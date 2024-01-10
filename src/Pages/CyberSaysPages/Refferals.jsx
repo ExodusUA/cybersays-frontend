@@ -93,11 +93,11 @@ function Refferals({ user, languageData }) {
     return (
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-terms.jpg)] md:bg-[url(./images/CyberSaysPage/bg-terms.jpg)] bg-cover bg-no-repeat bg-center relative z-10' >
             <div className='pt-[60px]  md:pt-[90px] px-4 max-w-[1170px] m-auto' >
-                <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
+                <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] mac:!w-[400px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
                 <div className=' flex justify-center'>
                     <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center max-w-[800px] w-full py-1 px-2'>
-                        <p className='text-[14px]  sm:text-[24px]  font-semibold max-w-[540px] m-auto iphone:leading-[unset] se:leading-[16px]'>“Share with your friends to be the kind
-                            to make them earn and go to Vegas”</p>
+                        <p className='text-[14px]  sm:text-[24px]  font-semibold max-w-[540px] m-auto iphone:leading-[unset] se:leading-[16px] mac:!leading-[24px]'>Share with your friends to be the kind
+                            to make them earn and go to Vegas</p>
                         <p className='text-[12px] sm:text-[14px] font-medium saira flex justify-center items-center underline'>
                             Learn more
 
@@ -120,7 +120,7 @@ function Refferals({ user, languageData }) {
                         </p>
                     </div>
                 </div>
-                <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3 mx-14 sm:mx-0 iphone:leading-[14px] se:leading-[16px]'>Choose text and image or keep it simple and without</p>
+                <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3 mx-14 sm:mx-0 iphone:leading-[14px] se:leading-[16px]'>Choose text and image or keep it simple and without it</p>
                 <div className=' w-full hidden lg:block pr-2'>
                     <div className=' justify-between flex my-3 mb-[-43px] mx-10'>
                         <img className='w-[44px] mr-3 cursor-pointer buttonPrevMessage' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
@@ -181,8 +181,8 @@ function Refferals({ user, languageData }) {
                         ))}
                     </Swiper>
                 </div>
-                <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3 '>Chosse an image</p>
-                <div className='lg:mt-[80px]'>
+                <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3 '>Choose an image</p>
+                <div className='lg:mt-[80px] mac:!mt-[60px]'>
                     <div className=' w-full hidden lg:block mb-[-100px] pr-2'>
                         <div className=' justify-between flex my-3  mx-10'>
                             <img className='w-[44px] mr-3 cursor-pointer buttonPrevGif' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
@@ -260,7 +260,7 @@ function Refferals({ user, languageData }) {
 
                     </div>
                 </div>
-                <p className='text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5'>Choose personalize experience</p>
+                <p className='text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2'>Choose personalize experience</p>
                 <div className='flex justify-center'>
                     <button onClick={e => shareRefferalLink()} className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold se:py-1 iphone:py-2 sm:max-w-[350px]'>Share Referral Link!</button>
                 </div>
