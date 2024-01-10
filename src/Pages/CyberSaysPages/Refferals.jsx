@@ -181,7 +181,7 @@ function Refferals({ user, languageData }) {
                         ))}
                     </Swiper>
                 </div>
-                <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3 '>Choose an image</p>
+                <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3'>Choose an image</p>
                 <div className='lg:mt-[80px] mac:!mt-[60px]'>
                     <div className=' w-full hidden lg:block mb-[-100px] pr-2'>
                         <div className=' justify-between flex my-3  mx-10'>
