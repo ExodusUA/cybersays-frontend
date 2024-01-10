@@ -46,16 +46,16 @@ function History() {
                 <div className='flex justify-between items-center mt-2'>
                     <img className='w-[32px] h-[32px]' src={transaction} alt="transaction" />
                     <div className='w-[200px]'>
-                        <p className='text-[12px] font-semibold saira w-[200px] leading-4'>Money withdrawn</p>
+                        <p className='text-[12px] font-semibold saira w-[200px] leading-4'>Money withdraw</p>
                         <p className='text-[12px] font-normal saira'>25 December, 2023, 5.05 AM</p>
                     </div>
                     <div className='w-[100px]'>
                         <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right'>-10$</p>
-                        <p className='text-[12px] font-normal saira  text-right'>Withdrawn</p>
+                        <p className='text-[12px] font-normal saira  text-right'>Withdraw</p>
                     </div>
                 </div>
             </div>
-            <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 mt-3'>Withdrawn</button>
+            <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 mt-3'>Withdraw</button>
             
         </div>
     )

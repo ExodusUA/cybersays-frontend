@@ -64,7 +64,7 @@ function Withdraw({ user, setOpen }) {
                 <p className='text-[12px] md:text-[14px] font-semibold underline text-center saira cursor-pointer sm:mx-[80px] my-2 md:my-4'>Click to see what payment methods
                     are avaliable in your country</p>
                 <div className='flex justify-center'>
-                    <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 max-w-[370px]'>Withdrawn</button>
+                    <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 max-w-[370px]'>Withdraw</button>
                 </div>
             </div>
            
