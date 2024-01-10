@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { checkTokenValidity } from '../Requests/auth'
 import { useNavigate } from 'react-router-dom'
 import AuthError from './Auth/AuthError'
+import { jwtDecode } from 'jwt-decode'
 
 
 function Token() {
@@ -12,13 +12,13 @@ function Token() {
 
     useEffect(() => {
         async function checkToken() {
-            try {
-                await checkTokenValidity(urlToken)
-                localStorage.setItem('token', urlToken)
+            const decodedToken = jwtDecode(urlToken)
+            if (decodedToken.id === undefined) return setError(true)
+            window.localStorage.setItem('token', urlToken)
+        
+            setTimeout(() => {
                 navigate('/')
-            } catch (error) {
-                setError(true)
-            }
+            }, 100)
         }
         checkToken()
     }, [urlToken])

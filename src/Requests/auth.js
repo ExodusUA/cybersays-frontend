@@ -39,6 +39,7 @@ async function otpVerify(token, code, refferalCode, email, special, country) {
     return response;
 }
 
+/*
 async function checkTokenValidity(token) {
     const response = await axios.get(process.env.REACT_APP_API_URL + '/auth/verify', {
         headers: {
@@ -48,6 +49,7 @@ async function checkTokenValidity(token) {
     });
     return response;
 }
+*/
 
 /* DISCORD AUTH */
 
@@ -58,4 +60,4 @@ async function discordUserAuth(access_token, type, country, refferalCode) {
     return response;
 }
 
-export { socialUserAuth, otpSending, otpVerify, checkTokenValidity, discordUserAuth };
+export { socialUserAuth, otpSending, otpVerify, discordUserAuth };
