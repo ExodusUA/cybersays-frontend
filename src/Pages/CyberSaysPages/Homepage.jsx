@@ -60,7 +60,7 @@ function Homepage({ user, imLiveURL, languageData }) {
                 <div className='flex justify-between items-end md:items-center  mt-3'>
                     <div>
                         <img className='w-[180px] sm:w-[200px] md:w-[350px]' src={girlOK} alt="girlOK" />
-                        <div className='md:block hidden'>
+                        <div className='md:block hidden relative left-3'>
                             {
                                 getButtonMarkup(lastTask)
                             }
