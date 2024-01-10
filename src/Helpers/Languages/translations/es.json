@@ -16,5 +16,72 @@
     "OfferButton": "Ir Ahora",
     "CopyLink": "Copiar Enlace",
     "TreatCoins": "Monedas Treat",
-    "LinkCopied": "Enlace Copiado"
+    "LinkCopied": "Enlace Copiado",
+    "tasks": {
+        "task1": {
+            "taskTitle": "Registrarse en ImLive 🎉",
+            "taskTitleOpen": "Registrarse en ImLive 🎉",
+            "taskBlocks": [
+                {
+                    "taskImage": "images/bg-mobile-Task1.png",
+                    "taskText": "Disfruta de ImLive, sé tratado como un REY 👑, ¡y cumple tus fantasías más salvajes!"
+                }
+            ],
+            "taskButton": "1/4 ¡Registrarse!"
+        },
+        "task2": {
+            "taskTitle": "Depositar",
+            "taskTitleOpen": "Introducción de un Rey a ImLive: deposita $5, recibe $10 de vuelta y:",
+            "taskBlocks": [
+                {
+                    "taskImage": "images/bg-mobile-Task2.png",
+                    "taskText": "Deposita $5... ImLive duplicará el crédito. ¡CyberSays duplicará los dólares!"
+                }
+            ],
+            "taskButton": "2/4 ¡Depositar!"
+        },
+        "task3": {
+            "taskTitle": "Gastar",
+            "taskTitleOpen": "Gasta tus créditos y duplica tu dinero:",
+            "taskBlocks": [
+                {
+                    "taskImage": "images/bg-mobile-Task3.png",
+                    "taskText": "Gasta tus 10 créditos en ImLive, sé tratado como un rey y recibe $10 en efectivo cuando termines."
+                }
+            ],
+            "taskButton": "Gastar"
+        },
+        "task4": {
+            "taskTitle": "Ganar",
+            "taskTitleOpen": "Obtén $10 de CyberSays inmediatamente para ${emailAddress}",
+            "taskBlocks": [
+                {
+                    "taskImage": "images/bg-mobile-Task4.png",
+                    "taskText": "ImLive duplica tu crédito, nosotros duplicamos tu dinero: ¡es un beneficio mutuo para ti con $10 adicionales en tu billetera!"
+                }
+            ],
+            "taskButton": "Obtener $10 de CyberSays"
+        }
+    },
+    "homepageTitle1": "Gasta 5$, obtén 10$ en efectivo y gana el fin de semana en Vegas",
+    "homepageTitle2": "¡Obtén un reembolso del 200% en efectivo y gana el fin de semana en Vegas!",
+    "homepageTitle3": "Deposita 5$, duplica tu efectivo y gana el fin de semana en Vegas!",
+    "homepageTitle4": "Duplica tu dinero y gana el fin de semana en Vegas!",
+    "homepageTitle5": "Recibe el tratamiento de rey en ImLive y gana el fin de semana en Vegas",
+    "homepageBtn1": "Duplica tu dinero 🤑",
+    "homepageBtn2": "2/4: Deposita para obtener un reembolso del 200% 🤑",
+    "homepageBtn3": "3/4: Gasta para obtener un reembolso del 200% 🤑",
+    "homepageBtn4": "Gana el fin de semana en Vegas 💃",
+    "timeCounterTitle": "Gana un increíble viaje a Vegas que el dinero no puede comprar:",
+    "timeCounterDays": "Días",
+    "timeCounterHours": "Horas",
+    "timeCounterMinutes": "Minutos",
+    "timeCounterSeconds": "Segundos",
+    "raffleInfoTitle1": "La elegibilidad para Vegas indica que tú, tus amigos referidos o el amigo que te refirió están calificados para participar en la rifa de Vegas mediante uno de dos métodos:",
+    "raffleInfoTitle2": "Selección para un Viaje a Vegas:",
+    "raffleInfoTitle2Span": "Si tu amigo o tu referente han ganado, puedes ser elegido para ir a Vegas.",
+    "raffleInfoTitle3": "Participación en la Rifa:",
+    "raffleInfoTitle3Span": "Alternativamente, puedes participar en la rifa teniendo boletos de rifa.",
+    "raffleInfoTitle4": "Para información adicional, consulta los",
+    "raffleInfoTitle4Span": "detalles de la competencia."
 }
