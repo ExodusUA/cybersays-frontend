@@ -92,7 +92,7 @@ function BottomMenu({ setActivePageIndex, activePageIndex }) {
                         <SwiperSlide>
                             <div className={`text-black relative text-center duration-200 flex justify-center  ${currentSlide === 1 ? 'top-0' : 'top-8 md:top-[70px]'}`}>
                                 <div>
-                                    <img className='w-[32px] h-[32px] md:w-[48px] md:h-[48px] m-auto' src={link5} alt="link5" />
+                                    <img className='w-[32px] h-[32px] md:w-[48px] md:h-[42px] m-auto' src={link5} alt="link5" />
                                     <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>Raffle tickets</p>
                                 </div>
                             </div>

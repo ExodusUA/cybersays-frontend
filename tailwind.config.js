@@ -8,7 +8,7 @@ module.exports = {
       'mob': '374px',
 
       'mobMax': { 'max': '374px' },
-      'mac': { 'raw': '(max-height: 750px)' },
+      'mac': { 'raw': '(max-height: 790px)' },
 
       'se': { 'raw': '(min-width: 360px)' },
 
