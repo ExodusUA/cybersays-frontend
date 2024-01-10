@@ -51,13 +51,13 @@ function TransactionHistory({ setOpen }) {
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
                     <div className='w-[200px]'>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>Money withdrawn</p>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>Money withdraw</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
                     <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right mb-1'>-{amount}$</p>
-                    <p className='text-[12px] font-normal saira  text-right'>Withdrawn</p>
+                    <p className='text-[12px] font-normal saira  text-right'>Withdraw</p>
                 </div>
             </div>
             case 'competition': return <div className='flex justify-between items-center mt-4'>
@@ -97,7 +97,7 @@ function TransactionHistory({ setOpen }) {
 
             </div>
             <div className='flex justify-center'>
-                <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 mt-3 max-w-[370px]'>Withdrawn</button>
+                <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 mt-3 max-w-[370px]'>Withdraw</button>
             </div>
         </div>
     )
