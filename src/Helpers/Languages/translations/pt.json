@@ -16,5 +16,72 @@
     "OfferButton": "Ir Agora",
     "CopyLink": "Copiar Link",
     "TreatCoins": "Moedas Treat",
-    "LinkCopied": "Link Copiado"
+    "LinkCopied": "Link Copiado",
+    "tasks": {
+        "task1": {
+            "taskTitle": "Registrar no ImLive 🎉",
+            "taskTitleOpen": "Registrar no ImLive 🎉",
+            "taskBlocks": [
+                {
+                    "taskImage": "images/bg-mobile-Task1.png",
+                    "taskText": "Curta o ImLive, seja tratado como um REI 👑 - e realize suas fantasias mais loucas!"
+                }
+            ],
+            "taskButton": "1/4 Registrar!"
+        },
+        "task2": {
+            "taskTitle": "Depositar",
+            "taskTitleOpen": "Introdução de um Rei ao ImLive: deposite 5$, ganhe 10$ de volta e:",
+            "taskBlocks": [
+                {
+                    "taskImage": "images/bg-mobile-Task2.png",
+                    "taskText": "Deposite $5... o ImLive dobrará o crédito. O CyberSays dobrará os dólares!"
+                }
+            ],
+            "taskButton": "2/4 Depositar!"
+        },
+        "task3": {
+            "taskTitle": "Gastar",
+            "taskTitleOpen": "Gaste seus créditos e dobre seu dinheiro:",
+            "taskBlocks": [
+                {
+                    "taskImage": "images/bg-mobile-Task3.png",
+                    "taskText": "Gaste seus 10 créditos no ImLive, seja tratado como um rei e ganhe $10 em dinheiro quando terminar!"
+                }
+            ],
+            "taskButton": "Gastar"
+        },
+        "task4": {
+            "taskTitle": "Ganhar",
+            "taskTitleOpen": "Receba 10$ imediatamente da CyberSays para ${emailAddress}",
+            "taskBlocks": [
+                {
+                    "taskImage": "images/bg-mobile-Task4.png",
+                    "taskText": "O ImLive dobra seu crédito, nós dobramos seu dinheiro - é uma situação vantajosa para você, com mais $10 na sua carteira!"
+                }
+            ],
+            "taskButton": "Receber $10 da CyberSays"
+        }
+    },
+    "homepageTitle1": "Gaste 5$, ganhe 10$ em dinheiro e ganhe o fim de semana em Vegas",
+    "homepageTitle2": "Obtenha 200% de cashback e ganhe o fim de semana em Vegas!",
+    "homepageTitle3": "Deposite 5$, receba o dobro em dinheiro e ganhe o fim de semana em Vegas!",
+    "homepageTitle4": "Dobre seu dinheiro e ganhe o fim de semana em Vegas!",
+    "homepageTitle5": "Receba o tratamento de rei no ImLive e ganhe o fim de semana em Vegas",
+    "homepageBtn1": "Dobre seu dinheiro 🤑",
+    "homepageBtn2": "2/4: Depósito para 200% de Cashback 🤑",
+    "homepageBtn3": "3/4: Gaste para 200% de Cashback 🤑",
+    "homepageBtn4": "Ganhe o fim de semana em Vegas 💃",
+    "timeCounterTitle": "Ganhe uma viagem incrível para Vegas que o dinheiro não pode comprar:",
+    "timeCounterDays": "Dias",
+    "timeCounterHours": "Horas",
+    "timeCounterMinutes": "Minutos",
+    "timeCounterSeconds": "Segundos",
+    "raffleInfoTitle1": "A elegibilidade para Vegas indica que você, seus amigos indicados ou o amigo que o indicou estão qualificados para participar no sorteio de Vegas por um dos dois métodos:",
+    "raffleInfoTitle2": "Seleção para uma Viagem a Vegas:",
+    "raffleInfoTitle2Span": "Se seu amigo ou seu indicante ganhou, você pode ser escolhido para ir a Vegas.",
+    "raffleInfoTitle3": "Participação no Sorteio:",
+    "raffleInfoTitle3Span": "Alternativamente, você pode participar do sorteio possuindo bilhetes de sorteio.",
+    "raffleInfoTitle4": "Para informações adicionais, consulte os",
+    "raffleInfoTitle4Span": "detalhes da competição."
 }
