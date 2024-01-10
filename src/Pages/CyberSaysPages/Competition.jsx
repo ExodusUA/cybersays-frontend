@@ -40,7 +40,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] md:bg-[url(./images/CyberSaysPage/bg-raffle.jpg)] bg-cover bg-no-repeat bg-center relative z-10'>
 
             <div className='pt-[60px]  md:pt-[90px] px-4 max-w-[1170px] m-auto' >
-                <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
+                <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px] mac:!w-[400px]' src={logoCyber} alt="logoCyber" />
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[30px] text-center se:py-1 iphone:py-3 px-2 sm:max-w-[600px] m-auto'>
                     <p className='text-center text-[14px] sm:text-[32px] font-semibold'>The {siteData?.currentDay} daily competition</p>
                     {
@@ -92,10 +92,10 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                             <p className='saira text-[12px] sm:text-[14px] font-medium'>10 points</p>
                         </div>
                     </div>
-                    <p className='text-center text-[12px] sm:text-[14px] saira font-semibold underline se:mt-0 iphone:mt-3 cursor-pointer' onClick={e => setLeaderboardModal(true)}>Leaderboards</p>
+                    <p className='text-center text-[12px] sm:text-[14px] saira font-semibold underline se:mt-0 iphone:mt-3 mac:!mt-0 cursor-pointer' onClick={e => setLeaderboardModal(true)}>Leaderboards</p>
 
                 </div>
-                <p className='text-center text-[12px] sm:text-[14px] text-[#FFED63] saira font-semibold underline se:mt-2 iphone:mt-7 mb-2 cursor-pointer'>Rules of the competition</p>
+                <p className='text-center text-[12px] sm:text-[14px] text-[#FFED63] saira font-semibold underline se:mt-2 iphone:mt-7 mac:!mt-3 mb-2 cursor-pointer'>Rules of the competition</p>
                 <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
                     <TimeCounter languageData={languageData} />
                 </div>

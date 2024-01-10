@@ -77,12 +77,12 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                 </p>
             </Tooltip>
             <div className='pt-[60px]  md:pt-[90px] px-4 max-w-[1170px] m-auto' >
-                <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px] ' src={logoCyber} alt="logoCyber" />
+                <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px] mac:!w-[400px]' src={logoCyber} alt="logoCyber" />
                 {
 
                     isTaskCompleted === false
                         ? <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[50px] text-center mx-1 md:mx-0 md:py-2'>
-                            <p className='text-[18px] md:text-[32px] font-semibold'>Win the Vegas weekend!</p>
+                            <p className='text-[18px] md:text-[32px] mac2:!text-[24px] font-semibold'>Win the Vegas weekend!</p>
                             <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center mx-8 iphone:leading-4 se:leading-[14px]'>
                                 If you took ImLive's double-your-money offer, you can be picked by your referral or referrer to go to Vegas if they win.
                                 <img className='w-[12px] md:w-[24px] h-[12px] md:h-[24px] mr-[2px]' src={ready} alt="ready" />
@@ -106,7 +106,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                             <p className='text-[12px] font-medium underline cursor-pointer saira'>How do I win the vegas weekend?</p>
                         </div>
                         : <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[50px] md:rounded-[100px] text-center mx-5 md:mx-0 md:py-2'>
-                            <p className='se:text-[14px] iphone:text-[18px] md:text-[32px] font-semibold'>Win the Vegas weekend!</p>
+                            <p className='se:text-[14px] iphone:text-[18px] md:text-[32px] mac2:!text-[24px] font-semibold'>Win the Vegas weekend!</p>
                             <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center md:my-1 se:leading-[14px]'>
                                 Eligible to go to vegas
                                 <img className='w-[12px] md:w-[24px] h-[12px] md:h-[24px] mx-[2px] md:ml-1' src={notReady} alt="notReady" />
@@ -132,8 +132,8 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                 }
 
                 <div>
-                    <img className='se:w-[280px] iphone:w-[345px] md:w-[770px] iphone:mt-[-40px] mob:mt-0 m-auto md:mt-[-100px] se:mt-[-30px]' src={hero} alt="heroRaffle" />
-                    <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[30px] text-center flex py-3 md:py-5 px-2 mt-[-20px] md:mt-[-80px] justify-center' >
+                    <img className='se:w-[280px] iphone:w-[345px] md:w-[770px] iphone:mt-[-40px] mob:mt-0 m-auto md:mt-[-100px] mac2:!mt-[-50px] se:mt-[-30px] mac2:!w-[600px]' src={hero} alt="heroRaffle" />
+                    <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[30px] text-center flex py-3 md:py-5 mac:!py-2  px-2 mt-[-20px] md:mt-[-80px] justify-center' >
                         {
 
                             isTaskCompleted === true
@@ -151,7 +151,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                                 </div>
                                 : <div className='flex justify-center'>
                                     <div>
-                                        <p className='text-[18px] md:text-[24px] font-medium saira text-center mx-4 se:mb-0 iphone:mb-4  md:text-center'>Complete double the money offer to take part in raffle </p>
+                                        <p className='text-[18px] md:text-[24px] font-medium saira text-center mx-4 se:mb-0 iphone:mb-4 mac:!mb-1  md:text-center'>Complete double the money offer to take part in raffle </p>
                                         {
                                             getButtonMarkup(lastTask)
                                         }

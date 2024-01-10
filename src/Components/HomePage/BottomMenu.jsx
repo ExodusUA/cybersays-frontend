@@ -82,7 +82,7 @@ function BottomMenu({ setActivePageIndex, activePageIndex }) {
                         }}
                     >
                         <SwiperSlide>
-                            <div className={`text-black relative text-center duration-200 flex justify-center ${currentSlide === 0 ? 'top-0' : 'top-8 md:top-[70px]'}`}>
+                            <div className={`text-black relative text-center duration-200 flex justify-center ${currentSlide === 0 ? 'top-0' : 'top-8 md:top-[60px]'}`}>
                                 <div>
                                     <img className='w-[32px] h-[32px] md:w-[48px] md:h-[48px] m-auto' src={link1} alt="link1" />
                                     <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>Homepage</p>
@@ -90,7 +90,7 @@ function BottomMenu({ setActivePageIndex, activePageIndex }) {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className={`text-black relative text-center duration-200 flex justify-center  ${currentSlide === 1 ? 'top-0' : 'top-8 md:top-[70px]'}`}>
+                            <div className={`text-black relative text-center duration-200 flex justify-center  ${currentSlide === 1 ? 'top-0' : 'top-8 md:top-[60px]'}`}>
                                 <div>
                                     <img className='w-[32px] h-[32px] md:w-[48px] md:h-[42px] m-auto' src={link5} alt="link5" />
                                     <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>Raffle tickets</p>
@@ -98,7 +98,7 @@ function BottomMenu({ setActivePageIndex, activePageIndex }) {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className={`text-black relative text-center duration-200 flex justify-center  m-auto  ${currentSlide === 2 ? 'top-0' : 'top-8 md:top-[70px]'}`}>
+                            <div className={`text-black relative text-center duration-200 flex justify-center  m-auto  ${currentSlide === 2 ? 'top-0' : 'top-8 md:top-[60px]'}`}>
                                 <div>
                                     <img className='w-[32px] h-[32px] md:w-[48px] md:h-[48px] m-auto' src={link3} alt="link3" />
                                     <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2 '>Double your money</p>
@@ -106,7 +106,7 @@ function BottomMenu({ setActivePageIndex, activePageIndex }) {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className={`text-black relative text-center duration-200 flex justify-center ${currentSlide === 3 ? 'top-0' : 'top-8 md:top-[70px]'}`}>
+                            <div className={`text-black relative text-center duration-200 flex justify-center ${currentSlide === 3 ? 'top-0' : 'top-8 md:top-[60px]'}`}>
                                 <div>
                                     <img className='w-[32px] h-[32px] md:w-[48px] md:h-[48px] m-auto' src={link4} alt="link4" />
                                     <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>My referrals</p>
@@ -114,7 +114,7 @@ function BottomMenu({ setActivePageIndex, activePageIndex }) {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className={`text-black relative text-center duration-200 flex justify-center  ${currentSlide === 4 ? 'top-0' : 'top-8 md:top-[70px]'}`}>
+                            <div className={`text-black relative text-center duration-200 flex justify-center  ${currentSlide === 4 ? 'top-0' : 'top-8 md:top-[60px]'}`}>
                                 <div>
                                     <img className='w-[32px] h-[32px] md:w-[48px] md:h-[48px] m-auto' src={link2} alt="link2" />
                                     <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>Competition</p>

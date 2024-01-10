@@ -43,9 +43,9 @@ function Double({ languageData, user, imLiveURL }) {
     return (
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-double.jpg)] md:bg-[url(./images/CyberSaysPage/bg-double.jpg)] bg-cover bg-no-repeat bg-center relative z-10' onClick={() => setIsOpen(false)}>
             <div className='pt-[60px] px-4  md:pt-[90px] max-w-[1170px] m-auto' >
-                <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
+                <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px] mac:!w-[400px]' src={logoCyber} alt="logoCyber" />
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[100px] text-center mx-[50px] md:mx-[100px] px-4 md:py-2'>
-                    <p className='text-[14px] md:text-[32px] font-semibold md:mx-[40px] iphone:leading-[unset] se:leading-4'>Double your money and get your raffle eligibility</p>
+                    <p className='text-[14px] md:text-[32px] mac2:!text-[24px] font-semibold md:mx-[40px] iphone:leading-[unset] se:leading-4 mac2:!leading-[24px]'>Double your money and get your raffle eligibility</p>
 
                 </div>
                 <p className='text-[12px] md:text-[14px] text-[#FFED63] text-center cursor-pointer flex items-center justify-center  md:py-2'>

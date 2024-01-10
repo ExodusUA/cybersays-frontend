@@ -10,6 +10,8 @@ module.exports = {
       'mobMax': { 'max': '374px' },
       'mac': { 'raw': '(max-height: 790px)' },
 
+      'mac2': { 'raw': '(max-height: 860px)' },
+
       'se': { 'raw': '(min-width: 360px)' },
 
       'iphone': { 'raw': '(min-width: 380px)' },
