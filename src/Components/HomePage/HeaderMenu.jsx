@@ -5,7 +5,7 @@ import money from '../../images/CyberSaysPage/headerMoney.png'
 import refferals from '../../images/CyberSaysPage/headerRefferals.png'
 import joker from '../../images/CyberSaysPage/headerJoker.png'
 
-function HeaderMenu({ setMenuOpen, user }) {
+function HeaderMenu({ setMenuOpen, user, setTourModal }) {
     useEffect(() => {
         console.log(user)
     }, [user])
@@ -35,7 +35,7 @@ function HeaderMenu({ setMenuOpen, user }) {
                         </div>
                     </div>
                 </div>
-                <img className='w-[44px] sm:w-[50px] h-[44px] sm:h-[50px]' src={weekendCoin} alt="weekendCoin" />
+                <img onClick={e => setTourModal(true)} className='w-[44px] sm:w-[50px] h-[44px] sm:h-[50px] cursor-pointer' src={weekendCoin} alt="weekendCoin" />
             </div>
         </div>
         </div>

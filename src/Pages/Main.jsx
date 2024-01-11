@@ -99,7 +99,7 @@ function Main({ languageData }) {
 
         return (
             <div className='overflow-y-hidden overflow-x-hidden'>
-                <HeaderMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
+                <HeaderMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} setTourModal={setTourModal} />
 
                 <Swiper
                     className='w-screen h-screen'
