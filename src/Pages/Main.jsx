@@ -109,7 +109,7 @@ function Main({ languageData }) {
                     }}
                     spaceBetween={0}
                     slidesPerView={1}
-                    loop={true}
+                    loop={false}
                     onSlideChange={(swiper) => handleSwiperChange(swiper)}
                 >
                     <SwiperSlide>
