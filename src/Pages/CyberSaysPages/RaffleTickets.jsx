@@ -73,8 +73,8 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
 
     return (
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] md:bg-[url(./images/CyberSaysPage/bg-raffle.jpg)] bg-cover bg-no-repeat bg-center relative z-10' onClick={() => setIsOpen(false)}>
-            <div className='pt-[60px]  md:pt-[90px] px-4 max-w-[1170px] m-auto' >
-                <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px] mac:!w-[400px]' src={logoCyber} alt="logoCyber" />
+            <div className='pt-[60px] md:pt-[90px] px-4 max-w-[1170px] m-auto' >
+                <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px] mac:!w-[400px] mb-2' src={logoCyber} alt="logoCyber" />
                 {
 
                     isTaskCompleted === false
@@ -143,7 +143,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                 }
 
                 <div>
-                    <img className='se:w-[280px] iphone:w-[345px] md:w-[770px] iphone:mt-[-40px] mob:mt-0 m-auto md:mt-[-100px] mac2:!mt-[-50px] se:mt-[-30px] mac:!w-[500px] mac2:!w-[500px]' src={hero} alt="heroRaffle" />
+                    <img className='se:w-[280px] iphone:w-[345px] md:w-[700px] iphone:mt-[-40px] mob:mt-0 m-auto md:mt-[-100px] mac2:!mt-[-50px] se:mt-[-30px] mac:!w-[500px] mac2:!w-[500px]' src={hero} alt="heroRaffle" />
                     <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[30px] text-center flex py-3 md:py-5 mac:!py-2  px-2 mt-[-20px] md:mt-[-80px] justify-center' >
                         {
 
