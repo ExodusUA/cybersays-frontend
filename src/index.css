@@ -162,7 +162,6 @@ body {
     animation: scaleLoop 2s infinite;
 }
 
-
 @keyframes scaleLoop {
 
     0%,
