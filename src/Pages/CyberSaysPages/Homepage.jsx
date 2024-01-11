@@ -80,11 +80,13 @@ function Homepage({ user, imLiveURL, languageData }) {
                                 }}
 
                             >
-                                {dataTitle.map((item, index) => (
-                                    <SwiperSlide key={item}>
-                                        <p className=' text-[18px] md:text-[32px] font-semibold'>{item.desc}</p>
-                                    </SwiperSlide>
-                                ))}
+                                {
+                                    dataTitle.map((item, index) => (
+                                        <SwiperSlide key={item}>
+                                            <p className='text-[18px] md:text-[32px] font-semibold'>{item.desc}</p>
+                                        </SwiperSlide>
+                                    ))
+                                }
 
                             </Swiper>
                         </div>

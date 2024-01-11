@@ -107,7 +107,7 @@ function MyReferralsModal({ setOpen }) {
                             <p className='text-[18px] font-semibold text-center mt-4'>Your referrals</p>
                             <p className='saira text-[16px] font-semibold text-center'>lorem ipsum</p>
                             <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center py-1 mt-3'>
-                                <p className='text-[14px] font-semibold text-center flex justify-center'>You’re eferred by: <p className='ml-1 truncate w-[100px]'>{referralData.referredBy}</p></p>
+                                <p className='text-[14px] font-semibold text-center flex justify-center'>You’re referred by: <p className='ml-1 truncate w-[100px]'>{referralData.referredBy}</p></p>
                                 <p className='saira text-[12px] font-semibold text-center mx-5'>If your referrer took ImLive's double-money offer, you can pick them for a Vegas trip if you win.</p>
                             </div>
                             <p className='saira text-[16px] font-semibold text-center my-5'>You haven't referred friends yet</p>

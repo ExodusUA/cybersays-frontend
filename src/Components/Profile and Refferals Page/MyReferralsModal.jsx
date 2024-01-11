@@ -44,7 +44,7 @@ function MyReferralsModal() {
                 <p className='text-[18px] font-semibold text-center mt-4'>My referrals</p>
                 <p className='saira text-[16px] font-semibold text-center'>See if your referred friends took the ImLive double-money offer—only then can you take them to Vegas if you win</p>
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center py-1 mt-3'>
-                    <p className='text-[14px] font-semibold text-center flex justify-center'>You’re eferred by: <p className='ml-1 truncate w-[100px]'>(Username)</p></p>
+                    <p className='text-[14px] font-semibold text-center flex justify-center'>You’re referred by: <p className='ml-1 truncate w-[100px]'>(Username)</p></p>
                     <p className='saira text-[12px] font-semibold text-center mx-5'>If your referrer took ImLive's double-money offer, you can pick them for a Vegas trip if you win.</p>
                 </div>
                 <div className='mt-4'>

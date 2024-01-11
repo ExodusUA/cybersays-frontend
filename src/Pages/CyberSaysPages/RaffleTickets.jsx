@@ -161,7 +161,10 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
 
                     </div>
                 </div>
-                <p className='text-[12px] md:text-[14px] saira text-[#FFED63] text-center cursor-pointer underline se:py-1 iphone:py-3 ' onClick={e => setTourModal(true)}>Raffle rules</p>
+                <p className='text-[12px] md:text-[14px] saira text-center cursor-pointer se:py-1 iphone:py-3'>
+                    *No purchase needed to participate in the raffle. 
+                    <span onClick={e => setTourModal(true)} className='saira text-[#FFED63] underline ml-2'>Raffle rules</span>
+                </p>
                 <div className='flex absolute se:bottom-[130px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
                     <TimeCounter languageData={languageData} />
                 </div>
