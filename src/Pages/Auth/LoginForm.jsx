@@ -7,7 +7,7 @@ import FacebookButton from '../../Components/Buttons/FacebookButton';
 import OTPModal from './OTPModal';
 import { useNavigate } from 'react-router-dom';
 import AuthEmailNotification from './AuthEmailNotification';
-import Loader from '../../ComponentsOLD/Loader';
+import Loader from '../../Components/Loader';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { getUserCountry } from '../../Requests/utills';
 import DiscordButton from '../../Components/Buttons/DiscordButton';

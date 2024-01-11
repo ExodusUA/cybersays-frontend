@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
-import LanguageSlide from '../../ComponentsOLD/HomepageSlide';
+import LanguageSlide from '../../Components/HomepageSlide';
 import slides from '../../Helpers/images.json'
 import left from '../../images/landing/left.png'
 import right from '../../images/landing/right.png'

@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import Homepage from './CyberSaysPages/Homepage'
 import HeaderMenu from '../Components/HomePage/HeaderMenu'
-import CyberSaysMobileMenu from '../Components/CyberSaysMobileMenu'
+import ModalMenu from '../Components/ModalMenu'
 import RaffleTickets from './CyberSaysPages/RaffleTickets'
 import Double from './CyberSaysPages/Double'
 import { Helmet } from 'react-helmet'
 import userAPI from '../Requests/user'
-import BottomMenu from '../Components/HomePage/BottomMenu'
+import CircleNavigation from '../Components/CircleNavigation'
 import { useQuery } from '@tanstack/react-query'
 import AuthCheck from '../hoc/AuthCheck'
 import Competition from './CyberSaysPages/Competition'
@@ -109,7 +109,7 @@ function Main({ languageData }) {
                     }}
                     spaceBetween={0}
                     slidesPerView={1}
-                    loop={false}
+                    loop={true}
                     onSlideChange={(swiper) => handleSwiperChange(swiper)}
                 >
                     <SwiperSlide>
@@ -129,7 +129,7 @@ function Main({ languageData }) {
                     </SwiperSlide>
 
                 </Swiper>
-                <BottomMenu activePageIndex={activePageIndex} setActivePageIndex={setActivePageIndex} />
+                <CircleNavigation activePageIndex={activePageIndex} setActivePageIndex={setActivePageIndex} />
 
             </div>
         )
@@ -150,14 +150,14 @@ function Main({ languageData }) {
                 <Route path="/" element={<AuthCheck>{HomepageSwiper()}</AuthCheck>} />
                 <Route path="/competition" element={<AuthCheck><Competition imLiveURL={imLiveURL} user={userData} /></AuthCheck>} />
                 <Route path="/terms" element={<Terms languageData={languageData} />} />
-               
+
             </Routes >
             {
                 leaderboardModal && <LeaderboardModal setOpen={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} />
 
             }
             {
-                menuOpen === true && <CyberSaysMobileMenu siteData={siteData} scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
+                menuOpen === true && <ModalMenu siteData={siteData} scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
             }
             {
                 tourModal && <TourModal setOpen={setTourModal} />

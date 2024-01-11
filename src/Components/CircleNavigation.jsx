@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import left from '../../images/CyberSaysPage/leftBtnMenu.png'
-import right from '../../images/CyberSaysPage/rightBtnMenu.png'
-import link1 from '../../images/CyberSaysPage/iconHomepage.png'
-import link2 from '../../images/CyberSaysPage/iconRaffle.png'
-import link3 from '../../images/CyberSaysPage/iconDouble.png'
-import link4 from '../../images/CyberSaysPage/iconRefferals.png'
-import link5 from '../../images/CyberSaysPage/iconTicket.png'
+import left from '../images/CyberSaysPage/leftBtnMenu.png'
+import right from '../images/CyberSaysPage/rightBtnMenu.png'
+import link1 from '../images/CyberSaysPage/iconHomepage.png'
+import link2 from '../images/CyberSaysPage/iconRaffle.png'
+import link3 from '../images/CyberSaysPage/iconDouble.png'
+import link4 from '../images/CyberSaysPage/iconRefferals.png'
+import link5 from '../images/CyberSaysPage/iconTicket.png'
 
-function BottomMenu({ setActivePageIndex, activePageIndex }) {
+function CircleNavigation({ setActivePageIndex, activePageIndex }) {
 
     let [swiper, setSwiper] = useState(null);
 
@@ -28,6 +28,7 @@ function BottomMenu({ setActivePageIndex, activePageIndex }) {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     function slideChange(swiper) {
+        console.log(swiper.realIndex)
         setCurrentSlide(swiper.realIndex)
         // setActivePageIndex(swiper.realIndex)
     }
@@ -39,12 +40,12 @@ function BottomMenu({ setActivePageIndex, activePageIndex }) {
     }, [activePageIndex])
 
     function swipeLeft() {
-        if (activePageIndex === 0) return
+       if (activePageIndex === 0) return setActivePageIndex(4)
         setActivePageIndex(activePageIndex - 1)
     }
 
     function swipeRight() {
-        if (activePageIndex === 4) return
+        if (activePageIndex === 4) return setActivePageIndex(0)
         setActivePageIndex(activePageIndex + 1)
     }
 
@@ -74,7 +75,7 @@ function BottomMenu({ setActivePageIndex, activePageIndex }) {
                         spaceBetween={0}
                         centeredSlides={true}
                         slidesPerView={3}
-                        loop={false}
+                        loop={true}
                         onSlideChange={(swiper) => slideChange(swiper)}
                         navigation={{
                             prevEl: '.buttonPrev',
@@ -130,4 +131,4 @@ function BottomMenu({ setActivePageIndex, activePageIndex }) {
     )
 }
 
-export default BottomMenu
+export default CircleNavigation
