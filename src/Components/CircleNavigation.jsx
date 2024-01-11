@@ -28,7 +28,6 @@ function CircleNavigation({ setActivePageIndex, activePageIndex }) {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     function slideChange(swiper) {
-        console.log(swiper.realIndex)
         setCurrentSlide(swiper.realIndex)
         // setActivePageIndex(swiper.realIndex)
     }
@@ -40,12 +39,12 @@ function CircleNavigation({ setActivePageIndex, activePageIndex }) {
     }, [activePageIndex])
 
     function swipeLeft() {
-       if (activePageIndex === 0) return setActivePageIndex(4)
+        if (activePageIndex === 0) return
         setActivePageIndex(activePageIndex - 1)
     }
 
     function swipeRight() {
-        if (activePageIndex === 4) return setActivePageIndex(0)
+        if (activePageIndex === 4) return
         setActivePageIndex(activePageIndex + 1)
     }
 
@@ -75,7 +74,7 @@ function CircleNavigation({ setActivePageIndex, activePageIndex }) {
                         spaceBetween={0}
                         centeredSlides={true}
                         slidesPerView={3}
-                        loop={true}
+                        loop={false}
                         onSlideChange={(swiper) => slideChange(swiper)}
                         navigation={{
                             prevEl: '.buttonPrev',
