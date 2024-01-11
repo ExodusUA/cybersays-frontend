@@ -165,6 +165,7 @@ function Main({ languageData }) {
             {
                 withdrawModal && <Withdraw setOpen={setWithdrawModal} user={user} />
             }
+            
         </>
     )
 }

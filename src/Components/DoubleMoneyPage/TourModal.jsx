@@ -45,7 +45,7 @@ function TourModal({ setOpen }) {
                 </div>
             </div>
             {selectedButton === 1 && (
-                <div className='max-w-[375px] md:max-w-[600px] m-auto'>
+                <div className='max-w-[375px] md:max-w-[600px] mac:!max-w-[400px] m-auto'>
                     <p className=' text-[16px] md:text-[24px] font-semibold text-center'>Lorem ipsum</p>
                     <img className='w-[375px] md:w-full m-auto mt-3' src={hero} alt="hero" />
                     <Swiper
@@ -68,7 +68,7 @@ function TourModal({ setOpen }) {
 
                     </Swiper>
                     <div className='flex justify-center mx-2'>
-                        <button className='max-w-[360px] w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 flex justify-center mt-8 absolute mx-2'>
+                        <button className='max-w-[360px] w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 flex justify-center mt-8 mac:!mt-0 absolute mx-2'>
                             Share the tour
                             <svg className='ml-2' width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M21 12.5L14 5.5V9.5C7 10.5 4 15.5 3 20.5C5.5 17 9 15.4 14 15.4V19.5L21 12.5Z" fill="#1E1E1E" />
@@ -78,7 +78,7 @@ function TourModal({ setOpen }) {
                 </div>
             )}
             {selectedButton === 2 && (
-                <div className='max-w-[375px] md:max-w-[600px]  m-auto'>
+                <div className='max-w-[375px] md:max-w-[600px] mac:!max-w-[400px]  m-auto'>
                     <p className=' text-[16px] md:text-[24px] font-semibold text-center'>Lorem ipsum</p>
                     <img className='w-[375px] md:w-full m-auto mt-3' src={hero} alt="hero" />
                     <Swiper
@@ -100,7 +100,7 @@ function TourModal({ setOpen }) {
 
                     </Swiper>
                     <div className='flex justify-center mx-2'>
-                        <button className='max-w-[360px] w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 flex justify-center mt-8 absolute mx-2'>
+                        <button className='max-w-[360px] w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 flex justify-center mt-8 mac:!mt-0 absolute mx-2'>
                             Share the tour
                             <svg className='ml-2' width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M21 12.5L14 5.5V9.5C7 10.5 4 15.5 3 20.5C5.5 17 9 15.4 14 15.4V19.5L21 12.5Z" fill="#1E1E1E" />
