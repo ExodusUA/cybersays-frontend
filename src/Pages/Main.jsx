@@ -23,6 +23,7 @@ import user from '../Requests/user'
 import ChatModal from '../Components/ChatModal'
 import infoAPI from '../Requests/info'
 import MyReferralsModal from '../Components/ProfileReferrals/MyReferralsModal'
+import chatImage from '../images/CyberSaysPage/mobileMenuLink/link9.png'
 var mixpanel = require('mixpanel-browser');
 
 
@@ -45,6 +46,8 @@ function Main({ languageData }) {
 
     const [siteData, setSiteData] = useState(null)
     const [withdrawModal, setWithdrawModal] = useState(false)
+
+    const [chatModal, setChatModal] = useState(false)
 
     useQuery({
         queryKey: ['userData'],
@@ -121,7 +124,7 @@ function Main({ languageData }) {
                     loop={false}
                     onSlideChange={(swiper) => handleSwiperChange(swiper)}
                 >
-                    
+
                     <SwiperSlide>
                         <Homepage setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
                     </SwiperSlide>
@@ -138,7 +141,7 @@ function Main({ languageData }) {
                         <Competition siteData={siteData} imLiveURL={imLiveURL} user={userData} languageData={languageData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        
+
                     </SwiperSlide>
 
                 </Swiper>
@@ -170,7 +173,7 @@ function Main({ languageData }) {
 
             }
             {
-                menuOpen === true && <ModalMenu siteData={siteData} scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
+                menuOpen === true && <ModalMenu setChatModal={setChatModal} chatModal={chatModal} siteData={siteData} scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
             }
             {
                 tourModal && <TourModal setOpen={setTourModal} />
@@ -182,7 +185,15 @@ function Main({ languageData }) {
             {
                 referralsOpen && <MyReferralsModal setOpen={setReferralsOpen} user={userData} />
             }
-            
+
+            {
+                chatModal && <ChatModal setOpen={setChatModal} user={userData} />
+            }
+
+
+            <div className='fixed right-8 hidden bottom-8 sm:block z-[99]'>
+                <img onClick={e => setChatModal(true)} className='w-12 cursor-pointer' src={chatImage} alt="Chat" />
+            </div>
 
         </>
     )

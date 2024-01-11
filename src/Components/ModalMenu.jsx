@@ -22,14 +22,14 @@ import Legal from '../Pages/CyberSaysPages/Modals/Legal'
 import Contact from '../Pages/CyberSaysPages/Modals/Contact'
 import Settings from '../Pages/CyberSaysPages/Modals/Settings'
 
-function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData }) {
+function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setChatModal, chatModal }) {
 
   const [tourModal, setTourModal] = useState(false)
   const [referralsModal, setReferralsModal] = useState(false)
   const [withdrawModal, setWithdrawModal] = useState(false)
   const [transactionsModal, setTransactionsModal] = useState(false)
   const [ticketsModal, setTicketsModal] = useState(false)
-  const [chatModal, setChatModal] = useState(false)
+ 
 
   const [aboutModal, setAboutModal] = useState(false)
   const [legalModal, setLegalModal] = useState(false)
