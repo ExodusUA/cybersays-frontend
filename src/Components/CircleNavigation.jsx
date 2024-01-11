@@ -39,12 +39,12 @@ function CircleNavigation({ setActivePageIndex, activePageIndex }) {
     }, [activePageIndex])
 
     function swipeLeft() {
-        if (activePageIndex === 0) return
+        if (activePageIndex === 0) return setActivePageIndex(4)
         setActivePageIndex(activePageIndex - 1)
     }
 
     function swipeRight() {
-        if (activePageIndex === 4) return
+        if (activePageIndex === 4) return setActivePageIndex(0)
         setActivePageIndex(activePageIndex + 1)
     }
 

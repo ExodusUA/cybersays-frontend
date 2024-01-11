@@ -84,7 +84,11 @@ function Main({ languageData }) {
     }
 
     function handleSwiperChange(swiper) {
-        setActivePageIndex(swiper.realIndex)
+        setActivePageIndex(swiper.activeIndex)
+
+        if (swiper.realIndex === 5) {
+            swiper.slideTo(0)
+        }
     }
 
     const [mainSwiper, setMainSwiper] = useState(null);
@@ -112,9 +116,11 @@ function Main({ languageData }) {
                     }}
                     spaceBetween={0}
                     slidesPerView={1}
+
                     loop={false}
                     onSlideChange={(swiper) => handleSwiperChange(swiper)}
                 >
+                    
                     <SwiperSlide>
                         <Homepage setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
                     </SwiperSlide>
@@ -129,6 +135,9 @@ function Main({ languageData }) {
                     </SwiperSlide>
                     <SwiperSlide>
                         <Competition siteData={siteData} imLiveURL={imLiveURL} user={userData} languageData={languageData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        
                     </SwiperSlide>
 
                 </Swiper>
