@@ -39,6 +39,7 @@ function HeaderMenu({ setMenuOpen, user, setTourModal }) {
                             </div>
                         </div>
                     </div>
+                    
                     <img onClick={e => {
                         setTourModal(true)
                         setVisitedTour(true)

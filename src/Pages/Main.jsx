@@ -45,6 +45,7 @@ function Main({ languageData }) {
 
     const [siteData, setSiteData] = useState(null)
     const [withdrawModal, setWithdrawModal] = useState(false)
+
     useQuery({
         queryKey: ['userData'],
         queryFn: async () => {
@@ -181,6 +182,7 @@ function Main({ languageData }) {
             {
                 referralsOpen && <MyReferralsModal setOpen={setReferralsOpen} user={userData} />
             }
+            
 
         </>
     )

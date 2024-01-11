@@ -17,6 +17,10 @@ import Withdraw from './Transactions/Withdraw'
 import TransactionHistory from './Transactions/TransactionHistory'
 import TicketsHistory from './Transactions/TicketsHistory'
 import ChatModal from './ChatModal'
+import About from '../Pages/CyberSaysPages/Modals/About'
+import Legal from '../Pages/CyberSaysPages/Modals/Legal'
+import Contact from '../Pages/CyberSaysPages/Modals/Contact'
+import Settings from '../Pages/CyberSaysPages/Modals/Settings'
 
 function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData }) {
 
@@ -26,6 +30,11 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData }) {
   const [transactionsModal, setTransactionsModal] = useState(false)
   const [ticketsModal, setTicketsModal] = useState(false)
   const [chatModal, setChatModal] = useState(false)
+
+  const [aboutModal, setAboutModal] = useState(false)
+  const [legalModal, setLegalModal] = useState(false)
+  const [settingsModal, setSettingsModal] = useState(false)
+  const [contactModal, setContactModal] = useState(false)
 
   return (
     <div>
@@ -80,13 +89,13 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData }) {
             </div>
           </div>
           <div className=' absolute bottom-4 flex justify-around items-center max-w-[330px] w-full '>
-            <p className='saira text-[16px] font-semibold cursor-pointer'>About us</p>
+            <p className='saira text-[16px] font-semibold cursor-pointer' onClick={e => setAboutModal(true)}>About us</p>
             <div className='w-[2px] h-[20px] bg-[#FFED63]'></div>
-            <p className='saira text-[16px] font-semibold cursor-pointer'>Legal</p>
+            <p className='saira text-[16px] font-semibold cursor-pointer' onClick={e => setLegalModal(true)}>Legal</p>
             <div className='w-[2px] h-[20px] bg-[#FFED63]'></div>
-            <p className='saira text-[16px] font-semibold cursor-pointer'>Settings</p>
+            <p className='saira text-[16px] font-semibold cursor-pointer' onClick={e => setSettingsModal(true)}>Settings</p>
             <div className='w-[2px] h-[20px] bg-[#FFED63]'></div>
-            <p className='saira text-[16px] font-semibold cursor-pointer'>Contact Us</p>
+            <p className='saira text-[16px] font-semibold cursor-pointer' onClick={e => setContactModal(true)}>Contact Us</p>
           </div>
         </div>
 
@@ -109,6 +118,20 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData }) {
       }
       {
         chatModal && <ChatModal setOpen={setChatModal} user={user} />
+      }
+
+      {
+        aboutModal && <About setOpen={setAboutModal} user={user} />
+      }
+
+      {
+        legalModal && <Legal setOpen={setLegalModal} user={user} />
+      }
+      {
+        settingsModal && <Settings setOpen={setSettingsModal} user={user} />
+      }
+      {
+        contactModal && <Contact setOpen={setContactModal} user={user} />
       }
     </div>
   )
