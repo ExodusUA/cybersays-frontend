@@ -3,6 +3,7 @@ import logoCyber from '../../images/CyberSaysPage/logoMain.png'
 import TimeCounter from '../../Components/TimeCounter'
 import cup1 from '../../images/CyberSaysPage/cup1st.png'
 import cup2 from '../../images/CyberSaysPage/cup2st.png'
+import cup3 from '../../images/CyberSaysPage/cup3st.png'
 import LeaderboardModal from '../../Components/LeaderboardModal'
 import infoAPI from '../../Requests/info'
 import no_avatar from '../../images/CyberSaysPage/no_avatar.png'
@@ -49,7 +50,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                                 <p className='text-[16px] saira font-bold'>2</p>
                                 <img className='w-[26px] h-[26px] sm:w-[50px] sm:h-[50px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={
                                     leaderboardData.leaderboard[1].avatar === null
-                                        ? no_avatar
+                                        ? cup2
                                         : leaderboardData.leaderboard[1].avatar
                                 } alt="cup2" />
                                 <p className='text-[12px] sm:text-[14px] saira font-medium text-[#FFED63]'>{leaderboardData.leaderboard[1].points}</p>
@@ -59,7 +60,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                                 <p className='text-[16px] saira font-bold'>1</p>
                                 <img className='w-[34px] h-[34px] sm:w-[70px] sm:h-[70px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={
                                     leaderboardData.leaderboard[0].avatar === null
-                                        ? no_avatar
+                                        ? cup1
                                         : leaderboardData.leaderboard[0].avatar
                                 } alt="cup2" />
                                 <p className='text-[12px] sm:text-[14px] saira font-medium text-[#FFED63]'>{leaderboardData.leaderboard[0].points}</p>
@@ -69,7 +70,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                                 <p className='text-[16px] saira font-bold'>3</p>
                                 <img className='w-[26px] h-[26px] sm:w-[50px] sm:h-[50px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={
                                     leaderboardData.leaderboard[2].avatar === null
-                                        ? no_avatar
+                                        ? cup3
                                         : leaderboardData.leaderboard[2].avatar
                                 } alt="cup2" />
                                 <p className='text-[12px] sm:text-[14px] saira font-medium text-[#FFED63]'>{leaderboardData.leaderboard[2].points}</p>

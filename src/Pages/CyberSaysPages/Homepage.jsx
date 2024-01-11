@@ -56,7 +56,7 @@ function Homepage({ user, imLiveURL, languageData }) {
 
                     <p className=' text-[18px] md:text-[32px] font-semibold'></p>
                 </div>
-                <img className='se:w-[230px] se:mb-[-5px] w-[200px] iphone:w-[310px] md:w-[500px] m-auto' src={logoCyber} alt="logoCyber" />
+                <img className='se:w-[230px] se:mb-[-5px] w-[200px] iphone:w-[310px] md:w-[500px] m-auto mac:!w-[400px]' src={logoCyber} alt="logoCyber" />
                 <div className='flex justify-between items-end md:items-center  mt-3'>
                     <div>
                         <img className='w-[180px] sm:w-[200px] md:w-[350px]' src={girlOK} alt="girlOK" />
@@ -91,7 +91,7 @@ function Homepage({ user, imLiveURL, languageData }) {
                             </Swiper>
                         </div>
                         <img className='w-[160px] md:w-[200px] md:mt-5' src={imLiveLogo} alt="imLiveLogo" />
-                        <div className='md:block hidden mt-[100px]'>
+                        <div className='md:block hidden mt-[100px] mac:mt-[50px]'>
                             <TimeCounter languageData={languageData} />
                         </div>
                     </div>

@@ -130,7 +130,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                 }
 
                 <div>
-                    <img className='se:w-[280px] iphone:w-[345px] md:w-[770px] iphone:mt-[-40px] mob:mt-0 m-auto md:mt-[-100px] mac2:!mt-[-50px] se:mt-[-30px] mac2:!w-[600px]' src={hero} alt="heroRaffle" />
+                    <img className='se:w-[280px] iphone:w-[345px] md:w-[770px] iphone:mt-[-40px] mob:mt-0 m-auto md:mt-[-100px] mac2:!mt-[-50px] se:mt-[-30px] mac:!w-[500px] mac2:!w-[500px]' src={hero} alt="heroRaffle" />
                     <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[30px] text-center flex py-3 md:py-5 mac:!py-2  px-2 mt-[-20px] md:mt-[-80px] justify-center' >
                         {
 

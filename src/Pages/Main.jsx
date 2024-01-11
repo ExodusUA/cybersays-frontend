@@ -43,7 +43,7 @@ function Main({ languageData }) {
     const [leaderboardData, setLeaderboardData] = useState([])
 
     const [siteData, setSiteData] = useState(null)
-
+    const [withdrawModal, setWithdrawModal] = useState(false)
     useQuery({
         queryKey: ['userData'],
         queryFn: async () => {
@@ -119,7 +119,7 @@ function Main({ languageData }) {
                         <RaffleTickets setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} setTourModal={setTourModal} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Double setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
+                        <Double setOpen={setWithdrawModal} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
                     </SwiperSlide>
                     <SwiperSlide>
                         <Refferals setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} />
@@ -161,6 +161,9 @@ function Main({ languageData }) {
             }
             {
                 tourModal && <TourModal setOpen={setTourModal} />
+            }
+            {
+                withdrawModal && <Withdraw setOpen={setWithdrawModal} user={user} />
             }
         </>
     )

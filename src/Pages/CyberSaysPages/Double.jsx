@@ -4,10 +4,13 @@ import TimeCounter from '../../Components/TimeCounter'
 import TaskCard from '../../Components/DoubleMoneyPage/TaskCard';
 import congrats from '../../images/CyberSaysPage/congrats.png'
 
-function Double({ languageData, user, imLiveURL }) {
+
+function Double({ languageData, user, imLiveURL, setOpen }) {
     const [isOpen, setIsOpen] = useState(false)
 
     const [taskStatus, setTaskStatus] = useState(null)
+
+    
 
     const getTaskStatus = (task) => {
         if (user && user === undefined) return 'inactive'
@@ -67,6 +70,8 @@ function Double({ languageData, user, imLiveURL }) {
                         </>
                     }
                 </div>
+                <p onClick={e => setOpen(true)} className='text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2'>Choose your way to get paid</p>
+
                 {/*
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[20px] max-w-[600px] m-auto p-4'>
                     <p className='text-[20px] md:text-[32px] font-semibold text-center '>We have doubled your money!</p>
@@ -83,7 +88,7 @@ function Double({ languageData, user, imLiveURL }) {
             <div className='flex absolute  se:bottom-[130px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
                 <TimeCounter languageData={languageData} />
             </div>
-
+            
         </div>
     )
 }
