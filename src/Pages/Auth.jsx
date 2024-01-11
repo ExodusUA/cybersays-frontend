@@ -36,9 +36,9 @@ function Auth({ languageData }) {
                 <div className='w-[400px] h-[400px] absolute right-12 top-12 bg-[#0A4A48] blur-[100px]'></div>
 
                 <div className='lg:flex h-full'>
-                   
-                        <Slider onSlideChange={slideChange} />
-                    
+
+                    <Slider onSlideChange={slideChange} />
+
 
 
                     <div className='w-full text-center bg-dark lg:w-[55%] h-full'>
@@ -51,12 +51,12 @@ function Auth({ languageData }) {
                             <div className='pt-[3vh] lg:pt-[15vh] w-full relative z-[10]'>
                                 <img className='w-[100px] md:w-[200px] lg:w-[250px] iphone:m-auto lg:m-0' src={logotype} alt="Logotype" />
                                 <p className='w-[100%] text-center lg:text-left text-[24px] leading-7 font-bold lg:text-[30px] text-white lg:leading-9 lg:border-b-2 border-[#A8AFF2] py-4 lg:py-8 lg:pt-6'>
-                                    {currentSlide === 0 && 'CyberSays: Double Your Money, Double Your Gains!'}
-                                    {currentSlide === 1 && 'Your Money, Your Rules – Choose How You Get Paid'}
-                                    {currentSlide === 2 && 'Complete a $5 Offer and Watch Your Earnings Soar'}
-                                    {currentSlide === 3 && 'Double your money: Earn $10 instantly and claim now!'}
+                                    {currentSlide === 0 && languageData?.authSlide1}
+                                    {currentSlide === 1 && languageData?.authSlide2}
+                                    {currentSlide === 2 && languageData?.authSlide3}
+                                    {currentSlide === 3 && languageData?.authSlide4}
                                 </p>
-                                <LoginForm />
+                                <LoginForm languageData={languageData} />
                             </div>
                         </div>
                     </div>

@@ -3,7 +3,7 @@ import google from '../../images/landing/icons/google.png'
 import { useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 
-function GoogleButton({ loginViaGoogle }) {
+function GoogleButton({ loginViaGoogle, languageData }) {
 
 
     const googleLogin = useGoogleLogin({
@@ -25,7 +25,7 @@ function GoogleButton({ loginViaGoogle }) {
 
             <button onClick={() => googleLogin()} type="button" className='w-full flex gap-4 bg-white py-3 rounded-[12px] items-center justify-center'>
                 <img className='w-6 h-6' src={google} alt="Google" />
-                <p className='text-[16px] lg:text-[16px] text-[#8E8E8E] font-semibold text-left saira' dangerouslySetInnerHTML={{ __html: 'Continue with <span class="saira" style="color:#282B54">Google</span>' }} />
+                <p className='text-[16px] lg:text-[16px] text-[#8E8E8E] font-semibold text-left saira' dangerouslySetInnerHTML={{ __html: languageData?.authGoogle + ' <span class="saira" style="color:#282B54">Google</span>' }} />
             </button>
 
             {
