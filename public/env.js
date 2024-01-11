@@ -3,7 +3,7 @@ window.env = {
   "ACSvcPort": "17532",
   "ALLUSERSPROFILE": "C:\\ProgramData",
   "APPDATA": "C:\\Users\\danie\\AppData\\Roaming",
-  "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\crashpad_16004_GPBTGESCNJUWPORK",
+  "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\crashpad_19720_MNWWWUPOSFJOVDYP",
   "COLOR": "1",
   "COLORTERM": "truecolor",
   "CommonProgramFiles": "C:\\Program Files\\Common Files",
@@ -23,6 +23,7 @@ window.env = {
   "INIT_CWD": "J:\\React App\\GIT apps\\cybersays-frontend",
   "LANG": "en_US.UTF-8",
   "LOCALAPPDATA": "C:\\Users\\danie\\AppData\\Local",
+  "LOCAL_GIT_DIRECTORY": "C:\\Users\\danie\\AppData\\Local\\GitHubDesktop\\app-3.3.6\\resources\\app\\git",
   "LOGONSERVER": "\\\\DANICHOK",
   "NODE": "C:\\Program Files\\nodejs\\node.exe",
   "NODE_EXE": "C:\\Program Files\\nodejs\\\\node.exe",
@@ -90,7 +91,7 @@ window.env = {
   "VSCODE_GIT_ASKPASS_NODE": "C:\\Users\\danie\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
   "VSCODE_GIT_IPC_HANDLE": "\\\\.\\pipe\\vscode-git-00d49e159a-sock",
   "VSCODE_INJECTION": "1",
-  "VSCODE_NONCE": "2a03a404-2a44-4481-90f8-0c256499bd54",
+  "VSCODE_NONCE": "ba8e3059-61e3-4982-819f-46316b169de6",
   "windir": "C:\\WINDOWS",
   "ZES_ENABLE_SYSMAN": "1"
 };
