@@ -66,7 +66,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                                 <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>Points</p>
                             </div>
                             <div>
-                                <p className='text-[16px] saira font-bold'>2</p>
+                                <p className='text-[16px] saira font-bold'>3</p>
                                 <img className='w-[26px] h-[26px] sm:w-[50px] sm:h-[50px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={
                                     leaderboardData.leaderboard[2].avatar === null
                                         ? no_avatar
