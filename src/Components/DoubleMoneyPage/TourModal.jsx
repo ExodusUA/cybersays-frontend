@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import close from '../../images/CyberSaysPage/closeMenu.png'
 import hero from '../../images/CyberSaysPage/tourHero.png'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -28,7 +28,14 @@ function TourModal({ setOpen }) {
         },
 
     ]
+
+    useEffect(() => {
+        window.localStorage.setItem('visitedTour', true)
+    }, [])
+
     const [selectedButton, setSelectedButton] = useState(1);
+
+
     return (
         <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
             <div className='flex justify-end max-w-[600px] m-auto md:my-4'>
@@ -51,7 +58,7 @@ function TourModal({ setOpen }) {
                     <Swiper
                         pagination={{ clickable: true }}
                         modules={[Pagination]}
-                        
+
                         loop={true}
                         breakpoints={{
                             0: {
