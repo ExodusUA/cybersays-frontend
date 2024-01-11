@@ -22,9 +22,9 @@ function HeaderMenu({ setMenuOpen, user, setTourModal }) {
                                 <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-bold saira text-center flex justify-center'><img className='w-[21px] h-[21px] mr-[5px]' src={money} alt="money" /> {user?.earned.toFixed(0) || 0}</p>
                             </div>
                             <div className='leading-4 md:leading-5 mx-1'>
-                                <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-medium saira text-center '>Refferals:</p>
+                                <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-medium saira text-center '>Points:</p>
                                 <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-bold saira text-center flex justify-center'>
-                                <img className='w-[21px] h-[21px] mr-[5px]' src={refferals} alt="refferals" /> {user && user.refferals ? JSON.parse(user.refferals).length : 0}
+                                <img className='w-[21px] h-[21px] mr-[5px]' src={refferals} alt="refferals" /> {user && user.points ? user?.points : 0}
                                 </p>
 
                             </div>
