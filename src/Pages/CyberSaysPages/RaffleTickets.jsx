@@ -35,6 +35,8 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
 
     }, [user])
 
+    const [isLinkCopied, setIsLinkCopied] = useState(false)
+
     const shareRefferalLink = () => {
         if (navigator.share) {
             navigator
@@ -46,7 +48,12 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                 .then(() => console.log('Successful share! 🎉'))
                 .catch(err => console.error(err));
         } else {
-            console.error('navigator.share is not supported in this browser');
+            window.navigator.clipboard.writeText(window.location.hostname + '?uid=' + user?.refferal_code)
+            setIsLinkCopied(true)
+
+            setTimeout(() => {
+                setIsLinkCopied(false)
+            }, 3000)
         }
     }
 
@@ -150,7 +157,11 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                                         <p className='saira text-[12px] md:text-[14px] font-medium'>1  raffle ticket</p>
                                     </div>
                                     <div className='text-center w-full'>
-                                        <button onClick={e => shareRefferalLink()} className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2 md:py-3 md:w-full'>Refer friends 🤑</button>
+                                        <button onClick={e => shareRefferalLink()} className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2 md:py-3 md:w-full'>{
+                                                isLinkCopied === false
+                                                    ? 'Refer friends 🤑'
+                                                    : 'Link copied!'
+                                            }</button>
                                         <p className='saira text-[12px] md:text-[14px] font-medium mt-2'>Friend doubled money = </p>
                                         <p className='saira text-[12px] md:text-[14px] font-medium'>30 raffle tickets</p>
                                     </div>
