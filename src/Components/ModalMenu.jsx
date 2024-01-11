@@ -36,7 +36,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData }) {
         </div>
         <div className='max-w-[365px] w-full m-auto'>
 
-          <div className='iphone:gap-7 se:gap-5 mac:!gap-4 grid mt-8 '>
+          <div className='gap-7 grid mt-8 '>
             <div className='flex items-center' onClick={e => scrollToPage(0)}>
               <img className='w-[32px] h-[32px] mr-2' src={link1} alt="link1" />
               <p className='saira text-[20px] font-semibold  cursor-pointer'>Home page</p>
