@@ -22,6 +22,7 @@ import { Swiper } from 'swiper/react';
 import user from '../Requests/user'
 import ChatModal from '../Components/ChatModal'
 import infoAPI from '../Requests/info'
+import MyReferralsModal from '../Components/ProfileReferrals/MyReferralsModal'
 var mixpanel = require('mixpanel-browser');
 
 
@@ -95,6 +96,8 @@ function Main({ languageData }) {
         }
     }, [activePageIndex])
 
+    const [referralsOpen, setReferralsOpen] = useState(false)
+
     const HomepageSwiper = () => {
 
         return (
@@ -122,7 +125,7 @@ function Main({ languageData }) {
                         <Double setOpen={setWithdrawModal} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Refferals setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} />
+                        <Refferals setReferralsOpen={setReferralsOpen} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} />
                     </SwiperSlide>
                     <SwiperSlide>
                         <Competition siteData={siteData} imLiveURL={imLiveURL} user={userData} languageData={languageData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading} />
@@ -165,7 +168,11 @@ function Main({ languageData }) {
             {
                 withdrawModal && <Withdraw setOpen={setWithdrawModal} user={userData} />
             }
-            
+
+            {
+                referralsOpen && <MyReferralsModal setOpen={setReferralsOpen} user={userData} />
+            }
+
         </>
     )
 }
