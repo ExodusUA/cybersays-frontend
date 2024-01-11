@@ -158,8 +158,7 @@ body {
 }
 
 .animated-image {
-    width: 100%;
-    height: 100%;
+    
     animation: scaleLoop 2s infinite;
 }
 
