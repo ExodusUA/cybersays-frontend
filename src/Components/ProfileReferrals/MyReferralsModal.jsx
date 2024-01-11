@@ -5,7 +5,7 @@ import offerFalse from '../../images/CyberSaysPage/offerFalse.png'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import userAPI from '../../Requests/user'
 
-function MyReferralsModal({ setOpen }) {
+function MyReferralsModal({ setOpen, user }) {
 
     const [referralData, setReferralData] = useState([])
     const queryClient = useQueryClient()
@@ -27,6 +27,28 @@ function MyReferralsModal({ setOpen }) {
             }
         } catch (error) {
             alert(error)
+        }
+    }
+
+    const [isLinkCopied, setIsLinkCopied] = useState(false)
+
+    const shareRefferalLink = () => {
+        if (navigator.share) {
+            navigator
+                .share({
+                    title: document.title,
+                    text: 'Sharing',
+                    url: '?uid=' + user?.refferal_code,
+                })
+                .then(() => console.log('Successful share! 🎉'))
+                .catch(err => console.error(err));
+        } else {
+            window.navigator.clipboard.writeText(window.location.hostname + '?uid=' + user?.refferal_code)
+            setIsLinkCopied(true)
+
+            setTimeout(() => {
+                setIsLinkCopied(false)
+            }, 3000)
         }
     }
 
@@ -106,12 +128,21 @@ function MyReferralsModal({ setOpen }) {
                         : <div>
                             <p className='text-[18px] font-semibold text-center mt-4'>Your referrals</p>
                             <p className='saira text-[16px] font-semibold text-center'>lorem ipsum</p>
-                            <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center py-1 mt-3'>
-                                <p className='text-[14px] font-semibold text-center flex justify-center'>You’re referred by: <p className='ml-1 truncate w-[100px]'>{referralData.referredBy}</p></p>
-                                <p className='saira text-[12px] font-semibold text-center mx-5'>If your referrer took ImLive's double-money offer, you can pick them for a Vegas trip if you win.</p>
-                            </div>
+                            {
+                                referralData.referredBy && <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center py-1 mt-3'>
+                                    <p className='text-[14px] font-semibold text-center flex justify-center'>You’re referred by: <p className='ml-1 truncate w-[100px]'>{referralData.referredBy}</p></p>
+                                    <p className='saira text-[12px] font-semibold text-center mx-5'>If your referrer took ImLive's double-money offer, you can pick them for a Vegas trip if you win.</p>
+                                </div>
+                            }
+
                             <p className='saira text-[16px] font-semibold text-center my-5'>You haven't referred friends yet</p>
-                            <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2'>Refer your friends 👬</button>
+                            <button onClick={e => shareRefferalLink()} className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2'>
+                                {
+                                    isLinkCopied === false
+                                        ? 'Refer your friends 👬'
+                                        : 'Link copied!'
+                                }
+                            </button>
                         </div>
 
                 }

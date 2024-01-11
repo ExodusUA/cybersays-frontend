@@ -96,7 +96,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData }) {
         tourModal && <TourModal setOpen={setTourModal} />
       }
       {
-        referralsModal && <MyReferralsModal setOpen={setReferralsModal} />
+        referralsModal && <MyReferralsModal setOpen={setReferralsModal} user={user} />
       }
       {
         withdrawModal && <Withdraw setOpen={setWithdrawModal} user={user} />

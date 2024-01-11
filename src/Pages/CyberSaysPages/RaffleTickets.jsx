@@ -43,7 +43,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                 .share({
                     title: document.title,
                     text: 'Sharing',
-                    url: window.location.hostname + '?uid=' + user?.refferal_code,
+                    url: '?uid=' + user?.refferal_code,
                 })
                 .then(() => console.log('Successful share! 🎉'))
                 .catch(err => console.error(err));
