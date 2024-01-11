@@ -63,18 +63,26 @@ function Refferals({ user, languageData }) {
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         },
     ]
+
+    const [isLinkShared, setIsLinkShared] = useState(false)
+
     const shareRefferalLink = () => {
         if (navigator.share) {
             navigator
                 .share({
                     title: document.title,
                     text: 'Sharing',
-                    url: window.location.hostname + '?uid=' + user?.refferal_code,
+                    url: window.location.host + '?uid=' + user?.refferal_code,
                 })
                 .then(() => console.log('Successful share! 🎉'))
                 .catch(err => console.error(err));
         } else {
-            console.error('navigator.share is not supported in this browser');
+            window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.refferal_code)
+            setIsLinkShared(true)
+
+            setTimeout(() => {
+                setIsLinkShared(false)
+            }, 3000)
         }
     }
 
@@ -262,7 +270,13 @@ function Refferals({ user, languageData }) {
                 </div>
                 <p className='text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2'>Choose personalize experience</p>
                 <div className='flex justify-center'>
-                    <button onClick={e => shareRefferalLink()} className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold se:py-1 iphone:py-2 sm:max-w-[350px]'>Share Referral Link!</button>
+                    <button onClick={e => shareRefferalLink()} className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold se:py-1 iphone:py-2 sm:max-w-[350px]'>
+                        {
+                            isLinkShared === false
+                                ? ' Share Referral Link!'
+                                : 'Link copied!'
+                        }
+                    </button>
                 </div>
                 <p className={`cursor-pointer text-center text-[16px] saira font-semibold underline my-1 ${isLinkCopied === true ? 'opacity-70' : 'opacity-100'}`} onClick={e => copyToClipboard()}>Copy link</p>
 

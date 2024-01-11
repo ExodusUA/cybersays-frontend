@@ -22,6 +22,8 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
         fetchData()
     }, [])
 
+    const [isLinkCopied, setIsLinkCopied] = useState(false)
+
     const shareRefferalLink = () => {
         if (navigator.share) {
             navigator
@@ -33,7 +35,12 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                 .then(() => console.log('Successful share! 🎉'))
                 .catch(err => console.error(err));
         } else {
-            console.error('navigator.share is not supported in this browser');
+            window.navigator.clipboard.writeText(window.location.hostname + '?uid=' + user?.refferal_code)
+            setIsLinkCopied(true)
+
+            setTimeout(() => {
+                setIsLinkCopied(false)
+            }, 3000)
         }
     }
 
@@ -88,7 +95,13 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                             <p className='saira text-[12px] sm:text-[14px] font-medium'>0.5 points</p>
                         </div>
                         <div className='text-center w-full md:mx-2'>
-                            <button onClick={e => shareRefferalLink()} className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2 sm:px-6 md:w-full'>Refer friends 🤑</button>
+                            <button onClick={e => shareRefferalLink()} className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2 sm:px-6 md:w-full'>
+                                {
+                                    isLinkCopied === false
+                                        ? 'Refer friends 🤑'
+                                        : 'Link copied!'
+                                }
+                            </button>
                             <p className='saira text-[12px] sm:text-[14px] font-medium'>Friend doubled money = </p>
                             <p className='saira text-[12px] sm:text-[14px] font-medium'>10 points</p>
                         </div>
