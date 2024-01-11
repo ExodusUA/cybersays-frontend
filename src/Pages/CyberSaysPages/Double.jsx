@@ -48,10 +48,10 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
             <div className='pt-[60px] px-4  md:pt-[90px] max-w-[1170px] m-auto' >
                 <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px] mac:!w-[400px]' src={logoCyber} alt="logoCyber" />
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[100px] text-center mx-[50px] md:mx-[100px] px-4 md:py-2'>
-                    <p className='text-[14px] md:text-[32px] mac2:!text-[24px] font-semibold md:mx-[40px] iphone:leading-[unset] se:leading-4 mac2:!leading-[24px]'>Double your money and get your raffle eligibility</p>
+                    <p className='text-[14px] md:text-[32px] mac2:!text-[20px] font-semibold md:mx-[20px] iphone:leading-[unset] se:leading-4 mac2:!leading-[22px]'>Double your money and get your raffle eligibility</p>
 
                 </div>
-                <p className='text-[12px] md:text-[14px] text-[#FFED63] text-center cursor-pointer flex items-center justify-center  md:py-2'>
+                <p className='text-[12px] md:text-[14px] text-[#FFED63] text-center cursor-pointer flex items-center justify-center  md:py-2 mb-10'>
                     A
                     <span className='mx-1'>
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,10 +63,10 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
                 <div className='max-w-[600px] m-auto'>
                     {
                         taskStatus !== null && <>
-                            <TaskCard data={languageData?.tasks?.task1} state={taskStatus[0]} background={'#B9A1E1'} index={1} imLiveURL={imLiveURL} />
-                            <TaskCard data={languageData?.tasks?.task2} state={taskStatus[1]} background={'#93CC8E'} index={2} imLiveURL={imLiveURL} />
-                            <TaskCard data={languageData?.tasks?.task3} state={taskStatus[2]} background={'#EA7C7C'} index={3} imLiveURL={imLiveURL} />
-                            <TaskCard data={languageData?.tasks?.task4} state={taskStatus[3]} background={'#76C2E3'} index={4} imLiveURL={imLiveURL} />
+                            <TaskCard data={languageData?.tasks?.task1} state={'finished'} background={'#B9A1E1'} rounded={'rounded-t-[20px] '} index={1} imLiveURL={imLiveURL} />
+                            <TaskCard data={languageData?.tasks?.task2} state={'finished'} background={'#93CC8E'} rounded={'rounded-t-[20px] '} index={2} imLiveURL={imLiveURL} />
+                            <TaskCard data={languageData?.tasks?.task3} state={'active'} background={'#EA7C7C'} rounded={'rounded-t-[20px] '} index={3} imLiveURL={imLiveURL} />
+                            <TaskCard data={languageData?.tasks?.task4} state={taskStatus[3]} background={'#76C2E3'} rounded={'rounded-[20px] !pb-[5px]'} index={4} imLiveURL={imLiveURL} />
                         </>
                     }
                 </div>

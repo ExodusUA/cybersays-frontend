@@ -3,7 +3,7 @@ import notReady from '../../images/CyberSaysPage/card_notReady.png'
 import done from '../../images/CyberSaysPage/card_done.png'
 import { Link } from 'react-router-dom'
 
-function TaskCard({ state, background, data, index, imLiveURL }) {
+function TaskCard({ state, background, data, index, imLiveURL, rounded }) {
 
     const [cardState, setCardState] = useState(null)
 
@@ -59,15 +59,15 @@ function TaskCard({ state, background, data, index, imLiveURL }) {
 
     const activeState = () => {
         return <>
-            <div className='flex justify-between items-center mx-1  sm:mx-3'>
+            <div className='flex justify-between items-center mx-1  sm:mx-3 '>
                 <p className='saira text-[12px] md:text-[14px] font-medium '>{index}. {data?.taskTitleOpen}</p>
                 <img className='w-[18px] h-[18px]' src={notReady} alt="notReady" />
             </div>
 
-            <div className='flex justify-center'>
+            <div className='flex justify-center '>
                 {
                     data?.taskBlocks?.map((task, key) => {
-                        return <div key={key} className='flex flex-col items-center se:mt-1 mt-2 relative'>
+                        return <div key={key} className='flex  items-center se:mt-1 mt-2 relative '>
                             <img className='w-[330px] sm:w-[555px] m-auto relative' src={task?.taskImage} alt="Task Icon" />
                             <p className={`saira text-[10px] sm:text-[17px] text-black font-medium absolute text-left leading-[12px] sm:leading-[20px] ${index === 1 ? 'w-[150px] sm:w-[265px] top-[15px] sm:top-[25px] right-[25px] sm:right-[45px]' :
                                 index === 2 ? 'w-[140px] sm:w-[235px]  top-[15px] sm:top-[25px] left-[35px] sm:left-[55px]' :
@@ -82,28 +82,64 @@ function TaskCard({ state, background, data, index, imLiveURL }) {
             <div className='flex justify-center mt-[-20px] md:mt-[-30px] relative z-50 max-w-[330px] w-full sm:max-w-[555px] m-auto'>
                 <Link className='w-full' to={imLiveURL}><button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-1 sm:py-2'>{data?.taskButton}</button></Link>
             </div>
-            <p onClick={e => copyImLiveLink()} className={`saira text-[14px] cursor-pointer underline text-center mb-[-5px] ${linkCopied === true ? 'opacity-60' : ''}`}>Copy link</p>
+            <p onClick={e => copyImLiveLink()} className={`saira text-[14px] cursor-pointer underline text-center mb-[-5px] py-2 pb-6 ${linkCopied === true ? 'opacity-60' : ''}`}>Copy link</p>
         </>
     }
 
     const finishedState = () => {
-        return <div className='flex justify-between items-center mx-1 sm:mx-3'>
+        return <div className='flex justify-between items-center mx-1  sm:mx-3 '>
             <p className='saira text-[12px] md:text-[14px] font-medium'>{index}. {data?.taskTitle}</p>
             <img className='w-[18px] h-[18px]' src={done} alt="done" />
         </div>
     }
 
     const inactiveState = () => {
-        return <div className='flex justify-between items-center mx-1  sm:mx-3'>
+        return <div className='flex justify-between items-center mx-1   sm:mx-3'>
             <p className='saira text-[12px] md:text-[14px] font-medium'>{index}. {data?.taskTitle}</p>
             <img className='w-[18px] h-[18px]' src={notReady} alt="notReady" />
         </div>
     }
 
+    const getBackground = () => {
+        switch (cardState) {
+            case 'active':
+                return background;
+            case 'finished':
+                return '#EAEAEA33';
+            case 'inactive':
+                return background;
+            default:
+                return background;
+        }
+    };
+    const getPaddingBottom = () => {
+        switch (cardState) {
+            case 'active':
+                return '0';
+            case 'finished':
+                return '40px';
+            case 'inactive':
+                return '20px';
+            default:
+                return '0';
+        }
+    };
+    const marginTop = () => {
+        switch (cardState) {
+            case 'active':
+                return '-37px';
+            case 'finished':
+                return '-37px';
+            case 'inactive':
+                return '-20px';
+            default:
+                return '0';
+        }
+    };
 
     return (
 
-        <div style={{ background: background }} className={`w-full rounded-[20px]  se:p-[6px] p-2 se:my-1 my-2 `}>
+        <div style={{ background: getBackground(), paddingBottom: getPaddingBottom(), marginTop: marginTop() }} className={`w-full rounded-t-[20px] ${rounded} bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  se:p-[6px]  p-2 se:my-0 my-2  `}>
             {
                 getMarkup()
             }
