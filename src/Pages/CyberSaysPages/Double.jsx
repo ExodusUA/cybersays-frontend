@@ -70,7 +70,7 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
                         </>
                     }
                 </div>
-                <p onClick={e => setOpen(true)} className='text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2'>Choose your way to get paid</p>
+                <p onClick={e => setOpen(true)} className='text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2 cursor-pointer'>Choose your way to get paid</p>
 
                 {/*
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[20px] max-w-[600px] m-auto p-4'>

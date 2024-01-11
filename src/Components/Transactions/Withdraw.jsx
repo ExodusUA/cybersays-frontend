@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import close from '../../images/CyberSaysPage/closeMenu.png'
 import social1 from '../../images/CyberSaysPage/socialApple.png'
 import social2 from '../../images/CyberSaysPage/socialNetflix.png'
@@ -28,8 +28,6 @@ function Withdraw({ user, setOpen }) {
 
     ]
 
-    
-
     return (
         <div>
             <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4'>
@@ -37,10 +35,10 @@ function Withdraw({ user, setOpen }) {
                     <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
                 </div>
                 <p className='text-[18px] md:text-[32px] font-semibold text-center'>Withdraw</p>
-                <p className='text-[12px] text-[#FFED63] font-medium text-center saira'>Can withdrwa all or nothing</p>
+                <p className='text-[12px] text-[#FFED63] font-medium text-center saira'>Can withdraw all or nothing</p>
                 <div className='bg-[#EAEAEA] bg-opacity-30 backdrop-blur-lg rounded-[30px] text-center flex justify-center w-[150px] m-auto mt-3'>
                     <div>
-                        <p className='text-[32px] text-[#FFED63] font-bold text-center saira leading-9 mt-1'>${user?.earned}</p>
+                        <p className='text-[32px] text-[#FFED63] font-bold text-center saira leading-9 mt-1'>${user?.earned.toFixed(2)}</p>
                         <p className='text-[12px] font-medium text-center saira leading-3 mb-2'>Available</p>
                     </div>
                 </div>

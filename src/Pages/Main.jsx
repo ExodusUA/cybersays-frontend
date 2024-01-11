@@ -163,7 +163,7 @@ function Main({ languageData }) {
                 tourModal && <TourModal setOpen={setTourModal} />
             }
             {
-                withdrawModal && <Withdraw setOpen={setWithdrawModal} user={user} />
+                withdrawModal && <Withdraw setOpen={setWithdrawModal} user={userData} />
             }
             
         </>
