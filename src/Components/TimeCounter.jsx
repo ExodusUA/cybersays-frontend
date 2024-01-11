@@ -29,7 +29,7 @@ function TimeCounter({ languageData }) {
 
     return (
         <div>
-            <p className='text-[18px] lg:text-[32px] font-semibold iphone:leading-[unset] se:leading-5 mac:!leading-[42px] text-left pr-4'>{languageData?.timeCounterTitle}</p>
+            <p className='text-[18px] lg:text-[32px] mac:!text-[24px] font-semibold iphone:leading-[unset] se:leading-5 mac:!mb-[-10px] text-left pr-4'>{languageData?.timeCounterTitle}</p>
             <div className='lg:w-[420px] m-auto'>
                 <div className='flex justify-center lg:justify-between items-center leading-5 gap-[18px] lg:ml-5 lg:mt-5 '>
                     <div className='text-center'><h2 className='text-[18px] md:text-[24px] md: font-black text-[#FFED63]'>{daysRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>{languageData?.timeCounterDays}</p></div>
