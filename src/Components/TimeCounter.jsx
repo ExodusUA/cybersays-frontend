@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 const moment = require('moment-timezone');
 
 function TimeCounter({ languageData }) {
-    const endDate = moment.tz('2024-01-12 10:00', 'America/Sao_Paulo');
+    const endDate = moment.tz('2024-01-28 10:00', 'America/Sao_Paulo');
     const [formattedEndDate, setFormattedEndDate] = useState(endDate.format('YY/MM/DD HH:mm:ss'));
     const [daysRemaining, setDaysRemaining] = useState(endDate.diff(moment(), 'days'));
     const [hoursRemaining, setHoursRemaining] = useState(0);

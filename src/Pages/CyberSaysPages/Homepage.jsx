@@ -32,7 +32,7 @@ function Homepage({ user, imLiveURL, languageData }) {
 
     const getButtonMarkup = (task) => {
         switch (task) {
-            case 0: return <Link to={imLiveURL}><button className='w-full sm:w-[350px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold se:py-[6px] py-2 md:py-3'>{languageData?.homepageBtn1}</button></Link>
+            case 0: return <Link to={imLiveURL} target='_blank'><button className='w-full sm:w-[350px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold se:py-[6px] py-2 md:py-3'>{languageData?.homepageBtn1}</button></Link>
             case 1: return <button className='w-full sm:w-[350px]  bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold py-2 se:py-[6px] md:py-3'>{languageData?.homepageBtn2}</button>
             case 2: return <button className='w-full  sm:w-[350px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold py-2 se:py-[6px] md:py-3'>{languageData?.homepageBtn3}</button>
             case 3: return <button className='w-full sm:w-[350px] bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[16px] mod:text-[18px] saira font-semibold py-2 se:py-[6px] md:py-3'>{languageData?.homepageBtn4}</button>
