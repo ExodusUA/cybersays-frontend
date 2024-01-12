@@ -40,7 +40,7 @@ function LeaderboardModal({ setOpen, leaderboardData, loading }) {
                                             : leaderboardData.leaderboard[1].avatar
                                     } alt="twoSt" />
                                     <p className='saira text-[12px] md:text-[14px] font-medium text-center truncate mx-2 md:mx-1'>{leaderboardData.leaderboard[1].email}</p>
-                                    <p className='saira text-[14px] md:text-[16px] font-medium text-[#FFED63] text-center'>$6.90</p>
+                                    <p className='saira text-[14px] md:text-[16px] font-medium text-[#FFED63] text-center'>$69</p>
                                     <p className='saira text-[14px] md:text-[14px] font-medium text-[#FFED63] text-center'>{leaderboardData.leaderboard[1].points} points </p>
                                 </div>
                                 <div className='mb-[20px] relative z-20 w-[120px] md:w-[140px]'>
@@ -63,7 +63,7 @@ function LeaderboardModal({ setOpen, leaderboardData, loading }) {
                                             : leaderboardData.leaderboard[2].avatar
                                     } alt="twoSt" />
                                     <p className='saira text-[12px] md:text-[14px] font-medium text-center truncate mx-2 md:mx-1'>{leaderboardData.leaderboard[2].email}</p>
-                                    <p className='saira text-[14px] md:text-[16px] font-medium text-[#FFED63] text-center'>$6.90</p>
+                                    <p className='saira text-[14px] md:text-[16px] font-medium text-[#FFED63] text-center'>$69</p>
                                     <p className='saira text-[14px] md:text-[14px] font-medium text-[#FFED63] text-center'>{leaderboardData.leaderboard[2].points} points </p>
                                 </div>
                             </div>
