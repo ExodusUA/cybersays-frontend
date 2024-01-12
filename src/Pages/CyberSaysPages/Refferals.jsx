@@ -6,6 +6,7 @@ import logoCyber from '../../images/CyberSaysPage/logoMain.png'
 import left from '../../images/CyberSaysPage/swiperBtnDesctopLeft.png'
 import right from '../../images/CyberSaysPage/swiperBtnDesctopRight.png'
 import { Navigation } from 'swiper/modules';
+import CustomTooltip from '../../Components/CustomTooltip';
 
 function Refferals({ user, languageData, setReferralsOpen }) {
 
@@ -98,10 +99,12 @@ function Refferals({ user, languageData, setReferralsOpen }) {
         }, 3000);
     }
 
+    const [infoTooltip, setInfoTooltip] = useState(false)
+
     return (
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-terms.jpg)] md:bg-[url(./images/CyberSaysPage/bg-terms.jpg)] bg-cover bg-no-repeat bg-center relative z-10' >
-            <div className='pt-[60px]  md:pt-[90px] px-4 max-w-[1170px] m-auto' >
-                <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] mac:!w-[400px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
+            <div className='pt-[60px]  md:pt-[90px] mac:!pt-[80px] px-4 max-w-[1170px] m-auto' >
+                <img className=' se:mb-[-5px] iphone:w-[310px]  md:w-[500px] mac:!w-[400px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
                 <div className=' flex justify-center'>
                     <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center max-w-[800px] w-full py-1 px-2'>
                         <p className='text-[14px]  sm:text-[24px]  font-semibold max-w-[540px] m-auto iphone:leading-[unset] se:leading-[16px] mac:!leading-[24px]'>Share with your friends to be the kind
@@ -115,7 +118,7 @@ function Refferals({ user, languageData, setReferralsOpen }) {
                                     data-tooltip-id="my-tooltip-inline2"
 
                                 >
-                                    <svg className='ml-1 cursor-pointer sm:w-[24px] sm:h-[24px]' width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg onClick={e => setInfoTooltip(true)} className='ml-1 cursor-pointer sm:w-[24px] sm:h-[24px]' width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_1_55928)">
                                             <path d="M5.9 9H7.1V5.4H5.9V9ZM6.5 4.2C6.67 4.2 6.8126 4.1424 6.9278 4.0272C7.043 3.912 7.1004 3.7696 7.1 3.6C7.1 3.43 7.0424 3.2876 6.9272 3.1728C6.812 3.058 6.6696 3.0004 6.5 3C6.33 3 6.1876 3.0576 6.0728 3.1728C5.958 3.288 5.9004 3.4304 5.9 3.6C5.9 3.77 5.9576 3.9126 6.0728 4.0278C6.188 4.143 6.3304 4.2004 6.5 4.2ZM6.5 12C5.67 12 4.89 11.8424 4.16 11.5272C3.43 11.212 2.795 10.7846 2.255 10.245C1.715 9.705 1.2876 9.07 0.9728 8.34C0.658 7.61 0.5004 6.83 0.5 6C0.5 5.17 0.6576 4.39 0.9728 3.66C1.288 2.93 1.7154 2.295 2.255 1.755C2.795 1.215 3.43 0.7876 4.16 0.4728C4.89 0.158 5.67 0.0004 6.5 0C7.33 0 8.11 0.1576 8.84 0.4728C9.57 0.788 10.205 1.2154 10.745 1.755C11.285 2.295 11.7126 2.93 12.0278 3.66C12.343 4.39 12.5004 5.17 12.5 6C12.5 6.83 12.3424 7.61 12.0272 8.34C11.712 9.07 11.2846 9.705 10.745 10.245C10.205 10.785 9.57 11.2126 8.84 11.5278C8.11 11.843 7.33 12.0004 6.5 12ZM6.5 10.8C7.84 10.8 8.975 10.335 9.905 9.405C10.835 8.475 11.3 7.34 11.3 6C11.3 4.66 10.835 3.525 9.905 2.595C8.975 1.665 7.84 1.2 6.5 1.2C5.16 1.2 4.025 1.665 3.095 2.595C2.165 3.525 1.7 4.66 1.7 6C1.7 7.34 2.165 8.475 3.095 9.405C4.025 10.335 5.16 10.8 6.5 10.8Z" fill="white" />
                                         </g>
@@ -128,7 +131,31 @@ function Refferals({ user, languageData, setReferralsOpen }) {
                                 </a>
                             </p>
                         </div>
+                        <CustomTooltip setOpen={setInfoTooltip} open={infoTooltip} >
+                            <div>
+                                <p className='text-[14px] md:text-[32px] font-semibold text-center text-black mb-2'>Be the king</p>
+                                <div className='flex justify-between'>
+                                    <div className='flex items-start max-w-[250px] w-full'>
+                                        <p className='text-black  text-[12px] saira font-medium'>1.</p>
+                                        <p className='text-black text-[12px] saira font-medium'>You will be the kind that sends your friends to double their money and have fun 👬</p>
+                                    </div>
+                                    <div className='w-[2px]  bg-[#FFED63]'></div>
+                                    <div className='flex items-start max-w-[250px] w-full'>
+                                        <p className='text-black  text-[12px] saira font-medium'>2.</p>
+                                        <p className='text-black text-[12px] saira font-medium'>For eveery friend that doubles the money you will get 30 raffle tickets and 1$ 🃏</p>
+                                    </div>
+                                    <div className='w-[2px]  bg-[#FFED63]'></div>
+                                    <div className='flex items-start max-w-[250px] w-full leading-[15px]'>
+                                        <p className='text-black  text-[12px] saira font-medium'>3.</p>
+                                        <p className='text-black text-[12px] saira font-medium'>If your friends double their money, you can take them to Vegas if you win the raffle, and they can take you if they win and you took the double-the-money offer</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </CustomTooltip>
                     </div>
+
                 </div>
                 <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3 mx-14 sm:mx-0 iphone:leading-[14px] se:leading-[16px]'>Choose text and image or keep it simple and without it</p>
                 <div className=' w-full hidden lg:block pr-2'>
@@ -191,8 +218,8 @@ function Refferals({ user, languageData, setReferralsOpen }) {
                         ))}
                     </Swiper>
                 </div>
-                <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3'>Choose an image</p>
-                <div className='lg:mt-[80px] mac:!mt-[60px]'>
+                <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3 mac:!my-0'>Choose an image</p>
+                <div className='lg:mt-[80px] mac:!mt-[50px]'>
                     <div className=' w-full hidden lg:block mb-[-100px] pr-2'>
                         <div className=' justify-between flex my-3  mx-10'>
                             <img className='w-[44px] mr-3 cursor-pointer buttonPrevGif' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
@@ -282,6 +309,7 @@ function Refferals({ user, languageData, setReferralsOpen }) {
                 </div>
                 <p className={`cursor-pointer text-center text-[16px] saira font-semibold underline my-1 ${isLinkCopied === true ? 'opacity-70' : 'opacity-100'}`} onClick={e => copyToClipboard()}>Copy link</p>
 
+                {/*
                 <Tooltip
 
 
@@ -310,6 +338,7 @@ function Refferals({ user, languageData, setReferralsOpen }) {
 
                     </div>
                 </Tooltip>
+                */}
             </div>
         </div>
     )
