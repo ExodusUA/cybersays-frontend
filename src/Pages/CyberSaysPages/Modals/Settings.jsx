@@ -85,22 +85,22 @@ function Settings({ user, setOpen }) {
                                 <div className='flex justify-end mb-2'>
                                     <img onClick={e => setDeleteStep(0)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
                                 </div>
-                                <h1 className='text-[16px] text-white text-center'>If you delete your account
+                                <h1 className='text-[16px] text-white text-center font-semibold'>If you delete your account
                                     all your achievements
                                     will be lost</h1>
 
-                                <button onClick={e => setDeleteStep(2)} className='w-full bg-[white] border-[#FFD700] px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[18px] text-[#5f5f5f] font-semibold'>Continue</button>
+                                <button onClick={e => setDeleteStep(2)} className='w-full bg-[white] border-[#FFD700] px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[50px] text-[18px] text-[#5f5f5f] font-semibold'>Continue</button>
                             </div>
                             : deleteStep === 2
                                 ? <div className='absolute  backdrop-blur-lg p-6 bg-black/50 rounded-[20px] border-[#FFD700] border'>
                                     <div className='flex justify-end mb-2'>
                                         <img onClick={e => setDeleteStep(0)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
                                     </div>
-                                    <h1 className='text-[16px] text-center text-[#FF4B60]'>Are you sure you want to delete your account?</h1>
+                                    <h1 className='text-[16px] text-center text-[#FF4B60] font-semibold'>Are you sure you want to delete your account?</h1>
 
                                     <div className='flex items-center gap-4'>
-                                        <button onClick={e => setDeleteStep(0)} className='w-full bg-transparent border-[#FFD700] border px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[18px] text-white font-semibold'>No</button>
-                                        <button onClick={e => deleteAccountHandler()} className='w-full bg-[white] border-[#FFD700] px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[18px] text-[#5f5f5f] font-semibold'>Yes</button>
+                                        <button onClick={e => setDeleteStep(0)} className='w-full bg-transparent border-[#FFD700] border px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[50px] text-[18px] text-white font-semibold'>No</button>
+                                        <button onClick={e => deleteAccountHandler()} className='w-full bg-[white] border-[#FFD700] px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[50px] text-[18px] text-[#5f5f5f] font-semibold'>Yes</button>
                                     </div>
                                 </div>
                                 : null

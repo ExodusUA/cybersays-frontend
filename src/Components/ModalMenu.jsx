@@ -29,12 +29,13 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
   const [withdrawModal, setWithdrawModal] = useState(false)
   const [transactionsModal, setTransactionsModal] = useState(false)
   const [ticketsModal, setTicketsModal] = useState(false)
- 
+
 
   const [aboutModal, setAboutModal] = useState(false)
   const [legalModal, setLegalModal] = useState(false)
   const [settingsModal, setSettingsModal] = useState(false)
   const [contactModal, setContactModal] = useState(false)
+  const [logoutModal, setLogoutModal] = useState(false)
 
   return (
     <div>
@@ -43,7 +44,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
           <img onClick={() => setMenuOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
           <div className='flex justify-between'>
             <NewLanguageButton />
-            <div className='ml-3 min-w-[50px] h-[50px] border-[2px] border-[#FFED63] bg-[#626161] rounded-full flex justify-center items-center  cursor-pointer'>
+            <div onClick={e => setLogoutModal(true)} className='ml-3 min-w-[50px] h-[50px] border-[2px] border-[#FFED63] bg-[#626161] rounded-full flex justify-center items-center  cursor-pointer'>
               <svg className='ml-[-5px]' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 15.75L15.75 12M15.75 12L12 8.25M15.75 12H2M8.25 6.06125V6C8.25 4.6 8.25 3.9 8.5225 3.365C8.7625 2.89375 9.14375 2.5125 9.615 2.2725C10.15 2 10.85 2 12.25 2H18C19.4 2 20.1 2 20.6337 2.2725C21.105 2.5125 21.4875 2.89375 21.7275 3.365C22 3.89875 22 4.59875 22 5.99625V18.005C22 19.4025 22 20.1013 21.7275 20.635C21.4874 21.1055 21.1045 21.4879 20.6337 21.7275C20.1 22 19.4012 22 18.0037 22H12.2462C10.8487 22 10.1487 22 9.615 21.7275C9.14462 21.4878 8.76218 21.1054 8.5225 20.635C8.25 20.1 8.25 19.4 8.25 18V17.9375" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
@@ -107,6 +108,25 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
           </div>
         </div>
 
+        {
+          logoutModal === true
+            ?
+            <div className='flex justify-center items-center'>
+              <div className='fixed top-1/2 -translate-y-1/2 backdrop-blur-xl bg-opacity-60 p-6 bg-black rounded-[20px] border-[#FFD700] border'>
+                <div className='flex justify-end mb-2'>
+                  <img onClick={e => setLogoutModal(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
+                </div>
+                <h1 className='text-[24px] text-center max-w-[320px] w-full font-semibold mx-14'>Are you sure
+                  you want to log out?</h1>
+
+                <div className='flex items-center gap-4'>
+                  <button onClick={e => setLogoutModal(false)} className='w-full bg-transparent border-[#FFD700] border px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[50px] text-[18px] text-white font-semibold'>No</button>
+                  <button className='w-full bg-[white] border-[#FFD700] px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[50px] text-[18px] text-[#5f5f5f] font-semibold'>Yes</button>
+                </div>
+              </div>
+            </div>
+            : null
+        }
 
       </div>
       {

@@ -7,7 +7,7 @@ module.exports = {
     screens: {
       'mob': '374px',
 
-      'mobMax': { 'max': '374px' },
+      'mobMax': { 'max': '414px' },
       'mac': { 'raw': '(max-height: 790px)' },
 
       'mac2': { 'raw': '(max-height: 860px)' },

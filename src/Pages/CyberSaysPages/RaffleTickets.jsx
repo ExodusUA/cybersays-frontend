@@ -7,7 +7,6 @@ import ready from '../../images/CyberSaysPage/offerTrue.png'
 import notReady from '../../images/CyberSaysPage/offerFalse.png'
 import { Link } from 'react-router-dom';
 import CustomTooltip from '../../Components/CustomTooltip';
-import Tooltip1 from '../../Components/Tooltip1';
 import Popup from 'reactjs-popup';
 
 function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
@@ -68,7 +67,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
     }
 
     const [infoTooltip, setInfoTooltip] = useState(false)
-    const [openTooltip, setOpenTooltip] = useState(false)
+   
 
 
 
@@ -207,10 +206,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                 </div>
             </div>
 
-            {
-                openTooltip && <Tooltip1 setOpenTooltip={setOpenTooltip} />
-            }
-
+            
         </div>
     )
 }
