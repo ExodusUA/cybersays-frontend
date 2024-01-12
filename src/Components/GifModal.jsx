@@ -6,48 +6,34 @@ import link2 from '../images/CyberSaysPage/gifLink2.png'
 import link3 from '../images/CyberSaysPage/gifLink3.png'
 import link4 from '../images/CyberSaysPage/gifLink4.png'
 import link5 from '../images/CyberSaysPage/gifLink5.png'
+import { useQuery } from '@tanstack/react-query'
+import { getTrendingGifs, searchGif } from '../Requests/gifs'
 
-function GifModal({ setGifModal }) {
+function GifModal({ setGifModal, handleSubmitGif }) {
 
     const [search, setSearch] = useState('');
-    const dataGif = [
-        {
-            image: gif,
+    const [gifs, setGifs] = useState([]);
+
+    useQuery({
+        queryKey: ['gifs'],
+        queryFn: async () => {
+            const res = await getTrendingGifs()
+
+            setGifs(res.data)
+        }
+    })
+
+    useQuery({
+        queryKey: ['gifs', search],
+        queryFn: async () => {
+            if (search.length === 0) return
+            const res = await searchGif(search)
+            setGifs(res.data)
         },
-        {
-            image: gif,
-        },
-        {
-            image: gif,
-        },
-        {
-            image: gif,
-        },
-        {
-            image: gif,
-        },
-        {
-            image: gif,
-        },
-        {
-            image: gif,
-        },
-        {
-            image: gif,
-        },
-        {
-            image: gif,
-        },
-        {
-            image: gif,
-        },
-        {
-            image: gif,
-        },
-        {
-            image: gif,
-        },
-    ]
+        staleTime: 500,
+        refetchOnWindowFocus: false,
+    })
+
     return (
         <div className='w-screen h-screen fixed top-0 z-[99999] bg-[#1E1E1E] bg-opacity-90 backdrop-blur-2xl '>
             <div className='max-w-[600px] m-auto p-4'>
@@ -57,8 +43,10 @@ function GifModal({ setGifModal }) {
                 </div>
                 <p className=' text-[18px] md:text-[32px] font-semibold text-center my-3'>Choose GIF</p>
                 <div className=' relative  w-full'>
-                    <input type="text" placeholder='Search' className='  border-[2px] border-[#FFED63] saira w-full text-[14px] rounded-[50px] py-[10px] px-5 pr-12 outline-none text-black' value={search} onChange={e => setSearch(e.target.value)} onKeyDown={e => {
-
+                    <input type="text" placeholder='Search' className='  border-[2px] border-[#FFED63] saira w-full text-[14px] rounded-[50px] py-[10px] px-5 pr-12 outline-none text-black' onKeyUp={e => {
+                        setTimeout(() => {
+                            setSearch(e.target.value)
+                        }, 500);
                     }} />
 
                     <svg onClick={e => setGifModal(true)} className='absolute top-[10px] right-4 cursor-pointer' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,11 +55,20 @@ function GifModal({ setGifModal }) {
                 </div>
                 <div className='h-[420px] md:h-[500px] overflow-y-scroll mt-3 ' >
                     <div className='flex flex-wrap justify-between  pb-2 m-auto'>
-                        {dataGif.map((item, index) => (
-                            <div key={index} className='flex-wrap  w-[33%] mt-2 cursor-pointer'>
-                                <img className='w-[96%] h-auto' src={item.image} alt="gif" />
-                            </div>
-                        ))}
+                        {
+                            gifs && gifs.length > 0
+                                ? gifs.map((item, index) => (
+                                    <div onClick={e => {
+                                        handleSubmitGif(item.images.original.url)
+                                        setGifModal(false)
+                                    }} key={index} className='flex-wrap  w-[33%] mt-2 cursor-pointer'>
+                                        <img className='w-[96%] h-full  object-cover' src={item.images.original.url} alt="" />
+                                    </div>
+                                ))
+                                : <div className='flex justify-center w-full my-4'>
+                                    <p className='saira text-[14px] font-medium text-center'>No results found</p>
+                                </div>
+                        }
                     </div>
 
                 </div>
