@@ -21,6 +21,7 @@ import About from '../Pages/CyberSaysPages/Modals/About'
 import Legal from '../Pages/CyberSaysPages/Modals/Legal'
 import Contact from '../Pages/CyberSaysPages/Modals/Contact'
 import Settings from '../Pages/CyberSaysPages/Modals/Settings'
+import { useNavigate } from 'react-router-dom'
 
 function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setChatModal, chatModal }) {
 
@@ -30,12 +31,13 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
   const [transactionsModal, setTransactionsModal] = useState(false)
   const [ticketsModal, setTicketsModal] = useState(false)
 
-
   const [aboutModal, setAboutModal] = useState(false)
   const [legalModal, setLegalModal] = useState(false)
   const [settingsModal, setSettingsModal] = useState(false)
   const [contactModal, setContactModal] = useState(false)
   const [logoutModal, setLogoutModal] = useState(false)
+
+  const navigate = useNavigate()
 
   return (
     <div>
@@ -121,7 +123,10 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
 
                 <div className='flex items-center gap-4'>
                   <button onClick={e => setLogoutModal(false)} className='w-full bg-transparent border-[#FFD700] border px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[50px] text-[18px] text-white font-semibold'>No</button>
-                  <button className='w-full bg-[white] border-[#FFD700] px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[50px] text-[18px] text-[#5f5f5f] font-semibold'>Yes</button>
+                  <button onClick={e => {
+                    window.localStorage.removeItem('token')
+                    navigate('/login')
+                  }} className='w-full bg-[white] border-[#FFD700] px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[50px] text-[18px] text-[#5f5f5f] font-semibold'>Yes</button>
                 </div>
               </div>
             </div>
