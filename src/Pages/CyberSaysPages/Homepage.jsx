@@ -59,7 +59,7 @@ function Homepage({ user, imLiveURL, languageData }) {
                 <img className='se:w-[230px] se:mb-[-5px] w-[200px] iphone:w-[310px] md:w-[500px] m-auto mac:!w-[400px]' src={logoCyber} alt="logoCyber" />
                 <div className='flex justify-between items-end md:items-center  mt-3'>
                     <div>
-                        <img className='w-[180px] sm:w-[200px] md:w-[350px]' src={girlOK} alt="girlOK" />
+                        <img className='w-[180px] sm:w-[200px] md:w-[320px]  ' src={girlOK} alt="girlOK" />
                         <div className='md:block hidden relative left-3'>
                             {
                                 getButtonMarkup(lastTask)
