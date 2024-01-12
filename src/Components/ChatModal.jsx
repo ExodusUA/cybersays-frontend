@@ -67,7 +67,7 @@ function ChatModal({ user, setOpen }) {
     }, [messages]);
 
     const handleSubmitGif = (gif) => {
-        socket.emit('chat message', [username, `<img class="w-full rounded-[20px] mt-8" src="${gif}" alt="gif" />`]);
+        socket.emit('chat message', [username, `<img class="w-full rounded-[20px] mt-2" src="${gif}" alt="gif" />`]);
         setGifModal(false)
     }
 
