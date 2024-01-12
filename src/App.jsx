@@ -13,9 +13,8 @@ function App() {
 
   const params = new URLSearchParams(window.location.search);
 
-  if (params.get('ref')) {
-    window.localStorage.setItem('ref', params.get('ref'))
-    window.location.href = '/login'
+  if (params.get('uid')) {
+    window.location.href = '/login?ref=' + params.get('uid')
   };
 
   const queryClient = new QueryClient()

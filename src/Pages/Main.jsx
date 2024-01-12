@@ -32,7 +32,7 @@ function Main({ languageData }) {
     const [imLiveURL, setImLiveURL] = useState(null);
     const navigate = useNavigate()
     const urlParams = new URLSearchParams(window.location.search);
-    const uid = urlParams.get('userid');
+    const uid = urlParams.get('uid');
 
     const [menuOpen, setMenuOpen] = useState(false)
     const [deleteOpen, setDeleteOpen] = useState(false)

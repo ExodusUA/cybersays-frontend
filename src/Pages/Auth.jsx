@@ -12,6 +12,10 @@ import LoginForm from './Auth/LoginForm';
 
 function Auth({ languageData }) {
 
+    const params = new URLSearchParams(window.location.search);
+
+    let referralID = params.get('ref');
+
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const slideChange = (swiper) => {
@@ -56,7 +60,7 @@ function Auth({ languageData }) {
                                     {currentSlide === 2 && languageData?.authSlide3}
                                     {currentSlide === 3 && languageData?.authSlide4}
                                 </p>
-                                <LoginForm languageData={languageData} />
+                                <LoginForm languageData={languageData} referralID={referralID} />
                             </div>
                         </div>
                     </div>

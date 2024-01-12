@@ -12,14 +12,14 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import { getUserCountry } from '../../Requests/utills';
 import DiscordButton from '../../Components/Buttons/DiscordButton';
 
-function LoginForm({ languageData }) {
+function LoginForm({ languageData, referralID }) {
 
     const recaptchaRef = useRef();
     const navigate = useNavigate();
 
     const [activeModal, setActiveModal] = useState(null);
     const queryParams = new URLSearchParams(window.location.search);
-    let refferalCode = queryParams.get('ref') || window.localStorage.getItem('ref');
+    let refferalCode = referralID;
     let special = queryParams.get('special');
 
     if (special === undefined || special === null) special = null
