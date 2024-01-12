@@ -68,7 +68,6 @@ function ChatModal({ user, setOpen }) {
 
     const [gifModal, setGifModal] = useState(false);
 
-
     return (
         <div className='w-screen h-screen fixed top-0 z-[99999] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md '>
             <div className='max-w-[600px] m-auto p-4 '>
@@ -84,7 +83,7 @@ function ChatModal({ user, setOpen }) {
                     <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
                 </div>
                 <p className=' text-[18px] md:text-[32px] font-semibold text-center mt-3'>Chat Room</p>
-                <div className='h-[500px] overflow-y-scroll  duration-300' ref={chatContainer}
+                <div className='h-[500px] overflow-y-scroll  duration-300 pb-4' ref={chatContainer}
                     style={{
                         overflowY: 'auto',
                     }}>
@@ -92,21 +91,21 @@ function ChatModal({ user, setOpen }) {
                         messages.length > 0 ?
                             filterMessages(messages).map((item, index) => (
                                 <div className={`${item.username === user.email ? 'flex justify-end' : ''}`} key={item}>
-                                    <div className={`bg-[#EAEAEA] bg-opacity-10 rounded-[20px] p-2 md:p-5 max-w-[240px] sm:max-w-[360px] w-full ${item.username === user.email ? 'my-1 border-[2px] border-[#FFED63]' : 'my-2'}`}>
+                                    <div className={`bg-[#EAEAEA] bg-opacity-10 rounded-[20px] p-2 md:p-5 max-w-[280px] sm:max-w-[450px] w-full ${item.username === user.email ? 'my-1 border-[2px] border-[#FFED63]' : 'my-2'}`}>
                                         <div className='flex justify-between items-center'>
                                             <div className='flex items-center max-w-[110px] md:max-w-[225px] w-full mr-4'>
                                                 <img className='rounded-full w-[32px] h-[32px] mr-2' src={avatar} alt="avatar" />
-                                                <p className='saira text-[14px] md:text-[16px] font-semibold truncate'>{item.username}</p>
+                                                <p className='saira text-[14px] md:text-[16px] font-semibold truncate'>{item.username.replace(/(.{2}).*?@/, '$1********@')}</p>
                                             </div>
-                                            <p className='saira text-[14px] md:text-[16px] font-normal'>{moment.unix((Number(item.datetime))).format('hh:mm A')}</p>
+                                            <p className='saira text-[14px] md:text-[16px] font-normal'>{moment.unix((Number(item.datetime))).format('DD/MM hh:mm A')}</p>
                                         </div>
                                         <div className='flex-shrink-0'>
-                                            <p className='saira text-[12px] md:text-[14px] font-medium'>{item.text}</p>
+                                            <p className='saira text-[12px] md:text-[14px] font-medium break-words'>{item.text}</p>
                                         </div>
                                     </div>
                                 </div>
                             ))
-                            : <div className='text-center saira mt-20'>Поки що немає повідомлень</div>
+                            : <div className='text-center saira mt-20'>There are no messages yet</div>
                     }
 
                 </div>

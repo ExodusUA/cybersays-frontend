@@ -63,9 +63,9 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
                 <div className='max-w-[600px] m-auto'>
                     {
                         taskStatus !== null && <>
-                            <TaskCard data={languageData?.tasks?.task1} state={'finished'} background={'#B9A1E1'} rounded={'rounded-t-[20px] '} index={1} imLiveURL={imLiveURL} />
-                            <TaskCard data={languageData?.tasks?.task2} state={'finished'} background={'#93CC8E'} rounded={'rounded-t-[20px] '} index={2} imLiveURL={imLiveURL} />
-                            <TaskCard data={languageData?.tasks?.task3} state={'active'} background={'#EA7C7C'} rounded={'rounded-t-[20px] '} index={3} imLiveURL={imLiveURL} />
+                            <TaskCard data={languageData?.tasks?.task1} state={taskStatus[0]} background={'#B9A1E1'} rounded={'rounded-t-[20px] '} index={1} imLiveURL={imLiveURL} />
+                            <TaskCard data={languageData?.tasks?.task2} state={taskStatus[0]} background={'#93CC8E'} rounded={'rounded-t-[20px] '} index={2} imLiveURL={imLiveURL} />
+                            <TaskCard data={languageData?.tasks?.task3} state={taskStatus[2]} background={'#EA7C7C'} rounded={'rounded-t-[20px] '} index={3} imLiveURL={imLiveURL} />
                             <TaskCard data={languageData?.tasks?.task4} state={taskStatus[3]} background={'#76C2E3'} rounded={'rounded-[20px] !pb-[5px]'} index={4} imLiveURL={imLiveURL} />
                         </>
                     }
