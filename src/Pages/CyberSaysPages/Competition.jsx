@@ -48,11 +48,11 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] md:bg-[url(./images/CyberSaysPage/bg-raffle.jpg)] bg-cover bg-no-repeat bg-center relative z-10'>
 
             <div className='pt-[60px]  md:pt-[90px] px-4 max-w-[1170px] m-auto' >
-                <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px] mac:!w-[400px]' src={logoCyber} alt="logoCyber" />
-                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[30px] text-center se:py-1 iphone:py-3 mac:!py-1 px-2 sm:max-w-[600px] m-auto'>
+                <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px] mac:!w-[300px]' src={logoCyber} alt="logoCyber" />
+                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[30px] text-center se:py-1 iphone:py-3 mac:!py-0 px-2 sm:max-w-[600px] m-auto'>
                     <p className='text-center text-[14px] sm:text-[32px] mac:!text-[24px] font-semibold'>The {siteData?.currentDay} daily competition</p>
                     {
-                        loading === false && <div className='flex justify-around items-center my-2 max-w-[250px] sm:max-w-[350px] w-full m-auto'>
+                        loading === false && <div className='flex justify-around items-center my-2 mac:my-1 max-w-[250px] sm:max-w-[350px] w-full m-auto'>
                             <div>
                                 <p className='text-[16px] saira font-bold'>2</p>
                                 <img className='w-[26px] h-[26px] sm:w-[50px] sm:h-[50px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={
@@ -109,7 +109,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                     <p className='text-center text-[12px] sm:text-[14px] saira font-semibold underline se:mt-0 iphone:mt-3 mac:!mt-0 cursor-pointer' onClick={e => setLeaderboardModal(true)}>Leaderboards</p>
 
                 </div>
-                <p className='text-center text-[12px] sm:text-[14px] text-[#FFED63] saira font-semibold underline se:mt-2 iphone:mt-7 mac:!mt-3 mb-2 cursor-pointer'>Rules of the competition</p>
+                <p className='text-center text-[12px] sm:text-[14px] text-[#FFED63] saira font-semibold underline se:mt-2 iphone:mt-7 mac:!mt-1 mb-2 cursor-pointer'>Rules of the competition</p>
                 <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
                     <TimeCounter languageData={languageData} />
                 </div>
