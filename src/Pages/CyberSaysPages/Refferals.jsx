@@ -104,13 +104,13 @@ function Refferals({ user, languageData, setReferralsOpen }) {
     return (
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-terms.jpg)] md:bg-[url(./images/CyberSaysPage/bg-terms.jpg)] bg-cover bg-no-repeat bg-center relative z-10' >
             <div className='pt-[60px]  md:pt-[90px] mac:!pt-[80px] px-4 max-w-[1170px] m-auto' >
-                <img className=' se:mb-[-5px] iphone:w-[310px]  md:w-[500px] mac:!w-[400px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
+                <img className=' se:mb-[-5px] iphone:w-[310px]  md:w-[500px] mac:!w-[350px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
 
 
                 <div className='flex flex-col-reverse relative'>
 
 
-                    <div className='lg:mt-[50px] mac:!mt-[50px]'>
+                    <div className='lg:mt-[40px] mac:!mt-[60px]'>
                         <div className=' w-full hidden lg:block mb-[-100px] pr-2'>
                             <div className=' justify-between flex my-3  mx-10'>
                                 <img className='w-[44px] mr-3 cursor-pointer buttonPrevGif' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
@@ -189,7 +189,7 @@ function Refferals({ user, languageData, setReferralsOpen }) {
                         </div>
                     </div>
                     <div>
-                        <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3 mx-14 sm:mx-0 iphone:leading-[14px] se:leading-[16px]'>Choose text and image or keep it simple and without it</p>
+                        <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3 lg:my-6 mx-14 sm:mx-0 iphone:leading-[14px] se:leading-[16px]'>Choose text and image or keep it simple and without it</p>
                         <div className=' w-full hidden lg:block pr-2'>
                             <div className=' justify-between flex my-3 mb-[-43px] mx-10'>
                                 <img className='w-[44px] mr-3 cursor-pointer buttonPrevMessage' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
@@ -250,7 +250,7 @@ function Refferals({ user, languageData, setReferralsOpen }) {
                                 ))}
                             </Swiper>
                         </div>
-                        <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3 mac:!my-0'>Choose an image</p>
+                        <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3 mac:!my-2'>Choose an image</p>
                     </div>
                     <div className=' flex justify-center'>
                         <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center max-w-[800px] w-full py-1 px-2'>

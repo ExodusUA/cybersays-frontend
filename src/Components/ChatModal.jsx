@@ -67,7 +67,7 @@ function ChatModal({ user, setOpen }) {
     }, [messages]);
 
     const handleSubmitGif = (gif) => {
-        socket.emit('chat message', [username, `<img class="max-w-[260px] max-h-[260px] rounded-[20px] mt-8" src="${gif}" alt="gif" />`]);
+        socket.emit('chat message', [username, `<img class="w-full rounded-[20px] mt-8" src="${gif}" alt="gif" />`]);
         setGifModal(false)
     }
 
@@ -104,7 +104,7 @@ function ChatModal({ user, setOpen }) {
                                             </div>
                                             <p className='saira text-[14px] md:text-[16px] font-normal'>{moment.unix((Number(item.datetime))).format('DD/MM hh:mm A')}</p>
                                         </div>
-                                        <div className='flex-shrink-0'>
+                                        <div className=''>
                                             <p className='saira text-[12px] md:text-[14px] font-medium break-words' dangerouslySetInnerHTML={{ __html: item.text }}></p>
                                         </div>
                                     </div>
