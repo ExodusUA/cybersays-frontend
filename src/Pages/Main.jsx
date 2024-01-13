@@ -24,10 +24,48 @@ import ChatModal from '../Components/ChatModal'
 import infoAPI from '../Requests/info'
 import MyReferralsModal from '../Components/ProfileReferrals/MyReferralsModal'
 import chatImage from '../images/CyberSaysPage/mobileMenuLink/link9.png'
+import Message from './CyberSaysPages/Modals/Message'
+import AvatarModal from '../Components/ProfileReferrals/AvatarModal'
 var mixpanel = require('mixpanel-browser');
 
 
 function Main({ languageData }) {
+
+    const dataMessage = [
+        {
+            desc: '1 Message text Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas',
+        },
+        {
+            desc: '2 Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+        {
+            desc: '3 Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+        {
+            desc: '4 Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+        {
+            desc: '5 Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+        {
+            desc: '6 Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+        {
+            desc: '7 Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+    ]
+    const [messageCopied, setMessagetCopied] = useState(Array(dataMessage.length).fill(false));
+    const copyToMessage = (text, messageIndex) => {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        const newTextCopied = [...messageCopied];
+        newTextCopied[messageIndex] = true;
+        setMessagetCopied(newTextCopied);
+    };
 
     const [imLiveURL, setImLiveURL] = useState(null);
     const navigate = useNavigate()
@@ -48,6 +86,9 @@ function Main({ languageData }) {
     const [withdrawModal, setWithdrawModal] = useState(false)
 
     const [chatModal, setChatModal] = useState(false)
+    const [openMessage, setOpenMassege] = useState(false);
+    const [openAvatar, setOpenAvatar] = useState(false);
+    const [selectedMessage, setSelectedMassege] = useState(null);
 
     useQuery({
         queryKey: ['userData'],
@@ -135,7 +176,7 @@ function Main({ languageData }) {
                         <Double setOpen={setWithdrawModal} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Refferals setReferralsOpen={setReferralsOpen} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} />
+                        <Refferals message={selectedMessage !== null ? dataMessage[selectedMessage].desc : ''} copyToMessage={copyToMessage} setSelectedMassege={setSelectedMassege} selectedMessage={selectedMessage} setOpenAvatar={setOpenAvatar} setOpenMassege={setOpenMassege} dataMessage={dataMessage} setReferralsOpen={setReferralsOpen} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} />
                     </SwiperSlide>
                     <SwiperSlide>
                         <Competition siteData={siteData} imLiveURL={imLiveURL} user={userData} languageData={languageData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading} />
@@ -190,7 +231,15 @@ function Main({ languageData }) {
                 chatModal && <ChatModal setOpen={setChatModal} user={userData} />
             }
 
-
+            {
+                openMessage && <Message onCloseCopied={() => {
+                    setMessagetCopied(Array(dataMessage.length).fill(false));
+                
+                }} selectedMessage={selectedMessage}  messageCopied={messageCopied} copyToMessage={copyToMessage} message={selectedMessage !== null ? dataMessage[selectedMessage].desc : ''} setOpenMassege={setOpenMassege} />
+            }
+            {
+                openAvatar && <AvatarModal setOpenAvatar={setOpenAvatar} />
+            }
             <div className='fixed right-8 hidden bottom-8 sm:block z-[99]'>
                 <img onClick={e => setChatModal(true)} className='w-12 cursor-pointer' src={chatImage} alt="Chat" />
             </div>

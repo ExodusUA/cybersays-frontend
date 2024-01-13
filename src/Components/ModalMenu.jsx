@@ -92,7 +92,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
             </div>
             <div className='flex items-center' onClick={e => setTransactionsModal(true)} >
               <img className='w-[32px] h-[32px] mr-2' src={link7} alt="link7" />
-              <p className='saira text-[20px] font-semibold cursor-pointer'>Transition history</p>
+              <p className='saira text-[20px] font-semibold cursor-pointer'>Transaction History</p>
             </div>
             <div className='flex items-center' onClick={e => setTicketsModal(true)} >
               <img className='w-[32px] h-[32px] mr-2' src={link10} alt="link10" />

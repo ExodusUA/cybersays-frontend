@@ -36,9 +36,9 @@ function Withdraw({ user, setOpen }) {
                 </div>
                 <p className='text-[18px] md:text-[32px] font-semibold text-center'>Withdraw</p>
                 <p className='text-[12px] text-[#FFED63] font-medium text-center saira'>Can withdraw all or nothing</p>
-                <div className='bg-[#EAEAEA] bg-opacity-30 backdrop-blur-lg rounded-[30px] text-center flex justify-center w-[150px] m-auto mt-3'>
-                    <div>
-                        <p className='text-[32px] text-[#FFED63] font-bold text-center saira leading-9 mt-1'>${user?.earned.toFixed(2)}</p>
+                <div className=' text-center flex justify-center  m-auto mt-3'>
+                    <div className='bg-[#EAEAEA] bg-opacity-30 backdrop-blur-lg rounded-[30px] px-8'>
+                        <p className='text-[32px] w-f text-[#FFED63] font-bold text-center saira leading-9 mt-1'>${user?.earned.toFixed(2)}</p>
                         <p className='text-[12px] font-medium text-center saira leading-3 mb-2'>Available</p>
                     </div>
                 </div>

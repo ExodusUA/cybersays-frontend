@@ -7,13 +7,15 @@ import left from '../../images/CyberSaysPage/swiperBtnDesctopLeft.png'
 import right from '../../images/CyberSaysPage/swiperBtnDesctopRight.png'
 import { Navigation } from 'swiper/modules';
 import CustomTooltip from '../../Components/CustomTooltip';
+import Message from './Modals/Message';
 
-function Refferals({ user, languageData, setReferralsOpen }) {
+function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenMassege, setOpenAvatar, selectedMessage, setSelectedMassege, copyToMessage, message }) {
 
     let swiperRef;
 
     const [selectedGif, setSelectedGif] = useState(null);
-    const [selectedMessage, setSelectedMassege] = useState(null);
+
+
 
     const dataGif = [
         {
@@ -41,29 +43,7 @@ function Refferals({ user, languageData, setReferralsOpen }) {
             image: gif1,
         },
     ]
-    const dataMessage = [
-        {
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        },
-        {
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        },
-        {
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        },
-        {
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        },
-        {
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        },
-        {
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        },
-        {
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        },
-    ]
+
 
     const [isLinkShared, setIsLinkShared] = useState(false)
 
@@ -237,11 +217,14 @@ function Refferals({ user, languageData, setReferralsOpen }) {
                                         <div key={index} onClick={e => setSelectedMassege(index)}
                                             className={`${selectedMessage === index && 'border-[2px] !border-[#FFED63]'} flex justify-between items-center se:p-1 iphone:p-2 rounded-[50px] border-[2px] border-white cursor-pointer max-w-[220px] w-full`} >
                                             <p className='w-[150px] truncate saira text-[14px] font-medium'>{item.desc}</p>
-                                            <svg className='cursor-pointer mr-2' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg onClick={e => copyToMessage(message)} className='cursor-pointer mr-2' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M7 9.667C7 8.95967 7.28099 8.28131 7.78115 7.78115C8.28131 7.28099 8.95967 7 9.667 7H18.333C18.6832 7 19.03 7.06898 19.3536 7.20301C19.6772 7.33704 19.9712 7.53349 20.2189 7.78115C20.4665 8.0288 20.663 8.32281 20.797 8.64638C20.931 8.96996 21 9.31676 21 9.667V18.333C21 18.6832 20.931 19.03 20.797 19.3536C20.663 19.6772 20.4665 19.9712 20.2189 20.2189C19.9712 20.4665 19.6772 20.663 19.3536 20.797C19.03 20.931 18.6832 21 18.333 21H9.667C9.31676 21 8.96996 20.931 8.64638 20.797C8.32281 20.663 8.0288 20.4665 7.78115 20.2189C7.53349 19.9712 7.33704 19.6772 7.20301 19.3536C7.06898 19.03 7 18.6832 7 18.333V9.667Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                                 <path d="M4.012 16.737C3.70534 16.5622 3.45027 16.3095 3.27258 16.0045C3.09488 15.6995 3.00085 15.353 3 15V5C3 3.9 3.9 3 5 3H15C15.75 3 16.158 3.385 16.5 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
-                                            <svg className='cursor-pointer' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg onClick={() => {
+                                                setSelectedMassege(index);
+                                                setOpenMassege(true, item.desc);
+                                            }} className='cursor-pointer' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M21 21L16.657 16.657M16.657 16.657C17.3998 15.9141 17.9891 15.0321 18.3912 14.0615C18.7932 13.0909 19.0002 12.0506 19.0002 11C19.0002 9.94936 18.7932 8.90905 18.3912 7.93842C17.9891 6.96779 17.3998 6.08585 16.657 5.34296C15.9141 4.60007 15.0321 4.01078 14.0615 3.60874C13.0909 3.20669 12.0506 2.99976 11 2.99976C9.94936 2.99976 8.90905 3.20669 7.93842 3.60874C6.96779 4.01078 6.08585 4.60007 5.34296 5.34296C3.84263 6.84329 2.99976 8.87818 2.99976 11C2.99976 13.1217 3.84263 15.1566 5.34296 16.657C6.84329 18.1573 8.87818 19.0002 11 19.0002C13.1217 19.0002 15.1566 18.1573 16.657 16.657Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
 
@@ -283,19 +266,19 @@ function Refferals({ user, languageData, setReferralsOpen }) {
                         <CustomTooltip setOpen={setInfoTooltip} open={infoTooltip} >
                             <div className=''>
                                 <p className='text-[14px] md:text-[32px] font-semibold text-center text-black mb-2'>Be the king</p>
-                                <div className='flex justify-between'>
-                                    <div className='flex items-start max-w-[250px] w-full'>
-                                        <p className='text-black  text-[14px] saira font-medium'>1.</p>
+                                <div className='flex justify-around'>
+                                    <div className='flex items-start max-w-[270px] w-full leading-[16px]'>
+                                        <p className='text-black  text-[14px] saira font-medium mr-2'>1.</p>
                                         <p className='text-black text-[14px] saira font-medium'>You will be the kind that sends your friends to double their money and have fun 👬</p>
                                     </div>
                                     <div className='w-[2px]  bg-[#FFED63]'></div>
-                                    <div className='flex items-start max-w-[250px] w-full'>
-                                        <p className='text-black  text-[14px] saira font-medium'>2.</p>
+                                    <div className='flex items-start max-w-[270px] w-full leading-[16px]'>
+                                        <p className='text-black  text-[14px] saira font-medium mr-2'>2.</p>
                                         <p className='text-black text-[14px] saira font-medium'>For eveery friend that doubles the money you will get 30 raffle tickets and 1$ 🃏</p>
                                     </div>
                                     <div className='w-[2px]  bg-[#FFED63]'></div>
-                                    <div className='flex items-start max-w-[250px] w-full leading-[15px]'>
-                                        <p className='text-black  text-[14px] saira font-medium'>3.</p>
+                                    <div className='flex items-start max-w-[270px] w-full leading-[15px] '>
+                                        <p className='text-black  text-[14px] saira font-medium mr-2'>3.</p>
                                         <p className='text-black text-[14px] saira font-medium'>If your friends double their money, you can take them to Vegas if you win the raffle, and they can take you if they win and you took the double-the-money offer</p>
                                     </div>
 
@@ -305,7 +288,7 @@ function Refferals({ user, languageData, setReferralsOpen }) {
                     </div>
 
                 </div>
-                <p className='text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2'>Choose personalize experience</p>
+                <p onClick={e => setOpenAvatar(true)} className=' cursor-pointer text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2'>Choose personalize experience</p>
                 <div className='flex justify-center'>
                     <button onClick={e => shareRefferalLink()} className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold se:py-1 iphone:py-2 sm:max-w-[350px]'>
                         {
@@ -315,8 +298,9 @@ function Refferals({ user, languageData, setReferralsOpen }) {
                         }
                     </button>
                 </div>
+                {/*
                 <p className={`cursor-pointer text-center text-[16px] saira font-semibold underline my-1 ${isLinkCopied === true ? 'opacity-70' : 'opacity-100'}`} onClick={e => copyToClipboard()}>Copy link</p>
-
+*/}
                 {/*
                 <Tooltip
 
