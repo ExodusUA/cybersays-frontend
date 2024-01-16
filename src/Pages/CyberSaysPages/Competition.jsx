@@ -50,7 +50,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
             <div className='pt-[60px]  md:pt-[90px] px-4 max-w-[1170px] m-auto' >
                 <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px] mac:!mb-[-10px] mac:!w-[300px]' src={logoCyber} alt="logoCyber" />
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[30px] text-center se:py-1 iphone:py-3 mac:!py-0 px-2 sm:max-w-[600px] m-auto'>
-                    <p className='text-center text-[14px] sm:text-[32px] mac:!text-[24px] font-semibold'>The {siteData?.currentDay} daily competition</p>
+                    <p className='text-center text-[14px] sm:text-[32px] mac:!text-[24px] font-semibold'>{languageData?.competitionTitle} {siteData?.currentDay} {languageData?.competitionTitleSpan}</p>
                     {
                         loading === false && <div className='flex justify-around items-center my-2 mac:my-1 max-w-[250px] sm:max-w-[350px] w-full m-auto'>
                             <div>
@@ -61,7 +61,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                                         : leaderboardData.leaderboard[1].avatar
                                 } alt="cup2" />
                                 <p className='text-[12px] sm:text-[14px] saira font-medium text-[#FFED63]'>{leaderboardData.leaderboard[1].points}</p>
-                                <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>Points</p>
+                                <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>{languageData?.competitionPoints}</p>
                             </div>
                             <div>
                                 <p className='text-[16px] saira font-bold'>1</p>
@@ -71,7 +71,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                                         : leaderboardData.leaderboard[0].avatar
                                 } alt="cup2" />
                                 <p className='text-[12px] sm:text-[14px] saira font-medium text-[#FFED63]'>{leaderboardData.leaderboard[0].points}</p>
-                                <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>Points</p>
+                                <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>{languageData?.competitionPoints}</p>
                             </div>
                             <div>
                                 <p className='text-[16px] saira font-bold'>3</p>
@@ -81,35 +81,35 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                                         : leaderboardData.leaderboard[2].avatar
                                 } alt="cup2" />
                                 <p className='text-[12px] sm:text-[14px] saira font-medium text-[#FFED63]'>{leaderboardData.leaderboard[2].points}</p>
-                                <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>Points</p>
+                                <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>{languageData?.competitionPoints}</p>
                             </div>
                         </div>
                     }
-                    <p className='text-center text-[12px] sm:text-[14px] text-[#FFED63] saira font-semibold mb-1'>First 3 places get 69$ each, 4-10 6.90$ each</p>
+                    <p className='text-center text-[12px] sm:text-[14px] text-[#FFED63] saira font-semibold mb-1'>{languageData?.competitionSubtitle}</p>
                     <div className='flex sm:max-w-[400px] md:max-w-[unset] m-auto sm:mt-3'>
                         <div className='text-center w-full md:mx-2'>
                             <Link to={imLiveURL}>
-                                <button className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2 sm:px-6 md:w-full'>Enjoy ImLive 💃</button>
+                                <button className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2 sm:px-6 md:w-full'>{languageData?.competitionLeftBtn}</button>
                             </Link>
-                            <p className='saira text-[12px] sm:text-[14px] font-medium'>1 credit bought = </p>
-                            <p className='saira text-[12px] sm:text-[14px] font-medium'>0.5 points</p>
+                            <p className='saira text-[12px] sm:text-[14px] font-medium'>{languageData?.competitionLeftSection1}</p>
+                            <p className='saira text-[12px] sm:text-[14px] font-medium'>{languageData?.competitionLeftSection2}</p>
                         </div>
                         <div className='text-center w-full md:mx-2'>
                             <button onClick={e => shareRefferalLink()} className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2 sm:px-6 md:w-full'>
                                 {
                                     isLinkCopied === false
-                                        ? 'Refer friends 🤑'
-                                        : 'Link copied!'
+                                        ? languageData?.competitionRightBtn
+                                        : languageData?.competitionRightBtn2
                                 }
                             </button>
-                            <p className='saira text-[12px] sm:text-[14px] font-medium'>Friend doubled money = </p>
-                            <p className='saira text-[12px] sm:text-[14px] font-medium'>10 points</p>
+                            <p className='saira text-[12px] sm:text-[14px] font-medium'>{languageData?.competitionRightSection1}</p>
+                            <p className='saira text-[12px] sm:text-[14px] font-medium'>{languageData?.competitionRightSection2}</p>
                         </div>
                     </div>
-                    <p className='text-center text-[12px] sm:text-[14px] saira font-semibold underline se:mt-0 iphone:mt-3 mac:!mt-0 cursor-pointer' onClick={e => setLeaderboardModal(true)}>Leaderboards</p>
+                    <p className='text-center text-[12px] sm:text-[14px] saira font-semibold underline se:mt-0 iphone:mt-3 mac:!mt-0 cursor-pointer' onClick={e => setLeaderboardModal(true)}>{languageData?.competitionRightLink1}</p>
 
                 </div>
-                <p className='text-center text-[12px] sm:text-[14px] text-[#FFED63] saira font-semibold underline se:mt-2 iphone:mt-7 mac:!mt-1 mb-2 cursor-pointer'>Rules of the competition</p>
+                <p className='text-center text-[12px] sm:text-[14px] text-[#FFED63] saira font-semibold underline se:mt-2 iphone:mt-7 mac:!mt-1 mb-2 cursor-pointer'>{languageData?.competitionRightRules}</p>
                 <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
                     <TimeCounter languageData={languageData} />
                 </div>

@@ -9,7 +9,7 @@ import link5 from '../images/CyberSaysPage/gifLink5.png'
 import { useQuery } from '@tanstack/react-query'
 import { getTrendingGifs, searchGif } from '../Requests/gifs'
 
-function GifModal({ setGifModal, handleSubmitGif }) {
+function GifModal({ setGifModal, handleSubmitGif, languageData }) {
 
     const [search, setSearch] = useState('');
     const [gifs, setGifs] = useState([]);
@@ -41,7 +41,7 @@ function GifModal({ setGifModal, handleSubmitGif }) {
 
                     <img onClick={e => setGifModal(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
                 </div>
-                <p className=' text-[18px] md:text-[32px] font-semibold text-center my-3'>Choose GIF</p>
+                <p className=' text-[18px] md:text-[32px] font-semibold text-center my-3'>{languageData?.chatGif}</p>
                 <div className=' relative  w-full'>
                     <input type="text" placeholder='Search' className='  border-[2px] border-[#FFED63] saira w-full text-[14px] rounded-[50px] py-[10px] px-5 pr-12 outline-none text-black' onKeyUp={e => {
                         setTimeout(() => {
@@ -66,7 +66,7 @@ function GifModal({ setGifModal, handleSubmitGif }) {
                                     </div>
                                 ))
                                 : <div className='flex justify-center w-full my-4'>
-                                    <p className='saira text-[14px] font-medium text-center'>No results found</p>
+                                    <p className='saira text-[14px] font-medium text-center'>{languageData?.chatNotGif}</p>
                                 </div>
                         }
                     </div>

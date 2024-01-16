@@ -7,7 +7,7 @@ import crown from '../images/CyberSaysPage/crown1st.png'
 
 import no_avatar from '../images/CyberSaysPage/no_avatar.png'
 
-function LeaderboardModal({ setOpen, leaderboardData, loading }) {
+function LeaderboardModal({ setOpen, leaderboardData, loading, languageData  }) {
 
     return (
         <div className='w-screen h-screen fixed top-0 z-[99999] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
@@ -27,10 +27,10 @@ function LeaderboardModal({ setOpen, leaderboardData, loading }) {
                                 <p className='saira text-[16px] font-bold text-[#FFED63]'>#{leaderboardData.userData.position}</p>
                                 <div className='leading-3'>
                                     <p className='saira text-[12px] md:text-[14px] font-bold text-[#FFED63]'>{leaderboardData.userData.points.toFixed(0)}</p>
-                                    <p className='saira text-[12px] md:text-[14px] font-medium'>Points</p>
+                                    <p className='saira text-[12px] md:text-[14px] font-medium'>{languageData?.leaderboardsPoints}</p>
                                 </div>
                             </div>
-                            <p className=' text-[18px] md:text-[32px] font-semibold text-center mt-3'>Leaderboards</p>
+                            <p className=' text-[18px] md:text-[32px] font-semibold text-center mt-3'>{languageData?.leaderboardsTitle}</p>
                             <div className=' flex items-end justify-center'>
                                 <div className='mr-[-15px] md:mr-[30px] w-[80px] md:w-[100px]'>
                                     <p className='text-center saira text-[16px] font-bold'>2</p>
@@ -41,7 +41,7 @@ function LeaderboardModal({ setOpen, leaderboardData, loading }) {
                                     } alt="twoSt" />
                                     <p className='saira text-[12px] md:text-[14px] font-medium text-center truncate mx-2 md:mx-1'>{leaderboardData.leaderboard[1].email}</p>
                                     <p className='saira text-[14px] md:text-[16px] font-medium text-[#FFED63] text-center'>$69</p>
-                                    <p className='saira text-[14px] md:text-[14px] font-medium text-[#FFED63] text-center'>{leaderboardData.leaderboard[1].points} points </p>
+                                    <p className='saira text-[14px] md:text-[14px] font-medium text-[#FFED63] text-center'>{leaderboardData.leaderboard[1].points} {languageData?.leaderboardsPoints} </p>
                                 </div>
                                 <div className='mb-[20px] relative z-20 w-[120px] md:w-[140px]'>
                                     <p className='text-center saira text-[16px] font-bold'>1</p>
@@ -53,7 +53,7 @@ function LeaderboardModal({ setOpen, leaderboardData, loading }) {
                                     } alt="twoSt" />
                                     <p className='saira text-[12px] md:text-[14px] font-medium text-center truncate mx-3 md:mx-2'>{leaderboardData.leaderboard[0].email}</p>
                                     <p className='saira text-[14px] md:text-[16px] font-medium text-[#FFED63] text-center'>$69</p>
-                                    <p className='saira text-[14px] md:text-[14px] font-medium text-[#FFED63] text-center'>{leaderboardData.leaderboard[0].points} points </p>
+                                    <p className='saira text-[14px] md:text-[14px] font-medium text-[#FFED63] text-center'>{leaderboardData.leaderboard[0].points} {languageData?.leaderboardsPoints} </p>
                                 </div>
                                 <div className='ml-[-15px] md:ml-[30px] relative z-10 w-[80px] md:w-[100px]'>
                                     <p className='text-center saira text-[16px] font-bold'>3</p>
@@ -64,7 +64,7 @@ function LeaderboardModal({ setOpen, leaderboardData, loading }) {
                                     } alt="twoSt" />
                                     <p className='saira text-[12px] md:text-[14px] font-medium text-center truncate mx-2 md:mx-1'>{leaderboardData.leaderboard[2].email}</p>
                                     <p className='saira text-[14px] md:text-[16px] font-medium text-[#FFED63] text-center'>$69</p>
-                                    <p className='saira text-[14px] md:text-[14px] font-medium text-[#FFED63] text-center'>{leaderboardData.leaderboard[2].points} points </p>
+                                    <p className='saira text-[14px] md:text-[14px] font-medium text-[#FFED63] text-center'>{leaderboardData.leaderboard[2].points} {languageData?.leaderboardsPoints} </p>
                                 </div>
                             </div>
                             <div className='h-[240px] md:h-[600px] overflow-scroll'>
@@ -82,11 +82,11 @@ function LeaderboardModal({ setOpen, leaderboardData, loading }) {
                                                 </div>
                                                 <div className='leading-[14px]'>
                                                     <p className='saira text-[12px] md:text-[14px] font-medium text-[#FFED63]'>$6.90</p>
-                                                    <p className='saira text-[12px] md:text-[14px] font-medium'>Prize</p>
+                                                    <p className='saira text-[12px] md:text-[14px] font-medium'>{languageData?.leaderboardsPrize}</p>
                                                 </div>
                                                 <div className='leading-[14px]'>
                                                     <p className='saira text-[12px] md:text-[14px] font-medium text-[#FFED63]'>{user?.points.toFixed(0)}</p>
-                                                    <p className='saira text-[12px] md:text-[14px] font-medium'>Points</p>
+                                                    <p className='saira text-[12px] md:text-[14px] font-medium'>{languageData?.leaderboardsPoints}</p>
                                                 </div>
                                                 <p className='saira text-[16px] font-bold text-[#FFED63]'>#{index + 4}</p>
                                             </div>

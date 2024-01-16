@@ -49,19 +49,19 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
                 <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px] mac:!w-[350px]' src={logoCyber} alt="logoCyber" />
                 <div className='mac:max-w-[550px] md:max-w-[1000px] md:mx-[180px] m-auto'>
                     <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[100px] text-center py-1  px-4 md:py-2'>
-                        <p className='text-[14px] md:text-[32px] mac2:!text-[20px] font-semibold  iphone:leading-[unset] se:leading-4 mac2:!leading-[22px]'>Double your money and get your raffle eligibility</p>
+                        <p className='text-[14px] md:text-[32px] mac2:!text-[20px] font-semibold  iphone:leading-[unset] se:leading-4 mac2:!leading-[22px]'>{languageData?.doubleTitle}</p>
 
                     </div>
                 </div>
 
                 <p className='text-[12px] md:text-[14px] text-[#FFED63] text-center cursor-pointer flex items-center justify-center  md:py-2 mb-10'>
-                    A
+                    {languageData?.doubleSubtitleSpan}
                     <span className='mx-1'>
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10 3L4.66667 9L2 6" stroke="#81FFB3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </span>
-                    will appear after task is completed
+                    {languageData?.doubleSubtitle}
                 </p>
                 <div className='max-w-[600px] m-auto'>
                     {
@@ -73,7 +73,7 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
                         </>
                     }
                 </div>
-                <p onClick={e => setOpen(true)} className='text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2 cursor-pointer'>Choose your way to get paid</p>
+                <p onClick={e => setOpen(true)} className='text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2 cursor-pointer'>{languageData?.doublePaid}</p>
 
                 {/*
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[20px] max-w-[600px] m-auto p-4'>

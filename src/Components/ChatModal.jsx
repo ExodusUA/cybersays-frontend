@@ -6,7 +6,7 @@ import avatar from '../images/CyberSaysPage/1st.png'
 import send from '../images/CyberSaysPage/send.png'
 import GifModal from './GifModal';
 
-function ChatModal({ user, setOpen }) {
+function ChatModal({ user, setOpen, languageData }) {
 
     const socket = io(process.env.REACT_APP_CHAT_URL, {
         query: {
@@ -83,11 +83,11 @@ function ChatModal({ user, setOpen }) {
                             <circle cx="8" cy="8" r="8" fill="#FFED63" fill-opacity="0.2" />
                             <circle cx="7.99922" cy="7.99971" r="4.8" fill="#FFED63" />
                         </svg>
-                        <p className='text-[16px] saira font-medium ml-2'>{online} online</p>
+                        <p className='text-[16px] saira font-medium ml-2'>{online} {languageData?.chatOnline}</p>
                     </div>
                     <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
                 </div>
-                <p className=' text-[18px] md:text-[32px] font-semibold text-center mt-3'>Chat Room</p>
+                <p className=' text-[18px] md:text-[32px] font-semibold text-center mt-3'>{languageData?.chatTitle}</p>
                 <div className='h-[500px] overflow-y-scroll  duration-300 pb-4' ref={chatContainer}
                     style={{
                         overflowY: 'auto',
@@ -110,7 +110,7 @@ function ChatModal({ user, setOpen }) {
                                     </div>
                                 </div>
                             ))
-                            : <div className='text-center saira mt-20'>There are no messages yet</div>
+                            : <div className='text-center saira mt-20'>{languageData?.chatNotMessages}</div>
                     }
 
                 </div>
@@ -136,7 +136,7 @@ function ChatModal({ user, setOpen }) {
 
             </div>
             {
-                gifModal && <GifModal setGifModal={setGifModal} handleSubmitGif={handleSubmitGif} />
+                gifModal && <GifModal languageData={languageData} setGifModal={setGifModal} handleSubmitGif={handleSubmitGif} />
             }
         </div>
     )

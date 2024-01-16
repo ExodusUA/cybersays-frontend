@@ -5,7 +5,7 @@ import money from '../../images/CyberSaysPage/headerMoney.png'
 import refferals from '../../images/CyberSaysPage/headerRefferals.png'
 import joker from '../../images/CyberSaysPage/headerJoker.png'
 
-function HeaderMenu({ setMenuOpen, user, setTourModal }) {
+function HeaderMenu({ setMenuOpen, user, setTourModal, languageData }) {
     useEffect(() => {
         console.log(user)
     }, [user])
@@ -22,18 +22,18 @@ function HeaderMenu({ setMenuOpen, user, setTourModal }) {
                         <div>
                             <div className='xl:gap-4 flex px-2 sm:px-4 py-[2px] sm:py-[6px]'>
                                 <div className=' leading-4 md:leading-5 mx-1'>
-                                    <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-medium saira text-center '>{user?.currency} Earned:</p>
+                                    <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-medium saira text-center '>{user?.currency} {languageData?.header1}</p>
                                     <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-bold saira text-center flex justify-center'><img className='w-[21px] h-[21px] mr-[5px]' src={money} alt="money" /> {user?.earned.toFixed(0) || 0}</p>
                                 </div>
                                 <div className='leading-4 md:leading-5 mx-1'>
-                                    <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-medium saira text-center '>Points:</p>
+                                    <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-medium saira text-center '>{languageData?.header2}</p>
                                     <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-bold saira text-center flex justify-center items-center'>
                                         <img className='w-[16px] h-[16px] mr-[5px]' src={refferals} alt="refferals" /> {user && user.points ? user?.points : 0}
                                     </p>
 
                                 </div>
                                 <div className=' leading-4 md:leading-5 mx-1'>
-                                    <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-medium saira text-center '>Vegas Tickets:</p>
+                                    <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-medium saira text-center '>{languageData?.header3}</p>
                                     <p className='text-[12px] sm:text-[16px] text-[#1E1E1E] font-bold saira text-center flex justify-center'><img className='w-[21px] h-[21px] mr-[5px]' src={joker} alt="joker" /> {user?.raffle_tickets || 0}</p>
                                 </div>
                             </div>

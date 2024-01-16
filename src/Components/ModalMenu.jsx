@@ -23,7 +23,7 @@ import Contact from '../Pages/CyberSaysPages/Modals/Contact'
 import Settings from '../Pages/CyberSaysPages/Modals/Settings'
 import { useNavigate } from 'react-router-dom'
 
-function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setChatModal, chatModal }) {
+function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setChatModal, chatModal, languageData  }) {
 
   const [tourModal, setTourModal] = useState(false)
   const [referralsModal, setReferralsModal] = useState(false)
@@ -59,54 +59,54 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
           <div className='iphone:gap-7 se:gap-5 mac:!gap-4 grid mt-8 '>
             <div className='flex items-center' onClick={e => scrollToPage(0)}>
               <img className='w-[32px] h-[32px] mr-2' src={link1} alt="link1" />
-              <p className='saira text-[20px] font-semibold  cursor-pointer'>Home page</p>
+              <p className='saira text-[20px] font-semibold  cursor-pointer'>{languageData?.modalMenuLink1}</p>
             </div>
             <div className='flex items-center cursor-pointer' onClick={e => scrollToPage(2)}>
               <img className='w-[32px] h-[32px] mr-2' src={link2} alt="link2" />
-              <p className='saira text-[20px] font-semibold'>Double your money</p>
+              <p className='saira text-[20px] font-semibold'>{languageData?.modalMenuLink2}</p>
             </div>
             <div className='flex items-center' onClick={e => setTourModal(true)}>
               <img className='w-[32px] h-[32px] mr-2' src={link3} alt="link3" />
-              <p className='saira text-[20px] font-semibold cursor-pointer'>The  Vegas weekend</p>
+              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink3}</p>
             </div>
             <div className='flex items-center' onClick={e => scrollToPage(1)} >
               <img className='w-[32px] h-[32px] mr-2' src={link4} alt="link4" />
-              <p className='saira text-[20px] font-semibold cursor-pointer'>Refer to get tickets</p>
+              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink4}</p>
             </div>
             <div className='flex items-center' onClick={e => setReferralsModal(true)} >
               <img className='w-[32px] h-[32px] mr-2' src={link5} alt="link5" />
-              <p className='saira text-[20px] font-semibold cursor-pointer'>Your referrals</p>
+              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink5}</p>
             </div>
 
             <div className='flex items-center cursor-pointer' onClick={e => scrollToPage(4)}>
               <img className='w-[32px] h-[32px] mr-2' src={link6} alt="link6" />
-              <p className='saira text-[20px] font-semibold cursor-pointer'>The {siteData?.currentDay} Daily competition</p>
+              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink6} {siteData?.currentDay} {languageData?.modalMenuLink6Span}</p>
             </div>
             <div className='flex items-center' onClick={e => setWithdrawModal(true)}>
               <img className='w-[32px] h-[32px] mr-2' src={link8} alt="link7" />
-              <p className='saira text-[20px] font-semibold cursor-pointer'>Choose your way to get paid</p>
+              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink7}</p>
             </div>
             <div className='flex items-center' onClick={e => setChatModal(true)} >
               <img className='w-[32px] h-[32px] mr-2' src={link9} alt="link7" />
-              <p className='saira text-[20px] font-semibold cursor-pointer'>Chat room</p>
+              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink8}</p>
             </div>
             <div className='flex items-center' onClick={e => setTransactionsModal(true)} >
               <img className='w-[32px] h-[32px] mr-2' src={link7} alt="link7" />
-              <p className='saira text-[20px] font-semibold cursor-pointer'>Transaction History</p>
+              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink9}</p>
             </div>
             <div className='flex items-center' onClick={e => setTicketsModal(true)} >
               <img className='w-[32px] h-[32px] mr-2' src={link10} alt="link10" />
-              <p className='saira text-[20px] font-semibold cursor-pointer'>My Tickets & Points</p>
+              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink10}</p>
             </div>
           </div>
           <div className=' absolute bottom-4 flex justify-around items-center max-w-[330px] w-full '>
-            <p className='saira text-[16px] font-semibold cursor-pointer' onClick={e => setAboutModal(true)}>About us</p>
+            <p className='saira text-[16px] font-semibold cursor-pointer' onClick={e => setAboutModal(true)}>{languageData?.modalMenuBottom1}</p>
             <div className='w-[2px] h-[20px] bg-[#FFED63]'></div>
-            <p className='saira text-[16px] font-semibold cursor-pointer' onClick={e => setLegalModal(true)}>Legal</p>
+            <p className='saira text-[16px] font-semibold cursor-pointer' onClick={e => setLegalModal(true)}>{languageData?.modalMenuBottom2}</p>
             <div className='w-[2px] h-[20px] bg-[#FFED63]'></div>
-            <p className='saira text-[16px] font-semibold cursor-pointer' onClick={e => setSettingsModal(true)}>Settings</p>
+            <p className='saira text-[16px] font-semibold cursor-pointer' onClick={e => setSettingsModal(true)}>{languageData?.modalMenuBottom3}</p>
             <div className='w-[2px] h-[20px] bg-[#FFED63]'></div>
-            <p className='saira text-[16px] font-semibold cursor-pointer' onClick={e => setContactModal(true)}>Contact Us</p>
+            <p className='saira text-[16px] font-semibold cursor-pointer' onClick={e => setContactModal(true)}>{languageData?.modalMenuBottom4}</p>
           </div>
         </div>
 
@@ -135,36 +135,36 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
 
       </div>
       {
-        tourModal && <TourModal setOpen={setTourModal} />
+        tourModal && <TourModal languageData={languageData} setOpen={setTourModal} />
       }
       {
-        referralsModal && <MyReferralsModal setOpen={setReferralsModal} user={user} />
+        referralsModal && <MyReferralsModal languageData={languageData} setOpen={setReferralsModal} user={user} />
       }
       {
-        withdrawModal && <Withdraw setOpen={setWithdrawModal} user={user} />
+        withdrawModal && <Withdraw languageData={languageData} setOpen={setWithdrawModal} user={user} />
       }
       {
-        transactionsModal && <TransactionHistory setOpen={setTransactionsModal} />
+        transactionsModal && <TransactionHistory languageData={languageData} setOpen={setTransactionsModal} />
       }
       {
-        ticketsModal && <TicketsHistory setOpen={setTicketsModal} />
+        ticketsModal && <TicketsHistory languageData={languageData} setOpen={setTicketsModal} />
       }
       {
-        chatModal && <ChatModal setOpen={setChatModal} user={user} />
-      }
-
-      {
-        aboutModal && <About setOpen={setAboutModal} user={user} />
+        chatModal && <ChatModal languageData={languageData} setOpen={setChatModal} user={user} />
       }
 
       {
-        legalModal && <Legal setOpen={setLegalModal} user={user} />
+        aboutModal && <About languageData={languageData} setOpen={setAboutModal} user={user} />
+      }
+
+      {
+        legalModal && <Legal languageData={languageData} setOpen={setLegalModal} user={user} />
       }
       {
-        settingsModal && <Settings setOpen={setSettingsModal} user={user} />
+        settingsModal && <Settings languageData={languageData} setOpen={setSettingsModal} user={user} />
       }
       {
-        contactModal && <Contact setOpen={setContactModal} user={user} />
+        contactModal && <Contact languageData={languageData} setOpen={setContactModal} user={user} />
       }
     </div>
   )

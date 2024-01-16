@@ -6,7 +6,7 @@ import { useQuery } from '@tanstack/react-query'
 import userAPI from '../../Requests/user'
 import moment from 'moment'
 
-function TicketsHistory({ setOpen }) {
+function TicketsHistory({ setOpen, languageData }) {
 
     const [ticketsData, setTicketsData] = useState(null)
 
@@ -50,39 +50,39 @@ function TicketsHistory({ setOpen }) {
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={joker} alt="transaction" />
                     <div className='w-[200px]'>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4 mb-1'>Your friend doubled their money!</p>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection1Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
                 <div className='w-[90px]'>
                     <p className='text-[20px] text-[#CAB8E8] font-semibold saira text-right'>+{amount}</p>
-                    <p className='text-[12px] font-normal saira text-right'>Vegas tickets</p>
+                    <p className='text-[12px] font-normal saira text-right'>{languageData?.ticketsSection1Right}</p>
                 </div>
             </div>
             case 'email_referral': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={joker} alt="transaction" />
                     <div className='w-[200px]'>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4 mb-1'>Sent mail</p>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection2Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
                 <div className='w-[100px]'>
                     <p className='text-[20px] text-[#CAB8E8] font-semibold saira text-right'>+{amount}</p>
-                    <p className='text-[12px] font-normal saira  text-right'>Vegas tickets</p>
+                    <p className='text-[12px] font-normal saira  text-right'>{languageData?.ticketsSection2Right}</p>
                 </div>
             </div>
             case 'buying_credits': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={joker} alt="transaction" />
                     <div className='w-[200px]'>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4 mb-1'>For X credit purchased on ImLive!</p>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection3Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira '>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
                 <div className='w-[100px]'>
                     <p className='text-[20px] text-[#CAB8E8] font-semibold saira text-right'>+{amount}</p>
-                    <p className='text-[12px] font-normal saira  text-right'>Vegas tickets</p>
+                    <p className='text-[12px] font-normal saira  text-right'>{languageData?.ticketsSection3Right}</p>
                 </div>
             </div>
         }
@@ -94,39 +94,39 @@ function TicketsHistory({ setOpen }) {
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={coin} alt="transaction" />
                     <div className='w-[200px]'>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4 mb-1'>Friend completed succfully double the money and to rceive points</p>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection4Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
                 <div className='w-[100px]'>
                     <p className='text-[20px] text-[#CAB8E8] font-semibold saira text-right'>+{amount}</p>
-                    <p className='text-[12px] font-normal saira  text-right'>Points</p>
+                    <p className='text-[12px] font-normal saira  text-right'>{languageData?.ticketsSection4Right}</p>
                 </div>
             </div>
             case 'email_referral': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={coin} alt="transaction" />
                     <div className='w-[200px]'>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4 mb-1'>Sent mail</p>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection5Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
                 <div className='w-[100px]'>
                     <p className='text-[20px] text-[#CAB8E8] font-semibold saira text-right'>+{amount}</p>
-                    <p className='text-[12px] font-normal saira  text-right'>Points</p>
+                    <p className='text-[12px] font-normal saira  text-right'>{languageData?.ticketsSection5Right}</p>
                 </div>
             </div>
             case 'buying_credits': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={coin} alt="transaction" />
                     <div className='w-[200px]'>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4 mb-1'>For X credit purchased on ImLive!</p>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection6Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira '>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
                 <div className='w-[100px]'>
                     <p className='text-[20px] text-[#CAB8E8] font-semibold saira text-right'>+{amount}</p>
-                    <p className='text-[12px] font-normal saira  text-right'>Points</p>
+                    <p className='text-[12px] font-normal saira  text-right'>{languageData?.ticketsSection6Right}</p>
                 </div>
             </div>
         }
@@ -137,7 +137,7 @@ function TicketsHistory({ setOpen }) {
             <div className='flex justify-end max-w-[600px] m-auto md:my-4'>
                 <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
             </div>
-            <p className='text-[18px] md:text-[32px] font-semibold text-center'>My Tickets & Points</p>
+            <p className='text-[18px] md:text-[32px] font-semibold text-center'>{languageData?.ticketsTitle}</p>
             <div className='m-auto max-w-[345px] md:max-w-[600px] w-full mt-3 h-[470px] overflow-scroll'>
                 {
                     ticketsData?.length > 0
@@ -145,7 +145,7 @@ function TicketsHistory({ setOpen }) {
                             return ticket.name === 'ticket' ? getTicketsMarkup(ticket.type, ticket.datetime, ticket.amount) : getPointsMarkup(ticket.type, ticket.datetime, ticket.amount)
                         })
                         : <div className='flex justify-center items-center h-[470px]'>
-                            <p className='text-[18px] font-semibold text-center'>No transactions</p>
+                            <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
                         </div>
                 }
             </div>

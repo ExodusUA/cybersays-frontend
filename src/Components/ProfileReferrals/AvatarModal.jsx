@@ -4,51 +4,11 @@ import imageIcon from '../../images/CyberSaysPage/gridicons_image.png'
 import userAPI from '../../Requests/user'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 
-function AvatarModal({ setOpenAvatar }) {
+function AvatarModal({ setOpenAvatar, saveAvatar, handleImageChange, selectedImage, setSelectedImage, inputRef  }) {
 
-    const inputRef = useRef()
-    const [userData, setUserData] = useState(null)
-    const queryClient = useQueryClient()
-    const [selectedImage, setSelectedImage] = useState(null);
+    
 
-    useQuery({
-        queryKey: ['userData'],
-        queryFn: async () => {
-            const res = await userAPI.getUserData()
-            setUserData(res)
-
-            if (res.avatar !== null) {
-                setSelectedImage(res.avatar)
-            }
-
-            return res
-        }
-    })
-
-    const handleImageChange = (e) => {
-        const file = e.target.files[0];
-
-        if (file && file.type.startsWith('image/')) {
-            const reader = new FileReader();
-
-            reader.onloadend = () => {
-                const base64String = reader.result;
-                setSelectedImage(base64String);
-            };
-            reader.readAsDataURL(file);
-        }
-    };
-
-    const saveAvatar = async () => {
-        try {
-            const res = await userAPI.updateUserAvatar(inputRef.current.files[0])
-            queryClient.invalidateQueries('userData')
-            alert('Done!')
-        } catch (error) {
-            alert(error)
-        }
-    }
-
+    
     return (
         <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 md:flex justify-center items-center'>
             <div className='max-w-[600px] w-full m-auto'>

@@ -9,7 +9,7 @@ import { Navigation } from 'swiper/modules';
 import CustomTooltip from '../../Components/CustomTooltip';
 import Message from './Modals/Message';
 
-function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenMassege, setOpenAvatar, selectedMessage, setSelectedMassege, copyToMessage, message }) {
+function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenMassege, setOpenAvatar, selectedMessage, setSelectedMassege, copyToMessage, message, saveAvatar, uploadedPhotos }) {
 
     let swiperRef;
 
@@ -81,6 +81,10 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
 
     const [infoTooltip, setInfoTooltip] = useState(false)
 
+
+
+
+
     return (
         <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-terms.jpg)] md:bg-[url(./images/CyberSaysPage/bg-terms.jpg)] bg-cover bg-no-repeat bg-center relative z-10' >
             <div className='pt-[60px]  md:pt-[90px] mac:!pt-[80px] px-4 max-w-[1170px] m-auto' >
@@ -90,7 +94,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                 <div className='flex flex-col-reverse relative'>
 
 
-                    <div className='lg:mt-[40px] mac:!mt-[60px]'>
+                    <div className='se:mt-[0px] lg:mt-[80px] mac:mt-[60px]'>
                         <div className=' w-full hidden lg:block mb-[-100px] pr-2'>
                             <div className=' justify-between flex my-3  mx-10'>
                                 <img className='w-[44px] mr-3 cursor-pointer buttonPrevGif' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
@@ -133,18 +137,32 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
 
                                 }}
                             >
-
-
+                                {uploadedPhotos.length > 0 ? (
+                                    uploadedPhotos.map((item, index) => (
+                                        <SwiperSlide>
+                                            <div className='flex' key={index}>
+                                                <img onClick={e => setSelectedGif(index)} className={`${selectedGif === index && '  border-[2px] border-[#FFED63] opacity-[1] relative'}   rounded-[20px] w-[110px] h-[110px] sm:w-[140px] sm:h-[140px] opacity-[0.5] cursor-pointer object-cover`} src={item.image} alt="gif1" />
+                                                <svg className=' absolute top-1 left-1 cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+                                                    <path d="M4.25 17V19C4.25 19.5304 4.44315 20.0391 4.78697 20.4142C5.13079 20.7893 5.5971 21 6.08333 21H17.0833C17.5696 21 18.0359 20.7893 18.3797 20.4142C18.7235 20.0391 18.9167 19.5304 18.9167 19V17M7 11L11.5833 16M11.5833 16L16.1667 11M11.5833 16V4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </SwiperSlide>
+                                    ))
+                                ) : (
+                                    <p className='text-[24px] text-center se:mt-4 md:mt-12 mb-8 saira font-medium'>{languageData?.refferalsSome} </p>
+                                )}
+                                {/*
                                 {dataGif.map((item, index) => (
                                     <SwiperSlide>
                                         <div className='flex' key={index}>
-                                            <img onClick={e => setSelectedGif(index)} className={`${selectedGif === index && '  border-[2px] border-[#FFED63] opacity-[1] relative'}   rounded-[20px] w-[110px] h-[110px] sm:w-[140px] sm:h-[140px] opacity-[0.5] cursor-pointer`} src={item.image} alt="gif1" />
+                                            <img onClick={e => setSelectedGif(index)} className={`${selectedGif === index && '  border-[2px] border-[#FFED63] opacity-[1] relative'}   rounded-[20px] w-[110px] h-[110px] sm:w-[140px] sm:h-[140px] opacity-[0.5] cursor-pointer object-cover`} src={selectedImage} alt="gif1" />
                                             <svg className=' absolute top-1 left-1 cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
                                                 <path d="M4.25 17V19C4.25 19.5304 4.44315 20.0391 4.78697 20.4142C5.13079 20.7893 5.5971 21 6.08333 21H17.0833C17.5696 21 18.0359 20.7893 18.3797 20.4142C18.7235 20.0391 18.9167 19.5304 18.9167 19V17M7 11L11.5833 16M11.5833 16L16.1667 11M11.5833 16V4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
                                         </div>
                                     </SwiperSlide>
                                 ))}
+                                */}
 
                                 {/*
                         <SwiperSlide>
@@ -169,7 +187,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                         </div>
                     </div>
                     <div>
-                        <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3 lg:my-6 mx-14 sm:mx-0 iphone:leading-[14px] se:leading-[16px]'>Choose text and image or keep it simple and without it</p>
+                        <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3 lg:my-6 mx-14 sm:mx-0 iphone:leading-[14px] se:leading-[16px]'>{languageData?.refferalsSubtitle}</p>
                         <div className=' w-full hidden lg:block pr-2'>
                             <div className=' justify-between flex my-3 mb-[-43px] mx-10'>
                                 <img className='w-[44px] mr-3 cursor-pointer buttonPrevMessage' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
@@ -233,15 +251,14 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                 ))}
                             </Swiper>
                         </div>
-                        <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3 mac:!my-2'>Choose an image</p>
+                        <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3 mac:!my-2'>{languageData?.refferalsImage}</p>
                     </div>
                     <div className=' flex justify-center'>
                         <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center max-w-[800px] w-full py-1 px-2'>
-                            <p className='text-[14px]  sm:text-[24px]  font-semibold max-w-[540px] m-auto iphone:leading-[unset] se:leading-[16px] mac:!leading-[24px]'>Share with your friends to be the kind
-                                to make them earn and go to Vegas</p>
+                            <p className='text-[14px]  sm:text-[24px]  font-semibold max-w-[540px] m-auto iphone:leading-[unset] se:leading-[16px] mac:!leading-[24px]'>{languageData?.refferalsTitle}</p>
                             <div className='flex justify-center gap-1'>
                                 <p className='text-[12px] sm:text-[14px] font-medium saira flex justify-center items-center underline cursor-pointer' onClick={e => setReferralsOpen(true)}>
-                                    Learn more
+                                {languageData?.refferalsLink1} 
                                 </p>
                                 <div className=''>
 
@@ -265,21 +282,21 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                         </div>
                         <CustomTooltip setOpen={setInfoTooltip} open={infoTooltip} >
                             <div className=''>
-                                <p className='text-[14px] md:text-[32px] font-semibold text-center text-black mb-2'>Be the king</p>
+                                <p className='text-[14px] md:text-[32px] font-semibold text-center text-black mb-2'>{languageData?.refferalsInfoTitle}</p>
                                 <div className='flex justify-around'>
                                     <div className='flex items-start max-w-[270px] w-full leading-[16px]'>
                                         <p className='text-black  text-[14px] saira font-medium mr-2'>1.</p>
-                                        <p className='text-black text-[14px] saira font-medium'>You will be the kind that sends your friends to double their money and have fun 👬</p>
+                                        <p className='text-black text-[14px] saira font-medium'>{languageData?.refferalsInfo1}</p>
                                     </div>
                                     <div className='w-[2px]  bg-[#FFED63]'></div>
                                     <div className='flex items-start max-w-[270px] w-full leading-[16px]'>
                                         <p className='text-black  text-[14px] saira font-medium mr-2'>2.</p>
-                                        <p className='text-black text-[14px] saira font-medium'>For eveery friend that doubles the money you will get 30 raffle tickets and 1$ 🃏</p>
+                                        <p className='text-black text-[14px] saira font-medium'>{languageData?.refferalsInfo2}</p>
                                     </div>
                                     <div className='w-[2px]  bg-[#FFED63]'></div>
                                     <div className='flex items-start max-w-[270px] w-full leading-[15px] '>
                                         <p className='text-black  text-[14px] saira font-medium mr-2'>3.</p>
-                                        <p className='text-black text-[14px] saira font-medium'>If your friends double their money, you can take them to Vegas if you win the raffle, and they can take you if they win and you took the double-the-money offer</p>
+                                        <p className='text-black text-[14px] saira font-medium'>{languageData?.refferalsInfo3}</p>
                                     </div>
 
                                 </div>
@@ -288,7 +305,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                     </div>
 
                 </div>
-                <p onClick={e => setOpenAvatar(true)} className=' cursor-pointer text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2'>Choose personalize experience</p>
+                <p onClick={e => setOpenAvatar(true)} className=' cursor-pointer text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2'>{languageData?.refferalsLink2}</p>
                 <div className='flex justify-center'>
                     <button onClick={e => shareRefferalLink()} className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold se:py-1 iphone:py-2 sm:max-w-[350px]'>
                         {

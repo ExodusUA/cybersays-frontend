@@ -67,7 +67,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
     }
 
     const [infoTooltip, setInfoTooltip] = useState(false)
-   
+
 
 
 
@@ -86,23 +86,23 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                                 isTaskCompleted === true
                                     ? <div className='flex justify-between items-start w-full'>
                                         <div className='text-center w-full'>
-                                            <Link to={imLiveURL}><button className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2 md:py-3 md:w-full'>Enjoy ImLive 💃</button></Link>
-                                            <p className='saira text-[12px] md:text-[14px] font-medium mt-2'>1 credit bought = </p>
-                                            <p className='saira text-[12px] md:text-[14px] font-medium'>1  raffle ticket</p>
+                                            <Link to={imLiveURL}><button className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2 md:py-3 md:w-full'>{languageData?.raffleLeftBtn}</button></Link>
+                                            <p className='saira text-[12px] md:text-[14px] font-medium mt-2'>{languageData?.raffleLeftSection1} </p>
+                                            <p className='saira text-[12px] md:text-[14px] font-medium'>{languageData?.raffleLeftSection2}</p>
                                         </div>
                                         <div className='text-center w-full'>
                                             <button onClick={e => shareRefferalLink()} className=' bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold p-2 md:py-3 md:w-full'>{
                                                 isLinkCopied === false
-                                                    ? 'Refer friends 🤑'
-                                                    : 'Link copied!'
+                                                    ? languageData?.raffleRightBtn
+                                                    : languageData?.raffleRightBtn2
                                             }</button>
-                                            <p className='saira text-[12px] md:text-[14px] font-medium mt-2'>Friend doubled money = </p>
-                                            <p className='saira text-[12px] md:text-[14px] font-medium'>30 raffle tickets</p>
+                                            <p className='saira text-[12px] md:text-[14px] font-medium mt-2'>{languageData?.raffleRightSection1} </p>
+                                            <p className='saira text-[12px] md:text-[14px] font-medium'>{languageData?.raffleRightSection2}</p>
                                         </div>
                                     </div>
                                     : <div className='flex justify-center'>
                                         <div>
-                                            <p className='text-[18px] md:text-[24px] font-medium saira text-center mx-4 se:mb-0 iphone:mb-4 mac:!mb-1  md:text-center'>Complete double the money offer to take part in raffle </p>
+                                            <p className='text-[18px] md:text-[24px] font-medium saira text-center mx-4 se:mb-0 iphone:mb-4 mac:!mb-1  md:text-center'>{languageData?.raffleUnderBtn} </p>
                                             {
                                                 getButtonMarkup(lastTask)
                                             }
@@ -117,9 +117,9 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
 
                         isTaskCompleted === false
                             ? <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[50px] text-center mx-1 md:mx-0 md:py-2 relative z-1'>
-                                <p className='text-[18px] md:text-[32px] mac2:!text-[24px] font-semibold'>Win the Vegas weekend!</p>
+                                <p className='text-[18px] md:text-[32px] mac2:!text-[24px] font-semibold'>{languageData?.raffleTitle1}</p>
                                 <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center mx-8 iphone:leading-4 se:leading-[14px]'>
-                                    If you took ImLive's double-your-money offer, you can be picked by your referral or referrer to go to Vegas if they win.
+                                    {languageData?.raffleSubTitle1}
                                     <img className='w-[12px] md:w-[24px] h-[12px] md:h-[24px] mr-[2px]' src={ready} alt="ready" />
 
 
@@ -155,7 +155,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                                     </div>
 
                                 </p>
-                                <p className='text-[12px] font-medium underline cursor-pointer saira'>How do I win the vegas weekend?</p>
+                                <p className='text-[12px] font-medium underline cursor-pointer saira'>{languageData?.raffleLink1}</p>
                                 {/*
                                 <a
                                     data-tooltip-id="my-tooltip"
@@ -171,9 +171,9 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                                 */}
                             </div>
                             : <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[50px] md:rounded-[100px] text-center mx-5 md:mx-0 md:py-2'>
-                                <p className='se:text-[14px] iphone:text-[18px] md:text-[32px] mac2:!text-[24px] font-semibold'>Win the Vegas weekend!</p>
+                                <p className='se:text-[14px] iphone:text-[18px] md:text-[32px] mac2:!text-[24px] font-semibold'>{languageData?.raffleTitle2}</p>
                                 <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center md:my-1 se:leading-[14px]'>
-                                    Eligible to go to vegas
+                                    {languageData?.raffleSubTitle2}
                                     <img className='w-[12px] md:w-[24px] h-[12px] md:h-[24px] mx-[2px] md:ml-1' src={notReady} alt="notReady" />
                                     <a
                                         data-tooltip-id="my-tooltip-inline"
@@ -192,21 +192,21 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                                     </a>
 
                                 </p>
-                                <p className='text-[12px] md:text-[14px] font-medium underline cursor-pointer saira'>How do I win the vegas weekend raffle?</p>
+                                <p className='text-[12px] md:text-[14px] font-medium underline cursor-pointer saira'>{languageData?.raffleLink2}</p>
                             </div>
                     }
                 </div>
 
                 <p className='text-[12px] md:text-[14px] saira text-center cursor-pointer se:py-1 iphone:py-3'>
-                    *No purchase needed to participate in the raffle.
-                    <span onClick={e => setTourModal(true)} className='saira text-[#FFED63] underline ml-2'>Raffle rules</span>
+                    {languageData?.raffleRulesDesc}
+                    <span onClick={e => setTourModal(true)} className='saira text-[#FFED63] underline ml-2'>{languageData?.raffleRulesLink}</span>
                 </p>
                 <div className='flex absolute se:bottom-[130px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
                     <TimeCounter languageData={languageData} />
                 </div>
             </div>
 
-            
+
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import Homepage from './CyberSaysPages/Homepage'
 import HeaderMenu from '../Components/HomePage/HeaderMenu'
@@ -8,7 +8,7 @@ import Double from './CyberSaysPages/Double'
 import { Helmet } from 'react-helmet'
 import userAPI from '../Requests/user'
 import CircleNavigation from '../Components/CircleNavigation'
-import { useQuery } from '@tanstack/react-query'
+import { useQuery, useQueryClient } from '@tanstack/react-query'
 import AuthCheck from '../hoc/AuthCheck'
 import Competition from './CyberSaysPages/Competition'
 import { useSwipeable } from 'react-swipeable';
@@ -31,6 +31,8 @@ var mixpanel = require('mixpanel-browser');
 
 function Main({ languageData }) {
 
+
+    const queryClient = useQueryClient()
     const dataMessage = [
         {
             desc: '1 Message text Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas',
@@ -147,11 +149,76 @@ function Main({ languageData }) {
 
     const [referralsOpen, setReferralsOpen] = useState(false)
 
+
+    const [selectedImage, setSelectedImage] = useState(null);
+    const inputRef = useRef()
+    const [uploadedPhotos, setUploadedPhotos] = useState(() => {
+        const storedPhotos = localStorage.getItem('uploadedPhotos');
+        return storedPhotos ? JSON.parse(storedPhotos) : [];
+      });
+      
+      const savePhotosToLocalStorage = (photos) => {
+        localStorage.setItem('uploadedPhotos', JSON.stringify(photos));
+      };
+
+    useQuery({
+        queryKey: ['userData'],
+        queryFn: async () => {
+            const res = await userAPI.getUserData()
+            setUserData(res)
+
+            if (res.avatar !== null) {
+                setSelectedImage(res.avatar)
+            }
+
+            return res
+        }
+    })
+    async function convertImageToBase64(imageFile) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                resolve(reader.result);
+            };
+            reader.onerror = reject;
+            reader.readAsDataURL(imageFile);
+        });
+    }
+    const saveAvatar = async () => {
+        try {
+            const res = await userAPI.updateUserAvatar(inputRef.current.files[0])
+            console.log(res)
+            alert('Done!')
+
+            
+            setUploadedPhotos((prevPhotos) => [...prevPhotos, { image: res.data.url }]);
+            savePhotosToLocalStorage(uploadedPhotos);
+        } catch (error) {
+            alert(error)
+        }
+    }
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+
+        if (file && file.type.startsWith('image/')) {
+            const reader = new FileReader();
+
+            reader.onloadend = () => {
+                const base64String = reader.result;
+
+
+               {/* setUploadedPhotos((prevPhotos) => [...prevPhotos, { image: base64String }]);*/}
+                setSelectedImage(base64String);
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+    console.log(uploadedPhotos)
     const HomepageSwiper = () => {
 
         return (
             <div className='overflow-y-hidden overflow-x-hidden'>
-                <HeaderMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} setTourModal={setTourModal} />
+                <HeaderMenu languageData={languageData} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} setTourModal={setTourModal} />
 
                 <Swiper
                     className='w-screen h-screen'
@@ -176,7 +243,7 @@ function Main({ languageData }) {
                         <Double setOpen={setWithdrawModal} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Refferals message={selectedMessage !== null ? dataMessage[selectedMessage].desc : ''} copyToMessage={copyToMessage} setSelectedMassege={setSelectedMassege} selectedMessage={selectedMessage} setOpenAvatar={setOpenAvatar} setOpenMassege={setOpenMassege} dataMessage={dataMessage} setReferralsOpen={setReferralsOpen} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} />
+                        <Refferals uploadedPhotos={uploadedPhotos} saveAvatar={saveAvatar} selectedImage={selectedImage} message={selectedMessage !== null ? dataMessage[selectedMessage].desc : ''} copyToMessage={copyToMessage} setSelectedMassege={setSelectedMassege} selectedMessage={selectedMessage} setOpenAvatar={setOpenAvatar} setOpenMassege={setOpenMassege} dataMessage={dataMessage} setReferralsOpen={setReferralsOpen} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} />
                     </SwiperSlide>
                     <SwiperSlide>
                         <Competition siteData={siteData} imLiveURL={imLiveURL} user={userData} languageData={languageData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading} />
@@ -210,35 +277,35 @@ function Main({ languageData }) {
 
             </Routes >
             {
-                leaderboardModal && <LeaderboardModal setOpen={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} />
+                leaderboardModal && <LeaderboardModal languageData={languageData} setOpen={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} />
 
             }
             {
-                menuOpen === true && <ModalMenu setChatModal={setChatModal} chatModal={chatModal} siteData={siteData} scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
+                menuOpen === true && <ModalMenu languageData={languageData} setChatModal={setChatModal} chatModal={chatModal} siteData={siteData} scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
             }
             {
-                tourModal && <TourModal setOpen={setTourModal} />
+                tourModal && <TourModal languageData={languageData} setOpen={setTourModal} />
             }
             {
-                withdrawModal && <Withdraw setOpen={setWithdrawModal} user={userData} />
-            }
-
-            {
-                referralsOpen && <MyReferralsModal setOpen={setReferralsOpen} user={userData} />
+                withdrawModal && <Withdraw languageData={languageData} setOpen={setWithdrawModal} user={userData} />
             }
 
             {
-                chatModal && <ChatModal setOpen={setChatModal} user={userData} />
+                referralsOpen && <MyReferralsModal languageData={languageData} setOpen={setReferralsOpen} user={userData} />
+            }
+
+            {
+                chatModal && <ChatModal languageData={languageData} setOpen={setChatModal} user={userData} />
             }
 
             {
                 openMessage && <Message onCloseCopied={() => {
                     setMessagetCopied(Array(dataMessage.length).fill(false));
-                
-                }} selectedMessage={selectedMessage}  messageCopied={messageCopied} copyToMessage={copyToMessage} message={selectedMessage !== null ? dataMessage[selectedMessage].desc : ''} setOpenMassege={setOpenMassege} />
+
+                }} selectedMessage={selectedMessage} messageCopied={messageCopied} copyToMessage={copyToMessage} message={selectedMessage !== null ? dataMessage[selectedMessage].desc : ''} setOpenMassege={setOpenMassege} />
             }
             {
-                openAvatar && <AvatarModal setOpenAvatar={setOpenAvatar} />
+                openAvatar && <AvatarModal inputRef={inputRef} setSelectedImage={setSelectedImage} selectedImage={selectedImage} handleImageChange={handleImageChange} saveAvatar={saveAvatar} setOpenAvatar={setOpenAvatar} />
             }
             <div className='fixed right-8 hidden bottom-8 sm:block z-[99]'>
                 <img onClick={e => setChatModal(true)} className='w-12 cursor-pointer' src={chatImage} alt="Chat" />

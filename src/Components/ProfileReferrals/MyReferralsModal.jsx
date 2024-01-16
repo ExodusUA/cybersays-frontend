@@ -5,7 +5,7 @@ import offerFalse from '../../images/CyberSaysPage/offerFalse.png'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import userAPI from '../../Requests/user'
 
-function MyReferralsModal({ setOpen, user }) {
+function MyReferralsModal({ setOpen, user, languageData }) {
 
     const [referralData, setReferralData] = useState([])
     const queryClient = useQueryClient()

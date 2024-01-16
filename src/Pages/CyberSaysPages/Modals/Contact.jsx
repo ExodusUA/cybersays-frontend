@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import close from '../../../images/CyberSaysPage/closeMenu.png'
 
-function Contact({ user, setOpen }) {
+function Contact({ user, setOpen, languageData  }) {
 
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
@@ -22,15 +22,15 @@ function Contact({ user, setOpen }) {
 
                 <div className='h-[80vh] flex align-middle items-center justify-center'>
                     <div>
-                        <h1 className='text-[32px] text-white text-center'>Contact us</h1>
-                        <p className='text-center saira'>Send us your email and message and we will contact you</p>
+                        <h1 className='text-[32px] text-white text-center'>{languageData?.contactModalSubTitle}</h1>
+                        <p className='text-center saira'>{languageData?.contactModalSubTitle}</p>
                         <div>
                             <input value={email} onChange={e => setEmail(e.target.value)} className='w-full bg-white border border-[#FFD700] rounded-[18px] px-6 py-3 mt-4 saira input-fix text-[#888888]' placeholder='Email' />
                             <textarea value={message} onChange={e => setMessage(e.target.value)} className='w-full bg-white border border-[#FFD700] rounded-[18px] px-6 py-3 mt-4 saira min-h-[200px] input-fix text-[#888888]' placeholder='Message' />
                             <div className="flex justify-center">
                                 <button className='w-full bg-[white] border-[#FFD700] px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[18px] text-[#5f5f5f] font-semibold' onClick={e => handleSend()}>
                                     {
-                                        isSended ? 'Sended!' : 'Send message'
+                                        isSended ? languageData?.contactModalBtn1 : languageData?.contactModalBtn2
                                     }
                                 </button>
                             </div>

@@ -4,7 +4,7 @@ import checkmarkImg from '../../../images/checkmarkWhite.png'
 import { useNavigate } from 'react-router-dom'
 import userAPI from '../../../Requests/user'
 
-function Settings({ user, setOpen }) {
+function Settings({ user, setOpen, languageData  }) {
 
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
@@ -49,12 +49,12 @@ function Settings({ user, setOpen }) {
 
                 <div className='h-[80vh] flex align-middle items-center justify-center w-full'>
                     <div className='w-full'>
-                        <h1 className='text-[32px] text-white text-center'>Account settings</h1>
+                        <h1 className='text-[32px] text-white text-center'>{languageData?.settingsTitle}</h1>
                         <div className='mt-4'>
-                            <p className='text-[14px] text-white saira'>User name</p>
+                            <p className='text-[14px] text-white saira'>{languageData?.settingsUserName}</p>
                             <input value={username} onChange={e => setUsername(e.target.value)} className='w-full bg-white border border-[#FFD700] rounded-[18px] px-6 py-3 saira input-fix text-[#888888] mt-1' placeholder='Username' />
 
-                            <p className='text-[14px] text-white saira mt-6'>E-mail</p>
+                            <p className='text-[14px] text-white saira mt-6'>{languageData?.settingsUserEmail}E-mail</p>
                             <input value={email} onChange={e => setEmail(e.target.value)} className='w-full bg-white border border-[#FFD700] rounded-[18px] px-6 py-3 saira input-fix text-[#888888] mt-1' placeholder='E-mail' />
 
                             <div className='flex items-center gap-2 mt-4'>
@@ -64,7 +64,7 @@ function Settings({ user, setOpen }) {
                                         checkmark === true && <img className='w-3' src={checkmarkImg} alt="" />
                                     }
                                 </div>
-                                <label className='saira' htmlFor="notification">Receive notifications and reminders via email</label>
+                                <label className='saira' htmlFor="notification">{languageData?.settingsCheckbox}</label>
 
                             </div>
 
@@ -75,7 +75,7 @@ function Settings({ user, setOpen }) {
                                     }
                                 </button>
                             </div>
-                            <p className='text-center mt-2 text-[#FF4B60] saira font-semibold cursor-pointer' onClick={e => setDeleteStep(1)}>Delete account</p>
+                            <p className='text-center mt-2 text-[#FF4B60] saira font-semibold cursor-pointer' onClick={e => setDeleteStep(1)}>{languageData?.settingsDeleteStep}</p>
                         </div>
                     </div>
 
@@ -85,9 +85,7 @@ function Settings({ user, setOpen }) {
                                 <div className='flex justify-end mb-2'>
                                     <img onClick={e => setDeleteStep(0)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
                                 </div>
-                                <h1 className='text-[16px] text-white text-center font-semibold'>If you delete your account
-                                    all your achievements
-                                    will be lost</h1>
+                                <h1 className='text-[16px] text-white text-center font-semibold'>{languageData?.settingsDeleteSure}</h1>
 
                                 <button onClick={e => setDeleteStep(2)} className='w-full bg-[white] border-[#FFD700] px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[50px] text-[18px] text-[#5f5f5f] font-semibold'>Continue</button>
                             </div>
@@ -96,11 +94,11 @@ function Settings({ user, setOpen }) {
                                     <div className='flex justify-end mb-2'>
                                         <img onClick={e => setDeleteStep(0)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
                                     </div>
-                                    <h1 className='text-[16px] text-center text-[#FF4B60] font-semibold'>Are you sure you want to delete your account?</h1>
+                                    <h1 className='text-[16px] text-center text-[#FF4B60] font-semibold'>{languageData?.settingsDeleteSure2}</h1>
 
                                     <div className='flex items-center gap-4'>
-                                        <button onClick={e => setDeleteStep(0)} className='w-full bg-transparent border-[#FFD700] border px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[50px] text-[18px] text-white font-semibold'>No</button>
-                                        <button onClick={e => deleteAccountHandler()} className='w-full bg-[white] border-[#FFD700] px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[50px] text-[18px] text-[#5f5f5f] font-semibold'>Yes</button>
+                                        <button onClick={e => setDeleteStep(0)} className='w-full bg-transparent border-[#FFD700] border px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[50px] text-[18px] text-white font-semibold'>{languageData?.settingsDeleteNo}</button>
+                                        <button onClick={e => deleteAccountHandler()} className='w-full bg-[white] border-[#FFD700] px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[50px] text-[18px] text-[#5f5f5f] font-semibold'>{languageData?.settingsDeleteYes}</button>
                                     </div>
                                 </div>
                                 : null

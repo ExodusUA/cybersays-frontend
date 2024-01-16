@@ -6,7 +6,7 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
 
 
-function TourModal({ setOpen }) {
+function TourModal({ setOpen, languageData }) {
 
     const dataShort = [
         {
@@ -44,16 +44,16 @@ function TourModal({ setOpen }) {
             <div class=" justify-center flex my-2">
                 <div class="flex border-[1px] border-[#FFED63] m-auto  rounded-[50px] ">
                     <div onClick={e => setSelectedButton(1)} className={`${selectedButton === 1 && 'bg-[#FFED63]'}  rounded-[50px] px-[20px] py-[5px] md:py-[8px]  cursor-pointer`}>
-                        <p className={`${selectedButton === 1 && '!text-black'} text-white saira font-bold text-[14px]`}>Short version</p>
+                        <p className={`${selectedButton === 1 && '!text-black'} text-white saira font-bold text-[14px]`}>{languageData?.tourShortToggle}</p>
                     </div>
                     <div onClick={e => setSelectedButton(2)} className={`${selectedButton === 2 && 'bg-[#FFED63]'} rounded-[50px] px-[20px] py-[5px] md:py-[8px] cursor-pointer`}>
-                        <p className={`${selectedButton === 2 && '!text-black'} text-white saira font-bold text-[14px]`}>Long version</p>
+                        <p className={`${selectedButton === 2 && '!text-black'} text-white saira font-bold text-[14px]`}>{languageData?.tourLongToggle}</p>
                     </div>
                 </div>
             </div>
             {selectedButton === 1 && (
                 <div className='max-w-[375px] md:max-w-[600px] mac:!max-w-[400px] m-auto'>
-                    <p className=' text-[16px] md:text-[24px] font-semibold text-center'>Lorem ipsum</p>
+                    <p className=' text-[16px] md:text-[24px] font-semibold text-center'>{languageData?.tourShortTitle}</p>
                     <img className='w-[375px] md:w-full m-auto mt-3' src={hero} alt="hero" />
                     <Swiper
                         pagination={{ clickable: true }}
@@ -76,7 +76,7 @@ function TourModal({ setOpen }) {
                     </Swiper>
                     <div className='flex justify-center mx-2'>
                         <button className='max-w-[360px] w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 flex justify-center mt-8 mac:!mt-0 absolute mx-2'>
-                            Share the tour
+                        {languageData?.tourShortBtn} 
                             <svg className='ml-2' width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M21 12.5L14 5.5V9.5C7 10.5 4 15.5 3 20.5C5.5 17 9 15.4 14 15.4V19.5L21 12.5Z" fill="#1E1E1E" />
                             </svg>
@@ -86,7 +86,7 @@ function TourModal({ setOpen }) {
             )}
             {selectedButton === 2 && (
                 <div className='max-w-[375px] md:max-w-[600px] mac:!max-w-[400px]  m-auto'>
-                    <p className=' text-[16px] md:text-[24px] font-semibold text-center'>Lorem ipsum</p>
+                    <p className=' text-[16px] md:text-[24px] font-semibold text-center'>{languageData?.tourLongTitle}</p>
                     <img className='w-[375px] md:w-full m-auto mt-3' src={hero} alt="hero" />
                     <Swiper
                         pagination={{ clickable: true }}
@@ -108,7 +108,7 @@ function TourModal({ setOpen }) {
                     </Swiper>
                     <div className='flex justify-center mx-2'>
                         <button className='max-w-[360px] w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 flex justify-center mt-8 mac:!mt-0 absolute mx-2'>
-                            Share the tour
+                        {languageData?.tourLongBtn}
                             <svg className='ml-2' width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M21 12.5L14 5.5V9.5C7 10.5 4 15.5 3 20.5C5.5 17 9 15.4 14 15.4V19.5L21 12.5Z" fill="#1E1E1E" />
                             </svg>
