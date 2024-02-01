@@ -9,7 +9,6 @@ function LanguageSwitcher({ setIsLangOpen }) {
     const { language, changeLanguage } = useLanguage();
 
     const handleLanguageChange = (newLanguage) => {
-
         changeLanguage(newLanguage);
         setIsLangOpen(false);
     };

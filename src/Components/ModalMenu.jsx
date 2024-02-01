@@ -22,8 +22,11 @@ import Legal from '../Pages/CyberSaysPages/Modals/Legal'
 import Contact from '../Pages/CyberSaysPages/Modals/Contact'
 import Settings from '../Pages/CyberSaysPages/Modals/Settings'
 import { useNavigate } from 'react-router-dom'
+import { useDesign } from '../Helpers/Design/DesignContext'
 
-function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setChatModal, chatModal, languageData  }) {
+function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setChatModal, chatModal, languageData }) {
+
+  const { design, changeDesign } = useDesign()
 
   const [tourModal, setTourModal] = useState(false)
   const [referralsModal, setReferralsModal] = useState(false)
@@ -45,6 +48,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
         <div className='flex justify-between items-center max-w-[1170px] m-auto md:px-4 '>
           <img onClick={() => setMenuOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
           <div className='flex justify-between'>
+            <button onClick={e => changeDesign(design === '0' ? '1' : '0')} className='mr-4 ml-3 min-w-[50px] h-[50px] border-[2px] border-[#FFED63] bg-[#626161] rounded-full flex justify-center items-center px-4 cursor-pointer'>Toggle Design</button>
             <NewLanguageButton />
             <div onClick={e => setLogoutModal(true)} className='ml-3 min-w-[50px] h-[50px] border-[2px] border-[#FFED63] bg-[#626161] rounded-full flex justify-center items-center  cursor-pointer'>
               <svg className='ml-[-5px]' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

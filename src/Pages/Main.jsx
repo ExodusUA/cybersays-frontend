@@ -232,7 +232,6 @@ function Main({ languageData }) {
                     loop={false}
                     onSlideChange={(swiper) => handleSwiperChange(swiper)}
                 >
-
                     <SwiperSlide>
                         <Homepage setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
                     </SwiperSlide>
