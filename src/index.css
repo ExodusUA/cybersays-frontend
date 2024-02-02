@@ -205,10 +205,22 @@ body {
     bottom: 2px; 
     width: 100%;
     height: 1px; 
-    background: var(--New-CS-yellow, linear-gradient(180deg, #FAD604 0%, #FE804D 100%));
+    background: var(--New-CS-yellow, linear-gradient(180deg, #FE8648 0%, #FE804D 100%));
 }
 .gradient-linkDouble {
     background: var(--New-CS-yellow, linear-gradient(180deg, #FAD604 0%, #FE804D 100%));
     -webkit-background-clip: text;
     color: transparent;
+}
+.gradient-borderRefferals {
+    border-width: 2px; 
+    border-style: double; 
+    border-image: linear-gradient(180deg, #FAD604 0%, #FE804D 100%); /* Градієнт */
+    -webkit-border-image: -webkit-linear-gradient(180deg, #FAD604 0%, #FE804D 100%);
+    border-image-slice: 1;
+    -webkit-border-image-slice: 1;
+    
+}
+.gradient-borderRefferals {
+    border-radius: 40px; /* Радіус бордера */
 }
