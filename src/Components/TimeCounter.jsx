@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useDesign } from '../Helpers/Design/DesignContext'
 const moment = require('moment-timezone');
 
 function TimeCounter({ languageData }) {
-    const endDate = moment.tz('2024-01-28 10:00', 'America/Sao_Paulo');
+
+    const { design } = useDesign()
+
+    const endDate = moment.tz('2024-02-28 10:00', 'America/Sao_Paulo');
     const [formattedEndDate, setFormattedEndDate] = useState(endDate.format('YY/MM/DD HH:mm:ss'));
     const [daysRemaining, setDaysRemaining] = useState(endDate.diff(moment(), 'days'));
     const [hoursRemaining, setHoursRemaining] = useState(0);
@@ -32,13 +36,13 @@ function TimeCounter({ languageData }) {
             <p className='text-[18px] lg:text-[32px] mac:!text-[18px] font-semibold iphone:leading-[unset] se:leading-5 md:leading-[unset]   pr-4 text-center'>{languageData?.timeCounterTitle}</p>
             <div className='lg:w-[420px] m-auto'>
                 <div className='flex justify-center lg:justify-between items-center leading-5 gap-[18px] lg:ml-5 lg:mt-5 '>
-                    <div className='text-center'><h2 className='text-[18px] md:text-[24px] md: font-black text-[#FFED63]'>{daysRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>{languageData?.timeCounterDays}</p></div>
-                    <p className='text-[#FFED63] text-[18px]'>:</p>
-                    <div className='text-center'><h2 className='text-[18px] md:text-[24px] font-black text-[#FFED63]'>{hoursRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>{languageData?.timeCounterHours}</p></div>
-                    <p className='text-[#FFED63] text-[18px]'>:</p>
-                    <div className='text-center'><h2 className='text-[18px] md:text-[24px] font-black text-[#FFED63]'>{minutesRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>{languageData?.timeCounterMinutes}</p></div>
-                    <p className='text-[#FFED63] text-[18px]'>:</p>
-                    <div className='text-center'><h2 className='text-[18px] md:text-[24px] font-black text-[#FFED63]'>{secondsRemaining}</h2><p className='text-[#FFED63] text-center font-semibold text-[12px] '>{languageData?.timeCounterSeconds}</p></div>
+                    <div className='text-center'><h2 className={`text-[18px] md:text-[24px] md: font-black  ${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'}`}>{daysRemaining}</h2><p className={`${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'} text-center font-semibold text-[12px]`}>{languageData?.timeCounterDays}</p></div>
+                    <p className={`${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'} text-[18px]`}>:</p>
+                    <div className='text-center'><h2 className={`text-[18px] md:text-[24px] md: font-black ${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'}`}>{hoursRemaining}</h2><p className={`${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'} text-center font-semibold text-[12px]`}>{languageData?.timeCounterHours}</p></div>
+                    <p className={`${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'} text-[18px]`}>:</p>
+                    <div className='text-center'><h2 className={`text-[18px] md:text-[24px] md: font-black ${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'}`}>{minutesRemaining}</h2><p className={`${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'} text-center font-semibold text-[12px]`}>{languageData?.timeCounterMinutes}</p></div>
+                    <p className={`${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'} text-[18px]`}>:</p>
+                    <div className='text-center'><h2 className={`text-[18px] md:text-[24px] md: font-black ${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'}`}>{secondsRemaining}</h2><p className={`${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'} text-center font-semibold text-[12px]`}>{languageData?.timeCounterSeconds}</p></div>
                 </div>
             </div>
         </div>

@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react'
 import notReady from '../../images/CyberSaysPage/card_notReady.png'
 import done from '../../images/CyberSaysPage/card_done.png'
 import { Link } from 'react-router-dom'
+import { useDesign } from '../../Helpers/Design/DesignContext'
 
 function TaskCard({ state, background, data, index, imLiveURL, rounded }) {
+
+    const { design } = useDesign()
 
     const [cardState, setCardState] = useState(null)
 
@@ -61,7 +64,7 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded }) {
         return <>
             <div className='flex justify-between items-center mx-1  sm:mx-3 '>
                 <p className='saira text-[12px] md:text-[14px] font-medium '>{index}. {data?.taskTitleOpen}</p>
-                <img className='w-[18px] h-[18px]' src={notReady} alt="notReady" />
+                <img className='w-[18px] h-[18px]' src={design === '0' ? notReady  : require('../../images/NewDesign/Task/notReady.png')} alt="notReady" />
             </div>
 
             <div className='flex justify-center '>
@@ -80,23 +83,23 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded }) {
             </div>
 
             <div className='flex justify-center mt-[-20px] md:mt-[-30px] relative z-50 max-w-[330px] w-full sm:max-w-[555px] m-auto'>
-                <Link className='w-full' to={imLiveURL}><button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-1 sm:py-2'>{data?.taskButton}</button></Link>
+                <Link className='w-full' to={imLiveURL}><button className={`w-full bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold py-1 sm:py-2 ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{data?.taskButton}</button></Link>
             </div>
-            <p onClick={e => copyImLiveLink()} className={`saira text-[14px] cursor-pointer underline text-center mb-[-5px] py-2 pb-6 ${linkCopied === true ? 'opacity-60' : ''}`}>Copy link</p>
+            <p onClick={e => copyImLiveLink()} className={`saira text-[14px] cursor-pointer underline text-center mb-[-5px] py-2 pb-6 font-semibold ${linkCopied === true ? 'opacity-60' : ''}`}>Copy link</p>
         </>
     }
 
     const finishedState = () => {
         return <div className='flex justify-between items-center mx-1  sm:mx-3 '>
             <p className='saira text-[12px] md:text-[14px] font-medium'>{index}. {data?.taskTitle}</p>
-            <img className='w-[18px] h-[18px]' src={done} alt="done" />
+            <img className='w-[18px] h-[18px]' src={design === '0' ? done  : require('../../images/NewDesign/Task/done.png')} alt="done" />
         </div>
     }
 
     const inactiveState = () => {
         return <div className='flex justify-between items-center mx-1   sm:mx-3'>
             <p className='saira text-[12px] md:text-[14px] font-medium'>{index}. {data?.taskTitle}</p>
-            <img className='w-[18px] h-[18px]' src={notReady} alt="notReady" />
+            <img className='w-[18px] h-[18px]' src={design === '0' ? notReady  : require('../../images/NewDesign/Task/notReady.png')} alt="notReady" />
         </div>
     }
 

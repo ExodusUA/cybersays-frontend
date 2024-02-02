@@ -3,9 +3,13 @@ import logoCyber from '../../images/CyberSaysPage/logoMain.png'
 import TimeCounter from '../../Components/TimeCounter'
 import TaskCard from '../../Components/DoubleMoneyPage/TaskCard';
 import congrats from '../../images/CyberSaysPage/congrats.png'
-
+import { useDesign } from '../../Helpers/Design/DesignContext'
+import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
 
 function Double({ languageData, user, imLiveURL, setOpen }) {
+
+    const { design } = useDesign()
+
     const [isOpen, setIsOpen] = useState(false)
 
     const [taskStatus, setTaskStatus] = useState(null)
@@ -44,17 +48,17 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
     }, [user])
 
     return (
-        <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-double.jpg)] md:bg-[url(./images/CyberSaysPage/bg-double.jpg)] bg-cover bg-no-repeat bg-center relative z-10' onClick={() => setIsOpen(false)}>
+        <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-double.jpg)] md:bg-[url(./images/CyberSaysPage/bg-double.jpg)]' : ' bg-[url(./images/NewDesign/Bg/double_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10`} onClick={() => setIsOpen(false)}>
             <div className='pt-[60px] px-4  md:pt-[90px] max-w-[1170px] m-auto' >
-                <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px] mac:!w-[350px]' src={logoCyber} alt="logoCyber" />
+                <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px] mac:!w-[350px]' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
                 <div className='mac:max-w-[550px] md:max-w-[1000px] md:mx-[180px] m-auto'>
-                    <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[100px] text-center py-1  px-4 md:py-2'>
+                    <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  text-center py-1  px-4 md:py-2 ${design === '0' ? 'rounded-[100px]' : 'rounded-[24px]'}`}>
                         <p className='text-[14px] md:text-[32px] mac2:!text-[20px] font-semibold  iphone:leading-[unset] se:leading-4 mac2:!leading-[22px]'>{languageData?.doubleTitle}</p>
 
                     </div>
                 </div>
 
-                <p className='text-[12px] md:text-[14px] text-[#FFED63] text-center cursor-pointer flex items-center justify-center  md:py-2 mb-10'>
+                <p className={`text-[12px] md:text-[14px] ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble font-semibold'}  text-center cursor-pointer flex items-center justify-center  md:py-2 mb-10`}>
                     {languageData?.doubleSubtitleSpan}
                     <span className='mx-1'>
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,14 +70,14 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
                 <div className='max-w-[600px] m-auto'>
                     {
                         taskStatus !== null && <>
-                            <TaskCard data={languageData?.tasks?.task1} state={taskStatus[0]} background={'#B9A1E1'} rounded={'rounded-t-[20px] '} index={1} imLiveURL={imLiveURL} />
-                            <TaskCard data={languageData?.tasks?.task2} state={taskStatus[0]} background={'#93CC8E'} rounded={'rounded-t-[20px] '} index={2} imLiveURL={imLiveURL} />
-                            <TaskCard data={languageData?.tasks?.task3} state={taskStatus[2]} background={'#EA7C7C'} rounded={'rounded-t-[20px] '} index={3} imLiveURL={imLiveURL} />
-                            <TaskCard data={languageData?.tasks?.task4} state={taskStatus[3]} background={'#76C2E3'} rounded={'rounded-[20px] !pb-[5px]'} index={4} imLiveURL={imLiveURL} />
+                            <TaskCard data={languageData?.tasks?.task1} state={taskStatus[0]} background={design === '0' ? '#B9A1E1' : '#4F97CB'} rounded={'rounded-t-[20px] '} index={1} imLiveURL={imLiveURL} />
+                            <TaskCard data={languageData?.tasks?.task2} state={taskStatus[0]} background={design === '0' ? '#93CC8E' : '#32B28C'} rounded={'rounded-t-[20px] '} index={2} imLiveURL={imLiveURL} />
+                            <TaskCard data={languageData?.tasks?.task3} state={taskStatus[2]} background={design === '0' ? '#EA7C7C' : '#D76666'} rounded={'rounded-t-[20px] '} index={3} imLiveURL={imLiveURL} />
+                            <TaskCard data={languageData?.tasks?.task4} state={taskStatus[3]} background={design === '0' ? '#76C2E3' : '#9E64D8'} rounded={'rounded-[20px] !pb-[5px]'} index={4} imLiveURL={imLiveURL} />
                         </>
                     }
                 </div>
-                <p onClick={e => setOpen(true)} className='text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2 cursor-pointer'>{languageData?.doublePaid}</p>
+                <p onClick={e => setOpen(true)} className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2 cursor-pointer  ${design === '0' ? 'text-white' : 'gradient-link flex justify-center'}`}>{languageData?.doublePaid}</p>
 
                 {/*
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[20px] max-w-[600px] m-auto p-4'>

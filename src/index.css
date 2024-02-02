@@ -177,3 +177,38 @@ body {
 .input-fix {
     outline: none;
 }
+.gradient-homepageBtn {
+    background: var(--Linear, linear-gradient(105deg, #8FE5EC -23.05%, #DDBAFC 88.21%));
+}
+.gradient-headerBlock {
+    border: 2px solid;
+    border-image: var(--Linear, linear-gradient(105deg, #8FE5EC -23.05%, #DDBAFC 88.21%)) 1;
+    border-radius: 50px;
+}
+.gradient-timeCounter {
+    background: var(--Linear, linear-gradient(105deg, #8FE5EC -23.05%, #DDBAFC 88.21%));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.gradient-link {
+    background: var(--New-CS-yellow, linear-gradient(180deg, #FAD604 0%, #FE804D 100%));
+    -webkit-background-clip: text;
+    color: transparent;
+    text-decoration: underline;
+    position: relative;
+    display: inline-block;
+}
+.gradient-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 2px; 
+    width: 100%;
+    height: 1px; 
+    background: var(--New-CS-yellow, linear-gradient(180deg, #FAD604 0%, #FE804D 100%));
+}
+.gradient-linkDouble {
+    background: var(--New-CS-yellow, linear-gradient(180deg, #FAD604 0%, #FE804D 100%));
+    -webkit-background-clip: text;
+    color: transparent;
+}
