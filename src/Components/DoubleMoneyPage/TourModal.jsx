@@ -4,9 +4,11 @@ import hero from '../../images/CyberSaysPage/tourHero.png'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
+import { useDesign } from '../../Helpers/Design/DesignContext'
 
 
 function TourModal({ setOpen, languageData }) {
+    const { design } = useDesign()
 
     const dataShort = [
         {
@@ -39,14 +41,14 @@ function TourModal({ setOpen, languageData }) {
     return (
         <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
             <div className='flex justify-end max-w-[600px] m-auto md:my-4'>
-                <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
+                <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../../images/NewDesign/closeBtn.png')} alt="close" />
             </div>
             <div class=" justify-center flex my-2">
-                <div class="flex border-[1px] border-[#FFED63] m-auto  rounded-[50px] ">
-                    <div onClick={e => setSelectedButton(1)} className={`${selectedButton === 1 && 'bg-[#FFED63]'}  rounded-[50px] px-[20px] py-[5px] md:py-[8px]  cursor-pointer`}>
+                <div class={`flex border-[1px]  m-auto ${design === '0' ? 'rounded-[50px] border-[#FFED63]' : 'rounded-[14px] border-[#FDA62D]'}   `}>
+                    <div onClick={e => setSelectedButton(1)} className={`${selectedButton === 1 && (design === '0' ? 'bg-[#FFED63]' : 'gradient-tourToggle')} ${design === '0' ? 'rounded-[50px]' : 'rounded-[12px]'}  px-[20px] py-[5px] md:py-[8px]  cursor-pointer`}>
                         <p className={`${selectedButton === 1 && '!text-black'} text-white saira font-bold text-[14px]`}>{languageData?.tourShortToggle}</p>
                     </div>
-                    <div onClick={e => setSelectedButton(2)} className={`${selectedButton === 2 && 'bg-[#FFED63]'} rounded-[50px] px-[20px] py-[5px] md:py-[8px] cursor-pointer`}>
+                    <div onClick={e => setSelectedButton(2)} className={`${selectedButton === 2 && (design === '0' ? 'bg-[#FFED63]' : 'gradient-tourToggle')} ${design === '0' ? 'rounded-[50px]' : 'rounded-[12px]'} px-[20px] py-[5px] md:py-[8px] cursor-pointer`}>
                         <p className={`${selectedButton === 2 && '!text-black'} text-white saira font-bold text-[14px]`}>{languageData?.tourLongToggle}</p>
                     </div>
                 </div>
@@ -54,7 +56,7 @@ function TourModal({ setOpen, languageData }) {
             {selectedButton === 1 && (
                 <div className='max-w-[375px] md:max-w-[600px] mac:!max-w-[400px] m-auto'>
                     <p className=' text-[16px] md:text-[24px] font-semibold text-center'>{languageData?.tourShortTitle}</p>
-                    <img className='w-[375px] md:w-full m-auto mt-3' src={hero} alt="hero" />
+                    <img className='w-[375px] md:w-full m-auto mt-3' src={design === '0' ? hero : require('../../images/NewDesign/tourHero.png')} alt="hero" />
                     <Swiper
                         pagination={{ clickable: true }}
                         modules={[Pagination]}
@@ -75,7 +77,7 @@ function TourModal({ setOpen, languageData }) {
 
                     </Swiper>
                     <div className='flex justify-center mx-2'>
-                        <button className='max-w-[360px] w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 flex justify-center mt-8 mac:!mt-0 absolute mx-2'>
+                        <button className={`max-w-[360px] w-full bg-white  border-[2px] ${design === '0' ? ' rounded-[50px] border-[2px] bg-white ' : ' rounded-[12px] border-none gradient-homepageBtn'} text-black text-[18px] saira font-semibold py-2 flex justify-center mt-8 mac:!mt-0 absolute mx-2`}>
                         {languageData?.tourShortBtn} 
                             <svg className='ml-2' width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M21 12.5L14 5.5V9.5C7 10.5 4 15.5 3 20.5C5.5 17 9 15.4 14 15.4V19.5L21 12.5Z" fill="#1E1E1E" />
@@ -87,7 +89,7 @@ function TourModal({ setOpen, languageData }) {
             {selectedButton === 2 && (
                 <div className='max-w-[375px] md:max-w-[600px] mac:!max-w-[400px]  m-auto'>
                     <p className=' text-[16px] md:text-[24px] font-semibold text-center'>{languageData?.tourLongTitle}</p>
-                    <img className='w-[375px] md:w-full m-auto mt-3' src={hero} alt="hero" />
+                    <img className='w-[375px] md:w-full m-auto mt-3' src={design === '0' ? hero : require('../../images/NewDesign/tourHero.png')} alt="hero" />
                     <Swiper
                         pagination={{ clickable: true }}
                         modules={[Pagination]}
@@ -107,7 +109,7 @@ function TourModal({ setOpen, languageData }) {
 
                     </Swiper>
                     <div className='flex justify-center mx-2'>
-                        <button className='max-w-[360px] w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 flex justify-center mt-8 mac:!mt-0 absolute mx-2'>
+                        <button className={`max-w-[360px] w-full bg-white  border-[2px] ${design === '0' ? ' rounded-[50px] border-[2px] bg-white ' : ' rounded-[12px] border-none gradient-homepageBtn'} text-black text-[18px] saira font-semibold py-2 flex justify-center mt-8 mac:!mt-0 absolute mx-2`}>
                         {languageData?.tourLongBtn}
                             <svg className='ml-2' width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M21 12.5L14 5.5V9.5C7 10.5 4 15.5 3 20.5C5.5 17 9 15.4 14 15.4V19.5L21 12.5Z" fill="#1E1E1E" />

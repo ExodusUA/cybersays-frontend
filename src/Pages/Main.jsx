@@ -26,11 +26,13 @@ import MyReferralsModal from '../Components/ProfileReferrals/MyReferralsModal'
 import chatImage from '../images/CyberSaysPage/mobileMenuLink/link9.png'
 import Message from './CyberSaysPages/Modals/Message'
 import AvatarModal from '../Components/ProfileReferrals/AvatarModal'
+import { useDesign } from '../Helpers/Design/DesignContext'
+
 var mixpanel = require('mixpanel-browser');
 
 
 function Main({ languageData }) {
-
+    const { design } = useDesign()
 
     const queryClient = useQueryClient()
     const dataMessage = [
@@ -307,7 +309,7 @@ function Main({ languageData }) {
                 openAvatar && <AvatarModal inputRef={inputRef} setSelectedImage={setSelectedImage} selectedImage={selectedImage} handleImageChange={handleImageChange} saveAvatar={saveAvatar} setOpenAvatar={setOpenAvatar} />
             }
             <div className='fixed right-8 hidden bottom-8 sm:block z-[99]'>
-                <img onClick={e => setChatModal(true)} className='w-12 cursor-pointer' src={chatImage} alt="Chat" />
+                <img onClick={e => setChatModal(true)} className='w-12 cursor-pointer' src={design === '0' ? chatImage : require('../images/NewDesign/chatBtn.png')} alt="Chat" />
             </div>
 
         </>

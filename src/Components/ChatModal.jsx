@@ -5,8 +5,10 @@ import close from '../images/CyberSaysPage/closeMenu.png'
 import avatar from '../images/CyberSaysPage/1st.png'
 import send from '../images/CyberSaysPage/send.png'
 import GifModal from './GifModal';
+import { useDesign } from '../Helpers/Design/DesignContext'
 
 function ChatModal({ user, setOpen, languageData }) {
+    const { design } = useDesign()
 
     const socket = io(process.env.REACT_APP_CHAT_URL, {
         query: {
@@ -79,13 +81,23 @@ function ChatModal({ user, setOpen, languageData }) {
 
                 <div className='flex justify-between md:my-4'>
                     <div className='flex items-center'>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        {design === '0' ? <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="8" cy="8" r="8" fill="#FFED63" fill-opacity="0.2" />
                             <circle cx="7.99922" cy="7.99971" r="4.8" fill="#FFED63" />
-                        </svg>
+                        </svg> : <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8" cy="8" r="8" fill="#FFED63" fill-opacity="0.2" />
+                            <circle cx="7.99922" cy="7.99971" r="4.8" fill="url(#paint0_linear_1464_400936)" />
+                            <defs>
+                                <linearGradient id="paint0_linear_1464_400936" x1="3.19922" y1="8.09383" x2="12.7992" y2="8.09383" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#8FE5EC" />
+                                    <stop offset="1" stop-color="#DDBAFC" />
+                                </linearGradient>
+                            </defs>
+                        </svg>}
+
                         <p className='text-[16px] saira font-medium ml-2'>{online} {languageData?.chatOnline}</p>
                     </div>
-                    <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
+                    <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
                 <p className=' text-[18px] md:text-[32px] font-semibold text-center mt-3'>{languageData?.chatTitle}</p>
                 <div className='h-[500px] overflow-y-scroll  duration-300 pb-4' ref={chatContainer}
@@ -96,7 +108,7 @@ function ChatModal({ user, setOpen, languageData }) {
                         messages.length > 0 ?
                             filterMessages(messages).map((item, index) => (
                                 <div className={`${item.username === user.email ? 'flex justify-end' : ''}`} key={item}>
-                                    <div className={`bg-[#EAEAEA] bg-opacity-10 rounded-[20px] p-2 md:p-5 max-w-[280px] sm:max-w-[450px] w-full ${item.username === user.email ? 'my-1 border-[2px] border-[#FFED63]' : 'my-2'}`}>
+                                    <div className={`bg-[#EAEAEA] bg-opacity-10 rounded-[20px] p-2 md:p-5 max-w-[280px] sm:max-w-[450px] w-full ${item.username === user.email ? (design === '0' ? 'my-1 border-[2px] border-[#FFED63]' : 'my-1 border-[2px] border-[#A2DBF0]') : 'my-2'}`}>
                                         <div className='flex justify-between items-center'>
                                             <div className='flex items-center max-w-[110px] md:max-w-[225px] w-full mr-4'>
                                                 <img className='rounded-full w-[32px] h-[32px] mr-2' src={avatar} alt="avatar" />
@@ -114,10 +126,10 @@ function ChatModal({ user, setOpen, languageData }) {
                     }
 
                 </div>
-                <div className='border-b-[2px] border-[#FFED63]'></div>
+                <div className={`border-b-[2px]  ${design === '0' ? 'border-[#FFED63]' : 'border-[#A2DBF0]'}`}></div>
                 <div className='flex justify-between items-center mt-2 md:mt-5'>
                     <div className=' relative  w-full'>
-                        <input type="text" placeholder='Your message' className='  border-[2px] border-[#FFED63] saira w-[98%] text-[14px] rounded-[50px] py-[10px] px-5 pr-12 outline-none text-black' value={message} onChange={e => setMessage(e.target.value)} onKeyDown={e => {
+                        <input type="text" placeholder='Your message' className={`border-[2px] ${design === '0' ? 'border-[#FFED63] rounded-[50px]' : 'border-[#A2DBF0] rounded-[14px]'} saira w-[98%] text-[14px]  py-[10px] px-5 pr-12 outline-none text-black`}value={message} onChange={e => setMessage(e.target.value)} onKeyDown={e => {
                             if (e.keyCode === 13) {
                                 handleSubmit(e)
                             }
@@ -128,7 +140,7 @@ function ChatModal({ user, setOpen, languageData }) {
                         </svg>
 
                     </div>
-                    <div onClick={e => handleSubmit(e)} className=' min-w-[44px] h-[44px] border-[2px] border-[#FFED63] bg-white rounded-full flex justify-center items-center  cursor-pointer'>
+                    <div onClick={e => handleSubmit(e)} className={`min-w-[44px] h-[44px] border-[2px] ${design === '0' ? 'border-[#FFED63]' : 'border-[#A2DBF0]'} bg-white rounded-full flex justify-center items-center  cursor-pointer`}>
                         <img className='w-[24px] h-[24px]  cursor-pointer  ' src={send} alt="send" />
                     </div>
 

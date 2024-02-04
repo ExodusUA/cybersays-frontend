@@ -4,9 +4,10 @@ import transaction from '../../images/CyberSaysPage/TransactionLogo.png'
 import { useQuery } from '@tanstack/react-query'
 import userAPI from '../../Requests/user'
 import moment from 'moment'
-
+import { useDesign } from '../../Helpers/Design/DesignContext'
 
 function TransactionHistory({ setOpen, languageData }) {
+    const { design } = useDesign()
 
     const [transactionsData, setTransactionsData] = useState(null)
 
@@ -79,7 +80,7 @@ function TransactionHistory({ setOpen, languageData }) {
     return (
         <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 scrollbarHidden '>
             <div className='flex justify-end max-w-[600px] m-auto md:my-4'>
-                <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
+                <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../../images/NewDesign/closeBtn.png')} alt="close" />
             </div>
             <p className='text-[18px] md:text-[32px] font-semibold text-center'>{languageData?.ransactionsTitle}</p>
             <div className='m-auto max-w-[345px] md:max-w-[600px] w-full mt-3 h-[470px] overflow-scroll'>
@@ -97,7 +98,7 @@ function TransactionHistory({ setOpen, languageData }) {
 
             </div>
             <div className='flex justify-center'>
-                <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2 mt-3 max-w-[370px]'>{languageData?.withdrawBtn}</button>
+                <button className={`w-full bg-white  border-[2px] text-black text-[18px] saira font-semibold py-2 mt-3 max-w-[370px] ${design === '0' ? ' rounded-[50px] border-[2px] bg-white ' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>
             </div>
         </div>
     )

@@ -212,15 +212,11 @@ body {
     -webkit-background-clip: text;
     color: transparent;
 }
-.gradient-borderRefferals {
-    border-width: 2px; 
-    border-style: double; 
-    border-image: linear-gradient(180deg, #FAD604 0%, #FE804D 100%); /* Градієнт */
-    -webkit-border-image: -webkit-linear-gradient(180deg, #FAD604 0%, #FE804D 100%);
-    border-image-slice: 1;
-    -webkit-border-image-slice: 1;
-    
+.gradient-withdrawBorder {
+    border-bottom: 2px solid;
+    border-image: var(--Linear, linear-gradient(105deg, #8FE5EC -23.05%, #DDBAFC 88.21%)) 1;
+    border-radius: 50px;
 }
-.gradient-borderRefferals {
-    border-radius: 40px; /* Радіус бордера */
+.gradient-tourToggle {
+    background: linear-gradient(180deg, #FAD604 0%, #FE804D 100%);
 }

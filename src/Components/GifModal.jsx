@@ -8,8 +8,10 @@ import link4 from '../images/CyberSaysPage/gifLink4.png'
 import link5 from '../images/CyberSaysPage/gifLink5.png'
 import { useQuery } from '@tanstack/react-query'
 import { getTrendingGifs, searchGif } from '../Requests/gifs'
+import { useDesign } from '../Helpers/Design/DesignContext'
 
 function GifModal({ setGifModal, handleSubmitGif, languageData }) {
+    const { design } = useDesign()
 
     const [search, setSearch] = useState('');
     const [gifs, setGifs] = useState([]);
@@ -39,11 +41,11 @@ function GifModal({ setGifModal, handleSubmitGif, languageData }) {
             <div className='max-w-[600px] m-auto p-4'>
                 <div className='flex justify-end md:my-4'>
 
-                    <img onClick={e => setGifModal(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
+                    <img onClick={e => setGifModal(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
                 <p className=' text-[18px] md:text-[32px] font-semibold text-center my-3'>{languageData?.chatGif}</p>
                 <div className=' relative  w-full'>
-                    <input type="text" placeholder='Search' className='  border-[2px] border-[#FFED63] saira w-full text-[14px] rounded-[50px] py-[10px] px-5 pr-12 outline-none text-black' onKeyUp={e => {
+                    <input type="text" placeholder='Search' className={`border-[2px] ${design === '0' ? 'border-[#FFED63] rounded-[50px]' : 'border-[#A2DBF0] rounded-[14px]'} saira w-full text-[14px] py-[10px] px-5 pr-12 outline-none text-black`} onKeyUp={e => {
                         setTimeout(() => {
                             setSearch(e.target.value)
                         }, 500);
@@ -72,7 +74,7 @@ function GifModal({ setGifModal, handleSubmitGif, languageData }) {
                     </div>
 
                 </div>
-                <div className='border-b-[2px] border-[#FFED63]'></div>
+                <div className={`border-b-[2px] ${design === '0' ? 'border-[#FFED63]' : 'border-[#A2DBF0]'}`}></div>
                 <div className='flex justify-between mt-4'>
                     <img className='w-[24px] h-[24px] cursor-pointer' src={link1} alt="link" />
                     <img className='w-[24px] h-[24px] cursor-pointer' src={link2} alt="link" />
