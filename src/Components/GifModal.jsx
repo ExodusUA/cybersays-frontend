@@ -75,6 +75,7 @@ function GifModal({ setGifModal, handleSubmitGif, languageData }) {
 
                 </div>
                 <div className={`border-b-[2px] ${design === '0' ? 'border-[#FFED63]' : 'border-[#A2DBF0]'}`}></div>
+                {/*
                 <div className='flex justify-between mt-4'>
                     <img className='w-[24px] h-[24px] cursor-pointer' src={link1} alt="link" />
                     <img className='w-[24px] h-[24px] cursor-pointer' src={link2} alt="link" />
@@ -82,6 +83,7 @@ function GifModal({ setGifModal, handleSubmitGif, languageData }) {
                     <img className='w-[24px] h-[24px] cursor-pointer' src={link4} alt="link" />
                     <img className='w-[24px] h-[24px] cursor-pointer' src={link5} alt="link" />
                 </div>
+                */}
             </div>
         </div>
     )

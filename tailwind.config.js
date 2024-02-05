@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     screens: {
       'mob': '374px',
+      'mob2': '400px',
 
       'mobMax': { 'max': '414px' },
       'mac': { 'raw': '(max-height: 790px)' },
