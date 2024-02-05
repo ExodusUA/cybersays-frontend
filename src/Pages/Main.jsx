@@ -308,7 +308,7 @@ function Main({ languageData }) {
             }
 
             {
-                chatModal && <ChatModal languageData={languageData} setOpen={setChatModal} user={userData} />
+                chatModal && <ChatModal languageData={languageData} setOpen={setChatModal} user={userData} userCountry={userCountry} />
             }
 
             {
