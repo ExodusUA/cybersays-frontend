@@ -5,47 +5,68 @@ import close from '../images/CyberSaysPage/closeMenu.png'
 import avatar from '../images/CyberSaysPage/1st.png'
 import send from '../images/CyberSaysPage/send.png'
 import GifModal from './GifModal';
+import UserMessage from './Messages/UserMessage';
+import BotMessage from './Messages/BotMessage';
 
-function ChatModal({ user, setOpen, languageData }) {
+function ChatModal({ user, setOpen, languageData, userCountry }) {
 
     const socket = io(process.env.REACT_APP_CHAT_URL, {
-        query: {
-            username: user?.email
+        body: {
+            userId: 123
         }
     });
 
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState('');
-    const [online, setOnline] = useState(1);
+    const [online, setOnline] = useState(0);
 
     useEffect(() => {
 
-        socket.on('user count', (count) => {
+        socket.on('connect', () => {
+            socket.emit('setUserOnline', { userId: user.id, socketId: socket.id })
+        });
+
+        if (userCountry === undefined) return
+
+
+        /* GET MESSAGES */
+
+        socket.emit('getMessages', userCountry)
+
+        socket.on('messages', (history) => {
+            if (history.length === undefined) return
+            setMessages(history);
+        });
+
+        /* ONLINE */
+
+        socket.on('onlineCount', (count) => {
+            console.log('onlineCount', count)
             setOnline(count);
         });
 
-        socket.on('chat message', (msg) => {
-            console.log(msg)
+        socket.on('newMessage', (msg) => {
+            console.log('newMessage', msg)
             setMessages((prevMessages) => [...prevMessages, msg]);
-        });
-
-        socket.on('chat history', (history) => {
-            console.log(history)
-            if (history.length === undefined) return
-            setMessages(history);
         });
 
         return () => {
             socket.disconnect();
         };
-    }, []);
+    }, [userCountry]);
 
     let username = user?.email
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (message.length === 0) return alert('Please enter a message')
-        socket.emit('chat message', [username, message]);
+        socket.emit('addMessage', {
+            message: message,
+            name: username,
+            userid: user.id,
+            country: userCountry,
+            token: '',
+        });
         setMessage('');
     };
 
@@ -67,11 +88,25 @@ function ChatModal({ user, setOpen, languageData }) {
     }, [messages]);
 
     const handleSubmitGif = (gif) => {
-        socket.emit('chat message', [username, `<img class="w-full rounded-[20px] mt-2" src="${gif}" alt="gif" />`]);
+        socket.emit('addMessage', {
+            message: `<img class="w-full rounded-[20px] mt-2" src="${gif}" alt="gif" />`,
+            name: username,
+            userid: user.id,
+            country: userCountry,
+            token: '',
+        });
         setGifModal(false)
     }
 
     const [gifModal, setGifModal] = useState(false);
+
+    const getMessageComponent = (message, index) => {
+        switch (message.type) {
+            case 'user': return <UserMessage message={message} owner={message.name === user.email} index={index} />
+            case 'bot': return <BotMessage message={message} index={index} />
+            default: return <UserMessage message={message} owner={message.name === user.email} index={index} />
+        }
+    }
 
     return (
         <div className='w-screen h-screen fixed top-0 z-[99999] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md '>
@@ -95,20 +130,7 @@ function ChatModal({ user, setOpen, languageData }) {
                     {
                         messages.length > 0 ?
                             filterMessages(messages).map((item, index) => (
-                                <div className={`${item.username === user.email ? 'flex justify-end' : ''}`} key={item}>
-                                    <div className={`bg-[#EAEAEA] bg-opacity-10 rounded-[20px] p-2 md:p-5 max-w-[280px] sm:max-w-[450px] w-full ${item.username === user.email ? 'my-1 border-[2px] border-[#FFED63]' : 'my-2'}`}>
-                                        <div className='flex justify-between items-center'>
-                                            <div className='flex items-center max-w-[110px] md:max-w-[225px] w-full mr-4'>
-                                                <img className='rounded-full w-[32px] h-[32px] mr-2' src={avatar} alt="avatar" />
-                                                <p className='saira text-[14px] md:text-[16px] font-semibold truncate'>{item.username.replace(/(.{2}).*?@/, '$1********@')}</p>
-                                            </div>
-                                            <p className='saira text-[14px] md:text-[16px] font-normal'>{moment.unix((Number(item.datetime))).format('DD/MM hh:mm A')}</p>
-                                        </div>
-                                        <div className=''>
-                                            <p className='saira text-[12px] md:text-[14px] font-medium break-words' dangerouslySetInnerHTML={{ __html: item.text }}></p>
-                                        </div>
-                                    </div>
-                                </div>
+                                getMessageComponent(item, index)
                             ))
                             : <div className='text-center saira mt-20'>{languageData?.chatNotMessages}</div>
                     }
@@ -123,8 +145,8 @@ function ChatModal({ user, setOpen, languageData }) {
                             }
                         }} />
                         <svg onClick={e => setGifModal(true)} className='absolute top-[10px] right-4 md:right-6 cursor-pointer' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 4H18C18.5304 4 19.0391 4.21071 19.4142 4.58579C19.7893 4.96086 20 5.46957 20 6V13H15C14.4696 13 13.9609 13.2107 13.5858 13.5858C13.2107 13.9609 13 14.4696 13 15V20H6C5.46957 20 4.96086 19.7893 4.58579 19.4142C4.21071 19.0391 4 18.5304 4 18V6C4 5.46957 4.21071 4.96086 4.58579 4.58579C4.96086 4.21071 5.46957 4 6 4Z" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M20 13V13.172C19.9999 13.7024 19.7891 14.211 19.414 14.586L14.586 19.414C14.211 19.7891 13.7024 19.9999 13.172 20H13" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6 4H18C18.5304 4 19.0391 4.21071 19.4142 4.58579C19.7893 4.96086 20 5.46957 20 6V13H15C14.4696 13 13.9609 13.2107 13.5858 13.5858C13.2107 13.9609 13 14.4696 13 15V20H6C5.46957 20 4.96086 19.7893 4.58579 19.4142C4.21071 19.0391 4 18.5304 4 18V6C4 5.46957 4.21071 4.96086 4.58579 4.58579C4.96086 4.21071 5.46957 4 6 4Z" stroke="#1E1E1E" strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M20 13V13.172C19.9999 13.7024 19.7891 14.211 19.414 14.586L14.586 19.414C14.211 19.7891 13.7024 19.9999 13.172 20H13" stroke="#1E1E1E" strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
 
                     </div>
