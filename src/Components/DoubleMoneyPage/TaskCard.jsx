@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react'
 import notReady from '../../images/CyberSaysPage/card_notReady.png'
 import done from '../../images/CyberSaysPage/card_done.png'
 import { Link } from 'react-router-dom'
+import { useDesign } from '../../Helpers/Design/DesignContext'
 
 function TaskCard({ state, background, data, index, imLiveURL, rounded }) {
+
+    const { design } = useDesign()
 
     const [cardState, setCardState] = useState(null)
 
@@ -61,18 +64,18 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded }) {
         return <>
             <div className='flex justify-between items-center mx-1  sm:mx-3 '>
                 <p className='saira text-[12px] md:text-[14px] font-medium '>{index}. {data?.taskTitleOpen}</p>
-                <img className='w-[18px] h-[18px]' src={notReady} alt="notReady" />
+                <img className='w-[18px] h-[18px]' src={design === '0' ? notReady  : require('../../images/NewDesign/Task/notReady.png')} alt="notReady" />
             </div>
 
             <div className='flex justify-center '>
                 {
                     data?.taskBlocks?.map((task, key) => {
                         return <div key={key} className='flex  items-center se:mt-1 mt-2 relative '>
-                            <img className='w-[330px] sm:w-[555px] m-auto relative' src={task?.taskImage} alt="Task Icon" />
-                            <p className={`saira text-[10px] sm:text-[17px] text-black font-medium absolute text-left leading-[12px] sm:leading-[20px] ${index === 1 ? 'w-[150px] sm:w-[265px] top-[15px] sm:top-[25px] right-[25px] sm:right-[45px]' :
-                                index === 2 ? 'w-[140px] sm:w-[235px]  top-[15px] sm:top-[25px] left-[35px] sm:left-[55px]' :
-                                    index === 3 ? 'w-[160px] sm:w-[270px] top-[15px] sm:top-[25px] right-[35px] sm:right-[65px]' :
-                                        index === 4 ? 'w-[165px] sm:w-[280px] top-[10px] sm:top-[15px] left-[60px] sm:left-[100px]' :
+                            <img className='w-[330px] sm:w-[555px] m-auto relative' src={design === '0' ? task?.taskImage : task?.newTaskImage } alt="Task Icon" />
+                            <p className={`saira text-[10px] sm:text-[17px] text-black font-medium absolute text-left leading-[12px] sm:leading-[20px] ${index === 1 ? `${design === '0' ? 'w-[150px] sm:w-[265px] top-[15px] sm:top-[25px] right-[25px] sm:right-[45px]' : 'w-[180px] sm:w-[305px] top-[17px] sm:top-[30px] right-[15px] sm:right-[25px] text-white'}` :
+                                index === 2 ? `${design === '0' ? 'w-[140px] sm:w-[235px]  top-[15px] sm:top-[25px] left-[35px] sm:left-[55px]' : 'w-[200px] sm:w-[330px]  top-[20px] sm:top-[35px] left-[30px] sm:left-[45px] text-white'}` :
+                                    index === 3 ? `${design === '0' ? 'w-[160px] sm:w-[270px] top-[15px] sm:top-[25px] right-[35px] sm:right-[65px]' : 'w-[205px] sm:w-[350px] top-[18px] sm:top-[30px] right-[35px] sm:right-[55px] text-white'}` :
+                                        index === 4 ? `${design === '0' ? 'w-[165px] sm:w-[280px] top-[10px] sm:top-[15px] left-[60px] sm:left-[100px]' : 'w-[200px] sm:w-[340px] top-[18px] sm:top-[30px] left-[40px] sm:left-[70px] text-white'}` :
                                             ''}`}>{task?.taskText}</p>
                         </div>
                     })
@@ -80,23 +83,23 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded }) {
             </div>
 
             <div className='flex justify-center mt-[-20px] md:mt-[-30px] relative z-50 max-w-[330px] w-full sm:max-w-[555px] m-auto'>
-                <Link className='w-full' to={imLiveURL}><button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-1 sm:py-2'>{data?.taskButton}</button></Link>
+                <Link className='w-full' to={imLiveURL}><button className={`w-full bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold py-1 sm:py-2 ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{data?.taskButton}</button></Link>
             </div>
-            <p onClick={e => copyImLiveLink()} className={`saira text-[14px] cursor-pointer underline text-center mb-[-5px] py-2 pb-6 ${linkCopied === true ? 'opacity-60' : ''}`}>Copy link</p>
+            <p onClick={e => copyImLiveLink()} className={`saira text-[14px] cursor-pointer underline text-center mb-[-5px] py-2 pb-6 font-semibold  ${linkCopied === true ? 'opacity-60' : ''}`}>Copy link</p>
         </>
     }
 
     const finishedState = () => {
         return <div className='flex justify-between items-center mx-1  sm:mx-3 '>
             <p className='saira text-[12px] md:text-[14px] font-medium'>{index}. {data?.taskTitle}</p>
-            <img className='w-[18px] h-[18px]' src={done} alt="done" />
+            <img className='w-[18px] h-[18px]' src={design === '0' ? done  : require('../../images/NewDesign/Task/done.png')} alt="done" />
         </div>
     }
 
     const inactiveState = () => {
         return <div className='flex justify-between items-center mx-1   sm:mx-3'>
             <p className='saira text-[12px] md:text-[14px] font-medium'>{index}. {data?.taskTitle}</p>
-            <img className='w-[18px] h-[18px]' src={notReady} alt="notReady" />
+            <img className='w-[18px] h-[18px]' src={design === '0' ? notReady  : require('../../images/NewDesign/Task/notReady.png')} alt="notReady" />
         </div>
     }
 

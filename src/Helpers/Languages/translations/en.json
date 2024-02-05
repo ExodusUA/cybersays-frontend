@@ -24,6 +24,7 @@
             "taskBlocks": [
                 {
                     "taskImage": "images/bg-mobile-Task1.png",
+                    "newTaskImage": "images/newTask/bg_task1.png",
                     "taskText": "Enjoy ImLive, be treated like a KING 👑 - and fulfill your wildest fantasies!"
                 }
             ],
@@ -35,6 +36,7 @@
             "taskBlocks": [
                 {
                     "taskImage": "images/bg-mobile-Task2.png",
+                    "newTaskImage": "images/newTask/bg_task2.png",
                     "taskText": "Deposit $5... ImLive will double the credit. CyberSays will double the dollars!"
                 }
             ],
@@ -46,6 +48,7 @@
             "taskBlocks": [
                 {
                     "taskImage": "images/bg-mobile-Task3.png",
+                    "newTaskImage": "images/newTask/bg_task3.png",
                     "taskText": "Spend your 10 ImLive credits, be treated like a king, and get $10 cash when you’re done!"
                 }
             ],
@@ -57,6 +60,7 @@
             "taskBlocks": [
                 {
                     "taskImage": "images/bg-mobile-Task4.png",
+                    "newTaskImage": "images/newTask/bg_task4.png",
                     "taskText": "ImLive doubles your credit, we double your money – it's a win-win for you with an extra $10 in your wallet!"
                 }
             ],
@@ -206,8 +210,6 @@
     "tourLongToggle": "Long version",
     "tourShortBtn": "Share the tour",
     "tourLongBtn": "Share the tour",
-
-
     "authSlide1": "CyberSays: Double Your Money, Double Your Gains!",
     "authSlide2": "Your Money, Your Rules – Choose How You Get Paid",
     "authSlide3": "Complete a $5 Offer and Watch Your Earnings Soar",

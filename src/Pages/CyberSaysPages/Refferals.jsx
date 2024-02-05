@@ -8,6 +8,8 @@ import right from '../../images/CyberSaysPage/swiperBtnDesctopRight.png'
 import { Navigation } from 'swiper/modules';
 import CustomTooltip from '../../Components/CustomTooltip';
 import Message from './Modals/Message';
+import { useDesign } from '../../Helpers/Design/DesignContext'
+import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
 
 function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenMassege, setOpenAvatar, selectedMessage, setSelectedMassege, copyToMessage, message, saveAvatar, uploadedPhotos }) {
 
@@ -15,7 +17,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
 
     const [selectedGif, setSelectedGif] = useState(null);
 
-
+    const { design } = useDesign()
 
     const dataGif = [
         {
@@ -86,9 +88,9 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
 
 
     return (
-        <div className=' w-screen h-screen bg-[url(./images/CyberSaysPage/mobile-bg-terms.jpg)] md:bg-[url(./images/CyberSaysPage/bg-terms.jpg)] bg-cover bg-no-repeat bg-center relative z-10' >
+        <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-terms.jpg)] md:bg-[url(./images/CyberSaysPage/bg-terms.jpg)]' : 'bg-[url(./images/NewDesign/Bg/refferals_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10`} >
             <div className='pt-[60px]  md:pt-[90px] mac:!pt-[80px] px-4 max-w-[1170px] m-auto' >
-                <img className=' se:mb-[-5px] iphone:w-[310px]  md:w-[500px] mac:!w-[350px] m-auto md:mb-[-20px]' src={logoCyber} alt="logoCyber" />
+                <img className=' se:mb-[-5px] iphone:w-[310px]  md:w-[500px] mac:!w-[350px] m-auto md:mb-[-20px]' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
 
 
                 <div className='flex flex-col-reverse relative'>
@@ -141,7 +143,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                     uploadedPhotos.map((item, index) => (
                                         <SwiperSlide>
                                             <div className='flex' key={index}>
-                                                <img onClick={e => setSelectedGif(index)} className={`${selectedGif === index && '  border-[2px] border-[#FFED63] opacity-[1] relative'}   rounded-[20px] w-[110px] h-[110px] sm:w-[140px] sm:h-[140px] opacity-[0.5] cursor-pointer object-cover`} src={item.image} alt="gif1" />
+                                                <img onClick={e => setSelectedGif(index)} className={`${selectedGif === index && `${design === '0' ? 'border-[2px] !border-[#FFED63]' : 'border-[2px] !border-[#FE804D]'} opacity-[1] relative`}   rounded-[20px] w-[110px] h-[110px] sm:w-[140px] sm:h-[140px] opacity-[0.5] cursor-pointer object-cover`} src={item.image} alt="gif1" />
                                                 <svg className=' absolute top-1 left-1 cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
                                                     <path d="M4.25 17V19C4.25 19.5304 4.44315 20.0391 4.78697 20.4142C5.13079 20.7893 5.5971 21 6.08333 21H17.0833C17.5696 21 18.0359 20.7893 18.3797 20.4142C18.7235 20.0391 18.9167 19.5304 18.9167 19V17M7 11L11.5833 16M11.5833 16L16.1667 11M11.5833 16V4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
@@ -187,7 +189,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                         </div>
                     </div>
                     <div>
-                        <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3 lg:my-6 mx-14 sm:mx-0 iphone:leading-[14px] se:leading-[16px]'>{languageData?.refferalsSubtitle}</p>
+                        <p className={`text-[14px] sm:text-[24px] font-semibold text-center  se:my-1 iphone:my-3 lg:my-6 mx-14 sm:mx-0 iphone:leading-[14px] se:leading-[16px] ${design === '0' ? 'text-[#FFED63]' : 'text-white]'}`}>{languageData?.refferalsSubtitle}</p>
                         <div className=' w-full hidden lg:block pr-2'>
                             <div className=' justify-between flex my-3 mb-[-43px] mx-10'>
                                 <img className='w-[44px] mr-3 cursor-pointer buttonPrevMessage' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
@@ -233,7 +235,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                 {dataMessage.map((item, index) => (
                                     <SwiperSlide>
                                         <div key={index} onClick={e => setSelectedMassege(index)}
-                                            className={`${selectedMessage === index && 'border-[2px] !border-[#FFED63]'} flex justify-between items-center se:p-1 iphone:p-2 rounded-[50px] border-[2px] border-white cursor-pointer max-w-[220px] w-full`} >
+                                            className={`${selectedMessage === index && ` ${design === '0' ? 'border-[2px] !border-[#FFED63]' : 'border-[2px] !border-[#FE804D]'}`} flex justify-between items-center se:p-1 iphone:p-2  border-[2px] border-white cursor-pointer max-w-[220px] w-full ${design === '0' ? 'rounded-[50px]' : 'rounded-[12px]'} `} >
                                             <p className='w-[150px] truncate saira text-[14px] font-medium'>{item.desc}</p>
                                             <svg onClick={e => copyToMessage(message)} className='cursor-pointer mr-2' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M7 9.667C7 8.95967 7.28099 8.28131 7.78115 7.78115C8.28131 7.28099 8.95967 7 9.667 7H18.333C18.6832 7 19.03 7.06898 19.3536 7.20301C19.6772 7.33704 19.9712 7.53349 20.2189 7.78115C20.4665 8.0288 20.663 8.32281 20.797 8.64638C20.931 8.96996 21 9.31676 21 9.667V18.333C21 18.6832 20.931 19.03 20.797 19.3536C20.663 19.6772 20.4665 19.9712 20.2189 20.2189C19.9712 20.4665 19.6772 20.663 19.3536 20.797C19.03 20.931 18.6832 21 18.333 21H9.667C9.31676 21 8.96996 20.931 8.64638 20.797C8.32281 20.663 8.0288 20.4665 7.78115 20.2189C7.53349 19.9712 7.33704 19.6772 7.20301 19.3536C7.06898 19.03 7 18.6832 7 18.333V9.667Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -251,14 +253,14 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                 ))}
                             </Swiper>
                         </div>
-                        <p className='text-[14px] sm:text-[24px] font-semibold text-center text-[#FFED63] se:my-1 iphone:my-3 mac:!my-2'>{languageData?.refferalsImage}</p>
+                        <p className={`text-[14px] sm:text-[24px] font-semibold text-center  se:my-1 iphone:my-3 mac:!my-2 ${design === '0' ? 'text-[#FFED63]' : 'text-white]'}`}>{languageData?.refferalsImage}</p>
                     </div>
                     <div className=' flex justify-center'>
-                        <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center max-w-[800px] w-full py-1 px-2'>
+                        <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  text-center max-w-[800px] w-full py-1 px-2 ${design === '0' ? 'rounded-[50px]' : 'rounded-[24px]'}`}>
                             <p className='text-[14px]  sm:text-[24px]  font-semibold max-w-[540px] m-auto iphone:leading-[unset] se:leading-[16px] mac:!leading-[24px]'>{languageData?.refferalsTitle}</p>
                             <div className='flex justify-center gap-1'>
-                                <p className='text-[12px] sm:text-[14px] font-medium saira flex justify-center items-center underline cursor-pointer' onClick={e => setReferralsOpen(true)}>
-                                {languageData?.refferalsLink1} 
+                                <p className={`text-[12px] sm:text-[14px] font-medium saira flex justify-center items-center underline cursor-pointer ${design === '0' ? 'text-white' : 'gradient-link '}`} onClick={e => setReferralsOpen(true)}>
+                                    {languageData?.refferalsLink1}
                                 </p>
                                 <div className=''>
 
@@ -305,9 +307,11 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                     </div>
 
                 </div>
-                <p onClick={e => setOpenAvatar(true)} className=' cursor-pointer text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2'>{languageData?.refferalsLink2}</p>
                 <div className='flex justify-center'>
-                    <button onClick={e => shareRefferalLink()} className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold se:py-1 iphone:py-2 sm:max-w-[350px]'>
+                    <p onClick={e => setOpenAvatar(true)} className={`cursor-pointer text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2 ${design === '0' ? 'text-white' : 'gradient-link flex justify-center'}`}>{languageData?.refferalsLink2}</p>
+                </div>
+                <div className='flex justify-center'>
+                    <button onClick={e => shareRefferalLink()} className={`w-full bg-white  border-[2px] border-[#FFED63] text-black text-[18px] saira font-semibold se:py-1 iphone:py-2 sm:max-w-[350px] ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>
                         {
                             isLinkShared === false
                                 ? ' Share Referral Link!'

@@ -11,25 +11,28 @@ import CircleNavigation from '../Components/CircleNavigation'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import AuthCheck from '../hoc/AuthCheck'
 import Competition from './CyberSaysPages/Competition'
+import { useSwipeable } from 'react-swipeable';
 import Refferals from './CyberSaysPages/Refferals'
 import Terms from './CyberSaysPages/Terms'
 import Withdraw from '../Components/Transactions/Withdraw'
 import TourModal from '../Components/DoubleMoneyPage/TourModal'
 import LeaderboardModal from '../Components/LeaderboardModal'
 import { SwiperSlide } from 'swiper/react'
-import { Swiper } from 'swiper/react'
+import { Swiper } from 'swiper/react';
+import user from '../Requests/user'
 import ChatModal from '../Components/ChatModal'
 import infoAPI from '../Requests/info'
 import MyReferralsModal from '../Components/ProfileReferrals/MyReferralsModal'
 import chatImage from '../images/CyberSaysPage/mobileMenuLink/link9.png'
 import Message from './CyberSaysPages/Modals/Message'
 import AvatarModal from '../Components/ProfileReferrals/AvatarModal'
-import API from '../Helpers/API'
+import { useDesign } from '../Helpers/Design/DesignContext'
+
 var mixpanel = require('mixpanel-browser');
 
 
 function Main({ languageData }) {
-
+    const { design } = useDesign()
 
     const queryClient = useQueryClient()
     const dataMessage = [
@@ -154,11 +157,11 @@ function Main({ languageData }) {
     const [uploadedPhotos, setUploadedPhotos] = useState(() => {
         const storedPhotos = localStorage.getItem('uploadedPhotos');
         return storedPhotos ? JSON.parse(storedPhotos) : [];
-    });
-
-    const savePhotosToLocalStorage = (photos) => {
+      });
+      
+      const savePhotosToLocalStorage = (photos) => {
         localStorage.setItem('uploadedPhotos', JSON.stringify(photos));
-    };
+      };
 
     useQuery({
         queryKey: ['userData'],
@@ -189,6 +192,7 @@ function Main({ languageData }) {
             console.log(res)
             alert('Done!')
 
+            
             setUploadedPhotos((prevPhotos) => [...prevPhotos, { image: res.data.url }]);
             savePhotosToLocalStorage(uploadedPhotos);
         } catch (error) {
@@ -205,27 +209,15 @@ function Main({ languageData }) {
                 const base64String = reader.result;
 
 
-                {/* setUploadedPhotos((prevPhotos) => [...prevPhotos, { image: base64String }]);*/ }
+               {/* setUploadedPhotos((prevPhotos) => [...prevPhotos, { image: base64String }]);*/}
                 setSelectedImage(base64String);
             };
             reader.readAsDataURL(file);
         }
     };
-
-    const [userCountry, setUserCountry] = useState(null)
-
-    useEffect(() => {
-
-        getUserCountry()
-
-        async function getUserCountry() {
-            const res = await API.getUserCountry()
-            setUserCountry(res)
-        }
-    }, [])
-
-
+    console.log(uploadedPhotos)
     const HomepageSwiper = () => {
+
         return (
             <div className='overflow-y-hidden overflow-x-hidden'>
                 <HeaderMenu languageData={languageData} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} setTourModal={setTourModal} />
@@ -304,7 +296,7 @@ function Main({ languageData }) {
             }
 
             {
-                chatModal && <ChatModal languageData={languageData} setOpen={setChatModal} user={userData} userCountry={userCountry} />
+                chatModal && <ChatModal languageData={languageData} setOpen={setChatModal} user={userData} />
             }
 
             {
@@ -317,7 +309,7 @@ function Main({ languageData }) {
                 openAvatar && <AvatarModal inputRef={inputRef} setSelectedImage={setSelectedImage} selectedImage={selectedImage} handleImageChange={handleImageChange} saveAvatar={saveAvatar} setOpenAvatar={setOpenAvatar} />
             }
             <div className='fixed right-8 hidden bottom-8 sm:block z-[99]'>
-                <img onClick={e => setChatModal(true)} className='w-12 cursor-pointer' src={chatImage} alt="Chat" />
+                <img onClick={e => setChatModal(true)} className='w-12 cursor-pointer' src={design === '0' ? chatImage : require('../images/NewDesign/chatBtn.png')} alt="Chat" />
             </div>
 
         </>

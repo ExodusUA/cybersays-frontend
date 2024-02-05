@@ -4,8 +4,10 @@ import offerTrue from '../../images/CyberSaysPage/offerTrue.png'
 import offerFalse from '../../images/CyberSaysPage/offerFalse.png'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import userAPI from '../../Requests/user'
+import { useDesign } from '../../Helpers/Design/DesignContext'
 
 function MyReferralsModal({ setOpen, user, languageData }) {
+    const { design } = useDesign()
 
     const [referralData, setReferralData] = useState([])
     const queryClient = useQueryClient()
@@ -58,7 +60,7 @@ function MyReferralsModal({ setOpen, user, languageData }) {
 
 
                 <div className='flex justify-end md:my-4'>
-                    <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
+                    <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
                 {
                     referralData.referrals && referralData.referrals.length > 0
@@ -136,7 +138,7 @@ function MyReferralsModal({ setOpen, user, languageData }) {
                             }
 
                             <p className='saira text-[16px] font-semibold text-center my-5'>You haven't referred friends yet</p>
-                            <button onClick={e => shareRefferalLink()} className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-2'>
+                            <button onClick={e => shareRefferalLink()} className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-2 ${design === '0' ? ' rounded-[50px] border-[2px] bg-white ' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>
                                 {
                                     isLinkCopied === false
                                         ? 'Refer your friends 👬'

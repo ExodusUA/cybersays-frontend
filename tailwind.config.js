@@ -48,6 +48,7 @@ module.exports = {
       'bg-raffle': "url('./images/CyberSaysPage/bg-raffle.jpg')",
       'bg-double': "url('./images/CyberSaysPage/bg-double.jpg')",
       'bg-terms': "url('./images/CyberSaysPage/bg-terms.jpg')",
+      'new-homepage-des': "url('./images/NewDesign/Bg/homepage_des.png')",
     })
   },
   plugins: [],
