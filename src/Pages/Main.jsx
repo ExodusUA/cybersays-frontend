@@ -27,6 +27,8 @@ import chatImage from '../images/CyberSaysPage/mobileMenuLink/link9.png'
 import Message from './CyberSaysPages/Modals/Message'
 import AvatarModal from '../Components/ProfileReferrals/AvatarModal'
 import { useDesign } from '../Helpers/Design/DesignContext'
+import { getUserCountry } from '../Requests/utills'
+import API from '../Helpers/API'
 
 var mixpanel = require('mixpanel-browser');
 
@@ -157,11 +159,11 @@ function Main({ languageData }) {
     const [uploadedPhotos, setUploadedPhotos] = useState(() => {
         const storedPhotos = localStorage.getItem('uploadedPhotos');
         return storedPhotos ? JSON.parse(storedPhotos) : [];
-      });
-      
-      const savePhotosToLocalStorage = (photos) => {
+    });
+
+    const savePhotosToLocalStorage = (photos) => {
         localStorage.setItem('uploadedPhotos', JSON.stringify(photos));
-      };
+    };
 
     useQuery({
         queryKey: ['userData'],
@@ -192,7 +194,7 @@ function Main({ languageData }) {
             console.log(res)
             alert('Done!')
 
-            
+
             setUploadedPhotos((prevPhotos) => [...prevPhotos, { image: res.data.url }]);
             savePhotosToLocalStorage(uploadedPhotos);
         } catch (error) {
@@ -209,13 +211,23 @@ function Main({ languageData }) {
                 const base64String = reader.result;
 
 
-               {/* setUploadedPhotos((prevPhotos) => [...prevPhotos, { image: base64String }]);*/}
+                {/* setUploadedPhotos((prevPhotos) => [...prevPhotos, { image: base64String }]);*/ }
                 setSelectedImage(base64String);
             };
             reader.readAsDataURL(file);
         }
     };
-    console.log(uploadedPhotos)
+
+    const [userCountry, setUserCountry] = useState(null)
+
+    useEffect(() => {
+        getUserCountry()
+        async function getUserCountry() {
+            const res = await API.getUserCountry()
+            setUserCountry(res)
+        }
+    }, [])
+
     const HomepageSwiper = () => {
 
         return (

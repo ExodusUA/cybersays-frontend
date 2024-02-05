@@ -1,9 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react'
-import moment from 'moment';
+import React, { useEffect, useRef, useState } from 'react';
 import io from 'socket.io-client';
-import close from '../images/CyberSaysPage/closeMenu.png'
-import avatar from '../images/CyberSaysPage/1st.png'
-import send from '../images/CyberSaysPage/send.png'
+import close from '../images/CyberSaysPage/closeMenu.png';
+import send from '../images/CyberSaysPage/send.png';
 import GifModal from './GifModal';
 import UserMessage from './Messages/UserMessage';
 import BotMessage from './Messages/BotMessage';
@@ -27,7 +25,6 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
         });
 
         if (userCountry === undefined) return
-
 
         /* GET MESSAGES */
 
