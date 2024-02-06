@@ -69,6 +69,7 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
             userid: user.id,
             country: userCountry,
             token: '',
+            avatar: 'https://146.59.14.103:3014' + user.avatar
         });
         setMessage('');
     };
@@ -97,6 +98,7 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
             userid: user.id,
             country: userCountry,
             token: '',
+            avatar: 'https://146.59.14.103:3014' + user.avatar
         });
         setGifModal(false)
     }
@@ -167,7 +169,8 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
                             </button>
                         </div>
 
-                        {countryOpen && (
+                        {
+                        countryOpen && (
                             <div onClick={(e) => e.stopPropagation()} className={`mt-0 absolute top-[40px] p-4 border-[2px] ${design === '0' ? ' border-[#FFED63]' : 'border-[#A2DBF0]'} bg-[#474747]  rounded-[8px] py-2 inline-block  right-0 w-[150px]`}>
                                 <p className='saira text-white text-[12px] font-medium flex items-center my-2 cursor-pointer'
                                     onClick={() => { setSelectedCountry("int"); setCountryOpen(false); }}>
@@ -178,9 +181,6 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
                                         onClick={() => { setSelectedCountry("usa"); setCountryOpen(false); setMessages([]) }}>
                                         <img className='w-[16px] h-[16px] mr-1' src={usa_flag} alt="int" /> USA</p>
                                 }
-
-
-
                             </div>
                         )}
                     </div>
