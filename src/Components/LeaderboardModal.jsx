@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import close from '../images/CyberSaysPage/closeMenu.png'
 import oneSt from '../images/CyberSaysPage/1st.png'
 import twoSt from '../images/CyberSaysPage/2st.png'
@@ -6,11 +6,33 @@ import threeSt from '../images/CyberSaysPage/3st.png'
 import crown from '../images/CyberSaysPage/crown1st.png'
 import no_avatar from '../images/CyberSaysPage/no_avatar.png'
 import { useDesign } from '../Helpers/Design/DesignContext'
+import LeaderboardList from './LeaderboardList'
 
-function LeaderboardModal({ setOpen, leaderboardData, loading, languageData  }) {
+function LeaderboardModal({ setOpen, leaderboardData, loading, languageData }) {
 
     const { design } = useDesign()
 
+    const [dayOffset, setDayOffset] = useState(0);
+
+    const handleClick = (offset) => {
+        let newOffset = dayOffset + offset;
+        if (newOffset < -2) {
+            newOffset = 0;
+        } else if (newOffset > 0) {
+            newOffset = -2;
+        }
+        setDayOffset(newOffset);
+    };
+
+    const getDateLabel = (offset) => {
+        if (offset === 0) {
+            return <LeaderboardList leaderboardData={leaderboardData} languageData={languageData} day={'Today'}/>;
+        } else if (offset === -1) {
+            return <LeaderboardList leaderboardData={leaderboardData} languageData={languageData} day={'Yesterday'}/>;
+        } else if (offset === -2) {
+            return <LeaderboardList leaderboardData={leaderboardData} languageData={languageData} day={'2 days ago'}/>;
+        }
+    };
     return (
         <div className='w-screen h-screen fixed top-0 z-[99999] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
             <div className='max-w-[600px] m-auto'>
@@ -33,68 +55,16 @@ function LeaderboardModal({ setOpen, leaderboardData, loading, languageData  }) 
                                 </div>
                             </div>
                             <p className={` text-[18px] md:text-[32px] font-semibold text-center mt-3`}>{languageData?.leaderboardsTitle}</p>
-                            <div className=' flex items-end justify-center'>
-                                <div className='mr-[-15px] md:mr-[30px] w-[80px] md:w-[100px]'>
-                                    <p className='text-center saira text-[16px] font-bold'>2</p>
-                                    <img className={`border-[2px] rounded-full w-[80px] h-[80px] object-cover m-auto ${design === '0' ? 'border-[#FFED63]' : 'border-[#A1B3B0]'}`} src={
-                                        leaderboardData.leaderboard[1].avatar === null
-                                            ? no_avatar
-                                            : leaderboardData.leaderboard[1].avatar
-                                    } alt="twoSt" />
-                                    <p className='saira text-[12px] md:text-[14px] font-medium text-center truncate mx-2 md:mx-1'>{leaderboardData.leaderboard[1].email}</p>
-                                    <p className={`saira text-[14px] md:text-[16px] font-medium text-center ${design === '0' ? 'text-[#FFED63]' : 'text-[#A1B3B0]'}`}>$69</p>
-                                    <p className='saira text-[14px] md:text-[14px] font-medium text-[#FFED63] text-center'>{leaderboardData.leaderboard[1].points} {languageData?.leaderboardsPoints} </p>
-                                </div>
-                                <div className='mb-[20px] relative z-20 w-[120px] md:w-[140px]'>
-                                    <p className='text-center saira text-[16px] font-bold'>1</p>
-                                    <img className='w-[32px] h-[32px] m-auto mb-2' src={crown} alt="crown" />
-                                    <img className={`border-[2px] border-[#FFED63] rounded-full w-[120px] h-[120px] object-cover m-auto ${design === '0' ? 'border-[#FFED63]' : 'border-[#F2BB02]'}`} src={
-                                        leaderboardData.leaderboard[0].avatar === null
-                                            ? no_avatar
-                                            : leaderboardData.leaderboard[0].avatar
-                                    } alt="twoSt" />
-                                    <p className='saira text-[12px] md:text-[14px] font-medium text-center truncate mx-3 md:mx-2'>{leaderboardData.leaderboard[0].email}</p>
-                                    <p className={`saira text-[14px] md:text-[16px] font-medium text-[#FFED63] text-center ${design === '0' ? 'text-[#FFED63]' : 'text-[#F2BB02]'}`}>$69</p>
-                                    <p className='saira text-[14px] md:text-[14px] font-medium text-[#FFED63] text-center'>{leaderboardData.leaderboard[0].points} {languageData?.leaderboardsPoints} </p>
-                                </div>
-                                <div className='ml-[-15px] md:ml-[30px] relative z-10 w-[80px] md:w-[100px]'>
-                                    <p className='text-center saira text-[16px] font-bold'>3</p>
-                                    <img className={`border-[2px] border-[#FFED63] rounded-full w-[80px] h-[80px] object-cover m-auto ${design === '0' ? 'border-[#FFED63]' : 'border-[#E87001]'}`} src={
-                                        leaderboardData.leaderboard[2].avatar === null
-                                            ? no_avatar
-                                            : leaderboardData.leaderboard[2].avatar
-                                    } alt="twoSt" />
-                                    <p className='saira text-[12px] md:text-[14px] font-medium text-center truncate mx-2 md:mx-1'>{leaderboardData.leaderboard[2].email}</p>
-                                    <p className={`saira text-[14px] md:text-[16px] font-medium text-[#FFED63] text-center ${design === '0' ? 'text-[#FFED63]' : 'text-[#E87001]'}`}>$69</p>
-                                    <p className='saira text-[14px] md:text-[14px] font-medium text-[#FFED63] text-center'>{leaderboardData.leaderboard[2].points} {languageData?.leaderboardsPoints} </p>
-                                </div>
+                            <div className='flex justify-between items-center my-4'>
+                                <svg onClick={() => handleClick(1)} className='cursor-pointer' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 22L7 12L17 2" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                                <p className='text-[16px] saira font-bold gradient-linkDouble'></p>
+                                <svg onClick={() => handleClick(-1)} className='cursor-pointer' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 2L17 12L7 22" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
                             </div>
-                            <div className='h-[240px] md:h-[600px] overflow-scroll'>
-                                {
-                                    leaderboardData.leaderboard.length < 4
-                                        ? <div className='w-full flex justify-center my-8'>
-                                            <p>There are no more users</p>
-                                        </div>
-
-                                        : leaderboardData.leaderboard.slice(3).map((user, index) => (
-                                            <div className={`bg-[#EAEAEA] ${design === '0' ? 'bg-opacity-40 ' : 'bg-opacity-20 '} backdrop-blur-lg rounded-[30px] text-center flex pr-3  justify-between items-center mt-2`}>
-                                                <div className='flex items-center'>
-                                                    <img className=' rounded-full w-[40px] h-[40px]' src={twoSt} alt="twoSt" />
-                                                    <p className='saira text-[12px] md:text-[14px] font-medium text-center ml-[15px] truncate w-[120px]'>{user?.email}</p>
-                                                </div>
-                                                <div className='leading-[14px]'>
-                                                    <p className={`saira text-[12px] md:text-[14px] font-medium ${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'}`}>$6.90</p>
-                                                    <p className='saira text-[12px] md:text-[14px] font-medium'>{languageData?.leaderboardsPrize}</p>
-                                                </div>
-                                                <div className='leading-[14px]'>
-                                                    <p className={`saira text-[12px] md:text-[14px] font-medium text-[#FFED63] ${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'}`}>{user?.points.toFixed(0)}</p>
-                                                    <p className='saira text-[12px] md:text-[14px] font-medium'>{languageData?.leaderboardsPoints}</p>
-                                                </div>
-                                                <p className={`saira text-[16px] font-bold ${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'}`}>#{index + 4}</p>
-                                            </div>
-                                        ))
-                                }
-                            </div>
+                            <div>{getDateLabel(dayOffset)}</div>
                         </>
                 }
 
