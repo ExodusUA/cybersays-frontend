@@ -12,7 +12,7 @@ function LeaderboardList({ leaderboardData, languageData, day }) {
     return (
         <div className='relative'>
             <div className='absolute top-[-40px] left-1/2 transform -translate-x-1/2'>
-                <p className='text-[16px] saira font-bold gradient-linkDouble'>{day}</p>
+                <p className='text-[16px] saira font-bold gradient-linkDouble select-none'>{day}</p>
             </div>
             <div className=' flex items-end justify-center'>
                 <div className='mr-[-15px] md:mr-[30px] w-[80px] md:w-[100px]'>
