@@ -187,7 +187,7 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
                     <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
                 <p className=' text-[18px] md:text-[32px] font-semibold text-center mt-3'>{languageData?.chatTitle}</p>
-                <div className='h-[66vh] mob2:h-[80vh]  md:h-[77vh] overflow-y-scroll  duration-300 pb-4' ref={chatContainer}
+                <div className='h-[66vh] mac2:!h-[70vh]  md:h-[77vh] overflow-y-scroll  duration-300 pb-4' ref={chatContainer}
                     style={{
                         overflowY: 'auto',
                     }}>

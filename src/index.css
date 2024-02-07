@@ -220,3 +220,6 @@ body {
 .gradient-tourToggle {
     background: linear-gradient(180deg, #FAD604 0%, #FE804D 100%);
 }
+.moving-element {
+    transition: transform 0.5s ease; /* Анімація зміни положення зі згладжуванням */
+}
