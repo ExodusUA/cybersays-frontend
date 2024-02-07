@@ -55,13 +55,13 @@ function Homepage({ user, imLiveURL, languageData }) {
 
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-homepage.jpg)] md:bg-[url(./images/CyberSaysPage/bg-homepage.jpg)]' : ' bg-[url(./images/NewDesign/Bg/homepage_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10`}>
-            <div className='pt-[60px] md:pt-[90px] px-4 pb-12 max-w-[1170px] m-auto'>
+            <div className='pt-[97px] md:pt-[135px] px-4 pb-12 max-w-[1170px] m-auto'>
                 <div className='max-w-[300px] m-auto'>
 
                     <p className=' text-[18px] md:text-[32px] font-semibold'></p>
                 </div>
-                <img className='se:w-[230px] se:mb-[-5px] w-[200px] iphone:w-[310px] md:w-[500px] m-auto mac:!w-[400px]' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
-                <div className='flex justify-between items-end md:items-center  mt-3'>
+                <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
+                <div className='flex justify-between items-end md:items-center '>
                     <div>
                         <img className='w-[180px] sm:w-[200px] md:w-[320px]' src={design === '0' ? girlOK : require('../../images/NewDesign/Homepage/hero_image.png')} alt="girlOK" />
                         <div className='md:block hidden relative left-3'>

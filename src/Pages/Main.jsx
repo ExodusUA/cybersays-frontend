@@ -29,6 +29,7 @@ import AvatarModal from '../Components/ProfileReferrals/AvatarModal'
 import { useDesign } from '../Helpers/Design/DesignContext'
 import { getUserCountry } from '../Requests/utills'
 import API from '../Helpers/API'
+import LiveFeed from '../Components/LiveFeed'
 
 var mixpanel = require('mixpanel-browser');
 
@@ -233,7 +234,7 @@ function Main({ languageData }) {
         return (
             <div className='overflow-y-hidden overflow-x-hidden'>
                 <HeaderMenu languageData={languageData} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} setTourModal={setTourModal} />
-
+                <LiveFeed />
                 <Swiper
                     className='w-screen h-screen'
                     initialSlide={activePageIndex}
