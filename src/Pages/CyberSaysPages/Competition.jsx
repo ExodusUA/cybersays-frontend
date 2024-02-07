@@ -51,9 +51,9 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] md:bg-[url(./images/CyberSaysPage/bg-raffle.jpg)]' : 'bg-[url(./images/NewDesign/Bg/raffleTicket_des.png)]'} bg-cover bg-no-repeat bg-center relative z-10`}>
 
-            <div className='pt-[60px]  md:pt-[90px] px-4 max-w-[1170px] m-auto' >
-                <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-20px] mac:!mb-[-10px] mac:!w-[300px]' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
-                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[30px] text-center se:py-1 iphone:py-3 mac:!py-0 px-2 sm:max-w-[600px] m-auto'>
+            <div className='pt-[97px]  md:pt-[135px] px-4 max-w-[1170px] m-auto' >
+                <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
+                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[14px] lg:rounded-[30px] text-center se:py-1 iphone:py-3 mac:!py-0 px-2 sm:max-w-[600px] m-auto'>
                     <p className='text-center text-[14px] sm:text-[32px] mac:!text-[24px] font-semibold'>{languageData?.competitionTitle} {siteData?.currentDay} {languageData?.competitionTitleSpan}</p>
                     {
                         loading === false && <div className='flex justify-around items-center my-2 mac:my-1 max-w-[250px] sm:max-w-[350px] w-full m-auto'>

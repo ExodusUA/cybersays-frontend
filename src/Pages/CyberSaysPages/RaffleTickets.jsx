@@ -77,14 +77,14 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
 
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] md:bg-[url(./images/CyberSaysPage/bg-raffle.jpg)]' : 'bg-[url(./images/NewDesign/Bg/raffleTicket_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10`} onClick={() => setIsOpen(false)}>
-            <div className='pt-[60px]  md:pt-[90px] px-4 max-w-[970px] m-auto' >
-                <img className='se:w-[230px] se:mb-[-5px] iphone:w-[310px]  md:w-[500px] m-auto md:mb-[-30px] mac:!w-[400px]' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
+            <div className='pt-[97px]  md:pt-[135px] px-4 max-w-[970px] m-auto' >
+                <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
 
                 <div className='flex flex-col-reverse'>
 
                     <div>
                         <img className='se:w-[280px] iphone:w-[345px] md:w-[770px] iphone:mt-[-40px] mob:mt-0 m-auto md:mt-[-100px] mac2:!mt-[-50px] se:mt-[-30px] mac:!w-[500px] mac2:!w-[500px]' src={design === '0' ? hero : require('../../images/NewDesign/RaffleTicket/hero_image.png')} alt="heroRaffle" />
-                        <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[30px] text-center flex py-3 md:py-3 mac:!py-2  px-2 mt-[-20px] md:mt-[-80px] justify-center relative z-1' >
+                        <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[30px] text-center flex py-3 md:py-3 mac:!py-2  px-2 mt-[-20px] md:mt-[-80px] justify-center relative z-1' >
                             {
 
                                 isTaskCompleted === true
@@ -121,8 +121,8 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
 
                         isTaskCompleted === false
                             ? <div className=' text-center mx-1 md:mx-0 md:py-2 relative z-1'>
-                                <p className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[24px] text-[18px] md:text-[32px] mac2:text-[24px] font-semibold py-2'>{languageData?.raffleTitle1}</p>
-                                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[24px] mt-2 py-3'>
+                                <p className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] text-[18px] md:text-[32px] mac2:text-[24px] font-semibold py-2'>{languageData?.raffleTitle1}</p>
+                                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] mt-2 py-3'>
                                     <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center mx-4 iphone:leading-4 se:leading-[14px]'>
                                         {languageData?.raffleSubTitle1}
                                         <img className='w-[12px] md:w-[24px] h-[12px] md:h-[24px] mr-[2px]' src={ready} alt="ready" />

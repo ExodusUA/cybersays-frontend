@@ -89,8 +89,8 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
 
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-terms.jpg)] md:bg-[url(./images/CyberSaysPage/bg-terms.jpg)]' : 'bg-[url(./images/NewDesign/Bg/refferals_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10`} >
-            <div className='pt-[60px]  md:pt-[90px] mac:!pt-[80px] px-4 max-w-[1170px] m-auto' >
-                <img className=' se:mb-[-5px] iphone:w-[310px]  md:w-[500px] mac:!w-[350px] m-auto md:mb-[-20px]' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
+            <div className='pt-[97px]  md:pt-[135px] px-4 max-w-[1170px] m-auto' >
+                <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
 
 
                 <div className='flex flex-col-reverse relative'>
@@ -256,7 +256,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                         <p className={`text-[14px] sm:text-[24px] font-semibold text-center  se:my-1 iphone:my-3 mac:!my-2 ${design === '0' ? 'text-[#FFED63]' : 'text-white]'}`}>{languageData?.refferalsImage}</p>
                     </div>
                     <div className=' flex justify-center'>
-                        <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  text-center max-w-[800px] w-full py-1 px-2 ${design === '0' ? 'rounded-[50px]' : 'rounded-[24px]'}`}>
+                        <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  text-center max-w-[800px] w-full py-1 px-2 ${design === '0' ? 'rounded-[50px]' : 'rounded-[14px] lg:rounded-[24px]'}`}>
                             <p className='text-[14px]  sm:text-[24px]  font-semibold max-w-[540px] m-auto iphone:leading-[unset] se:leading-[16px] mac:!leading-[24px]'>{languageData?.refferalsTitle}</p>
                             <div className='flex justify-center gap-1'>
                                 <p className={`text-[12px] sm:text-[14px] font-medium saira flex justify-center items-center underline cursor-pointer ${design === '0' ? 'text-white' : 'gradient-link '}`} onClick={e => setReferralsOpen(true)}>
