@@ -103,7 +103,7 @@ function LiveFeed() {
                                 <p className='text-[10px] lg:text-[12px] saira font-medium'> Payout</p>
                             </div>
                             <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[4px] px-1 my-[1px] lg:my-0'>
-                                <p className='text-[10px] lg:text-[12px] saira font-bold'> {item.amount}</p>
+                                <p className='text-[10px] lg:text-[12px] saira font-bold text-right'> ${item.amount}</p>
                                 <p className='text-[10px] lg:text-[12px] saira font-bold'> {moment(item.datetime).hours()} h ago</p>
                             </div>
                         </div>
