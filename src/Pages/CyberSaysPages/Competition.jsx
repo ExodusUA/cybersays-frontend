@@ -19,7 +19,10 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
 
         const fetchData = async () => {
             const res = await infoAPI.getLeaderboardData()
+
             setLeaderboardData(res.data)
+
+
             setLoading(false)
         }
 
@@ -56,7 +59,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[14px] lg:rounded-[30px] text-center se:py-1 iphone:py-3 mac:!py-0 px-2 sm:max-w-[600px] m-auto'>
                     <p className='text-center text-[14px] sm:text-[32px] mac:!text-[24px] font-semibold'>{languageData?.competitionTitle} {siteData?.currentDay} {languageData?.competitionTitleSpan}</p>
                     {
-                        loading === false && <div className='flex justify-around items-center my-2 mac:my-1 max-w-[250px] sm:max-w-[350px] w-full m-auto'>
+                        loading === false && leaderboardData.length > 0 && <div className='flex justify-around items-center my-2 mac:my-1 max-w-[250px] sm:max-w-[350px] w-full m-auto'>
                             <div>
                                 <p className='text-[16px] saira font-bold'>2</p>
                                 <img className='w-[26px] h-[26px] sm:w-[50px] sm:h-[50px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={

@@ -8,6 +8,7 @@ import BotMessage from './Messages/BotMessage';
 import { useDesign } from '../Helpers/Design/DesignContext'
 import usa_flag from '../images/NewDesign/chatFlag/flag_usa.png'
 import int from '../images/NewDesign/chatFlag/flag_int.png'
+import ModerMessage from './Messages/ModerMessage';
 
 function ChatModal({ user, setOpen, languageData, userCountry }) {
     const { design } = useDesign()
@@ -107,8 +108,9 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
 
     const getMessageComponent = (message, index) => {
         switch (message.type) {
-            case 'user': return <UserMessage message={message} owner={message.name === user.email} index={index} />
+            case 'user': return <UserMessage message={message} owner={message.name === user?.email} index={index} />
             case 'bot': return <BotMessage message={message} index={index} />
+            case 'moderator': return <ModerMessage message={message} index={index} />
             default: return <UserMessage message={message} owner={message.name === user.email} index={index} />
         }
     }
