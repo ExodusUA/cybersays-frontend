@@ -4,7 +4,7 @@ import axios from "axios";
 /* SOCIAL AUTH */
 
 async function socialUserAuth(email, token, refferalCode, special, country) {
-    const response = await axios.post(process.env.REACT_APP_API_URL + '/auth/social', {
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/createBySocial', {
         email,
         token,
         refferalCode,
@@ -17,7 +17,7 @@ async function socialUserAuth(email, token, refferalCode, special, country) {
 /* OTP SENDING */
 
 async function otpSending(token, email, refferalCode) {
-    const response = await axios.post(process.env.REACT_APP_API_URL + '/auth/otp', {
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/otp/generate', {
         token,
         email,
         refferalCode
@@ -28,7 +28,7 @@ async function otpSending(token, email, refferalCode) {
 /* OTP VERIFY */
 
 async function otpVerify(token, code, refferalCode, email, special, country) {
-    const response = await axios.post(process.env.REACT_APP_API_URL + '/auth/verify', {
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/create', {
         token,
         code,
         refferalCode,
@@ -41,7 +41,7 @@ async function otpVerify(token, code, refferalCode, email, special, country) {
 
 /*
 async function checkTokenValidity(token) {
-    const response = await axios.get(process.env.REACT_APP_API_URL + '/auth/verify', {
+    const response = await axios.get(process.env.REACT_APP_API_URL + '/api/v1/auth/verify', {
         headers: {
             token: `${token}`
         }
@@ -54,7 +54,7 @@ async function checkTokenValidity(token) {
 /* DISCORD AUTH */
 
 async function discordUserAuth(access_token, type, country, refferalCode) {
-    const response = await axios.post(process.env.REACT_APP_API_URL + '/auth/discord', {
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/createByDiscord', {
         access_token, type, country, refferalCode
     });
     return response;

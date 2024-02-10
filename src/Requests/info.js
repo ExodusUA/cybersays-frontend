@@ -2,7 +2,7 @@ import axios from "axios";
 import getToken from "../Helpers/getToken";
 
 async function getLeaderboardData() {
-    const response = await axios.get(process.env.REACT_APP_API_URL + '/info/leaderboard', {
+    const response = await axios.get(process.env.REACT_APP_API_URL + '/api/v1/info/leaderboard', {
         headers: {
             token: `${getToken()}`
         }
@@ -11,7 +11,7 @@ async function getLeaderboardData() {
 }
 
 async function getInfoData() {
-    const response = await axios.get(process.env.REACT_APP_API_URL + '/info/main', {
+    const response = await axios.get(process.env.REACT_APP_API_URL + '/api/v1/info/main', {
         headers: {
             token: `${getToken()}`
         }
