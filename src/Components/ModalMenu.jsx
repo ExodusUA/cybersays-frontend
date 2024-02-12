@@ -108,8 +108,8 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink10}</p>
             </div>
           </div>
-          <div className=' absolute bottom-4 flex justify-around items-center max-w-[330px] w-full '>
-            <p className='saira text-[16px] font-semibold cursor-pointer' onClick={e => setAboutModal(true)}>{languageData?.modalMenuBottom1}</p>
+          <div className=' absolute bottom-4 left-1/2 transform -translate-x-1/2 flex justify-around items-center max-w-[420px] w-full '>
+            <p className='saira text-[16px] font-semibold cursor-pointer text-center leading-4' onClick={e => setAboutModal(true)}>{languageData?.modalMenuBottom1}</p>
             <div className={`w-[2px] h-[20px]  ${design === '0' ? 'bg-[#FFED63]' : 'gradient-homepageBtn'}`}></div>
             <p className='saira text-[16px] font-semibold cursor-pointer' onClick={e => setLegalModal(true)}>{languageData?.modalMenuBottom2}</p>
             <div className={`w-[2px] h-[20px]  ${design === '0' ? 'bg-[#FFED63]' : 'gradient-homepageBtn'}`}></div>

@@ -74,7 +74,7 @@ function TourModal({ setOpen, languageData }) {
                         }}
                     >
                         {dataShort.map((item, index) => (
-                            <SwiperSlide key={item}>
+                            <SwiperSlide className='px-4' key={item}>
                                 <img className='w-[375px] md:w-full m-auto mt-3' src={item.img} alt="hero" />
                                 <p className='saira font-medium text-center text-[14px] mx-2 lg:mt-4'>{item.desc}</p>
                             </SwiperSlide>
@@ -106,7 +106,7 @@ function TourModal({ setOpen, languageData }) {
                         }}
                     >
                         {dataLong.map((item, index) => (
-                            <SwiperSlide key={item}>
+                            <SwiperSlide className='px-4' key={item}>
                                  <img className='w-[375px] md:w-full m-auto mt-3' src={item.img} alt="hero" />
                                 <p className='saira font-medium text-center text-[14px] mx-2 lg:mt-4'>{item.desc}</p>
                             </SwiperSlide>

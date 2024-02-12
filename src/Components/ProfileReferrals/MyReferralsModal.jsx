@@ -82,33 +82,33 @@ console.log('user', user)
                                     <div className='w-[25px]'>
                                         <p className='text-[14px] font-semibold'>#</p>
                                     </div>
-                                    <div className='w-[2px] h-[50px] bg-[#FFED63]'></div>
+                                    <div className={`w-[2px] h-[50px] ${design === '0' ? 'bg-[#FFED63]' : 'gradient-homepageBtn'}`}></div>
                                     <div className='w-[120px] md:w-[280px] truncate md:ml-[-20px]'>
                                         <p className='text-[14px] font-semibold '>Name</p>
                                     </div>
-                                    <div className='w-[2px] h-[50px] bg-[#FFED63]'></div>
+                                    <div className={`w-[2px] h-[50px] ${design === '0' ? 'bg-[#FFED63]' : 'gradient-homepageBtn'}`}></div>
                                     <div className='w-[70px] md:w-[30px]'>
                                         <p className='text-[14px] font-semibold md:ml-[-30px]'>Took Offer</p>
                                     </div>
 
-                                    <div className='w-[2px] h-[50px] bg-[#FFED63]'></div>
-                                    <div className='w-[70px] md:w-[50px]'>
+                                    <div className={`w-[2px] h-[50px] ${design === '0' ? 'bg-[#FFED63]' : 'gradient-homepageBtn'}`}></div>
+                                    <div className='w-[70px] md:w-[60px]'>
                                         <p className='text-[14px] font-semibold md:ml-[-20px]'>Send Email</p>
                                     </div>
 
                                 </div>
-                                <div className='w-full h-[2px] bg-[#FFED63]'></div>
+                                <div className={`w-full h-[2px] ${design === '0' ? 'bg-[#FFED63]' : 'gradient-homepageBtn'}`}></div>
                                 <div className='h-[400px] overflow-scroll'>
                                     {referralData.referrals && referralData.referrals.map((item, index) => (
                                         <div key={item} className=' flex justify-between items-center'>
                                             <div className='w-[25px]'>
                                                 <p className='text-[14px] font-semibold saira'>{index + 1}</p>
                                             </div>
-                                            <div className='w-[2px] h-[50px] bg-[#FFED63]'></div>
+                                            <div className={`w-[2px] h-[50px] ${design === '0' ? 'bg-[#FFED63]' : 'gradient-homepageBtn'}`}></div>
                                             <div className='w-[120px] md:w-[280px] md:ml-[-20px]'>
                                                 <p className='text-[14px] font-semibold saira truncate'>{item.email}</p>
                                             </div>
-                                            <div className='w-[2px] h-[50px] bg-[#FFED63]'></div>
+                                            <div className={`w-[2px] h-[50px] ${design === '0' ? 'bg-[#FFED63]' : 'gradient-homepageBtn'}`}></div>
                                             <div className='w-[70px] md:w-[30px]'>
                                                 {
                                                     item.completed_tasks && JSON.parse(item.completed_tasks).length > 3
@@ -117,12 +117,12 @@ console.log('user', user)
                                                 }
                                             </div>
 
-                                            <div className='w-[2px] h-[50px] bg-[#FFED63]'></div>
-                                            <div className='w-[70px] md:w-[50px]'>
+                                            <div className={`w-[2px] h-[50px] ${design === '0' ? 'bg-[#FFED63]' : 'gradient-homepageBtn'}`}></div>
+                                            <div className='w-[70px] md:w-[60px]'>
                                                 {
                                                     item.got_email === 'true'
                                                         ? <img className='w-[24px] h-[24px] m-auto md:ml-0' src={offerTrue} alt="offerTrue" />
-                                                        : <button onClick={e => sendEmail(item.email, item.id)} className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold cursor-pointer md:ml-[-20px]'>Send</button>
+                                                        : <button onClick={e => sendEmail(item.email, item.id)} className={`w-full  border-[2px] ${design === '0' ? 'bg-white border-[#FFED63] rounded-[50px]' : 'gradient-homepageBtn border-transparent rounded-[12px]'}    text-black text-[18px] saira font-semibold cursor-pointer md:ml-[-20px]`}>Send</button>
                                                 }
                                             </div>
 
