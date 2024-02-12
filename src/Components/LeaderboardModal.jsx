@@ -58,11 +58,11 @@ function LeaderboardModal({ setOpen, leaderboardData, loading, languageData }) {
                             }
                             <p className={` text-[18px] md:text-[32px] font-semibold text-center mt-3`}>{languageData?.leaderboardsTitle}</p>
                             <div className='flex justify-between items-center my-4'>
-                                <svg onClick={() => handleClick(1)} className={`cursor-pointer ${dayOffset === 0 ? 'opacity-[0.4] pointer-events-none' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg onClick={() => handleClick(-1)} className={`cursor-pointer ${dayOffset === -2 ? 'opacity-[0.4] pointer-events-none' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17 22L7 12L17 2" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                                 <p className='text-[16px] saira font-bold gradient-linkDouble'></p>
-                                <svg onClick={() => handleClick(-1)} className={`cursor-pointer ${dayOffset === -2 ? 'opacity-[0.4] pointer-events-none' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg onClick={() => handleClick(1)} className={`cursor-pointer ${dayOffset === 0 ? 'opacity-[0.4] pointer-events-none' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M7 2L17 12L7 22" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
