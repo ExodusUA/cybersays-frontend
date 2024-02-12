@@ -142,7 +142,7 @@ console.log('user', user)
                             }
 
                             <p className='saira text-[16px] font-semibold text-center my-5'>You haven't referred friends yet</p>
-                            <button onClick={e => shareRefferalLink()} className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-2 ${design === '0' ? ' rounded-[50px] border-[2px] bg-white ' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>
+                            <button onClick={e => shareRefferalLink()} className={`w-full bg-white text-black text-[18px] saira font-semibold py-2 ${design === '0' ? ' rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>
                                 {
                                     isLinkCopied === false
                                         ? 'Refer your friends 👬'
