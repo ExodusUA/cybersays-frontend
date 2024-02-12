@@ -55,12 +55,12 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                 .share({
                     title: document.title,
                     text: 'Sharing',
-                    url: '?uid=' + user?.refferal_code,
+                    url: '?uid=' + user?.referral_code,
                 })
                 .then(() => console.log('Successful share! 🎉'))
                 .catch(err => console.error(err));
         } else {
-            window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.refferal_code)
+            window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.referral_code)
             setIsLinkShared(true)
 
             setTimeout(() => {
@@ -72,7 +72,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
     const [isLinkCopied, setIsLinkCopied] = useState(false);
 
     const copyToClipboard = () => {
-        let link = window.location.host + '?ref=' + user?.refferal_code;
+        let link = window.location.hostname + '?ref=' + user?.referral_code;
         setIsLinkCopied(true)
         navigator.clipboard.writeText(link);
 

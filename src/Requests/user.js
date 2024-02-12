@@ -67,7 +67,7 @@ async function updateUserAvatar(avatar) {
 /* GET REFERRALS LIST */
 
 async function getReferralsList() {
-    const response = await axios.get(process.env.REACT_APP_API_URL + '/api/v1/user/referrals', {
+    const response = await axios.get(process.env.REACT_APP_API_URL + '/api/v1/user/getUserReferrals', {
         headers: {
             token: `${getToken()}`
         }

@@ -19,10 +19,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
 
         const fetchData = async () => {
             const res = await infoAPI.getLeaderboardData()
-
             setLeaderboardData(res.data)
-
-
             setLoading(false)
         }
 
@@ -37,12 +34,12 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                 .share({
                     title: document.title,
                     text: 'Sharing',
-                    url: '?uid=' + user?.refferal_code,
+                    url: '?uid=' + user?.referral_code,
                 })
                 .then(() => console.log('Successful share! 🎉'))
                 .catch(err => console.error(err));
         } else {
-            window.navigator.clipboard.writeText(window.location.hostname + '?uid=' + user?.refferal_code)
+            window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.referral_code)
             setIsLinkCopied(true)
 
             setTimeout(() => {

@@ -26,11 +26,11 @@ function LeaderboardModal({ setOpen, leaderboardData, loading, languageData }) {
 
     const getDateLabel = (offset) => {
         if (offset === 0) {
-            return <LeaderboardList leaderboardData={leaderboardData} languageData={languageData} day={'Today'}/>;
+            return <LeaderboardList leaderboardData={leaderboardData.todayUsers} languageData={languageData} day={'Today'} />;
         } else if (offset === -1) {
-            return <LeaderboardList leaderboardData={leaderboardData} languageData={languageData} day={'Yesterday'}/>;
+            return <LeaderboardList leaderboardData={leaderboardData.yesterdayUsers} languageData={languageData} day={'Yesterday'} />;
         } else if (offset === -2) {
-            return <LeaderboardList leaderboardData={leaderboardData} languageData={languageData} day={'2 days ago'}/>;
+            return <LeaderboardList leaderboardData={leaderboardData.dayBeforeYesterdayUsers} languageData={languageData} day={'2 days ago'} />;
         }
     };
     return (
@@ -47,13 +47,15 @@ function LeaderboardModal({ setOpen, leaderboardData, loading, languageData }) {
                         ? 'Loading...'
                         : <>
 
-                            <div className={`bg-[#EAEAEA] ${design === '0' ? 'bg-opacity-40 ' : 'bg-opacity-20 '} backdrop-blur-lg rounded-[30px] text-center flex py-2 px-4 mx-3 justify-between items-center mt-3 sm:mt-10`}>
-                                <p className={`saira text-[16px] font-bold  ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble'}`}>#{leaderboardData.userData.position}</p>
-                                <div className='leading-3'>
-                                    <p className={`saira text-[12px] md:text-[14px] font-bold text-[#FFED63] mt-[-3px] ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble'}`}>{leaderboardData.userData.points.toFixed(0)}</p>
-                                    <p className='saira text-[12px] md:text-[14px] font-medium mt-[3px]'>{languageData?.leaderboardsPoints}</p>
+                            {
+                                leaderboardData.userData && <div className={`bg-[#EAEAEA] ${design === '0' ? 'bg-opacity-40 ' : 'bg-opacity-20 '} backdrop-blur-lg rounded-[30px] text-center flex py-2 px-4 mx-3 justify-between items-center mt-3 sm:mt-10`}>
+                                    <p className={`saira text-[16px] font-bold  ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble'}`}>#{leaderboardData?.userData.position}</p>
+                                    <div className='leading-3'>
+                                        <p className={`saira text-[12px] md:text-[14px] font-bold text-[#FFED63] mt-[-3px] ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble'}`}>{leaderboardData.userData.points.toFixed(0)}</p>
+                                        <p className='saira text-[12px] md:text-[14px] font-medium mt-[3px]'>{languageData?.leaderboardsPoints}</p>
+                                    </div>
                                 </div>
-                            </div>
+                            }
                             <p className={` text-[18px] md:text-[32px] font-semibold text-center mt-3`}>{languageData?.leaderboardsTitle}</p>
                             <div className='flex justify-between items-center my-4'>
                                 <svg onClick={() => handleClick(1)} className={`cursor-pointer ${dayOffset === 0 ? 'opacity-[0.4] pointer-events-none' : ''}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

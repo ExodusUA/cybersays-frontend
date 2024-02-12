@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import close from '../../images/CyberSaysPage/closeMenu.png'
 import offerTrue from '../../images/CyberSaysPage/offerTrue.png'
 import offerFalse from '../../images/CyberSaysPage/offerFalse.png'
@@ -16,7 +16,7 @@ function MyReferralsModal({ setOpen, user, languageData }) {
         queryKey: ['referralData'],
         queryFn: async () => {
             const res = await userAPI.getReferralsList()
-            setReferralData(res.data)
+            setReferralData(res.data.referrals)
             return res
         }
     })
@@ -32,6 +32,10 @@ function MyReferralsModal({ setOpen, user, languageData }) {
         }
     }
 
+    useEffect(() => {
+console.log('user', user)
+    }, [user])
+
     const [isLinkCopied, setIsLinkCopied] = useState(false)
 
     const shareRefferalLink = () => {
@@ -40,12 +44,12 @@ function MyReferralsModal({ setOpen, user, languageData }) {
                 .share({
                     title: document.title,
                     text: 'Sharing',
-                    url: '?uid=' + user?.refferal_code,
+                    url: '?uid=' + user?.referral_code,
                 })
                 .then(() => console.log('Successful share! 🎉'))
                 .catch(err => console.error(err));
         } else {
-            window.navigator.clipboard.writeText(window.location.hostname + '?uid=' + user?.refferal_code)
+            window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.referral_code)
             setIsLinkCopied(true)
 
             setTimeout(() => {

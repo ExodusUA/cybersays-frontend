@@ -21,6 +21,7 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
         if (user?.completed_tasks === null) return 'inactive'
 
         let finishedTasks = JSON.parse(user?.completed_tasks) || []
+        console.log(finishedTasks)
         let sortedTasks = finishedTasks.sort((a, b) => a - b)
         let lastTask = sortedTasks[sortedTasks.length - 1]
 
@@ -43,6 +44,7 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
             for (let i = 1; i <= 4; i++) {
                 taskStatusArray.push(getTaskStatus(i))
                 setTaskStatus(taskStatusArray)
+                console.log('task status', taskStatusArray)
             }
         }
     }, [user])
@@ -71,7 +73,7 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
                     {
                         taskStatus !== null && <>
                             <TaskCard data={languageData?.tasks?.task1} state={taskStatus[0]} background={design === '0' ? '#B9A1E1' : '#4F97CB'} rounded={'rounded-t-[20px] '} index={1} imLiveURL={imLiveURL} />
-                            <TaskCard data={languageData?.tasks?.task2} state={taskStatus[0]} background={design === '0' ? '#93CC8E' : '#32B28C'} rounded={'rounded-t-[20px] '} index={2} imLiveURL={imLiveURL} />
+                            <TaskCard data={languageData?.tasks?.task2} state={taskStatus[1]} background={design === '0' ? '#93CC8E' : '#32B28C'} rounded={'rounded-t-[20px] '} index={2} imLiveURL={imLiveURL} />
                             <TaskCard data={languageData?.tasks?.task3} state={taskStatus[2]} background={design === '0' ? '#EA7C7C' : '#D76666'} rounded={'rounded-t-[20px] '} index={3} imLiveURL={imLiveURL} />
                             <TaskCard data={languageData?.tasks?.task4} state={taskStatus[3]} background={design === '0' ? '#76C2E3' : '#9E64D8'} rounded={'rounded-[20px] !pb-[5px]'} index={4} imLiveURL={imLiveURL} />
                         </>

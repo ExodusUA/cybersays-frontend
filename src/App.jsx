@@ -13,8 +13,10 @@ import { DesignProvider } from './Helpers/Design/DesignContext';
 function App() {
 
   const params = new URLSearchParams(window.location.search);
+  console.log(params.get('uid'))
 
   if (params.get('uid')) {
+    console.log(params.get('uid'))
     window.location.href = '/login?ref=' + params.get('uid')
   };
 
