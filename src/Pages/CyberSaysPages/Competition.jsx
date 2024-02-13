@@ -93,13 +93,13 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                     <div className='flex sm:max-w-[400px] md:max-w-[unset] m-auto sm:mt-3'>
                         <div className='text-center w-full md:mx-2'>
                             <Link to={imLiveURL}>
-                                <button className={` bg-white  border-[2px] border-[#FFED63] text-black text-[18px] saira font-semibold p-2 sm:px-6 md:w-full ${design === '0' ? ' p-2 sm:px-6 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.competitionLeftBtn}</button>
+                                <button className={` bg-white  border-[2px] border-[#FFED63] text-black text-[18px] saira font-semibold p-2 sm:px-6 w-[95%] md:w-full ${design === '0' ? ' p-2 sm:px-6 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.competitionLeftBtn}</button>
                             </Link>
                             <p className='saira text-[12px] sm:text-[14px] font-medium'>{languageData?.competitionLeftSection1}</p>
                             <p className='saira text-[12px] sm:text-[14px] font-medium'>{languageData?.competitionLeftSection2}</p>
                         </div>
                         <div className='text-center w-full md:mx-2'>
-                            <button onClick={e => shareRefferalLink()} className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold  md:w-full  ${design === '0' ? ' p-2 sm:px-6 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>
+                            <button onClick={e => shareRefferalLink()} className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold w-[95%]  md:w-full  ${design === '0' ? ' p-2 sm:px-6 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>
                                 {
                                     isLinkCopied === false
                                         ? languageData?.competitionRightBtn
