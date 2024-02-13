@@ -10,12 +10,15 @@ import CustomTooltip from '../../Components/CustomTooltip';
 import Message from './Modals/Message';
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
+import ToolTip2 from '../../Components/ToolTip2';
 
-function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenMassege, setOpenAvatar, selectedMessage, setSelectedMassege, copyToMessage, message, saveAvatar, uploadedPhotos }) {
+function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenMassege, setOpenAvatar, selectedMessage, setSelectedMassege, copyToMessage, message, uploadedPhotos }) {
 
     let swiperRef;
 
     const [selectedGif, setSelectedGif] = useState(null);
+    const [toolTip, setToolTip] = useState(false)
+
 
     const { design } = useDesign()
 
@@ -105,7 +108,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                         </div>
                         <div className='max-w-[340px] sm:max-w-[900px] m-auto w-full '>
                             <Swiper
-
+                                style={{ zIndex: 0 }}
                                 onSwiper={(swiper) => {
                                     swiperRef = swiper;
                                 }}
@@ -199,7 +202,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                         <div className='max-w-[340px] sm:max-w-[900px] m-auto w-full '>
 
                             <Swiper
-
+                                style={{ zIndex: 0 }}
                                 onSwiper={(swiper) => {
                                     swiperRef = swiper;
                                 }}
@@ -262,9 +265,8 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                 <p className={`text-[12px] sm:text-[14px] font-medium saira flex justify-center items-center underline cursor-pointer ${design === '0' ? 'text-white' : 'gradient-link '}`} onClick={e => setReferralsOpen(true)}>
                                     {languageData?.refferalsLink1}
                                 </p>
-                                <div className=''>
-
-                                    <svg onClick={e => setInfoTooltip(true)} className='ml-1 cursor-pointer sm:w-[24px] sm:h-[24px]' width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <div className='relative'>
+                                    <svg onClick={e => setToolTip(true)} className='ml-1 cursor-pointer sm:w-[24px] sm:h-[24px]' width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_1_55928)">
                                             <path d="M5.9 9H7.1V5.4H5.9V9ZM6.5 4.2C6.67 4.2 6.8126 4.1424 6.9278 4.0272C7.043 3.912 7.1004 3.7696 7.1 3.6C7.1 3.43 7.0424 3.2876 6.9272 3.1728C6.812 3.058 6.6696 3.0004 6.5 3C6.33 3 6.1876 3.0576 6.0728 3.1728C5.958 3.288 5.9004 3.4304 5.9 3.6C5.9 3.77 5.9576 3.9126 6.0728 4.0278C6.188 4.143 6.3304 4.2004 6.5 4.2ZM6.5 12C5.67 12 4.89 11.8424 4.16 11.5272C3.43 11.212 2.795 10.7846 2.255 10.245C1.715 9.705 1.2876 9.07 0.9728 8.34C0.658 7.61 0.5004 6.83 0.5 6C0.5 5.17 0.6576 4.39 0.9728 3.66C1.288 2.93 1.7154 2.295 2.255 1.755C2.795 1.215 3.43 0.7876 4.16 0.4728C4.89 0.158 5.67 0.0004 6.5 0C7.33 0 8.11 0.1576 8.84 0.4728C9.57 0.788 10.205 1.2154 10.745 1.755C11.285 2.295 11.7126 2.93 12.0278 3.66C12.343 4.39 12.5004 5.17 12.5 6C12.5 6.83 12.3424 7.61 12.0272 8.34C11.712 9.07 11.2846 9.705 10.745 10.245C10.205 10.785 9.57 11.2126 8.84 11.5278C8.11 11.843 7.33 12.0004 6.5 12ZM6.5 10.8C7.84 10.8 8.975 10.335 9.905 9.405C10.835 8.475 11.3 7.34 11.3 6C11.3 4.66 10.835 3.525 9.905 2.595C8.975 1.665 7.84 1.2 6.5 1.2C5.16 1.2 4.025 1.665 3.095 2.595C2.165 3.525 1.7 4.66 1.7 6C1.7 7.34 2.165 8.475 3.095 9.405C4.025 10.335 5.16 10.8 6.5 10.8Z" fill="white" />
                                         </g>
@@ -274,7 +276,14 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                             </clipPath>
                                         </defs>
                                     </svg>
-
+                                    {
+                                        toolTip && <svg className=" absolute top-[15px]  lg:top-[20px] right-[-13px] sm:right-[-8px]" width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20 0L37.3205 36L2.67949 36L20 0Z" fill="#F5F5F5" />
+                                        </svg>
+                                    }
+                                    {
+                                        toolTip && <ToolTip2 languageData={languageData} setToolTip={setToolTip} />
+                                    }
                                 </div>
 
                             </div>
@@ -282,28 +291,32 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
 
 
                         </div>
-                        <CustomTooltip setOpen={setInfoTooltip} open={infoTooltip} >
-                            <div className=''>
-                                <p className='text-[14px] md:text-[32px] font-semibold text-center text-black mb-2'>{languageData?.refferalsInfoTitle}</p>
-                                <div className='flex justify-around'>
-                                    <div className='flex items-start max-w-[270px] w-full leading-[16px]'>
-                                        <p className='text-black  text-[14px] saira font-medium mr-2'>1.</p>
-                                        <p className='text-black text-[14px] saira font-medium'>{languageData?.refferalsInfo1}</p>
-                                    </div>
-                                    <div className='w-[2px]  bg-[#FFED63]'></div>
-                                    <div className='flex items-start max-w-[270px] w-full leading-[16px]'>
-                                        <p className='text-black  text-[14px] saira font-medium mr-2'>2.</p>
-                                        <p className='text-black text-[14px] saira font-medium'>{languageData?.refferalsInfo2}</p>
-                                    </div>
-                                    <div className='w-[2px]  bg-[#FFED63]'></div>
-                                    <div className='flex items-start max-w-[270px] w-full leading-[15px] '>
-                                        <p className='text-black  text-[14px] saira font-medium mr-2'>3.</p>
-                                        <p className='text-black text-[14px] saira font-medium'>{languageData?.refferalsInfo3}</p>
-                                    </div>
+                        {/*
+                        <div className=''>
+                            <CustomTooltip setOpen={setInfoTooltip} open={infoTooltip} >
+                                <div className=''>
+                                    <p className='text-[14px] md:text-[32px] font-semibold text-center text-black mb-2'>{languageData?.refferalsInfoTitle}</p>
+                                    <div className='flex justify-around'>
+                                        <div className='flex items-start max-w-[270px] w-full leading-[16px]'>
+                                            <p className='text-black  text-[14px] saira font-medium mr-2'>1.</p>
+                                            <p className='text-black text-[14px] saira font-medium'>{languageData?.refferalsInfo1}</p>
+                                        </div>
+                                        <div className='w-[2px]  bg-[#FFED63]'></div>
+                                        <div className='flex items-start max-w-[270px] w-full leading-[16px]'>
+                                            <p className='text-black  text-[14px] saira font-medium mr-2'>2.</p>
+                                            <p className='text-black text-[14px] saira font-medium'>{languageData?.refferalsInfo2}</p>
+                                        </div>
+                                        <div className='w-[2px]  bg-[#FFED63]'></div>
+                                        <div className='flex items-start max-w-[270px] w-full leading-[15px] '>
+                                            <p className='text-black  text-[14px] saira font-medium mr-2'>3.</p>
+                                            <p className='text-black text-[14px] saira font-medium'>{languageData?.refferalsInfo3}</p>
+                                        </div>
 
+                                    </div>
                                 </div>
-                            </div>
-                        </CustomTooltip>
+                            </CustomTooltip>
+                        </div>
+                        */}
                     </div>
 
                 </div>

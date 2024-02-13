@@ -82,7 +82,7 @@ function TourModal({ setOpen, languageData }) {
 
                     </Swiper>
                     <div className='flex justify-center mx-2'>
-                        <button className={`max-w-[360px] w-full bg-white  border-[2px] ${design === '0' ? ' rounded-[50px] border-[2px] bg-white ' : ' rounded-[12px] border-none gradient-homepageBtn'} text-black text-[18px] saira font-semibold py-2 flex justify-center mt-8 mac:!mt-0 absolute mx-2`}>
+                        <button className={`max-w-[360px] w-full bg-white  border-[2px] ${design === '0' ? ' rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'} text-black text-[18px] saira font-semibold py-2 flex justify-center mt-8 mac:!mt-0 absolute mx-2`}>
                             {languageData?.tourShortBtn}
                             <svg className='ml-2' width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M21 12.5L14 5.5V9.5C7 10.5 4 15.5 3 20.5C5.5 17 9 15.4 14 15.4V19.5L21 12.5Z" fill="#1E1E1E" />
@@ -114,7 +114,7 @@ function TourModal({ setOpen, languageData }) {
 
                     </Swiper>
                     <div className='flex justify-center mx-2'>
-                        <button className={`max-w-[360px] w-full bg-white  border-[2px] ${design === '0' ? ' rounded-[50px] border-[2px] bg-white ' : ' rounded-[12px] border-none gradient-homepageBtn'} text-black text-[18px] saira font-semibold py-2 flex justify-center mt-8 mac:!mt-0 absolute mx-2`}>
+                        <button className={`max-w-[360px] w-full bg-white  border-[2px] ${design === '0' ? ' rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'} text-black text-[18px] saira font-semibold py-2 flex justify-center mt-8 mac:!mt-0 absolute mx-2`}>
                             {languageData?.tourLongBtn}
                             <svg className='ml-2' width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M21 12.5L14 5.5V9.5C7 10.5 4 15.5 3 20.5C5.5 17 9 15.4 14 15.4V19.5L21 12.5Z" fill="#1E1E1E" />
