@@ -78,7 +78,7 @@ async function getReferralsList() {
 /* GET TRANSACTIONS */
 
 async function getTransactions() {
-    const response = await axios.get(process.env.REACT_APP_API_URL + '/api/v1/user/transactions', {
+    const response = await axios.get(process.env.REACT_APP_API_URL + '/api/v1/user/getTransactions', {
         headers: {
             token: `${getToken()}`
         }
@@ -90,7 +90,7 @@ async function getTransactions() {
 /* GET TICKETS & POINTS */
 
 async function getTicketsAndPoints() {
-    const response = await axios.get(process.env.REACT_APP_API_URL + '/api/v1/user/tickets-points', {
+    const response = await axios.get(process.env.REACT_APP_API_URL + '/api/v1/user/getTickets', {
         headers: {
             token: `${getToken()}`
         }
