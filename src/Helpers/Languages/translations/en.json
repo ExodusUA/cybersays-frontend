@@ -218,5 +218,11 @@
     "authContinue": "Continue",
     "authDiscord": "Continue with",
     "authGoogle": "Continue with",
-    "authFacebook": "Continue with"
+    "authFacebook": "Continue with",
+    "verifyCodeTitle": "",
+    "verifyCodePlaceholder": "",
+    "verifyCodeBtn": "",
+    "verifyCodeLink": "",
+    "verifyCodeLinkSpan": ""
+    
 }

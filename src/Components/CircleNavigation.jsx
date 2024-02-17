@@ -55,12 +55,12 @@ function CircleNavigation({ setActivePageIndex, activePageIndex }) {
         <div className='flex justify-center'>
             <div className=' fixed bottom-0 z-50 w-[375px] md:w-[500px]'>
                 <div className=' w-full bottom-10 '>
-                    <div className='justify-between flex mx-5 mb-[-40px] relative z-40'>
-                        <img className='w-[24px] lg:w-[32px] cursor-pointer buttonPrev' src={left} alt="Left" onClick={e => {
+                    <div className='justify-between flex mx-9 mb-[-30px] relative z-40'>
+                        <img className='w-[16px] h-[16px] md:w-[32px] md:h-[32px] cursor-pointer buttonPrev' src={left} alt="Left" onClick={e => {
                             swiper.slidePrev()
                             swipeLeft()
                         }} />
-                        <img className='w-[24px] lg:w-[32px] cursor-pointer buttonNext' src={right} alt="Right" onClick={e => {
+                        <img className='w-[16px] h-[16px] md:w-[32px] md:h-[32px] cursor-pointer buttonNext' src={right} alt="Right" onClick={e => {
                             swiper.slideNext()
                             swipeRight()
                         }} />

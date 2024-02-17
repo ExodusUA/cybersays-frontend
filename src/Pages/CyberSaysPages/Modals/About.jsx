@@ -15,7 +15,7 @@ function About({ user, setOpen, languageData  }) {
 
                 <h1 className='text-[32px] text-white text-center mt-12'>{languageData?.aboutModalTitle}</h1>
                 <div className='max-h-[70vh] overflow-auto mt-4'>
-                    <p>{languageData?.aboutModalDesc}</p>
+                    <p className='text-center'>{languageData?.aboutModalDesc}</p>
                 </div>
             </div>
         </div>

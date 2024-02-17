@@ -84,7 +84,7 @@ function LoginForm({ languageData, referralID }) {
     const getCurrentModal = () => {
         switch (activeModal) {
             case 'otp':
-                return <OTPModal recaptchaRef={recaptchaRef} email={email} refferalCode={refferalCode} special={special} />
+                return <OTPModal languageData={languageData} recaptchaRef={recaptchaRef} email={email} refferalCode={refferalCode} special={special} />
             case 'notification':
                 return <AuthEmailNotification />
             default:
