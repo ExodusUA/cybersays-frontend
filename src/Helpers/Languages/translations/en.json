@@ -219,10 +219,11 @@
     "authDiscord": "Continue with",
     "authGoogle": "Continue with",
     "authFacebook": "Continue with",
-    "verifyCodeTitle": "",
-    "verifyCodePlaceholder": "",
-    "verifyCodeBtn": "",
-    "verifyCodeLink": "",
-    "verifyCodeLinkSpan": ""
+    "verifyCodeTitle": "Verify your account",
+    "verifyCodePlaceholder": "Enter verification code sent by e-mail",
+    "verifyCodeError": "Code is wrong",
+    "verifyCodeBtn": "Submit",
+    "verifyCodeLink": "Already have an account?",
+    "verifyCodeLinkSpan": "Sign in"
     
 }
