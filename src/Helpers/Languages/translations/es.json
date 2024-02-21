@@ -216,5 +216,15 @@
     "authContinue": "Continuar",
     "authDiscord": "Continuar con",
     "authGoogle": "Continuar con",
-    "authFacebook": "Continuar con"
+    "authFacebook": "Continuar con",
+    "verifyCodeTitle": "Verify your account",
+    "verifyCodePlaceholder": "Enter verification code sent by e-mail",
+    "verifyCodeError": "Code is wrong",
+    "verifyCodeBtn": "Submit",
+    "verifyCodeLink": "Already have an account?",
+    "verifyCodeLinkSpan": "Sign in",
+    "verifyCodeEmailTitle": "FOLLOW THE VERIFICATION LINK THAT WAS SENT TO YOUR EMIAL",
+    "logoutConfirmTitle": "Are you sure you want to log out?",
+    "logoutConfirmNo": "No",
+    "logoutConfirmYes": "Yes"
 }

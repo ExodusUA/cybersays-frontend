@@ -127,15 +127,14 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                 <div className='flex justify-end mb-2'>
                   <img onClick={e => setLogoutModal(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
-                <h1 className='text-[24px] text-center max-w-[320px] w-full font-semibold mx-14'>Are you sure
-                  you want to log out?</h1>
+                <h1 className='text-[24px] text-center max-w-[320px] w-full font-semibold lg:mx-14'>{languageData?.logoutConfirmTitle}</h1>
 
                 <div className='flex items-center gap-4'>
-                  <button onClick={e => setLogoutModal(false)} className={`w-full bg-transparent  border px-6 py-3 saira p-2 mt-4 max-w-[350px] text-[18px] text-white font-semibold ${design === '0' ? '  rounded-[50px] border-[#FFD700]' : ' rounded-[12px] border-[#A2DBF0]'}`}>No</button>
+                  <button onClick={e => setLogoutModal(false)} className={`w-full bg-transparent  border px-6 py-3 saira p-2 mt-4 max-w-[350px] text-[18px] text-white font-semibold ${design === '0' ? '  rounded-[50px] border-[#FFD700]' : ' rounded-[12px] border-[#A2DBF0]'}`}>{languageData?.logoutConfirmNo}</button>
                   <button onClick={e => {
                     window.localStorage.removeItem('token')
                     navigate('/login')
-                  }} className={`w-full bg-[white]  px-6 py-3 saira p-2 mt-4 max-w-[350px] text-[18px] text-[#5f5f5f] font-semibold ${design === '0' ? '  rounded-[50px] border-[2px] bg-white ' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>Yes</button>
+                  }} className={`w-full bg-[white]  px-6 py-3 saira p-2 mt-4 max-w-[350px] text-[18px] text-[#5f5f5f] font-semibold ${design === '0' ? '  rounded-[50px] border-[2px] bg-white ' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.logoutConfirmYes}</button>
                 </div>
               </div>
             </div>
