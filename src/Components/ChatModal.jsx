@@ -20,6 +20,8 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
         }
     });
 
+    //
+
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState('');
     const [online, setOnline] = useState(0);
