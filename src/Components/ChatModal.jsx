@@ -139,7 +139,7 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
             <div className='max-w-[600px] m-auto p-4 '>
 
                 <div className='flex justify-between items-center md:my-4'>
-                    <div className='flex items-center w-[120px]'>
+                    <div className='flex items-center w-[130px]'>
                         {design === '0' ? <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="8" cy="8" r="8" fill="#FFED63" fill-opacity="0.2" />
                             <circle cx="7.99922" cy="7.99971" r="4.8" fill="#FFED63" />

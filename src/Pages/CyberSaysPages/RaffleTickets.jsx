@@ -122,8 +122,8 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                     {
 
                         isTaskCompleted === false
-                            ? <div className=' text-center mx-1 md:mx-0 md:py-2 relative z-1'>
-                                <p className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] text-[18px] md:text-[32px] mac2:text-[24px] font-semibold py-2'>{languageData?.raffleTitle1}</p>
+                            ? <div className=' text-center mx-1 md:mx-0 md:py-2 relative z-1 mac2:!mt-[-20px]'>
+                                <p className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] text-[18px] md:text-[32px] mac2:!text-[24px] font-semibold py-2'>{languageData?.raffleTitle1}</p>
                                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] mt-2 py-3'>
                                     <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center mx-4 iphone:leading-4 se:leading-[14px]'>
                                         {languageData?.raffleSubTitle1}
@@ -217,7 +217,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                     }
                 </div>
 
-                <p className='text-[12px] md:text-[14px] saira text-center cursor-pointer se:py-1 iphone:py-3'>
+                <p className='text-[12px] md:text-[14px] saira text-center cursor-pointer se:py-1 iphone:py-3 mac2:!py-1'>
                     {languageData?.raffleRulesDesc}
                     <span onClick={e => setTourModal(true)} className={`saira  underline ml-2 ${design === '0' ? 'text-[#FFED63]' : 'gradient-link'}`}>{languageData?.raffleRulesLink}</span>
                 </p>

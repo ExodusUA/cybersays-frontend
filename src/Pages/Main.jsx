@@ -321,8 +321,8 @@ function Main({ languageData }) {
             {
                 openAvatar && <AvatarModal inputRef={inputRef} setSelectedImage={setSelectedImage} selectedImage={selectedImage} handleImageChange={handleImageChange} saveAvatar={saveAvatar} setOpenAvatar={setOpenAvatar} />
             }
-            <div className='fixed right-8 hidden bottom-8 sm:block z-[99]'>
-                <img onClick={e => setChatModal(true)} className='w-12 cursor-pointer' src={design === '0' ? chatImage : require('../images/NewDesign/chatBtn.png')} alt="Chat" />
+            <div className={`fixed right-2 bottom-4 sm:right-8 sm:bottom-8 z-[99] ${menuOpen && 'hidden'}`}>
+                <img onClick={e => setChatModal(true)} className='w-[24px] sm:w-12 cursor-pointer' src={design === '0' ? chatImage : require('../images/NewDesign/chatBtn.png')} alt="Chat" />
             </div>
 
         </>

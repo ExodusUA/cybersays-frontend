@@ -56,7 +56,7 @@ function Settings({ user, setOpen, languageData  }) {
                             <p className='text-[14px] text-white saira'>{languageData?.settingsUserName}</p>
                             <input value={username} onChange={e => setUsername(e.target.value)} className={`w-full bg-white border ${design === '0' ? 'rounded-[18px] border-[#FFED63]' : 'rounded-[12px] border-[#A2DBF0]'}  px-6 py-3 saira input-fix text-[#888888] mt-1`} placeholder='Username' />
 
-                            <p className='text-[14px] text-white saira mt-6'>{languageData?.settingsUserEmail}E-mail</p>
+                            <p className='text-[14px] text-white saira mt-6'>{languageData?.settingsUserEmail}</p>
                             <input value={email} onChange={e => setEmail(e.target.value)} className={`w-full bg-white border ${design === '0' ? 'rounded-[18px] border-[#FFED63]' : 'rounded-[12px] border-[#A2DBF0]'} px-6 py-3 saira input-fix text-[#888888] mt-1`} placeholder='E-mail' />
 
                             <div className='flex items-center gap-2 mt-4'>
