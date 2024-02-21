@@ -206,8 +206,6 @@
     "tourLongToggle": "Versão longa",
     "tourShortBtn": "Compartilhe o tour",
     "tourLongBtn": "Compartilhe o tour",
-
-    
     "authSlide1": "CyberSays: Dobre seu Dinheiro, Dobre seus Ganhos!",
     "authSlide2": "Seu Dinheiro, Suas Regras – Escolha Como Receber",
     "authSlide3": "Complete uma Oferta de $5 e Veja Seus Ganhos Decolarem",
@@ -217,14 +215,14 @@
     "authDiscord": "Continuar com",
     "authGoogle": "Continuar com",
     "authFacebook": "Continuar com",
-    "verifyCodeTitle": "Verify your account",
-    "verifyCodePlaceholder": "Enter verification code sent by e-mail",
-    "verifyCodeError": "Code is wrong",
-    "verifyCodeBtn": "Submit",
-    "verifyCodeLink": "Already have an account?",
-    "verifyCodeLinkSpan": "Sign in",
-    "verifyCodeEmailTitle": "FOLLOW THE VERIFICATION LINK THAT WAS SENT TO YOUR EMIAL",
-    "logoutConfirmTitle": "Are you sure you want to log out?",
-    "logoutConfirmNo": "No",
-    "logoutConfirmYes": "Yes"
+    "verifyCodeTitle": "Verifique sua conta",
+    "verifyCodePlaceholder": "Digite o código de verificação enviado por e-mail",
+    "verifyCodeError": "Código incorreto",
+    "verifyCodeBtn": "Enviar",
+    "verifyCodeLink": "Já tem uma conta?",
+    "verifyCodeLinkSpan": "Entrar",
+    "verifyCodeEmailTitle": "SIGA O LINK DE VERIFICAÇÃO ENVIADO PARA O SEU E-MAIL",
+    "logoutConfirmTitle": "Tem certeza de que deseja sair?",
+    "logoutConfirmNo": "Não",
+    "logoutConfirmYes": "Sim"
 }

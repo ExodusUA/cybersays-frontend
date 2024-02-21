@@ -20,52 +20,52 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
         {
             name: 'USA',
             code: 'usa',
-            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+            icon: require('../images/flags/flag_us.png')
         },
         {
             name: 'UK',
             code: 'uk',
-            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+            icon: require('../images/flags/flag-en.png')
         },
         {
             name: 'Canada',
             code: 'can',
-            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+            icon: require('../images/flags/flag_can.png')
         },
         {
             name: 'India',
             code: 'in',
-            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+            icon: require('../images/flags/flag-in.png')
         },
         {
             name: 'Australia',
             code: 'au',
-            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+            icon: require('../images/flags/flag-au.jpg')
         },
         {
             name: 'New Zealand',
             code: 'nz',
-            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+            icon: require('../images/flags/flag-nz.png')
         },
         {
             name: 'France',
             code: 'fr',
-            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+            icon: require('../images/flags/flag-fr.png')
         },
         {
             name: 'Germany',
             code: 'de',
-            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+            icon: require('../images/flags/flag-de.png')
         },
         {
             name: 'Brazil',
             code: 'br',
-            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+            icon: require('../images/flags/flag-pt.png')
         },
         {
             name: 'Ukraine',
             code: 'ua',
-            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+            icon: require('../images/flags/flag-ua.png')
         },
     ]
 
@@ -257,7 +257,7 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
                                             countries.map((item, index) => (
                                                 item.code !== 'int' && item.code !== 'ua' && <p key={index} className='saira text-white text-[12px] font-medium flex items-center my-2 cursor-pointer'
                                                     onClick={() => { setSelectedCountry(item.code); setCountryOpen(false); setMessages([]) }}>
-                                                    <img className='w-[16px] h-[16px] mr-1' src={item.icon} alt="int" /> {item.name}</p>
+                                                    <img className='w-[16px] h-[12px] mr-1' src={item.icon} alt="int" /> {item.name}</p>
                                             ))
                                         }
                                 </div>
