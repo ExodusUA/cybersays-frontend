@@ -6,11 +6,69 @@ import GifModal from './GifModal';
 import UserMessage from './Messages/UserMessage';
 import BotMessage from './Messages/BotMessage';
 import { useDesign } from '../Helpers/Design/DesignContext'
-import usa_flag from '../images/NewDesign/chatFlag/flag_usa.png'
 import int from '../images/NewDesign/chatFlag/flag_int.png'
 import ModerMessage from './Messages/ModerMessage';
 
 function ChatModal({ user, setOpen, languageData, userCountry }) {
+
+    const countries = [
+        {
+            name: 'International',
+            code: 'int',
+            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+        },
+        {
+            name: 'USA',
+            code: 'usa',
+            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+        },
+        {
+            name: 'UK',
+            code: 'uk',
+            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+        },
+        {
+            name: 'Canada',
+            code: 'can',
+            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+        },
+        {
+            name: 'India',
+            code: 'in',
+            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+        },
+        {
+            name: 'Australia',
+            code: 'au',
+            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+        },
+        {
+            name: 'New Zealand',
+            code: 'nz',
+            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+        },
+        {
+            name: 'France',
+            code: 'fr',
+            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+        },
+        {
+            name: 'Germany',
+            code: 'de',
+            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+        },
+        {
+            name: 'Brazil',
+            code: 'br',
+            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+        },
+        {
+            name: 'Ukraine',
+            code: 'ua',
+            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+        },
+    ]
+
     const { design } = useDesign()
 
     const socket = io(process.env.REACT_APP_CHAT_URL, {
@@ -20,13 +78,36 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
         }
     });
 
-    //
-
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState('');
     const [online, setOnline] = useState(0);
     const [selectedCountry, setSelectedCountry] = useState('int')
     const [countryOpen, setCountryOpen] = useState(false)
+
+    useEffect(() => {
+        if (userCountry === null) return
+
+        //setSelectedCountry(userCountry)
+        let country;
+
+        switch (userCountry) {
+            case 'US': country = 'usa'; break;
+            case 'UK': country = 'uk'; break;
+            case 'CA': country = 'can'; break;
+            case 'IN': country = 'in'; break;
+            case 'AU': country = 'au'; break;
+            case 'NZ': country = 'nz'; break;
+            case 'FR': country = 'fr'; break;
+            case 'DE': country = 'de'; break;
+            case 'BR': country = 'br'; break;
+            case 'UA': country = 'ua'; break;
+            default: country = 'int';
+        }
+
+        setSelectedCountry(country)
+        console.log('country', userCountry)
+
+    }, [userCountry])
 
     useEffect(() => {
 
@@ -118,21 +199,12 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
         }
     }
     const getCountryName = () => {
-        const countryPhotos = {
-            'int': int,
-            'usa': usa_flag,
-        };
-
-        const countryName = {
-            'int': 'International',
-            'usa': 'USA',
-        };
-
-        const countryPhoto = countryPhotos[selectedCountry] || int;
+        let countryPhoto = countries.find(item => item.code === selectedCountry)?.icon
+        let countryName = countries.find(item => item.code === selectedCountry)?.name
 
         return (
             <p className=' flex justify-between items-center '>
-                <img className='w-[17px] h-[16px] lg:mr-2' src={countryPhoto} alt={selectedCountry} /> <span className='saira text-white font-bold text-[12px] hidden lg:block'>{countryName[selectedCountry]}</span> 
+                <img className='w-[17px] h-[16px] lg:mr-2' src={countryPhoto} alt={selectedCountry} /> <span className='saira text-white font-bold text-[12px] hidden lg:block'>{countryName}</span>
             </p>
         );
     };
@@ -175,19 +247,21 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
                         </div>
 
                         {
-                        countryOpen && (
-                            <div onClick={(e) => e.stopPropagation()} className={`mt-0 absolute top-[40px] p-4 border-[2px] ${design === '0' ? ' border-[#FFED63]' : 'border-[#A2DBF0]'} bg-[#474747]  rounded-[8px] py-2 inline-block  right-0 w-[150px]`}>
-                                <p className='saira text-white text-[12px] font-medium flex items-center my-2 cursor-pointer'
-                                    onClick={() => { setSelectedCountry("int"); setCountryOpen(false); }}>
-                                    <img className='w-[16px] h-[16px] mr-1' src={int} alt="int" />International</p>
+                            countryOpen && (
+                                <div onClick={(e) => e.stopPropagation()} className={`mt-0 absolute top-[40px] p-4 border-[2px] ${design === '0' ? ' border-[#FFED63]' : 'border-[#A2DBF0]'} bg-[#474747]  rounded-[8px] py-2 inline-block  right-0 w-[150px]`}>
+                                    <p className='saira text-white text-[12px] font-medium flex items-center my-2 cursor-pointer'
+                                        onClick={() => { setSelectedCountry("int"); setCountryOpen(false); }}>
+                                        <img className='w-[16px] h-[16px] mr-1' src={int} alt="int" />International</p>
 
-                                {
-                                    userCountry === 'US' && <p className='saira text-white text-[12px] font-medium flex items-center my-2 cursor-pointer'
-                                        onClick={() => { setSelectedCountry("usa"); setCountryOpen(false); setMessages([]) }}>
-                                        <img className='w-[16px] h-[16px] mr-1' src={usa_flag} alt="int" /> USA</p>
-                                }
-                            </div>
-                        )}
+                                        {
+                                            countries.map((item, index) => (
+                                                item.code !== 'int' && item.code !== 'ua' && <p key={index} className='saira text-white text-[12px] font-medium flex items-center my-2 cursor-pointer'
+                                                    onClick={() => { setSelectedCountry(item.code); setCountryOpen(false); setMessages([]) }}>
+                                                    <img className='w-[16px] h-[16px] mr-1' src={item.icon} alt="int" /> {item.name}</p>
+                                            ))
+                                        }
+                                </div>
+                            )}
                     </div>
                     <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
