@@ -248,7 +248,7 @@ function Main({ languageData }) {
                     onSlideChange={(swiper) => handleSwiperChange(swiper)}
                 >
                     <SwiperSlide>
-                        <Homepage setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
+                        <Homepage scrollToPage={scrollToPage}  setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
                     </SwiperSlide>
                     <SwiperSlide>
                         <RaffleTickets setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} setTourModal={setTourModal} />
