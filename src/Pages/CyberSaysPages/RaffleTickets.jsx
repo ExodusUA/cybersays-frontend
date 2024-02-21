@@ -221,7 +221,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                     {languageData?.raffleRulesDesc}
                     <span onClick={e => setTourModal(true)} className={`saira  underline ml-2 ${design === '0' ? 'text-[#FFED63]' : 'gradient-link'}`}>{languageData?.raffleRulesLink}</span>
                 </p>
-                <div className='flex absolute se:bottom-[130px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
+                <div className='flex absolute se:bottom-[130px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] mac:hidden justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
                     <TimeCounter languageData={languageData} />
                 </div>
             </div>

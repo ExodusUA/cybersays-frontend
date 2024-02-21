@@ -224,6 +224,10 @@
     "verifyCodeError": "Code is wrong",
     "verifyCodeBtn": "Submit",
     "verifyCodeLink": "Already have an account?",
-    "verifyCodeLinkSpan": "Sign in"
+    "verifyCodeLinkSpan": "Sign in",
+    "verifyCodeEmailTitle": "FOLLOW THE VERIFICATION LINK THAT WAS SENT TO YOUR EMIAL",
+    "logoutConfirmTitle": "Are you sure you want to log out?",
+    "logoutConfirmNo": "No",
+    "logoutConfirmYes": "Yes"
     
 }

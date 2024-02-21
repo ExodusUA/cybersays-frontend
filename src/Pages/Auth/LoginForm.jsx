@@ -86,7 +86,7 @@ function LoginForm({ languageData, referralID }) {
             case 'otp':
                 return <OTPModal languageData={languageData} recaptchaRef={recaptchaRef} email={email} refferalCode={refferalCode} special={special} />
             case 'notification':
-                return <AuthEmailNotification />
+                return <AuthEmailNotification languageData={languageData} />
             default:
                 return null
         }
