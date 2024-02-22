@@ -65,10 +65,10 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
 
     const getButtonMarkup = (task) => {
         switch (task) {
-            case 0: return <Link to={imLiveURL}><button className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] text-black text-[18px] saira font-semibold  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn1}</button></Link>
-            case 1: return <button className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] text-black mobMax:text-[16px] text-[18px] saira font-semibold ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn2}</button>
-            case 2: return <button className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] text-black mobMax:text-[16px] text-[18px] saira font-semibold ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn3}</button>
-            case 3: return <button className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn4}</button>
+            case 0: return <Link to={imLiveURL} target='_blank'><button className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] text-black text-[18px] saira font-semibold  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn1}</button></Link>
+            case 1: return <Link to={imLiveURL} target='_blank'><button className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] text-black mobMax:text-[16px] text-[18px] saira font-semibold ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn2}</button></Link>
+            case 2: return <Link to={imLiveURL} target='_blank'><button className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] text-black mobMax:text-[16px] text-[18px] saira font-semibold ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn3}</button></Link>
+            case 3: return <Link to={imLiveURL} target='_blank'><button className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn4}</button></Link>
         }
     }
 
@@ -92,7 +92,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                                 isTaskCompleted === true
                                     ? <div className='flex justify-between items-start w-full'>
                                         <div className='text-center w-full'>
-                                            <Link to={imLiveURL}><button className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold p-2 md:py-3 md:w-[95%] ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.raffleLeftBtn}</button></Link>
+                                            <Link target='_blank' to={imLiveURL}><button className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold p-2 md:py-3 md:w-[95%] ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.raffleLeftBtn}</button></Link>
                                             <p className='saira text-[12px] md:text-[14px] font-medium mt-2'>{languageData?.raffleLeftSection1} {languageData?.raffleLeftSection2}</p>
 
                                         </div>

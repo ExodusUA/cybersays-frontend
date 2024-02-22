@@ -83,7 +83,7 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded }) {
             </div>
 
             <div className='flex justify-center mt-[-20px] md:mt-[-30px] relative z-50 max-w-[330px] w-full sm:max-w-[555px] m-auto'>
-                <Link className='w-full' to={imLiveURL}><button className={`w-full bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold py-1 sm:py-2 ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{data?.taskButton}</button></Link>
+                <Link className='w-full' to={imLiveURL} target='_blank'><button className={`w-full bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold py-1 sm:py-2 ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{data?.taskButton}</button></Link>
             </div>
             <p onClick={e => copyImLiveLink()} className={`saira text-[14px] cursor-pointer underline text-center mb-[-5px] py-2 pb-6 font-semibold  ${linkCopied === true ? 'opacity-60' : ''}`}>Copy link</p>
         </>
