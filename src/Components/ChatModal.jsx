@@ -82,12 +82,13 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
     const [message, setMessage] = useState('');
     const [online, setOnline] = useState(0);
     const [selectedCountry, setSelectedCountry] = useState('int')
+    const [userCountryCode, setUserCountry] = useState(null)
     const [countryOpen, setCountryOpen] = useState(false)
 
     useEffect(() => {
         if (userCountry === null) return
 
-        //setSelectedCountry(userCountry)
+       
         let country;
 
         switch (userCountry) {
@@ -103,7 +104,7 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
             case 'UA': country = 'ua'; break;
             default: country = 'int';
         }
-
+        setUserCountry(country)
         setSelectedCountry(country)
         console.log('country', userCountry)
 
@@ -253,13 +254,13 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
                                         onClick={() => { setSelectedCountry("int"); setCountryOpen(false); }}>
                                         <img className='w-[16px] h-[16px] mr-1' src={int} alt="int" />International</p>
 
-                                        {
-                                            countries.map((item, index) => (
-                                                item.code !== 'int' && item.code !== 'ua' && <p key={index} className='saira text-white text-[12px] font-medium flex items-center my-2 cursor-pointer'
-                                                    onClick={() => { setSelectedCountry(item.code); setCountryOpen(false); setMessages([]) }}>
-                                                    <img className='w-[16px] h-[12px] mr-1' src={item.icon} alt="int" /> {item.name}</p>
-                                            ))
-                                        }
+                                    {
+                                        countries.filter(e => e.code === userCountryCode).map((item, index) => (
+                                            <p key={index} className='saira text-white text-[12px] font-medium flex items-center my-2 cursor-pointer'
+                                                onClick={() => { setSelectedCountry(item.code); setCountryOpen(false); setMessages([]) }}>
+                                                <img className='w-[16px] h-[12px] mr-1' src={item.icon} alt="int" /> {item.name}</p>
+                                        ))
+                                    }
                                 </div>
                             )}
                     </div>
