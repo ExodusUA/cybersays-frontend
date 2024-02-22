@@ -12,7 +12,7 @@ import Popup from 'reactjs-popup';
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import ToolTip1 from '../../Components/ToolTip1';
 
-function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
+function RaffleTickets({ setTourModal, user, imLiveURL, languageData,setWinModal }) {
 
     const { design } = useDesign()
 
@@ -174,7 +174,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData }) {
                                         </div>
 
                                     </p>
-                                    <p className={`text-[14px] font-medium underline cursor-pointer saira  ${design === '0' ? 'text-[#FFED63]' : 'gradient-link'}`}>{languageData?.raffleLink1}</p>
+                                    <p onClick={e => setWinModal(true)} className={`text-[14px] font-medium underline cursor-pointer saira  ${design === '0' ? 'text-[#FFED63]' : 'gradient-link'}`}>{languageData?.raffleLink1}</p>
                                 </div>
                                 {/*
                                 <a

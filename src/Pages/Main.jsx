@@ -31,6 +31,7 @@ import { getUserCountry } from '../Requests/utills'
 import API from '../Helpers/API'
 import LiveFeed from '../Components/LiveFeed'
 import Verify from './Verify'
+import WinVegasModal from '../Components/WinVegasModal'
 
 var mixpanel = require('mixpanel-browser');
 
@@ -96,6 +97,7 @@ function Main({ languageData }) {
     const [chatModal, setChatModal] = useState(false)
     const [openMessage, setOpenMassege] = useState(false);
     const [openAvatar, setOpenAvatar] = useState(false);
+    const [winMoadal, setWinModal] = useState(false);
     const [selectedMessage, setSelectedMassege] = useState(null);
 
     useQuery({
@@ -252,7 +254,7 @@ function Main({ languageData }) {
                         <Homepage scrollToPage={scrollToPage} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <RaffleTickets setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} setTourModal={setTourModal} />
+                        <RaffleTickets setWinModal={setWinModal} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} setTourModal={setTourModal} />
                     </SwiperSlide>
                     <SwiperSlide>
                         <Double setOpen={setWithdrawModal} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
@@ -313,7 +315,9 @@ function Main({ languageData }) {
             {
                 chatModal && <ChatModal languageData={languageData} setOpen={setChatModal} user={userData} userCountry={userCountry} />
             }
-
+            {
+                winMoadal && <WinVegasModal languageData={languageData} setOpen={setWinModal}/>
+            }
             {
                 openMessage && <Message onCloseCopied={() => {
                     setMessagetCopied(Array(dataMessage.length).fill(false));

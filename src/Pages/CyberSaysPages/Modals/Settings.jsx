@@ -73,7 +73,7 @@ function Settings({ user, setOpen, languageData  }) {
                             <div className="flex justify-center">
                                 <button className={`w-full bg-[white] ${design === '0' ? '  rounded-[18px] border-[2px] bg-white text-[#5f5f5f]' : ' rounded-[12px] border-none gradient-homepageBtn text-black'} px-6 py-3 saira p-2 mt-4 max-w-[350px]   font-semibold`} onClick={e => handleSend()}>
                                     {
-                                        isSended ? 'Saved!' : 'Apply changes'
+                                        isSended ? languageData?.settingsBtnDone : languageData?.settingsBtn
                                     }
                                 </button>
                             </div>
@@ -89,7 +89,7 @@ function Settings({ user, setOpen, languageData  }) {
                                 </div>
                                 <h1 className='text-[16px] text-white text-center font-semibold'>{languageData?.settingsDeleteSure}</h1>
 
-                                <button onClick={e => setDeleteStep(2)} className={`w-full bg-[white]  ${design === '0' ? '  rounded-[18px]  bg-white text-[#5f5f5f]' : ' rounded-[12px] border-none gradient-homepageBtn text-black'} px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[50px] text-[18px] text-[#5f5f5f] font-semibold`}>Continue</button>
+                                <button onClick={e => setDeleteStep(2)} className={`w-full bg-[white]  ${design === '0' ? '  rounded-[18px]  bg-white text-[#5f5f5f]' : ' rounded-[12px] border-none gradient-homepageBtn text-black'} px-6 py-3 saira p-2 mt-4 max-w-[350px] rounded-[50px] text-[18px] text-[#5f5f5f] font-semibold`}>{languageData?.authContinue}</button>
                             </div>
                             : deleteStep === 2
                                 ? <div className={`absolute  backdrop-blur-lg p-6 bg-black/50 rounded-[20px] border ${design === '0' ? ' border-[#FFED63]' : ' border-[#A2DBF0]'}`}>
