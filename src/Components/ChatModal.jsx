@@ -87,8 +87,6 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
 
     useEffect(() => {
         if (userCountry === null) return
-
-       
         let country;
 
         switch (userCountry) {
@@ -106,9 +104,23 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
         }
         setUserCountry(country)
         setSelectedCountry(country)
-        console.log('country', userCountry)
 
     }, [userCountry])
+
+    useEffect(() => {
+        console.log('selectedCountry', selectedCountry.toUpperCase())
+        updateMessages()
+    }, [selectedCountry])
+
+    const updateMessages = async () => {
+        console.log('GET ' + selectedCountry.toUpperCase() + ' messages')
+        socket.emit('getMessages', selectedCountry.toUpperCase())
+
+        socket.on('messages', (history) => {
+            if (history.length === undefined) return
+            setMessages(history);
+        });
+    }
 
     useEffect(() => {
 
@@ -116,11 +128,12 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
             socket.emit('setUserOnline', { userId: user.id, socketId: socket.id })
         });
 
-        if (userCountry === undefined) return
+        if (selectedCountry === undefined) return
 
         /* GET MESSAGES */
 
-        socket.emit('getMessages', userCountry)
+
+        socket.emit('getMessages', selectedCountry.toUpperCase())
 
         socket.on('messages', (history) => {
             if (history.length === undefined) return
@@ -142,18 +155,19 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
         return () => {
             socket.disconnect();
         };
-    }, [userCountry]);
+    }, []);
 
     let username = user?.email
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log('userCountry', userCountry)
         if (message.length === 0) return alert('Please enter a message')
         socket.emit('addMessage', {
             message: message,
             name: username,
             userid: user.id,
-            country: userCountry,
+            country: selectedCountry.toUpperCase(),
             token: '',
             avatar: 'https://146.59.14.103:3014' + user.avatar
         });
@@ -182,7 +196,7 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
             message: `<img class="w-full rounded-[20px] mt-2" src="${gif}" alt="gif" />`,
             name: username,
             userid: user.id,
-            country: userCountry,
+            country: selectedCountry.toUpperCase(),
             token: '',
             avatar: 'https://146.59.14.103:3014' + user.avatar
         });
@@ -251,7 +265,10 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
                             countryOpen && (
                                 <div onClick={(e) => e.stopPropagation()} className={`mt-0 absolute top-[40px] p-4 border-[2px] ${design === '0' ? ' border-[#FFED63]' : 'border-[#A2DBF0]'} bg-[#474747]  rounded-[8px] py-2 inline-block  right-0 w-[150px]`}>
                                     <p className='saira text-white text-[12px] font-medium flex items-center my-2 cursor-pointer'
-                                        onClick={() => { setSelectedCountry("int"); setCountryOpen(false); }}>
+                                        onClick={() => {
+                                            setSelectedCountry("int");
+                                            setCountryOpen(false);
+                                        }}>
                                         <img className='w-[16px] h-[16px] mr-1' src={int} alt="int" />International</p>
 
                                     {
