@@ -13,7 +13,8 @@ function Token() {
     useEffect(() => {
         async function checkToken() {
             const decodedToken = jwtDecode(urlToken)
-            if (decodedToken.id === undefined) return setError(true)
+            console.log(decodedToken)
+            if (decodedToken.userId === undefined) return setError(true)
             window.localStorage.setItem('token', urlToken)
         
             setTimeout(() => {
