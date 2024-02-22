@@ -19,4 +19,14 @@ async function getInfoData() {
     return response;
 }
 
-export default { getLeaderboardData, getInfoData };
+
+async function getFeedData() {
+    const response = await axios.get(process.env.REACT_APP_API_URL + '/api/v1/info/livefeed', {
+        headers: {
+            token: `${getToken()}`
+        }
+    });
+    return response;
+}
+
+export default { getLeaderboardData, getInfoData, getFeedData };
