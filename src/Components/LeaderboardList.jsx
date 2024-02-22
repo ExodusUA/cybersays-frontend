@@ -69,7 +69,7 @@ function LeaderboardList({ leaderboardData, languageData, day }) {
                             <p>There are no more users</p>
                         </div>
 
-                        : leaderboardData.leaderboard.slice(3).map((user, index) => (
+                        : leaderboardData.slice(3).map((user, index) => (
                             <div className=' '>
                                 <div className={`bg-[#EAEAEA] ${design === '0' ? 'bg-opacity-40 ' : 'bg-opacity-20 '} backdrop-blur-lg rounded-[30px] text-center flex pr-3  justify-between items-center mt-2`}>
                                     <div className='flex items-center'>
