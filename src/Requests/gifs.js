@@ -2,7 +2,7 @@ import axios from "axios";
 import getToken from "../Helpers/getToken";
 
 async function searchGif(text) {
-    const response = await axios.get(process.env.REACT_APP_CHAT_URL + '/giphy/gifs/search?search=' + text, {
+    const response = await axios.get(process.env.REACT_APP_CHAT_URL + '/chat/giphy/gifs/search?search=' + text, {
         headers: {
             token: `${getToken()}`
         }
@@ -11,7 +11,7 @@ async function searchGif(text) {
 }
 
 async function getTrendingGifs() {
-    const response = await axios.get(process.env.REACT_APP_CHAT_URL + '/giphy/gifs/trending', {
+    const response = await axios.get(process.env.REACT_APP_CHAT_URL + '/chat/giphy/gifs/trending', {
         headers: {
             token: `${getToken()}`
         }
