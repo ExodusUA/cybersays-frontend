@@ -124,7 +124,7 @@ function LiveFeed() {
                                 <div>
                                     <img className='w-[28px] lg:w-[32px] h-[28px] lg:h-[32px] ml-[1px]' src={usa} alt="Country Flag" />
                                 </div>
-                                <div className='text-center'>
+                                <div className=''>
                                     <p className='text-[10px] lg:text-[12px] saira font-medium truncate w-[50px]'> {item.email}</p>
                                     <p className='text-[10px] lg:text-[12px] saira font-medium w-[50px]'> Payout</p>
                                 </div>
