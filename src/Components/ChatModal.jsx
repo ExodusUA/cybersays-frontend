@@ -72,9 +72,9 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
     const { design } = useDesign()
 
     const socket = io(process.env.REACT_APP_CHAT_URL, {
-        path: '/chat',
+        path: '/chat/socket',
         body: {
-            userId: 123
+            userId: user.id
         }
     });
 
