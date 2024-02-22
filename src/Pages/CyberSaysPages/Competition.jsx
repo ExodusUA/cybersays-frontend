@@ -4,9 +4,7 @@ import TimeCounter from '../../Components/TimeCounter'
 import cup1 from '../../images/CyberSaysPage/cup1st.png'
 import cup2 from '../../images/CyberSaysPage/cup2st.png'
 import cup3 from '../../images/CyberSaysPage/cup3st.png'
-import LeaderboardModal from '../../Components/LeaderboardModal'
 import infoAPI from '../../Requests/info'
-import no_avatar from '../../images/CyberSaysPage/no_avatar.png'
 import { Link } from 'react-router-dom'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
@@ -19,7 +17,9 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
 
         const fetchData = async () => {
             const res = await infoAPI.getLeaderboardData()
-            setLeaderboardData(res.data)
+            console.log(res.data.leaderboard)
+            setLeaderboardData(res.data.leaderboard)
+           
             setLoading(false)
         }
 
@@ -59,32 +59,20 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                         loading === false && leaderboardData.length > 0 && <div className='flex justify-around items-center my-2 mac:my-1 max-w-[250px] sm:max-w-[350px] w-full m-auto'>
                             <div>
                                 <p className='text-[16px] saira font-bold'>2</p>
-                                <img className='w-[26px] h-[26px] sm:w-[50px] sm:h-[50px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={
-                                    leaderboardData.leaderboard[1].avatar === null
-                                        ? cup2
-                                        : leaderboardData.leaderboard[1].avatar
-                                } alt="cup2" />
-                                <p className={`text-[12px] sm:text-[14px] saira font-medium  ${design === '0' ? 'text-[#FFED63]' : 'text-[#A1B3B0]'}`}>{leaderboardData.leaderboard[1].points}</p>
+                                <img className='w-[26px] h-[26px] sm:w-[50px] sm:h-[50px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={cup2} alt="cup2" />
+                                <p className={`text-[12px] sm:text-[14px] saira font-medium  ${design === '0' ? 'text-[#FFED63]' : 'text-[#A1B3B0]'}`}>{leaderboardData[1].points}</p>
                                 <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>{languageData?.competitionPoints}</p>
                             </div>
                             <div>
                                 <p className='text-[16px] saira font-bold'>1</p>
-                                <img className='w-[34px] h-[34px] sm:w-[70px] sm:h-[70px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={
-                                    leaderboardData.leaderboard[0].avatar === null
-                                        ? cup1
-                                        : leaderboardData.leaderboard[0].avatar
-                                } alt="cup2" />
-                                <p className={`text-[12px] sm:text-[14px] saira font-medium  ${design === '0' ? 'text-[#FFED63]' : 'text-[#F2BB02]'}`}>{leaderboardData.leaderboard[0].points}</p>
+                                <img className='w-[34px] h-[34px] sm:w-[70px] sm:h-[70px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={cup1} alt="cup2" />
+                                <p className={`text-[12px] sm:text-[14px] saira font-medium  ${design === '0' ? 'text-[#FFED63]' : 'text-[#F2BB02]'}`}>{leaderboardData[0].points}</p>
                                 <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>{languageData?.competitionPoints}</p>
                             </div>
                             <div>
                                 <p className='text-[16px] saira font-bold'>3</p>
-                                <img className='w-[26px] h-[26px] sm:w-[50px] sm:h-[50px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={
-                                    leaderboardData.leaderboard[2].avatar === null
-                                        ? cup3
-                                        : leaderboardData.leaderboard[2].avatar
-                                } alt="cup2" />
-                                <p className={`text-[12px] sm:text-[14px] saira font-medium ${design === '0' ? 'text-[#FFED63]' : 'text-[#E87001]'}`}>{leaderboardData.leaderboard[2].points}</p>
+                                <img className='w-[26px] h-[26px] sm:w-[50px] sm:h-[50px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={cup3} alt="cup2" />
+                                <p className={`text-[12px] sm:text-[14px] saira font-medium ${design === '0' ? 'text-[#FFED63]' : 'text-[#E87001]'}`}>{leaderboardData[2].points}</p>
                                 <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>{languageData?.competitionPoints}</p>
                             </div>
                         </div>

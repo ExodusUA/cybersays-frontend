@@ -11,7 +11,6 @@ import CircleNavigation from '../Components/CircleNavigation'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import AuthCheck from '../hoc/AuthCheck'
 import Competition from './CyberSaysPages/Competition'
-import { useSwipeable } from 'react-swipeable';
 import Refferals from './CyberSaysPages/Refferals'
 import Terms from './CyberSaysPages/Terms'
 import Withdraw from '../Components/Transactions/Withdraw'
@@ -19,7 +18,6 @@ import TourModal from '../Components/DoubleMoneyPage/TourModal'
 import LeaderboardModal from '../Components/LeaderboardModal'
 import { SwiperSlide } from 'swiper/react'
 import { Swiper } from 'swiper/react';
-import user from '../Requests/user'
 import ChatModal from '../Components/ChatModal'
 import infoAPI from '../Requests/info'
 import MyReferralsModal from '../Components/ProfileReferrals/MyReferralsModal'
@@ -27,11 +25,14 @@ import chatImage from '../images/CyberSaysPage/mobileMenuLink/link9.png'
 import Message from './CyberSaysPages/Modals/Message'
 import AvatarModal from '../Components/ProfileReferrals/AvatarModal'
 import { useDesign } from '../Helpers/Design/DesignContext'
-import { getUserCountry } from '../Requests/utills'
 import API from '../Helpers/API'
 import LiveFeed from '../Components/LiveFeed'
 import Verify from './Verify'
 import WinVegasModal from '../Components/WinVegasModal'
+
+import first from '../images/gifs/first.png'
+import second from '../images/gifs/second.png'
+import third from '../images/gifs/third.png'
 
 var mixpanel = require('mixpanel-browser');
 
@@ -42,25 +43,25 @@ function Main({ languageData }) {
     const queryClient = useQueryClient()
     const dataMessage = [
         {
-            desc: '1 Message text Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas',
+            desc: 'Message text Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas',
         },
         {
-            desc: '2 Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         },
         {
-            desc: '3 Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         },
         {
-            desc: '4 Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         },
         {
-            desc: '5 Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         },
         {
-            desc: '6 Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         },
         {
-            desc: '7 Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         },
     ]
     const [messageCopied, setMessagetCopied] = useState(Array(dataMessage.length).fill(false));
@@ -162,10 +163,11 @@ function Main({ languageData }) {
     const inputRef = useRef()
     const [uploadedPhotos, setUploadedPhotos] = useState(() => {
         const storedPhotos = localStorage.getItem('uploadedPhotos');
-        return storedPhotos ? JSON.parse(storedPhotos) : [];
+        return storedPhotos ? JSON.parse(storedPhotos) : [first, second, third];
     });
 
     const savePhotosToLocalStorage = (photos) => {
+        console.log(photos)
         localStorage.setItem('uploadedPhotos', JSON.stringify(photos));
     };
 
@@ -200,7 +202,8 @@ function Main({ languageData }) {
 
 
             setUploadedPhotos((prevPhotos) => [...prevPhotos, { image: res.data.url }]);
-            savePhotosToLocalStorage(uploadedPhotos);
+            let photos = [...uploadedPhotos, { image: res.data.url }];
+            savePhotosToLocalStorage(photos);
         } catch (error) {
             alert(error)
         }
