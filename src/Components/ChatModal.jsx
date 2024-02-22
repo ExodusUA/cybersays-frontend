@@ -20,7 +20,7 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
         {
             name: 'USA',
             code: 'usa',
-            icon: require('../images/flags/flag_us.png')
+            icon: require('../images/flags/flag_us.jpg')
         },
         {
             name: 'UK',
@@ -30,12 +30,12 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
         {
             name: 'Canada',
             code: 'can',
-            icon: require('../images/flags/flag_can.png')
+            icon: require('../images/flags/flag_can.jpg')
         },
         {
             name: 'India',
             code: 'in',
-            icon: require('../images/flags/flag-in.png')
+            icon: require('../images/flags/flag-in.jpg')
         },
         {
             name: 'Australia',
@@ -45,17 +45,17 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
         {
             name: 'New Zealand',
             code: 'nz',
-            icon: require('../images/flags/flag-nz.png')
+            icon: require('../images/flags/flag-nz.jpg')
         },
         {
             name: 'France',
             code: 'fr',
-            icon: require('../images/flags/flag-fr.png')
+            icon: require('../images/flags/flag-fr.jpg')
         },
         {
             name: 'Germany',
             code: 'de',
-            icon: require('../images/flags/flag-de.png')
+            icon: require('../images/flags/flag-de.jpg')
         },
         {
             name: 'Brazil',
@@ -65,7 +65,7 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
         {
             name: 'Ukraine',
             code: 'ua',
-            icon: require('../images/flags/flag-ua.png')
+            icon: require('../images/flags/flag-ua.jpg')
         },
     ]
 

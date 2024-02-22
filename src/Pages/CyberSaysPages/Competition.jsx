@@ -110,7 +110,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                             <p className='saira text-[12px] sm:text-[14px] font-medium'>{languageData?.competitionRightSection2}</p>
                         </div>
                     </div>
-                    <p className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline se:mt-0 iphone:mt-3 mac:!mt-0 cursor-pointer ${design === '0' ? 'text-white' : 'gradient-link '}`} onClick={e => setLeaderboardModal(true)}>{languageData?.competitionRightLink1}</p>
+                    <p className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline se:mt-0 iphone:mt-3 mac:!mt-0 mac:!mb-2 cursor-pointer ${design === '0' ? 'text-white' : 'gradient-link '}`} onClick={e => setLeaderboardModal(true)}>{languageData?.competitionRightLink1}</p>
 
                 </div>
                 <div className='flex justify-center'>
