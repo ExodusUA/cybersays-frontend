@@ -88,7 +88,7 @@ console.log('user', user)
                                     </div>
                                     <div className={`w-[2px] h-[50px] ${design === '0' ? 'bg-[#FFED63]' : 'gradient-homepageBtn'}`}></div>
                                     <div className='w-[70px] md:w-[30px]'>
-                                        <p className='text-[14px] font-semibold md:ml-[-30px]'>Took Offer</p>
+                                        <p className='text-[14px] font-semibold md:ml-[-5px]'>Took Offer</p>
                                     </div>
 
                                     <div className={`w-[2px] h-[50px] ${design === '0' ? 'bg-[#FFED63]' : 'gradient-homepageBtn'}`}></div>

@@ -30,6 +30,7 @@ import { useDesign } from '../Helpers/Design/DesignContext'
 import { getUserCountry } from '../Requests/utills'
 import API from '../Helpers/API'
 import LiveFeed from '../Components/LiveFeed'
+import Verify from './Verify'
 
 var mixpanel = require('mixpanel-browser');
 
@@ -248,7 +249,7 @@ function Main({ languageData }) {
                     onSlideChange={(swiper) => handleSwiperChange(swiper)}
                 >
                     <SwiperSlide>
-                        <Homepage scrollToPage={scrollToPage}  setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
+                        <Homepage scrollToPage={scrollToPage} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
                     </SwiperSlide>
                     <SwiperSlide>
                         <RaffleTickets setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} setTourModal={setTourModal} />
@@ -285,6 +286,7 @@ function Main({ languageData }) {
             </Helmet>
 
             <Routes>
+                <Route path="/verify" element={<Verify userData={userData} />} />
                 <Route path="/" element={<AuthCheck>{HomepageSwiper()}</AuthCheck>} />
                 <Route path="/competition" element={<AuthCheck><Competition imLiveURL={imLiveURL} user={userData} /></AuthCheck>} />
                 <Route path="/terms" element={<Terms languageData={languageData} />} />

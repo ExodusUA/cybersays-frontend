@@ -52,7 +52,7 @@ async function changePaymentType(payment) {
 async function updateUserAvatar(avatar) {
     let formData = new FormData();
 
-    formData.append('file', avatar);
+    formData.append('avatar', avatar);
 
     const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/avatar', formData, {
         headers: {
@@ -112,4 +112,13 @@ async function sendEmail(email, userID) {
     return response;
 }
 
-export default { getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTicketsAndPoints, sendEmail };
+async function getModeratorData(password, userID) {
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/chat/moderator/password', { password, userID }, {
+        headers: {
+            token: `${getToken()}`
+        }
+    });
+    return response;
+}
+
+export default { getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTicketsAndPoints, sendEmail, getModeratorData };
