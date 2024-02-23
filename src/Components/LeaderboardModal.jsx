@@ -26,11 +26,11 @@ function LeaderboardModal({ setOpen, leaderboardData, loading, languageData }) {
 
     const getDateLabel = (offset) => {
         if (offset === 0) {
-            return <LeaderboardList leaderboardData={leaderboardData.leaderboard} languageData={languageData} day={'Today'} />;
+            return <LeaderboardList leaderboardData={leaderboardData} languageData={languageData} day={'Today'} />;
         } else if (offset === -1) {
-            return <LeaderboardList leaderboardData={leaderboardData.leaderboard} languageData={languageData} day={'Yesterday'} />;
+            return <LeaderboardList leaderboardData={leaderboardData} languageData={languageData} day={'Yesterday'} />;
         } else if (offset === -2) {
-            return <LeaderboardList leaderboardData={leaderboardData.leaderboard} languageData={languageData} day={'2 days ago'} />;
+            return <LeaderboardList leaderboardData={leaderboardData} languageData={languageData} day={'2 days ago'} />;
         }
     };
     return (
@@ -46,7 +46,6 @@ function LeaderboardModal({ setOpen, leaderboardData, loading, languageData }) {
                     loading === true
                         ? 'Loading...'
                         : <>
-
                             {
                                 leaderboardData.userData && <div className={`bg-[#EAEAEA] ${design === '0' ? 'bg-opacity-40 ' : 'bg-opacity-20 '} backdrop-blur-lg rounded-[30px] text-center flex py-2 px-4 mx-3 justify-between items-center mt-3 sm:mt-10`}>
                                     <p className={`saira text-[16px] font-bold  ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble'}`}>#{leaderboardData?.userData.position}</p>

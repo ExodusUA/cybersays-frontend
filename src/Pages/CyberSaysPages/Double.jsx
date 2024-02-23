@@ -21,7 +21,7 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
         if (user?.completed_tasks === null) return 'inactive'
 
         let finishedTasks = JSON.parse(user?.completed_tasks) || []
-        console.log(finishedTasks)
+        
         let sortedTasks = finishedTasks.sort((a, b) => a - b)
         let lastTask = sortedTasks[sortedTasks.length - 1]
 
@@ -44,7 +44,7 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
             for (let i = 1; i <= 4; i++) {
                 taskStatusArray.push(getTaskStatus(i))
                 setTaskStatus(taskStatusArray)
-                console.log('task status', taskStatusArray)
+               
             }
         }
     }, [user])

@@ -1,13 +1,9 @@
-import React, { useState } from 'react';
-import { Tooltip } from 'react-tooltip'
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import gif1 from '../../images/CyberSaysPage/gifExample.png'
 import logoCyber from '../../images/CyberSaysPage/logoMain.png'
 import left from '../../images/CyberSaysPage/swiperBtnDesctopLeft.png'
 import right from '../../images/CyberSaysPage/swiperBtnDesctopRight.png'
 import { Navigation } from 'swiper/modules';
-import CustomTooltip from '../../Components/CustomTooltip';
-import Message from './Modals/Message';
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
 import ToolTip2 from '../../Components/ToolTip2';
@@ -16,52 +12,37 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
 
     let swiperRef;
 
+    const [blobImage, setBlobImage] = useState(null)
     const [selectedGif, setSelectedGif] = useState(null);
     const [toolTip, setToolTip] = useState(false)
 
-
     const { design } = useDesign()
 
-    const dataGif = [
-        {
-            image: gif1,
-        },
-        {
-            image: gif1,
-        },
-        {
-            image: gif1,
-        },
-        {
-            image: gif1,
-        },
-        {
-            image: gif1,
-        },
-        {
-            image: gif1,
-        },
-        {
-            image: gif1,
-        },
-        {
-            image: gif1,
-        },
-    ]
-
-
     const [isLinkShared, setIsLinkShared] = useState(false)
+
+    useEffect(() => {
+        getBlob()
+        async function getBlob() {
+            const blob = await fetch(uploadedPhotos[selectedGif]).then(r => r.blob())
+            setBlobImage(blob)
+        }
+    }, [selectedGif])
 
     const shareRefferalLink = () => {
         if (navigator.share) {
             navigator
                 .share({
                     title: document.title,
-                    text: 'Sharing',
+                    text: dataMessage[selectedMessage]?.desc,
+                    files: [
+                        new File([blobImage], 'file.png', {
+                            type: blobImage.type,
+                        }),
+                    ],
                     url: '?uid=' + user?.referral_code,
                 })
                 .then(() => console.log('Successful share! 🎉'))
-                .catch(err => console.error(err));
+                .catch(err => alert('Error sharing: ' + err));
         } else {
             window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.referral_code)
             setIsLinkShared(true)
@@ -83,12 +64,6 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
             setIsLinkCopied(false)
         }, 3000);
     }
-
-    const [infoTooltip, setInfoTooltip] = useState(false)
-
-
-
-
 
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-terms.jpg)] md:bg-[url(./images/CyberSaysPage/bg-terms.jpg)]' : 'bg-[url(./images/NewDesign/Bg/refferals_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10`} >
@@ -146,7 +121,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                     uploadedPhotos.map((item, index) => (
                                         <SwiperSlide>
                                             <div className='flex' key={index}>
-                                                <img onClick={e => setSelectedGif(index)} className={`${selectedGif === index && `${design === '0' ? 'border-[2px] !border-[#FFED63]' : 'border-[2px] !border-[#FE804D]'} opacity-[1] relative`}   rounded-[20px] w-[110px] h-[110px] sm:w-[140px] sm:h-[140px] opacity-[0.5] cursor-pointer object-cover`} src={item.image} alt="gif1" />
+                                                <img onClick={e => setSelectedGif(index)} className={`${selectedGif === index && `${design === '0' ? 'border-[2px] !border-[#FFED63]' : 'border-[2px] !border-[#FE804D]'} opacity-[1] relative`}   rounded-[20px] w-[110px] h-[110px] sm:w-[140px] sm:h-[140px] opacity-[0.5] cursor-pointer object-cover`} src={item} alt="gif1" />
                                                 <svg className=' absolute top-1 left-1 cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
                                                     <path d="M4.25 17V19C4.25 19.5304 4.44315 20.0391 4.78697 20.4142C5.13079 20.7893 5.5971 21 6.08333 21H17.0833C17.5696 21 18.0359 20.7893 18.3797 20.4142C18.7235 20.0391 18.9167 19.5304 18.9167 19V17M7 11L11.5833 16M11.5833 16L16.1667 11M11.5833 16V4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
@@ -291,32 +266,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
 
 
                         </div>
-                        {/*
-                        <div className=''>
-                            <CustomTooltip setOpen={setInfoTooltip} open={infoTooltip} >
-                                <div className=''>
-                                    <p className='text-[14px] md:text-[32px] font-semibold text-center text-black mb-2'>{languageData?.refferalsInfoTitle}</p>
-                                    <div className='flex justify-around'>
-                                        <div className='flex items-start max-w-[270px] w-full leading-[16px]'>
-                                            <p className='text-black  text-[14px] saira font-medium mr-2'>1.</p>
-                                            <p className='text-black text-[14px] saira font-medium'>{languageData?.refferalsInfo1}</p>
-                                        </div>
-                                        <div className='w-[2px]  bg-[#FFED63]'></div>
-                                        <div className='flex items-start max-w-[270px] w-full leading-[16px]'>
-                                            <p className='text-black  text-[14px] saira font-medium mr-2'>2.</p>
-                                            <p className='text-black text-[14px] saira font-medium'>{languageData?.refferalsInfo2}</p>
-                                        </div>
-                                        <div className='w-[2px]  bg-[#FFED63]'></div>
-                                        <div className='flex items-start max-w-[270px] w-full leading-[15px] '>
-                                            <p className='text-black  text-[14px] saira font-medium mr-2'>3.</p>
-                                            <p className='text-black text-[14px] saira font-medium'>{languageData?.refferalsInfo3}</p>
-                                        </div>
 
-                                    </div>
-                                </div>
-                            </CustomTooltip>
-                        </div>
-                        */}
                     </div>
 
                 </div>
@@ -332,40 +282,6 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                         }
                     </button>
                 </div>
-                {/*
-                <p className={`cursor-pointer text-center text-[16px] saira font-semibold underline my-1 ${isLinkCopied === true ? 'opacity-70' : 'opacity-100'}`} onClick={e => copyToClipboard()}>Copy link</p>
-*/}
-                {/*
-                <Tooltip
-
-
-                    id="my-tooltip-inline2"
-                    style={{ backgroundColor: "white", color: "black", maxWidth: "360px", width: "100%", borderRadius: "22px", zIndex: "999" }}
-                >
-                    <div>
-                        <p className='text-[14px] font-semibold text-center text-black my-2'>Be the king</p>
-                        <div className='flex justify-between'>
-                            <div className='flex items-start w-[80px]'>
-                                <p className='text-black  text-[12px] saira font-medium'>1.</p>
-                                <p className='text-black text-[12px] saira font-medium'>You will be the kind that sends your friends to double their money and have fun 👬</p>
-                            </div>
-                            <div className='w-[2px] h-[130px] bg-[#FFED63]'></div>
-                            <div className='flex items-start w-[80px]'>
-                                <p className='text-black  text-[12px] saira font-medium'>2.</p>
-                                <p className='text-black text-[12px] saira font-medium'>For eveery friend that doubles the money you will get 30 raffle tickets and 1$ 🃏</p>
-                            </div>
-                            <div className='w-[2px] h-[130px] bg-[#FFED63]'></div>
-                            <div className='flex items-start w-[130px] leading-[15px]'>
-                                <p className='text-black  text-[12px] saira font-medium'>3.</p>
-                                <p className='text-black text-[12px] saira font-medium'>If your friends double their money, you can take them to Vegas if you win the raffle, and they can take you if they win and you took the double-the-money offer</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </Tooltip>
-                */}
-
             </div>
 
         </div>
