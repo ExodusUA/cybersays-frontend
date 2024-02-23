@@ -240,3 +240,6 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.dot-li {
+    background: var(--New-CS-yellow, linear-gradient(180deg, #FAD604 0%, #FE804D 100%));
+}

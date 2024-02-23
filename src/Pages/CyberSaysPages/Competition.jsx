@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
 
-function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading, leaderboardData, setLeaderboardData, siteData, languageData }) {
+function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading, leaderboardData, setLeaderboardData, siteData, languageData, setRulesModal }) {
 
     const { design } = useDesign()
 
@@ -108,7 +108,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
 
                 </div>
                 <div className='flex justify-center'>
-                    <p className={`text-center text-[12px] sm:text-[14px]  saira font-semibold underline se:mt-2 iphone:mt-7 mac:!mt-1 mb-2 cursor-pointer ${design === '0' ? 'text-[#FFED63]' : 'gradient-link '}`}>{languageData?.competitionRightRules}</p>
+                    <p onClick={e => setRulesModal(true)} className={`text-center text-[12px] sm:text-[14px]  saira font-semibold underline se:mt-2 iphone:mt-7 mac:!mt-1 mb-2 cursor-pointer ${design === '0' ? 'text-[#FFED63]' : 'gradient-link '}`}>{languageData?.competitionRightRules}</p>
                 </div>
                 <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
                     <TimeCounter languageData={languageData} />

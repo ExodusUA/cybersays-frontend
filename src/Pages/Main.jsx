@@ -29,11 +29,14 @@ import API from '../Helpers/API'
 import LiveFeed from '../Components/LiveFeed'
 import Verify from './Verify'
 import WinVegasModal from '../Components/WinVegasModal'
+import infoBtn from '../images/NewDesign/infoBtn.png'
 
 import first from '../images/gifs/first.png'
 import second from '../images/gifs/second.png'
 import third from '../images/gifs/third.png'
 import ImageModals from '../Components/ImageModals'
+import CompetitionRules from '../Components/CompetitionRules'
+import ToolTipInfo from '../Components/ToolTipInfo'
 
 var mixpanel = require('mixpanel-browser');
 
@@ -100,7 +103,9 @@ function Main({ languageData }) {
     const [openMessage, setOpenMassege] = useState(false);
     const [openAvatar, setOpenAvatar] = useState(false);
     const [winMoadal, setWinModal] = useState(false);
+    const [rulesModal, setRulesModal] = useState(false);
     const [imageModal, setImageModal] = useState(false)
+    const [toolInfo, setToolInfo] = useState(false)
 
     const [selectedMessage, setSelectedMassege] = useState(null);
 
@@ -269,7 +274,7 @@ function Main({ languageData }) {
                         <Refferals setImageModal={setImageModal} imageModal={imageModal} uploadedPhotos={uploadedPhotos} saveAvatar={saveAvatar} selectedImage={selectedImage} setSelectedImage={setSelectedImage} message={selectedMessage !== null ? dataMessage[selectedMessage].desc : ''} copyToMessage={copyToMessage} setSelectedMassege={setSelectedMassege} selectedMessage={selectedMessage} setOpenAvatar={setOpenAvatar} setOpenMassege={setOpenMassege} dataMessage={dataMessage} setReferralsOpen={setReferralsOpen} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Competition siteData={siteData} imLiveURL={imLiveURL} user={userData} languageData={languageData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading} />
+                        <Competition setRulesModal={setRulesModal} siteData={siteData} imLiveURL={imLiveURL} user={userData} languageData={languageData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading} />
                     </SwiperSlide>
                     <SwiperSlide>
 
@@ -325,6 +330,9 @@ function Main({ languageData }) {
                 winMoadal && <WinVegasModal languageData={languageData} setOpen={setWinModal} />
             }
             {
+                rulesModal && <CompetitionRules setOpen={setRulesModal} languageData={languageData} />
+            }
+            {
                 openMessage && <Message onCloseCopied={() => {
                     setMessagetCopied(Array(dataMessage.length).fill(false));
 
@@ -336,9 +344,16 @@ function Main({ languageData }) {
             {
                 imageModal && <ImageModals setSelectedImage={setSelectedImage} selectedImage={selectedImage} setOpen={setImageModal} languageData={languageData} />
             }
+
             <div className={`fixed right-2 bottom-4 sm:right-8 sm:bottom-8 z-[99] ${menuOpen && 'hidden'}`}>
                 <img onClick={e => setChatModal(true)} className='w-[24px] sm:w-12 cursor-pointer' src={design === '0' ? chatImage : require('../images/NewDesign/chatBtn.png')} alt="Chat" />
             </div>
+            <div className={`fixed left-2 bottom-4 sm:left-8 sm:bottom-8 z-[99] ${menuOpen && 'hidden'}`}>
+                <img onClick={e => setToolInfo(true)} className='w-[24px] sm:w-12 cursor-pointer' src={infoBtn} alt="Chat" />
+            </div>
+            {
+                toolInfo && <ToolTipInfo setToolInfo={setToolInfo} languageData={languageData} />
+            }
 
         </>
     )
