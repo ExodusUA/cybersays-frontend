@@ -54,8 +54,8 @@ function Homepage({ user, imLiveURL, languageData,scrollToPage }) {
 
 
     return (
-        <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-homepage.jpg)] md:bg-[url(./images/CyberSaysPage/bg-homepage.jpg)]' : ' bg-[url(./images/NewDesign/Bg/homepage_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10`}>
-            <div className='pt-[97px] md:pt-[135px] px-4 pb-12 max-w-[1170px] m-auto'>
+        <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-homepage.jpg)] md:bg-[url(./images/CyberSaysPage/bg-homepage.jpg)]' : ' bg-[url(./images/NewDesign/Bg/homepage_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`}>
+            <div className='pt-[97px] md:pt-[135px] mac-center:!pt-0 px-4 pb-12 max-w-[1170px] m-auto'>
                 <div className='max-w-[300px] m-auto'>
 
                     <p className=' text-[18px] md:text-[32px] font-semibold'></p>

@@ -78,8 +78,8 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData,setWinModal
 
 
     return (
-        <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] md:bg-[url(./images/CyberSaysPage/bg-raffle.jpg)]' : 'bg-[url(./images/NewDesign/Bg/raffleTicket_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10`} onClick={() => setIsOpen(false)}>
-            <div className='pt-[97px]  md:pt-[135px] px-4 max-w-[970px] m-auto' >
+        <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] md:bg-[url(./images/CyberSaysPage/bg-raffle.jpg)]' : 'bg-[url(./images/NewDesign/Bg/raffleTicket_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} onClick={() => setIsOpen(false)}>
+            <div className='pt-[97px]  md:pt-[135px] mac-center:!pt-0 px-4 max-w-[970px] m-auto' >
                 <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
 
                 <div className='flex flex-col-reverse'>

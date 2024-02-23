@@ -12,6 +12,7 @@ module.exports = {
       'mac': { 'raw': '(max-height: 790px)' },
 
       'mac2': { 'raw': '(max-height: 860px)' },
+      'mac-center': { 'raw': '(min-height: 1080px)' },
 
       'se': { 'raw': '(min-width: 360px)' },
 

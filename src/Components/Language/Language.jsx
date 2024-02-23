@@ -29,7 +29,7 @@ function Language() {
             </div>
 
             {langOpen && (
-                <div className='mt-0 absolute top-[100px] pl-7 bg-gray w-full rounded-[12px] py-4 min-w-[200px] right-0 md:left-0'>
+                <div className='mt-0 absolute top-[50px] md:top-[60px]  bg-gray rounded-[12px] pb-2 lg:pb-0 pt-2 lg:pt-2 w-[140px] md:w-[155px] right-4 lg:right-0 md:left-0'>
                     <LanguageSwitcher setIsLangOpen={setLangOpen} />
                 </div>
             )}
