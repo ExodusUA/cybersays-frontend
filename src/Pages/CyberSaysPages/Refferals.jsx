@@ -7,8 +7,9 @@ import { Navigation } from 'swiper/modules';
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
 import ToolTip2 from '../../Components/ToolTip2';
+import ImageModals from '../../Components/ImageModals';
 
-function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenMassege, setOpenAvatar, selectedMessage, setSelectedMassege, copyToMessage, message, uploadedPhotos }) {
+function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenMassege, setOpenAvatar, selectedMessage, setSelectedMassege, copyToMessage, message, uploadedPhotos, imageModal, setImageModal, selectedImage, setSelectedImage }) {
 
     let swiperRef;
 
@@ -64,10 +65,20 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
             setIsLinkCopied(false)
         }, 3000);
     }
-
+    const handlePhotoClick = (index) => {
+        setSelectedImage(uploadedPhotos[index]);
+    };
+    const handleDownload = () => {
+        const downloadLink = document.createElement('a');
+        downloadLink.href = selectedImage;
+        downloadLink.download = 'photo.jpg';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    };
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-terms.jpg)] md:bg-[url(./images/CyberSaysPage/bg-terms.jpg)]' : 'bg-[url(./images/NewDesign/Bg/refferals_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} >
-            <div className='pt-[97px]  md:pt-[135px] mac-center:!pt-0 px-4 max-w-[1170px] m-auto' >
+            <div className='pt-[97px]  md:pt-[135px] mac-center:!pt-0 px-4 w-full max-w-[1170px] mac-center:w-[1170px] m-auto' >
                 <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
 
 
@@ -121,8 +132,12 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                     uploadedPhotos.map((item, index) => (
                                         <SwiperSlide>
                                             <div className='flex' key={index}>
-                                                <img onClick={e => setSelectedGif(index)} className={`${selectedGif === index && `${design === '0' ? 'border-[2px] !border-[#FFED63]' : 'border-[2px] !border-[#FE804D]'} opacity-[1] relative`}   rounded-[20px] w-[110px] h-[110px] sm:w-[140px] sm:h-[140px] opacity-[0.5] cursor-pointer object-cover`} src={item} alt="gif1" />
-                                                <svg className=' absolute top-1 left-1 cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+                                                <img onClick={e => {
+                                                    setSelectedGif(index)
+                                                    setImageModal(true)
+                                                    handlePhotoClick(index)
+                                                }} className={`${selectedGif === index && `${design === '0' ? 'border-[2px] !border-[#FFED63]' : 'border-[2px] !border-[#FE804D]'} opacity-[1] relative`}   rounded-[20px] w-[110px] h-[110px] sm:w-[140px] sm:h-[140px] opacity-[0.5] cursor-pointer object-cover`} src={item} alt="gif1" />
+                                                <svg onClick={handleDownload} className=' absolute top-1 left-1 cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
                                                     <path d="M4.25 17V19C4.25 19.5304 4.44315 20.0391 4.78697 20.4142C5.13079 20.7893 5.5971 21 6.08333 21H17.0833C17.5696 21 18.0359 20.7893 18.3797 20.4142C18.7235 20.0391 18.9167 19.5304 18.9167 19V17M7 11L11.5833 16M11.5833 16L16.1667 11M11.5833 16V4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
                                             </div>
@@ -235,7 +250,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                     </div>
                     <div className=' flex justify-center'>
                         <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  text-center max-w-[800px] w-full py-1 px-2 ${design === '0' ? 'rounded-[50px]' : 'rounded-[14px] lg:rounded-[24px]'}`}>
-                            <p className='text-[14px]  sm:text-[24px]  font-semibold max-w-[540px] m-auto iphone:leading-[unset] se:leading-[16px] mac:!leading-[24px]'>{languageData?.refferalsTitle}</p>
+                            <p className='text-[14px]  sm:text-[24px] mac:!text-[мpx]  font-semibold max-w-[540px] mac:max-w-[unset] m-auto iphone:leading-[unset] se:leading-[16px] mac:!leading-[24px]'>{languageData?.refferalsTitle}</p>
                             <div className='flex justify-center gap-1'>
                                 <p className={`text-[12px] sm:text-[14px] font-medium saira flex justify-center items-center underline cursor-pointer ${design === '0' ? 'text-white' : 'gradient-link '}`} onClick={e => setReferralsOpen(true)}>
                                     {languageData?.refferalsLink1}

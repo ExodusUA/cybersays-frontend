@@ -33,6 +33,7 @@ import WinVegasModal from '../Components/WinVegasModal'
 import first from '../images/gifs/first.png'
 import second from '../images/gifs/second.png'
 import third from '../images/gifs/third.png'
+import ImageModals from '../Components/ImageModals'
 
 var mixpanel = require('mixpanel-browser');
 
@@ -99,6 +100,8 @@ function Main({ languageData }) {
     const [openMessage, setOpenMassege] = useState(false);
     const [openAvatar, setOpenAvatar] = useState(false);
     const [winMoadal, setWinModal] = useState(false);
+    const [imageModal, setImageModal] = useState(false)
+
     const [selectedMessage, setSelectedMassege] = useState(null);
 
     useQuery({
@@ -263,7 +266,7 @@ console.log(res.data.url)
                         <Double setOpen={setWithdrawModal} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Refferals uploadedPhotos={uploadedPhotos} saveAvatar={saveAvatar} selectedImage={selectedImage} message={selectedMessage !== null ? dataMessage[selectedMessage].desc : ''} copyToMessage={copyToMessage} setSelectedMassege={setSelectedMassege} selectedMessage={selectedMessage} setOpenAvatar={setOpenAvatar} setOpenMassege={setOpenMassege} dataMessage={dataMessage} setReferralsOpen={setReferralsOpen} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} />
+                        <Refferals setImageModal={setImageModal} imageModal={imageModal} uploadedPhotos={uploadedPhotos} saveAvatar={saveAvatar} selectedImage={selectedImage} setSelectedImage={setSelectedImage} message={selectedMessage !== null ? dataMessage[selectedMessage].desc : ''} copyToMessage={copyToMessage} setSelectedMassege={setSelectedMassege} selectedMessage={selectedMessage} setOpenAvatar={setOpenAvatar} setOpenMassege={setOpenMassege} dataMessage={dataMessage} setReferralsOpen={setReferralsOpen} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} />
                     </SwiperSlide>
                     <SwiperSlide>
                         <Competition siteData={siteData} imLiveURL={imLiveURL} user={userData} languageData={languageData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading} />
@@ -329,6 +332,9 @@ console.log(res.data.url)
             }
             {
                 openAvatar && <AvatarModal inputRef={inputRef} setSelectedImage={setSelectedImage} selectedImage={selectedImage} handleImageChange={handleImageChange} saveAvatar={saveAvatar} setOpenAvatar={setOpenAvatar} />
+            }
+            {
+                imageModal && <ImageModals setSelectedImage={setSelectedImage} selectedImage={selectedImage}  setOpen={setImageModal} languageData={languageData} />
             }
             <div className={`fixed right-2 bottom-4 sm:right-8 sm:bottom-8 z-[99] ${menuOpen && 'hidden'}`}>
                 <img onClick={e => setChatModal(true)} className='w-[24px] sm:w-12 cursor-pointer' src={design === '0' ? chatImage : require('../images/NewDesign/chatBtn.png')} alt="Chat" />
