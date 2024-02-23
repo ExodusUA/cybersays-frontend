@@ -22,7 +22,7 @@ function ImageModals({ setOpen, languageData, selectedImage, setSelectedImage })
                     <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
                 {selectedImage && (
-                      <img className='w-full' src={selectedImage} alt="" />
+                      <img className='w-full lg:w-[600px] rounded-[14px] mt-2 lg:mt-0' src={selectedImage} alt="" />
                 )}
               
             </div>
