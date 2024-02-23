@@ -13,6 +13,8 @@ function LeaderboardList({ leaderboardData, languageData, day }) {
         console.log('leaderboardData', leaderboardData)
     }, [leaderboardData])
 
+
+
     return (
         <div className='relative'>
             <div className='absolute top-[-40px] left-1/2 transform -translate-x-1/2'>

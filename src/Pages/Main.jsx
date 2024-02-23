@@ -203,7 +203,7 @@ function Main({ languageData }) {
             console.log(res)
             alert('Done!')
 
-console.log(res.data.url)
+            console.log(res.data.url)
             setUploadedPhotos((prevPhotos) => [...prevPhotos, res.data.url]);
             let photos = [...uploadedPhotos, res.data.url];
             savePhotosToLocalStorage(photos);
@@ -334,7 +334,7 @@ console.log(res.data.url)
                 openAvatar && <AvatarModal inputRef={inputRef} setSelectedImage={setSelectedImage} selectedImage={selectedImage} handleImageChange={handleImageChange} saveAvatar={saveAvatar} setOpenAvatar={setOpenAvatar} />
             }
             {
-                imageModal && <ImageModals setSelectedImage={setSelectedImage} selectedImage={selectedImage}  setOpen={setImageModal} languageData={languageData} />
+                imageModal && <ImageModals setSelectedImage={setSelectedImage} selectedImage={selectedImage} setOpen={setImageModal} languageData={languageData} />
             }
             <div className={`fixed right-2 bottom-4 sm:right-8 sm:bottom-8 z-[99] ${menuOpen && 'hidden'}`}>
                 <img onClick={e => setChatModal(true)} className='w-[24px] sm:w-12 cursor-pointer' src={design === '0' ? chatImage : require('../images/NewDesign/chatBtn.png')} alt="Chat" />
