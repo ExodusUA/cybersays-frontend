@@ -121,4 +121,15 @@ async function getModeratorData(password, userID) {
     return response;
 }
 
-export default { getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTicketsAndPoints, sendEmail, getModeratorData };
+async function getPDF() {
+    const response = await axios.get(process.env.REACT_APP_API_URL + '/api/v1/user/pdf', {
+        headers: {
+            token: `${getToken()}`,
+            responseType: 'blob'
+        }
+    });
+    return response;
+
+}
+
+export default { getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTicketsAndPoints, sendEmail, getModeratorData, getPDF };

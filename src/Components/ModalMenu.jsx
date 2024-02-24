@@ -29,6 +29,7 @@ import { useDesign } from '../Helpers/Design/DesignContext'
 import OurMission from '../Pages/CyberSaysPages/Modals/OurMission'
 import WhyJoin from '../Pages/CyberSaysPages/Modals/WhyJoin'
 import FAQ from '../Pages/CyberSaysPages/Modals/FAQ'
+import userAPI from '../Requests/user'
 
 function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setChatModal, chatModal, languageData }) {
 
@@ -49,7 +50,28 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
   const [FAQModal, setFAQModal] = useState(false)
   const [logoutModal, setLogoutModal] = useState(false)
 
+  const [pdfLoading, setPdfLoading] = useState(false)
+
   const navigate = useNavigate()
+
+  const getPDF = async () => {
+    if (pdfLoading === true) return
+    setPdfLoading(true)
+
+    const pdf = await userAPI.getPDF()
+    const blob = new Blob([pdf.data], { type: 'application/pdf' })
+    const blobUrl = window.URL.createObjectURL(blob)
+    const link = document.createElement('a')
+    link.href = blobUrl
+    link.setAttribute('download', 'CyberSays.pdf')
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(blobUrl);
+
+
+    setPdfLoading(false)
+
+  }
 
   return (
     <div>
@@ -128,7 +150,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <img className='w-[32px] h-[32px] mr-2' src={link13} alt="link13" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink13}</p>
             </div>
-            <div className='flex items-center' >
+            <div onClick={e => getPDF()} className='flex items-center' >
               <p className='saira text-[20px] font-semibold cursor-pointer'>Download PDF</p>
             </div>
           </div>
