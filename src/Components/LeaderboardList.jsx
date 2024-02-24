@@ -71,7 +71,7 @@ function LeaderboardList({ leaderboardData, languageData, day }) {
                                         <p className='saira text-[12px] md:text-[14px] font-medium'>{languageData?.leaderboardsPrize}</p>
                                     </div>
                                     <div className='leading-[14px]'>
-                                        <p className={`saira text-[12px] md:text-[14px] font-medium text-[#FFED63] ${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'}`}>{user?.points.toFixed(0)}</p>
+                                        <p className={`saira text-[12px] md:text-[14px] font-medium text-[#FFED63] ${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'}`}>{user?.points?.toFixed(0)}</p>
                                         <p className='saira text-[12px] md:text-[14px] font-medium'>{languageData?.leaderboardsPoints}</p>
                                     </div>
                                     <p className={`saira text-[16px] font-bold ${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'}`}>#{index + 4}</p>

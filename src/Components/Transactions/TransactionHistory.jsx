@@ -15,7 +15,7 @@ function TransactionHistory({ setOpen, languageData }) {
         queryKey: ['transactions'],
         queryFn: async () => {
             const res = await userAPI.getTransactions();
-            setTransactionsData(res.data)
+            setTransactionsData(res.data.transactions[0])
             return res
         }
     })
