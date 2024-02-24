@@ -2,7 +2,7 @@ import React from 'react'
 import close from '../../../images/CyberSaysPage/closeMenu.png'
 import { useDesign } from '../../../Helpers/Design/DesignContext'
 
-function About({ user, setOpen, languageData  }) {
+function OurMission({ user, setOpen, languageData  }) {
 
     const { design } = useDesign()
 
@@ -13,16 +13,15 @@ function About({ user, setOpen, languageData  }) {
                     <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../../../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
 
-                <h1 className='text-[32px] text-white text-center '>{languageData?.aboutModalTitle}</h1>
+                <h1 className='text-[32px] text-white text-center'>{languageData?.ourMissionTitle}</h1>
                 <div className='max-h-[70vh] overflow-auto mt-4'>
-                    <p className='text-left saira text-[16px]'>{languageData?.aboutModalDesc1}</p>
-                    <p className='text-left saira text-[16px]'>{languageData?.aboutModalDesc2}</p>
-                    <p className='text-left saira text-[16px]'>{languageData?.aboutModalDesc3}</p>
-                    <p className='text-left saira text-[16px]'>{languageData?.aboutModalDesc4}</p>
+                    <p className='text-left saira text-[16px]'>{languageData?.ourMissionSubTitle1}</p>
+                    <p className='text-left saira text-[16px]'>{languageData?.ourMissionSubTitle2}</p>
+                    <p className='text-left saira text-[16px]'>{languageData?.ourMissionSubTitle3}</p>
                 </div>
             </div>
         </div>
     )
 }
 
-export default About
+export default OurMission

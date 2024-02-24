@@ -141,6 +141,9 @@
     "modalMenuLink8": "Sala de bate-papo",
     "modalMenuLink9": "Histórico de transações",
     "modalMenuLink10": "Meus Bilhetes e Pontos",
+    "modalMenuLink11": "FAQ",
+    "modalMenuLink12": "Our mission",
+    "modalMenuLink13": "Why join us?",
     "modalMenuBottom1": "Sobre nós",
     "modalMenuBottom2": "Legal",
     "modalMenuBottom3": "Configurações",
@@ -180,7 +183,10 @@
     "ticketsSection6Left": "Por X créditos comprados na ImLive!",
     "ticketsSection6Right": "Pontos",
     "aboutModalTitle": "Sobre nós",
-    "aboutModalDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "aboutModalDesc1": "Welcome to CyberSays, your gateway to transforming online engagement into tangible, thrilling rewards!",
+    "aboutModalDesc2": "In a world where the value of your digital actions often feels intangible, we provide a platform that not only appreciates your participation but also rewards it handsomely.",
+    "aboutModalDesc3": "From doubling your money with a simple transaction to winning all-expenses-paid adventures, CyberSays is here to make every click count.",
+    "aboutModalDesc4": "CyberSays - where every click brings a reward, and every reward brings a (profitable) smile",
     "contactModalTitle": "Contate-nos",
     "contactModalSubTitle": "Envie-nos seu e-mail e mensagem e entraremos em contato com você",
     "contactModalBtn1": "Enviado!",
@@ -254,5 +260,146 @@
     "toolInfoTitle": "How It Works?",
     "toolInfoDesk1": "Double Your Investment: Start with as little as $5 in credits, spend them, and receive $10 back instantly.",
     "toolInfoDesk2": "Win a Weekend in Vegas: By inviting friends who join and engage with CyberSays and continuing to purchase credits, you're not just being your friends’ king but also paving your way to an unforgettable adventure—with all expenses paid",
-    "toolInfoDesk3": "Daily Rewards: Be in the top 10 of our daily leaderboard by engaging and referring, and win up to $69. Refer and purchase more credits towards your next big win."
+    "toolInfoDesk3": "Daily Rewards: Be in the top 10 of our daily leaderboard by engaging and referring, and win up to $69. Refer and purchase more credits towards your next big win.",
+    "FAQ_Questions": [
+        {
+            "question": "What am I doing here?",
+            "answers": [
+                "You are here to guaranteed 100% double your initial cash deposit, compete for a chance to win a thrilling Vegas weekend, and participate in our 69$ daily contest."
+               
+            ]
+        },
+        {
+            "question": "What are the requirements to qualify for the $10 instant cash back?",
+            "answers": [
+                "Simply register on ImLive, deposit $5 to receive $10 in credits, spend those credits, and you'll receive on top of that $10 cash back instantly"
+            ]
+        },
+        {
+            "question": "Can I withdraw my $10 cash back immediately after receiving it?",
+            "answers": [
+                "Yes, your $10 cash back is available for immediate withdrawal"
+            ]
+        },
+        {
+            "question": "How can I invite friends to join CyberSays, and what are our benefits?",
+            "answers": [
+                "Use the 'Refer Your Friends' page. For every friend that completes the offer, you get $1 cash, 30 Vegas tickets, and 10 daily contest points. Plus, if you win the Vegas promotion and they have completed the “Double your money offer”, you can take two of them to Vegas with you!"
+            ]
+        },
+        {
+            "question": "What steps must my friends complete for them to qualify for the Vegas trip?",
+            "answers": [
+                "Your friends need to register through your referral link and complete the double money offer for you to be eligible to invite up to 2 of them as your travel companions for the Vegas trip."
+            ]
+        },
+        {
+            "question": "What are the Vegas promotion rules?",
+            "answers": [
+                "Lorem ipsum"
+            ]
+        },
+        {
+            "question": "Is there a limit to how many friends I can refer to CyberSays?",
+            "answers": [
+                "No, there is no limit. Refer as many friends as you like and earn more!"
+            ]
+        },
+        {
+            "question": "How are winners for the Vegas weekend chosen?",
+            "answers": [
+                "Winners are selected through a live draw in the presence of a lawyer and an accountant, ensuring fairness and transparency. Link to Vegas weekend rules"
+            ]
+        },
+        {
+            "question": "What expenses are covered in the Vegas weekend prize?",
+            "answers": [
+                "The Vegas weekend prize covers your travel and entertainment extravagantly. It includes round-trip tickets to Las Vegas for you and two friends that have completed the double the money offer if you choose to take them, two nights of 5-star hotel accommodation, and $1,000 in ImLive.com credits for the winner. Additionally, you'll receive $1,000 cash, and if applicable, each of your two friends will get $500 to enjoy. The package is crowned with a special dinner and a Cadillac drive experience with 2 porn stars, valuing the total prize at approximately $5,000."
+            ]
+        },
+        {
+            "question": "How do I purchase additional ImLive credits?",
+            "answers": [
+                "Click here to buy more credits and increase your chances of winning the Vegas promotion and 69$ daily contest points"
+            ]
+        },
+        {
+            "question": "Are there any limits on how many credits I can buy?",
+            "answers": [
+                "No, there are no limits to how many credits you can purchase. As long as you purchase more, you have better chance to win the Vegas promotion or finish in the top 10 in the 69$ daily contest."
+            ]
+        },
+        {
+            "question": "How does the $69 daily leaderboard work, and how can I earn points?",
+            "answers": [
+                "Earn points by referring friends and purchasing ImLive credits. The more you engage, the higher you climb on the leaderboard. For every friend you refer that completed the offer, you get 10 points. For every extra credit on ImLive that you purchase, you get 0.5 points. "
+            ]
+        },
+        {
+            "question": "What are the rewards for the top 10 positions in the daily leaderboard?",
+            "answers": [
+                "The top two places win $69 each, and places 3-10 win $6.90 each, every day."
+            ]
+        },
+        {
+            "question": "How often are the leaderboard and rewards updated?",
+            "answers": [
+                "he leaderboard and rewards are updated immediately, in real-time."
+            ]
+        },
+        {
+            "question": "How often are the leaderboard and rewards updated?",
+            "answers": [
+                "The leaderboard and rewards are updated immediately, in real-time."
+            ]
+        },
+        {
+            "question": "Can I win daily rewards multiple times?",
+            "answers": [
+                "Yes, you can win daily rewards as often as you top the leaderboard top 10."
+            ]
+        },
+        {
+            "question": "What happens if there’s a tie on the daily leaderboard?",
+            "answers": [
+                "In the event of a tie, the user with the most referred friends is chosen, followed by the one with the most purchased credits, and then by the earliest completion of the offer."
+            ]
+        },
+        {
+            "question": "Are there any fees or charges for depositing or withdrawing money?",
+            "answers": [
+                "No, there are no fees or charges for any financial transactions on our platform."
+            ]
+        },
+        {
+            "question": "How can I track my referrals and rewards in real-time?",
+            "answers": [
+                "Click here to monitor your referrals and rewards as they happen."
+            ]
+        },
+        {
+            "question": "Why don't I see my deposit on ImLive even after depositing?",
+            "answers": [
+                "Deposits typically reflect on your CyberSays account within 3 minutes, crediting you with the corresponding funds. If you do not see your deposit after 30 minutes, we recommend reaching out to our customer support for assistance. "
+            ]
+        },
+        {
+            "question": "Who can I contact for support if I encounter issues with my account or rewards?",
+            "answers": [
+                "Click here to reach our chat for any assistance you need."
+            ]
+        },
+        {
+            "question": "What are the terms of service?",
+            "answers": [
+                "For all the details on our policies: ",
+                "- Terms of Service",
+                "- Daily Contest Terms",
+                "- Promotion Terms",
+                "- Cookie Policy ",
+                "- Privacy Policy",
+                "- Affiliation Terms"
+            ]
+        }
+    ]
 }
