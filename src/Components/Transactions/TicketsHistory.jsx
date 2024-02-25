@@ -14,7 +14,8 @@ function TicketsHistory({ setOpen, languageData }) {
         queryKey: ['tickets'],
         queryFn: async () => {
             const res = await userAPI.getTicketsAndPoints();
-            proccessData(res.data)
+            console.log('tickets', res)
+            proccessData(res.tickets[0])
         }
     })
 

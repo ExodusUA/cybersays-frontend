@@ -50,7 +50,7 @@ function LeaderboardModal({ setOpen, leaderboardData, loading, languageData }) {
                                 leaderboardData.userData && <div className={`bg-[#EAEAEA] ${design === '0' ? 'bg-opacity-40 ' : 'bg-opacity-20 '} backdrop-blur-lg rounded-[30px] text-center flex py-2 px-4 mx-3 justify-between items-center mt-3 sm:mt-10`}>
                                     <p className={`saira text-[16px] font-bold  ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble'}`}>#{leaderboardData?.userData.position}</p>
                                     <div className='leading-3'>
-                                        <p className={`saira text-[12px] md:text-[14px] font-bold text-[#FFED63] mt-[-3px] ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble'}`}>{leaderboardData.userData.points.toFixed(0)}</p>
+                                        <p className={`saira text-[12px] md:text-[14px] font-bold text-[#FFED63] mt-[-3px] ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble'}`}>{leaderboardData?.userData?.points?.toFixed(0)}</p>
                                         <p className='saira text-[12px] md:text-[14px] font-medium mt-[3px]'>{languageData?.leaderboardsPoints}</p>
                                     </div>
                                 </div>
