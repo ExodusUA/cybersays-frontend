@@ -38,6 +38,8 @@ import ImageModals from '../Components/ImageModals'
 import CompetitionRules from '../Components/CompetitionRules'
 import ToolTipInfo from '../Components/ToolTipInfo'
 
+import imLiveLinks from '../Helpers/imLiveLinks.json'
+
 var mixpanel = require('mixpanel-browser');
 
 
@@ -115,7 +117,7 @@ function Main({ languageData }) {
             const res = await userAPI.getUserData();
             if (res.id === undefined) return navigate('/login')
             setUserData(res)
-            setImLiveURL(`https://imlive.com/wmaster.ashx?QueryID=197&WID=126670106835&linkID=701&from=freevideo6&promocode=${res?.id}`)
+
             return res
         }
     })
@@ -129,6 +131,8 @@ function Main({ languageData }) {
             return res
         }
     })
+
+
 
     useEffect(() => {
 
@@ -192,16 +196,7 @@ function Main({ languageData }) {
             return res
         }
     })
-    async function convertImageToBase64(imageFile) {
-        return new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                resolve(reader.result);
-            };
-            reader.onerror = reject;
-            reader.readAsDataURL(imageFile);
-        });
-    }
+
     const saveAvatar = async () => {
         try {
             const res = await userAPI.updateUserAvatar(inputRef.current.files[0])
@@ -242,6 +237,16 @@ function Main({ languageData }) {
             setUserCountry(res)
         }
     }, [])
+
+    useEffect(() => {
+        if (userData && userCountry) {
+            let linkData = imLiveLinks.find(link => link.CultureCode.indexOf(userCountry) !== -1)
+            console.log(imLiveLinks)
+            if (linkData === undefined) linkData = imLiveLinks.find(link => link.CultureCode.indexOf('en') !== -1)
+            let link = `http://imlive.com//wmaster.ashx?QueryID=197&WID=${linkData.CybersaysWid}&linkID=701&from=freevideo6&cbname=CyberSays&c=${linkData.CultureCode}&promocode=${userData?.id}`
+            setImLiveURL(link)
+        }
+    }, [userData, userCountry])
 
     const HomepageSwiper = () => {
 
