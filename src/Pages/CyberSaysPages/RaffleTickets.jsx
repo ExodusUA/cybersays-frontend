@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { Tooltip } from 'react-tooltip'
-import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
-import logoCyber from '../../images/CyberSaysPage/logoMain.png'
-import hero from '../../images/CyberSaysPage/heroRaffle.png'
-import TimeCounter from '../../Components/TimeCounter'
-import ready from '../../images/CyberSaysPage/offerTrue.png'
-import notReady from '../../images/CyberSaysPage/offerFalse.png'
+import newlogoCyber from '../../images/NewDesign/newLogo_main.png';
+import logoCyber from '../../images/CyberSaysPage/logoMain.png';
+import hero from '../../images/CyberSaysPage/heroRaffle.png';
+import TimeCounter from '../../Components/TimeCounter';
+import ready from '../../images/CyberSaysPage/offerTrue.png';
+import notReady from '../../images/CyberSaysPage/offerFalse.png';
 import { Link } from 'react-router-dom';
-import CustomTooltip from '../../Components/CustomTooltip';
-import Popup from 'reactjs-popup';
-import { useDesign } from '../../Helpers/Design/DesignContext'
+import { useDesign } from '../../Helpers/Design/DesignContext';
 import ToolTip1 from '../../Components/ToolTip1';
 
 function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModal }) {
+
+    console.log('user', user)
 
     const { design } = useDesign()
 
@@ -49,12 +48,12 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                 .share({
                     title: document.title,
                     text: 'Sharing',
-                    url: '?uid=' + user?.referral_code,
+                    url: '?uid=' + user?.id,
                 })
                 .then(() => console.log('Successful share! 🎉'))
                 .catch(err => console.error(err));
         } else {
-            window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.referral_code)
+            window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.id)
             setIsLinkCopied(true)
 
             setTimeout(() => {

@@ -318,7 +318,7 @@ function Main({ languageData }) {
                 menuOpen === true && <ModalMenu languageData={languageData} setChatModal={setChatModal} chatModal={chatModal} siteData={siteData} scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
             }
             {
-                tourModal && <TourModal languageData={languageData} setOpen={setTourModal} />
+                tourModal && <TourModal user={userData} languageData={languageData} setOpen={setTourModal} />
             }
             {
                 withdrawModal && <Withdraw languageData={languageData} setOpen={setWithdrawModal} user={userData} />
