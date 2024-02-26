@@ -18,7 +18,7 @@ function LiveFeed({ user }) {
 
     useEffect(() => {
         socket.on('liveFeedUpdate', function (data) {
-            let newFeed =  data[0].filter(item => !feedList.includes(item));
+            let newFeed =  data.filter(item => !feedList.includes(item));
             setFeedList([...newFeed, ...feedList]);
             console.log('new events', newFeed);
         });
@@ -32,8 +32,8 @@ function LiveFeed({ user }) {
         const fetchData = async () => {
             try {
                 const res = await info.getFeedData();
-                let data = res.data[0];
-
+                let data = res.data;
+console.log(data)
                 let sorted = data.sort((a, b) => {
                     return b.id - a.id;
                 });
