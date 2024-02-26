@@ -12,7 +12,7 @@ import Popup from 'reactjs-popup';
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import ToolTip1 from '../../Components/ToolTip1';
 
-function RaffleTickets({ setTourModal, user, imLiveURL, languageData,setWinModal }) {
+function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModal }) {
 
     const { design } = useDesign()
 
@@ -71,11 +71,6 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData,setWinModal
             case 3: return <Link to={imLiveURL} target='_blank'><button className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn4}</button></Link>
         }
     }
-
-    const [infoTooltip, setInfoTooltip] = useState(false)
-
-
-
 
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] md:bg-[url(./images/CyberSaysPage/bg-raffle.jpg)]' : 'bg-[url(./images/NewDesign/Bg/raffleTicket_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} onClick={() => setIsOpen(false)}>

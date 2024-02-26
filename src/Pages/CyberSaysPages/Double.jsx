@@ -11,17 +11,16 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
     const { design } = useDesign()
 
     const [isOpen, setIsOpen] = useState(false)
+    const [selectedTask, setSelectedTask] = useState(2)
 
     const [taskStatus, setTaskStatus] = useState(null)
-
-
 
     const getTaskStatus = (task) => {
         if (user && user === undefined) return 'inactive'
         if (user?.completed_tasks === null) return 'inactive'
 
         let finishedTasks = JSON.parse(user?.completed_tasks) || []
-        
+
         let sortedTasks = finishedTasks.sort((a, b) => a - b)
         let lastTask = sortedTasks[sortedTasks.length - 1]
 
@@ -44,10 +43,10 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
             for (let i = 1; i <= 4; i++) {
                 taskStatusArray.push(getTaskStatus(i))
                 setTaskStatus(taskStatusArray)
-               
+
             }
         }
-    }, [user])
+    }, [user, selectedTask])
 
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-double.jpg)] md:bg-[url(./images/CyberSaysPage/bg-double.jpg)]' : ' bg-[url(./images/NewDesign/Bg/double_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} onClick={() => setIsOpen(false)}>
@@ -72,15 +71,15 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
                 <div className='max-w-[600px] m-auto'>
                     {
                         taskStatus !== null && <>
-                            <TaskCard data={languageData?.tasks?.task1} state={taskStatus[0]} background={design === '0' ? '#B9A1E1' : '#4F97CB'} rounded={'rounded-t-[20px] '} index={1} imLiveURL={imLiveURL} />
-                            <TaskCard data={languageData?.tasks?.task2} state={taskStatus[1]} background={design === '0' ? '#93CC8E' : '#32B28C'} rounded={'rounded-t-[20px] '} index={2} imLiveURL={imLiveURL} />
-                            <TaskCard data={languageData?.tasks?.task3} state={taskStatus[2]} background={design === '0' ? '#EA7C7C' : '#D76666'} rounded={'rounded-t-[20px] '} index={3} imLiveURL={imLiveURL} />
-                            <TaskCard data={languageData?.tasks?.task4} state={taskStatus[3]} background={design === '0' ? '#76C2E3' : '#9E64D8'} rounded={'rounded-[20px] !pb-[5px]'} index={4} imLiveURL={imLiveURL} />
+                            <TaskCard tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task1} setSelectedTask={setSelectedTask} state={taskStatus[0]} manualSelect={selectedTask !== null} open={selectedTask === 1} background={design === '0' ? '#B9A1E1' : '#4F97CB'} rounded={'rounded-t-[20px] '} index={1} imLiveURL={imLiveURL} />
+                            <TaskCard tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task2} setSelectedTask={setSelectedTask} state={taskStatus[1]} manualSelect={selectedTask !== null} open={selectedTask === 2} background={design === '0' ? '#93CC8E' : '#32B28C'} rounded={'rounded-t-[20px] '} index={2} imLiveURL={imLiveURL} />
+                            <TaskCard tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task3} setSelectedTask={setSelectedTask} state={taskStatus[2]} manualSelect={selectedTask !== null} open={selectedTask === 3} background={design === '0' ? '#EA7C7C' : '#D76666'} rounded={'rounded-t-[20px] '} index={3} imLiveURL={imLiveURL} />
+                            <TaskCard tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task4} setSelectedTask={setSelectedTask} state={taskStatus[3]} manualSelect={selectedTask !== null} open={selectedTask === 4} background={design === '0' ? '#76C2E3' : '#9E64D8'} rounded={'rounded-[20px] !pb-[5px]'} index={4} imLiveURL={imLiveURL} />
                         </>
                     }
                 </div>
                 <div className='flex justify-center'>
-                <p onClick={e => setOpen(true)} className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2 cursor-pointer  ${design === '0' ? 'text-white' : 'gradient-link flex justify-center'}`}>{languageData?.doublePaid}</p>
+                    <p onClick={e => setOpen(true)} className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2 cursor-pointer  ${design === '0' ? 'text-white' : 'gradient-link flex justify-center'}`}>{languageData?.doublePaid}</p>
 
                 </div>
 

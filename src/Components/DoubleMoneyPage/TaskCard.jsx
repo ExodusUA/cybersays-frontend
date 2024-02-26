@@ -4,18 +4,23 @@ import done from '../../images/CyberSaysPage/card_done.png'
 import { Link } from 'react-router-dom'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 
-function TaskCard({ state, background, data, index, imLiveURL, rounded }) {
+function TaskCard({ state, background, data, index, imLiveURL, rounded, open, manualSelect, setSelectedTask, tasks }) {
 
     const { design } = useDesign()
 
     const [cardState, setCardState] = useState(null)
 
     useEffect(() => {
-        if (index === 1 && state === 'inactive') {
-            setCardState('active')
+        if (manualSelect === true) {
+            setCardState('inactive')
         } else {
-            setCardState(state)
+            if (index === 1 && state === 'inactive') {
+                setCardState('active')
+            } else {
+                setCardState(state)
+            }
         }
+
     }, [state])
 
     const getMarkup = () => {
@@ -26,32 +31,6 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded }) {
             default: return null
         }
     }
-    {/*
-    const activeState = () => {
-        return <>
-            <div className='flex justify-between items-center'>
-                <p className='saira text-[12px] md:text-[14px] font-medium'>{index}. {data?.taskTitleOpen}</p>
-                <img className='w-[18px] h-[18px]' src={notReady} alt="notReady" />
-            </div>
-
-            <div className='flex justify-between'>
-                {
-                    data?.taskBlocks?.map((task, index) => {
-                        return <div key={index} className='flex flex-col items-center mt-2'>
-                            <img className='w-[20px] md:w-[30px]' src={task?.taskImage} alt="Task Icon" />
-                            <p className='saira text-[12px] md:text-[14px] font-medium text-center'>{task?.taskText}</p>
-                        </div>
-                    })
-                }
-            </div>
-
-            <div className='flex justify-center my-2'>
-                <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-1'>{data?.taskButton}</button>
-            </div>
-            
-        </>
-    }
-*/}
 
     const [linkCopied, setLinkCopied] = useState(false)
 
@@ -62,16 +41,19 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded }) {
 
     const activeState = () => {
         return <>
-            <div className='flex justify-between items-center mx-1  sm:mx-3 '>
+            <div className='flex justify-between items-center mx-1  sm:mx-3 cursor-pointer'>
                 <p className='saira text-[12px] md:text-[14px] font-medium '>{index}. {data?.taskTitleOpen}</p>
-                <img className='w-[18px] h-[18px]' src={design === '0' ? notReady  : require('../../images/NewDesign/Task/notReady.png')} alt="notReady" />
+                {
+                    tasks?.includes(index) ? <img className='w-[18px] h-[18px]' src={design === '0' ? done : require('../../images/NewDesign/Task/done.png')} alt="done" /> : <img className='w-[18px] h-[18px]' src={design === '0' ? notReady : require('../../images/NewDesign/Task/notReady.png')} alt="notReady" />
+                }
+
             </div>
 
             <div className='flex justify-center '>
                 {
                     data?.taskBlocks?.map((task, key) => {
                         return <div key={key} className='flex  items-center se:mt-1 mt-2 relative '>
-                            <img className='w-[330px] sm:w-[555px] m-auto relative' src={design === '0' ? task?.taskImage : task?.newTaskImage } alt="Task Icon" />
+                            <img className='w-[330px] sm:w-[555px] m-auto relative' src={design === '0' ? task?.taskImage : task?.newTaskImage} alt="Task Icon" />
                             <p className={`saira text-[10px] sm:text-[17px] text-black font-medium absolute text-left leading-[12px] sm:leading-[20px] ${index === 1 ? `${design === '0' ? 'w-[150px] sm:w-[265px] top-[15px] sm:top-[25px] right-[25px] sm:right-[45px]' : 'w-[180px] sm:w-[305px] top-[17px] sm:top-[30px] right-[15px] sm:right-[25px] text-white'}` :
                                 index === 2 ? `${design === '0' ? 'w-[140px] sm:w-[235px]  top-[15px] sm:top-[25px] left-[35px] sm:left-[55px]' : 'w-[200px] sm:w-[330px]  top-[20px] sm:top-[35px] left-[30px] sm:left-[45px] text-white'}` :
                                     index === 3 ? `${design === '0' ? 'w-[160px] sm:w-[270px] top-[15px] sm:top-[25px] right-[35px] sm:right-[65px]' : 'w-[205px] sm:w-[350px] top-[18px] sm:top-[30px] right-[35px] sm:right-[55px] text-white'}` :
@@ -90,16 +72,20 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded }) {
     }
 
     const finishedState = () => {
-        return <div className='flex justify-between items-center mx-1  sm:mx-3 '>
+        return <div className='flex justify-between items-center mx-1 sm:mx-3 cursor-pointer' onClick={e => setSelectedTask(index)}>
             <p className='saira text-[12px] md:text-[14px] font-medium'>{index}. {data?.taskTitle}</p>
-            <img className='w-[18px] h-[18px]' src={design === '0' ? done  : require('../../images/NewDesign/Task/done.png')} alt="done" />
+            {
+                tasks?.includes(index) ? <img className='w-[18px] h-[18px]' src={design === '0' ? done : require('../../images/NewDesign/Task/done.png')} alt="done" /> : <img className='w-[18px] h-[18px]' src={design === '0' ? notReady : require('../../images/NewDesign/Task/notReady.png')} alt="notReady" />
+            }
         </div>
     }
 
     const inactiveState = () => {
-        return <div className='flex justify-between items-center mx-1   sm:mx-3'>
+        return <div className='flex justify-between items-center mx-1 cursor-pointer  sm:mx-3' onClick={e => setSelectedTask(index)}>
             <p className='saira text-[12px] md:text-[14px] font-medium'>{index}. {data?.taskTitle}</p>
-            <img className='w-[18px] h-[18px]' src={design === '0' ? notReady  : require('../../images/NewDesign/Task/notReady.png')} alt="notReady" />
+            {
+                tasks?.includes(index) ? <img className='w-[18px] h-[18px]' src={design === '0' ? done : require('../../images/NewDesign/Task/done.png')} alt="done" /> : <img className='w-[18px] h-[18px]' src={design === '0' ? notReady : require('../../images/NewDesign/Task/notReady.png')} alt="notReady" />
+            }
         </div>
     }
 
@@ -144,7 +130,11 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded }) {
 
         <div style={{ background: getBackground(), paddingBottom: getPaddingBottom(), marginTop: marginTop() }} className={`w-full rounded-t-[20px] ${rounded} bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  se:p-[6px]  p-2 se:my-0 my-2  `}>
             {
-                getMarkup()
+                open !== true && getMarkup()
+            }
+
+            {
+                open === true && activeState()
             }
 
         </div>
