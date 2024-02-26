@@ -56,7 +56,7 @@
         },
         "task4": {
             "taskTitle": "Ganhar",
-            "taskTitleOpen": "Receba 10$ imediatamente da CyberSays para ${emailAddress}",
+            "taskTitleOpen": "Receba 10$ imediatamente da CyberSays para",
             "taskBlocks": [
                 {
                     "taskImage": "images/bg-mobile-Task4.png",

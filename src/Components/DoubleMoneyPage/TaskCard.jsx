@@ -4,7 +4,7 @@ import done from '../../images/CyberSaysPage/card_done.png'
 import { Link } from 'react-router-dom'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 
-function TaskCard({ state, background, data, index, imLiveURL, rounded, open, manualSelect, setSelectedTask, tasks }) {
+function TaskCard({ state, background, data, index, imLiveURL, rounded, open, manualSelect, setSelectedTask, tasks, user }) {
 
     const { design } = useDesign()
 
@@ -38,11 +38,15 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded, open, ma
         navigator.clipboard.writeText(imLiveURL)
         setLinkCopied(true)
     }
-
+    console.log()
     const activeState = () => {
         return <>
             <div className='flex justify-between items-center mx-1  sm:mx-3 cursor-pointer'>
-                <p className='saira text-[12px] md:text-[14px] font-medium '>{index}. {data?.taskTitleOpen}</p>
+                <p className='saira text-[12px] md:text-[14px] font-medium flex items-center'>{index}. {data?.taskTitleOpen}
+                    <span className='truncate saira text-[12px] md:text-[14px] font-medium ml-1 w-[50px] md:w-[100px] block'>
+                        {user?.email}
+                    </span>
+                    </p>
                 {
                     tasks?.includes(index) ? <img className='w-[18px] h-[18px]' src={design === '0' ? done : require('../../images/NewDesign/Task/done.png')} alt="done" /> : <img className='w-[18px] h-[18px]' src={design === '0' ? notReady : require('../../images/NewDesign/Task/notReady.png')} alt="notReady" />
                 }
