@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useRef  } from 'react';
 import close from '../../images/CyberSaysPage/closeMenu.png'
 import hero from '../../images/CyberSaysPage/tourHero.png'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -13,35 +13,103 @@ function TourModal({ setOpen, languageData }) {
     const dataShort = [
         {
             img: design === '0' ? hero : require('../../images/NewDesign/tourHero.png'),
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+            desc: '1Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
         },
         {
             img: design === '0' ? hero : require('../../images/NewDesign/tourHero.png'),
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+            desc: '2Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
         },
         {
             img: design === '0' ? hero : require('../../images/NewDesign/tourHero.png'),
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+            desc: '3Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
         },
     ]
     const dataLong = [
         {
             img: design === '0' ? hero : require('../../images/NewDesign/tourHero.png'),
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+            desc: '4Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
         },
         {
             img: design === '0' ? hero : require('../../images/NewDesign/tourHero.png'),
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-        },
+            desc: '5Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+        }
 
     ]
-
+    const prevCurrentSlide = useRef(null);
+    
     useEffect(() => {
         window.localStorage.setItem('visitedTour', true)
     }, [])
 
+    const [blobImage, setBlobImage] = useState(null)
     const [selectedButton, setSelectedButton] = useState(1);
+    const [currentSlide, setCurrentSlide] = useState(null);
 
+    useEffect(() => {
+        
+        if (prevCurrentSlide.current !== currentSlide) {
+            getBlob();
+            prevCurrentSlide.current = currentSlide; 
+        }
+
+        async function getBlob() {
+            let selectedData = selectedButton === 1 ? dataShort : dataLong;
+            if (selectedData[currentSlide]) {
+                const blob = await fetch(selectedData[currentSlide].img).then(r => r.blob());
+                setBlobImage(blob);
+            }
+        }
+
+        console.log(currentSlide);
+    }, [currentSlide, selectedButton, dataShort, dataLong]);
+
+    const handleShareShort = () => {
+
+        if (currentSlide !== null) {
+            const selectedSlide = dataShort[currentSlide];
+
+            if (navigator.share) {
+                navigator.share({
+                    title: selectedSlide.img,
+                    text: selectedSlide.desc,
+                    files: [
+                        new File([blobImage], 'file.png', {
+                            type: blobImage.type,
+                        }),
+                    ],
+                })
+                    .then(() => console.log('Successful share! 🎉'))
+                    .catch(error => console.log('Error sharing:', error));
+            } else {
+                console.log('Web Share API not supported.');
+
+            }
+        }
+    };
+
+    const handleShareLong = () => {
+
+        if (currentSlide !== null) {
+            const selectedSlide = dataLong[currentSlide];
+
+            if (navigator.share) {
+                navigator.share({
+                    title: selectedSlide.img,
+                    text: selectedSlide.desc,
+                    files: [
+                        new File([blobImage], 'file.png', {
+                            type: blobImage.type,
+                        }),
+                    ],
+                })
+                    .then(() => console.log('Successful share! 🎉'))
+                    .catch(error => console.log('Error sharing:', error));
+            } else {
+                console.log('Web Share API not supported.');
+
+            }
+        }
+    };
 
     return (
         <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
@@ -64,7 +132,7 @@ function TourModal({ setOpen, languageData }) {
                     <Swiper
                         pagination={{ clickable: true }}
                         modules={[Pagination]}
-
+                        onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
                         loop={true}
                         breakpoints={{
                             0: {
@@ -77,12 +145,13 @@ function TourModal({ setOpen, languageData }) {
                             <SwiperSlide className='px-4' key={item}>
                                 <img className='w-[375px] md:w-full m-auto mt-3' src={item.img} alt="hero" />
                                 <p className='saira font-medium text-center text-[14px] mx-2 lg:mt-4'>{item.desc}</p>
+
                             </SwiperSlide>
                         ))}
 
                     </Swiper>
                     <div className='flex justify-center mx-2'>
-                        <button className={`max-w-[360px] w-full bg-white  border-[2px] ${design === '0' ? ' rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'} text-black text-[18px] saira font-semibold py-2 flex justify-center mt-8 mac:!mt-0 absolute mx-2`}>
+                        <button onClick={handleShareShort} className={`max-w-[360px] w-full bg-white  border-[2px] ${design === '0' ? ' rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'} text-black text-[18px] saira font-semibold py-2 flex justify-center mt-8 mac:!mt-0 absolute mx-2`}>
                             {languageData?.tourShortBtn}
                             <svg className='ml-2' width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M21 12.5L14 5.5V9.5C7 10.5 4 15.5 3 20.5C5.5 17 9 15.4 14 15.4V19.5L21 12.5Z" fill="#1E1E1E" />
@@ -107,14 +176,14 @@ function TourModal({ setOpen, languageData }) {
                     >
                         {dataLong.map((item, index) => (
                             <SwiperSlide className='px-4' key={item}>
-                                 <img className='w-[375px] md:w-full m-auto mt-3' src={item.img} alt="hero" />
+                                <img className='w-[375px] md:w-full m-auto mt-3' src={item.img} alt="hero" />
                                 <p className='saira font-medium text-center text-[14px] mx-2 lg:mt-4'>{item.desc}</p>
                             </SwiperSlide>
                         ))}
 
                     </Swiper>
                     <div className='flex justify-center mx-2'>
-                        <button className={`max-w-[360px] w-full bg-white  border-[2px] ${design === '0' ? ' rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'} text-black text-[18px] saira font-semibold py-2 flex justify-center mt-8 mac:!mt-0 absolute mx-2`}>
+                        <button onClick={handleShareLong} className={`max-w-[360px] w-full bg-white  border-[2px] ${design === '0' ? ' rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'} text-black text-[18px] saira font-semibold py-2 flex justify-center mt-8 mac:!mt-0 absolute mx-2`}>
                             {languageData?.tourLongBtn}
                             <svg className='ml-2' width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M21 12.5L14 5.5V9.5C7 10.5 4 15.5 3 20.5C5.5 17 9 15.4 14 15.4V19.5L21 12.5Z" fill="#1E1E1E" />
