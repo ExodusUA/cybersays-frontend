@@ -43,7 +43,7 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded, open, ma
         return <>
             <div className='flex justify-between items-center mx-1  sm:mx-3 cursor-pointer'>
                 <p className='saira text-[12px] md:text-[14px] font-medium flex items-center'>{index}. {data?.taskTitleOpen}
-                    <span className='truncate saira text-[12px] md:text-[14px] font-medium ml-1 w-[50px] md:w-[100px] block'>
+                    <span className='truncate saira text-[12px] md:text-[14px] font-medium ml-1 w-[50px] md:w-[180px] block'>
                         {user?.email}
                     </span>
                     </p>

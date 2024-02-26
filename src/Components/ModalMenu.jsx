@@ -94,9 +94,9 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
           </div>
 
         </div>
-        <div className='max-w-[365px] w-full m-auto mac:h-screen mac:max-h-[550px] overflow-y-auto '>
+        <div className='max-w-[365px] w-full m-auto  '>
 
-          <div className='iphone:gap-4 se:gap-4 mac:!gap-4 grid mt-8 '>
+          <div className='iphone:gap-4 se:gap-4 mac:!gap-2.5 grid mt-8 mac:mt-0 '>
             <div className='flex items-center' onClick={e => scrollToPage(0)}>
               <img className='w-[32px] h-[32px] mr-2' src={design === '0' ? link1 : require('../images/NewDesign/modalMenu/link1.png')} alt="link1" />
               <p className='saira text-[20px] font-semibold  cursor-pointer'>{languageData?.modalMenuLink1}</p>
