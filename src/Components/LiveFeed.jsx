@@ -12,13 +12,13 @@ function LiveFeed({ user }) {
     const socket = io(process.env.REACT_APP_CHAT_URL, {
         path: '/api/socket',
         body: {
-            userId: user?.userId
+            userId: user?.id
         }
     });
 
     useEffect(() => {
         socket.on('liveFeedUpdate', function (data) {
-            let newFeed =  data.filter(item => !feedList.includes(item));
+            let newFeed = data.filter(item => !feedList.includes(item));
             setFeedList([...newFeed, ...feedList]);
             console.log('new events', newFeed);
         });
@@ -26,14 +26,14 @@ function LiveFeed({ user }) {
 
     useEffect(() => {
         console.log('feedList', feedList);
-    } , [feedList])
+    }, [feedList])
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const res = await info.getFeedData();
                 let data = res.data;
-console.log(data)
+                console.log(data)
                 let sorted = data.sort((a, b) => {
                     return b.id - a.id;
                 });

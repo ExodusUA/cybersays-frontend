@@ -10,7 +10,7 @@ async function getUserData() {
     let token = getToken();
     let decodedToken = jwtDecode(token);
 
-    const response = await axios.get(process.env.REACT_APP_API_URL + '/api/v1/user/id/' + decodedToken.userId, {
+    const response = await axios.get(process.env.REACT_APP_API_URL + '/api/v1/user/id/' + decodedToken.id, {
         headers: {
             token: `${getToken()}`
         }
@@ -26,7 +26,7 @@ async function deleteUser() {
     let token = getToken();
     let decodedToken = jwtDecode(token);
 
-    const response = await axios.delete(process.env.REACT_APP_API_URL + '/api/v1/user/delete/' + decodedToken.userId, {
+    const response = await axios.delete(process.env.REACT_APP_API_URL + '/api/v1/user/delete/' + decodedToken.id, {
         headers: {
             token: `${getToken()}`
         }
