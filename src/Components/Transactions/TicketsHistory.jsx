@@ -14,7 +14,6 @@ function TicketsHistory({ setOpen, languageData }) {
         queryKey: ['tickets'],
         queryFn: async () => {
             const res = await userAPI.getTicketsAndPoints();
-            console.log('tickets', res)
             proccessData(res.data.tickets[0])
         }
     })
@@ -22,7 +21,9 @@ function TicketsHistory({ setOpen, languageData }) {
     function proccessData(proccessData) {
         if (proccessData === null) return
 
-        let data = proccessData?.tickets?.map(ticket => {
+        
+
+        let data = proccessData?.map(ticket => {
             return {
                 name: 'ticket',
                 type: ticket.type,
@@ -31,6 +32,7 @@ function TicketsHistory({ setOpen, languageData }) {
             }
         })
 
+        /*
         proccessData?.points?.map(point => {
             data.push({
                 name: 'point',
@@ -39,6 +41,7 @@ function TicketsHistory({ setOpen, languageData }) {
                 amount: point.amount
             })
         })
+        */
 
         let sorted = data?.sort((a, b) => new Date(b.datetime) - new Date(a.datetime))
         setTicketsData(sorted)
