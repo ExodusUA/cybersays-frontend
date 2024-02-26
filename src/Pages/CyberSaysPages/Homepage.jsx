@@ -71,7 +71,7 @@ function Homepage({ user, imLiveURL, languageData,scrollToPage }) {
                         </div>
                     </div>
                     <div className='ml-1 md:ml-10 w-[200px] sm:w-[unset] mb-4 md:mb-[unset]'>
-                        <div className='max-w-[300px] md:max-w-[600px]'>
+                        <div className='max-w-[300px] md:max-w-[750px]'>
                             <Swiper
                                 modules={[Autoplay]}
                                 autoplay={{ delay: 4000 }}
@@ -93,7 +93,7 @@ function Homepage({ user, imLiveURL, languageData,scrollToPage }) {
 
                             </Swiper>
                         </div>
-                        <img className='w-[160px] md:w-[200px] md:mt-5' src={imLiveLogo} alt="imLiveLogo" />
+                        <img className='w-[160px] md:w-[200px] md:mt-5 mac:!mt-0' src={imLiveLogo} alt="imLiveLogo" />
                         <div className='md:block hidden mt-[100px] mac:mt-[50px]'>
                             <TimeCounter languageData={languageData} />
                         </div>

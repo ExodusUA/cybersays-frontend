@@ -24,6 +24,7 @@
             "taskBlocks": [
                 {
                     "taskImage": "images/bg-mobile-Task1.png",
+                    "newTaskImage": "images/newTask/bg_task1.png",
                     "taskText": "Curta o ImLive, seja tratado como um REI 👑 - e realize suas fantasias mais loucas!"
                 }
             ],
@@ -35,6 +36,7 @@
             "taskBlocks": [
                 {
                     "taskImage": "images/bg-mobile-Task2.png",
+                    "newTaskImage": "images/newTask/bg_task2.png",
                     "taskText": "Deposite $5... o ImLive dobrará o crédito. O CyberSays dobrará os dólares!"
                 }
             ],
@@ -46,6 +48,7 @@
             "taskBlocks": [
                 {
                     "taskImage": "images/bg-mobile-Task3.png",
+                    "newTaskImage": "images/newTask/bg_task3.png",
                     "taskText": "Gaste seus 10 créditos no ImLive, seja tratado como um rei e ganhe $10 em dinheiro quando terminar!"
                 }
             ],
@@ -57,6 +60,7 @@
             "taskBlocks": [
                 {
                     "taskImage": "images/bg-mobile-Task4.png",
+                    "newTaskImage": "images/newTask/bg_task4.png",
                     "taskText": "O ImLive dobra seu crédito, nós dobramos seu dinheiro - é uma situação vantajosa para você, com mais $10 na sua carteira!"
                 }
             ],

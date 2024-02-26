@@ -51,15 +51,15 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-double.jpg)] md:bg-[url(./images/CyberSaysPage/bg-double.jpg)]' : ' bg-[url(./images/NewDesign/Bg/double_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} onClick={() => setIsOpen(false)}>
             <div className='pt-[97px] px-4  md:pt-[135px] mac-center:!pt-0 max-w-[1170px] m-auto' >
-                <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
+                <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] mac2:!w-[220px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
                 <div className='mac:max-w-[550px] md:max-w-[1000px] md:mx-[180px] m-auto'>
                     <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  text-center py-1  px-4 md:py-2 ${design === '0' ? 'rounded-[100px]' : 'rounded-[14px] lg:rounded-[24px]'}`}>
-                        <p className='text-[14px] md:text-[32px] mac2:!text-[20px] font-semibold  iphone:leading-[unset] se:leading-4 mac2:!leading-[22px]'>{languageData?.doubleTitle}</p>
+                        <p className='text-[14px] md:text-[24px] mac2:!text-[20px] font-semibold  iphone:leading-[unset] se:leading-4 mac2:!leading-[22px]'>{languageData?.doubleTitle}</p>
 
                     </div>
                 </div>
 
-                <p className={`text-[12px] md:text-[14px] ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble font-semibold'}  text-center cursor-pointer flex items-center justify-center  md:py-2 mb-10`}>
+                <p className={`text-[12px] md:text-[14px] ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble font-semibold'}  text-center cursor-pointer flex items-center justify-center  md:py-2 mb-5`}>
                     {languageData?.doubleSubtitleSpan}
                     <span className='mx-1'>
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">

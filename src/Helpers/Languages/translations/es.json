@@ -24,6 +24,7 @@
             "taskBlocks": [
                 {
                     "taskImage": "images/bg-mobile-Task1.png",
+                    "newTaskImage": "images/newTask/bg_task1.png",
                     "taskText": "Disfruta de ImLive, sé tratado como un REY 👑, ¡y cumple tus fantasías más salvajes!"
                 }
             ],
@@ -35,6 +36,7 @@
             "taskBlocks": [
                 {
                     "taskImage": "images/bg-mobile-Task2.png",
+                    "newTaskImage": "images/newTask/bg_task2.png",
                     "taskText": "Deposita $5... ImLive duplicará el crédito. ¡CyberSays duplicará los dólares!"
                 }
             ],
@@ -46,6 +48,7 @@
             "taskBlocks": [
                 {
                     "taskImage": "images/bg-mobile-Task3.png",
+                    "newTaskImage": "images/newTask/bg_task3.png",
                     "taskText": "Gasta tus 10 créditos en ImLive, sé tratado como un rey y recibe $10 en efectivo cuando termines."
                 }
             ],
@@ -57,6 +60,7 @@
             "taskBlocks": [
                 {
                     "taskImage": "images/bg-mobile-Task4.png",
+                    "newTaskImage": "images/newTask/bg_task4.png",
                     "taskText": "ImLive duplica tu crédito, nosotros duplicamos tu dinero: ¡es un beneficio mutuo para ti con $10 adicionales en tu billetera!"
                 }
             ],
