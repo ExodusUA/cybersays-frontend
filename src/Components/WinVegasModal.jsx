@@ -36,7 +36,6 @@ function WinVegasModal({ setOpen, languageData }) {
                             <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint1li1}</li>
                             <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint1li2}</li>
                             <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint1li3}</li>
-                            <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint1li4}</li>
                         </ul>
                     </div>
                     <div className='mt-4'>
@@ -48,6 +47,8 @@ function WinVegasModal({ setOpen, languageData }) {
                         <ul className='list-disc ml-[60px] mt-1'>
                             <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint2li1}</li>
                             <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint2li2}</li>
+                            <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint2li3Span1} <span className='saira text-[12px] lg:text-[14px] font-bold underline cursor-pointer'>{languageData.winPoint2li3Link}</span> {languageData.winPoint2li3Span2}</li>
+
                         </ul>
                     </div>
                     <div className='mt-4'>

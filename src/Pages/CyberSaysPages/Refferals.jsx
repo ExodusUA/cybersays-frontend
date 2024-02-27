@@ -8,6 +8,7 @@ import { useDesign } from '../../Helpers/Design/DesignContext'
 import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
 import ToolTip2 from '../../Components/ToolTip2';
 import ImageModals from '../../Components/ImageModals';
+import userAPI from '../../Requests/user'
 
 function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenMassege, setOpenAvatar, selectedMessage, setSelectedMassege, copyToMessage, message, uploadedPhotos, imageModal, setImageModal, selectedImage, setSelectedImage }) {
 
@@ -65,29 +66,55 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
             setIsLinkCopied(false)
         }, 3000);
     }
-    const handlePhotoClick = (index) => {
+    const handlePhotoClick = (index, e) => {
+        e.preventDefault();
         setSelectedImage(uploadedPhotos[index]);
     };
-    const handleDownload = (index) => {
-        const downloadLink = document.createElement('a');
-        downloadLink.href = uploadedPhotos[index];
-        downloadLink.download = 'photo.jpg';
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-    };
+
+   
+
+
+    const [photoLoading, setPhotoLoading] = useState(false);
+
+    const downloadPhoto = async (avatar) => {
+        if (photoLoading) return;
+        setPhotoLoading(true);
+        try {
+           
+            const response = await fetch(uploadedPhotos[avatar]);
+            const blob = await response.blob();
     
+            const blobUrl = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = blobUrl;
+            link.setAttribute('download', 'photo.jpg');
+            link.click();
+            link.remove();
+            window.URL.revokeObjectURL(blobUrl);
+            console.log('111111111',blobUrl); 
+        } catch (error) {
+            console.error('Error downloading photo:', error);
+        }
+        console.log(uploadedPhotos[avatar]); 
+        setPhotoLoading(false);
+    }
+
+    const [linkShareCopied] = useState(false)
+
+    const copyShareLink = () => {
+        window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.referral_code)
+    }
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-terms.jpg)] md:bg-[url(./images/CyberSaysPage/bg-terms.jpg)]' : 'bg-[url(./images/NewDesign/Bg/refferals_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} >
             <div className='pt-[97px]  md:pt-[135px] mac-center:!pt-0 px-4 w-full max-w-[1170px] mac-center:w-[1170px] m-auto' >
-                <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
+                <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] mac2:!w-[220px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
 
 
                 <div className='flex flex-col-reverse relative'>
 
 
-                    <div className='se:mt-[0px] lg:mt-[80px] mac:mt-[60px]'>
-                        <div className=' w-full hidden lg:block mb-[-100px] pr-2'>
+                    <div className='se:mt-[0px] lg:mt-[80px] mac:!mt-[30px]'>
+                        <div className=' w-full hidden lg:block mb-[-100px] mac:mb-[-60px] pr-2'>
                             <div className=' justify-between flex my-3  mx-10'>
                                 <img className='w-[44px] mr-3 cursor-pointer buttonPrevGif' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
                                 <img className='w-[44px]  cursor-pointer buttonNextGif' src={right} alt="Right" onClick={e => swiperRef?.slideNext()} />
@@ -135,10 +162,10 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                             <div className='flex' key={index}>
                                                 <img onClick={e => {
                                                     setSelectedGif(index)
-                                                    setImageModal(true)
-                                                    handlePhotoClick(index)
+                                                    downloadPhoto(index)
+                                                    handlePhotoClick(index, e)
                                                 }} className={`${selectedGif === index && `${design === '0' ? 'border-[2px] !border-[#FFED63]' : 'border-[2px] !border-[#FE804D]'} opacity-[1] relative`}   rounded-[20px] w-[110px] h-[110px] sm:w-[140px] sm:h-[140px] opacity-[0.5] cursor-pointer object-cover`} src={item} alt="gif1" />
-                                                <svg onClick={e => handleDownload(index)} className=' absolute top-1 left-1 cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+                                                <svg className=' absolute top-1 left-1 cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
                                                     <path d="M4.25 17V19C4.25 19.5304 4.44315 20.0391 4.78697 20.4142C5.13079 20.7893 5.5971 21 6.08333 21H17.0833C17.5696 21 18.0359 20.7893 18.3797 20.4142C18.7235 20.0391 18.9167 19.5304 18.9167 19V17M7 11L11.5833 16M11.5833 16L16.1667 11M11.5833 16V4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
                                             </div>
@@ -250,7 +277,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                         <p className={`text-[14px] sm:text-[24px] font-semibold text-center  se:my-1 iphone:my-3 mac:!my-2 ${design === '0' ? 'text-[#FFED63]' : 'text-white]'}`}>{languageData?.refferalsImage}</p>
                     </div>
                     <div className=' flex justify-center'>
-                        <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  text-center max-w-[800px] w-full py-1 px-2 ${design === '0' ? 'rounded-[50px]' : 'rounded-[14px] lg:rounded-[24px]'}`}>
+                        <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  text-center max-w-[800px] mac:max-w-[unset] w-full py-1  px-2 ${design === '0' ? 'rounded-[50px]' : 'rounded-[14px] lg:rounded-[24px]'}`}>
                             <p className='text-[14px]  sm:text-[24px] mac:!text-[мpx]  font-semibold max-w-[540px] mac:max-w-[unset] m-auto iphone:leading-[unset] se:leading-[16px] mac:!leading-[24px]'>{languageData?.refferalsTitle}</p>
                             <div className='flex justify-center gap-1'>
                                 <p className={`text-[12px] sm:text-[14px] font-medium saira flex justify-center items-center underline cursor-pointer ${design === '0' ? 'text-white' : 'gradient-link '}`} onClick={e => setReferralsOpen(true)}>
@@ -286,10 +313,12 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                     </div>
 
                 </div>
+                {/*
                 <div className='flex justify-center'>
                     <p onClick={e => setOpenAvatar(true)} className={`cursor-pointer text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2 ${design === '0' ? 'text-white' : 'gradient-link flex justify-center'}`}>{languageData?.refferalsLink2}</p>
                 </div>
-                <div className='flex justify-center'>
+                */}
+                <div className='flex justify-center mt-6 mac:mt-2'>
                     <button onClick={e => shareRefferalLink()} className={`w-full bg-white  border-[2px] border-[#FFED63] text-black text-[18px] saira font-semibold se:py-1 iphone:py-2 sm:max-w-[350px] ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>
                         {
                             isLinkShared === false
@@ -298,6 +327,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                         }
                     </button>
                 </div>
+                <p onClick={e => copyShareLink()} className={`saira text-[14px] cursor-pointer underline text-center mb-[-5px] py-2 pb-3 font-semibold  ${linkShareCopied === true ? 'opacity-60' : ''}`}>Copy link</p>
             </div>
 
         </div>

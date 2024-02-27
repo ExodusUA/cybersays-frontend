@@ -49,6 +49,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
   const [whyModal, setWhyModal] = useState(false)
   const [FAQModal, setFAQModal] = useState(false)
   const [logoutModal, setLogoutModal] = useState(false)
+  const [whatAbout, setWhatAbout] = useState(false)
 
   const [pdfLoading, setPdfLoading] = useState(false)
 
@@ -94,9 +95,9 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
           </div>
 
         </div>
-        <div className='max-w-[365px] w-full m-auto  '>
+        <div className='max-w-[365px] w-full m-auto h-screen max-h-[800px] overflow-auto mac2:pb-[70px]'>
 
-          <div className='iphone:gap-4 se:gap-4 mac:!gap-2.5 grid mt-8 mac:mt-0 '>
+          <div className='iphone:gap-4 se:gap-4 mac:!gap-2.5 grid lg:mt-8 mac:mt-0 '>
             <div className='flex items-center' onClick={e => scrollToPage(0)}>
               <img className='w-[32px] h-[32px] mr-2' src={design === '0' ? link1 : require('../images/NewDesign/modalMenu/link1.png')} alt="link1" />
               <p className='saira text-[20px] font-semibold  cursor-pointer'>{languageData?.modalMenuLink1}</p>
@@ -138,22 +139,63 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <img className='w-[32px] h-[32px] mr-2' src={link10} alt="link10" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink10}</p>
             </div>
-            <div className='flex items-center' onClick={e => setFAQModal(true)} >
-              <img className='w-[32px] h-[32px] mr-2' src={link11} alt="link11" />
-              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink11}</p>
+
+            <div className=' cursor-pointer  ' onClick={e => setWhatAbout(!whatAbout)}>
+              <div className='flex  items-center'>
+                <div className='flex items-center' >
+                  <img className='w-[32px] h-[32px] mr-2' src={link11} alt="link11" />
+                  <p className='saira text-[20px] font-semibold cursor-pointer'>What about</p>
+                </div>
+                <div className='ml-2'>
+                  {
+                    whatAbout
+                      ?
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 17L12 7L22 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      : <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 7L12 17L2 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                  }
+                </div>
+              </div>
+              {
+                whatAbout && <>
+                  <div className='mt-1'>
+                    <div className='flex items-center' onClick={e => setAboutModal(true)}  >
+                      <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuBottom1}</p>
+                    </div>
+                    <div className='flex items-center' onClick={e => setOurModal(true)} >
+                      <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuLink12}</p>
+                    </div>
+                    <div className='flex items-center' onClick={e => setFAQModal(true)} >
+                      <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuLink11}</p>
+                    </div>
+
+                    <div className='flex items-center' onClick={e => setWhyModal(true)} >
+                      <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuLink13}</p>
+                    </div>
+                    <div className='flex items-center' onClick={e => setContactModal(true)}  >
+                      <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuBottom4}</p>
+                    </div>
+                    <div className='flex items-center' onClick={e => setLegalModal(true)}  >
+                      <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuBottom2}</p>
+                    </div>
+                    <div className='flex items-center' onClick={e => setSettingsModal(true)}  >
+                      <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuBottom3}</p>
+                    </div>
+
+                    <div className='flex items-center' onClick={e => getPDF()}  >
+                      <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>Download PDF</p>
+                    </div>
+
+                  </div>
+                </>
+              }
             </div>
-            <div className='flex items-center' onClick={e => setOurModal(true)} >
-              <img className='w-[32px] h-[32px] mr-2' src={link12} alt="link12" />
-              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink12}</p>
-            </div>
-            <div className='flex items-center' onClick={e => setWhyModal(true)} >
-              <img className='w-[32px] h-[32px] mr-2' src={link13} alt="link13" />
-              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink13}</p>
-            </div>
-            <div onClick={e => getPDF()} className='flex items-center' >
-              <p className='saira text-[20px] font-semibold cursor-pointer'>Download PDF</p>
-            </div>
+
           </div>
+          {/*
           <div className=' absolute bottom-4 left-1/2 transform -translate-x-1/2 flex justify-around items-center max-w-[420px] w-full '>
             <p className='saira text-[16px] font-semibold cursor-pointer text-center leading-4' onClick={e => setAboutModal(true)}>{languageData?.modalMenuBottom1}</p>
             <div className={`w-[2px] h-[20px]  ${design === '0' ? 'bg-[#FFED63]' : 'gradient-homepageBtn'}`}></div>
@@ -163,6 +205,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
             <div className={`w-[2px] h-[20px]  ${design === '0' ? 'bg-[#FFED63]' : 'gradient-homepageBtn'}`}></div>
             <p className='saira text-[16px] font-semibold cursor-pointer' onClick={e => setContactModal(true)}>{languageData?.modalMenuBottom4}</p>
           </div>
+          */}
         </div>
 
         {

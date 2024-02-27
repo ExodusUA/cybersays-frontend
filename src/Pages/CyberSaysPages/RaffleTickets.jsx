@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { useDesign } from '../../Helpers/Design/DesignContext';
 import ToolTip1 from '../../Components/ToolTip1';
 
-function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModal }) {
+function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModal,scrollToPage }) {
 
     console.log('user', user)
 
@@ -64,10 +64,10 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
 
     const getButtonMarkup = (task) => {
         switch (task) {
-            case 0: return <Link to={imLiveURL} target='_blank'><button className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] text-black text-[18px] saira font-semibold  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn1}</button></Link>
-            case 1: return <Link to={imLiveURL} target='_blank'><button className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] text-black mobMax:text-[16px] text-[18px] saira font-semibold ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn2}</button></Link>
-            case 2: return <Link to={imLiveURL} target='_blank'><button className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] text-black mobMax:text-[16px] text-[18px] saira font-semibold ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn3}</button></Link>
-            case 3: return <Link to={imLiveURL} target='_blank'><button className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn4}</button></Link>
+            case 0: return <button onClick={e => scrollToPage(2)} className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] text-black text-[18px] saira font-semibold  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn1}</button>
+            case 1: return <button onClick={e => scrollToPage(2)} className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] text-black mobMax:text-[16px] text-[18px] saira font-semibold ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn2}</button>
+            case 2: return <button onClick={e => scrollToPage(2)} className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] text-black mobMax:text-[16px] text-[18px] saira font-semibold ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn3}</button>
+            case 3: return <button onClick={e => scrollToPage(2)} className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn4}</button>
         }
     }
 

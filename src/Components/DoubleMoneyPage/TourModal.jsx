@@ -13,18 +13,15 @@ function TourModal({ setOpen, languageData, user }) {
     const dataShort = [
         {
             img: design === '0' ? hero : require('../../images/NewDesign/tourHero.png'),
-            descShort: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-            descLong: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+            descShort: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
         },
         {
             img: design === '0' ? hero : require('../../images/NewDesign/tourHero.png'),
-            descShort: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
-            descLong: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+            descShort: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'
         },
         {
             img: design === '0' ? hero : require('../../images/NewDesign/tourHero.png'),
-            descShort: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
-            descLong: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+            descShort: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt'
         },
     ]
 
@@ -55,15 +52,15 @@ function TourModal({ setOpen, languageData, user }) {
     }, [currentSlide, selectedButton]);
 
     const handleShare = () => {
-       
+
         if (currentSlide !== null) {
             const selectedSlide = dataShort[currentSlide];
 
             if (navigator.share) {
-                
+
                 navigator.share({
                     title: 'CyberSays',
-                    text: selectedButton === 1 ? selectedSlide.descShort : selectedSlide.descLong,
+                    text: selectedSlide.descShort,
                     files: [
                         new File([blobImage], 'file.png', {
                             type: blobImage.type,
@@ -77,7 +74,7 @@ function TourModal({ setOpen, languageData, user }) {
                 console.log('Web Share API not supported.');
 
             }
-        } 
+        }
     };
 
     return (
@@ -85,6 +82,7 @@ function TourModal({ setOpen, languageData, user }) {
             <div className='flex justify-end max-w-[600px] m-auto md:my-4'>
                 <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../../images/NewDesign/closeBtn.png')} alt="close" />
             </div>
+            {/*
             <div class=" justify-center flex my-2">
                 <div class={`flex border-[1px]  m-auto ${design === '0' ? 'rounded-[50px] border-[#FFED63]' : 'rounded-[14px] border-[#FDA62D]'}   `}>
                     <div onClick={e => setSelectedButton(1)} className={`${selectedButton === 1 && (design === '0' ? 'bg-[#FFED63]' : 'gradient-tourToggle')} ${design === '0' ? 'rounded-[50px]' : 'rounded-[12px]'}  px-[20px] py-[5px] md:py-[8px]  cursor-pointer`}>
@@ -95,7 +93,7 @@ function TourModal({ setOpen, languageData, user }) {
                     </div>
                 </div>
             </div>
-
+*/}
             <div className='max-w-[375px] md:max-w-[600px] mac:!max-w-[400px] m-auto'>
                 <p className=' text-[16px] md:text-[24px] font-semibold text-center'>{languageData?.tourShortTitle}</p>
                 <Swiper
@@ -113,7 +111,7 @@ function TourModal({ setOpen, languageData, user }) {
                     {dataShort.map((item, index) => (
                         <SwiperSlide className='px-4' key={item}>
                             <img className='w-[375px] md:w-full m-auto mt-3' src={item.img} alt="hero" />
-                            <p className='saira font-medium text-center text-[14px] mx-2 lg:mt-4'>{selectedButton === 1 ? item.descShort : item.descLong}</p>
+                            <p className='saira font-medium text-center text-[14px] mx-2 lg:mt-4'>{item.descShort}</p>
 
                         </SwiperSlide>
                     ))}
