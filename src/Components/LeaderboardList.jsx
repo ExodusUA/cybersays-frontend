@@ -65,7 +65,7 @@ function LeaderboardList({ leaderboardData, languageData, day }) {
                                 <div className=' '>
                                     <div className={`bg-[#EAEAEA] ${design === '0' ? 'bg-opacity-40 ' : 'bg-opacity-20 '} backdrop-blur-lg rounded-[30px] text-center flex pr-3  justify-between items-center mt-2`}>
                                         <div className='flex items-center'>
-                                            <img className=' rounded-full w-[40px] h-[40px]' src={twoSt} alt="twoSt" />
+                                            <img className=' rounded-full w-[40px] h-[40px]' src={'https://picsum.photos/298/300'} alt="twoSt" />
                                             <p className='saira text-[12px] md:text-[14px] font-medium text-center ml-[15px] truncate w-[120px]'>{user?.email}</p>
                                         </div>
                                         <div className='leading-[14px]'>
