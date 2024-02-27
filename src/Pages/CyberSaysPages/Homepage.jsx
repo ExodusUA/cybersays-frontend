@@ -36,10 +36,10 @@ function Homepage({ user, imLiveURL, languageData,scrollToPage }) {
 
     const getButtonMarkup = (task) => {
         switch (task) {
-            case 0: return <button onClick={e => scrollToPage(1)} className={`w-full sm:w-[350px]   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn1}</button>
-            case 1: return <button onClick={e => scrollToPage(1)} className={`w-full sm:w-[350px]  bg-white   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn2}</button>
-            case 2: return <button onClick={e => scrollToPage(1)} className={`w-full  sm:w-[350px] bg-white   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn3}</button>
-            case 3: return <button onClick={e => scrollToPage(1)} className={`w-full sm:w-[350px] bg-white   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn4}</button>
+            case 0: return <button onClick={e => scrollToPage(2)} className={`w-full sm:w-[350px]   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn1}</button>
+            case 1: return <button onClick={e => scrollToPage(2)} className={`w-full sm:w-[350px]  bg-white   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn2}</button>
+            case 2: return <button onClick={e => scrollToPage(2)} className={`w-full  sm:w-[350px] bg-white   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn3}</button>
+            case 3: return <button onClick={e => scrollToPage(2)} className={`w-full sm:w-[350px] bg-white   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn4}</button>
         }
     }
 
@@ -95,7 +95,7 @@ function Homepage({ user, imLiveURL, languageData,scrollToPage }) {
                         </div>
                         <img className='w-[160px] md:w-[200px] md:mt-5 mac:!mt-0' src={imLiveLogo} alt="imLiveLogo" />
                         <div className='md:block hidden mt-[100px] mac:mt-[50px]'>
-                            <TimeCounter languageData={languageData} />
+                            <TimeCounter title={languageData?.timeCounterTitle2} languageData={languageData} />
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@ function Homepage({ user, imLiveURL, languageData,scrollToPage }) {
                 </div>
             </div>
             <div className='flex md:hidden absolute se:bottom-[160px] iphone:bottom-[156px] justify-center w-full max-w-[760px] m-auto'>
-                <TimeCounter languageData={languageData} />
+                <TimeCounter title={languageData?.timeCounterTitle2} languageData={languageData} />
             </div>
         </div>
     )

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import { otpSending, socialUserAuth } from '../../Requests/auth';
 import GoogleAuth from '../../Components/Buttons/GoogleButton';
@@ -100,7 +100,16 @@ function LoginForm({ languageData, referralID }) {
             console.log(error)
         }
     }
+    const emailParam = queryParams.get('email');
+    const [showButtons, setShowButtons] = useState(true);
 
+    useEffect(() => {
+        if (emailParam === '1') {
+            setShowButtons(false);
+        } else {
+            setShowButtons(true);
+        }
+    }, [emailParam]);
     return (
         <>
             <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
@@ -111,11 +120,13 @@ function LoginForm({ languageData, referralID }) {
                                 <input onChange={e => setEmail(e.target.value)} value={email} type="email" className='w-full h-[52px] rounded-[12px] px-4 text-gray saira' placeholder={languageData?.authEnterEmail} />
                                 <button type='submit' onClick={e => handleSubmit(e)} className='w-full absolute right-1 top-1 continue_button h-[44px] text-[14px] md:text-[16px] rounded-[12px] saira font-bold max-w-[125px] md:max-w-[155px]'>{languageData?.authContinue}</button>
                             </div>
-                            <div className='lg:flex items-center w-full mt-4 gap-4'>
-                                <GoogleAuth loginViaGoogle={loginViaGoogle} languageData={languageData} />
-                                <FacebookButton loginViaFacebook={loginViaFacebook} languageData={languageData} />
+                            <div className={`${showButtons ? '' : 'hidden'}`}>
+                                <div className='lg:flex items-center w-full mt-4 gap-4'>
+                                    <GoogleAuth loginViaGoogle={loginViaGoogle} languageData={languageData} />
+                                    <FacebookButton loginViaFacebook={loginViaFacebook} languageData={languageData} />
+                                </div>
+                                <DiscordButton languageData={languageData} />
                             </div>
-                            <DiscordButton languageData={languageData} />
                         </div>
                     </form>
                 </ReCAPTCHA>

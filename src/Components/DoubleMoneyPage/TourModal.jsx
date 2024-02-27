@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import close from '../../images/CyberSaysPage/closeMenu.png'
-import hero from '../../images/CyberSaysPage/tourHero.png'
+import video1 from '../../images/NewDesign/video/video1.mp4'
+import video2 from '../../images/NewDesign/video/video2.mp4'
+import video3 from '../../images/NewDesign/video/video3.mp4'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
@@ -12,16 +14,19 @@ function TourModal({ setOpen, languageData, user }) {
 
     const dataShort = [
         {
-            img: design === '0' ? hero : require('../../images/NewDesign/tourHero.png'),
-            descShort: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+            video: video1,
+            title: 'Feel like royalty!',
+            descShort: 'Win a Vegas Weekend and be treated like a king while enjoying the company of two stunning porn stars.'
         },
         {
-            img: design === '0' ? hero : require('../../images/NewDesign/tourHero.png'),
-            descShort: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'
+            video: video2,
+            title: 'Win the ultimate Vegas getaway!',
+            descShort: 'Experience the thrill of Sin City with two porn stars. What happens in Vegas, stays in Vegas!'
         },
         {
-            img: design === '0' ? hero : require('../../images/NewDesign/tourHero.png'),
-            descShort: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt'
+            video: video3,
+            title: 'Join CyberSays for your chance to win big!',
+            descShort: 'Picture yourself in Vegas surrounded by money, women, and casino excitement. Enter now and live the dream!'
         },
     ]
 
@@ -95,7 +100,7 @@ function TourModal({ setOpen, languageData, user }) {
             </div>
 */}
             <div className='max-w-[375px] md:max-w-[600px] mac:!max-w-[400px] m-auto'>
-                <p className=' text-[16px] md:text-[24px] font-semibold text-center'>{languageData?.tourShortTitle}</p>
+                
                 <Swiper
                     pagination={{ clickable: true }}
                     modules={[Pagination]}
@@ -110,7 +115,10 @@ function TourModal({ setOpen, languageData, user }) {
                 >
                     {dataShort.map((item, index) => (
                         <SwiperSlide className='px-4' key={item}>
-                            <img className='w-[375px] md:w-full m-auto mt-3' src={item.img} alt="hero" />
+                            <p className=' text-[16px] md:text-[22px] font-semibold text-center'>{item.title}</p>
+                            <video loop autoPlay className='w-[375px] h-[300px] object-cover md:w-full m-auto mt-3 rounded-[12px]'>
+                                <source src={item.video} type="video/mp4" />
+                            </video>
                             <p className='saira font-medium text-center text-[14px] mx-2 lg:mt-4'>{item.descShort}</p>
 
                         </SwiperSlide>
