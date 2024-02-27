@@ -9,21 +9,6 @@ function LiveFeed({ user }) {
 
     const [feedList, setFeedList] = useState([])
 
-    const socket = io(process.env.REACT_APP_CHAT_URL, {
-        path: '/api/socket',
-        body: {
-            userId: user?.id
-        }
-    });
-
-    useEffect(() => {
-        socket.on('liveFeedUpdate', function (data) {
-            let newFeed = data.filter(item => !feedList.includes(item));
-            setFeedList([...newFeed, ...feedList]);
-            console.log('new events', newFeed);
-        });
-    }, []);
-
     useEffect(() => {
         console.log('feedList', feedList);
     }, [feedList])
