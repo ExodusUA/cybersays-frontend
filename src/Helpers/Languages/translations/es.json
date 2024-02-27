@@ -77,6 +77,7 @@
     "homepageBtn3": "3/4: Gasta para obtener un reembolso del 200% 🤑",
     "homepageBtn4": "Gana el fin de semana en Vegas 💃",
     "timeCounterTitle": "Gana un increíble viaje a Vegas que el dinero no puede comprar",
+    "timeCounterTitle2": "Time of daily competition to end",
     "timeCounterDays": "Días",
     "timeCounterHours": "Horas",
     "timeCounterMinutes": "Minutos",
@@ -407,5 +408,13 @@
                 "- Affiliation Terms"
             ]
         }
-    ]
+    ],
+    "dataMessageDesc1": "Hey there! Ready to elevate your online experience? Join CyberSays and dive into the excitement! Sign up, complete the ImLive offer, and you could be our next big winner!",
+    "dataMessageDesc2": "Hey friend! Looking for some thrills? Join CyberSays today for a chance to win big! Don't miss out on the fun—sign up, complete the ImLive offer, and let the competition begin!",
+    "dataMessageDesc3": "Hey, fancy some fun and rewards? CyberSays is where it's at! Sign up now, complete the ImLive offer, and get in on the action. Your next adventure could be just a click away!",
+    "dataMessageDesc4": "Hey you! Want to spice up your online journey? CyberSays is the place to be! Sign up, complete the ImLive offer, and start competing for awesome prizes. Let's make some memories together!",
+    "dataMessageDesc5": "Hey, feeling lucky? Join CyberSays and put your luck to the test! Sign up, complete the ImLive offer, and get ready to win big. Your next big adventure awaits!",
+    "dataMessageDesc6": "Hey, looking for some excitement? CyberSays is calling your name! Sign up now, complete the ImLive offer, and step into the world of competition. Don't wait—your chance to win awaits!",
+    "dataMessageDesc7": "Ready for an adventure? Join CyberSays today, dive into the ImLive offer, and take your shot at victory in our thrilling competitions. The excitement is just a click away!",
+    "dataMessageDesc8": "Looking for some fun and rewards? CyberSays has it all! Sign up now, complete the ImLive offer, and get in on the action. Your next win could be right around the corner!"
 }

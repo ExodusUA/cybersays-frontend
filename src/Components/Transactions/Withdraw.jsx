@@ -4,13 +4,16 @@ import social1 from '../../images/CyberSaysPage/socialApple.png'
 import social2 from '../../images/CyberSaysPage/socialNetflix.png'
 import social3 from '../../images/CyberSaysPage/socialSpotify.png'
 import { useDesign } from '../../Helpers/Design/DesignContext'
+import Confirm from './Confirm'
 
 
 function Withdraw({ user, setOpen, languageData }) {
     const { design } = useDesign()
 
     const [selectedPayment, setSelectedPayment] = useState(null)
-
+    const [email, setEmail] = useState(null)
+    const [confirm, setConfirm] = useState(false)
+    const [error, setError] = useState(false)
     const paymentMethods = [
         {
             id: 1,
@@ -45,6 +48,7 @@ function Withdraw({ user, setOpen, languageData }) {
                     </div>
                 </div>
                 <p className='text-[18px] md:text-[32px] font-semibold text-center my-2'>{languageData?.withdrawTitle2}</p>
+                {/*
                 <div className={`max-h-[320px] overflow-scroll border-b-[2px] ${design === '0' ? 'border-[#FFED63]' : 'gradient-withdrawBorder'} max-w-[375px] md:max-w-[600px] m-auto`}>
                     <div className='flex flex-wrap justify-between mt-2  m-auto'>
                         {paymentMethods.map((item, index) => (
@@ -64,11 +68,18 @@ function Withdraw({ user, setOpen, languageData }) {
                 <div className='flex justify-center'>
                     <p className={`text-[12px] md:text-[14px] font-semibold underline text-center saira cursor-pointer sm:mx-[80px] my-2 md:my-4 ${design === '0' ? 'text-white' : 'gradient-link'}`}>{languageData?.withdrawLink}</p>
                 </div>
+                */}
                 <div className='flex justify-center'>
-                    <button className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-2 max-w-[370px]  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white ' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>
+                    <input className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder='Enter your e-mail' />
+                </div>
+                <div className='flex justify-center mt-4'>
+                    <button className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-2 max-w-[600px]  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>
                 </div>
             </div>
-
+            {
+                confirm && <Confirm />
+            }
+            <Confirm />
         </div>
     )
 }

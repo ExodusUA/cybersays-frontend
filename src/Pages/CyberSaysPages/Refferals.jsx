@@ -279,7 +279,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                     </div>
                     <div className=' flex justify-center'>
                         <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  text-center max-w-[800px] mac:max-w-[unset] w-full py-1  px-2 ${design === '0' ? 'rounded-[50px]' : 'rounded-[14px] lg:rounded-[24px]'}`}>
-                            <p className='text-[14px]  sm:text-[24px] mac:!text-[мpx]  font-semibold max-w-[540px] mac:max-w-[unset] m-auto iphone:leading-[unset] se:leading-[16px] mac:!leading-[24px]'>{languageData?.refferalsTitle}</p>
+                            <p className='text-[14px]  sm:text-[24px] mac:!text-[мpx]  font-semibold max-w-[640px] mac:max-w-[unset] m-auto iphone:leading-[unset] se:leading-[16px] mac:!leading-[24px]'>{languageData?.refferalsTitle}</p>
                             <div className='flex justify-center gap-1'>
                                 <p className={`text-[12px] sm:text-[14px] font-medium saira flex justify-center items-center underline cursor-pointer ${design === '0' ? 'text-white' : 'gradient-link '}`} onClick={e => setReferralsOpen(true)}>
                                     {languageData?.refferalsLink1}
