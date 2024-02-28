@@ -1,36 +1,17 @@
 import React, { useState } from 'react'
 import close from '../images/CyberSaysPage/closeMenu.png'
 import { useDesign } from '../Helpers/Design/DesignContext'
-import win from '../images/NewDesign/win.png'
-import seven from '../images/NewDesign/777.png'
 import point1 from '../images/NewDesign/newPoint1.png'
 import point2 from '../images/NewDesign/newPoint2.png'
 import point3 from '../images/NewDesign/newPoint3.png'
-import userAPI from '../Requests/user'
+import { PDFDownloadLink, Document, Page, View, Text } from '@react-pdf/renderer'
 
-function WinVegasModal({ setOpen, languageData }) {
+
+function WinVegasModal({ setOpen, languageData, user }) {
     const [pdfLoading, setPdfLoading] = useState(false)
 
     const { design } = useDesign()
 
-    const getPDF = async () => {
-        if (pdfLoading === true) return
-        setPdfLoading(true)
-    
-        const pdf = await userAPI.getPDF()
-        const blob = new Blob([pdf.data], { type: 'application/pdf' })
-        const blobUrl = window.URL.createObjectURL(blob)
-        const link = document.createElement('a')
-        link.href = blobUrl
-        link.setAttribute('download', 'CyberSays.pdf')
-        link.click();
-        link.remove();
-        URL.revokeObjectURL(blobUrl);
-    
-    
-        setPdfLoading(false)
-    
-      }
     return (
         <div className='w-screen h-screen fixed top-0 z-[99999] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 lg:flex'>
             <div className='max-w-[600px] m-auto relative'>
@@ -65,7 +46,14 @@ function WinVegasModal({ setOpen, languageData }) {
                         <ul className='list-disc ml-[60px] mt-1'>
                             <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint2li1}</li>
                             <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint2li2}</li>
-                            <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint2li3Span1} <span onClick={e => getPDF()} className='saira text-[12px] lg:text-[14px] font-bold underline cursor-pointer'>{languageData.winPoint2li3Link}</span> {languageData.winPoint2li3Span2}</li>
+                            <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint2li3Span1} 
+                                <PDFDownloadLink className='cursor-pointer' document={<MyDocument {...user} />} fileName="cybersays.pdf">
+                                    {({ blob, url, loading, error }) =>
+                                        <span className='saira text-[12px] lg:text-[14px] font-bold underline cursor-pointer mx-1'>{languageData.winPoint2li3Link}</span>
+                                    }
+                                </PDFDownloadLink>
+
+                                {languageData.winPoint2li3Span2}</li>
 
                         </ul>
                     </div>
@@ -87,3 +75,23 @@ function WinVegasModal({ setOpen, languageData }) {
 }
 
 export default WinVegasModal
+
+
+const MyDocument = (userData) => (
+    <Document>
+        <Page size="A4" style={{ padding: '40px' }}>
+            <View>
+                <Text>Company's Address: ---</Text>
+            </View>
+            <View>
+                <Text>User ID: {userData?.id}</Text>
+            </View>
+            <View>
+                <Text>Name:</Text>
+            </View>
+            <View>
+                <Text>Signature:</Text>
+            </View>
+        </Page>
+    </Document>
+);

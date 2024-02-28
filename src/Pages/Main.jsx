@@ -335,7 +335,7 @@ function Main({ languageData }) {
                 chatModal && <ChatModal languageData={languageData} setOpen={setChatModal} user={userData} userCountry={userCountry} />
             }
             {
-                winMoadal && <WinVegasModal languageData={languageData} setOpen={setWinModal} />
+                winMoadal && <WinVegasModal languageData={languageData} setOpen={setWinModal} user={userData} />
             }
             {
                 rulesModal && <CompetitionRules setOpen={setRulesModal} languageData={languageData} />
