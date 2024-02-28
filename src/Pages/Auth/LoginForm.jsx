@@ -100,7 +100,7 @@ function LoginForm({ languageData, referralID }) {
             console.log(error)
         }
     }
-    const emailParam = queryParams.get('email');
+    const emailParam = window.localStorage.getItem('email');
     const [showButtons, setShowButtons] = useState(true);
 
     useEffect(() => {
@@ -109,6 +109,8 @@ function LoginForm({ languageData, referralID }) {
         } else {
             setShowButtons(true);
         }
+
+        window.localStorage.removeItem('email');
     }, [emailParam]);
     return (
         <>

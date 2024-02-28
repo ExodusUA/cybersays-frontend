@@ -46,7 +46,7 @@ function WinVegasModal({ setOpen, languageData, user }) {
                         <ul className='list-disc ml-[60px] mt-1'>
                             <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint2li1}</li>
                             <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint2li2}</li>
-                            <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint2li3Span1} 
+                            <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint2li3Span1}
                                 <PDFDownloadLink className='cursor-pointer' document={<MyDocument {...user} />} fileName="cybersays.pdf">
                                     {({ blob, url, loading, error }) =>
                                         <span className='saira text-[12px] lg:text-[14px] font-bold underline cursor-pointer mx-1'>{languageData.winPoint2li3Link}</span>
@@ -80,17 +80,19 @@ export default WinVegasModal
 const MyDocument = (userData) => (
     <Document>
         <Page size="A4" style={{ padding: '40px' }}>
-            <View>
-                <Text>Company's Address: ---</Text>
+            <Text style={{ textAlign: 'center', fontSize: '24px', fontWeight: 700 }}>Free Post Form</Text>
+            <View style={{ display: 'flex', alignItems: 'left', marginTop: '20px' }}>
+                <Text style={{ fontSize: '12px' }}><Text style={{ fontWeight: 700 }}>Company's Address:</Text></Text>
+                <Text style={{ fontSize: '12px' }}>Agias Zonis & Thessalonikis, Nicolaou Pentadromos Centre, Office 903A, Limassol, Cyprus, 3025</Text>
             </View>
-            <View>
-                <Text>User ID: {userData?.id}</Text>
+            <View style={{ marginTop: '20px' }}>
+                <Text style={{ fontSize: '12px' }}><Text style={{ fontWeight: 700 }}>User ID:</Text> {userData?.id}</Text>
             </View>
-            <View>
-                <Text>Name:</Text>
+            <View style={{ marginTop: '20px' }}>
+                <Text style={{ fontSize: '12px' }}><Text style={{ fontWeight: 700 }}>Name:</Text> ____________________________</Text>
             </View>
-            <View>
-                <Text>Signature:</Text>
+            <View style={{ marginTop: '20px' }}>
+                <Text style={{ fontSize: '12px' }}><Text style={{ fontWeight: 700 }}>Signature:</Text> ____________________________</Text>
             </View>
         </Page>
     </Document>

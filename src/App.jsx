@@ -20,6 +20,10 @@ function App() {
     window.location.href = '/login?ref=' + params.get('uid')
   };
 
+  if (params.get('email')) {
+    window.localStorage.setItem('email', params.get('email'))
+  }
+
   const queryClient = new QueryClient()
 
   mixpanel.init(process.env.REACT_APP_MIXPANEL_PROJECT_TOKEN);
