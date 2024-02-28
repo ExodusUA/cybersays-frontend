@@ -8,8 +8,9 @@ import notReady from '../../images/CyberSaysPage/offerFalse.png';
 import { Link } from 'react-router-dom';
 import { useDesign } from '../../Helpers/Design/DesignContext';
 import ToolTip1 from '../../Components/ToolTip1';
+import doubleIcon from '../../images/NewDesign/doubleIcon.svg'
 
-function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModal,scrollToPage }) {
+function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModal, scrollToPage }) {
 
     console.log('user', user)
 
@@ -64,7 +65,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
 
     const getButtonMarkup = (task) => {
         switch (task) {
-            case 0: return <button onClick={e => scrollToPage(2)} className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] text-black text-[18px] saira font-semibold  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn1}</button>
+            case 0: return <button onClick={e => scrollToPage(2)} className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] text-black text-[18px] saira font-semibold flex justify-center items-center ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn1}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
             case 1: return <button onClick={e => scrollToPage(2)} className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] text-black mobMax:text-[16px] text-[18px] saira font-semibold ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn2}</button>
             case 2: return <button onClick={e => scrollToPage(2)} className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63] text-black mobMax:text-[16px] text-[18px] saira font-semibold ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn3}</button>
             case 3: return <button onClick={e => scrollToPage(2)} className={`w-full md:w-[380px] bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn4}</button>
@@ -80,32 +81,39 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
 
                     <div>
                         <img className='se:w-[280px] iphone:w-[345px] md:w-[770px] iphone:mt-[-40px] mob:mt-0 m-auto md:mt-[-100px] mac2:!mt-[-50px] se:mt-[-30px] mac:!w-[500px] mac2:!w-[500px]' src={design === '0' ? hero : require('../../images/NewDesign/RaffleTicket/hero_image.png')} alt="heroRaffle" />
-                        <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[30px] text-center flex py-3 md:py-3 mac:!py-2  px-2 mt-[-20px] md:mt-[-80px] justify-center relative z-1' >
+                        <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[30px] text-center flex py-3 md:py-3 mac:!py-2  px-2 mt-[-20px] md:mt-[-80px] ${isTaskCompleted === false && 'mt-[-60px] md:!mt-[-120px]'} justify-center relative z-1`} >
                             {
 
                                 isTaskCompleted === true
-                                    ? <div className='flex justify-between items-start w-full'>
-                                        <div className='text-center w-full'>
-                                            <Link target='_blank' to={imLiveURL}><button className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold p-2 md:py-3 md:w-[95%] ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.raffleLeftBtn}</button></Link>
-                                            <p className='saira text-[12px] md:text-[14px] font-medium mt-2'>{languageData?.raffleLeftSection1} {languageData?.raffleLeftSection2}</p>
+                                    ? <div>
+                                        <p className='text-[18px] md:text-[24px] font-medium saira text-center mx-4 se:mb-0 iphone:mb-2 mac:!mb-1  md:text-center'>{languageData?.raffleUnderBtn2} </p>
+                                        <div className='flex justify-between items-start w-full '>
+                                            <div className='text-center w-full'>
+                                                <Link target='_blank' to={imLiveURL}><button className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold p-2 md:py-3 md:w-[95%] ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.raffleLeftBtn}</button></Link>
+                                                <p className='saira text-[12px] md:text-[14px] font-medium mt-1'>{languageData?.raffleLeftSection1} </p>
+                                                <p className='saira text-[12px] md:text-[14px] font-medium'> {languageData?.raffleLeftSection2}</p>
 
-                                        </div>
-                                        <div className='text-center w-full'>
-                                            <button onClick={e => shareRefferalLink()} className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold p-2 md:py-3 md:w-[95%] ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{
-                                                isLinkCopied === false
-                                                    ? languageData?.raffleRightBtn
-                                                    : languageData?.raffleRightBtn2
-                                            }</button>
-                                            <p className='saira text-[12px] md:text-[14px] font-medium mt-2'>{languageData?.raffleRightSection1} {languageData?.raffleRightSection2}</p>
+                                            </div>
+                                            <div className='text-center w-full'>
+                                                <button onClick={e => shareRefferalLink()} className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold p-2 md:py-3 md:w-[95%] ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{
+                                                    isLinkCopied === false
+                                                        ? languageData?.raffleRightBtn
+                                                        : languageData?.raffleRightBtn2
+                                                }</button>
+                                                <p className='saira text-[12px] md:text-[14px] font-medium mt-1'>{languageData?.raffleRightSection1}</p>
+                                                <p className='saira text-[12px] md:text-[14px] font-medium'>{languageData?.raffleRightSection2}</p>
 
+                                            </div>
                                         </div>
                                     </div>
                                     : <div className='flex justify-center'>
                                         <div>
                                             <p className='text-[18px] md:text-[24px] font-medium saira text-center mx-4 se:mb-0 iphone:mb-2 mac:!mb-1  md:text-center'>{languageData?.raffleUnderBtn} </p>
-                                            {
-                                                getButtonMarkup(lastTask)
-                                            }
+                                            <div className='flex justify-center'>
+                                                {
+                                                    getButtonMarkup(lastTask)
+                                                }
+                                            </div>
                                         </div>
                                     </div>
                             }
@@ -117,8 +125,8 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
 
                         isTaskCompleted === false
                             ? <div className=' text-center mx-1 md:mx-0 md:py-2 relative z-1 mac2:!mt-[-20px]'>
-                                <p className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] text-[18px] md:text-[32px] mac2:!text-[24px] font-semibold py-2'>{languageData?.raffleTitle1}</p>
-                                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] mt-2 py-3'>
+                                <p className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] text-[18px] md:text-[32px] mac2:!text-[18px] px-12 lg:px-0 font-semibold py-2'>{languageData?.raffleTitle1}</p>
+                                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] mt-2 py-1 lg:py-3'>
                                     <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center mx-4 iphone:leading-4 se:leading-[14px]'>
                                         {languageData?.raffleSubTitle1}
                                         <img className='w-[12px] md:w-[24px] h-[12px] md:h-[24px] mr-[2px]' src={ready} alt="ready" />
