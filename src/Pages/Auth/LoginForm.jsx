@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import { otpSending, socialUserAuth } from '../../Requests/auth';
 import GoogleAuth from '../../Components/Buttons/GoogleButton';
@@ -100,17 +100,25 @@ function LoginForm({ languageData, referralID }) {
             console.log(error)
         }
     }
-    const emailParam = window.localStorage.getItem('email');
+
+    const params = new URLSearchParams(window.location.search);
+
+    const emailParam = params.get('email');
     const [showButtons, setShowButtons] = useState(true);
 
     useEffect(() => {
+        //delete email params from url
+
+
+        
+
         if (emailParam === '1') {
             setShowButtons(false);
         } else {
             setShowButtons(true);
         }
 
-        window.localStorage.removeItem('email');
+       
     }, [emailParam]);
     return (
         <>

@@ -62,8 +62,8 @@ function Withdraw({ user, setOpen, languageData }) {
                                 {paymentMethods.map((item, index) => (
                                     <div key={index} className='w-[50%] mb-2'>
                                         <img
-                                            onClick={e => setSelectedPayment(index)}
-                                            className={`${selectedPayment === index && (design === '0' ? 'outline outline-[2px] !outline-[#FFED63]' : 'outline outline-[2px] !outline-[#A2DBF0]')} border-none w-[160px] md:w-[295px] h-[140px] md:h-[unset] cursor-pointer rounded-[14px] object-cover`}
+                                            onClick={e => setSelectedPayment(item.name)}
+                                            className={`${selectedPayment === item.name && (design === '0' ? 'outline outline-[2px] !outline-[#FFED63]' : 'outline outline-[2px] !outline-[#A2DBF0]')} border-none w-[160px] md:w-[295px] h-[140px] md:h-[unset] cursor-pointer rounded-[14px] object-cover`}
                                             src={item.image}
                                             alt="social"
                                         />
@@ -116,10 +116,7 @@ function Withdraw({ user, setOpen, languageData }) {
                     <p className={`text-[12px] md:text-[14px] font-semibold underline text-center saira cursor-pointer sm:mx-[80px] my-2 md:my-4 ${design === '0' ? 'text-white' : 'gradient-link'}`}>{languageData?.withdrawLink}</p>
                 </div>
                 */}
-                {/*
-                
-                
-                */}
+
             </div>
             {
                 confirm && <Confirm setOpen={setConfirm} languageData={languageData} />
