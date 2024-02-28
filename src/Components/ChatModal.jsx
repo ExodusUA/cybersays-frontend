@@ -169,7 +169,7 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
             userid: user.id,
             country: selectedCountry.toUpperCase(),
             token: '',
-            avatar: 'https://146.59.14.103:3014' + user.avatar
+            avatar: ''
         });
         setMessage('');
     };
@@ -198,7 +198,7 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
             userid: user.id,
             country: selectedCountry.toUpperCase(),
             token: '',
-            avatar: 'https://146.59.14.103:3014' + user.avatar
+            avatar: ''
         });
         setGifModal(false)
     }
