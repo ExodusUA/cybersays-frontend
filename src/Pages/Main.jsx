@@ -135,8 +135,6 @@ function Main({ languageData }) {
         }
     })
 
-
-
     useEffect(() => {
 
         /* MIXPANEL */
@@ -318,13 +316,13 @@ function Main({ languageData }) {
 
             }
             {
-                menuOpen === true && <ModalMenu languageData={languageData} setChatModal={setChatModal} chatModal={chatModal} siteData={siteData} scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
+                menuOpen === true && <ModalMenu userCountry={userCountry} languageData={languageData} setChatModal={setChatModal} chatModal={chatModal} siteData={siteData} scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
             }
             {
                 tourModal && <TourModal user={userData} languageData={languageData} setOpen={setTourModal} />
             }
             {
-                withdrawModal && <Withdraw languageData={languageData} setOpen={setWithdrawModal} user={userData} />
+                withdrawModal && <Withdraw languageData={languageData} setOpen={setWithdrawModal} user={userData} userCountry={userCountry} />
             }
 
             {

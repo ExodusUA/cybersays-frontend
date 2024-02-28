@@ -9,7 +9,8 @@ import Verification from './Verification'
 import PIX from './PIX'
 
 
-function Withdraw({ user, setOpen, languageData }) {
+function Withdraw({ user, setOpen, languageData, userCountry }) {
+    console.log('User Country: ', userCountry)
     const { design } = useDesign()
 
     const [selectedPayment, setSelectedPayment] = useState(null)
@@ -17,25 +18,36 @@ function Withdraw({ user, setOpen, languageData }) {
     const [confirm, setConfirm] = useState(false)
     const [error, setError] = useState(false)
     const [step, setStep] = useState(0)
-    const paymentMethods = [
-        {
-            id: 1,
-            name: 'Pix',
-            image: social1,
-        },
-        {
+
+    const [paymentMethods, setPaymentMethods] = useState([])
+
+    useEffect(() => {
+        if (userCountry === null || userCountry === undefined) return
+
+        let methods = []
+        methods.push({
             id: 2,
-            name: 'Gift',
-            image: social2,
+            name: 'xoxoday',
+            image: social2
+        })
+
+        if (userCountry === 'BR' || userCountry === 'UA') {
+            methods.push({
+                id: 1,
+                name: 'pix',
+                image: social1
+            })
         }
 
-    ]
+        setPaymentMethods(methods)
+
+    }, [userCountry])
 
     return (
         <div>
             <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4'>
                 <div className={`flex ${step === 0 ? 'justify-end' : ' justify-between'}  max-w-[600px] m-auto md:my-4`}>
-                    <svg onClick={step === 1 ? () => setStep(0) : null || step === 2 ? () => setStep(1) : null} className={`${step === 0 ? 'hidden' : 'block'} cursor-pointer`} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <svg onClick={e => {if (step === 0) return; setStep(step - 1)}} className={`${step === 0 ? 'hidden' : 'block'} cursor-pointer`} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M17 22L7 12L17 2" stroke="url(#paint0_linear_26_11821)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         <defs>
                             <linearGradient id="paint0_linear_26_11821" x1="17" y1="11.8039" x2="7" y2="11.8039" gradientUnits="userSpaceOnUse">
@@ -58,7 +70,7 @@ function Withdraw({ user, setOpen, languageData }) {
                     step === 0 && <div>
                         <p className='text-[18px] md:text-[32px] font-semibold text-center my-2'>{languageData?.withdrawTitle2}</p>
                         <div className={`max-h-[320px]  max-w-[375px] md:max-w-[600px] m-auto`}>
-                            <div className='flex flex-wrap justify-between mt-2  m-auto'>
+                            <div className='flex flex-wrap  justify-center mt-2  m-auto'>
                                 {paymentMethods.map((item, index) => (
                                     <div key={index} className='w-[50%] mb-2'>
                                         <img
@@ -80,7 +92,9 @@ function Withdraw({ user, setOpen, languageData }) {
                 }
                 {
                     step === 1 && <div>
-                        <p className='text-[18px] md:text-[32px] font-semibold text-center my-2'>{languageData?.withdrawTitle2}</p>
+                        <p className='text-[18px] md:text-[32px] font-semibold text-center my-2'>{
+                            selectedPayment === 'pix' ? languageData?.PIXTitle : languageData?.withdrawTitle2
+                        }</p>
                         <div className='flex justify-center mt-4'>
                             <input className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder={languageData.withdrawInputEmail} />
                         </div>
