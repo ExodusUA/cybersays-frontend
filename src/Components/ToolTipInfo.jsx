@@ -12,8 +12,8 @@ function ToolTipInfo({ languageData, setToolInfo }) {
     const { design } = useDesign()
 
     return (
-        <div className=' w-[97.5%] max-w-[600px] fixed left-[5px] sm:left-[40px] bottom-[30px] sm:bottom-[70px] z-[999999999999] '>
-            <div className=' bg-[#0A1225] bg-opacity-90 backdrop-blur-sm mt-[20px] rounded-[12px] lg:rounded-[10x] p-2 lg:p-4 lg:pb-6'>
+        <div className=' w-[97.5%] max-w-[600px] fixed left-[5px] sm:left-[37px] bottom-[30px] sm:bottom-[70px] z-[999999999999] '>
+            <div onClick={e => setToolInfo(false)} className=' cursor-pointer bg-[#0A1225] bg-opacity-90 backdrop-blur-sm mt-[20px] rounded-[12px] lg:rounded-[10x] p-2 lg:p-4 lg:pb-6 '>
                 <div className='flex justify-end '>
                     <img onClick={e => setToolInfo(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>

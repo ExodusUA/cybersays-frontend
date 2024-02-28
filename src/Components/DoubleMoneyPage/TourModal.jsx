@@ -15,18 +15,18 @@ function TourModal({ setOpen, languageData, user }) {
     const dataShort = [
         {
             video: video1,
-            title: 'Feel like royalty!',
-            descShort: 'Win a Vegas Weekend and be treated like a king while enjoying the company of two stunning porn stars.'
+            title: languageData.tourSlide1Title,
+            descShort: languageData.tourSlide1SubTitle
         },
         {
             video: video2,
-            title: 'Win the ultimate Vegas getaway!',
-            descShort: 'Experience the thrill of Sin City with two porn stars. What happens in Vegas, stays in Vegas!'
+            title: languageData.tourSlide2Title,
+            descShort: languageData.tourSlide2SubTitle
         },
         {
             video: video3,
-            title: 'Join CyberSays for your chance to win big!',
-            descShort: 'Picture yourself in Vegas surrounded by money, women, and casino excitement. Enter now and live the dream!'
+            title: languageData.tourSlide3Title,
+            descShort: languageData.tourSlide3SubTitle
         },
     ]
 
