@@ -6,7 +6,7 @@ import { useQuery } from '@tanstack/react-query'
 import userAPI from '../../Requests/user'
 import moment from 'moment'
 
-function TicketsHistory({ setOpen, languageData }) {
+function TicketsHistory({ setOpen, languageData, user }) {
 
     const [ticketsData, setTicketsData] = useState(null)
 
@@ -21,7 +21,7 @@ function TicketsHistory({ setOpen, languageData }) {
     function proccessData(proccessData) {
         if (proccessData === null) return
 
-        
+
 
         let data = proccessData?.map(ticket => {
             return {
@@ -53,8 +53,8 @@ function TicketsHistory({ setOpen, languageData }) {
             case 'doubling_referral': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={joker} alt="transaction" />
-                    <div className='w-[200px]'>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection1Left}</p>
+                    <div className='w-[200px] md:w-[300px]'>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection1Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
@@ -66,8 +66,8 @@ function TicketsHistory({ setOpen, languageData }) {
             case 'email_referral': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={joker} alt="transaction" />
-                    <div className='w-[200px]'>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection2Left}</p>
+                    <div className='w-[200px] md:w-[300px]'>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection2Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
@@ -79,8 +79,8 @@ function TicketsHistory({ setOpen, languageData }) {
             case 'buying_credits': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={joker} alt="transaction" />
-                    <div className='w-[200px]'>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection3Left}</p>
+                    <div className='w-[200px] md:w-[300px]'>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection3Left} {amount} {languageData?.ticketsSection3Left2}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira '>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
@@ -97,8 +97,8 @@ function TicketsHistory({ setOpen, languageData }) {
             case 'doubling_referral': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={coin} alt="transaction" />
-                    <div className='w-[200px]'>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection4Left}</p>
+                    <div className='w-[200px] md:w-[300px]'>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection4Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
@@ -110,8 +110,8 @@ function TicketsHistory({ setOpen, languageData }) {
             case 'email_referral': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={coin} alt="transaction" />
-                    <div className='w-[200px]'>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection5Left}</p>
+                    <div className='w-[200px] md:w-[300px]'>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection5Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
@@ -123,8 +123,8 @@ function TicketsHistory({ setOpen, languageData }) {
             case 'buying_credits': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={coin} alt="transaction" />
-                    <div className='w-[200px]'>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection6Left}</p>
+                    <div className='w-[200px] md:w-[300px]'>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection6Left} {amount} {languageData?.ticketsSection6Left2}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira '>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>

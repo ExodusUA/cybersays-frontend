@@ -233,10 +233,10 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
         withdrawModal && <Withdraw languageData={languageData} setOpen={setWithdrawModal} user={user} />
       }
       {
-        transactionsModal && <TransactionHistory languageData={languageData} setOpen={setTransactionsModal} />
+        transactionsModal && <TransactionHistory languageData={languageData} setOpen={setTransactionsModal} user={user} />
       }
       {
-        ticketsModal && <TicketsHistory languageData={languageData} setOpen={setTicketsModal} />
+        ticketsModal && <TicketsHistory languageData={languageData} setOpen={setTicketsModal} user={user} />
       }
       {
         chatModal && <ChatModal languageData={languageData} setOpen={setChatModal} user={user} />

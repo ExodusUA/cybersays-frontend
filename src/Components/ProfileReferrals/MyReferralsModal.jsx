@@ -69,12 +69,12 @@ console.log('user', user)
                 {
                     referralData.referrals && referralData.referrals.length > 0
                         ? <>
-                            <p className='text-[18px] md:text-[24px] font-semibold text-center mt-4'>My referrals</p>
-                            <p className='saira text-[16px] font-semibold text-center'>See if your referred friends took the ImLive double-money offer—only then can you take them to Vegas if you win</p>
+                            <p className='text-[18px] md:text-[24px] font-semibold text-center mt-4'>{languageData.myReferralsTitle}</p>
+                            <p className='saira text-[16px] font-semibold text-center'>{languageData.myReferralsSubTitle}</p>
                             {
                                 referralData.referredBy && <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center py-1 md:py-2 mt-3'>
-                                    <p className='text-[14px] md:text-[24px] font-semibold text-center flex justify-center md:mb-1'>You’re referred by: <p className='ml-1 truncate w-[100px] md:w-[170px]'>{referralData.referredBy}</p></p>
-                                    <p className='saira text-[12px] font-semibold text-center mx-5'>If your referrer took ImLive's double-money offer, you can pick them for a Vegas trip if you win.</p>
+                                    <p className='text-[14px] md:text-[24px] font-semibold text-center flex justify-center md:mb-1'>{languageData.myReferralsDoneTitle} <p className='ml-1 truncate w-[100px] md:w-[170px]'>{referralData.referredBy}</p></p>
+                                    <p className='saira text-[12px] font-semibold text-center mx-5'>{languageData.myReferralsDoneSubTitle}</p>
                                 </div>
                             }
                             <div className='mt-4'>
@@ -84,16 +84,16 @@ console.log('user', user)
                                     </div>
                                     <div className={`w-[2px] h-[50px] ${design === '0' ? 'bg-[#FFED63]' : 'gradient-homepageBtn'}`}></div>
                                     <div className='w-[120px] md:w-[280px] truncate md:ml-[-20px]'>
-                                        <p className='text-[14px] font-semibold '>Name</p>
+                                        <p className='text-[14px] font-semibold '>{languageData.myReferralsSheet1}</p>
                                     </div>
                                     <div className={`w-[2px] h-[50px] ${design === '0' ? 'bg-[#FFED63]' : 'gradient-homepageBtn'}`}></div>
                                     <div className='w-[70px] md:w-[30px]'>
-                                        <p className='text-[14px] font-semibold md:ml-[-5px]'>Took Offer</p>
+                                        <p className='text-[14px] font-semibold md:ml-[-5px]'>{languageData.myReferralsSheet2}</p>
                                     </div>
 
                                     <div className={`w-[2px] h-[50px] ${design === '0' ? 'bg-[#FFED63]' : 'gradient-homepageBtn'}`}></div>
                                     <div className='w-[70px] md:w-[60px]'>
-                                        <p className='text-[14px] font-semibold md:ml-[-20px]'>Send Email</p>
+                                        <p className='text-[14px] font-semibold md:ml-[-20px]'>{languageData.myReferralsSheet3}</p>
                                     </div>
 
                                 </div>
@@ -122,7 +122,7 @@ console.log('user', user)
                                                 {
                                                     item.got_email === 'true'
                                                         ? <img className='w-[24px] h-[24px] m-auto md:ml-0' src={offerTrue} alt="offerTrue" />
-                                                        : <button onClick={e => sendEmail(item.email, item.id)} className={`w-full  border-[2px] ${design === '0' ? 'bg-white border-[#FFED63] rounded-[50px]' : 'gradient-homepageBtn border-transparent rounded-[12px]'}    text-black text-[18px] saira font-semibold cursor-pointer md:ml-[-20px]`}>Send</button>
+                                                        : <button onClick={e => sendEmail(item.email, item.id)} className={`w-full  border-[2px] ${design === '0' ? 'bg-white border-[#FFED63] rounded-[50px]' : 'gradient-homepageBtn border-transparent rounded-[12px]'}    text-black text-[18px] saira font-semibold cursor-pointer md:ml-[-20px]`}>{languageData.myReferralsSend}</button>
                                                 }
                                             </div>
 
@@ -132,16 +132,16 @@ console.log('user', user)
                             </div>
                         </>
                         : <div>
-                            <p className='text-[18px] font-semibold text-center mt-4'>Your referrals</p>
-                            <p className='saira text-[16px] font-semibold text-center'>lorem ipsum</p>
+                            <p className='text-[18px] font-semibold text-center mt-4'>{languageData.myReferralsTitle}</p>
+                            
                             {
                                 referralData.referredBy && <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[50px] text-center py-1 mt-3'>
-                                    <p className='text-[14px] font-semibold text-center flex justify-center'>You’re referred by: <p className='ml-1 truncate w-[100px]'>{referralData.referredBy}</p></p>
-                                    <p className='saira text-[12px] font-semibold text-center mx-5'>If your referrer took ImLive's double-money offer, you can pick them for a Vegas trip if you win.</p>
+                                    <p className='text-[14px] font-semibold text-center flex justify-center'>{languageData.myReferralsUnDoneTitle} <p className='ml-1 truncate w-[100px]'>{referralData.referredBy}</p></p>
+                                    <p className='saira text-[12px] font-semibold text-center mx-5'>{languageData.myReferralsUnDoneSubTitle}</p>
                                 </div>
                             }
 
-                            <p className='saira text-[16px] font-semibold text-center my-5'>You haven't referred friends yet</p>
+                            <p className='saira text-[16px] font-semibold text-center my-5'>{languageData.myReferralsSubTitle2}</p>
                             <button onClick={e => shareRefferalLink()} className={`w-full bg-white text-black text-[18px] saira font-semibold py-2 ${design === '0' ? ' rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>
                                 {
                                     isLinkCopied === false

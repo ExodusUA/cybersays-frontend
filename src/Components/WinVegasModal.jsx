@@ -5,6 +5,7 @@ import point1 from '../images/NewDesign/newPoint1.png'
 import point2 from '../images/NewDesign/newPoint2.png'
 import point3 from '../images/NewDesign/newPoint3.png'
 import { PDFDownloadLink, Document, Page, View, Text } from '@react-pdf/renderer'
+import { Link } from 'react-router-dom'
 
 
 function WinVegasModal({ setOpen, languageData, user }) {
@@ -68,6 +69,8 @@ function WinVegasModal({ setOpen, languageData, user }) {
                         </ul>
                     </div>
                     <p className='text-[18px] lg:text-[24px] text-center font-semibold gradient-goodluck mt-2'>{languageData.winPointEnd}</p>
+                    <Link onClick={e => setOpen(false)} to='/terms' ><p className='text-[8px] lg:text-[10px] text-center font-semibold text-[#D9D9D9] mt-2 underline'>{languageData.winPointEndLink}</p></Link>
+                    
                 </div>
             </div>
         </div>
