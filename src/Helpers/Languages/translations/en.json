@@ -423,7 +423,20 @@
     "dataMessageDesc5": "Hey, feeling lucky? Join CyberSays and put your luck to the test! Sign up, complete the ImLive offer, and get ready to win big. Your next big adventure awaits!",
     "dataMessageDesc6": "Hey, looking for some excitement? CyberSays is calling your name! Sign up now, complete the ImLive offer, and step into the world of competition. Don't wait—your chance to win awaits!",
     "dataMessageDesc7": "Ready for an adventure? Join CyberSays today, dive into the ImLive offer, and take your shot at victory in our thrilling competitions. The excitement is just a click away!",
-    "dataMessageDesc8": "Looking for some fun and rewards? CyberSays has it all! Sign up now, complete the ImLive offer, and get in on the action. Your next win could be right around the corner!"
-    
-
+    "dataMessageDesc8": "Looking for some fun and rewards? CyberSays has it all! Sign up now, complete the ImLive offer, and get in on the action. Your next win could be right around the corner!",
+    "tourSlide1Title": "Feel like royalty!",
+    "tourSlide1SubTitle": "Win a Vegas Weekend and be treated like a king while enjoying the company of two stunning porn stars.",
+    "tourSlide2Title": "Win the ultimate Vegas getaway!",
+    "tourSlide2SubTitle": "Experience the thrill of Sin City with two porn stars. What happens in Vegas, stays in Vegas!",
+    "tourSlide3Title": "Join CyberSays for your chance to win big!",
+    "tourSlide3SubTitle": "Picture yourself in Vegas surrounded by money, women, and casino excitement. Enter now and live the dream!",
+    "withdrawInputEmail": "Enter your e-mail",
+    "withdrawContinue": "Continue",
+    "verificationTitle": "OTP Verification",
+    "verificationSubTitle": "We have send you an One Time Password(OTP) to your email address",
+    "PIXTitle": "We are paying via PIX",
+    "PIXInpu1": "Chave Pix:",
+    "PIXInpu2": "CPF",
+    "withdrawConfirm": "Operação concluída com sucesso",
+    "withdrawError": "Operação não concluída. Verifique sua chave pix/cpf ou entre em contato com o seu banco."
 }

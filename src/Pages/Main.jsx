@@ -357,7 +357,7 @@ function Main({ languageData }) {
                 <img onClick={e => setChatModal(true)} className='w-[24px] sm:w-12 cursor-pointer' src={design === '0' ? chatImage : require('../images/NewDesign/chatBtn.png')} alt="Chat" />
             </div>
             <div className={`fixed left-2 bottom-4 sm:left-8 sm:bottom-8 z-[99] ${menuOpen && 'hidden'}`}>
-                <img onClick={e => setToolInfo(true)} className='w-[24px] sm:w-12 cursor-pointer' src={infoBtn} alt="Chat" />
+                <img onClick={e => setToolInfo(!toolInfo)} className='w-[24px] sm:w-12 cursor-pointer' src={infoBtn} alt="Chat" />
             </div>
             {
                 toolInfo && <ToolTipInfo setToolInfo={setToolInfo} languageData={languageData} />
