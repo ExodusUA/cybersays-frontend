@@ -41,7 +41,7 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
             case 3: return <button onClick={e => scrollToPage(1)} className={`w-full sm:w-[350px] bg-white   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold flex justify-center items-center ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn4}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
         }
     }
-
+    
     useEffect(() => {
         if (user === null) return setLastTask(0)
 
@@ -54,7 +54,7 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
 
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-homepage.jpg)] md:bg-[url(./images/CyberSaysPage/bg-homepage.jpg)]' : ' bg-[url(./images/NewDesign/Bg/homepage_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`}>
-            <div className='pt-[97px] md:pt-[135px] mac-center:!pt-0 px-4 pb-12 max-w-[1170px] m-auto'>
+            <div className='pt-[57px]  md:pt-[90px] mac-center:!pt-0 px-4 pb-12 max-w-[1170px] m-auto'>
                 <div className='max-w-[300px] m-auto'>
 
                     <p className=' text-[18px] md:text-[32px] font-semibold'></p>

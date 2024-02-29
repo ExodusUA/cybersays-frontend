@@ -85,8 +85,8 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
     }
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-double.jpg)] md:bg-[url(./images/CyberSaysPage/bg-double.jpg)]' : ' bg-[url(./images/NewDesign/Bg/double_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} onClick={() => setIsOpen(false)}>
-            <div className='pt-[97px] px-4  md:pt-[135px] mac-center:!pt-0 max-w-[1170px] m-auto' >
-                <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] mac2:!w-[220px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
+            <div className='pt-[57px] md:pt-[90px] px-4  mac-center:!pt-0 max-w-[1170px] m-auto' >
+                <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] mac2:!w-[170px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
                 <div className='mac:max-w-[550px] md:max-w-[1200px] md:mx-[120px] m-auto'>
                     <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  text-center max-w-[280px] sm:max-w-[500px] m-auto py-2  px-4 md:py-2 ${design === '0' ? 'rounded-[100px]' : 'rounded-[14px] lg:rounded-[24px]'}`}>
                         <p className='text-[14px] md:text-[24px] mac2:!text-[20px] font-semibold  iphone:leading-[unset] se:leading-4 mac2:!leading-[22px]'>{languageData?.doubleTitle}</p>

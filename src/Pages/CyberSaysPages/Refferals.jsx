@@ -106,8 +106,8 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
     }
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-terms.jpg)] md:bg-[url(./images/CyberSaysPage/bg-terms.jpg)]' : 'bg-[url(./images/NewDesign/Bg/refferals_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} >
-            <div className='pt-[97px]  md:pt-[135px] mac-center:!pt-0 px-4 w-full max-w-[1170px] mac-center:w-[1170px] m-auto' >
-                <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] mac2:!w-[220px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
+            <div className='pt-[57px]  md:pt-[90px] mac-center:!pt-0 px-4 w-full max-w-[1170px] mac-center:w-[1170px] m-auto' >
+                <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] mac2:!w-[170px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
 
 
                 <div className='flex flex-col-reverse relative'>

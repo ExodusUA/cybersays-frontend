@@ -34,7 +34,7 @@ function LiveFeed({ user }) {
     }, []);
 
     return (
-        <div className='w-screen bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg fixed top-[55px] lg:top-[85px] py-[2px] z-50 min-h-[44px] pl-2'>
+        <div className='w-screen bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg fixed top-[55px] lg:top-[85px] py-[2px] z-50 min-h-[44px] pl-2 hidden'>
             <div className='flex items-center justify-between gap-2'>
                 {
                     feedList.map((item, index) => (

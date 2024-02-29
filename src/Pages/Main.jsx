@@ -274,7 +274,7 @@ function Main({ languageData }) {
         return (
             <div className='overflow-y-hidden overflow-x-hidden'>
                 <HeaderMenu userCountry={userCountry} languageData={languageData} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} setTourModal={setTourModal} />
-                <LiveFeed user={userData} />
+                {/*<LiveFeed user={userData} />*/}
                 <Swiper
                     className='w-screen h-screen'
                     initialSlide={activePageIndex}
