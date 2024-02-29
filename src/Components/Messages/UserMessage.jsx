@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import moment from 'moment';
 import { useDesign } from '../../Helpers/Design/DesignContext'
 
@@ -6,7 +6,7 @@ function UserMessage({ message, owner, index }) {
     const { design } = useDesign()
 
     /* DELETE LATER */
-
+console.log('UserMessage', message)
     const [imageData, setImageData] = useState('');
 
     useEffect(() => {
@@ -43,7 +43,11 @@ function UserMessage({ message, owner, index }) {
                     <p className='saira text-[14px] md:text-[16px] font-normal'>{moment(message.datetime).format('DD/MM hh:mm A')}</p>
                 </div>
                 <div className=''>
-                    <p className='saira text-[12px] md:text-[14px] font-medium break-words' dangerouslySetInnerHTML={{ __html: message.message }}></p>
+                    <p className='saira text-[12px] md:text-[14px] font-medium break-words' dangerouslySetInnerHTML={{
+                        __html:
+                            message.message.indexOf('[GIF]') !== -1 ? `<img class="w-full rounded-[20px] mt-2" src="${message.message.replaceAll('[GIF]', '')}" alt="gif" />` : message.message
+            
+                    }}></p>
                 </div>
             </div>
         </div>

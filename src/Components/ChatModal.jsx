@@ -15,7 +15,7 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
         {
             name: 'International',
             code: 'int',
-            icon: require('../images/NewDesign/chatFlag/flag_usa.png')
+            icon: int
         },
         {
             name: 'USA',
@@ -73,8 +73,10 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
 
     const socket = io(process.env.REACT_APP_CHAT_URL, {
         path: '/chat/socket',
+        transports: ['websocket'],
+        secure: true,
         body: {
-            userId: user.id
+            userId: user?.id
         }
     });
 
@@ -162,6 +164,7 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('userCountry', userCountry)
+
         if (message.length === 0) return alert('Please enter a message')
         socket.emit('addMessage', {
             message: message,
@@ -193,7 +196,8 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
 
     const handleSubmitGif = (gif) => {
         socket.emit('addMessage', {
-            message: `<img class="w-full rounded-[20px] mt-2" src="${gif}" alt="gif" />`,
+            // message: `<img class="w-full rounded-[20px] mt-2" src="${gif}" alt="gif" />`,
+            message: `[GIF]${gif}[GIF]`,
             name: username,
             userid: user.id,
             country: selectedCountry.toUpperCase(),
@@ -223,6 +227,13 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
             </p>
         );
     };
+
+    const sanitizeInput = (input) => {
+        return input
+      //  return input.replace(/(<([^>]+)>)/gi, "");
+    };
+
+
     return (
         <div className='w-screen h-screen fixed top-0 z-[99999] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md '>
             <div className='max-w-[600px] m-auto p-4 '>
@@ -300,11 +311,12 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
                 <div className={`border-b-[2px]  ${design === '0' ? 'border-[#FFED63]' : 'border-[#A2DBF0]'}`}></div>
                 <div className='flex justify-between items-center mt-2 md:mt-5'>
                     <div className=' relative  w-full'>
-                        <input type="text" placeholder='Your message' className={`border-[2px] ${design === '0' ? 'border-[#FFED63] rounded-[50px]' : 'border-[#A2DBF0] rounded-[14px]'} saira w-[98%] text-[14px]  py-[10px] px-5 pr-12 outline-none text-black`} value={message} onChange={e => setMessage(e.target.value)} onKeyDown={e => {
-                            if (e.keyCode === 13) {
-                                handleSubmit(e)
-                            }
-                        }} />
+                        <input type="text" placeholder='Your message' className={`border-[2px] ${design === '0' ? 'border-[#FFED63] rounded-[50px]' : 'border-[#A2DBF0] rounded-[14px]'} saira w-[98%] text-[14px]  py-[10px] px-5 pr-12 outline-none text-black`} value={message}
+                            onChange={e => setMessage(sanitizeInput(e.target.value))} onKeyDown={e => {
+                                if (e.keyCode === 13) {
+                                    handleSubmit(e)
+                                }
+                            }} />
                         <svg onClick={e => setGifModal(true)} className='absolute top-[10px] right-4 md:right-6 cursor-pointer' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 4H18C18.5304 4 19.0391 4.21071 19.4142 4.58579C19.7893 4.96086 20 5.46957 20 6V13H15C14.4696 13 13.9609 13.2107 13.5858 13.5858C13.2107 13.9609 13 14.4696 13 15V20H6C5.46957 20 4.96086 19.7893 4.58579 19.4142C4.21071 19.0391 4 18.5304 4 18V6C4 5.46957 4.21071 4.96086 4.58579 4.58579C4.96086 4.21071 5.46957 4 6 4Z" stroke="#1E1E1E" strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M20 13V13.172C19.9999 13.7024 19.7891 14.211 19.414 14.586L14.586 19.414C14.211 19.7891 13.7024 19.9999 13.172 20H13" stroke="#1E1E1E" strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" />
