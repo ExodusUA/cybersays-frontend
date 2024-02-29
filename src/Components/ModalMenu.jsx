@@ -141,7 +141,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <div className='flex  items-center'>
                 <div className='flex items-center' >
                   <img className='w-[32px] h-[32px] mr-2' src={link11} alt="link11" />
-                  <p className='saira text-[20px] font-semibold cursor-pointer'>What about</p>
+                  <p className='saira text-[20px] font-semibold cursor-pointer'>Read More</p>
                 </div>
                 <div className='ml-2'>
                   {

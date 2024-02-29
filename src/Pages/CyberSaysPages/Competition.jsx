@@ -53,13 +53,13 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] md:bg-[url(./images/CyberSaysPage/bg-raffle.jpg)]' : 'bg-[url(./images/NewDesign/Bg/raffleTicket_des.png)]'} bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`}>
 
             <div className='pt-[57px]  md:pt-[90px] mac-center:!pt-0 px-4 max-w-[1170px] m-auto' >
-                <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
-                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[14px] lg:rounded-[30px] text-center se:py-1 mac:!py-0 px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto'>
+                <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] mac:!w-[170px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
+                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[14px] text-center se:py-1 mac:!py-0 px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto'>
                     <p className='text-center text-[18px] sm:text-[22px]  font-bold'>{languageData?.competitionTitle}</p>
                 </div>
-                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[14px] lg:rounded-[30px] text-center se:py-1 iphone:py-3  px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto mt-2 '>
+                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[14px] text-center se:py-1 iphone:py-2  px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto mt-2 '>
                     {/*<p className='text-center text-[14px] sm:text-[32px] mac:!text-[24px] font-semibold'>{languageData?.competitionTitle} {siteData?.currentDay}</p>*/}
-                    <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[12px] p-1 px-3 mt-1 flex justify-between max-w-[380px] md:max-w-[100%] m-auto'>
+                    <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[12px] p-1 px-3  flex justify-between max-w-[380px] md:max-w-[100%] m-auto'>
 
                         <div className=' leading-4 text-left w-1/3'>
                             <p className='gradient-linkDouble saira text-[16px] font-bold'>{languageData?.leaderSheetYou}</p>
@@ -135,11 +135,11 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                 <div className='flex justify-center'>
                     <p onClick={e => setRulesModal(true)} className={`text-center text-[12px] sm:text-[14px]  saira font-semibold underline se:mt-2 iphone:mt-7 mac:!mt-1 mb-2 cursor-pointer ${design === '0' ? 'text-[#FFED63]' : 'gradient-link '}`}>{languageData?.competitionRightRules}</p>
                 </div>
-                {/*
+                
                 <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
-                    <TimeCounter title={languageData.timeCounterTitle2} hidden={'hidden'} languageData={languageData} />
+                    <TimeCounter title={languageData.timeCounterTitle2}  languageData={languageData} />
                 </div>
-                */}
+                
             </div>
 
 
