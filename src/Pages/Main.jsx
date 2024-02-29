@@ -30,14 +30,12 @@ import LiveFeed from '../Components/LiveFeed'
 import Verify from './Verify'
 import WinVegasModal from '../Components/WinVegasModal'
 import infoBtn from '../images/NewDesign/infoBtn.png'
-
 import first from '../images/gifs/first.png'
 import second from '../images/gifs/second.png'
 import third from '../images/gifs/third.png'
 import ImageModals from '../Components/ImageModals'
 import CompetitionRules from '../Components/CompetitionRules'
 import ToolTipInfo from '../Components/ToolTipInfo'
-
 import imLiveLinks from '../Helpers/imLiveLinks.json'
 import WinTicketModal from '../Components/WinTicketModal'
 
@@ -116,6 +114,16 @@ function Main({ languageData }) {
 
     const [selectedMessage, setSelectedMassege] = useState(null);
 
+    const [userCountry, setUserCountry] = useState(null)
+
+    useEffect(() => {
+        getUserCountry()
+        async function getUserCountry() {
+            const res = await API.getUserCountry()
+            setUserCountry(res)
+        }
+    }, [])
+
     useQuery({
         queryKey: ['userData'],
         queryFn: async () => {
@@ -190,6 +198,15 @@ function Main({ languageData }) {
     const [uploadedPhotos, setUploadedPhotos] = useState(() => {
         const storedPhotos = localStorage.getItem('uploadedPhotos');
         return storedPhotos ? JSON.parse(storedPhotos) : [first, second, third];
+
+        /*
+       if (userCountry === 'BR' || userCountry === 'UA') {
+           return [require('../images/memes/pt_1.png'), require('../images/memes/pt_2.png'), require('../images/memes/pt_3.png')];
+       } else {
+           return [require('../images/memes/en_1.png'), require('../images/memes/en_2.png'), require('../images/memes/en_3.png')];
+       }
+*/
+
     });
 
     const savePhotosToLocalStorage = (photos) => {
@@ -215,7 +232,7 @@ function Main({ languageData }) {
         try {
             const res = await userAPI.updateUserAvatar(inputRef.current.files[0])
             console.log(res)
-            alert('Done!')
+
 
             console.log(res.data.url)
             setUploadedPhotos((prevPhotos) => [...prevPhotos, res.data.url]);
@@ -233,8 +250,6 @@ function Main({ languageData }) {
 
             reader.onloadend = () => {
                 const base64String = reader.result;
-
-
                 {/* setUploadedPhotos((prevPhotos) => [...prevPhotos, { image: base64String }]);*/ }
                 setSelectedImage(base64String);
             };
@@ -242,15 +257,7 @@ function Main({ languageData }) {
         }
     };
 
-    const [userCountry, setUserCountry] = useState(null)
 
-    useEffect(() => {
-        getUserCountry()
-        async function getUserCountry() {
-            const res = await API.getUserCountry()
-            setUserCountry(res)
-        }
-    }, [])
 
     useEffect(() => {
         if (userData && userCountry) {
