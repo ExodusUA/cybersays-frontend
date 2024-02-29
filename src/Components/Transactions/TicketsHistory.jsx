@@ -16,11 +16,24 @@ function TicketsHistory({ setOpen, languageData, user }) {
     const [allData, setAllData] = useState(null)
     const [selectedButton, setSelectedButton] = useState('ticket');
 
+    const [allTickets, setAllTickets] = useState(null)
+    const [allPoints, setAllPoints] = useState(null)
+
     useQuery({
         queryKey: ['tickets'],
         queryFn: async () => {
             const res = await userAPI.getTickets();
             setTicketsData(res.data.tickets[0])
+
+            let allTickets = 0;
+
+            res.data.tickets[0].map(ticket => {
+                allTickets += Number(ticket.amount)
+            })
+
+            proccessData(res.data.tickets[0])
+            setAllTickets(allTickets)
+
             return res.data.tickets[0];
         }
     })
@@ -30,46 +43,39 @@ function TicketsHistory({ setOpen, languageData, user }) {
         queryFn: async () => {
             const res = await userAPI.getPoints();
             setPointsData(res.data.points[0])
+
+            let allPoints = 0;
+
+            res.data.points[0].map(point => {
+                allPoints += Number(point.amount)
+            })
+
+            setAllPoints(allPoints)
+
             return res.data.points[0];
         }
     })
 
     useEffect(() => {
-        if (ticketsData === null || pointsData === null) return
-        let joined = {
-            tickets: ticketsData,
-            points: pointsData
-        }
 
-        proccessData(joined)
-    }, [ticketsData, pointsData])
+        proccessData(selectedButton === 'ticket' ? ticketsData : pointsData)
+    }, [selectedButton])
 
     function proccessData(proccessData) {
         if (proccessData === null) return
 
 
-        let data = proccessData?.tickets.map(ticket => {
+        let data = proccessData?.map(ticket => {
             return {
-                name: 'ticket',
+                name: selectedButton === 'ticket' ? 'ticket' : 'point',
                 type: ticket.type,
                 datetime: ticket.datetime,
                 amount: ticket.amount
             }
         })
 
-        proccessData?.points?.map(point => {
-            data.push({
-                name: 'point',
-                type: point.type,
-                datetime: point.datetime,
-                amount: point.amount
-            })
-        })
-
         let sorted = data?.sort((a, b) => new Date(b.datetime) - new Date(a.datetime))
-        console.log('sorted', sorted)
         setAllData(sorted)
-
     }
 
     const getTicketsMarkup = (type, datetime, amount) => {
@@ -169,35 +175,30 @@ function TicketsHistory({ setOpen, languageData, user }) {
             <div class=" justify-center flex my-2">
                 <div class={`flex border-[1px]  m-auto rounded-[14px] border-[#FDA62D]  `}>
                     <div onClick={e => setSelectedButton('ticket')} className={`${selectedButton === 'ticket' && 'gradient-tourToggle'}  rounded-[12px] px-[20px] py-[5px] md:py-[6px]  cursor-pointer`}>
-                        <p className={`${selectedButton === 'ticket' && '!text-black'} text-white saira font-bold text-[14px] flex items-center`}>Vegas Tickets:<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? joker : require('../../images/NewDesign/header/ticket.png')} alt="joker" /> {user?.raffle_tickets || 0}</p>
+                        <p className={`${selectedButton === 'ticket' && '!text-black'} text-white saira font-bold text-[14px] flex items-center`}>Vegas Tickets:<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? joker : require('../../images/NewDesign/header/ticket.png')} alt="joker" /> {allTickets || 0}</p>
                     </div>
                     <div onClick={e => setSelectedButton('points')} className={`${selectedButton === 'points' && 'gradient-tourToggle'} rounded-[12px] px-[20px] py-[5px] md:py-[6px] cursor-pointer`}>
                         <p className={`${selectedButton === 'points' && '!text-black'} text-white saira font-bold text-[14px] flex items-center`}>
-                            Points:<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? refferals : require('../../images/NewDesign/header/points.png')} alt="refferals" /> {user && user.points ? user?.points : 0}
+                            Points:<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? refferals : require('../../images/NewDesign/header/points.png')} alt="refferals" /> {user && user.points ? allPoints : 0}
                         </p>
                     </div>
                 </div>
             </div>
-            {
-                selectedButton === 'ticket' && <div className='m-auto max-w-[345px] md:max-w-[600px] w-full mt-3 h-[470px] overflow-scroll'>
-                    {
-                        allData?.length > 0
-                            ? allData !== null && allData?.map(ticket => {
-                                return ticket.name === 'ticket' ? getTicketsMarkup(ticket.type, ticket.datetime, ticket.amount) : getPointsMarkup(ticket.type, ticket.datetime, ticket.amount)
-                            })
-                            : <div className='flex justify-center items-center h-[470px]'>
-                                <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
-                            </div>
-                    }
-                </div>
 
-            }
-            {
-                selectedButton === 'points' && <div className='m-auto max-w-[345px] md:max-w-[600px] w-full mt-3 h-[470px] overflow-scroll'>
-                   <p className='text-center'>nema</p>
-                </div>
+            <div className='m-auto max-w-[345px] md:max-w-[600px] w-full mt-3 h-[470px] overflow-scroll'>
+                {
+                    allData?.length > 0
+                        ? allData !== null && allData?.map(ticket => {
+                            return ticket.name === 'ticket' ? getTicketsMarkup(ticket.type, ticket.datetime, ticket.amount) : getPointsMarkup(ticket.type, ticket.datetime, ticket.amount)
+                        })
+                        : <div className='flex justify-center items-center h-[470px]'>
+                            <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
+                        </div>
+                }
+            </div>
 
-            }
+
+
 
         </div>
     )
