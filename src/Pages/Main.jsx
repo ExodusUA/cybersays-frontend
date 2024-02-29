@@ -39,6 +39,7 @@ import CompetitionRules from '../Components/CompetitionRules'
 import ToolTipInfo from '../Components/ToolTipInfo'
 
 import imLiveLinks from '../Helpers/imLiveLinks.json'
+import WinTicketModal from '../Components/WinTicketModal'
 
 var mixpanel = require('mixpanel-browser');
 
@@ -108,6 +109,7 @@ function Main({ languageData }) {
     const [openMessage, setOpenMassege] = useState(false);
     const [openAvatar, setOpenAvatar] = useState(false);
     const [winMoadal, setWinModal] = useState(false);
+    const [winTicketMoadal, setWinTicketModal] = useState(false);
     const [rulesModal, setRulesModal] = useState(false);
     const [imageModal, setImageModal] = useState(false)
     const [toolInfo, setToolInfo] = useState(false)
@@ -285,7 +287,7 @@ function Main({ languageData }) {
                         <Double setOpen={setWithdrawModal} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <RaffleTickets scrollToPage={scrollToPage} setWinModal={setWinModal} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} setTourModal={setTourModal} />
+                        <RaffleTickets setWinTicketModal={setWinTicketModal} scrollToPage={scrollToPage} setWinModal={setWinModal} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} setTourModal={setTourModal} />
                     </SwiperSlide>
                     <SwiperSlide>
                         <Competition setRulesModal={setRulesModal} siteData={siteData} imLiveURL={imLiveURL} user={userData} languageData={languageData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading} />
@@ -346,6 +348,9 @@ function Main({ languageData }) {
             }
             {
                 winMoadal && <WinVegasModal languageData={languageData} setOpen={setWinModal} user={userData} />
+            }
+            {
+                winTicketMoadal && <WinTicketModal languageData={languageData} setOpen={setWinTicketModal} user={userData} />
             }
             {
                 rulesModal && <CompetitionRules setOpen={setRulesModal} languageData={languageData} />
