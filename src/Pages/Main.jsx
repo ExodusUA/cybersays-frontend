@@ -38,6 +38,7 @@ import CompetitionRules from '../Components/CompetitionRules'
 import ToolTipInfo from '../Components/ToolTipInfo'
 import imLiveLinks from '../Helpers/imLiveLinks.json'
 import WinTicketModal from '../Components/WinTicketModal'
+import InfoOfferModal from '../Components/InfoOfferModal'
 
 var mixpanel = require('mixpanel-browser');
 
@@ -111,6 +112,7 @@ function Main({ languageData }) {
     const [rulesModal, setRulesModal] = useState(false);
     const [imageModal, setImageModal] = useState(false)
     const [toolInfo, setToolInfo] = useState(false)
+    const [infoOffer, setInfoOffer] = useState(false)
 
     const [selectedMessage, setSelectedMassege] = useState(null);
 
@@ -300,7 +302,7 @@ function Main({ languageData }) {
                         <Competition setRulesModal={setRulesModal} siteData={siteData} imLiveURL={imLiveURL} user={userData} languageData={languageData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Refferals setImageModal={setImageModal} imageModal={imageModal} uploadedPhotos={uploadedPhotos} saveAvatar={saveAvatar} selectedImage={selectedImage} setSelectedImage={setSelectedImage} message={selectedMessage !== null ? dataMessage[selectedMessage].desc : ''} copyToMessage={copyToMessage} setSelectedMassege={setSelectedMassege} selectedMessage={selectedMessage} setOpenAvatar={setOpenAvatar} setOpenMassege={setOpenMassege} dataMessage={dataMessage} setReferralsOpen={setReferralsOpen} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} />
+                        <Refferals setInfoOffer={setInfoOffer} setImageModal={setImageModal} imageModal={imageModal} uploadedPhotos={uploadedPhotos} saveAvatar={saveAvatar} selectedImage={selectedImage} setSelectedImage={setSelectedImage} message={selectedMessage !== null ? dataMessage[selectedMessage].desc : ''} copyToMessage={copyToMessage} setSelectedMassege={setSelectedMassege} selectedMessage={selectedMessage} setOpenAvatar={setOpenAvatar} setOpenMassege={setOpenMassege} dataMessage={dataMessage} setReferralsOpen={setReferralsOpen} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} />
                     </SwiperSlide>
 
                     <SwiperSlide>
@@ -357,10 +359,13 @@ function Main({ languageData }) {
                 winMoadal && <WinVegasModal languageData={languageData} setOpen={setWinModal} user={userData} />
             }
             {
-                winTicketMoadal && <WinTicketModal languageData={languageData} setOpen={setWinTicketModal} user={userData} />
+                winTicketMoadal && <WinTicketModal scrollToPage={scrollToPage} languageData={languageData} setOpen={setWinTicketModal} user={userData} />
             }
             {
                 rulesModal && <CompetitionRules setOpen={setRulesModal} languageData={languageData} />
+            }
+            {
+                infoOffer && <InfoOfferModal setOpen={setInfoOffer} languageData={languageData} />
             }
             {
                 openMessage && <Message onCloseCopied={() => {

@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 import imLiveLogo from '../images/CyberSaysPage/imLiveLogo.png'
 import doubleIcon from '../images/NewDesign/doubleIcon.svg'
 
-function WinTicketModal({ setOpen, languageData, user }) {
+function WinTicketModal({ setOpen, languageData, user, scrollToPage }) {
     const [pdfLoading, setPdfLoading] = useState(false)
 
     const { design } = useDesign()
@@ -41,7 +41,10 @@ function WinTicketModal({ setOpen, languageData, user }) {
 
                     </div>
 
-                    <button className={`w-full sm:w-[350px] m-auto   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold flex justify-center items-center mt-3 ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData.winTicketBtn}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
+                    <button onClick={e => {
+                        scrollToPage(1)
+                        setOpen(false)
+                        }} className={`w-full sm:w-[350px] m-auto   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold flex justify-center items-center mt-3 ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData.winTicketBtn}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
 
                     <p className='text-[18px] lg:text-[24px] text-center font-semibold gradient-linkDouble  mt-2'>{languageData.winTicketEnd}</p>
 
