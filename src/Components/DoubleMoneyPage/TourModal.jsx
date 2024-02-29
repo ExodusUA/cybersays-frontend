@@ -119,7 +119,7 @@ function TourModal({ setOpen, languageData, user }) {
                             <video loop autoPlay className='w-[375px] h-[300px] object-cover md:w-full m-auto mt-3 rounded-[12px]'>
                                 <source src={item.video} type="video/mp4" />
                             </video>
-                            <p className='saira font-medium text-center text-[14px] mx-2 lg:mt-4'>{item.descShort}</p>
+                            <p className='saira font-medium text-center text-[14px]  lg:mt-4'>{item.descShort}</p>
 
                         </SwiperSlide>
                     ))}
@@ -133,6 +133,7 @@ function TourModal({ setOpen, languageData, user }) {
                         </svg>
                     </button>
                 </div>
+                <p className={`text-[10px] lg:text-[14px] saira font-medium mt-[80px] `}>*Only friends who got referred by you or your referrer to CyberSays can be picked by you to go to Vegas if you win</p>
             </div>
 
         </div>
