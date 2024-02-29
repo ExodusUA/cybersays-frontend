@@ -119,7 +119,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
                         <div className='flex justify-center mt-4'>
                             <button onClick={e => generateOTP()} className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-2 max-w-[600px]  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData.withdrawContinue}</button>
                         </div>
-                        <div className='bg-[#EAEAEA] bg-opacity-40 backdrop-blur-md rounded-[14px] lg:rounded-[24px] p-2 mt-2 '>
+                        <div className='bg-[#EAEAEA] bg-opacity-40 backdrop-blur-md rounded-[14px] lg:rounded-[24px] p-2 mt-4 max-w-[600px] w-full m-auto py-3'>
                             <p className='text-[12px] font-medium saira'>{languageData.withdrawLi1}</p>
                             <p className='text-[12px] font-medium saira mt-1'>{languageData.withdrawLi2}</p>
                             <p className='text-[12px] font-medium saira mt-1'>{languageData.withdrawLi3}</p>

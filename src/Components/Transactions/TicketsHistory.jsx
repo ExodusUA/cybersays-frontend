@@ -5,12 +5,16 @@ import coin from '../../images/CyberSaysPage/MyTicketCoin.png'
 import { useQuery } from '@tanstack/react-query'
 import userAPI from '../../Requests/user'
 import moment from 'moment'
+import refferals from '../../images/CyberSaysPage/headerRefferals.png'
+import { useDesign } from '../../Helpers/Design/DesignContext'
+
 
 function TicketsHistory({ setOpen, languageData, user }) {
-
+    const { design } = useDesign()
     const [ticketsData, setTicketsData] = useState(null)
     const [pointsData, setPointsData] = useState(null)
     const [allData, setAllData] = useState(null)
+    const [selectedButton, setSelectedButton] = useState('ticket');
 
     useQuery({
         queryKey: ['tickets'],
@@ -162,17 +166,38 @@ function TicketsHistory({ setOpen, languageData, user }) {
                 <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={close} alt="close" />
             </div>
             <p className='text-[18px] md:text-[32px] font-semibold text-center'>{languageData?.ticketsTitle}</p>
-            <div className='m-auto max-w-[345px] md:max-w-[600px] w-full mt-3 h-[470px] overflow-scroll'>
-                {
-                    allData?.length > 0
-                        ? allData !== null && allData?.map(ticket => {
-                            return ticket.name === 'ticket' ? getTicketsMarkup(ticket.type, ticket.datetime, ticket.amount) : getPointsMarkup(ticket.type, ticket.datetime, ticket.amount)
-                        })
-                        : <div className='flex justify-center items-center h-[470px]'>
-                            <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
-                        </div>
-                }
+            <div class=" justify-center flex my-2">
+                <div class={`flex border-[1px]  m-auto rounded-[14px] border-[#FDA62D]  `}>
+                    <div onClick={e => setSelectedButton('ticket')} className={`${selectedButton === 'ticket' && 'gradient-tourToggle'}  rounded-[12px] px-[20px] py-[5px] md:py-[6px]  cursor-pointer`}>
+                        <p className={`${selectedButton === 'ticket' && '!text-black'} text-white saira font-bold text-[14px] flex items-center`}>Vegas Tickets:<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? joker : require('../../images/NewDesign/header/ticket.png')} alt="joker" /> {user?.raffle_tickets || 0}</p>
+                    </div>
+                    <div onClick={e => setSelectedButton('points')} className={`${selectedButton === 'points' && 'gradient-tourToggle'} rounded-[12px] px-[20px] py-[5px] md:py-[6px] cursor-pointer`}>
+                        <p className={`${selectedButton === 'points' && '!text-black'} text-white saira font-bold text-[14px] flex items-center`}>
+                            Points:<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? refferals : require('../../images/NewDesign/header/points.png')} alt="refferals" /> {user && user.points ? user?.points : 0}
+                        </p>
+                    </div>
+                </div>
             </div>
+            {
+                selectedButton === 'ticket' && <div className='m-auto max-w-[345px] md:max-w-[600px] w-full mt-3 h-[470px] overflow-scroll'>
+                    {
+                        allData?.length > 0
+                            ? allData !== null && allData?.map(ticket => {
+                                return ticket.name === 'ticket' ? getTicketsMarkup(ticket.type, ticket.datetime, ticket.amount) : getPointsMarkup(ticket.type, ticket.datetime, ticket.amount)
+                            })
+                            : <div className='flex justify-center items-center h-[470px]'>
+                                <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
+                            </div>
+                    }
+                </div>
+
+            }
+            {
+                selectedButton === 'points' && <div className='m-auto max-w-[345px] md:max-w-[600px] w-full mt-3 h-[470px] overflow-scroll'>
+                   <p className='text-center'>nema</p>
+                </div>
+
+            }
 
         </div>
     )

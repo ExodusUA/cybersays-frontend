@@ -99,7 +99,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <img className='w-[32px] h-[32px] mr-2' src={design === '0' ? link1 : require('../images/NewDesign/modalMenu/link1.png')} alt="link1" />
               <p className='saira text-[20px] font-semibold  cursor-pointer'>{languageData?.modalMenuLink1}</p>
             </div>
-            <div className='flex items-center cursor-pointer' onClick={e => scrollToPage(2)}>
+            <div className='flex items-center cursor-pointer' onClick={e => scrollToPage(1)}>
               <img className='w-[32px] h-[32px] mr-2' src={design === '0' ? link2 : require('../images/NewDesign/modalMenu/link2.png')} alt="link2" />
               <p className='saira text-[20px] font-semibold'>{languageData?.modalMenuLink2}</p>
             </div>
@@ -107,7 +107,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <img className='w-[32px] h-[32px] mr-2' src={link3} alt="link3" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink3}</p>
             </div>
-            <div className='flex items-center' onClick={e => scrollToPage(1)} >
+            <div className='flex items-center' onClick={e => scrollToPage(2)} >
               <img className='w-[32px] h-[32px] mr-2' src={design === '0' ? link4 : require('../images/NewDesign/modalMenu/link3.png')} alt="link4" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink4}</p>
             </div>
@@ -116,7 +116,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink5}</p>
             </div>
 
-            <div className='flex items-center cursor-pointer' onClick={e => scrollToPage(4)}>
+            <div className='flex items-center cursor-pointer' onClick={e => scrollToPage(3)}>
               <img className='w-[32px] h-[32px] mr-2' src={link6} alt="link6" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink6} {siteData?.currentDay} {languageData?.modalMenuLink6Span}</p>
             </div>
