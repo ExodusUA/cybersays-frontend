@@ -87,12 +87,12 @@ function Auth({ languageData }) {
                                         </p>
                                         <div className=' w-full bottom-10 z-[10] flex justify-center lg:block'>
                                             <div className='mb-6 ml-[-20px] flex'>
-                                                <img className='w-[40px] lg:w-[76px] cursor-pointer buttonPrev' src={left} alt="Left" onClick={() => swiperRef.current.slidePrev()} />
-                                                <img className='w-[40px] lg:w-[76px] cursor-pointer buttonNext' src={right} alt="Right" onClick={() => swiperRef.current.slideNext()} />
+                                                <img className='w-[40px] lg:w-[76px] cursor-pointer buttonPrev' src={left} alt="Left" />
+                                                <img className='w-[40px] lg:w-[76px] cursor-pointer buttonNext' src={right} alt="Right"  />
                                             </div>
                                         </div>
                                     </div>
-                                    <Slider ref={swiperRef} onSlideChange={slideChange} />
+                                    <Slider swiperRef={swiperRef} onSlideChange={slideChange} />
                                 </div>
                                 <LoginForm languageData={languageData} referralID={referralID} />
                             </div>

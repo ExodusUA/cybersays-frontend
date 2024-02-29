@@ -6,8 +6,8 @@ import slides from '../../Helpers/images.json';
 import left from '../../images/landing/left.png';
 import right from '../../images/landing/right.png';
 
-function Slider({ onSlideChange }) {
-    const swiperRef = useRef(null); 
+function Slider({ onSlideChange, swiperRef }) {
+
 
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -52,14 +52,7 @@ function Slider({ onSlideChange }) {
                     <LanguageSlide data={slides.slide4} screenWidth={screenWidth} />
                 </SwiperSlide>
             </Swiper>
-            {/*
-            <div className='absolute w-full bottom-10 z-[10]'>
-                <div className='mb-6 justify-center flex'>
-                    <img className='w-[40px] lg:w-[64px] cursor-pointer buttonPrev' src={left} alt="Left" onClick={() => swiperRef.current.slidePrev()} />
-                    <img className='w-[40px] lg:w-[64px] cursor-pointer buttonNext' src={right} alt="Right" onClick={() => swiperRef.current.slideNext()} />
-                </div>
-            </div>
-            */}
+
         </div>
     );
 }
