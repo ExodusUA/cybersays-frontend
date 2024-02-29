@@ -40,6 +40,37 @@ function App() {
     setLanguageData(langData);
   }, [language]);
 
+  /* UTM SAVING */
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const utm_source = params.get('utm_source');
+    const utm_medium = params.get('utm_medium');
+    const utm_campaign = params.get('utm_campaign');
+    const utm_term = params.get('utm_term');
+    const utm_content = params.get('utm_content');
+
+    if (utm_source) {
+      window.localStorage.setItem('utm_source', utm_source);
+    }
+
+    if (utm_medium) {
+      window.localStorage.setItem('utm_medium', utm_medium);
+    }
+
+    if (utm_campaign) {
+      window.localStorage.setItem('utm_campaign', utm_campaign);
+    }
+
+    if (utm_term) {
+      window.localStorage.setItem('utm_term', utm_term);
+    }
+
+    if (utm_content) {
+      window.localStorage.setItem('utm_content', utm_content);
+    }
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <DesignProvider>

@@ -139,8 +139,19 @@ function Main({ languageData }) {
 
         /* MIXPANEL */
 
+        let utmData = {
+            utm_source: window.localStorage.getItem('utm_source'),
+            utm_medium: window.localStorage.getItem('utm_medium'),
+            utm_campaign: window.localStorage.getItem('utm_campaign'),
+            utm_term: window.localStorage.getItem('utm_term'),
+            utm_content: window.localStorage.getItem('utm_content'),
+        }
+
+        // delete nulls
+
         mixpanel.track("page_view_cyber_says", {
-            distinct_id: uid || 'not_set'
+            distinct_id: uid || 'not_set',
+            ...utmData
         });
 
     }, [])

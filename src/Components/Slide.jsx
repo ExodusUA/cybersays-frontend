@@ -45,9 +45,19 @@ function Slide({ languageData, targetURL, uid }) {
 
                 <div>
                     <a href={targetURL} onClick={e => {
+
+                        let utmData = {
+                            utm_source: window.localStorage.getItem('utm_source'),
+                            utm_medium: window.localStorage.getItem('utm_medium'),
+                            utm_campaign: window.localStorage.getItem('utm_campaign'),
+                            utm_term: window.localStorage.getItem('utm_term'),
+                            utm_content: window.localStorage.getItem('utm_content'),
+                        }
+
                         e.preventDefault();
                         mixpanel.track("cyber_says_click", {
-                            distinct_id: uid || 'not_set'
+                            distinct_id: uid || 'not_set',
+                            ...utmData
                         });
                         window.location.replace(targetURL);
                     }}> <button className='px-[25px] py-[10px] saira gradient text-[20px]'>{languageData?.OfferButton}</button></a>
