@@ -39,6 +39,9 @@ import ToolTipInfo from '../Components/ToolTipInfo'
 import imLiveLinks from '../Helpers/imLiveLinks.json'
 import WinTicketModal from '../Components/WinTicketModal'
 import InfoOfferModal from '../Components/InfoOfferModal'
+import Earned from '../Components/Transactions/Modals/Earned'
+import Points from '../Components/Transactions/Modals/Points'
+import Ticket from '../Components/Transactions/Modals/Ticket'
 
 var mixpanel = require('mixpanel-browser');
 
@@ -113,6 +116,9 @@ function Main({ languageData }) {
     const [imageModal, setImageModal] = useState(false)
     const [toolInfo, setToolInfo] = useState(false)
     const [infoOffer, setInfoOffer] = useState(false)
+    const [earnedModal, setEarnedModal] = useState(false)
+    const [ticketModal, setTicketModal] = useState(false)
+    const [pointsModal, setPointsModal] = useState(false)
 
     const [selectedMessage, setSelectedMassege] = useState(null);
 
@@ -275,7 +281,7 @@ function Main({ languageData }) {
 
         return (
             <div className='overflow-y-hidden overflow-x-hidden'>
-                <HeaderMenu userCountry={userCountry} languageData={languageData} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} setTourModal={setTourModal} />
+                <HeaderMenu setPointsModal={setPointsModal} setTicketModal={setTicketModal} setEarnedModal={setEarnedModal} userCountry={userCountry} languageData={languageData} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} setTourModal={setTourModal} />
                 {/*<LiveFeed user={userData} />*/}
                 <Swiper
                     className='w-screen h-screen'
@@ -366,6 +372,15 @@ function Main({ languageData }) {
             }
             {
                 infoOffer && <InfoOfferModal setOpen={setInfoOffer} languageData={languageData} />
+            }
+            {
+                earnedModal && <Earned languageData={languageData} setOpen={setEarnedModal} user={userData} />
+            }
+            {
+                ticketModal && <Ticket  languageData={languageData} setOpen={setTicketModal} user={userData} />
+            }
+            {
+                pointsModal && <Points languageData={languageData} setOpen={setPointsModal} user={userData} />
             }
             {
                 openMessage && <Message onCloseCopied={() => {

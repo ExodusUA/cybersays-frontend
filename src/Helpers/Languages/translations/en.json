@@ -491,6 +491,10 @@
     "infoOfferPoint3": "30 Vegas Tickets that better your chance to win the Vegas promotion",
     "infoOfferPoint4": "10  69$ daily competition points that gets you closer to the top 10",
     "infoOfferPoint5": "A friend you can pick to Vegas if you win the promotion",
-    "infoOfferPoint6": "Your friend will be able to pick you to Vegas if they won the promotion and you completed the “Double your money” offer"
+    "infoOfferPoint6": "Your friend will be able to pick you to Vegas if they won the promotion and you completed the “Double your money” offer",
+    "earnedModalTitle": "Latest USD earnings",
+    "TicketModalTitle": "Latest Vegas Tickets earnings",
+    "PointsModalTitle": "Latest contest points earnings",
+    "earnedModalLink": "View full information"
     
 }
