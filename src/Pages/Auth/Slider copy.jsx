@@ -1,13 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import LanguageSlide from '../../Components/HomepageSlide';
-import slides from '../../Helpers/images.json';
-import left from '../../images/landing/left.png';
-import right from '../../images/landing/right.png';
+import slides from '../../Helpers/images.json'
+import left from '../../images/landing/left.png'
+import right from '../../images/landing/right.png'
+
 
 function Slider({ onSlideChange }) {
-    const swiperRef = useRef(null); 
+    let swiperRef;
 
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -15,19 +16,26 @@ function Slider({ onSlideChange }) {
         const handleResize = () => {
             setScreenWidth(window.innerWidth);
         };
-
         window.addEventListener("resize", handleResize);
-
         return () => {
             window.removeEventListener("resize", handleResize);
         };
-    }, []);
+    }, [screenWidth]);
+
+    console.log(onSlideChange)
 
     return (
-        <div className='lg:w-[550px] h-[550px] lg:block hidden relative'>
+        <div className='lg:w-[45%] relative se:hidden iphone:block'>
+
             <Swiper
-                className='h-[30vh] md:h-[550px] lg:h-full'
-                ref={swiperRef}
+
+
+                className='h-[30vh] md:h-[45vh] lg:h-full'
+                onSwiper={(swiper) => {
+                    swiperRef = swiper;
+                }}
+            
+                
                 modules={[Navigation, Autoplay]}
                 autoplay={{ delay: 4000 }}
                 spaceBetween={0}
@@ -51,17 +59,17 @@ function Slider({ onSlideChange }) {
                 <SwiperSlide>
                     <LanguageSlide data={slides.slide4} screenWidth={screenWidth} />
                 </SwiperSlide>
+
             </Swiper>
-            {/*
+
             <div className='absolute w-full bottom-10 z-[10]'>
                 <div className='mb-6 justify-center flex'>
-                    <img className='w-[40px] lg:w-[64px] cursor-pointer buttonPrev' src={left} alt="Left" onClick={() => swiperRef.current.slidePrev()} />
-                    <img className='w-[40px] lg:w-[64px] cursor-pointer buttonNext' src={right} alt="Right" onClick={() => swiperRef.current.slideNext()} />
+                    <img className='w-[40px] lg:w-[64px] cursor-pointer buttonPrev' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
+                    <img className='w-[40px] lg:w-[64px] cursor-pointer buttonNext' src={right} alt="Right" onClick={e => swiperRef?.slideNext()} />
                 </div>
             </div>
-            */}
         </div>
-    );
+    )
 }
 
-export default Slider;
+export default Slider

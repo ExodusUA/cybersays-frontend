@@ -240,6 +240,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .dot-li {
     background: var(--New-CS-yellow, linear-gradient(180deg, #FAD604 0%, #FE804D 100%));
 }
@@ -248,20 +249,30 @@ body {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
 
 .feedShow {
-    animation: fadeIn 0.6s ease forwards; /* Використовуємо анімацію fadeIn з тривалістю 0.6 секунд */
+    animation: fadeIn 0.6s ease forwards;
+    /* Використовуємо анімацію fadeIn з тривалістю 0.6 секунд */
 }
+
 .toolInfoBg1 {
     background: var(--Yellow, linear-gradient(180deg, #FAD604 0%, #FE804D 100%));
 }
+
 .toolInfoBg2 {
     background: var(--Blue-Pink, linear-gradient(90deg, #8FE5EC 0%, #DDBAFC 100%));
 }
+
 .toolInfoBg3 {
     background: var(--Purple, linear-gradient(180deg, #FB2C8B 0%, #B114D3 100%));
+}
+
+.blurLogin {
+    background: rgba(20, 25, 41, 0.40);
+    backdrop-filter: blur(10px);
 }
