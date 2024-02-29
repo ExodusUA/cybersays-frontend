@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
-import close from '../../images/CyberSaysPage/closeMenu.png'
-import transaction from '../../images/CyberSaysPage/TransactionLogo.png'
-import { useQuery } from '@tanstack/react-query'
-import userAPI from '../../Requests/user'
+import close from '../../../images/CyberSaysPage/closeMenu.png'
+import transaction from '../../../images/CyberSaysPage/TransactionLogo.png'
+import { useDesign } from '../../../Helpers/Design/DesignContext'
+import userAPI from '../../../Requests/user'
 import moment from 'moment'
-import { useDesign } from '../../Helpers/Design/DesignContext'
+import { useQuery } from '@tanstack/react-query'
 
-function TransactionHistory({ setOpen, languageData, user }) {
+
+function Earned({ setOpen, languageData, user }) {
     const { design } = useDesign()
-
     const [transactionsData, setTransactionsData] = useState(null)
 
     useQuery({
@@ -22,7 +22,7 @@ function TransactionHistory({ setOpen, languageData, user }) {
 
     const getMarkup = (type, datetime, amount) => {
         switch (type) {
-            case 'doubling_referral': return <div className='flex justify-between items-center mt-4 '>
+            case 'doubling_referral': return <div className='flex justify-between items-center mt-2 '>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={transaction} alt="transaction" />
                     <div className='w-[200px] md:w-[300px]'>
@@ -35,7 +35,7 @@ function TransactionHistory({ setOpen, languageData, user }) {
                     <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionsSection1Right}</p>
                 </div>
             </div>
-            case 'doubling': return <div className='flex justify-between items-center mt-4'>
+            case 'doubling': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
                     <div className='w-[200px] md:w-[300px]'>
@@ -48,7 +48,7 @@ function TransactionHistory({ setOpen, languageData, user }) {
                     <p className='text-[12px] font-normal saira text-right'>{languageData?.transactionsSection2Right}</p>
                 </div>
             </div>
-            case 'withdrawal': return <div className='flex justify-between items-center mt-4'>
+            case 'withdrawal': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
                     <div className='w-[200px] md:w-[300px]'>
@@ -61,7 +61,7 @@ function TransactionHistory({ setOpen, languageData, user }) {
                     <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionsSection3Right}</p>
                 </div>
             </div>
-            case 'competition': return <div className='flex justify-between items-center mt-4'>
+            case 'competition': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
                     <div className='w-[200px] md:w-[300px]'>
@@ -78,32 +78,37 @@ function TransactionHistory({ setOpen, languageData, user }) {
             </div>
         }
     }
-
     return (
-        <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 scrollbarHidden '>
-            <div className='flex justify-end max-w-[600px] m-auto md:my-4'>
-                <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../../images/NewDesign/closeBtn.png')} alt="close" />
-            </div>
-            <p className='text-[18px] md:text-[32px] font-semibold text-center'>{languageData?.ransactionsTitle}</p>
-            <div className='m-auto max-w-[345px] md:max-w-[600px] w-full mt-3 h-[470px] overflow-scroll'>
+        <div onClick={e => setOpen(false)} className='w-screen h-screen fixed top-0 z-[99999]  p-4 flex items-center '>
+            <div onClick={(e) => e.stopPropagation()} className={`max-w-[600px] w-full m-auto relative bg-[#0A1225B2] bg-opacity-70 backdrop-blur-md border-[1px] p-2 rounded-[12px] lg:px-4 ${design === '0' ? ' border-[#FFD700]' : '  border-[#A2DBF0]'}`}>
 
-                {
-                    transactionsData?.length > 0
-                        ? transactionsData?.map((transaction, index) => {
-                            return getMarkup(transaction.type, transaction.datetime, transaction.amount)
-                        })
-                        : <div className='flex justify-center items-center h-[470px]'>
-                            <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
-                        </div>
 
-                }
+                <div className='flex justify-end md:mt-4 '>
+                    <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../../../images/NewDesign/closeBtn.png')} alt="close" />
+                </div>
+                <p className='text-[18px] lg:text-[24px] text-center font-semibold gradient-linkDouble'>{languageData?.earnedModalTitle}</p>
+                <div className='m-auto max-w-[345px] md:max-w-[600px] w-full h-[250px] overflow-scroll'>
 
-            </div>
-            <div className='flex justify-center'>
-                <button className={`w-full bg-white  border-[2px] text-black text-[18px] saira font-semibold py-2 mt-3 max-w-[370px] ${design === '0' ? ' rounded-[50px] border-[2px] bg-white ' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>
+                    {
+                        transactionsData?.length > 0
+                            ? transactionsData?.map((transaction, index) => {
+                                return getMarkup(transaction.type, transaction.datetime, transaction.amount)
+                            })
+                            : <div className='flex justify-center items-center h-[270px]'>
+                                <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
+                            </div>
+
+                    }
+
+                </div>
+                <div className=' flex justify-center'>
+                    <p className='text-[12px] text-center font-semibold text-[#D9D9D9] mt-2 underline gradient-link '>{languageData?.earnedModalLink}</p>
+                </div>
             </div>
         </div>
     )
 }
 
-export default TransactionHistory
+export default Earned
+
+
