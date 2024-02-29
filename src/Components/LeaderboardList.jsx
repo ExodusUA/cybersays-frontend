@@ -47,7 +47,7 @@ function LeaderboardList({ leaderboardData, languageData, day }) {
                         <p className='text-center saira text-[16px] font-bold'>3</p>
                         <img className={`border-[2px] border-[#FFED63] rounded-full w-[80px] h-[80px] object-cover m-auto ${design === '0' ? 'border-[#FFED63]' : '!border-[#E87001]'}`} src={'https://picsum.photos/300/299'} alt="twoSt" />
                         <p className='saira text-[12px] md:text-[14px] font-medium text-center truncate mx-2 md:mx-1'>{leaderboardData[2].email}</p>
-                        <p className={`saira text-[14px] md:text-[16px] font-medium text-[#FFED63] text-center ${design === '0' ? 'text-[#FFED63]' : 'text-[#E87001]'}`}>$69</p>
+                        <p className={`saira text-[14px] md:text-[16px] font-medium text-[#FFED63] text-center ${design === '0' ? 'text-[#FFED63]' : 'text-[#E87001]'}`}>$6.90</p>
                         <p className='saira text-[14px] md:text-[14px] font-medium text-[#FFED63] text-center'>{leaderboardData[2].points} {languageData?.leaderboardsPoints} </p>
                     </div>
                 }

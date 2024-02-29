@@ -92,7 +92,7 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
 
                             </Swiper>
                         </div>
-                        <img className='w-[160px] md:w-[200px] md:mt-5 mac:!mt-0' src={imLiveLogo} alt="imLiveLogo" />
+                        <Link to={imLiveURL} target='_blank'><img className='w-[160px] md:w-[200px] md:mt-5 mac:!mt-0' src={imLiveLogo} alt="imLiveLogo" /></Link>
                         <div className='md:block hidden mt-[100px] mac:mt-[50px]'>
                             <TimeCounter title={languageData?.timeCounterTitle2} languageData={languageData} />
                         </div>

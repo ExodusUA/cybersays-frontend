@@ -161,7 +161,7 @@ function Main({ languageData }) {
 
         // delete nulls
 
-        mixpanel.track("page_view_cyber_says", {
+        mixpanel.track("page_view", {
             distinct_id: uid || 'not_set',
             ...utmData
         });
