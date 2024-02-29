@@ -18,7 +18,7 @@ function Error({ languageData, setOpen }) {
                     <h1 className='text-[24px] text-center text-[#FF4B60]  w-full font-semibold'>{languageData.withdrawError}</h1>
 
                     <div className='flex items-center gap-4'>
-                        <button onClick={e => setOpen(false)} className={`w-full bg-[white]  px-6 py-3 saira p-2 mt-4 text-[18px] text-[#5f5f5f] font-semibold ${design === '0' ? '  rounded-[50px] border-[2px] bg-white ' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData.withdrawContinue}</button>
+                        <button onClick={e => setOpen(false)} className={`w-full bg-[white]  px-6 py-3 saira p-2 mt-4 text-[18px] text-[#5f5f5f] font-semibold ${design === '0' ? '  rounded-[50px] border-[2px] bg-white ' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData.withdrawErrorTry}</button>
 
                     </div>
                 </div>

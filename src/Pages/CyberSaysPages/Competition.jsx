@@ -8,6 +8,7 @@ import infoAPI from '../../Requests/info'
 import { Link } from 'react-router-dom'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
+import crown from '../../images/CyberSaysPage/crown1st.png'
 
 function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading, leaderboardData, setLeaderboardData, siteData, languageData, setRulesModal }) {
 
@@ -56,29 +57,47 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[14px] lg:rounded-[30px] text-center se:py-1 mac:!py-0 px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto'>
                     <p className='text-center text-[18px] sm:text-[22px]  font-bold'>{languageData?.competitionTitle}</p>
                 </div>
-                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[14px] lg:rounded-[30px] text-center se:py-1 iphone:py-3 mac:!py-0 px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto mt-2'>
+                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[14px] lg:rounded-[30px] text-center se:py-1 iphone:py-3  px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto mt-2 '>
                     {/*<p className='text-center text-[14px] sm:text-[32px] mac:!text-[24px] font-semibold'>{languageData?.competitionTitle} {siteData?.currentDay}</p>*/}
+                    <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[12px] p-1 px-3 mt-1 flex justify-between max-w-[380px] m-auto'>
+
+                        <div className=' leading-4 text-left'>
+                            <p className='gradient-linkDouble saira text-[16px] font-bold'>{languageData?.leaderSheetYou}</p>
+                            <p className='gradient-linkDouble saira text-[16px] font-bold'> #825</p>
+                            
+                        </div>
+                        <div className=' leading-4 text-center'>
+                            <p className='gradient-linkDouble saira text-[12px] font-bold'>{Number(user?.points).toFixed(0)}</p>
+                            <p className=' saira text-[12px] font-medium'>{languageData?.leaderSheetPoints}</p>
+                        </div>
+                        <div className=' leading-4 text-center'>
+                            <p className='gradient-linkDouble saira text-[12px] font-bold'>145</p>
+                            <p className=' saira text-[12px] font-medium'>{languageData?.leaderSheetFriends}</p>
+                        </div>
+                    </div>
                     {
-                        loading === false && leaderboardData.todayUsers.length > 0 && <div className='flex justify-around items-center my-2 mac:my-1 max-w-[250px] sm:max-w-[350px] w-full m-auto'>
+                        loading === false && leaderboardData.todayUsers.length > 0 && <div className='flex justify-around items-start my-2 mac:my-2 max-w-[300px] sm:max-w-[350px] w-full m-auto'>
                             {
-                                leaderboardData.todayUsers[1] && <div>
-                                    <p className='text-[16px] saira font-bold'>#2</p>
-                                    <img className='w-[26px] h-[26px] sm:w-[50px] sm:h-[50px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={cup2} alt="cup2" />
+                                leaderboardData.todayUsers[1] && <div className='mt-[50px] mr-[-50px]'>
+                                    <p className='text-[16px] saira font-bold leading-3'>#2</p>
+                                    {/*<img className='w-[26px] h-[26px] sm:w-[50px] sm:h-[50px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={cup2} alt="cup2" />*/}
                                     <p className={`text-[12px] sm:text-[14px] saira font-medium  ${design === '0' ? 'text-[#FFED63]' : 'text-[#A1B3B0]'}`}>{leaderboardData.todayUsers[1].points}</p>
                                     <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>{languageData?.competitionPoints}</p>
                                 </div>
                             }
                             <div>
-                                <p className='text-[16px] saira font-bold'>#1</p>
-                                <img className='w-[34px] h-[34px] sm:w-[70px] sm:h-[70px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={cup1} alt="cup2" />
-                                <p className={`text-[12px] sm:text-[14px] saira font-medium  ${design === '0' ? 'text-[#FFED63]' : 'text-[#F2BB02]'}`}>{leaderboardData.todayUsers[0].points}</p>
+                                <div className='flex justify-center'>
+                                    <p className='text-[16px] saira font-bold flex items-center leading-3'><img className='w-[21px] h-[21px] mr-1 mb-1' src={crown} alt="crown" />#1</p>
+                                </div>
+                                {/*<img className='w-[34px] h-[34px] sm:w-[70px] sm:h-[70px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={cup1} alt="cup2" />*/}
+                                <p className={`text-[12px] sm:text-[14px] saira font-medium  ${design === '0' ? 'text-[#FFED63]' : 'text-[#F2BB02]'}`}> {leaderboardData.todayUsers[0].points}</p>
                                 <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>{languageData?.competitionPoints}</p>
                             </div>
                             {
 
-                                leaderboardData.todayUsers[2] && <div>
-                                    <p className='text-[16px] saira font-bold'>#3</p>
-                                    <img className='w-[26px] h-[26px] sm:w-[50px] sm:h-[50px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={cup3} alt="cup2" />
+                                leaderboardData.todayUsers[2] && <div className='mt-[50px] ml-[-50px]'>
+                                    <p className='text-[16px] saira font-bold leading-3'>#3</p>
+                                    {/*<img className='w-[26px] h-[26px] sm:w-[50px] sm:h-[50px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={cup3} alt="cup2" />*/}
                                     <p className={`text-[12px] sm:text-[14px] saira font-medium ${design === '0' ? 'text-[#FFED63]' : 'text-[#E87001]'}`}>{leaderboardData.todayUsers[2].points}</p>
                                     <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>{languageData?.competitionPoints}</p>
                                 </div>

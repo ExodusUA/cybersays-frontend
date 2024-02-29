@@ -326,7 +326,7 @@ function Main({ languageData }) {
 
             </Routes >
             {
-                leaderboardModal && <LeaderboardModal languageData={languageData} setOpen={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} />
+                leaderboardModal && <LeaderboardModal user={userData} languageData={languageData} setOpen={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} />
 
             }
             {

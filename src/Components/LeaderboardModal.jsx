@@ -8,7 +8,7 @@ import no_avatar from '../images/CyberSaysPage/no_avatar.png'
 import { useDesign } from '../Helpers/Design/DesignContext'
 import LeaderboardList from './LeaderboardList'
 
-function LeaderboardModal({ setOpen, leaderboardData, loading, languageData }) {
+function LeaderboardModal({ setOpen, leaderboardData, loading, languageData, user }) {
 
     const { design } = useDesign()
 
@@ -41,7 +41,22 @@ function LeaderboardModal({ setOpen, leaderboardData, loading, languageData }) {
                 <div className='flex justify-end md:my-4'>
                     <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
+                <div className='bg-[#EAEAEA] bg-opacity-40 backdrop-blur-md  p-1 px-3 mt-1 flex justify-between max-w-[380px] m-auto'>
 
+                    <div className=' leading-4'>
+                        <p className='gradient-linkDouble saira text-[16px] font-bold'>{languageData?.leaderSheetYou}</p>
+                        <p className='gradient-linkDouble saira text-[16px] font-bold'> #825</p>
+
+                    </div>
+                    <div className=' leading-4 text-center'>
+                        <p className='gradient-linkDouble saira text-[12px] font-bold'>{Number(user?.points).toFixed(0)}</p>
+                        <p className=' saira text-[12px] font-medium'>{languageData?.leaderSheetPoints}</p>
+                    </div>
+                    <div className=' leading-4 text-center'>
+                        <p className='gradient-linkDouble saira text-[12px] font-bold'>145</p>
+                        <p className=' saira text-[12px] font-medium'>{languageData?.leaderSheetFriends}</p>
+                    </div>
+                </div>
                 {
                     loading === true
                         ? 'Loading...'
