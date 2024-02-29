@@ -73,7 +73,14 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
                 <p className={`text-[12px] ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble font-semibold'} font-medium text-center saira`}>{languageData?.withdrawSubtitle}</p>
                 <div className=' text-center flex justify-center  m-auto mt-3'>
                     <div className={`bg-[#EAEAEA] bg-opacity-30 backdrop-blur-lg ${design === '0' ? 'rounded-[30px]' : ' rounded-[12px]'} px-8`}>
-                        <p className={`text-[32px] w-f ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble font-semibold'} font-bold text-center saira leading-9 mt-1`}>${user?.earned.toFixed(2)}</p>
+                        <p className={`text-[32px] w-f ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble font-semibold'} font-bold text-center saira leading-9 mt-1`}>
+                            {
+                                userCountry === 'BR' || userCountry === 'UA' ? '' : '$'
+                            }
+                            {
+                                userCountry === 'BR' || userCountry === 'UA' ? user?.allTimeEarned.toFixed(0) * 5 : user?.allTimeEarned.toFixed(0)
+                            }
+                        </p>
                         <p className='text-[12px] font-medium text-center saira leading-3 mb-2'>{languageData?.withdrawPrice}</p>
                     </div>
                 </div>
