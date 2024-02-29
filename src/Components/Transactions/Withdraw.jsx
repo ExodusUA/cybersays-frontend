@@ -7,6 +7,7 @@ import Confirm from './Confirm'
 import Error from './Error'
 import Verification from './Verification'
 import PIX from './PIX'
+import userAPI from '../../Requests/user'
 
 
 function Withdraw({ user, setOpen, languageData, userCountry }) {
@@ -43,11 +44,19 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
 
     }, [userCountry])
 
+    async function generateOTP() {
+        if (email === null || email === undefined || email.length === '') return alert('Please enter a valid email address')
+        const res = await userAPI.generateOTP(email)
+        if (res.status === 200) {
+            setStep(2)
+        }
+    }
+
     return (
         <div>
             <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4'>
                 <div className={`flex ${step === 0 ? 'justify-end' : ' justify-between'}  max-w-[600px] m-auto md:my-4`}>
-                    <svg onClick={e => {if (step === 0) return; setStep(step - 1)}} className={`${step === 0 ? 'hidden' : 'block'} cursor-pointer`} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <svg onClick={e => { if (step === 0) return; setStep(step - 1) }} className={`${step === 0 ? 'hidden' : 'block'} cursor-pointer`} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M17 22L7 12L17 2" stroke="url(#paint0_linear_26_11821)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         <defs>
                             <linearGradient id="paint0_linear_26_11821" x1="17" y1="11.8039" x2="7" y2="11.8039" gradientUnits="userSpaceOnUse">
@@ -99,15 +108,15 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
                             <input className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder={languageData.withdrawInputEmail} />
                         </div>
                         <div className='flex justify-center mt-4'>
-                            <button onClick={e => setStep(2)} className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-2 max-w-[600px]  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData.withdrawContinue}</button>
+                            <button onClick={e => generateOTP()} className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-2 max-w-[600px]  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData.withdrawContinue}</button>
                         </div>
                     </div>
                 }
                 {
-                    step === 2 && <Verification setStep={setStep} languageData={languageData} />
+                    step === 2 && <Verification setStep={setStep} languageData={languageData} email={email} />
                 }
                 {
-                    step === 3 && <PIX setStep={setStep} languageData={languageData} />
+                    step === 3 && <PIX setStep={setStep} languageData={languageData} setConfirm={setConfirm} setError={setError} email={email} />
                 }
                 {/*
                 <div className={`max-h-[320px] overflow-scroll border-b-[2px] ${design === '0' ? 'border-[#FFED63]' : 'gradient-withdrawBorder'} max-w-[375px] md:max-w-[600px] m-auto`}>
@@ -133,10 +142,10 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
 
             </div>
             {
-                confirm && <Confirm setOpen={setConfirm} languageData={languageData} />
+                confirm && <Confirm setOpen={setConfirm} languageData={languageData} closeAll={setOpen} />
             }
             {
-                error && <Confirm setOpen={setError} languageData={languageData} />
+                error && <Confirm setOpen={setError} languageData={languageData} closeAll={setOpen} />
             }
 
         </div>

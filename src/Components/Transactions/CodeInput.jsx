@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-const CodeInput = () => {
-  const [code, setCode] = useState(['', '', '', '', '', '']); 
+const CodeInput = ({ code, setCode }) => {
+
 
   const handleChange = (e, index) => {
     const { value } = e.target;
-    if (value.length <= 1 && /^\d*$/.test(value)) { 
+    if (value.length <= 1 && /^\d*$/.test(value)) {
       const newCode = [...code];
       newCode[index] = value;
       setCode(newCode);
@@ -20,14 +20,14 @@ const CodeInput = () => {
       const newCode = [...code];
       newCode[index - 1] = '';
       setCode(newCode);
-      document.getElementById(`code-input-${index - 1}`).focus(); 
+      document.getElementById(`code-input-${index - 1}`).focus();
     }
   };
 
   const handlePaste = (e, index) => {
     e.preventDefault();
   };
-console.log('Code: ', code)
+  console.log('Code: ', code)
   return (
     <div className="flex justify-center my-2">
       {code.map((digit, index) => (

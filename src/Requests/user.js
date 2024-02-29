@@ -132,4 +132,33 @@ async function getPDF() {
 
 }
 
-export default { getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTicketsAndPoints, sendEmail, getModeratorData, getPDF };
+async function generateOTP(email) {
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/generateWithdrawOtp', { email }, {
+        headers: {
+            token: `${getToken()}`
+        }
+    });
+    return response;
+}
+
+async function verifyOTP(code, email) {
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/checkWithdrawOtp', { code, email }, {
+        headers: {
+            token: `${getToken()}`
+        }
+    });
+    return response;
+
+}
+
+async function createPixWithdraw(pixKey, personCODE, email) {
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/withdraw', { pixKey, personCODE, email }, {
+        headers: {
+            token: `${getToken()}`
+        }
+    });
+    return response;
+
+}
+
+export default { getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTicketsAndPoints, sendEmail, getModeratorData, getPDF, generateOTP, verifyOTP, createPixWithdraw };
