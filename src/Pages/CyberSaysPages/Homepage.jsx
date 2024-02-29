@@ -62,7 +62,7 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                 <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
                 <div className='flex justify-between items-end md:items-center '>
                     <div>
-                        <img className='w-[180px] sm:w-[200px] md:w-[320px]' src={design === '0' ? girlOK : require('../../images/NewDesign/Homepage/hero_image.png')} alt="girlOK" />
+                        <img className='w-[180px] sm:w-[200px] md:w-[320px] lg:mt-[-70px]' src={design === '0' ? girlOK : require('../../images/NewDesign/Homepage/hero_image.png')} alt="girlOK" />
                         <div className='md:block hidden relative left-3'>
                             {
                                 getButtonMarkup(lastTask)
@@ -105,7 +105,7 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                 </div>
             </div>
             <div className='flex md:hidden absolute se:bottom-[160px] iphone:bottom-[156px] justify-center w-full max-w-[760px] m-auto'>
-                <TimeCounter title={languageData?.timeCounterTitle2} languageData={languageData} />
+                <TimeCounter title={languageData?.timeCounterTitle2} left={'m-[unset]'} leftTitle={'text-left'} languageData={languageData} />
             </div>
         </div>
     )
