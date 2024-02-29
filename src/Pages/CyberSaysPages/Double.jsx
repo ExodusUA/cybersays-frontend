@@ -5,6 +5,7 @@ import TaskCard from '../../Components/DoubleMoneyPage/TaskCard';
 import congrats from '../../images/CyberSaysPage/congrats.png'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
+import doubleIcon from '../../images/NewDesign/doubleIcon.svg'
 
 function Double({ languageData, user, imLiveURL, setOpen }) {
 
@@ -47,13 +48,47 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
             }
         }
     }, [user, selectedTask])
+    const [lastTask, setLastTask] = useState(0)
+   
+    useEffect(() => {
+        if (user === null) return setLastTask(0)
 
+        let tasks = JSON.parse(user?.completed_tasks)
+        if (tasks === null) return setLastTask(0)
+        let lastTask = tasks[tasks.length - 1]
+        setLastTask(lastTask)
+    }, [user])
+
+    const getButtonMarkup = (task) => {
+        console.log('task', task)
+        switch (task) {
+            case 0:
+            case null:
+            case undefined:
+                return <div className='max-w-[380px] w-full'>
+                    <p className='text-center text-[18px] font-semibold '>CyberSays commands you to...</p>
+                    <button className={`w-full border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>1/3: Register on ImLive 🎉</button>
+                    <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>7 minutes away</span> from withdraw</p>
+                </div>
+            case 1: return <div className='max-w-[380px] w-full'>
+            <p className='text-center text-[18px] font-semibold '>CyberSays commands you to...</p>
+            <button className={`w-full bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>2/3: Buy in 5$, get a royal welcome<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
+            <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>5 minutes away</span> from withdraw</p>
+        </div>
+            case 2: return <div className='max-w-[380px] w-full'>
+                    <p className='text-center text-[18px] font-semibold '>CyberSays commands you to...</p>
+                    <button className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>3/3: Spend all credits, get 10$ back<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
+                    <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>3 minutes away</span> from withdraw</p>
+                </div>
+
+        }
+    }
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-double.jpg)] md:bg-[url(./images/CyberSaysPage/bg-double.jpg)]' : ' bg-[url(./images/NewDesign/Bg/double_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} onClick={() => setIsOpen(false)}>
             <div className='pt-[97px] px-4  md:pt-[135px] mac-center:!pt-0 max-w-[1170px] m-auto' >
                 <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] mac2:!w-[220px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
                 <div className='mac:max-w-[550px] md:max-w-[1200px] md:mx-[120px] m-auto'>
-                    <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  text-center py-1  px-4 md:py-2 ${design === '0' ? 'rounded-[100px]' : 'rounded-[14px] lg:rounded-[24px]'}`}>
+                    <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  text-center max-w-[280px] sm:max-w-[500px] m-auto py-2  px-4 md:py-2 ${design === '0' ? 'rounded-[100px]' : 'rounded-[14px] lg:rounded-[24px]'}`}>
                         <p className='text-[14px] md:text-[24px] mac2:!text-[20px] font-semibold  iphone:leading-[unset] se:leading-4 mac2:!leading-[22px]'>{languageData?.doubleTitle}</p>
 
                     </div>
@@ -73,24 +108,28 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
                         taskStatus !== null && <>
                             <TaskCard tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task1} setSelectedTask={setSelectedTask} state={taskStatus[0]} manualSelect={selectedTask !== null} open={selectedTask === 1} background={design === '0' ? '#B9A1E1' : '#4F97CB'} rounded={'rounded-t-[20px] '} index={1} imLiveURL={imLiveURL} />
                             <TaskCard tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task2} setSelectedTask={setSelectedTask} state={taskStatus[1]} manualSelect={selectedTask !== null} open={selectedTask === 2} background={design === '0' ? '#93CC8E' : '#32B28C'} rounded={'rounded-t-[20px] '} index={2} imLiveURL={imLiveURL} />
-                            <TaskCard tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task3} setSelectedTask={setSelectedTask} state={taskStatus[2]} manualSelect={selectedTask !== null} open={selectedTask === 3} background={design === '0' ? '#EA7C7C' : '#D76666'} rounded={'rounded-t-[20px] '} index={3} imLiveURL={imLiveURL} />
-                            <TaskCard user={user} tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task4} setSelectedTask={setSelectedTask} state={taskStatus[3]} manualSelect={selectedTask !== null} open={selectedTask === 4} background={design === '0' ? '#76C2E3' : '#9E64D8'} rounded={'rounded-[20px] !pb-[5px]'} index={4} imLiveURL={imLiveURL} />
+                            <TaskCard tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task3} setSelectedTask={setSelectedTask} state={taskStatus[2]} manualSelect={selectedTask !== null} open={selectedTask === 3} background={design === '0' ? '#EA7C7C' : '#D76666'} rounded={'rounded-[20px] !pb-[5px]'} index={3} imLiveURL={imLiveURL} />
+                            {/*<TaskCard user={user} tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task4} setSelectedTask={setSelectedTask} state={taskStatus[3]} manualSelect={selectedTask !== null} open={selectedTask === 4} background={design === '0' ? '#76C2E3' : '#9E64D8'} rounded={'rounded-[20px] !pb-[5px]'} index={4} imLiveURL={imLiveURL} />*/}
                         </>
                     }
                 </div>
                 <div className='flex justify-center'>
-                    <p onClick={e => setOpen(true)} className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2 cursor-pointer  ${design === '0' ? 'text-white' : 'gradient-link flex justify-center'}`}>{languageData?.doublePaid}</p>
+                    <p onClick={e => setOpen(true)} className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2  cursor-pointer  ${design === '0' ? 'text-white' : 'gradient-link flex justify-center'}`}>{languageData?.doublePaid}</p>
 
                 </div>
-
+                <div className='flex justify-center'>
+                    {
+                        getButtonMarkup(lastTask)
+                    }
+                </div>
                 {/*
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[20px] max-w-[600px] m-auto p-4'>
                     <p className='text-[20px] md:text-[32px] font-semibold text-center '>We have doubled your money!</p>
                     <img className='max-w-[200px] md:max-w-[400px] w-full m-auto mt-2' src={congrats} alt="congrats" />
                     <button className='w-full bg-white  border-[2px] border-[#FFED63] rounded-[50px] text-black text-[18px] saira font-semibold py-1 flex justify-center mt-3'>
-                        Win the Vegas weekend
+                        Show me the next page!
                     </button>
-                    <p className='text-[14px] font-medium text-center mt-2 saira leading-[16px] md:leading-[18px]'>Feel always like a king with ImLive and note that every ticket you'll buy will entitle you with 1 lottery tickets to the raffle</p>
+                    <p className='text-[14px] font-medium text-center mt-2 saira leading-[16px] md:leading-[18px]'>Withdraw your money</p>
                 </div>
                 */}
             </div>

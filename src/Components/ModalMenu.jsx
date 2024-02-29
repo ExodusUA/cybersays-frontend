@@ -77,7 +77,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <input onClick={e => {
                 setCheckBox(design === '1' ? '0' : '1')
                 changeDesign(design === '1' ? '0' : '1')
-              }} type="checkbox" checked={ checkBox === '1' ? true : false} class="sr-only peer" />
+              }} type="checkbox" checked={checkBox === '1' ? true : false} class="sr-only peer" />
               <div class={`w-[56px] md:w-[72px] border-[2px] h-8 md:h-10  peer-focus:outline-none rounded-full peer  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:start-[4px]  ${design === '0' ? 'after:bg-[#FFED63] border-[#FFED63]' : 'after:bg-[#80d1ee] border-[#80d1ee]'}   after:rounded-full after:h-6 md:after:h-8 after:w-6 md:after:w-8 after:transition-all`}></div>
               <p className='text-[10px] lg:text-[12px] saira font-medium text-center absolute w-[110px] left-[-25px] lg:left-[-15px]'>Choose your design</p>
             </label>
@@ -136,7 +136,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <img className='w-[32px] h-[32px] mr-2' src={link10} alt="link10" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink10}</p>
             </div>
-
+            
             <div className=' cursor-pointer  ' onClick={e => setWhatAbout(!whatAbout)}>
               <div className='flex  items-center'>
                 <div className='flex items-center' >
@@ -178,14 +178,18 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                     <div className='flex items-center' onClick={e => setLegalModal(true)}  >
                       <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuBottom2}</p>
                     </div>
-                    <div className='flex items-center' onClick={e => setSettingsModal(true)}  >
-                      <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuBottom3}</p>
-                    </div>
                   </div>
                 </>
               }
             </div>
-
+            <div className='flex items-center' onClick={e => setSettingsModal(true)}  >
+              <img className='w-[32px] h-[32px] mr-2' src={link12} alt="link10" />
+              <p className='saira text-[20px] font-semibold cursor-pointer '>{languageData?.modalMenuBottom3}</p>
+            </div>
+            <div className='flex items-center' onClick={e => setTourModal(true)}  >
+              <img className='w-[32px] h-[32px] mr-2' src={link13} alt="link10" />
+              <p className='saira text-[20px] font-semibold cursor-pointer '>{languageData?.modalMenuBottom5}</p>
+            </div>
           </div>
           {/*
           <div className=' absolute bottom-4 left-1/2 transform -translate-x-1/2 flex justify-around items-center max-w-[420px] w-full '>
