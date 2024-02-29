@@ -71,12 +71,12 @@ function TourModal({ setOpen, languageData, user }) {
                             type: blobImage.type,
                         }),
                     ],
-                    url: '?uid=' + user.id,
+                    url: '?uid=' + user?.id,
                 })
                     .then(() => console.log('Successful share! 🎉'))
                     .catch(error => console.log('Error sharing:', error));
             } else {
-                console.log('Web Share API not supported.');
+                window.navigator.clipboard.writeText(window.location.host +  '?uid=' + user?.id)
 
             }
         }
@@ -100,7 +100,7 @@ function TourModal({ setOpen, languageData, user }) {
             </div>
 */}
             <div className='max-w-[375px] md:max-w-[600px] mac:!max-w-[400px] m-auto'>
-                
+
                 <Swiper
                     pagination={{ clickable: true }}
                     modules={[Pagination]}
