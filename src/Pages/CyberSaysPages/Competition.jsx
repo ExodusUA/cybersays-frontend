@@ -59,20 +59,22 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                 </div>
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[14px] lg:rounded-[30px] text-center se:py-1 iphone:py-3  px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto mt-2 '>
                     {/*<p className='text-center text-[14px] sm:text-[32px] mac:!text-[24px] font-semibold'>{languageData?.competitionTitle} {siteData?.currentDay}</p>*/}
-                    <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[12px] p-1 px-3 mt-1 flex justify-between max-w-[380px] m-auto'>
+                    <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[12px] p-1 px-3 mt-1 flex justify-between max-w-[380px] md:max-w-[100%] m-auto'>
 
-                        <div className=' leading-4 text-left'>
+                        <div className=' leading-4 text-left w-1/3'>
                             <p className='gradient-linkDouble saira text-[16px] font-bold'>{languageData?.leaderSheetYou}</p>
                             <p className='gradient-linkDouble saira text-[16px] font-bold'> #825</p>
-                            
+
                         </div>
-                        <div className=' leading-4 text-center'>
+                        <div className=' leading-4 text-center w-1/3'>
                             <p className='gradient-linkDouble saira text-[12px] font-bold'>{Number(user?.points).toFixed(0)}</p>
                             <p className=' saira text-[12px] font-medium'>{languageData?.leaderSheetPoints}</p>
                         </div>
-                        <div className=' leading-4 text-center'>
-                            <p className='gradient-linkDouble saira text-[12px] font-bold'>145</p>
-                            <p className=' saira text-[12px] font-medium'>{languageData?.leaderSheetFriends}</p>
+                        <div className=' leading-4 text-right w-1/3'>
+                            <div>
+                                <p className='gradient-linkDouble saira text-[12px] font-bold'>145</p>
+                                <p className=' saira text-[12px] font-medium'>{languageData?.leaderSheetFriends}</p>
+                            </div>
                         </div>
                     </div>
                     {
