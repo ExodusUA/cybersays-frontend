@@ -40,7 +40,7 @@ function LiveFeed({ user }) {
                     feedList.map((item, index) => (
                         <div key={index} className='feedShow flex justify-between items-center minw-[140px] lg:min-w-[150px] px-[1px] lg:p-[1px] border-[1px] border-[#A2DBF0] rounded-[6px] '>
                             <div>
-                                <img className='w-[28px] lg:w-[32px] h-[28px] lg:h-[32px] ml-[1px] rounded-sm' src={`https://flagsapi.com/${item.country || "US"}/flat/64.png`} alt="Country Flag" />
+                                <img className='w-[28px] lg:w-[32px] h-[28px] lg:h-[32px] ml-[1px] rounded-sm' src={`https://flagsapi.com/${item.country?.toUpperCase() || "US"}/flat/64.png`} alt="Country Flag" />
                             </div>
                             <div className=''>
                                 <p className='text-[10px] lg:text-[12px] saira font-medium truncate w-[50px]'> {item.email}</p>
