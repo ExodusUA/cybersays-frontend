@@ -3,12 +3,10 @@ import newlogoCyber from '../../images/NewDesign/newLogo_main.png';
 import logoCyber from '../../images/CyberSaysPage/logoMain.png';
 import hero from '../../images/CyberSaysPage/heroRaffle.png';
 import TimeCounter from '../../Components/TimeCounter';
-import ready from '../../images/CyberSaysPage/offerTrue.png';
 import notReady from '../../images/CyberSaysPage/offerFalse.png';
 import { Link } from 'react-router-dom';
 import { useDesign } from '../../Helpers/Design/DesignContext';
-import ToolTip1 from '../../Components/ToolTip1';
-import doubleIcon from '../../images/NewDesign/doubleIcon.svg'
+import doubleIcon from '../../images/NewDesign/doubleIcon.svg';
 
 function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModal, scrollToPage,setWinTicketModal }) {
 

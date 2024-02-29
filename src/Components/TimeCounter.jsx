@@ -6,7 +6,7 @@ function TimeCounter({ languageData,hidden,title }) {
 
     const { design } = useDesign()
 
-    const endDate = moment.tz('2024-02-28 10:00', 'America/Sao_Paulo');
+    const endDate = moment.tz('2024-03-14 10:00', 'America/Sao_Paulo');
     const [formattedEndDate, setFormattedEndDate] = useState(endDate.format('YY/MM/DD HH:mm:ss'));
     const [daysRemaining, setDaysRemaining] = useState(endDate.diff(moment(), 'days'));
     const [hoursRemaining, setHoursRemaining] = useState(0);
