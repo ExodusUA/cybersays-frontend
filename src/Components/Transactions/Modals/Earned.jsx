@@ -7,7 +7,7 @@ import moment from 'moment'
 import { useQuery } from '@tanstack/react-query'
 
 
-function Earned({ setOpen, languageData, user }) {
+function Earned({ setOpen, languageData, user, setTransactionsModal }) {
     const { design } = useDesign()
     const [transactionsData, setTransactionsData] = useState(null)
 
@@ -102,7 +102,10 @@ function Earned({ setOpen, languageData, user }) {
 
                 </div>
                 <div className=' flex justify-center'>
-                    <p className='text-[12px] text-center font-semibold text-[#D9D9D9] mt-2 underline gradient-link '>{languageData?.earnedModalLink}</p>
+                    <p onClick={e => {
+                        setTransactionsModal(true)
+                        setOpen(false)
+                    }} className='text-[12px] text-center font-semibold text-[#D9D9D9] mt-2 underline gradient-link cursor-pointer'>{languageData?.earnedModalLink}</p>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@ import refferals from '../../images/CyberSaysPage/headerRefferals.png'
 import joker from '../../images/CyberSaysPage/headerJoker.png'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 
-function HeaderMenu({ setMenuOpen, user, setTourModal, languageData, userCountry, setEarnedModal, setTicketModal,setPointsModal }) {
+function HeaderMenu({ setMenuOpen, user, setTourModal, languageData, userCountry, setEarnedModal, setTicketShortModal,setPointsModal }) {
 
     const { design } = useDesign()
 
@@ -35,7 +35,7 @@ function HeaderMenu({ setMenuOpen, user, setTourModal, languageData, userCountry
                                         }
                                     </p>
                                 </div>
-                                <div onClick={e => setTicketModal(true)} className=' leading-4 md:leading-5 mx-1 cursor-pointer'>
+                                <div onClick={e => setTicketShortModal(true)} className=' leading-4 md:leading-5 mx-1 cursor-pointer'>
                                     <p className={`text-[10px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-medium saira text-center `}>{languageData?.header3}</p>
                                     <p className={`text-[10px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-bold saira text-center flex justify-center items-center`}><img className='w-[16px] h-[16px] mr-[5px]' src={design === '0' ? joker : require('../../images/NewDesign/header/ticket.png')} alt="joker" /> {user?.raffle_tickets || 0}</p>
                                 </div>

@@ -42,6 +42,8 @@ import InfoOfferModal from '../Components/InfoOfferModal'
 import Earned from '../Components/Transactions/Modals/Earned'
 import Points from '../Components/Transactions/Modals/Points'
 import Ticket from '../Components/Transactions/Modals/Ticket'
+import TransactionHistory from '../Components/Transactions/TransactionHistory'
+import TicketsHistory from '../Components/Transactions/TicketsHistory'
 
 var mixpanel = require('mixpanel-browser');
 
@@ -117,8 +119,10 @@ function Main({ languageData }) {
     const [toolInfo, setToolInfo] = useState(false)
     const [infoOffer, setInfoOffer] = useState(false)
     const [earnedModal, setEarnedModal] = useState(false)
-    const [ticketModal, setTicketModal] = useState(false)
+    const [ticketShortModal, setTicketShortModal] = useState(false)
     const [pointsModal, setPointsModal] = useState(false)
+    const [transactionsModal, setTransactionsModal] = useState(false)
+    const [ticketsModal, setTicketsModal] = useState(false)
 
     const [selectedMessage, setSelectedMassege] = useState(null);
 
@@ -281,7 +285,7 @@ function Main({ languageData }) {
 
         return (
             <div className='overflow-y-hidden overflow-x-hidden'>
-                <HeaderMenu setPointsModal={setPointsModal} setTicketModal={setTicketModal} setEarnedModal={setEarnedModal} userCountry={userCountry} languageData={languageData} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} setTourModal={setTourModal} />
+                <HeaderMenu setPointsModal={setPointsModal} setTicketShortModal={setTicketShortModal} setEarnedModal={setEarnedModal} userCountry={userCountry} languageData={languageData} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} setTourModal={setTourModal} />
                 {/*<LiveFeed user={userData} />*/}
                 <Swiper
                     className='w-screen h-screen'
@@ -345,7 +349,7 @@ function Main({ languageData }) {
 
             }
             {
-                menuOpen === true && <ModalMenu userCountry={userCountry} languageData={languageData} setChatModal={setChatModal} chatModal={chatModal} siteData={siteData} scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
+                menuOpen === true && <ModalMenu setTransactionsModal={setTransactionsModal} userCountry={userCountry} languageData={languageData} setChatModal={setChatModal} chatModal={chatModal} siteData={siteData} scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
             }
             {
                 tourModal && <TourModal user={userData} languageData={languageData} setOpen={setTourModal} />
@@ -374,13 +378,19 @@ function Main({ languageData }) {
                 infoOffer && <InfoOfferModal setOpen={setInfoOffer} languageData={languageData} />
             }
             {
-                earnedModal && <Earned languageData={languageData} setOpen={setEarnedModal} user={userData} />
+                earnedModal && <Earned setTransactionsModal={setTransactionsModal} languageData={languageData} setOpen={setEarnedModal} user={userData} />
             }
             {
-                ticketModal && <Ticket  languageData={languageData} setOpen={setTicketModal} user={userData} />
+                ticketShortModal && <Ticket setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setTicketShortModal} user={userData} />
             }
             {
-                pointsModal && <Points languageData={languageData} setOpen={setPointsModal} user={userData} />
+                pointsModal && <Points setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setPointsModal} user={userData} />
+            }
+            {
+                transactionsModal && <TransactionHistory languageData={languageData} setOpen={setTransactionsModal} user={userData} />
+            }
+            {
+                ticketsModal && <TicketsHistory languageData={languageData} setOpen={setTicketsModal} user={userData} />
             }
             {
                 openMessage && <Message onCloseCopied={() => {

@@ -8,7 +8,7 @@ import { useQuery } from '@tanstack/react-query'
 import joker from '../../../images/CyberSaysPage/MyTicketJoker.png'
 import coin from '../../../images/CyberSaysPage/MyTicketCoin.png'
 
-function Ticket({ setOpen, languageData, user }) {
+function Ticket({ setOpen, languageData, user, setTicketsModal }) {
     const { design } = useDesign()
     const [ticketsData, setTicketsData] = useState(null)
     const [pointsData, setPointsData] = useState(null)
@@ -182,7 +182,10 @@ function Ticket({ setOpen, languageData, user }) {
 
                 </div>
                 <div className=' flex justify-center'>
-                    <p className='text-[12px] text-center font-semibold text-[#D9D9D9] mt-2 underline gradient-link '>{languageData?.earnedModalLink}</p>
+                    <p onClick={e => {
+                        setTicketsModal(true)
+                        setOpen(false)
+                    }} className='text-[12px] text-center font-semibold text-[#D9D9D9] mt-2 underline gradient-link cursor-pointer'>{languageData?.earnedModalLink}</p>
                 </div>
             </div>
         </div>
