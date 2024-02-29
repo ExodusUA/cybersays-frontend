@@ -137,7 +137,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                 </div>
                 
                 <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
-                    <TimeCounter title={languageData.timeCounterTitle2}  languageData={languageData} />
+                    <TimeCounter title={languageData?.timeCounterTitle}  languageData={languageData} />
                 </div>
                 
             </div>

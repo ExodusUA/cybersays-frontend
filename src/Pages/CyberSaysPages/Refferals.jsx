@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import logoCyber from '../../images/CyberSaysPage/logoMain.png'
-import left from '../../images/CyberSaysPage/swiperBtnDesctopLeft.png'
-import right from '../../images/CyberSaysPage/swiperBtnDesctopRight.png'
+import logoCyber from '../../images/CyberSaysPage/logoMain.png';
+import left from '../../images/CyberSaysPage/swiperBtnDesctopLeft.png';
+import right from '../../images/CyberSaysPage/swiperBtnDesctopRight.png';
 import { Navigation } from 'swiper/modules';
-import { useDesign } from '../../Helpers/Design/DesignContext'
-import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
+import { useDesign } from '../../Helpers/Design/DesignContext';
+import newlogoCyber from '../../images/NewDesign/newLogo_main.png';
 import ToolTip2 from '../../Components/ToolTip2';
-import ImageModals from '../../Components/ImageModals';
-import userAPI from '../../Requests/user'
 
 function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenMassege, setOpenAvatar, selectedMessage, setSelectedMassege, copyToMessage, message, uploadedPhotos, imageModal, setImageModal, selectedImage, setSelectedImage, setInfoOffer }) {
 
@@ -46,6 +44,8 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                 .then(() => console.log('Successful share! 🎉'))
                 .catch(err => alert('Error sharing: ' + err));
         } else {
+
+
             window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.referral_code)
             setIsLinkShared(true)
 
@@ -57,21 +57,12 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
 
     const [isLinkCopied, setIsLinkCopied] = useState(false);
 
-    const copyToClipboard = () => {
-        let link = window.location.hostname + '?ref=' + user?.referral_code;
-        setIsLinkCopied(true)
-        navigator.clipboard.writeText(link);
-
-        setTimeout(() => {
-            setIsLinkCopied(false)
-        }, 3000);
-    }
     const handlePhotoClick = (index, e) => {
         e.preventDefault();
         setSelectedImage(uploadedPhotos[index]);
     };
 
-   
+
 
 
     const [photoLoading, setPhotoLoading] = useState(false);
@@ -80,10 +71,10 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
         if (photoLoading) return;
         setPhotoLoading(true);
         try {
-           
+
             const response = await fetch(uploadedPhotos[avatar]);
             const blob = await response.blob();
-    
+
             const blobUrl = window.URL.createObjectURL(blob);
             const link = document.createElement('a');
             link.href = blobUrl;
@@ -91,11 +82,11 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
             link.click();
             link.remove();
             window.URL.revokeObjectURL(blobUrl);
-            console.log('111111111',blobUrl); 
+            console.log('111111111', blobUrl);
         } catch (error) {
             console.error('Error downloading photo:', error);
         }
-        console.log(uploadedPhotos[avatar]); 
+        console.log(uploadedPhotos[avatar]);
         setPhotoLoading(false);
     }
 
@@ -162,9 +153,9 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                             <div className='flex' key={index}>
                                                 <img onClick={e => {
                                                     setSelectedGif(index)
-                                                    
+
                                                     handlePhotoClick(index, e)
-                                                   // setImageModal(true)
+                                                    // setImageModal(true)
                                                 }} className={`${selectedGif === index && `${design === '0' ? 'border-[2px] !border-[#FFED63]' : 'border-[2px] !border-[#FE804D]'} opacity-[1] relative`}   rounded-[20px] w-[110px] h-[110px] sm:w-[140px] sm:h-[140px] opacity-[0.5] cursor-pointer object-cover`} src={item} alt="gif1" />
                                                 <svg onClick={e => downloadPhoto(index)} className=' absolute top-1 left-1 cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
                                                     <path d="M4.25 17V19C4.25 19.5304 4.44315 20.0391 4.78697 20.4142C5.13079 20.7893 5.5971 21 6.08333 21H17.0833C17.5696 21 18.0359 20.7893 18.3797 20.4142C18.7235 20.0391 18.9167 19.5304 18.9167 19V17M7 11L11.5833 16M11.5833 16L16.1667 11M11.5833 16V4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
