@@ -10,7 +10,7 @@ import { useDesign } from '../../Helpers/Design/DesignContext';
 import ToolTip1 from '../../Components/ToolTip1';
 import doubleIcon from '../../images/NewDesign/doubleIcon.svg'
 
-function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModal, scrollToPage }) {
+function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModal, scrollToPage,setWinTicketModal }) {
 
     console.log('user', user)
 
@@ -81,12 +81,13 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
 
                     <div>
                         <img className='se:w-[280px] iphone:w-[345px] md:w-[770px] iphone:mt-[-40px] mob:mt-0 m-auto md:mt-[-100px] mac2:!mt-[-50px] se:mt-[-30px] mac:!w-[500px] mac2:!w-[500px]' src={design === '0' ? hero : require('../../images/NewDesign/RaffleTicket/hero_image.png')} alt="heroRaffle" />
+
                         <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[30px] text-center flex py-3 md:py-3 mac:!py-2  px-2 mt-[-20px] md:mt-[-80px] ${isTaskCompleted === false && 'mt-[-60px] md:!mt-[-120px]'} justify-center relative z-1`} >
                             {
 
-                                isTaskCompleted === true
+                                isTaskCompleted === false
                                     ? <div>
-                                        <p className='text-[18px] md:text-[24px] font-medium saira text-center mx-4 se:mb-0 iphone:mb-2 mac:!mb-1  md:text-center'>{languageData?.raffleUnderBtn2} </p>
+                                        <p className='text-[18px] md:text-[24px] font-medium saira text-center se:mb-0 iphone:mb-2 mac:!mb-1  md:text-center'>{languageData?.raffleUnderBtn} </p>
                                         <div className='flex justify-between items-start w-full '>
                                             <div className='text-center w-full'>
                                                 <Link target='_blank' to={imLiveURL}><button className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold p-2 md:py-3 md:w-[95%] ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.raffleLeftBtn}</button></Link>
@@ -104,17 +105,25 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                                                 <p className='saira text-[12px] md:text-[14px] font-medium'>{languageData?.raffleRightSection2}</p>
 
                                             </div>
+
                                         </div>
+                                        <p className='text-[10px] md:text-[12px] saira text-center cursor-pointer pt-1'>
+                                            {languageData?.raffleRulesDesc}
+                                        </p>
                                     </div>
                                     : <div className='flex justify-center'>
                                         <div>
                                             <p className='text-[18px] md:text-[24px] font-medium saira text-center mx-4 se:mb-0 iphone:mb-2 mac:!mb-1  md:text-center'>{languageData?.raffleUnderBtn} </p>
+
                                             <div className='flex justify-center'>
                                                 {
                                                     getButtonMarkup(lastTask)
                                                 }
+
                                             </div>
+
                                         </div>
+
                                     </div>
                             }
 
@@ -124,33 +133,25 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                     {
 
                         isTaskCompleted === false
-                            ? <div className=' text-center mx-1 md:mx-0 md:py-2 relative z-1 mac2:!mt-[-20px]'>
-                                <p className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] text-[18px] md:text-[32px] mac2:!text-[18px] px-12 lg:px-0 font-semibold py-2'>{languageData?.raffleTitle1}</p>
-                                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] mt-2 py-1 lg:py-3'>
+                            ? <div className=' text-center  md:mx-0 md:py-2 relative z-1 mac2:!mt-[-20px]'>
+                                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] py-2'>
+                                    <p className='  text-[18px] md:text-[32px] mac2:!text-[18px] font-semibold leading-5 lg:leading-9'>
+                                        {languageData?.raffleTitle1}
+                                    </p>
+                                    <p onClick={e => setWinModal(true)} className='gradient-tourToggle max-w-[240px] m-auto rounded-[14px] w-full text-[#1E1E1E] saira text-[14px] font-semibold cursor-pointer mt-2 '>What’s the Vegas Promotion?</p>
+                                </div>
+
+
+                                {/* 
+                               <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] mt-2 py-1 lg:py-3'>
+                                    
                                     <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center mx-4 iphone:leading-4 se:leading-[14px]'>
                                         {languageData?.raffleSubTitle1}
                                         <img className='w-[12px] md:w-[24px] h-[12px] md:h-[24px] mr-[2px]' src={ready} alt="ready" />
 
 
                                         <div className='relative'>
-                                            {/*
-                                            <CustomTooltip setOpen={setInfoTooltip} open={infoTooltip} >
-                                                <div>
-                                                    <p className='text-black text-left saira text-[12px] md:text-[14px] font-medium leading-[15px]'>
-                                                        {languageData?.raffleInfoTitle1}
-                                                    </p>
-                                                    <p className='text-black text-left saira text-[12px] md:text-[14px] font-medium leading-[15px] mt-3 ml-2'>
-                                                        1. <span className='saira font-bold text-black'>{languageData?.raffleInfoTitle2} </span>{languageData?.raffleInfoTitle2Span}
-                                                    </p>
-                                                    <p className='text-black text-left saira text-[12px] md:text-[14px] font-medium leading-[15px] mt-3 ml-2'>
-                                                        2. <span className='saira font-bold text-black'>{languageData?.raffleInfoTitle3} </span>{languageData?.raffleInfoTitle3Span}
-                                                    </p>
-                                                    <p className='text-black text-left saira text-[12px] md:text-[14px] font-medium leading-[15px] mt-3'>
-                                                        {languageData?.raffleInfoTitle4} <span className='saira underline text-black cursor-pointer'>{languageData?.raffleInfoTitle4Span}</span>
-                                                    </p>
-                                                </div>
-                                            </CustomTooltip>
-*/}
+                                            
                                             <svg onClick={e => setToolTip(true)} className=' cursor-pointer relative' width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g clip-path="url(#clip0_1_55928)">
                                                     <path d="M5.9 9H7.1V5.4H5.9V9ZM6.5 4.2C6.67 4.2 6.8126 4.1424 6.9278 4.0272C7.043 3.912 7.1004 3.7696 7.1 3.6C7.1 3.43 7.0424 3.2876 6.9272 3.1728C6.812 3.058 6.6696 3.0004 6.5 3C6.33 3 6.1876 3.0576 6.0728 3.1728C5.958 3.288 5.9004 3.4304 5.9 3.6C5.9 3.77 5.9576 3.9126 6.0728 4.0278C6.188 4.143 6.3304 4.2004 6.5 4.2ZM6.5 12C5.67 12 4.89 11.8424 4.16 11.5272C3.43 11.212 2.795 10.7846 2.255 10.245C1.715 9.705 1.2876 9.07 0.9728 8.34C0.658 7.61 0.5004 6.83 0.5 6C0.5 5.17 0.6576 4.39 0.9728 3.66C1.288 2.93 1.7154 2.295 2.255 1.755C2.795 1.215 3.43 0.7876 4.16 0.4728C4.89 0.158 5.67 0.0004 6.5 0C7.33 0 8.11 0.1576 8.84 0.4728C9.57 0.788 10.205 1.2154 10.745 1.755C11.285 2.295 11.7126 2.93 12.0278 3.66C12.343 4.39 12.5004 5.17 12.5 6C12.5 6.83 12.3424 7.61 12.0272 8.34C11.712 9.07 11.2846 9.705 10.745 10.245C10.205 10.785 9.57 11.2126 8.84 11.5278C8.11 11.843 7.33 12.0004 6.5 12ZM6.5 10.8C7.84 10.8 8.975 10.335 9.905 9.405C10.835 8.475 11.3 7.34 11.3 6C11.3 4.66 10.835 3.525 9.905 2.595C8.975 1.665 7.84 1.2 6.5 1.2C5.16 1.2 4.025 1.665 3.095 2.595C2.165 3.525 1.7 4.66 1.7 6C1.7 7.34 2.165 8.475 3.095 9.405C4.025 10.335 5.16 10.8 6.5 10.8Z" fill="white" />
@@ -176,8 +177,10 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                                         </div>
 
                                     </p>
-                                    {/*<p  className={`text-[14px] font-medium underline cursor-pointer saira  ${design === '0' ? 'text-[#FFED63]' : 'gradient-link'}`}>{languageData?.raffleLink1}</p>*/}
+                                    
                                 </div>
+                                */}
+                                {/*<p  className={`text-[14px] font-medium underline cursor-pointer saira  ${design === '0' ? 'text-[#FFED63]' : 'gradient-link'}`}>{languageData?.raffleLink1}</p>*/}
                                 {/*
                                 <a
                                     data-tooltip-id="my-tooltip"
@@ -192,7 +195,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                                 <Tooltip id="my-tooltip" className='!rounded-full' />
                                 */}
                             </div>
-                            : <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[50px] md:rounded-[100px] text-center mx-5 md:mx-0 md:py-2'>
+                            : <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-sm rounded-[14px] md:rounded-[100px] text-center md:mx-0 md:py-2'>
                                 <p className='se:text-[14px] iphone:text-[18px] md:text-[32px] mac2:!text-[24px] font-semibold'>{languageData?.raffleTitle2}</p>
                                 <p className='text-[12px] md:text-[14px] font-medium saira flex justify-center items-center md:my-1 se:leading-[14px]'>
                                     {languageData?.raffleSubTitle2}
@@ -218,11 +221,20 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                             </div>
                     }
                 </div>
-
+                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] py-1 mt-2'>
+                    <p className='  text-[12px] md:text-[14px] font-semibold saira text-center text-[#FBC215]'>
+                        👬Can I still go to Vegas if my ticket didn’t win? 👬
+                    </p>
+                    
+                        <p onClick={e => setWinTicketModal(true)} className={`saira text-[12px] md:text-[14px] font-semibold cursor-pointer text-center  text-[#FD9C36]`}>🤑<span className='underline text-[#FD9C36] saira text-[12px] md:text-[14px]'>You will need to double your money</span> 🤑 </p>
+                    
+                </div>
+                {/*
                 <p className='text-[14px] md:text-[16px] saira text-center cursor-pointer py-1'>
                     {languageData?.raffleRulesDesc}
                     <span onClick={e => setWinModal(true)} className={`saira  underline ml-2 ${design === '0' ? 'text-[#FFED63]' : 'gradient-link'}`}>{languageData?.raffleRulesLink}</span>
                 </p>
+                */}
                 <div className='flex absolute se:bottom-[130px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] mac:hidden justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
                     <TimeCounter title={languageData?.timeCounterTitle} languageData={languageData} />
                 </div>

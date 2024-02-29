@@ -25,7 +25,7 @@ function WinVegasModal({ setOpen, languageData, user }) {
                     <p className=' m-auto text-[18px] lg:text-[24px] font-semibold text-center'>
                         {languageData.winTitle}
                     </p>
-                    <p className='saira text-[14px] lg:text-[16px] font-medium text-center mt-1 '>{languageData.winSubTitle}</p>
+                
                     <div className='mt-4'>
                         <div className='flex items-center'>
                             <img className='w-[32px] h-[32px] mr-2' src={point1} alt="point1" />
@@ -34,38 +34,40 @@ function WinVegasModal({ setOpen, languageData, user }) {
                         </div>
                         <ul className='list-disc ml-[60px] mt-1'>
                             <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint1li1}</li>
-                            <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint1li2}</li>
-                            <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint1li3}</li>
                         </ul>
                     </div>
                     <div className='mt-4'>
                         <div className='flex items-center'>
                             <img className='w-[32px] h-[32px] mr-2' src={point2} alt="point2" />
-                            <p className='saira text-[16px] lg:text-[14px] font-semibold text-left'>{languageData.winPoint2Title}</p>
+                            <p className='saira text-[16px] lg:text-[20px] font-semibold text-left'>{languageData.winPoint2Title}</p>
 
                         </div>
                         <ul className='list-disc ml-[60px] mt-1'>
                             <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint2li1}</li>
-                            <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint2li2}</li>
-                            <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData.winPoint2li3Span1}
-                                <PDFDownloadLink className='cursor-pointer' document={<MyDocument {...user} />} fileName="cybersays.pdf">
-                                    {({ blob, url, loading, error }) =>
-                                        <span className='saira text-[12px] lg:text-[14px] font-bold underline cursor-pointer mx-1'>{languageData.winPoint2li3Link}</span>
-                                    }
-                                </PDFDownloadLink>
-
-                                {languageData.winPoint2li3Span2}</li>
+                        
+                            
 
                         </ul>
                     </div>
                     <div className='mt-4'>
                         <div className='flex items-center'>
                             <img className='w-[32px] h-[32px] mr-2' src={point3} alt="point2" />
-                            <p className='saira text-[16px] font-semibold text-left'>{languageData.winPoint3Title}</p>
+                            
+                            <p className='saira text-[16px] lg:text-[20px] font-semibold text-left'>{languageData.winPoint3Title}</p>
 
                         </div>
                         <ul className='list-disc ml-[60px] mt-1'>
-                            <li className='saira text-[12px] font-medium'>{languageData.winPoint3li1}</li>
+                            <li className='saira text-[14px] font-medium'>
+                                <PDFDownloadLink className='cursor-pointer' document={<MyDocument {...user} />} fileName="cybersays.pdf">
+                                    {({ blob, url, loading, error }) =>
+                                        <span className='saira text-[14px] font-bold underline cursor-pointer '>{languageData.winPoint3li1}</span>
+                                    }
+                                </PDFDownloadLink>
+
+                                </li>
+                            <li className='saira text-[14px] font-medium'>{languageData.winPoint3li2}</li>
+                            <li className='saira text-[14px] font-medium'>{languageData.winPoint3li3}</li>
+
                         </ul>
                     </div>
                     <p className='text-[18px] lg:text-[24px] text-center font-semibold gradient-goodluck mt-2'>{languageData.winPointEnd}</p>
