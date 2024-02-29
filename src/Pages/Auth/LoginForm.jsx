@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { useState, useEffect } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
-import { otpSending, socialUserAuth } from '../../Requests/auth';
+import { createUser, socialUserAuth } from '../../Requests/auth';
 import GoogleAuth from '../../Components/Buttons/GoogleButton';
 import FacebookButton from '../../Components/Buttons/FacebookButton';
 import OTPModal from './OTPModal';
@@ -11,8 +11,10 @@ import Loader from '../../Components/Loader';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { getUserCountry } from '../../Requests/utills';
 import DiscordButton from '../../Components/Buttons/DiscordButton';
+import API from '../../Helpers/API';
 
 function LoginForm({ languageData, referralID }) {
+
 
     const recaptchaRef = useRef();
     const navigate = useNavigate();
@@ -29,29 +31,6 @@ function LoginForm({ languageData, referralID }) {
 
     const [loading, setLoading] = useState(false);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-        setLoading(true)
-        if (email === '') return alert('Please enter your email')
-        if (!email.includes('@')) return alert('Please enter a valid email')
-
-        const token = await recaptchaRef.current.executeAsync();
-
-        try {
-            const res = await otpSending(token, email, refferalCode)
-
-            if (res.data === "Auth link sended") {
-                setActiveModal('notification')
-            } else {
-                setActiveModal('otp')
-            }
-            setLoading(false)
-        } catch (error) {
-            setLoading(false)
-            alert('Error: ', error.message)
-        }
-
-    };
 
     const loginViaFacebook = async (email) => {
         setLoading(true)
@@ -71,7 +50,7 @@ function LoginForm({ languageData, referralID }) {
 
         try {
             let userCountry = await getUserData();
-            console.log('User Country: ', userCountry)
+           
             const res = await socialUserAuth(email, token, refferalCode, special, userCountry.country);
             localStorage.setItem('token', res.token);
             navigate('/')
@@ -108,18 +87,36 @@ function LoginForm({ languageData, referralID }) {
 
     useEffect(() => {
         //delete email params from url
-
-
-        
-
         if (emailParam === '1') {
             setShowButtons(false);
         } else {
             setShowButtons(true);
         }
 
-       
+
     }, [emailParam]);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        setLoading(true)
+        if (email === '') return alert('Please enter your email')
+        if (!email.includes('@')) return alert('Please enter a valid email')
+        let userCountry = await getUserData();
+        const token = await recaptchaRef.current.executeAsync();
+
+        try {
+            const res = await createUser(token, email, refferalCode, userCountry.country)
+
+            setActiveModal('notification')
+            setLoading(false)
+        } catch (error) {
+            setLoading(false)
+            alert('Error: ', error.message)
+        }
+
+    };
+
+
     return (
         <>
             <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
@@ -135,7 +132,7 @@ function LoginForm({ languageData, referralID }) {
                                     <GoogleAuth loginViaGoogle={loginViaGoogle} languageData={languageData} />
                                     <FacebookButton loginViaFacebook={loginViaFacebook} languageData={languageData} />
                                 </div>
-                               {/* <DiscordButton languageData={languageData} /> */}
+                                {/* <DiscordButton languageData={languageData} /> */}
                             </div>
                         </div>
                     </form>

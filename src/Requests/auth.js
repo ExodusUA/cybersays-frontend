@@ -16,11 +16,12 @@ async function socialUserAuth(email, token, refferalCode, special, country) {
 
 /* OTP SENDING */
 
-async function otpSending(token, email, refferalCode) {
-    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/otp/generate', {
+async function createUser(token, email, refferalCode, country) {
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/create', {
         token,
         email,
-        refferalCode
+        refferalCode,
+        country
     });
     return response;
 }
@@ -60,4 +61,4 @@ async function discordUserAuth(access_token, type, country, refferalCode) {
     return response;
 }
 
-export { socialUserAuth, otpSending, otpVerify, discordUserAuth };
+export { socialUserAuth, createUser, otpVerify, discordUserAuth };
