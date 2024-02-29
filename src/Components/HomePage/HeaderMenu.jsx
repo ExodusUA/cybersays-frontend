@@ -6,7 +6,7 @@ import refferals from '../../images/CyberSaysPage/headerRefferals.png'
 import joker from '../../images/CyberSaysPage/headerJoker.png'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 
-function HeaderMenu({ setMenuOpen, user, setTourModal, languageData }) {
+function HeaderMenu({ setMenuOpen, user, setTourModal, languageData, userCountry }) {
 
     const { design } = useDesign()
 
@@ -26,8 +26,14 @@ function HeaderMenu({ setMenuOpen, user, setTourModal, languageData }) {
                         <div>
                             <div className='xl:gap-4 flex px-2 sm:px-4 py-[2px] sm:py-[5px]'>
                                 <div className=' leading-4 md:leading-5 mx-1'>
-                                    <p className={`text-[10px] sm:text-[16px]  ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-medium saira text-center `}>{user?.currency} {languageData?.header1}</p>
-                                    <p className={`text-[10px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-bold saira text-center flex justify-center items-center`}><img className='w-[16px] h-[16px] mr-[5px]' src={design === '0' ? money : require('../../images/NewDesign/header/dollar.png')} alt="money" /> {user?.earned.toFixed(0) || 0}</p>
+                                    <p className={`text-[10px] sm:text-[16px]  ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-medium saira text-center `}>{userCountry === 'BR' || userCountry === 'UA' ? 'BRL' : 'USD'} {languageData?.header1}</p>
+                                    <p className={`text-[10px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-bold saira text-center flex justify-center items-center`}><img className='w-[16px] h-[16px] mr-[5px]' src={design === '0' ? money : require('../../images/NewDesign/header/dollar.png')} alt="money" />
+                                        {
+                                            userCountry === 'BR' || userCountry === 'UA'
+                                                ? user?.allTimeEarned.toFixed(0) * 5
+                                                : user?.allTimeEarned.toFixed(0)
+                                        }
+                                    </p>
                                 </div>
                                 <div className=' leading-4 md:leading-5 mx-1'>
                                     <p className={`text-[10px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-medium saira text-center `}>{languageData?.header3}</p>

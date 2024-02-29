@@ -89,8 +89,18 @@ async function getTransactions() {
 
 /* GET TICKETS & POINTS */
 
-async function getTicketsAndPoints() {
+async function getTickets() {
     const response = await axios.get(process.env.REACT_APP_API_URL + '/api/v1/user/getTickets', {
+        headers: {
+            token: `${getToken()}`
+        }
+    });
+    return response;
+
+}
+
+async function getPoints() {
+    const response = await axios.get(process.env.REACT_APP_API_URL + '/api/v1/user/getUserPoints', {
         headers: {
             token: `${getToken()}`
         }
@@ -161,4 +171,4 @@ async function createPixWithdraw(pixKey, personCODE, email) {
 
 }
 
-export default { getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTicketsAndPoints, sendEmail, getModeratorData, getPDF, generateOTP, verifyOTP, createPixWithdraw };
+export default { getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTickets, getPoints, sendEmail, getModeratorData, getPDF, generateOTP, verifyOTP, createPixWithdraw };

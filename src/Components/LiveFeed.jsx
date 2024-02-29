@@ -18,19 +18,19 @@ function LiveFeed({ user }) {
             try {
                 const res = await info.getFeedData();
                 let data = res.data;
-                console.log(data)
-                let sorted = data.sort((a, b) => {
-                    return b.id - a.id;
-                });
-                console.log('sorted', sorted);
 
-                setFeedList(sorted);
+
+                setFeedList(data);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
         };
 
         fetchData();
+
+        setInterval(() => {
+            fetchData();
+        }, 30000);
     }, []);
 
     return (
@@ -40,14 +40,16 @@ function LiveFeed({ user }) {
                     feedList.map((item, index) => (
                         <div key={index} className='feedShow flex justify-between items-center minw-[140px] lg:min-w-[150px] px-[1px] lg:p-[1px] border-[1px] border-[#A2DBF0] rounded-[6px] '>
                             <div>
-                                <img className='w-[28px] lg:w-[32px] h-[28px] lg:h-[32px] ml-[1px]' src={usa} alt="Country Flag" />
+                                <img className='w-[28px] lg:w-[32px] h-[28px] lg:h-[32px] ml-[1px] rounded-sm' src={`https://flagsapi.com/${item.country || "US"}/flat/64.png`} alt="Country Flag" />
                             </div>
                             <div className=''>
                                 <p className='text-[10px] lg:text-[12px] saira font-medium truncate w-[50px]'> {item.email}</p>
-                                <p className='text-[10px] lg:text-[12px] saira font-medium w-[50px]'> Payout</p>
+                                <p className='text-[10px] lg:text-[12px] saira font-medium w-[50px]'> {
+                                    item.recordType === 1 ? 'Points' : item.recordType === 2 ? 'Tickets' : 'Earned'
+                                }</p>
                             </div>
                             <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[4px] px-1 my-[1px] lg:my-0'>
-                                <p className='text-[10px] lg:text-[12px] saira font-bold text-right'> ${item.amount}</p>
+                                <p className='text-[10px] lg:text-[12px] saira font-bold text-right'> {item.recordType === 3 ? '$' : ''}{item.amount}</p>
                                 <p className='text-[10px] lg:text-[12px] saira font-bold truncate w-[50px]'> {moment(Number(item.datetime) * 1000).fromNow()}</p>
                             </div>
                         </div>

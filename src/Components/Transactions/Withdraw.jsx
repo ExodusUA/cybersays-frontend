@@ -47,21 +47,6 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
 
     async function generateOTP() {
 
-        let utmData = {
-            utm_source: window.localStorage.getItem('utm_source'),
-            utm_medium: window.localStorage.getItem('utm_medium'),
-            utm_campaign: window.localStorage.getItem('utm_campaign'),
-            utm_term: window.localStorage.getItem('utm_term'),
-            utm_content: window.localStorage.getItem('utm_content'),
-        }
-
-        // delete nulls
-
-        mixpanel.track('Amount_withdrawn', {
-            "Amount": user?.earned.toFixed(2),
-            ...utmData
-        })
-
         if (email === null || email === undefined || email.length === '') return alert('Please enter a valid email address')
         const res = await userAPI.generateOTP(email)
         if (res.status === 200) {

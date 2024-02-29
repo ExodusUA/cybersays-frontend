@@ -9,21 +9,42 @@ import moment from 'moment'
 function TicketsHistory({ setOpen, languageData, user }) {
 
     const [ticketsData, setTicketsData] = useState(null)
+    const [pointsData, setPointsData] = useState(null)
+    const [allData, setAllData] = useState(null)
 
     useQuery({
         queryKey: ['tickets'],
         queryFn: async () => {
-            const res = await userAPI.getTicketsAndPoints();
-            proccessData(res.data.tickets[0])
+            const res = await userAPI.getTickets();
+            setTicketsData(res.data.tickets[0])
+            return res.data.tickets[0];
         }
     })
+
+    useQuery({
+        queryKey: ['points'],
+        queryFn: async () => {
+            const res = await userAPI.getPoints();
+            setPointsData(res.data.points[0])
+            return res.data.points[0];
+        }
+    })
+
+    useEffect(() => {
+        if (ticketsData === null || pointsData === null) return
+        let joined = {
+            tickets: ticketsData,
+            points: pointsData
+        }
+
+        proccessData(joined)
+    }, [ticketsData, pointsData])
 
     function proccessData(proccessData) {
         if (proccessData === null) return
 
 
-
-        let data = proccessData?.map(ticket => {
+        let data = proccessData?.tickets.map(ticket => {
             return {
                 name: 'ticket',
                 type: ticket.type,
@@ -32,7 +53,6 @@ function TicketsHistory({ setOpen, languageData, user }) {
             }
         })
 
-        /*
         proccessData?.points?.map(point => {
             data.push({
                 name: 'point',
@@ -41,11 +61,11 @@ function TicketsHistory({ setOpen, languageData, user }) {
                 amount: point.amount
             })
         })
-        */
 
         let sorted = data?.sort((a, b) => new Date(b.datetime) - new Date(a.datetime))
-        setTicketsData(sorted)
-        console.log(sorted)
+        console.log('sorted', sorted)
+        setAllData(sorted)
+
     }
 
     const getTicketsMarkup = (type, datetime, amount) => {
@@ -144,8 +164,8 @@ function TicketsHistory({ setOpen, languageData, user }) {
             <p className='text-[18px] md:text-[32px] font-semibold text-center'>{languageData?.ticketsTitle}</p>
             <div className='m-auto max-w-[345px] md:max-w-[600px] w-full mt-3 h-[470px] overflow-scroll'>
                 {
-                    ticketsData?.length > 0
-                        ? ticketsData !== null && ticketsData?.map(ticket => {
+                    allData?.length > 0
+                        ? allData !== null && allData?.map(ticket => {
                             return ticket.name === 'ticket' ? getTicketsMarkup(ticket.type, ticket.datetime, ticket.amount) : getPointsMarkup(ticket.type, ticket.datetime, ticket.amount)
                         })
                         : <div className='flex justify-center items-center h-[470px]'>
