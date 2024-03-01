@@ -1,18 +1,18 @@
 {
     "slide1": {
-        "image": "https://i.imgur.com/5zdOB8t.png",
-        "mobile": "https://i.imgur.com/5zdOB8t.png"
+        "image": "../images/Login/slide1.png",
+        "mobile": "../images/Login/slide1mob.png"
     },
     "slide2": {
-        "image": "https://i.imgur.com/5zdOB8t.png",
-        "mobile": "https://i.imgur.com/5zdOB8t.png"
+        "image": "../images/Login/slide2.png",
+        "mobile": "../images/Login/slide2mob.png"
     },
     "slide3": {
-        "image": "https://i.imgur.com/5zdOB8t.png",
-        "mobile": "https://i.imgur.com/5zdOB8t.png"
+        "image": "../images/Login/slide3.png",
+        "mobile": "../images/Login/slide3mob.png"
     },
     "slide4": {
-        "image": "https://i.imgur.com/5zdOB8t.png",
-        "mobile": "https://i.imgur.com/5zdOB8t.png"
+        "image": "../images/Login/slide4.png",
+        "mobile": "../images/Login/slide4mob.png"
     }
 }
