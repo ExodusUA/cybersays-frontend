@@ -1,196 +1,9 @@
 import React from 'react'
 import HeaderProfile from '../Components/HeaderProfile'
 
+
 function Terms() {
-    const styles = `
-        body {
-            font-family: 'Times New Roman';
-            font-size: 12pt
-        }
-
-        h1,
-        h2,
-        h3,
-        p {
-            margin: 0pt
-        }
-
-        li,
-        table {
-            margin-top: 0pt;
-            margin-bottom: 0pt
-        }
-
-        h1 {
-            margin-top: 5pt;
-            margin-bottom: 5pt;
-            page-break-inside: auto;
-            page-break-after: auto;
-            line-height: normal;
-            font-family: 'Times New Roman';
-            font-size: 24pt;
-            font-weight: bold;
-            color: #000000
-        }
-
-        h2 {
-            margin-top: 5pt;
-            margin-bottom: 5pt;
-            page-break-inside: auto;
-            page-break-after: auto;
-            line-height: normal;
-            font-family: 'Times New Roman';
-            font-size: 18pt;
-            font-weight: bold;
-            color: #000000
-        }
-
-        h3 {
-            margin-top: 10pt;
-            margin-bottom: 0pt;
-            page-break-inside: avoid;
-            page-break-after: avoid;
-            line-height: normal;
-            font-family: Cambria;
-            font-size: 12pt;
-            font-weight: bold;
-            color: #4f81bd
-        }
-
-        .BalloonText {
-            margin-bottom: 0pt;
-            line-height: normal;
-            font-family: Tahoma;
-            font-size: 8pt
-        }
-
-        .CommentSubject {
-            margin-bottom: 0pt;
-            line-height: normal;
-            font-family: 'Times New Roman';
-            font-size: 10pt;
-            font-weight: bold
-        }
-
-        .CommentText {
-            margin-bottom: 0pt;
-            line-height: normal;
-            font-family: 'Times New Roman';
-            font-size: 10pt
-        }
-
-        .Footer {
-            margin-bottom: 0pt;
-            line-height: normal;
-            font-family: 'Times New Roman';
-            font-size: 12pt
-        }
-
-        .Header {
-            margin-bottom: 0pt;
-            line-height: normal;
-            font-family: 'Times New Roman';
-            font-size: 12pt
-        }
-
-        .ListParagraph {
-            margin-left: 36pt;
-            margin-bottom: 0pt;
-            line-height: normal;
-            font-family: 'Times New Roman';
-            font-size: 12pt
-        }
-
-        .NormalWeb {
-            margin-top: 5pt;
-            margin-bottom: 5pt;
-            line-height: normal;
-            font-family: 'Times New Roman';
-            font-size: 12pt
-        }
-
-        .Revision {
-            margin-bottom: 0pt;
-            line-height: normal;
-            font-family: 'Times New Roman';
-            font-size: 12pt
-        }
-
-        .optanon-cookie-policy-subgroup-description {
-            margin-top: 5pt;
-            margin-bottom: 5pt;
-            line-height: normal;
-            font-family: 'Times New Roman';
-            font-size: 12pt
-        }
-
-        .wysiwyg-text-align-justify {
-            margin-top: 5pt;
-            margin-bottom: 5pt;
-            line-height: normal;
-            font-family: 'Times New Roman';
-            font-size: 12pt
-        }
-
-        span.BalloonTextChar {
-            font-family: Tahoma;
-            font-size: 8pt
-        }
-
-        span.CommentReference {
-            font-size: 8pt
-        }
-
-        span.CommentSubjectChar {
-            font-size: 10pt;
-            font-weight: bold
-        }
-
-        span.CommentTextChar {
-            font-size: 10pt
-        }
-
-        span.FollowedHyperlink {
-            text-decoration: underline;
-            color: #800080
-        }
-
-        span.Heading1Char {
-            font-family: 'Times New Roman';
-            font-size: 24pt;
-            font-weight: bold
-        }
-
-        span.Heading2Char {
-            font-family: 'Times New Roman';
-            font-size: 18pt;
-            font-weight: bold
-        }
-
-        span.Heading3Char {
-            font-family: Cambria;
-            font-weight: bold;
-            color: #4f81bd
-        }
-
-        span.Hyperlink {
-            text-decoration: underline;
-            color: #0000ff
-        }
-
-        span.IntenseEmphasis {
-            font-weight: bold
-        }
-
-        span.Strong {
-            font-weight: bold
-        }
-
-        span.UnresolvedMention1 {
-            color: #605e5c;
-            background-color: #e1dfdd
-        }
-    `;
+    
     return (
         <div>
             
@@ -198,7 +11,7 @@ function Terms() {
 
             <div className='textStyle max-w-[1240px] m-auto overflow-scroll h-screen pb-[50px] saira p-2' dangerouslySetInnerHTML={
                 {
-                    __html: `<style>${styles}</style><p><strong>Cybersays.Club - Terms of Use</strong></p>
+                    __html: `<p style="text-align:center;font-size:16pt!important;"><strong>Cybersays.Club - Terms of Use</strong></p>
                     <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Last revised:&nbsp;February 2024</p>
                     <p >These Terms of Use (&ldquo;<strong>Terms</strong>&rdquo;) constitute a binding legal agreement between Pythia
                         Grant Ltd. (&quot;<strong>Company</strong>&quot;, &quot;<strong>us</strong>&quot;, or
@@ -300,21 +113,21 @@ function Terms() {
                     <p><br></p>
                     <p>By accessing or using our Services or participating in our Offers, you agree to abide by all the following:&nbsp;
                     </p>
-                    <ol>
-                        <li>You have reached the age of majority both in the territory in which you reside;</li>
-                        <li>You are solely responsible for keeping your Account Information secure and for anything that occurs on your
+                    <ol style="list-style-type: disc;margin-left:20px;>
+                        <li style="list-style-type: disc;>You have reached the age of majority both in the territory in which you reside;</li>
+                        <li style="list-style-type: disc;>You are solely responsible for keeping your Account Information secure and for anything that occurs on your
                             Account, whether or not the actions were taken by you or an unauthorized third party that has gained access
                             to your Account;</li>
-                        <li>You shall only register for a single Account and you shall not use or access multiple Accounts at the same
+                        <li style="list-style-type: disc;>You shall only register for a single Account and you shall not use or access multiple Accounts at the same
                             time;</li>
-                        <li>You shall not create an Account with a false identity or provide incorrect information, or create an Account
+                        <li >You shall not create an Account with a false identity or provide incorrect information, or create an Account
                             on behalf of someone other than yourself;&nbsp;</li>
                         <li>You shall not share or give access to your Account Information to anyone, or do anything else that might
                             jeopardize your Account&apos;s security;&nbsp;</li>
                         <li>You shall notify us immediately, as detailed in Section 16 &quot;Contact Us&quot; of these Terms, if you
                             have lost control of your password or you suspect there is an unauthorized activity in your Account,
                             including theft or unauthorized disclosure of your Account Information;</li>
-                        <li>You will not hold us responsible or liable, for any loss, damage, unauthorized access, or any breach of your
+                        <li >You will not hold us responsible or liable, for any loss, damage, unauthorized access, or any breach of your
                             Account and the disclosure of your Account Information.</li>
                     </ol>
                     <p>As the holder of your Account, you are solely responsible for complying with these Terms and Partner Terms and

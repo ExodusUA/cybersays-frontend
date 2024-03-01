@@ -11,6 +11,9 @@ import DiscordAuth from './Pages/Auth/DiscordAuth';
 import { DesignProvider } from './Helpers/Design/DesignContext';
 import Terms from './Pages/Terms';
 import Policy from './Pages/Policy';
+import ContestTerms from './Pages/ContestTerms';
+import PromotionTerms from './Pages/PromotionTerms';
+import AffiliationTerms from './Pages/AffiliationTerms';
 
 function App() {
 
@@ -85,6 +88,9 @@ function App() {
             <Route path="/token/*" element={<Token />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/policy" element={<Policy />} />
+            <Route path="/contest-terms" element={<ContestTerms />} />
+            <Route path="/promotion-terms" element={<PromotionTerms />} />
+            <Route path="/affiliation-terms" element={<AffiliationTerms />} />
           </Routes>
         </BrowserRouter>
       </DesignProvider>
