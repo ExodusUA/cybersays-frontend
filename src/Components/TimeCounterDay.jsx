@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDesign } from '../Helpers/Design/DesignContext';
+import { Link } from 'react-router-dom';
 const moment = require('moment-timezone');
 
 function TimeCounterDay({ languageData, hidden, title, left, leftTitle, block, setSocialLink }) {
@@ -34,7 +35,7 @@ function TimeCounterDay({ languageData, hidden, title, left, leftTitle, block, s
                 </div>
             </div>
             <div className={`flex justify-center ${block}`}>
-                <p onClick={e => setSocialLink(true)} className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline cursor-pointer ${design === '0' ? 'text-[#FFED63]' : 'gradient-link '}`}>{languageData?.timeCounterLink}</p>
+                <Link to='/promotion-terms' target='_blank' > <p className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline cursor-pointer ${design === '0' ? 'text-[#FFED63]' : 'gradient-link '}`}>{languageData?.timeCounterLink}</p></Link>
             </div>
         </div>
     );
