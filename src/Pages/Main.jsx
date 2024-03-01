@@ -44,6 +44,7 @@ import Points from '../Components/Transactions/Modals/Points'
 import Ticket from '../Components/Transactions/Modals/Ticket'
 import TransactionHistory from '../Components/Transactions/TransactionHistory'
 import TicketsHistory from '../Components/Transactions/TicketsHistory'
+import SocialLink from '../Components/SocialLink'
 
 var mixpanel = require('mixpanel-browser');
 
@@ -123,6 +124,7 @@ function Main({ languageData }) {
     const [pointsModal, setPointsModal] = useState(false)
     const [transactionsModal, setTransactionsModal] = useState(false)
     const [ticketsModal, setTicketsModal] = useState(false)
+    const [socialLink, setSocialLink] = useState(false)
 
     const [selectedMessage, setSelectedMassege] = useState(null);
 
@@ -312,7 +314,7 @@ function Main({ languageData }) {
                         <RaffleTickets setWinTicketModal={setWinTicketModal} scrollToPage={scrollToPage} setWinModal={setWinModal} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} setTourModal={setTourModal} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Competition setRulesModal={setRulesModal} siteData={siteData} imLiveURL={imLiveURL} user={userData} languageData={languageData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading} />
+                        <Competition setSocialLink={setSocialLink} setRulesModal={setRulesModal} siteData={siteData} imLiveURL={imLiveURL} user={userData} languageData={languageData} setLeaderboardModal={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} setLeaderboardData={setLeaderboardData} setLoading={setLoading} />
                     </SwiperSlide>
                     <SwiperSlide>
                         <Refferals setInfoOffer={setInfoOffer} setImageModal={setImageModal} imageModal={imageModal} uploadedPhotos={uploadedPhotos} saveAvatar={saveAvatar} selectedImage={selectedImage} setSelectedImage={setSelectedImage} message={selectedMessage !== null ? dataMessage[selectedMessage].desc : ''} copyToMessage={copyToMessage} setSelectedMassege={setSelectedMassege} selectedMessage={selectedMessage} setOpenAvatar={setOpenAvatar} setOpenMassege={setOpenMassege} dataMessage={dataMessage} setReferralsOpen={setReferralsOpen} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} />
@@ -403,6 +405,9 @@ function Main({ languageData }) {
             }
             {
                 openAvatar && <AvatarModal inputRef={inputRef} setSelectedImage={setSelectedImage} selectedImage={selectedImage} handleImageChange={handleImageChange} saveAvatar={saveAvatar} setOpenAvatar={setOpenAvatar} />
+            }
+            {
+                socialLink && <SocialLink setOpen={setSocialLink} />
             }
             {
                 imageModal && <ImageModals setSelectedImage={setSelectedImage} selectedImage={selectedImage} setOpen={setImageModal} languageData={languageData} />
