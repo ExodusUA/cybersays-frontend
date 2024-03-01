@@ -1,67 +1,67 @@
 {
     "siteTitle": "CyberSays",
     "metaDescription": "Um lugar onde você pode ganhar dinheiro fazendo tarefas divertidas",
-    "HeaderTitle": "BEM-VINDO AO <span class='text-gradient'>CyberSays</span>",
-    "HeaderSubTitle": "UM LUGAR ONDE VOCÊ PODE GANHAR DINHEIRO REALIZANDO TAREFAS DIVERTIDAS",
+    "HeaderTitle": "BEM-VINDO AO <span class='text-gradient'>CyberSays<\/span>",
+    "HeaderSubTitle": "Compre, aproveite, e X2 seu dinheiro!",
     "HeaderButton": "Comece agora",
     "LatestOffers": "Últimas Ofertas",
-    "OfferTitle": "Netflix - Assista e Ganhe Recompensas",
-    "OfferDescription": "Junte-se à Netflix, verifique seu endereço de e-mail e assista a qualquer 5 vídeos para ganhar crédito. Os créditos são concedidos a cada 24 horas. Apenas para novos usuários!",
+    "OfferTitle": "ImLive - Experiências de Webcam para Adultos",
+    "OfferDescription": "Registre-se e deposite $5 na ImLive! ImLive dobrará seus créditos, lhe dando 10 ao invés de 5. Após usar seus créditos da ImLive, CyberSays dobrará seu dinheiro, te devolvendo $10 na TreatCoin!",
     "listTexts": [
-        "Register on ImLive",
-        "Buy 5 credits and get another 5 for free",
-        "Enjoy using the full 10 credits on ImLive",
-        "Get 10$ from CyberSays - doubling the 5$ you spent!"
+        "Registre-se na ImLive",
+        "Compre 5 créditos e ganhe outros 5 de graça",
+        "Aproveite usando todos os 10 créditos na ImLive",
+        "Ganhe 10% da CyberSays - dobrando os $5 que gastou!"
     ],
-    "OfferButton": "Ir Agora",
+    "OfferButton": "Ganhe X2 Agora!",
     "CopyLink": "Copiar Link",
-    "TreatCoins": "Moedas Treat",
-    "LinkCopied": "Link Copiado",
+    "TreatCoins": "Treat Coins",
+    "LinkCopied": "Link Copiado!",
     "tasks": {
         "task1": {
-            "taskTitle": "Registrar no ImLive 🎉",
-            "taskTitleOpen": "Registrar no ImLive 🎉",
+            "taskTitle": "Registre-se na ImLive 🎉",
+            "taskTitleOpen": "Registre-se na ImLive 🎉",
             "taskBlocks": [
                 {
-                    "taskImage": "images/bg-mobile-Task1.png",
-                    "newTaskImage": "images/newTask/bg_task1.png",
-                    "taskText": "Curta o ImLive, seja tratado como um REI 👑 - e realize suas fantasias mais loucas!"
+                    "taskImage": "images\/bg-mobile-Task1.png",
+                    "taskText": "Curta a ImLive, seja tratado como um REI 👑 - e realize suas fantasias mais loucas!",
+                    "newTaskImage": "images\/newTask\/bg_task1.png"
                 }
             ],
-            "taskButton": "1/4 Registrar!"
+            "taskButton": "1\/4 Registrar!"
         },
         "task2": {
             "taskTitle": "Depositar",
             "taskTitleOpen": "Introdução de um Rei ao ImLive: deposite 5$, ganhe 10$ de volta e:",
             "taskBlocks": [
                 {
-                    "taskImage": "images/bg-mobile-Task2.png",
-                    "newTaskImage": "images/newTask/bg_task2.png",
-                    "taskText": "Deposite $5... o ImLive dobrará o crédito. O CyberSays dobrará os dólares!"
+                    "taskImage": "images\/bg-mobile-Task2.png",
+                    "taskText": "Deposite $5... o ImLive dobrará o crédito. O CyberSays dobrará os dólares!",
+                    "newTaskImage": "images\/newTask\/bg_task2.png"
                 }
             ],
-            "taskButton": "2/4 Depositar!"
+            "taskButton": "2\/4 Depositar!"
         },
         "task3": {
             "taskTitle": "Gastar",
             "taskTitleOpen": "Gaste seus créditos e dobre seu dinheiro:",
             "taskBlocks": [
                 {
-                    "taskImage": "images/bg-mobile-Task3.png",
-                    "newTaskImage": "images/newTask/bg_task3.png",
-                    "taskText": "Gaste seus 10 créditos no ImLive, seja tratado como um rei e ganhe $10 em dinheiro quando terminar!"
+                    "taskImage": "images\/bg-mobile-Task3.png",
+                    "taskText": "Gaste seus 10 créditos na ImLive, seja tratado como um rei e ganhe $10 em dinheiro quando terminar!",
+                    "newTaskImage": "images\/newTask\/bg_task3.png"
                 }
             ],
             "taskButton": "Gastar"
         },
         "task4": {
             "taskTitle": "Ganhar",
-            "taskTitleOpen": "Receba 10$ imediatamente da CyberSays para",
+            "taskTitleOpen": "Receba 10$ imediatamente da CyberSays para ${emailAddress}",
             "taskBlocks": [
                 {
-                    "taskImage": "images/bg-mobile-Task4.png",
-                    "newTaskImage": "images/newTask/bg_task4.png",
-                    "taskText": "O ImLive dobra seu crédito, nós dobramos seu dinheiro - é uma situação vantajosa para você, com mais $10 na sua carteira!"
+                    "taskImage": "images\/bg-mobile-Task4.png",
+                    "taskText": "O ImLive dobra seu crédito, nós dobramos seu dinheiro - é uma situação vantajosa para você, com mais $10 na sua carteira!",
+                    "newTaskImage": "images\/newTask\/bg_task4.png"
                 }
             ],
             "taskButton": "Receber $10 da CyberSays"
@@ -70,14 +70,13 @@
     "homepageTitle1": "Gaste 5$, ganhe 10$ em dinheiro e ganhe o fim de semana em Vegas",
     "homepageTitle2": "Obtenha 200% de cashback e ganhe o fim de semana em Vegas!",
     "homepageTitle3": "Deposite 5$, receba o dobro em dinheiro e ganhe o fim de semana em Vegas!",
-    "homepageTitle4": "Dobre seu dinheiro e ganhe o fim de semana em Vegas!",
+    "homepageTitle4": "Dobre Seu Dinheiro e ganhe o fim de semana em Vegas!",
     "homepageTitle5": "Receba o tratamento de rei no ImLive e ganhe o fim de semana em Vegas",
-    "homepageBtn1": "Dobre seu dinheiro ",
-    "homepageBtn2": "2/4: Depósito para 200% de Cashback ",
-    "homepageBtn3": "3/4: Gaste para 200% de Cashback ",
+    "homepageBtn1": "Dobre Seu Dinheiro 🤑",
+    "homepageBtn2": "2\/4: Depósito para 200% de Cashback 🤑",
+    "homepageBtn3": "3\/4: Gaste para 200% de Cashback 🤑",
     "homepageBtn4": "Ganhe o fim de semana em Vegas 💃",
     "timeCounterTitle": "Ganhe uma viagem incrível para Vegas que o dinheiro não pode comprar",
-    "timeCounterTitle2": "Time of daily competition to end",
     "timeCounterDays": "Dias",
     "timeCounterHours": "Horas",
     "timeCounterMinutes": "Minutos",
@@ -90,8 +89,8 @@
     "raffleInfoTitle4": "Para informações adicionais, consulte os",
     "raffleInfoTitle4Span": "detalhes da competição.",
     "raffleTitle1": "Ganhe o fim de semana em Vegas!",
-    "raffleSubTitle1": "Se você aceitou a oferta de dobrar seu dinheiro da ImLive, pode ser escolhido pelo seu indicado ou indicador para ir a Vegas se eles ganharem.",
-    "raffleLink1": "Como ganho o fim de semana em Vegas?",
+    "raffleSubTitle1": "Se você aceitou a oferta de dobrar seu dinheiro da ImLive, você pode ser escolhido pelo seu indicado ou indicador para ir a Vegas se eles ganharem.",
+    "raffleLink1": "Como ganho o fim de semana em Las Vegas?",
     "raffleTitle2": "Ganhe o fim de semana em Vegas!",
     "raffleSubTitle2": "Elegível para ir a Vegas",
     "raffleLink2": "Como ganho o sorteio do fim de semana em Vegas?",
@@ -105,20 +104,20 @@
     "raffleRightSection2": "30 bilhetes de sorteio",
     "raffleRulesDesc": "*Não é necessário fazer uma compra para participar do sorteio.",
     "raffleRulesLink": "Regras do sorteio",
-    "doubleTitle": "Dobre seu dinheiro e obtenha sua elegibilidade para o sorteio",
+    "doubleTitle": "Dobre Seu Dinheiro e obtenha sua elegibilidade para o sorteio",
     "doubleSubtitleSpan": "Uma",
     "doubleSubtitle": "aparecerá após a conclusão da tarefa",
     "doublePaid": "Escolha a forma de receber o pagamento",
-    "refferalsTitle": "Compartilhe com seus amigos para ser a pessoa que os faz ganhar e ir para Vegas",
-    "refferalsLink1": "Minhas recomendações",
-    "refferalsSubtitle": "Escolha texto e imagem ou mantenha simples e sem isso",
+    "refferalsTitle": "Compartilhe com seus amigos para ser a pessoa que os faz ganhar e ir para Las Vegas",
+    "refferalsLink1": "Saiba mais",
+    "refferalsSubtitle": "Escolha texto e imagem ou mantenha simples e sem nada a mais",
     "refferalsImage": "Escolha uma imagem",
     "refferalsLink2": "Escolha uma experiência personalizada",
     "refferalsSome": "Adicione algumas fotos",
     "refferalsInfoTitle": "Seja o rei",
-    "refferalsInfo1": "Você será a pessoa que envia seus amigos para dobrar o dinheiro e se divertir 👬",
+    "refferalsInfo1": "Você será a pessoa que permite aos seus amigos cobrando seu dinheiro e se divertirem 👬",
     "refferalsInfo2": "Para cada amigo que dobrar o dinheiro, você receberá 30 bilhetes de sorteio e 1$ 🃏",
-    "refferalsInfo3": "Se seus amigos dobrarem o dinheiro, você pode levá-los para Vegas se ganhar o sorteio, e eles podem levá-lo se ganharem e você aceitou a oferta de dobrar o dinheiro",
+    "refferalsInfo3": "Se seus amigos dobrarem o dinheiro, você pode levá-los para Las Vegas se ganhar o sorteio, ou eles podem te levar se ganharem, e se você tiver concluído a oferta de dobrar o dinheiro",
     "competitionTitle": "A ",
     "competitionTitleSpan": "competição diária",
     "competitionPoints": "Pontos",
@@ -136,7 +135,7 @@
     "header2": "Pontos:",
     "header3": "Bilhetes para Vegas:",
     "modalMenuLink1": "Página inicial",
-    "modalMenuLink2": "Dobre seu dinheiro",
+    "modalMenuLink2": "Dobre Seu Dinheiro",
     "modalMenuLink3": "O fim de semana em Vegas",
     "modalMenuLink4": "Indique para ganhar bilhetes",
     "modalMenuLink5": "Seus indicados",
@@ -146,14 +145,10 @@
     "modalMenuLink8": "Sala de bate-papo",
     "modalMenuLink9": "Histórico de transações",
     "modalMenuLink10": "Meus Bilhetes e Pontos",
-    "modalMenuLink11": "FAQ",
-    "modalMenuLink12": "Our mission",
-    "modalMenuLink13": "Why join us?",
     "modalMenuBottom1": "Sobre nós",
     "modalMenuBottom2": "Legal",
     "modalMenuBottom3": "Configurações",
     "modalMenuBottom4": "Contate-nos",
-    "modalMenuBottom5": "Vegas Weekend Tour",
     "chatOnline": "online",
     "chatTitle": "Sala de bate-papo",
     "chatNotMessages": "Ainda não há mensagens",
@@ -167,38 +162,31 @@
     "withdrawBtn": "Retirar",
     "noTransactions": "Nenhuma transação",
     "ransactionsTitle": "Histórico de transações",
-    "transactionsSection1Left": "Doubling your money and enjoying ImLive!",
-    "transactionsSection1Right": "Added to Balance",
-    "transactionsSection2Left": "Your friend doubled their money!",
-    "transactionsSection2Right": "Added to Balance",
-    "transactionsSection3Left": "Finishing",
-    "transactionsSection3Left2": "in the 69$ daily competition!",
-    "transactionsSection3Right": "Added to Balance",
-    "transactionsSection4Left": "Withdraw money to",
-    "transactionsSection4Left2": "/ Pix",
-    "transactionsSection4Right": "Withdrawn",
+    "transactionsSection1Left": "Seu amigo dobrou o dinheiro!",
+    "transactionsSection1Right": "Dobrando dinheiro",
+    "transactionsSection2Left": "Dobrando seu dinheiro e curtindo a ImLive!",
+    "transactionsSection2Right": "Dobrando dinheiro",
+    "transactionsSection3Left": "Retirada de dinheiro",
+    "transactionsSection3Right": "Retirada",
+    "transactionsSection4Left": "Sua vitória na competição",
+    "transactionsSection4Right": "Competição",
     "ticketsTitle": "Meus Bilhetes e Pontos",
-    "ticketsSection1Left": "Your friend doubled their money!",
-    "ticketsSection1Right": "Vegas tickets",
-    "ticketsSection2Left": "Sent mail",
-    "ticketsSection2Right": "Vegas tickets",
-    "ticketsSection3Left": "For",
-    "ticketsSection3Left2": "credit purchased on ImLive!",
-    "ticketsSection3Right": "Vegas tickets",
-    "ticketsSection4Left": "Friend completed succfully double the money and to rceive points",
-    "ticketsSection4Right": "Points",
-    "ticketsSection5Left": "Sent mail",
-    "ticketsSection5Right": "Points",
-    "ticketsSection6Left": "For",
-    "ticketsSection6Left2": "credit purchased on ImLive!",
+    "ticketsSection1Left": "Seu amigo dobrou o dinheiro deles!",
+    "ticketsSection1Right": "Bilhetes para Las Vegas",
+    "ticketsSection2Left": "Email enviado",
+    "ticketsSection2Right": "Bilhetes para Las Vegas",
+    "ticketsSection3Left": "Por X créditos comprados na ImLive!",
+    "ticketsSection3Right": "Bilhetes para Vegas",
+    "ticketsSection4Left": "Amigo dobrou com sucesso seu dinheiro e recebeu pontos",
+    "ticketsSection4Right": "Pontos",
+    "ticketsSection5Left": "Email enviado",
+    "ticketsSection5Right": "Pontos",
+    "ticketsSection6Left": "Por X créditos comprados na ImLive!",
     "ticketsSection6Right": "Pontos",
     "aboutModalTitle": "Sobre nós",
-    "aboutModalDesc1": "Welcome to CyberSays, your gateway to transforming online engagement into tangible, thrilling rewards!",
-    "aboutModalDesc2": "In a world where the value of your digital actions often feels intangible, we provide a platform that not only appreciates your participation but also rewards it handsomely.",
-    "aboutModalDesc3": "From doubling your money with a simple transaction to winning all-expenses-paid adventures, CyberSays is here to make every click count.",
-    "aboutModalDesc4": "CyberSays - where every click brings a reward, and every reward brings a (profitable) smile",
+    "aboutModalDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "contactModalTitle": "Contate-nos",
-    "contactModalSubTitle": "Envie-nos seu e-mail e mensagem e entraremos em contato com você",
+    "contactModalSubTitle": "Envie-nos seu e-mail e entraremos em contato com você",
     "contactModalBtn1": "Enviado!",
     "contactModalBtn2": "Enviar mensagem",
     "legalModalTitle": "Legal",
@@ -213,8 +201,6 @@
     "settingsDeleteSure2": "Você tem certeza de que deseja excluir sua conta?",
     "settingsDeleteNo": "Não",
     "settingsDeleteYes": "Sim",
-    "settingsBtn": "Aplicar alterações",
-    "settingsBtnDone": "Salvo!",
     "leaderboardsTitle": "Classificações",
     "leaderboardsPoints": "Pontos",
     "leaderboardsPrize": "Prêmio",
@@ -224,214 +210,279 @@
     "tourLongToggle": "Versão longa",
     "tourShortBtn": "Compartilhe o tour",
     "tourLongBtn": "Compartilhe o tour",
-    "authSlide1": "CyberSays: Dobre seu Dinheiro, Dobre seus Ganhos!",
+    "authSlide1": "CyberSays: Dobre Seu Dinheiro, Dobre Seus Ganhos!",
     "authSlide2": "Seu Dinheiro, Suas Regras – Escolha Como Receber",
     "authSlide3": "Complete uma Oferta de $5 e Veja Seus Ganhos Decolarem",
-    "authSlide4": "Dobre seu dinheiro: Ganhe $10 instantaneamente e reivindique agora!",
+    "authSlide4": "Dobre Seu Dinheiro: Ganhe $10 instantaneamente e reivindique agora!",
     "authEnterEmail": "Digite seu e-mail",
     "authContinue": "Continuar",
     "authDiscord": "Continuar com",
     "authGoogle": "Continuar com",
     "authFacebook": "Continuar com",
-    "verifyCodeTitle": "Verifique sua conta",
+    "timeCounterTitle2": "Horário de término da competição diária",
+    "raffleUnderBtn2": "Ganhe mais bilhetes de Las Vegas para aumentar suas chances de ganhar o sorteio:",
+    "modalMenuLink11": "Perguntas Frequentes",
+    "modalMenuLink12": "Nossa missão",
+    "modalMenuLink13": "Por que se juntar a nós?",
+    "modalMenuBottom5": "Viagem de fim de semana de Las Vegas",
+    "withdrawTitle3": "Você receberá um voucher em dinheiro em um endereço de e-mail de sua escolha:",
+    "transactionsSection3Left2": "na competição diária de US69!",
+    "transactionsSection4Left2": "\/ Pix",
+    "ticketsSection3Left2": "crédito comprado na ImLive!",
+    "ticketsSection6Left2": "crédito comprado na ImLive!",
+    "aboutModalDesc1": "Bem-vindo à CyberSays, sua porta de entrada para transformar o engajamento on-line em recompensas tangíveis e emocionantes!",
+    "aboutModalDesc2": "Em um mundo em que o valor de suas ações digitais muitas vezes parece intangível, nós oferecemos uma plataforma que não apenas valoriza sua participação, mas também o recompensa de forma generosa.",
+    "aboutModalDesc3": "Desde dobrar seu dinheiro com uma simples transação até ganhar aventuras com todas as despesas pagas, a CyberSays está aqui para fazer cada clique valer a pena.",
+    "aboutModalDesc4": "CyberSays - onde cada clique traz uma recompensa, e cada recompensa traz um (lucrativo) sorriso ",
+    "settingsBtn": "Aplicar alterações",
+    "settingsBtnDone": "Salvo!",
+    "authSlide1li1": "1 Dobre Seu Dinheiro",
+    "authSlide1li2": "2 Tenha a chance de ganhar a promoção de Las Vegas",
+    "authSlide1li3": "3 Conquiste a competição diária de US$69",
+    "authSlide2li1": "Deposite US$ 5 no site de nosso parceiro - aproveite para usá-los e dobre o valor para receber US$ 10 de cashback imediato da CyberSays!",
+    "authSlide3li1": "Adquira bilhetes para Las Vegas e tenha a chance de ganhar a nossa incrível promoção de Las Vegas - um fim de semana dos seus sonhos que você nunca esquecerá!",
+    "authSlide4li1": "Ganhe pontos ao engajar mais na CyberSays. Termine em primeiro lugar em nosso top 10 para ganhar US69, diariamente! ",
+    "verifyCodeTitle": "Verificar sua conta",
     "verifyCodePlaceholder": "Digite o código de verificação enviado por e-mail",
-    "verifyCodeError": "Código incorreto",
+    "verifyCodeError": "O código está errado",
     "verifyCodeBtn": "Enviar",
     "verifyCodeLink": "Já tem uma conta?",
-    "verifyCodeLinkSpan": "Entrar",
-    "verifyCodeEmailTitle": "SIGA O LINK DE VERIFICAÇÃO ENVIADO PARA O SEU E-MAIL",
-    "logoutConfirmTitle": "Tem certeza de que deseja sair?",
+    "verifyCodeLinkSpan": "Fazer login",
+    "verifyCodeEmailTitle": "SIGA O LINK DE VERIFICAÇÃO QUE FOI ENVIADO PARA SEU E-MAIL",
+    "logoutConfirmTitle": "Tem certeza que deseja sair?",
     "logoutConfirmNo": "Não",
     "logoutConfirmYes": "Sim",
-    "winTitle": "How can I get Vegas Tickets to win the Vegas Promotion?",
-    "winSubTitle": "How can I get Vegas Tickets to win the Vegas Promotion?",
-    "winPoint1Title": "Buy more credits in ImLive.com",
-    "winPoint1li1": "⁠Every extra credit you buy on top of the first 5 you buy in the double the money offer will give you 1 Vegas tickets (no bonus credits included)",
-    "winPoint2Title": "Refer friends that complete the double the money offer",
-    "winPoint2li1": "Refer your friends and get 30 Vegas tickets for each friend that completes the double the money offer",
-    "winPoint3Title": "Send a Free Post Form by mail to our office",
-    "winPoint3li1": "⁠Download the form",
-    "winPoint3li2": "⁠⁠Fill your details and send it to our offices in Cyprus (address detailed on the downloadable form)",
-    "winPoint3li3": "Every letter you send can include one form only and will reward you with one ticket",
-    "winPointEnd": "Good luck!",
-    "winPointEndLink": "To the Vegas Promotion full terms",
-    "rulesTitle": "🎉 Welcome to the CyberSays Contest! 🎉",
-    "rulesSubTitle": "Starting on [fill in date], 2024, and continuing daily, join us for the CyberSays Contest.",
-    "rulesPoint1Title": "To enter:",
-    "rulesPoint1li1": "Sign in to ImLive.com",
-    "rulesPoint1li2": "⁠Purchase 5 credits and receive a bonus of 5 more",
-    "rulesPoint2Title": "Ways to earn rewards:",
-    "rulesPoint2li1": "Spend all 10 credits on ImLive and receive $10 USD on CyberSays",
-    "rulesPoint2li2": "$69 USD for the 1st place and $6.90 USD for the 2nd – 10th places each – daily!",
-    "rulesPoint2li3": "$1 USD + 30 Vegas Tickets + 10 Points for each successful referral who completes the Offer",
-    "rulesPoint2li4": "1 Vegas Ticket + 0.5 Points for every credit bought after the first purchase on ImLive.com",
-    "rulesEnd": "Best of luck to all participants in the CyberSays Contest!",
-    "toolInfoTitle": "How It Works?",
-    "toolInfoDesk1": "Double Your Investment: Start with as little as $5 in credits, spend them, and receive $10 back instantly.",
-    "toolInfoDesk2": "Win a Weekend in Vegas: By inviting friends who join and engage with CyberSays and continuing to purchase credits, you're not just being your friends’ king but also paving your way to an unforgettable adventure—with all expenses paid",
-    "toolInfoDesk3": "Daily Rewards: Be in the top 10 of our daily leaderboard by engaging and referring, and win up to $69. Refer and purchase more credits towards your next big win.",
+    "winTitle": "Como posso obter bilhetes para ganhar a Promoção de Las Vegas?",
+    "winSubTitle": "Como posso obter bilhetes para ganhar a Promoção de LasVegas?",
+    "winPoint1Title": "Compre mais créditos na ImLive.com",
+    "winPoint1li1": "Cada crédito extra que você comprar, além dos 5 primeiros que comprar na oferta Dobre seu Dinheiro, lhe dará 1 bilhete para Las Vegas (sem créditos bônus incluídos).",
+    "winPoint2Title": "Indique amigos que completem a oferta Dobre seu Dinheiro",
+    "winPoint2li1": "Indique seus amigos e ganhe 30 bilhetes para Las Vegas para cada amigo que completar a oferta Dobre seu Dinheiro",
+    "winPoint3Title": "Envie um formulário postal gratuito por correio para o nosso escritório",
+    "winPoint3li1": "Faça o download do formulário",
+    "winPoint3li2": "Preencha seus dados e envie-os para nossos escritórios no Chipre (endereço detalhado no formulário para download)",
+    "winPoint3li3": "Cada carta que você enviar poderá incluir apenas um formulário e lhe dará como prêmio um bilhete",
+    "winPointEnd": "Boa sorte!",
+    "winPointEndLink": "Para os termos completos da Promoção de Las Vegas",
+    "rulesTitle": "🎉 Bem-vindo à Competição da CyberSays! 🎉",
+    "rulesSubTitle": "A partir de [preencha a data], 2024, e continuando diariamente, junte-se a nós na Competição da CyberSays.",
+    "rulesPoint1Title": "Para participar:",
+    "rulesPoint1li1": "Faça login na ImLive.com",
+    "rulesPoint1li2": "Compre 5 créditos e receba um bônus de mais 5",
+    "rulesPoint2Title": "Maneiras de ganhar prêmios:",
+    "rulesPoint2li1": "Gaste todos os 10 créditos na ImLive e receba US$10 na CyberSays",
+    "rulesPoint2li2": "US$ 69 para o primeiro lugar e US$ 6,90 para o 2º ao 10º - diariamente!",
+    "rulesPoint2li3": "US$ 1 + 30 bilhetes para Las Vegas + 10 pontos para cada indicação bem-sucedida que completar a oferta",
+    "rulesPoint2li4": "1 Bilhete para Las Vegas + 0,5 ponto para cada crédito comprado após a primeira compra na ImLive.com",
+    "rulesEnd": "Boa sorte a todos os participantes da Competição da CyberSays!",
+    "toolInfoTitle": "O que posso ganhar na CyberSays e como?",
+    "toolInfoWhat": "O que?",
+    "toolInfoHow": "Como?",
+    "toolInfolef1": "US$10 no seu bolso",
+    "toolInfolef2": "Ganhe a promoção de Las Vegas",
+    "toolInfolef3": "Ganhe a competição diária de US$69",
+    "toolInfoRight1": "Complete a oferta \"Dobre seu dinheiro\"",
+    "toolInfoRight2": "Ganhe bilhetes comprando créditos na ImLive e indique amigos que completem a oferta",
+    "toolInfoRight3": "Ganhe pontos comprando créditos na ImLive e indique amigos que completem a oferta",
+    "ourMissionTitle": "Nossa Missão",
+    "ourMissionSubTitle1": "A CyberSays surgiu da simples ideia de que as plataformas on-line deveriam oferecer um valor mais direto aos seus usuários.",
+    "ourMissionSubTitle2": "Estamos empenhados em criar um ambiente em que cada ação - seja um depósito, uma indicação ou uma compra - tenha um resultado gratificante.",
+    "ourMissionSubTitle3": "Nossa plataforma foi projetada para celebrar e recompensar a comunidade por seu engajamento e fidelidade, transformando as atividades cotidianas em oportunidades de prazer e entusiasmo.",
+    "whyJoinTitle": "Por que se juntar a nós?",
+    "whyJoinSubTitle1": "A CyberSays está na interseção entre inovação, recompensa e comunidade. Somos mais do que uma plataforma; somos um movimento para criar um ecossistema on-line mais recompensador. Nossa dedicação em oferecer recompensas transparentes, imediatas e substanciais nos diferencia, garantindo que seu tempo gasto conosco não seja apenas agradável, mas também proveitoso.",
+    "whyJoinSubTitle2": "Nossa comunidade é o núcleo do nosso sucesso e estamos comprometidos em promover um espaço onde cada membro possa experimentar a alegria de ganhar. De recompensas em dinheiro a férias dos sonhos, a CyberSays se dedica a transformar seu engajamento digital em prazeres do mundo real.",
     "FAQ_Questions": [
         {
-            "question": "What am I doing here?",
+            "question": "O que estou fazendo aqui?",
             "answers": [
-                "You are here to guaranteed 100% double your initial cash deposit, compete for a chance to win a thrilling Vegas weekend, and participate in our 69$ daily contest."
-               
+                "Você está aqui para garantir 100% do dobro do seu depósito inicial, concorrer a uma chance de ganhar um fim de semana emocionante em Las Vegas e participar da nossa competição diária de US$69"
             ]
         },
         {
-            "question": "What are the requirements to qualify for the $10 instant cash back?",
+            "question": "Quais são os requisitos para se qualificar para o cashback instantâneo de US$ 10?",
             "answers": [
-                "Simply register on ImLive, deposit $5 to receive $10 in credits, spend those credits, and you'll receive on top of that $10 cash back instantly"
+                "Basta se registrar na ImLive, depositar US$ 5 para receber US$ 10 em créditos, gastar esses créditos e, além disso, você receberá US$ 10 em cashback instantaneamente"
             ]
         },
         {
-            "question": "Can I withdraw my $10 cash back immediately after receiving it?",
+            "question": "Posso sacar meu cashback de US$ 10 imediatamente após recebê-lo?",
             "answers": [
-                "Yes, your $10 cash back is available for immediate withdrawal"
+                "Sim, seu cashback de US$ 10 estará disponível para saque imediato"
             ]
         },
         {
-            "question": "How can I invite friends to join CyberSays, and what are our benefits?",
+            "question": "Como posso convidar amigos para participar da CyberSays e quais são os nossos benefícios?",
             "answers": [
-                "Use the 'Refer Your Friends' page. For every friend that completes the offer, you get $1 cash, 30 Vegas tickets, and 10 daily contest points. Plus, if you win the Vegas promotion and they have completed the “Double your money offer”, you can take two of them to Vegas with you!"
+                "Use a página \"Indique seus amigos\". Para cada amigo que completar a oferta, você receberá US$ 1 em dinheiro, 30 ingressos para concorrer à viagem a Las Vegas e 10 pontos para a competição diária. Além disso, se você ganhar a promoção de Las Vegas e eles completarem a oferta Dobre seu dinheiro, você poderá levar dois deles para Las Vegas com você!"
             ]
         },
         {
-            "question": "What steps must my friends complete for them to qualify for the Vegas trip?",
+            "question": "Quais etapas meus amigos devem concluir para se qualificarem para a viagem a Las Vegas?",
             "answers": [
-                "Your friends need to register through your referral link and complete the double money offer for you to be eligible to invite up to 2 of them as your travel companions for the Vegas trip."
+                "Seus amigos precisam se registrar por meio do seu link de indicação e completar a oferta Dobre Seu Dinheiro para que você tenha direito a convidar até dois deles como seus companheiros de viagem para a viagem a Las Vegas."
             ]
         },
         {
-            "question": "What are the Vegas promotion rules?",
+            "question": "Quais são as regras da promoção de Vegas?",
             "answers": [
                 "Lorem ipsum"
             ]
         },
         {
-            "question": "Is there a limit to how many friends I can refer to CyberSays?",
+            "question": "Há um limite para o número de amigos que posso indicar para a CyberSays?",
             "answers": [
-                "No, there is no limit. Refer as many friends as you like and earn more!"
+                "Não, não há limite. Indique quantos amigos você quiser e ganhe mais!"
             ]
         },
         {
-            "question": "How are winners for the Vegas weekend chosen?",
+            "question": "Como são escolhidos os vencedores do fim de semana em Las Vegas?",
             "answers": [
-                "Winners are selected through a live draw in the presence of a lawyer and an accountant, ensuring fairness and transparency. Link to Vegas weekend rules"
+                "Os ganhadores são selecionados por meio de um sorteio ao vivo na presença de um advogado e de um contador, o que garante a imparcialidade e a transparência. Link para as regras do fim de semana em Las Vegas"
             ]
         },
         {
-            "question": "What expenses are covered in the Vegas weekend prize?",
+            "question": "Quais são as despesas cobertas pelo prêmio do fim de semana em Las Vegas?",
             "answers": [
-                "The Vegas weekend prize covers your travel and entertainment extravagantly. It includes round-trip tickets to Las Vegas for you and two friends that have completed the double the money offer if you choose to take them, two nights of 5-star hotel accommodation, and $1,000 in ImLive.com credits for the winner. Additionally, you'll receive $1,000 cash, and if applicable, each of your two friends will get $500 to enjoy. The package is crowned with a special dinner and a Cadillac drive experience with 2 porn stars, valuing the total prize at approximately $5,000."
+                "O prêmio do fim de semana em Las Vegas cobre sua viagem e entretenimento de forma extravagante. Ele inclui passagens de ida e volta para Las Vegas para você e dois amigos que tenham completado a oferta Dobre Seu Dinheiro, se você optar por levá-los, duas noites de hospedagem em um hotel 5 estrelas e US$ 1.000 em créditos ImLive.com para o vencedor. Além disso, você receberá US$ 1.000 em dinheiro e, se for o caso, cada um dos seus dois amigos receberá US$ 500 para aproveitar. O pacote é coroado com um jantar especial e uma experiência de dirigir um Cadillac com 2 estrelas pornôs, avaliando o prêmio total em aproximadamente US$ 5.000."
             ]
         },
         {
-            "question": "How do I purchase additional ImLive credits?",
+            "question": "Como faço para comprar créditos adicionais na ImLive?",
             "answers": [
-                "Click here to buy more credits and increase your chances of winning the Vegas promotion and 69$ daily contest points"
+                "Clique aqui para comprar mais créditos e aumentar suas chances de ganhar a promoção de Las Vegas e US$60 em pontos da competição diária"
             ]
         },
         {
-            "question": "Are there any limits on how many credits I can buy?",
+            "question": "Há algum limite para a quantidade de créditos que posso comprar?",
             "answers": [
-                "No, there are no limits to how many credits you can purchase. As long as you purchase more, you have better chance to win the Vegas promotion or finish in the top 10 in the 69$ daily contest."
+                "Não, não há limites para a quantidade de créditos que você pode comprar. Desde que compre mais, você terá mais chances de ganhar a promoção de Las Vegas ou terminar entre os 10 primeiros na competição diária de US$69."
             ]
         },
         {
-            "question": "How does the $69 daily leaderboard work, and how can I earn points?",
+            "question": "Como funciona a tabela de classificação diária de US$ 69 e como posso ganhar pontos?",
             "answers": [
-                "Earn points by referring friends and purchasing ImLive credits. The more you engage, the higher you climb on the leaderboard. For every friend you refer that completed the offer, you get 10 points. For every extra credit on ImLive that you purchase, you get 0.5 points. "
+                "Ganhe pontos indicando amigos e comprando créditos na ImLive. Quanto mais você engajar, maior será sua posição na tabela de classificação. Para cada amigo que você indicar e concluir a oferta, você ganha 10 pontos. Para cada crédito extra na ImLive que você comprar, você ganha 0,5 ponto. "
             ]
         },
         {
-            "question": "What are the rewards for the top 10 positions in the daily leaderboard?",
+            "question": "Quais são os prêmios para as 10 primeiras posições na tabela de classificação diária?",
             "answers": [
-                "The top two places win $69 each, and places 3-10 win $6.90 each, every day."
+                "Os dois primeiros lugares ganham US$ 69 cada, e os lugares de 3 a 10 ganham US$ 6,90 cada, todos os dias."
             ]
         },
         {
-            "question": "How often are the leaderboard and rewards updated?",
+            "question": "Com que frequência a tabela de classificação e os prêmios são atualizados?",
             "answers": [
-                "he leaderboard and rewards are updated immediately, in real-time."
+                "A tabela de classificação e os prêmios são atualizados imediatamente, em tempo real."
             ]
         },
         {
-            "question": "How often are the leaderboard and rewards updated?",
+            "question": "Com que frequência a tabela de classificação e os prêmios são atualizados?",
             "answers": [
-                "The leaderboard and rewards are updated immediately, in real-time."
+                "A tabela de classificação e os prêmios são atualizados imediatamente, em tempo real."
             ]
         },
         {
-            "question": "Can I win daily rewards multiple times?",
+            "question": "Posso ganhar recompensas diárias várias vezes?",
             "answers": [
-                "Yes, you can win daily rewards as often as you top the leaderboard top 10."
+                "Sim, você pode ganhar recompensas diárias sempre que estiver entre os 10 primeiros da tabela de classificação."
             ]
         },
         {
-            "question": "What happens if there’s a tie on the daily leaderboard?",
+            "question": "O que acontece se houver um empate na tabela de classificação diária?",
             "answers": [
-                "In the event of a tie, the user with the most referred friends is chosen, followed by the one with the most purchased credits, and then by the earliest completion of the offer."
+                "Em caso de empate, será escolhido o usuário com o maior número de amigos indicados, seguido pelo usuário com o maior número de créditos comprados e, por fim, pelo que concluir a oferta mais cedo."
             ]
         },
         {
-            "question": "Are there any fees or charges for depositing or withdrawing money?",
+            "question": "Há alguma taxa ou encargo para depositar ou sacar dinheiro?",
             "answers": [
-                "No, there are no fees or charges for any financial transactions on our platform."
+                "Não, não há taxas ou encargos para nenhuma transação financeira em nossa plataforma."
             ]
         },
         {
-            "question": "How can I track my referrals and rewards in real-time?",
+            "question": "Como posso monitorar minhas indicações e recompensas em tempo real?",
             "answers": [
-                "Click here to monitor your referrals and rewards as they happen."
+                "Clique aqui para monitorar suas indicações e recompensas à medida que elas acontecem."
             ]
         },
         {
-            "question": "Why don't I see my deposit on ImLive even after depositing?",
+            "question": "Por que não vejo meu depósito na ImLive mesmo depois de depositar?",
             "answers": [
-                "Deposits typically reflect on your CyberSays account within 3 minutes, crediting you with the corresponding funds. If you do not see your deposit after 30 minutes, we recommend reaching out to our customer support for assistance. "
+                "Os depósitos normalmente são refletidos em sua conta CyberSays em 3 minutos, creditando a você os fundos correspondentes. Se você não vir seu depósito após 30 minutos, recomendamos entrar em contato com nosso suporte ao cliente para obter assistência."
             ]
         },
         {
-            "question": "Who can I contact for support if I encounter issues with my account or rewards?",
+            "question": "Com quem posso entrar em contato para obter suporte se tiver problemas com a minha conta ou com as recompensas?",
             "answers": [
-                "Click here to reach our chat for any assistance you need."
+                "Clique aqui para acessar nosso chat para qualquer assistência que você precisar."
             ]
         },
         {
-            "question": "What are the terms of service?",
+            "question": "O que são os termos de serviço?",
             "answers": [
-                "For all the details on our policies: ",
-                "- Terms of Service",
-                "- Daily Contest Terms",
-                "- Promotion Terms",
-                "- Cookie Policy ",
-                "- Privacy Policy",
-                "- Affiliation Terms"
+                "Para todos os detalhes sobre nossas políticas:",
+                "- Termos de Serviço",
+                "- Termos da Competição Diária",
+                "- Termos da Promoção",
+                "- Política de Cookies",
+                "- Política de Privacidade",
+                "- Termos de Afiliação"
             ]
         }
     ],
-    "dataMessageDesc1": "Hey there! Ready to elevate your online experience? Join CyberSays and dive into the excitement! Sign up, complete the ImLive offer, and you could be our next big winner!",
-    "dataMessageDesc2": "Hey friend! Looking for some thrills? Join CyberSays today for a chance to win big! Don't miss out on the fun—sign up, complete the ImLive offer, and let the competition begin!",
-    "dataMessageDesc3": "Hey, fancy some fun and rewards? CyberSays is where it's at! Sign up now, complete the ImLive offer, and get in on the action. Your next adventure could be just a click away!",
-    "dataMessageDesc4": "Hey you! Want to spice up your online journey? CyberSays is the place to be! Sign up, complete the ImLive offer, and start competing for awesome prizes. Let's make some memories together!",
-    "dataMessageDesc5": "Hey, feeling lucky? Join CyberSays and put your luck to the test! Sign up, complete the ImLive offer, and get ready to win big. Your next big adventure awaits!",
-    "dataMessageDesc6": "Hey, looking for some excitement? CyberSays is calling your name! Sign up now, complete the ImLive offer, and step into the world of competition. Don't wait—your chance to win awaits!",
-    "dataMessageDesc7": "Ready for an adventure? Join CyberSays today, dive into the ImLive offer, and take your shot at victory in our thrilling competitions. The excitement is just a click away!",
-    "dataMessageDesc8": "Looking for some fun and rewards? CyberSays has it all! Sign up now, complete the ImLive offer, and get in on the action. Your next win could be right around the corner!",
-    "tourSlide1Title": "Vegas Adventure Awaits",
-    "tourSlide1SubTitle": "Hit Vegas with two friends who completed the CyberSays offer. 1,000$ for your spending and 500$ for each of your friend’s 🎉",
-    "tourSlide2Title": "Glamorous Cadillac Cruise",
-    "tourSlide2SubTitle": "Zoom through Vegas in a Cadillac with 2 porn stars. Experience the glitz and glamour up close with two of your best friends 🔥",
-    "tourSlide3Title": "Epic Club Nights",
-    "tourSlide3SubTitle": "Party in elite clubs with the porn stars. Make unforgettable memories in the Vegas nightlife that will stay an eternity 🏆",
-    "withdrawInputEmail": "Enter your e-mail",
-    "withdrawContinue": "Continue",
-    "verificationTitle": "OTP Verification",
-    "verificationSubTitle": "We have send you an One Time Password(OTP) to your email address",
-    "PIXTitle": "We are paying via PIX",
+    "dataMessageDesc1": "Imagine a gente em Las Vegas se ganharmos. Está a fim de uma aventura?",
+    "dataMessageDesc2": "Estou distribuindo dinheiro grátis ao indicar você. Interessado em um impulso?",
+    "dataMessageDesc3": "As competições diárias estão no ar. Você acha que pode me superar? Vamos ver.",
+    "dataMessageDesc4": "Las Vegas comigo? Ganhe e estaremos pronto pra voar. Vamos apostar em mim.",
+    "dataMessageDesc5": "Eaí, estou brincando de ser banqueiro real aqui. Junte-se a mim e ganhe dinheiro de graça. É um reinado de dinheiro!",
+    "dataMessageDesc6": "Vir comigo = diversão sem parar. Sério, é uma explosão.",
+    "dataMessageDesc7": "Junte-se à minha comitiva real e vamos transformar sua assinatura no tesouro do meu reino. Ganha-ganha, certo?",
+    "dataMessageDesc8": "Suba a bordo e vamos transformar sua assinatura em minhas joias da coroa. Parece um acordo de reis, não é?",
+    "tourSlide1Title": "A Promoção de Las Vegas o aguarda",
+    "tourSlide1SubTitle": "Passagens aéreas para Las Vegas por nossa conta para você e 2 amigos que você escolheu* que completaram a oferta \"Dobre Seu Dinheiro\". 2 noites em um hotel 5 estrelas, 1.000 dólares para seus gastos e 500 dólares para cada um de seus amigos 🎉",
+    "tourSlide2Title": "Um glamuroso Cadillac Cruise",
+    "tourSlide2SubTitle": "Passeie por Las Vegas em um Cadillac com duas Amigas VIP. Experimente o brilho e o glamour de perto com dois de seus melhores amigos. Seja o centro das atenções nas ruas de Las Vegas por algumas horas 🔥.",
+    "tourSlide3Title": "Jantar + diversão em uma boate com suas novas Amigas VIP",
+    "tourSlide3SubTitle": "Um jantar conosco com suas novas Amigas VIP, seguido de uma noitada em um clube de elite de Las Vegas. Crie lembranças inesquecíveis em Vegas que vão te marcar para sempre 🏆.",
+    "withdrawInputEmail": "Digite seu e-mail",
+    "withdrawContinue": "Continuar",
+    "verificationTitle": "Verificação de OTP",
+    "verificationSubTitle": "Nós lhe enviamos uma senha de uso único para ",
+    "PIXTitle": "Por favor insira os dados do seu Pix:",
     "PIXInpu1": "Chave Pix:",
     "PIXInpu2": "CPF",
-    "withdrawConfirm": "Operação concluída com sucesso",
-    "withdrawError": "Operação não concluída. Verifique sua chave pix/cpf ou entre em contato com o seu banco."
+    "withdrawConfirm": "Você fez a retirada com sucesso!",
+    "withdrawError": "Ocorreu um erro. Por favor tente novamente ou entre em contato com o Suporte ao Cliente.",
+    "withdrawErrorTry": "Tente novamente",
+    "withdrawLi1": "1. Envie seu e-mail para receber seu cupom exclusivo.",
+    "withdrawLi2": "2. Verifique se há um e-mail nosso em sua caixa de entrada e clique na opção \"Resgatar\" junto ao cupom.",
+    "withdrawLi3": "3. Você será direcionado à nossa loja de cupons, hospedada pela XOXOday.",
+    "withdrawLi4": "4. Uma vez lá, escolha uma maneira de resgatar seus cupons, como por meio do PayPal ou com cartões Visa pré-pagos.",
+    "withdrawLi5": "5. Eles processarão sua solicitação e te enviarão os fundos.",
+    "withdrawLi6": "6. Caso precise de qualquer assistência, entre em contato com o nosso",
+    "withdrawLi6Span": "Suporte ao cliente.",
+    "myReferralsTitle": "Minhas indicações elegíveis para Las Vegas",
+    "myReferralsSubTitle": "Veja se seus amigos indicados aproveitaram a oferta da ImLive de dobrar o dinheiro - somente então você poderá levá-los a Las Vegas se ganhar!",
+    "myReferralsDoneTitle": "Você foi indicado por: ",
+    "myReferralsDoneSubTitle": "Eles completaram a oferta e estão elegíveis para serem escolhidos para Las Vegas se você ganhar o sorteio!",
+    "myReferralsUnDoneTitle": "Você foi indicado por:",
+    "myReferralsUnDoneSubTitle": "Eles ainda não completaram a oferta e não são elegíveis para serem escolhidos para Las Vegas se você ganhar o sorteio :(",
+    "myReferralsSheet1": "Nome",
+    "myReferralsSheet2": "Aceitou a oferta",
+    "myReferralsSheet3": "Enviar e-mail",
+    "myReferralsSend": "Enviar",
+    "myReferralsSubTitle2": "Você ainda não indicou amigos",
+    "winTicketTitle": "👬Ainda posso ir para Las Vegas se meu ingresso não for o vencedor? 👬",
+    "winTicketSubTitle": "Sim! Para que você, quem te indicou ou suas indicações sejam escolhidos pelo outro se ganharem a promoção de Las Vegas, você precisará:",
+    "winTicketLiTitle": "Participe da Promoção da CyberSays na ImLive.com:",
+    "winTicketLi1": "Crie uma nova conta ou use uma já existente.",
+    "winTicketLi2": "Faça uma compra mínima de cinco créditos para ganhar mais cinco.",
+    "winTicketLi3": "Gastar todos os dez (10) créditos recebidos na ImLive.com.",
+    "winTicketBtn": "Vá para a página Dobre Seu Dinheiro",
+    "winTicketEnd": "Boa sorte!",
+    "winTicketLink": "Para os termos completos da Promoção de Las Vegas",
+    "leaderSheetYou": "Você:",
+    "leaderSheetPoints": "Pontos de Competição",
+    "leaderSheetFriends": "Amigos Indicados"
 }

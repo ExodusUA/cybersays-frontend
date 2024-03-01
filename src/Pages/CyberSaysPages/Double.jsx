@@ -61,24 +61,23 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
     }, [user])
 
     const getButtonMarkup = (task) => {
-        
         switch (task) {
             case 0:
             case null:
             case undefined:
                 return <div className='max-w-[380px] w-full'>
                     <p className='text-center text-[18px] font-semibold '>CyberSays commands you to...</p>
-                    <Link to={imLiveURL} target='_blank'> <button className={`w-full border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>1/3: Register on ImLive 🎉</button></Link>
+                    <Link to={imLiveURL} target='_blank'> <button className={`w-full border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>1/3: Register!</button></Link>
                     <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>7 minutes away</span> from withdraw</p>
                 </div>
             case 1: return <div className='max-w-[380px] w-full'>
                 <p className='text-center text-[18px] font-semibold '>CyberSays commands you to...</p>
-                <Link to={imLiveURL} target='_blank'><button className={`w-full bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>2/3: Buy in 5$, get a royal welcome<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button></Link>
+                <Link to={imLiveURL} target='_blank'><button className={`w-full bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>2/3: Deposit!</button></Link>
                 <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>5 minutes away</span> from withdraw</p>
             </div>
             case 2: return <div className='max-w-[380px] w-full'>
                 <p className='text-center text-[18px] font-semibold '>CyberSays commands you to...</p>
-                <Link to={imLiveURL} target='_blank'><button className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>3/3: Spend all credits, get 10$ back<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button></Link>
+                <Link to={imLiveURL} target='_blank'><button className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>3/3: Spend!</button></Link>
                 <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>3 minutes away</span> from withdraw</p>
             </div>
 

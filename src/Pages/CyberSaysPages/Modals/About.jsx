@@ -15,10 +15,10 @@ function About({ user, setOpen, languageData  }) {
 
                 <h1 className='text-[32px] text-white text-center '>{languageData?.aboutModalTitle}</h1>
                 <div className='max-h-[70vh] overflow-auto mt-4'>
-                    <p className='text-left saira text-[16px]'>{languageData?.aboutModalDesc1}</p>
-                    <p className='text-left saira text-[16px]'>{languageData?.aboutModalDesc2}</p>
-                    <p className='text-left saira text-[16px]'>{languageData?.aboutModalDesc3}</p>
-                    <p className='text-left saira text-[16px]'>{languageData?.aboutModalDesc4}</p>
+                    <p className='text-justify saira text-[16px]'>{languageData?.aboutModalDesc1}</p>
+                    <p className='text-justify saira text-[16px]'>{languageData?.aboutModalDesc2}</p>
+                    <p className='text-justify saira text-[16px]'>{languageData?.aboutModalDesc3}</p>
+                    <p className='text-justify saira text-[16px]'>{languageData?.aboutModalDesc4}</p>
                 </div>
             </div>
         </div>

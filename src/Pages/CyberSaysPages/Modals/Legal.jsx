@@ -15,7 +15,7 @@ function Legal({ user, setOpen, languageData  }) {
 
                 <h1 className='text-[32px] text-white text-center mt-12'>{languageData?.legalModalTitle}</h1>
                 <div className='max-h-[70vh] overflow-auto mt-4'>
-                    <p className='text-center'>{languageData?.legalModalDesc}</p>
+                    <p className='text-justify'>{languageData?.legalModalDesc}</p>
                 </div>
             </div>
         </div>

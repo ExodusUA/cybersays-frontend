@@ -15,9 +15,9 @@ function OurMission({ user, setOpen, languageData  }) {
 
                 <h1 className='text-[32px] text-white text-center'>{languageData?.ourMissionTitle}</h1>
                 <div className='max-h-[70vh] overflow-auto mt-4'>
-                    <p className='text-left saira text-[16px]'>{languageData?.ourMissionSubTitle1}</p>
-                    <p className='text-left saira text-[16px]'>{languageData?.ourMissionSubTitle2}</p>
-                    <p className='text-left saira text-[16px]'>{languageData?.ourMissionSubTitle3}</p>
+                    <p className='text-justify saira text-[16px]'>{languageData?.ourMissionSubTitle1}</p>
+                    <p className='text-justify saira text-[16px]'>{languageData?.ourMissionSubTitle2}</p>
+                    <p className='text-justify saira text-[16px]'>{languageData?.ourMissionSubTitle3}</p>
                 </div>
             </div>
         </div>
