@@ -54,7 +54,7 @@ function Auth({ languageData }) {
                             <div className='pt-[1px] iphone:pt-[10px] lg:pt-[15vh] w-full relative z-[10]'>
                                 <div className=' lg:max-w-[800px] lg:mt-[60px]'>
                                     <img className='w-[180px]  lg:w-[500px]  lg:m-0 se:mt-[10px] iphone:mt-0' src={logoCyber} alt="Logotype" />
-                                    <p className='w-full lg:w-[90%] text-left text-[24px] leading-7 font-bold lg:text-[30px] text-white lg:leading-9 pb-2  lg:py-8 lg:pt-6 se:mt-[0px] iphone:mt-2'>
+                                    <p className='w-full lg:w-[90%] text-left text-[24px] leading-7 font-bold lg:text-[30px] text-white lg:leading-9 pb-2  lg:py-8 lg:pt-6 se:mt-[0px] '>
                                         {currentSlide === 0 && (
                                             <>
                                                 {languageData?.authSlide1}
