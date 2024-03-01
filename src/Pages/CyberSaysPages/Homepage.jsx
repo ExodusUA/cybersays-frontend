@@ -34,13 +34,13 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
             case 0:
             case null:
             case undefined:
-                return <button onClick={e => scrollToPage(1)} className={`w-full sm:w-[350px]   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold flex justify-center items-center ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn1}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
-            case 1: return <button onClick={e => scrollToPage(1)} className={`w-full sm:w-[350px]  bg-white   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold flex justify-center items-center  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn2}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
-            case 2: return <button onClick={e => scrollToPage(1)} className={`w-full  sm:w-[350px] bg-white   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold flex justify-center items-center  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn3}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
-            case 3: return <button onClick={e => scrollToPage(1)} className={`w-full sm:w-[350px] bg-white   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold flex justify-center items-center ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn4}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
+                return <button onClick={e => scrollToPage(1)} className={`w-full md:w-[480px]   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold flex justify-center items-center ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn1}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
+            case 1: return <button onClick={e => scrollToPage(1)} className={`w-full md:w-[480px]  bg-white   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold flex justify-center items-center  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn2}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
+            case 2: return <button onClick={e => scrollToPage(1)} className={`w-full  md:w-[480px] bg-white   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold flex justify-center items-center  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn3}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
+            case 3: return <button onClick={e => scrollToPage(1)} className={`w-full md:w-[480px] bg-white   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold flex justify-center items-center ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn4}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
         }
     }
-    
+
     useEffect(() => {
         if (user === null) return setLastTask(0)
 
@@ -58,21 +58,46 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
 
                     <p className=' text-[18px] md:text-[32px] font-semibold'></p>
                 </div>
-                <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
-                <div className='flex justify-between items-end md:items-center '>
-                    <div>
-                        <img className='w-[180px] sm:w-[200px] md:w-[370px] lg:mt-[-70px]' src={design === '0' ? girlOK : require('../../images/NewDesign/Homepage/hero_image.png')} alt="girlOK" />
-                        <div className='md:block hidden relative left-3'>
+                <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[280px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
+                <div className='lg:flex justify-between items-end md:items-center '>
+                    <div className='w-full lg:hidden block mb-2'>
+                        <Swiper
+                            modules={[Autoplay]}
+
+                            loop={true}
+                            breakpoints={{
+                                0: {
+                                    slidesPerView: 1,
+                                    spaceBetween: 10,
+                                }
+                            }}
+                        >
+                            {
+                                dataTitle.map((item, index) => (
+                                    <SwiperSlide key={item}>
+                                        <p className='text-[16px] font-semibold'>{item.desc}</p>
+                                    </SwiperSlide>
+                                ))
+                            }
+
+                        </Swiper>
+                    </div>
+                    <div className={`${design === '0' ? ' border-[#FFD700]' : '  border-[#A2DBF0]'} rounded-[16px] border-2 px-2 pb-2 pt-8 m-auto lg:m-[unset]`}>
+                        <div className='flex items-center'>
+                            <img className='w-[180px] sm:w-[200px] md:w-[240px] mt-[-70px]' src={design === '0' ? girlOK : require('../../images/NewDesign/Homepage/hero_image.png')} alt="girlOK" />
+                            <Link to={imLiveURL} target='_blank'><img className='w-[160px] md:w-[240px] md:mt-5 mac:!mt-6 mb-10' src={imLiveLogo} alt="imLiveLogo" /></Link>
+                        </div>
+                        <div className=' relative '>
                             {
                                 getButtonMarkup(lastTask)
                             }
                         </div>
                     </div>
                     <div className='ml-1 md:ml-10 w-[200px] sm:w-[unset] mb-4 md:mb-[unset]'>
-                        <div className='max-w-[300px] md:max-w-[750px]'>
+                        <div className='max-w-[300px] md:max-w-[580px] w-full hidden lg:block'>
                             <Swiper
                                 modules={[Autoplay]}
-                               
+
                                 loop={true}
                                 breakpoints={{
                                     0: {
@@ -91,20 +116,18 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
 
                             </Swiper>
                         </div>
-                        <Link to={imLiveURL} target='_blank'><img className='w-[160px] md:w-[200px] md:mt-5 mac:!mt-6' src={imLiveLogo} alt="imLiveLogo" /></Link>
+
+                        {/*
                         <div className='md:block hidden mt-[100px] mac:mt-[150px]'>
                             <TimeCounter title={languageData?.timeCounterTitle2} languageData={languageData} block={'hidden'}  />
                         </div>
+                        */}
                     </div>
                 </div>
-                <div className='block md:hidden'>
-                    {
-                        getButtonMarkup(lastTask)
-                    }
-                </div>
+                
             </div>
-            <div className='flex md:hidden absolute se:bottom-[160px] iphone:bottom-[156px] justify-center w-full max-w-[760px] m-auto'>
-                <TimeCounter title={languageData?.timeCounterTitle2} left={'m-[unset]'} leftTitle={'text-left'} languageData={languageData} block={'hidden'}  />
+            <div className='flex absolute se:bottom-[130px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
+                <TimeCounter title={languageData?.timeCounterTitle} left={'m-auto'} leftTitle={'text-center'} languageData={languageData} block={'hidden'} />
             </div>
         </div>
     )
