@@ -9,6 +9,7 @@ import Main from './Pages/Main';
 import Privacy from './Pages/Privacy';
 import DiscordAuth from './Pages/Auth/DiscordAuth';
 import { DesignProvider } from './Helpers/Design/DesignContext';
+import Terms from './Pages/Terms';
 
 function App() {
 
@@ -81,6 +82,7 @@ function App() {
             <Route path="/auth/discord/callback" element={<DiscordAuth />} />
             <Route path="/privacy" element={<Privacy languageData={languageData} />} />
             <Route path="/token/*" element={<Token />} />
+            <Route path="/terms" element={<Terms />} />
           </Routes>
         </BrowserRouter>
       </DesignProvider>
