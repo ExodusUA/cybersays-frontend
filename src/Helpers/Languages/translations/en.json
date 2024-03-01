@@ -274,7 +274,7 @@
     "rulesPoint2li3": "$1 USD + 30 Vegas Tickets + 10 Points for each successful referral who completes the Offer",
     "rulesPoint2li4": "1 Vegas Ticket + 0.5 Points for every credit bought after the first purchase on ImLive.com",
     "rulesEnd": "Best of luck to all participants in the CyberSays Contest!",
-    "toolInfoTitle": "What can I get in CyberSays and how?",
+    "toolInfoTitle": "How It Works?",
     "toolInfoWhat": "What?",
     "toolInfoHow": "How?",
     "toolInfolef1": "10$ in your pocket",
@@ -495,6 +495,10 @@
     "earnedModalTitle": "Latest USD earnings",
     "TicketModalTitle": "Latest Vegas Tickets earnings",
     "PointsModalTitle": "Latest contest points earnings",
-    "earnedModalLink": "View full information"
+    "earnedModalLink": "View full information",
+    "toolInfoLeft1": "Action",
+    "toolInfoPoint1": "USD earned",
+    "toolInfoPoint2": "Points",
+    "toolInfoPoint3": "Tickets"
     
 }
