@@ -36,7 +36,7 @@ function Slider({ onSlideChange }) {
             
                 
                 modules={[Navigation, Autoplay]}
-                autoplay={{ delay: 4000 }}
+              
                 spaceBetween={0}
                 slidesPerView={1}
                 loop={true}

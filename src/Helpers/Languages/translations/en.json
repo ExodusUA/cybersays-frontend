@@ -28,7 +28,7 @@
                     "taskText": "Enjoy ImLive, be treated like a KING 👑 - and fulfill your wildest fantasies!"
                 }
             ],
-            "taskButton": "1/4 Register!"
+            "taskButton": "1/3 Register!"
         },
         "task2": {
             "taskTitle": "Royal welcome to ImLive: buy 5$, get 10 credits",
@@ -40,7 +40,7 @@
                     "taskText": "Deposit $5... ImLive will double the credit. CyberSays will double the dollars!"
                 }
             ],
-            "taskButton": "2/4 Deposit!"
+            "taskButton": "2/3 Deposit!"
         },
         "task3": {
             "taskTitle": "Use all credits to get 10$ CashBack from CyberSays",
@@ -52,7 +52,7 @@
                     "taskText": "Spend your 10 ImLive credits, be treated like a king, and get $10 cash when you’re done!"
                 }
             ],
-            "taskButton": "Spend"
+            "taskButton": "3/3 Spend!"
         },
         "task4": {
             "taskTitle": "Withdraw your cash 🤑",
