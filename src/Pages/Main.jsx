@@ -217,10 +217,12 @@ function Main({ languageData }) {
 
         let data = [];
 
-        if (userCountry === 'BR' || userCountry === 'UA') {
-            data = [require('../images/memes/pt_1.png'), require('../images/memes/pt_2.png'), require('../images/memes/pt_3.png'), require('../images/memes/pt_4.png'), require('../images/memes/pt_5.png'), require('../images/memes/pt_6.png')];
+        if (userCountry === 'BR' ) {
+            data = [require('../images/memes/pt/pt_1.png'), require('../images/memes/pt/pt_2.png'), require('../images/memes/pt/pt_3.png'), require('../images/memes/pt/pt_4.png'), require('../images/memes/pt/pt_5.png'), require('../images/memes/pt/pt_6.png'), require('../images/memes/pt/pt_7.png'), require('../images/memes/pt/pt_8.png'), require('../images/memes/pt/pt_9.png')];
+        } else if (userCountry === 'ES') {
+            data = [require('../images/memes/es/es_1.png'), require('../images/memes/es/es_2.png'), require('../images/memes/es/es_3.png'), require('../images/memes/es/es_4.png'), require('../images/memes/es/es_5.png'), require('../images/memes/es/es_6.png')]
         } else {
-            data = [require('../images/memes/en_1.png'), require('../images/memes/en_2.png'), require('../images/memes/en_3.png'), require('../images/memes/en_4.png'), require('../images/memes/en_5.png'), require('../images/memes/en_6.png'), require('../images/memes/en_7.png'), require('../images/memes/en_8.png'), require('../images/memes/en_9.png'), require('../images/memes/en_10.png')];
+            data = [require('../images/memes/en/en_1.png'), require('../images/memes/en/en_2.png'), require('../images/memes/en/en_3.png'), require('../images/memes/en/en_4.png'), require('../images/memes/en/en_5.png'), require('../images/memes/en/en_6.png'), require('../images/memes/en/en_7.png'), require('../images/memes/en/en_8.png'), require('../images/memes/en/en_9.png')];
         }
 
         setUploadedPhotos(data);
@@ -353,7 +355,7 @@ function Main({ languageData }) {
 
             }
             {
-                menuOpen === true && <ModalMenu setSocialLink={setSocialLink} setSelectedButton={setSelectedButton} selectedButton={selectedButton}  setTransactionsModal={setTransactionsModal} userCountry={userCountry} languageData={languageData} setChatModal={setChatModal} chatModal={chatModal} siteData={siteData} scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
+                menuOpen === true && <ModalMenu setSocialLink={setSocialLink} setSelectedButton={setSelectedButton} selectedButton={selectedButton} setTransactionsModal={setTransactionsModal} userCountry={userCountry} languageData={languageData} setChatModal={setChatModal} chatModal={chatModal} siteData={siteData} scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
             }
             {
                 tourModal && <TourModal user={userData} languageData={languageData} setOpen={setTourModal} />
@@ -388,7 +390,7 @@ function Main({ languageData }) {
                 ticketShortModal && <Ticket setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setTicketShortModal} user={userData} setSelectedButton={setSelectedButton} />
             }
             {
-                pointsModal && <Points setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setPointsModal} user={userData} setSelectedButton={setSelectedButton}  />
+                pointsModal && <Points setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setPointsModal} user={userData} setSelectedButton={setSelectedButton} />
             }
             {
                 transactionsModal && <TransactionHistory setWithdrawModal={setWithdrawModal} languageData={languageData} setOpen={setTransactionsModal} user={userData} userCountry={userCountry} />

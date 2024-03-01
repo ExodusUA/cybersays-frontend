@@ -13,7 +13,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
     let swiperRef;
 
     const [blobImage, setBlobImage] = useState(null)
-    const [selectedGif, setSelectedGif] = useState(null);
+    const [selectedGif, setSelectedGif] = useState(0);
     const [toolTip, setToolTip] = useState(false)
 
     const { design } = useDesign()
