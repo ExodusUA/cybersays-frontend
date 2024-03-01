@@ -27,6 +27,13 @@ function App() {
     window.location.href = '/login?ref=' + params.get('uid')
   };
 
+  useEffect(() => {
+    if (window.localStorage.getItem('design') === null) {
+      window.localStorage.setItem('design', '1');
+      window.location.reload();
+    }
+  }, []);
+
   const queryClient = new QueryClient()
 
   mixpanel.init(process.env.REACT_APP_MIXPANEL_PROJECT_TOKEN);
