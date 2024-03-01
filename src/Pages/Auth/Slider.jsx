@@ -24,7 +24,7 @@ function Slider({ onSlideChange }) {
     console.log(onSlideChange)
 
     return (
-        <div className='lg:w-[35%] 2xl:w-[40%] relative se:hidden iphone:block'>
+        <div className='lg:w-[35%] 2xl:w-[40%] relative '>
 
             <Swiper
 

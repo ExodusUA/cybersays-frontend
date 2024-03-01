@@ -101,7 +101,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
 
                                         </div>
                                         <p className='text-[10px] md:text-[12px] saira text-center cursor-pointer pt-1'>
-                                            {languageData?.raffleRulesDesc}
+                                            {languageData?.raffleRulesDesc} - <span onClick={e => setWinModal(true)} className='text-[10px] md:text-[12px] saira text-center underline cursor-pointer'>{languageData?.raffleRulesDescSpan}</span>
                                         </p>
                                     </div>
                                     : <div className='flex justify-center'>
@@ -131,7 +131,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                                     <p className='  text-[18px] md:text-[32px] mac2:!text-[18px] font-semibold leading-5 lg:leading-9'>
                                         {languageData?.raffleTitle1}
                                     </p>
-                                    <p onClick={e => setWinModal(true)} className='gradient-tourToggle max-w-[240px] m-auto rounded-[14px] w-full text-[#1E1E1E] saira text-[14px] font-semibold cursor-pointer mt-2 '>What’s the Vegas Promotion?</p>
+                                    <p  className='gradient-tourToggle max-w-[240px] m-auto rounded-[14px] w-full text-[#1E1E1E] saira text-[14px] font-semibold cursor-pointer mt-2 '>What’s the Vegas Promotion?</p>
                                 </div>
 
 
