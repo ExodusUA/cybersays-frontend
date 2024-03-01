@@ -20,7 +20,7 @@ function ToolTipInfo({ languageData, setToolInfo }) {
                 <div className='flex justify-end '>
                     <img onClick={e => setToolInfo(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
-                <p className='text-[16px] md:text-[24px] font-semibold text-center text-black gradient-linkDouble max-w-[280px] m-auto'>{languageData.toolInfoTitle}</p>
+                <p className='text-[16px] md:text-[24px] font-semibold text-center text-black gradient-linkDouble max-w-[280px] lg:max-w-[380px] m-auto'>{languageData.toolInfoTitle}</p>
                 <div>
                     <div className='flex justify-around mt-2'>
                         <p className='text-[14px] text-center font-semibold'>{languageData.toolInfoWhat}</p>
