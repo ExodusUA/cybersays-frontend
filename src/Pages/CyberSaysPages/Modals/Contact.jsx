@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import close from '../../../images/CyberSaysPage/closeMenu.png'
 import { useDesign } from '../../../Helpers/Design/DesignContext'
+import Confirm from '../../../Components/Transactions/Confirm'
+import ConfirmMessage from './ConfirmMessage'
 
 function Contact({ user, setOpen, languageData }) {
     const { design } = useDesign()
@@ -30,7 +32,7 @@ function Contact({ user, setOpen, languageData }) {
                         <p className='text-center saira text-[16px] font-semibold mx-2'>{languageData?.contactModalSubTitle}</p>
                         <div>
                             <input value={email} onChange={e => setEmail(e.target.value)} className={`w-full bg-white border-[2px] ${design === '0' ? 'rounded-[18px] border-[#FFED63]' : 'rounded-[12px] border-[#A2DBF0]'} text-[14px] saira px-4 py-2 lg:py-3 mt-4 saira input-fix text-[#888888]`} placeholder={languageData?.contactQuestionEmail} />
-                            <div className={` bg-white px-5 py-2 lg:py-3 mt-2 border ${design === '0' ? 'rounded-[18px] border-[#FFED63]' : 'rounded-[12px] border-[#A2DBF0]'}`} >
+                            <div className={` bg-white px-6 py-2 lg:py-3 mt-2 border ${design === '0' ? 'rounded-[18px] border-[#FFED63]' : 'rounded-[12px] border-[#A2DBF0]'}`} >
                                 <div onClick={e => setWhatAbout(!whatAbout)} className={`flex  items-center justify-between cursor-pointer`}>
                                     <div className='flex items-center' >
                                         <p className='saira text-[14px] font-semibold  text-[#1E1E1E]'>{languageData?.contactQuestionTitle}</p>
@@ -108,14 +110,15 @@ function Contact({ user, setOpen, languageData }) {
 
                         <div className="flex justify-center">
                             <button className={`w-full bg-[white] text-[18px] ${design === '0' ? '  rounded-[18px] border-[2px] bg-white text-[#5f5f5f]' : ' rounded-[12px] border-none gradient-homepageBtn text-black'} px-6 py-2 saira p-2 mt-2 sm:max-w-[350px] text-[#5f5f5f] font-semibold`} onClick={e => handleSend()}>
-                                {
-                                    isSended ? languageData?.contactModalBtn1 : languageData?.contactModalBtn2
-                                }
+                                {languageData?.contactModalBtn2}
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
+            {
+                isSended && <ConfirmMessage closeAll={setOpen} languageData={languageData} />
+            }
         </div>
 
     )

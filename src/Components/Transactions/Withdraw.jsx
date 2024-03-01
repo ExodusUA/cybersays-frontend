@@ -162,7 +162,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
                 confirm && <Confirm setOpen={setConfirm} languageData={languageData} closeAll={setOpen} />
             }
             {
-                error && <Confirm setOpen={setError} languageData={languageData} closeAll={setOpen} />
+                error && <Error setOpen={setError} languageData={languageData} closeAll={setOpen} />
             }
 
         </div>
