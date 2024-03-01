@@ -33,7 +33,7 @@ import WhyJoin from '../Pages/CyberSaysPages/Modals/WhyJoin'
 import FAQ from '../Pages/CyberSaysPages/Modals/FAQ'
 import userAPI from '../Requests/user'
 
-function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setChatModal, chatModal, languageData, userCountry, setSelectedButton, selectedButton }) {
+function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setChatModal, chatModal, languageData, userCountry, setSelectedButton, selectedButton,setSocialLink  }) {
 
   const { design, changeDesign } = useDesign()
 
@@ -174,7 +174,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                     <div className='flex items-center' onClick={e => setContactModal(true)}  >
                       <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuBottom4}</p>
                     </div>
-                    <div className='flex items-center' onClick={e => setLegalModal(true)}  >
+                    <div className='flex items-center' onClick={e => setSocialLink(true)}  >
                       <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuBottom2}</p>
                     </div>
                   </div>

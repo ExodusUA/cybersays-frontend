@@ -17,9 +17,10 @@ function LeaderboardUser({ leaderboardData, languageData, day, user, index }) {
 
     return (
         <div className=' '>
-            <div className={`bg-[#EAEAEA] ${design === '0' ? 'bg-opacity-40 ' : 'bg-opacity-20 '} backdrop-blur-lg rounded-[30px] text-center flex pr-3  justify-between items-center mt-2`}>
-                <div className='flex items-center'>
-                    <img className=' rounded-full w-[40px] h-[40px]' src={`https://picsum.photos/298/30${index + 1}`} alt="twoSt" />
+            <div className={`bg-[#EAEAEA] ${design === '0' ? 'bg-opacity-40 ' : 'bg-opacity-20 '} backdrop-blur-lg rounded-[30px] text-center flex pr-6  justify-between items-center mt-2`}>
+                <div className='flex items-center '>
+                    {/*<img className=' rounded-full w-[40px] h-[40px]' src={`https://picsum.photos/298/30${index + 1}`} alt="twoSt" />*/}
+                    <p className={`saira text-[16px] font-bold text-[#1E1E1E] gradient-homepageBtn rounded-full w-[40px] h-[40px] pt-2`}>#{index + 4}</p>
                     <p className='saira text-[12px] md:text-[14px] font-medium text-center ml-[15px] truncate w-[120px]'>{user?.email}</p>
                 </div>
                 <div className='leading-[14px]'>
@@ -30,7 +31,7 @@ function LeaderboardUser({ leaderboardData, languageData, day, user, index }) {
                     <p className={`saira text-[12px] md:text-[14px] font-medium text-[#FFED63] ${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'}`}>{Number(user?.points).toFixed(0)}</p>
                     <p className='saira text-[12px] md:text-[14px] font-medium'>{languageData?.leaderboardsPoints}</p>
                 </div>
-                <p className={`saira text-[16px] font-bold ${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'}`}>#{index + 4}</p>
+
             </div>
 
         </div>
