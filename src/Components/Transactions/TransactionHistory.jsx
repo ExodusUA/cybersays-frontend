@@ -6,7 +6,7 @@ import userAPI from '../../Requests/user'
 import moment from 'moment'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 
-function TransactionHistory({ setOpen, languageData, user }) {
+function TransactionHistory({ setOpen, languageData, user, userCountry }) {
     const { design } = useDesign()
 
     const [transactionsData, setTransactionsData] = useState(null)
@@ -31,7 +31,7 @@ function TransactionHistory({ setOpen, languageData, user }) {
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}$</p>
+                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}{userCountry === 'BR' || userCountry === 'UA' ? ' BRL' : '$'}</p>
                     <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionsSection1Right}</p>
                 </div>
             </div>
@@ -44,7 +44,7 @@ function TransactionHistory({ setOpen, languageData, user }) {
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}$</p>
+                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}{userCountry === 'BR' || userCountry === 'UA' ? ' BRL' : '$'}</p>
                     <p className='text-[12px] font-normal saira text-right'>{languageData?.transactionsSection2Right}</p>
                 </div>
             </div>
@@ -57,7 +57,7 @@ function TransactionHistory({ setOpen, languageData, user }) {
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-                    <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right mb-1'>-{amount}$</p>
+                    <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right mb-1'>-{amount}{userCountry === 'BR' || userCountry === 'UA' ? ' BRL' : '$'}</p>
                     <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionsSection3Right}</p>
                 </div>
             </div>
@@ -72,7 +72,7 @@ function TransactionHistory({ setOpen, languageData, user }) {
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}$</p>
+                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}{userCountry === 'BR' || userCountry === 'UA' ? ' BRL' : '$'}</p>
                     <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionsSection4Right}</p>
                 </div>
             </div>
@@ -90,7 +90,7 @@ function TransactionHistory({ setOpen, languageData, user }) {
                 {
                     transactionsData?.length > 0
                         ? transactionsData?.map((transaction, index) => {
-                            return getMarkup(transaction.type, transaction.datetime, transaction.amount)
+                            return getMarkup(transaction.type, transaction.datetime, userCountry === 'BR' || userCountry === 'UA' ? transaction.amount * 5 : transaction.amount)
                         })
                         : <div className='flex justify-center items-center h-[470px]'>
                             <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>

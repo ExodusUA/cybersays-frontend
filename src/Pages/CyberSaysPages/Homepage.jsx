@@ -72,7 +72,7 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                         <div className='max-w-[300px] md:max-w-[750px]'>
                             <Swiper
                                 modules={[Autoplay]}
-                                autoplay={{ delay: 4000 }}
+                               
                                 loop={true}
                                 breakpoints={{
                                     0: {
