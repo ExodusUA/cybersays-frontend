@@ -71,7 +71,7 @@ function WinVegasModal({ setOpen, languageData, user }) {
                         </ul>
                     </div>
                     <p className='text-[18px] lg:text-[24px] text-center font-semibold gradient-goodluck mt-2'>{languageData.winPointEnd}</p>
-                    <Link onClick={e => setOpen(false)} to='/terms' target='_blank' ><p className='text-[8px] lg:text-[10px] text-center font-semibold text-[#D9D9D9] mt-2 underline'>{languageData.winPointEndLink}</p></Link>
+                    <Link onClick={e => setOpen(false)} to='/promotion-terms' target='_blank' ><p className='text-[8px] lg:text-[10px] text-center font-semibold text-[#D9D9D9] mt-2 underline'>{languageData.winPointEndLink}</p></Link>
                     
                 </div>
             </div>
