@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
 import crown from '../../images/CyberSaysPage/crown1st.png'
+import TimeCounterDay from '../../Components/TimeCounterDay'
 
 function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading, leaderboardData, setLeaderboardData, siteData, languageData, setRulesModal, setSocialLink }) {
 
@@ -137,7 +138,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                 </div>
                 
                 <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
-                    <TimeCounter setSocialLink={setSocialLink} left={'m-auto'} leftTitle={'text-center'} title={languageData?.timeCounterTitle}  languageData={languageData} block={'block'} />
+                    <TimeCounterDay setSocialLink={setSocialLink} left={'m-auto'} leftTitle={'text-center'} title={languageData?.timeCounterTitle}  languageData={languageData} block={'block'} />
                 </div>
                 
             </div>
