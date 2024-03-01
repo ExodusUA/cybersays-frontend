@@ -41,21 +41,13 @@ function LeaderboardModal({ setOpen, leaderboardData, loading, languageData, use
                 <div className='flex justify-end md:my-4'>
                     <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
-                <div className='bg-[#EAEAEA] bg-opacity-40 backdrop-blur-md  p-1 px-3 mt-1 flex justify-between max-w-[380px] m-auto'>
+                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[12px] p-1 px-1  flex justify-between max-w-[380px] md:max-w-[100%] m-auto'>
 
-                    <div className=' leading-4'>
-                        <p className='gradient-linkDouble saira text-[16px] font-bold'>{languageData?.leaderSheetYou} <span className='gradient-linkDouble saira text-[16px] font-bold'> #825</span></p>
-                        
+                    <div className=' leading-4 text-left m-auto'>
+                        <p className='gradient-linkDouble saira text-[14px] lg:text-[18px] font-bold'>{languageData?.leaderSheetYou} <span className='saira text-[14px] lg:text-[18px] font-bold'> #825,</span> {languageData?.leaderSheetPoints} <span className='saira text-[14px] lg:text-[18px] font-bold'>{Number(user?.points).toFixed(0)}</span></p>
 
                     </div>
-                    <div className=' leading-4 text-center'>
-                        <p className='gradient-linkDouble saira text-[12px] font-bold'>{Number(user?.points).toFixed(0)}</p>
-                        <p className=' saira text-[12px] font-medium'>{languageData?.leaderSheetPoints}</p>
-                    </div>
-                    <div className=' leading-4 text-center'>
-                        <p className='gradient-linkDouble saira text-[12px] font-bold'>145</p>
-                        <p className=' saira text-[12px] font-medium'>{languageData?.leaderSheetFriends}</p>
-                    </div>
+
                 </div>
                 {
                     loading === true
