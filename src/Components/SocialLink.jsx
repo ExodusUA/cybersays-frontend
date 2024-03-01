@@ -26,7 +26,7 @@ function SocialLink({ setOpen }) {
                         <p className='text-center saira underline text-[14px] lg:text-[18px] cursor-pointer pt-2'>Contest Terms</p>
                     </Link>
                     <Link target='_blank' to={'/promotion-terms'}>
-                        <p className='text-center saira underline text-[14px] lg:text-[18px] cursor-pointer pt-2'>Promotin Terms</p>
+                        <p className='text-center saira underline text-[14px] lg:text-[18px] cursor-pointer pt-2'>Promotion Terms</p>
                     </Link>
                     <Link target='_blank' to={'/affiliation-terms'}>
                         <p className='text-center saira underline text-[14px] lg:text-[18px] cursor-pointer pt-2'>Affliation Terms</p>

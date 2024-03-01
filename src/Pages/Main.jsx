@@ -382,7 +382,7 @@ function Main({ languageData }) {
                 infoOffer && <InfoOfferModal setOpen={setInfoOffer} languageData={languageData} />
             }
             {
-                earnedModal && <Earned setTransactionsModal={setTransactionsModal} languageData={languageData} setOpen={setEarnedModal} user={userData} />
+                earnedModal && <Earned setTransactionsModal={setTransactionsModal} languageData={languageData} setOpen={setEarnedModal} user={userData} userCountry={userCountry} />
             }
             {
                 ticketShortModal && <Ticket setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setTicketShortModal} user={userData} setSelectedButton={setSelectedButton} />

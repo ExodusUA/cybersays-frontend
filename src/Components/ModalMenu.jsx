@@ -236,7 +236,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
         withdrawModal && <Withdraw languageData={languageData} setOpen={setWithdrawModal} user={user} userCountry={userCountry} />
       }
       {
-        transactionsModal && <TransactionHistory languageData={languageData} setOpen={setTransactionsModal} user={user} setWithdrawModal={setWithdrawModal} />
+        transactionsModal && <TransactionHistory languageData={languageData} setOpen={setTransactionsModal} user={user} setWithdrawModal={setWithdrawModal} userCountry={userCountry} />
       }
       {
         ticketsModal && <TicketsHistory languageData={languageData} setOpen={setTicketsModal} user={user} />
