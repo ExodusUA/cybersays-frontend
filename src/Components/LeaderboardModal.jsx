@@ -44,8 +44,8 @@ function LeaderboardModal({ setOpen, leaderboardData, loading, languageData, use
                 <div className='bg-[#EAEAEA] bg-opacity-40 backdrop-blur-md  p-1 px-3 mt-1 flex justify-between max-w-[380px] m-auto'>
 
                     <div className=' leading-4'>
-                        <p className='gradient-linkDouble saira text-[16px] font-bold'>{languageData?.leaderSheetYou}</p>
-                        <p className='gradient-linkDouble saira text-[16px] font-bold'> #825</p>
+                        <p className='gradient-linkDouble saira text-[16px] font-bold'>{languageData?.leaderSheetYou} <span className='gradient-linkDouble saira text-[16px] font-bold'> #825</span></p>
+                        
 
                     </div>
                     <div className=' leading-4 text-center'>
