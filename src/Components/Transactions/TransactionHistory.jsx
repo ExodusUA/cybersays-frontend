@@ -6,7 +6,7 @@ import userAPI from '../../Requests/user'
 import moment from 'moment'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 
-function TransactionHistory({ setOpen, languageData, user, userCountry }) {
+function TransactionHistory({ setOpen, languageData, user, userCountry, setWithdrawModal }) {
     const { design } = useDesign()
 
     const [transactionsData, setTransactionsData] = useState(null)
@@ -100,7 +100,11 @@ function TransactionHistory({ setOpen, languageData, user, userCountry }) {
 
             </div>
             <div className='flex justify-center'>
-                <button className={`w-full bg-white  border-[2px] text-black text-[18px] saira font-semibold py-2 mt-3 max-w-[370px] ${design === '0' ? ' rounded-[50px] border-[2px] bg-white ' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>
+                <button onClick={e => {
+                    setWithdrawModal(true)
+                    setOpen(false)
+                   
+                }} className={`w-full bg-white  border-[2px] text-black text-[18px] saira font-semibold py-2 mt-3 max-w-[370px] ${design === '0' ? ' rounded-[50px] border-[2px] bg-white ' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>
             </div>
         </div>
     )

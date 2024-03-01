@@ -103,22 +103,21 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <img className='w-[32px] h-[32px] mr-2' src={design === '0' ? link2 : require('../images/NewDesign/modalMenu/link2.png')} alt="link2" />
               <p className='saira text-[20px] font-semibold'>{languageData?.modalMenuLink2}</p>
             </div>
-            <div className='flex items-center' onClick={e => setTourModal(true)}>
+            <div className='flex items-center' onClick={e => scrollToPage(2)}>
               <img className='w-[32px] h-[32px] mr-2' src={link3} alt="link3" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink3}</p>
             </div>
-            <div className='flex items-center' onClick={e => scrollToPage(2)} >
+            <div className='flex items-center cursor-pointer' onClick={e => scrollToPage(3)}>
+              <img className='w-[32px] h-[32px] mr-2' src={link6} alt="link6" />
+              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink6} {siteData?.currentDay} {languageData?.modalMenuLink6Span}</p>
+            </div>
+            <div className='flex items-center' onClick={e => scrollToPage(4)} >
               <img className='w-[32px] h-[32px] mr-2' src={design === '0' ? link4 : require('../images/NewDesign/modalMenu/link3.png')} alt="link4" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink4}</p>
             </div>
             <div className='flex items-center' onClick={e => setReferralsModal(true)} >
               <img className='w-[32px] h-[32px] mr-2' src={design === '0' ? link5 : require('../images/NewDesign/modalMenu/link4.png')} alt="link5" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink5}</p>
-            </div>
-
-            <div className='flex items-center cursor-pointer' onClick={e => scrollToPage(3)}>
-              <img className='w-[32px] h-[32px] mr-2' src={link6} alt="link6" />
-              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink6} {siteData?.currentDay} {languageData?.modalMenuLink6Span}</p>
             </div>
             <div className='flex items-center' onClick={e => setWithdrawModal(true)}>
               <img className='w-[32px] h-[32px] mr-2' src={link8} alt="link7" />
@@ -237,7 +236,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
         withdrawModal && <Withdraw languageData={languageData} setOpen={setWithdrawModal} user={user} userCountry={userCountry} />
       }
       {
-        transactionsModal && <TransactionHistory languageData={languageData} setOpen={setTransactionsModal} user={user} />
+        transactionsModal && <TransactionHistory languageData={languageData} setOpen={setTransactionsModal} user={user} setWithdrawModal={setWithdrawModal} />
       }
       {
         ticketsModal && <TicketsHistory languageData={languageData} setOpen={setTicketsModal} user={user} />

@@ -389,7 +389,7 @@ function Main({ languageData }) {
                 pointsModal && <Points setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setPointsModal} user={userData} setSelectedButton={setSelectedButton}  />
             }
             {
-                transactionsModal && <TransactionHistory languageData={languageData} setOpen={setTransactionsModal} user={userData} userCountry={userCountry} />
+                transactionsModal && <TransactionHistory setWithdrawModal={setWithdrawModal} languageData={languageData} setOpen={setTransactionsModal} user={userData} userCountry={userCountry} />
             }
             {
                 ticketsModal && <TicketsHistory languageData={languageData} setOpen={setTicketsModal} user={userData} setSelectedButton={setSelectedButton} selectedButton={selectedButton} />
