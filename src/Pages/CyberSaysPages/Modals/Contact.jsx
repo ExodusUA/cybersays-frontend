@@ -30,7 +30,7 @@ function Contact({ user, setOpen, languageData }) {
                         <p className='text-center saira text-[16px] font-semibold mx-2'>{languageData?.contactModalSubTitle}</p>
                         <div>
                             <input value={email} onChange={e => setEmail(e.target.value)} className={`w-full bg-white border-[2px] ${design === '0' ? 'rounded-[18px] border-[#FFED63]' : 'rounded-[12px] border-[#A2DBF0]'} text-[14px] saira px-4 py-2 lg:py-3 mt-4 saira input-fix text-[#888888]`} placeholder={languageData?.contactQuestionEmail} />
-                            <div className={` bg-white px-6 py-2 lg:py-3 mt-2 border ${design === '0' ? 'rounded-[18px] border-[#FFED63]' : 'rounded-[12px] border-[#A2DBF0]'}`} >
+                            <div className={` bg-white px-5 py-2 lg:py-3 mt-2 border ${design === '0' ? 'rounded-[18px] border-[#FFED63]' : 'rounded-[12px] border-[#A2DBF0]'}`} >
                                 <div onClick={e => setWhatAbout(!whatAbout)} className={`flex  items-center justify-between cursor-pointer`}>
                                     <div className='flex items-center' >
                                         <p className='saira text-[14px] font-semibold  text-[#1E1E1E]'>{languageData?.contactQuestionTitle}</p>

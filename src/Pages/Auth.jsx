@@ -44,9 +44,7 @@ function Auth({ languageData }) {
 
                     <Slider onSlideChange={slideChange} />
 
-
-
-                    <div className='w-full text-center bg-dark lg:w-[55%] h-full'>
+                    <div className='w-full text-center bg-dark lg:w-[65%] 2xl:w-[65%] h-full'>
                         <div className='w-[90%] lg:w-[80%] m-auto lg:relative z-10'>
 
                             <div className='absolute right-0 top-5 flex items-center align-start z-20'>
