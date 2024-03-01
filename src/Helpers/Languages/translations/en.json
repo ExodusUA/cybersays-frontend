@@ -499,6 +499,20 @@
     "toolInfoLeft1": "Action",
     "toolInfoPoint1": "USD earned",
     "toolInfoPoint2": "Points",
-    "toolInfoPoint3": "Tickets"
+    "toolInfoPoint3": "Tickets",
+    "contactQuestionTitle": "What is you issue?",
+    "contactQuestion1": "I didn't receive my money",
+    "contactQuestion2": "I didn't receive my competition points",
+    "contactQuestion3": "I didn't receive my Vegas tickets",
+    "contactQuestion4": "I have issues with my account",
+    "contactQuestion5": "Forgot my password",
+    "contactQuestion6": "Complaints",
+    "contactQuestion7": "Others - please write about it",
+    "contactQuestionEmail": "Your email",
+    "contactQuestionDesc": "Description",
+    "contactQuestionAttach": "Attach files",
+    "contactConfirmTitle": "Your message has been sent! We will contact you soon",
+    "contactConfirmBtn": "Continue"
+
     
 }
