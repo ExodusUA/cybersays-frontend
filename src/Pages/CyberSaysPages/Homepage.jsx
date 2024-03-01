@@ -93,7 +93,7 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                         </div>
                         <Link to={imLiveURL} target='_blank'><img className='w-[160px] md:w-[200px] md:mt-5 mac:!mt-6' src={imLiveLogo} alt="imLiveLogo" /></Link>
                         <div className='md:block hidden mt-[100px] mac:mt-[150px]'>
-                            <TimeCounter title={languageData?.timeCounterTitle2} languageData={languageData}  />
+                            <TimeCounter title={languageData?.timeCounterTitle2} languageData={languageData} block={'hidden'}  />
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                 </div>
             </div>
             <div className='flex md:hidden absolute se:bottom-[160px] iphone:bottom-[156px] justify-center w-full max-w-[760px] m-auto'>
-                <TimeCounter title={languageData?.timeCounterTitle2} left={'m-[unset]'} leftTitle={'text-left'} languageData={languageData} block={'hidden'} />
+                <TimeCounter title={languageData?.timeCounterTitle2} left={'m-[unset]'} leftTitle={'text-left'} languageData={languageData} block={'hidden'}  />
             </div>
         </div>
     )
