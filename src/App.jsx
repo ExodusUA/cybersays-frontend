@@ -10,6 +10,7 @@ import Privacy from './Pages/Privacy';
 import DiscordAuth from './Pages/Auth/DiscordAuth';
 import { DesignProvider } from './Helpers/Design/DesignContext';
 import Terms from './Pages/Terms';
+import Policy from './Pages/Policy';
 
 function App() {
 
@@ -83,6 +84,7 @@ function App() {
             <Route path="/privacy" element={<Privacy languageData={languageData} />} />
             <Route path="/token/*" element={<Token />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="/policy" element={<Policy />} />
           </Routes>
         </BrowserRouter>
       </DesignProvider>

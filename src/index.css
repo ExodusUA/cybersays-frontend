@@ -279,5 +279,71 @@ body {
 
 .textStyle * {
     color: black;
+    font-family: Saira !important;
+}
+.checkbox-container {
+    display: flex;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 2;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color:white ;
+    border: 3px solid #1E1E1E;
+    border-radius: 100%;
+}
+
+
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #1E1E1E;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 0px;
+    top: 0px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    background: #1E1E1E;
+    border-radius: 100%;
     
+}
+.textStyle p {
+    font-size: 12pt !important;
+}
+@media screen and (max-width: 600px) {
+    table {
+        width: 100% !important; /* Змінюємо ширину таблиці для менших екранів */
+    }
+    .textStyle p {
+        font-size: 10pt !important;
+    }
 }
