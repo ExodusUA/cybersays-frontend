@@ -10,15 +10,12 @@ import doubleIcon from '../../images/NewDesign/doubleIcon.svg';
 
 function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModal, scrollToPage,setWinTicketModal }) {
 
-    console.log('user', user)
-
     const { design } = useDesign()
 
     const [isOpen, setIsOpen] = useState(false)
 
     const [isTaskCompleted, setIsTaskCompleted] = useState(false)
     const [lastTask, setLastTask] = useState(0)
-    const [toolTip, setToolTip] = useState(false)
 
     useEffect(() => {
         if (user === null) return
@@ -35,8 +32,6 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                 setIsTaskCompleted(true)
             }
         }
-
-
     }, [user])
 
     const [isLinkCopied, setIsLinkCopied] = useState(false)

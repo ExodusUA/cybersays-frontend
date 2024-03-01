@@ -132,7 +132,7 @@ function LoginForm({ languageData, referralID }) {
                                     <GoogleAuth loginViaGoogle={loginViaGoogle} languageData={languageData} />
                                     <FacebookButton loginViaFacebook={loginViaFacebook} languageData={languageData} />
                                 </div>
-                                {/* <DiscordButton languageData={languageData} /> */}
+                                <DiscordButton languageData={languageData} />
                             </div>
                         </div>
                     </form>

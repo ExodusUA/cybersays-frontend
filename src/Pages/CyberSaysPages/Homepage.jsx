@@ -30,7 +30,6 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
     const [lastTask, setLastTask] = useState(0)
 
     const getButtonMarkup = (task) => {
-        console.log('task', task)
         switch (task) {
             case 0:
             case null:

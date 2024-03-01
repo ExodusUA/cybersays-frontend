@@ -78,12 +78,12 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                         </div>
                     </div>
                     {
-                        loading === false && leaderboardData.todayUsers.length > 0 && <div className='flex justify-around items-start my-2 mac:my-2 max-w-[300px] sm:max-w-[350px] w-full m-auto'>
+                        loading === false && <div className='flex justify-around items-start my-2 mac:my-2 max-w-[300px] sm:max-w-[350px] w-full m-auto'>
                             {
-                                leaderboardData.todayUsers[1] && <div className='mt-[50px] mr-[-50px]'>
+                                <div className='mt-[50px] mr-[-50px]'>
                                     <p className='text-[16px] saira font-bold leading-3'>#2</p>
                                     {/*<img className='w-[26px] h-[26px] sm:w-[50px] sm:h-[50px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={cup2} alt="cup2" />*/}
-                                    <p className={`text-[12px] sm:text-[14px] saira font-medium  ${design === '0' ? 'text-[#FFED63]' : 'text-[#A1B3B0]'}`}>{leaderboardData.todayUsers[1].points}</p>
+                                    <p className={`text-[12px] sm:text-[14px] saira font-medium  ${design === '0' ? 'text-[#FFED63]' : 'text-[#A1B3B0]'}`}>{leaderboardData.todayUsers[1]?.points || 0}</p>
                                     <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>{languageData?.competitionPoints}</p>
                                 </div>
                             }
@@ -92,15 +92,15 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                                     <p className='text-[16px] saira font-bold flex items-center leading-3'><img className='w-[21px] h-[21px] mr-1 mb-1' src={crown} alt="crown" />#1</p>
                                 </div>
                                 {/*<img className='w-[34px] h-[34px] sm:w-[70px] sm:h-[70px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={cup1} alt="cup2" />*/}
-                                <p className={`text-[12px] sm:text-[14px] saira font-medium  ${design === '0' ? 'text-[#FFED63]' : 'text-[#F2BB02]'}`}> {leaderboardData.todayUsers[0].points}</p>
+                                <p className={`text-[12px] sm:text-[14px] saira font-medium  ${design === '0' ? 'text-[#FFED63]' : 'text-[#F2BB02]'}`}> {leaderboardData.todayUsers[0]?.points || 0}</p>
                                 <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>{languageData?.competitionPoints}</p>
                             </div>
                             {
 
-                                leaderboardData.todayUsers[2] && <div className='mt-[50px] ml-[-50px]'>
+                                <div className='mt-[50px] ml-[-50px]'>
                                     <p className='text-[16px] saira font-bold leading-3'>#3</p>
                                     {/*<img className='w-[26px] h-[26px] sm:w-[50px] sm:h-[50px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={cup3} alt="cup2" />*/}
-                                    <p className={`text-[12px] sm:text-[14px] saira font-medium ${design === '0' ? 'text-[#FFED63]' : 'text-[#E87001]'}`}>{leaderboardData.todayUsers[2].points}</p>
+                                    <p className={`text-[12px] sm:text-[14px] saira font-medium ${design === '0' ? 'text-[#FFED63]' : 'text-[#E87001]'}`}>{leaderboardData.todayUsers[2]?.points || 0}</p>
                                     <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>{languageData?.competitionPoints}</p>
                                 </div>
 

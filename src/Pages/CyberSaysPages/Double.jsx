@@ -61,7 +61,7 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
     }, [user])
 
     const getButtonMarkup = (task) => {
-        console.log('task', task)
+        
         switch (task) {
             case 0:
             case null:
