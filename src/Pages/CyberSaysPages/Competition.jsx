@@ -10,7 +10,7 @@ import { useDesign } from '../../Helpers/Design/DesignContext'
 import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
 import crown from '../../images/CyberSaysPage/crown1st.png'
 
-function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading, leaderboardData, setLeaderboardData, siteData, languageData, setRulesModal }) {
+function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading, leaderboardData, setLeaderboardData, siteData, languageData, setRulesModal, setSocialLink }) {
 
     const { design } = useDesign()
 
@@ -137,7 +137,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                 </div>
                 
                 <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
-                    <TimeCounter left={'m-auto'} leftTitle={'text-center'} title={languageData?.timeCounterTitle}  languageData={languageData} />
+                    <TimeCounter setSocialLink={setSocialLink} left={'m-auto'} leftTitle={'text-center'} title={languageData?.timeCounterTitle}  languageData={languageData} block={'block'} />
                 </div>
                 
             </div>

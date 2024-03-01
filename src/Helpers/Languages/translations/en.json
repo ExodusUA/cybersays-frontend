@@ -512,7 +512,8 @@
     "contactQuestionDesc": "Description",
     "contactQuestionAttach": "Attach files",
     "contactConfirmTitle": "Your message has been sent! We will contact you soon",
-    "contactConfirmBtn": "Continue"
+    "contactConfirmBtn": "Continue",
+    "timeCounterLink": "*Subject to the daily competition Terms and conditions"
 
     
 }
