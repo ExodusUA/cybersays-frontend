@@ -6,7 +6,7 @@ import refferals from '../../images/CyberSaysPage/headerRefferals.png'
 import joker from '../../images/CyberSaysPage/headerJoker.png'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 
-function HeaderMenu({ setMenuOpen, user, setTourModal, languageData, userCountry, setEarnedModal, setTicketShortModal,setPointsModal }) {
+function HeaderMenu({ setMenuOpen, user, setTourModal, languageData, userCountry, setEarnedModal, setTicketShortModal, setPointsModal }) {
 
     const { design } = useDesign()
 
@@ -24,7 +24,7 @@ function HeaderMenu({ setMenuOpen, user, setTourModal, languageData, userCountry
                     <img onClick={() => setMenuOpen(true)} className='w-[24px] sm:w-[32px] h-[24px] sm:h-[32px] cursor-pointer' src={design === '0' ? btnMenu : require('../../images/NewDesign/Homepage/menuToggle.png')} alt="btnMenu" />
                     <div className={`bg-[#EAEAEA]  border-[2px]  backdrop-blur-lg rounded-[50px] ${design === '0' ? 'bg-opacity-20  border-[#FFED63]' : 'bg-opacity-30 border-[#A2DBF0]'}`}>
                         <div>
-                            <div  className='xl:gap-4 flex px-2 sm:px-4 py-[2px] sm:py-[5px] '>
+                            <div className='xl:gap-4 flex px-2 sm:px-4 py-[2px] sm:py-[5px] '>
                                 <div onClick={e => setEarnedModal(true)} className=' leading-4 md:leading-5 mx-1 cursor-pointer'>
                                     <p className={`text-[10px] sm:text-[16px]  ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-medium saira text-center `}>{userCountry === 'BR' || userCountry === 'UA' ? 'BRL' : 'USD'} {languageData?.header1}</p>
                                     <p className={`text-[10px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-bold saira text-center flex justify-center items-center`}><img className='w-[16px] h-[16px] mr-[5px]' src={design === '0' ? money : require('../../images/NewDesign/header/dollar.png')} alt="money" />

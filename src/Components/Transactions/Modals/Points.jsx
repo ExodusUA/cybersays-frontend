@@ -8,55 +8,32 @@ import { useQuery } from '@tanstack/react-query'
 import joker from '../../../images/CyberSaysPage/MyTicketJoker.png'
 import coin from '../../../images/CyberSaysPage/MyTicketCoin.png'
 
-function Points({ setOpen, languageData, user,setTicketsModal }) {
+function Points({ setOpen, languageData, user, setTicketsModal, setSelectedButton }) {
     const { design } = useDesign()
-    const [ticketsData, setTicketsData] = useState(null)
     const [pointsData, setPointsData] = useState(null)
     const [allData, setAllData] = useState(null)
-    const [selectedButton, setSelectedButton] = useState('ticket');
-
-    useQuery({
-        queryKey: ['tickets'],
-        queryFn: async () => {
-            const res = await userAPI.getTickets();
-            setTicketsData(res.data.tickets[0])
-            return res.data.tickets[0];
-        }
-    })
 
     useQuery({
         queryKey: ['points'],
         queryFn: async () => {
             const res = await userAPI.getPoints();
             setPointsData(res.data.points[0])
+            proccessData(res.data.points[0])
             return res.data.points[0];
         }
     })
 
     useEffect(() => {
-        if (ticketsData === null || pointsData === null) return
-        let joined = {
-            tickets: ticketsData,
-            points: pointsData
-        }
-
-        proccessData(joined)
-    }, [ticketsData, pointsData])
+        if (pointsData === null) return
+        proccessData(pointsData)
+    }, [pointsData])
 
     function proccessData(proccessData) {
         if (proccessData === null) return
 
+        let data = [];
 
-        let data = proccessData?.tickets.map(ticket => {
-            return {
-                name: 'ticket',
-                type: ticket.type,
-                datetime: ticket.datetime,
-                amount: ticket.amount
-            }
-        })
-
-        proccessData?.points?.map(point => {
+        proccessData?.map(point => {
             data.push({
                 name: 'point',
                 type: point.type,
@@ -66,7 +43,7 @@ function Points({ setOpen, languageData, user,setTicketsModal }) {
         })
 
         let sorted = data?.sort((a, b) => new Date(b.datetime) - new Date(a.datetime))
-        console.log('sorted', sorted)
+
         setAllData(sorted)
 
     }
@@ -183,6 +160,7 @@ function Points({ setOpen, languageData, user,setTicketsModal }) {
                 </div>
                 <div className=' flex justify-center'>
                     <p onClick={e => {
+                        setSelectedButton('point')
                         setTicketsModal(true)
                         setOpen(false)
                     }} className='text-[12px] text-center font-semibold text-[#D9D9D9] mt-2 underline gradient-link cursor-pointer'>{languageData?.earnedModalLink}</p>

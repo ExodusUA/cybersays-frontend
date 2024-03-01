@@ -8,46 +8,31 @@ import { useQuery } from '@tanstack/react-query'
 import joker from '../../../images/CyberSaysPage/MyTicketJoker.png'
 import coin from '../../../images/CyberSaysPage/MyTicketCoin.png'
 
-function Ticket({ setOpen, languageData, user, setTicketsModal }) {
+function Ticket({ setOpen, languageData, user, setTicketsModal, setSelectedButton }) {
     const { design } = useDesign()
     const [ticketsData, setTicketsData] = useState(null)
-    const [pointsData, setPointsData] = useState(null)
     const [allData, setAllData] = useState(null)
-    const [selectedButton, setSelectedButton] = useState('ticket');
 
     useQuery({
         queryKey: ['tickets'],
         queryFn: async () => {
             const res = await userAPI.getTickets();
             setTicketsData(res.data.tickets[0])
+            proccessData(res.data.tickets[0])
             return res.data.tickets[0];
         }
     })
 
-    useQuery({
-        queryKey: ['points'],
-        queryFn: async () => {
-            const res = await userAPI.getPoints();
-            setPointsData(res.data.points[0])
-            return res.data.points[0];
-        }
-    })
-
     useEffect(() => {
-        if (ticketsData === null || pointsData === null) return
-        let joined = {
-            tickets: ticketsData,
-            points: pointsData
-        }
+        if (ticketsData === null) return
 
-        proccessData(joined)
-    }, [ticketsData, pointsData])
+        proccessData(ticketsData)
+    }, [ticketsData])
 
     function proccessData(proccessData) {
         if (proccessData === null) return
 
-
-        let data = proccessData?.tickets.map(ticket => {
+        let data = proccessData?.map(ticket => {
             return {
                 name: 'ticket',
                 type: ticket.type,
@@ -56,17 +41,7 @@ function Ticket({ setOpen, languageData, user, setTicketsModal }) {
             }
         })
 
-        proccessData?.points?.map(point => {
-            data.push({
-                name: 'point',
-                type: point.type,
-                datetime: point.datetime,
-                amount: point.amount
-            })
-        })
-
         let sorted = data?.sort((a, b) => new Date(b.datetime) - new Date(a.datetime))
-        console.log('sorted', sorted)
         setAllData(sorted)
 
     }
@@ -160,8 +135,6 @@ function Ticket({ setOpen, languageData, user, setTicketsModal }) {
     return (
         <div onClick={e => setOpen(false)} className='w-screen h-screen fixed top-0 z-[99999]  p-4 flex items-center '>
             <div onClick={(e) => e.stopPropagation()} className={`max-w-[600px] w-full m-auto relative bg-[#0A1225B2] bg-opacity-70 backdrop-blur-md border-[1px] p-2 rounded-[12px] lg:px-4  ${design === '0' ? ' border-[#FFD700]' : '  border-[#A2DBF0]'}`}>
-
-
                 <div className='flex justify-end md:mt-4 '>
                     <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../../../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
@@ -183,6 +156,7 @@ function Ticket({ setOpen, languageData, user, setTicketsModal }) {
                 </div>
                 <div className=' flex justify-center'>
                     <p onClick={e => {
+                        setSelectedButton('ticket')
                         setTicketsModal(true)
                         setOpen(false)
                     }} className='text-[12px] text-center font-semibold text-[#D9D9D9] mt-2 underline gradient-link cursor-pointer'>{languageData?.earnedModalLink}</p>

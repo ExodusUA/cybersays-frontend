@@ -9,12 +9,12 @@ import refferals from '../../images/CyberSaysPage/headerRefferals.png'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 
 
-function TicketsHistory({ setOpen, languageData, user }) {
+function TicketsHistory({ setOpen, languageData, user, setSelectedButton, selectedButton }) {
     const { design } = useDesign()
     const [ticketsData, setTicketsData] = useState(null)
     const [pointsData, setPointsData] = useState(null)
     const [allData, setAllData] = useState(null)
-    const [selectedButton, setSelectedButton] = useState('ticket');
+
 
     const [allTickets, setAllTickets] = useState(null)
     const [allPoints, setAllPoints] = useState(null)
@@ -49,7 +49,7 @@ function TicketsHistory({ setOpen, languageData, user }) {
             res.data.points[0].map(point => {
                 allPoints += Number(point.amount)
             })
-
+            console.log(allPoints)
             setAllPoints(allPoints)
 
             return res.data.points[0];
@@ -57,7 +57,7 @@ function TicketsHistory({ setOpen, languageData, user }) {
     })
 
     useEffect(() => {
-
+       
         proccessData(selectedButton === 'ticket' ? ticketsData : pointsData)
     }, [selectedButton])
 
@@ -177,9 +177,9 @@ function TicketsHistory({ setOpen, languageData, user }) {
                     <div onClick={e => setSelectedButton('ticket')} className={`${selectedButton === 'ticket' && 'gradient-tourToggle'}  rounded-[12px] px-[20px] py-[5px] md:py-[6px]  cursor-pointer`}>
                         <p className={`${selectedButton === 'ticket' && '!text-black'} text-white saira font-bold text-[14px] flex items-center`}>Vegas Tickets:<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? joker : require('../../images/NewDesign/header/ticket.png')} alt="joker" /> {allTickets || 0}</p>
                     </div>
-                    <div onClick={e => setSelectedButton('points')} className={`${selectedButton === 'points' && 'gradient-tourToggle'} rounded-[12px] px-[20px] py-[5px] md:py-[6px] cursor-pointer`}>
-                        <p className={`${selectedButton === 'points' && '!text-black'} text-white saira font-bold text-[14px] flex items-center`}>
-                            Points:<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? refferals : require('../../images/NewDesign/header/points.png')} alt="refferals" /> {user && user.points ? allPoints : 0}
+                    <div onClick={e => setSelectedButton('point')} className={`${selectedButton === 'point' && 'gradient-tourToggle'} rounded-[12px] px-[20px] py-[5px] md:py-[6px] cursor-pointer`}>
+                        <p className={`${selectedButton === 'point' && '!text-black'} text-white saira font-bold text-[14px] flex items-center`}>
+                            Points:<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? refferals : require('../../images/NewDesign/header/points.png')} alt="refferals" /> {allPoints || 0}
                         </p>
                     </div>
                 </div>

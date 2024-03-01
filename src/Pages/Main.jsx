@@ -123,6 +123,7 @@ function Main({ languageData }) {
     const [pointsModal, setPointsModal] = useState(false)
     const [transactionsModal, setTransactionsModal] = useState(false)
     const [ticketsModal, setTicketsModal] = useState(false)
+    const [selectedButton, setSelectedButton] = useState('ticket');
 
     const [selectedMessage, setSelectedMassege] = useState(null);
 
@@ -272,8 +273,6 @@ function Main({ languageData }) {
         }
     };
 
-
-
     useEffect(() => {
         if (userData && userCountry) {
             let linkData = imLiveLinks.find(link => link.CultureCode.indexOf(userCountry) !== -1)
@@ -384,16 +383,16 @@ function Main({ languageData }) {
                 earnedModal && <Earned setTransactionsModal={setTransactionsModal} languageData={languageData} setOpen={setEarnedModal} user={userData} />
             }
             {
-                ticketShortModal && <Ticket setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setTicketShortModal} user={userData} />
+                ticketShortModal && <Ticket setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setTicketShortModal} user={userData} setSelectedButton={setSelectedButton} />
             }
             {
-                pointsModal && <Points setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setPointsModal} user={userData} />
+                pointsModal && <Points setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setPointsModal} user={userData} setSelectedButton={setSelectedButton}  />
             }
             {
                 transactionsModal && <TransactionHistory languageData={languageData} setOpen={setTransactionsModal} user={userData} />
             }
             {
-                ticketsModal && <TicketsHistory languageData={languageData} setOpen={setTicketsModal} user={userData} />
+                ticketsModal && <TicketsHistory languageData={languageData} setOpen={setTicketsModal} user={userData} setSelectedButton={setSelectedButton} selectedButton={selectedButton} />
             }
             {
                 openMessage && <Message onCloseCopied={() => {
