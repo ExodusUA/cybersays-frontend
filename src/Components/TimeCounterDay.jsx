@@ -15,7 +15,7 @@ function TimeCounterDay({ languageData, hidden, title, left, leftTitle, block, s
 
     return (
         <div>
-            <p className={`text-[18px] lg:text-[32px] font-semibold iphone:leading-[unset] se:leading-5 md:leading-[unset] lg:px-4 ${leftTitle}`}>{title}</p>
+            <p className={`text-[18px] lg:text-[32px] font-semibold iphone:leading-[unset] se:leading-5 md:leading-[unset] lg:px-4 ${leftTitle}`}>{languageData?.timeCounterTitle2}</p>
             <div className={`lg:w-[300px] ${left} ${hidden}`}>
                 <div className='flex justify-center lg:justify-between items-center leading-5 gap-[18px] lg:ml-5 mt-2 '>
                     <div className='text-center'>

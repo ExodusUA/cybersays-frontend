@@ -62,21 +62,11 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                     {/*<p className='text-center text-[14px] sm:text-[32px] mac:!text-[24px] font-semibold'>{languageData?.competitionTitle} {siteData?.currentDay}</p>*/}
                     <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[12px] p-1 px-3  flex justify-between max-w-[380px] md:max-w-[100%] m-auto'>
 
-                        <div className=' leading-4 text-left w-1/3'>
-                            <p className='gradient-linkDouble saira text-[16px] font-bold'>{languageData?.leaderSheetYou}</p>
-                            <p className='gradient-linkDouble saira text-[16px] font-bold'> #825</p>
-
+                        <div className=' leading-4 text-left m-auto'>
+                             <p className='gradient-linkDouble saira text-[14px] lg:text-[18px] font-bold'>{languageData?.leaderSheetYou} <span className='saira text-[14px] lg:text-[18px] font-bold'> #825,</span> {languageData?.leaderSheetPoints} <span  className='saira text-[14px] lg:text-[18px] font-bold'>{Number(user?.points).toFixed(0)}</span></p>
+                          
                         </div>
-                        <div className=' leading-4 text-center w-1/3'>
-                            <p className='gradient-linkDouble saira text-[12px] font-bold'>{Number(user?.points).toFixed(0)}</p>
-                            <p className=' saira text-[12px] font-medium'>{languageData?.leaderSheetPoints}</p>
-                        </div>
-                        <div className=' leading-4 text-right w-1/3'>
-                            <div>
-                                <p className='gradient-linkDouble saira text-[12px] font-bold'>145</p>
-                                <p className=' saira text-[12px] font-medium'>{languageData?.leaderSheetFriends}</p>
-                            </div>
-                        </div>
+                    
                     </div>
                     {
                         loading === false && <div className='flex justify-around items-start my-2 mac:my-2 max-w-[300px] sm:max-w-[350px] w-full m-auto'>
