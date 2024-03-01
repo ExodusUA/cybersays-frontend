@@ -6,7 +6,6 @@ import slides from '../../Helpers/images.json'
 import left from '../../images/landing/left.png'
 import right from '../../images/landing/right.png'
 
-
 function Slider({ onSlideChange }) {
     let swiperRef;
 
@@ -63,9 +62,9 @@ function Slider({ onSlideChange }) {
             </Swiper>
 
             <div className='absolute w-full bottom-10 z-[10]'>
-                <div className='mb-6 justify-center flex'>
-                    <img className='w-[40px] lg:w-[64px] cursor-pointer buttonPrev' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
-                    <img className='w-[40px] lg:w-[64px] cursor-pointer buttonNext' src={right} alt="Right" onClick={e => swiperRef?.slideNext()} />
+                <div className='mb-[40px] lg:mb-2 justify-between lg:justify-center flex'>
+                    <img className='w-[60px] lg:w-[84px] cursor-pointer buttonPrev' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
+                    <img className='w-[60px] lg:w-[84px] cursor-pointer buttonNext' src={right} alt="Right" onClick={e => swiperRef?.slideNext()} />
                 </div>
             </div>
         </div>
