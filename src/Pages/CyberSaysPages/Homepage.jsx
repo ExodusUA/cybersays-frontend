@@ -52,7 +52,7 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
 
 
     return (
-        <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-homepage.jpg)] md:bg-[url(./images/CyberSaysPage/bg-homepage.jpg)]' : ' bg-[url(./images/NewDesign/Bg/homepage_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`}>
+        <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-homepage.jpg)] md:bg-[url(./images/CyberSaysPage/bg-homepage.jpg)]' : ' bg-[#200527]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`}>
             <div className='pt-[57px]  md:pt-[90px] mac-center:!pt-0 px-4 pb-12 max-w-[1170px] m-auto'>
                 <div className='max-w-[300px] m-auto'>
 

@@ -96,13 +96,13 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
         window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.referral_code)
     }
     return (
-        <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-terms.jpg)] md:bg-[url(./images/CyberSaysPage/bg-terms.jpg)]' : 'bg-[url(./images/NewDesign/Bg/refferals_des.png)]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} >
+        <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-terms.jpg)] md:bg-[url(./images/CyberSaysPage/bg-terms.jpg)]' : 'bg-[#200527]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} >
             <div className='pt-[57px]  md:pt-[90px] mac-center:!pt-0 px-4 w-full max-w-[1170px] mac-center:w-[1170px] m-auto' >
                 <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] mac2:!w-[170px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
 
 
                 <div className='flex flex-col-reverse relative'>
-                    <div className='se:mt-[0px] lg:mt-[80px] mac:!mt-[30px]'>
+                    <div className='se:mt-[0px] lg:mt-[80px] mac:!mt-[00px]'>
                         <div className=' w-full hidden lg:block mb-[-100px] mac:mb-[-60px] pr-2'>
                             <div className=' justify-between flex my-3  mx-10'>
                                 <img className='w-[44px] mr-3 cursor-pointer buttonPrevGif' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
@@ -200,7 +200,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                         </div>
                     </div>
                     <div>
-                        <p className={`text-[14px] sm:text-[24px] font-semibold text-center  se:my-1 iphone:my-3 lg:my-6 lg:mx-14 sm:mx-0  se:leading-[24px] ${design === '0' ? 'text-[#FFED63]' : 'text-white]'}`}>{languageData?.refferalsSubtitle}</p>
+                        <p className={`text-[14px] sm:text-[24px] font-semibold text-center  se:my-1 iphone:my-3 lg:my-6 mac:!my-3 lg:mx-14 sm:mx-0  se:leading-[24px] ${design === '0' ? 'text-[#FFED63]' : 'text-white]'}`}>{languageData?.refferalsSubtitle}</p>
                         <div className=' w-full hidden lg:block pr-2'>
                             <div className=' justify-between flex my-3 mb-[-43px] mx-10'>
                                 <img className='w-[44px] mr-3 cursor-pointer buttonPrevMessage' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
