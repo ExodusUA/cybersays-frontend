@@ -15,18 +15,18 @@ function TourModal({ setOpen, languageData, user }) {
     const dataShort = [
         {
             video: video1,
-            title: languageData.tourSlide1Title,
-            descShort: languageData.tourSlide1SubTitle
+            title: languageData?.tourSlide1Title,
+            descShort: languageData?.tourSlide1SubTitle
         },
         {
             video: video2,
-            title: languageData.tourSlide2Title,
-            descShort: languageData.tourSlide2SubTitle
+            title: languageData?.tourSlide2Title,
+            descShort: languageData?.tourSlide2SubTitle
         },
         {
             video: video3,
-            title: languageData.tourSlide3Title,
-            descShort: languageData.tourSlide3SubTitle
+            title: languageData?.tourSlide3Title,
+            descShort: languageData?.tourSlide3SubTitle
         },
     ]
 

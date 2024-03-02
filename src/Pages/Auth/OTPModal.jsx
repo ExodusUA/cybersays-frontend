@@ -61,13 +61,13 @@ function OTPModal({ recaptchaRef, email, refferalCode, special, languageData }) 
             <div className='p-10 rounded-[12px] bg-[#83869b] bg-opacity-25 w-[90%] sm:w-auto border-[1px] border-[#FF1CBB]'>
                 <img className='w-[175px] m-auto' src={logotype} alt="Logo" />
 
-                <p className='py-8 text-[24px] font-bold'>{languageData.verifyCodeTitle}</p>
+                <p className='py-8 text-[24px] font-bold'>{languageData?.verifyCodeTitle}</p>
                 <input
                     className='saira px-5 bg-white text-gray h-[52px] rounded-[12px] w-full sm:w-[485px]'
                     value={otpCode}
                     onChange={e => setOtpCode(e.target.value)}
                     type="text"
-                    placeholder={languageData.verifyCodePlaceholder}
+                    placeholder={languageData?.verifyCodePlaceholder}
                 />
 
                 <div className='w-full items-center flex justify-center gap-2 mt-5'>
@@ -75,13 +75,13 @@ function OTPModal({ recaptchaRef, email, refferalCode, special, languageData }) 
                     <p className='saira'>{moment.utc(timeLeft.asMilliseconds()).format("mm:ss")}</p>
                 </div>
 
-                <button className='continue_button w-full h-[52px] rounded-[12px] saira mt-5 duration-200 disabled:opacity-70' disabled={otpCode.length < 6} onClick={e => handleVerify()}>{languageData.verifyCodeBtn}</button>
+                <button className='continue_button w-full h-[52px] rounded-[12px] saira mt-5 duration-200 disabled:opacity-70' disabled={otpCode.length < 6} onClick={e => handleVerify()}>{languageData?.verifyCodeBtn}</button>
                 {
                     isCodeWrong
-                        ? <p className='saira text-[#FF1CBB] mt-5'>{languageData.verifyCodeError}</p>
+                        ? <p className='saira text-[#FF1CBB] mt-5'>{languageData?.verifyCodeError}</p>
                         : null
                 }
-                <p className='saira mt-5'>{languageData.verifyCodeLink} <Link className='text-[#9D3EFD] saira' to={'/login'}>{languageData.verifyCodeLinkSpan}</Link></p>
+                <p className='saira mt-5'>{languageData?.verifyCodeLink} <Link className='text-[#9D3EFD] saira' to={'/login'}>{languageData?.verifyCodeLinkSpan}</Link></p>
             </div>
 
         </div>

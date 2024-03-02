@@ -23,26 +23,26 @@ function CompetitionRules({ setOpen, languageData }) {
                 </div>
                 <div>
                     <p className=' m-auto text-[18px] lg:text-[24px] font-semibold text-center'>
-                        {languageData.rulesTitle}
+                        {languageData?.rulesTitle}
                     </p>
-                    <p className='saira text-[12px]  font-medium text-center mt-1 bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg py-2 rounded-[12px] lg:rounded-[24px] px-6 lg:px-0'>{languageData.rulesSubTitle}</p>
+                    <p className='saira text-[12px]  font-medium text-center mt-1 bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg py-2 rounded-[12px] lg:rounded-[24px] px-6 lg:px-0'>{languageData?.rulesSubTitle}</p>
                     <div className='mt-4'>
-                        <p className='text-[16px] lg:text-[20px] font-semibold text-center gradient-linkDouble'>{languageData.rulesPoint1Title}</p>
+                        <p className='text-[16px] lg:text-[20px] font-semibold text-center gradient-linkDouble'>{languageData?.rulesPoint1Title}</p>
                         <div className=' mt-1'>
-                            <p className='saira text-[12px] lg:text-[14px] font-medium flex items-center'><div className='dot-li w-[6px] h-[6px] rounded-full mr-2'></div>{languageData.rulesPoint1li1}</p>
-                            <p className='saira text-[12px] lg:text-[14px] font-medium flex items-center'><div className='dot-li w-[6px] h-[6px] rounded-full mr-2'></div>{languageData.rulesPoint1li2}</p>
+                            <p className='saira text-[12px] lg:text-[14px] font-medium flex items-center'><div className='dot-li w-[6px] h-[6px] rounded-full mr-2'></div>{languageData?.rulesPoint1li1}</p>
+                            <p className='saira text-[12px] lg:text-[14px] font-medium flex items-center'><div className='dot-li w-[6px] h-[6px] rounded-full mr-2'></div>{languageData?.rulesPoint1li2}</p>
                         </div>
                     </div>
                     <div className='mt-4'>
-                        <p className='text-[16px] lg:text-[20px] font-semibold text-center gradient-linkDouble'>{languageData.rulesPoint2Title}</p>
+                        <p className='text-[16px] lg:text-[20px] font-semibold text-center gradient-linkDouble'>{languageData?.rulesPoint2Title}</p>
                         <div className=' mt-1'>
-                            <p className='saira text-[12px] lg:text-[14px] font-medium flex items-center'><div className='dot-li w-[6px] h-[6px] rounded-full mr-2'></div>{languageData.rulesPoint2li1}</p>
-                            <p className='saira text-[12px] lg:text-[14px] font-medium flex items-center'><div className='dot-li w-[6px] h-[6px] rounded-full mr-2'></div>{languageData.rulesPoint2li2}</p>
-                            <p className='saira text-[12px] lg:text-[14px] font-medium flex items-center'><div className='dot-li w-[6px] h-[6px] rounded-full mr-2'></div>{languageData.rulesPoint2li3}</p>
-                            <p className='saira text-[12px] lg:text-[14px] font-medium flex items-center'><div className='dot-li w-[6px] h-[6px] rounded-full mr-2'></div>{languageData.rulesPoint2li4}</p>
+                            <p className='saira text-[12px] lg:text-[14px] font-medium flex items-center'><div className='dot-li w-[6px] h-[6px] rounded-full mr-2'></div>{languageData?.rulesPoint2li1}</p>
+                            <p className='saira text-[12px] lg:text-[14px] font-medium flex items-center'><div className='dot-li w-[6px] h-[6px] rounded-full mr-2'></div>{languageData?.rulesPoint2li2}</p>
+                            <p className='saira text-[12px] lg:text-[14px] font-medium flex items-center'><div className='dot-li w-[6px] h-[6px] rounded-full mr-2'></div>{languageData?.rulesPoint2li3}</p>
+                            <p className='saira text-[12px] lg:text-[14px] font-medium flex items-center'><div className='dot-li w-[6px] h-[6px] rounded-full mr-2'></div>{languageData?.rulesPoint2li4}</p>
                         </div>
                     </div>
-                    <p className='text-[18px] text-center font-semibold gradient-timeCounter mt-2'>{languageData.rulesEnd}</p>
+                    <p className='text-[18px] text-center font-semibold gradient-timeCounter mt-2'>{languageData?.rulesEnd}</p>
                 </div>
             </div>
         </div>

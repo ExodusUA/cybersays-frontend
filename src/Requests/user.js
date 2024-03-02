@@ -171,4 +171,29 @@ async function createPixWithdraw(pixKey, personCODE, email) {
 
 }
 
-export default { getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTickets, getPoints, sendEmail, getModeratorData, getPDF, generateOTP, verifyOTP, createPixWithdraw };
+async function createTicket(email, issue, message, attachments) {
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/ticket', { email, issue, message, attachments }, {
+        headers: {
+            token: `${getToken()}`
+        }
+    });
+    return response;
+}
+
+async function uploadAttachment(attachment) {
+    let formData = new FormData();
+
+    formData.append('file', attachment);
+
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/ticket/upload', formData, {
+        headers: {
+            token: `${getToken()}`,
+            'Content-Type': 'multipart/form-data'
+        }
+    });
+
+    return response;
+}
+
+
+export default { getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTickets, getPoints, sendEmail, getModeratorData, getPDF, generateOTP, verifyOTP, createPixWithdraw, createTicket, uploadAttachment };

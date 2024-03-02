@@ -14,40 +14,40 @@ function ToolTipInfo({ languageData, setToolInfo }) {
                 <div className='flex justify-end '>
                     <img onClick={e => setToolInfo(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
-                <p className='text-[16px] md:text-[24px] font-semibold text-center text-black gradient-linkDouble max-w-[280px] lg:max-w-[380px] m-auto'>{languageData.toolInfoTitle}</p>
+                <p className='text-[16px] md:text-[24px] font-semibold text-center text-black gradient-linkDouble max-w-[280px] lg:max-w-[380px] m-auto'>{languageData?.toolInfoTitle}</p>
                 <div>
                     <div className='flex justify-around mt-2'>
-                        <p className='text-[14px] text-center font-semibold'>{languageData.toolInfoWhat}</p>
-                        <p className='text-[14px] text-center font-semibold'>{languageData.toolInfoHow}</p>
+                        <p className='text-[14px] text-center font-semibold'>{languageData?.toolInfoWhat}</p>
+                        <p className='text-[14px] text-center font-semibold'>{languageData?.toolInfoHow}</p>
                     </div>
                     <div className='flex justify-around mt-2'>
                         <div className='toolInfoBg1 w-full p-1 rounded-l-[24px] flex items-center'>
                             <img className='w-[40px]' src={what1} alt="what1" />
-                            <p className='w-[115px] lg:w-[unset] saira text-[14px] text-[#1E1E1E] font-semibold leading-[16px] ml-1'>{languageData.toolInfolef1}</p>
+                            <p className='w-[115px] lg:w-[unset] saira text-[14px] text-[#1E1E1E] font-semibold leading-[16px] ml-1'>{languageData?.toolInfolef1}</p>
                         </div>
                         <div className='bg-[#FFF2DF] w-full p-1 flex items-center justify-center'>
                             
-                            <p className=' saira text-[12px] text-[#1E1E1E] font-semibold leading-[16px] ml-1 text-center'>{languageData.toolInfoRight1}</p>
+                            <p className=' saira text-[12px] text-[#1E1E1E] font-semibold leading-[16px] ml-1 text-center'>{languageData?.toolInfoRight1}</p>
                         </div>
                     </div>
                     <div className='flex justify-around mt-2'>
                         <div className='toolInfoBg2 w-full p-1 rounded-l-[24px] flex items-center'>
                             <img className='w-[40px]' src={what2} alt="what1" />
-                            <p className='w-[115px] lg:w-[unset] saira text-[14px] text-[#1E1E1E] font-semibold leading-[16px] ml-1'>{languageData.toolInfolef2}</p>
+                            <p className='w-[115px] lg:w-[unset] saira text-[14px] text-[#1E1E1E] font-semibold leading-[16px] ml-1'>{languageData?.toolInfolef2}</p>
                         </div>
                         <div className='bg-[#EDF1FF] w-full p-1 flex items-center justify-center'>
                             
-                            <p className=' saira text-[11px] text-[#1E1E1E] font-semibold leading-[14px] ml-1 text-center'>{languageData.toolInfoRight2}</p>
+                            <p className=' saira text-[11px] text-[#1E1E1E] font-semibold leading-[14px] ml-1 text-center'>{languageData?.toolInfoRight2}</p>
                         </div>
                     </div>
                     <div className='flex justify-around mt-2'>
                         <div className='toolInfoBg3 w-full p-1 rounded-l-[24px] flex items-center'>
                             <img className='w-[40px]' src={what3} alt="what1" />
-                            <p className='w-[115px] lg:w-[unset] saira text-[14px] text-[#1E1E1E] font-semibold leading-[16px] ml-1'>{languageData.toolInfolef3}</p>
+                            <p className='w-[115px] lg:w-[unset] saira text-[14px] text-[#1E1E1E] font-semibold leading-[16px] ml-1'>{languageData?.toolInfolef3}</p>
                         </div>
                         <div className='bg-[#FFF2DF] w-full p-1 flex items-center justify-center'>
                             
-                            <p className=' saira text-[11px] text-[#1E1E1E] font-semibold leading-[14px] ml-1 text-center'>{languageData.toolInfoRight3}</p>
+                            <p className=' saira text-[11px] text-[#1E1E1E] font-semibold leading-[14px] ml-1 text-center'>{languageData?.toolInfoRight3}</p>
                         </div>
                     </div>
                 </div>
@@ -56,21 +56,21 @@ function ToolTipInfo({ languageData, setToolInfo }) {
                     <div className='flex items-start justify-between'>
                         <img className='w-[24px] mt-3 mr-2' src={point1} alt="point1" />
                         <div className='flex justify-between items-center'>
-                            <p className='saira text-[14px] font-medium'>{languageData.toolInfoDesk1}</p>
+                            <p className='saira text-[14px] font-medium'>{languageData?.toolInfoDesk1}</p>
                             <img className='w-[80px]' src={point1Image} alt="point1Image" />
                         </div>
                     </div>
                     <div className='flex items-start justify-between mt-2'>
                         <img className='w-[24px] mt-3 mr-2' src={point2} alt="point1" />
                         <div className='flex justify-between items-center'>
-                            <p className='saira text-[14px] font-medium'>{languageData.toolInfoDesk2}</p>
+                            <p className='saira text-[14px] font-medium'>{languageData?.toolInfoDesk2}</p>
                             <img className='w-[80px]' src={point2Image} alt="point1Image" />
                         </div>
                     </div>
                     <div className='flex items-start justify-between mt-2'>
                         <img className='w-[24px] mt-3 mr-2' src={point3} alt="point1" />
                         <div className='flex justify-between items-center'>
-                            <p className='saira text-[14px] font-medium'>{languageData.toolInfoDesk3}</p>
+                            <p className='saira text-[14px] font-medium'>{languageData?.toolInfoDesk3}</p>
                             <img className='w-[80px]' src={point3Image} alt="point1Image" />
                         </div>
                     </div>

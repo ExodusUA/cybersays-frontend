@@ -21,31 +21,31 @@ function InfoOfferModal({ setOpen, languageData }) {
                 </div>
                 <div>
                     <p className=' m-auto text-[18px] lg:text-[24px] font-semibold text-center mx-6 lg:mx-0'>
-                       {languageData.infoOfferTitle}
+                       {languageData?.infoOfferTitle}
                     </p>
                     <div className='flex items-center mt-5'>
                         <img className='w-[32px] mr-2' src={point1} alt="point1" />
-                        <p className='text-[16px] font-semibold saira leading-5'>{languageData.infoOfferPoint1}</p>
+                        <p className='text-[16px] font-semibold saira leading-5'>{languageData?.infoOfferPoint1}</p>
                     </div>
                     <div className='flex items-center mt-4'>
                         <img className='w-[32px] mr-2' src={point2} alt="point2" />
-                        <p className='text-[16px] font-semibold saira leading-5'>{languageData.infoOfferPoint2}</p>
+                        <p className='text-[16px] font-semibold saira leading-5'>{languageData?.infoOfferPoint2}</p>
                     </div>
                     <div className='flex items-center mt-4'>
                         <img className='w-[32px] mr-2' src={point3} alt="point3" />
-                        <p className='text-[16px] font-semibold saira leading-5'>{languageData.infoOfferPoint3}</p>
+                        <p className='text-[16px] font-semibold saira leading-5'>{languageData?.infoOfferPoint3}</p>
                     </div>
                     <div className='flex items-center mt-4'>
                         <img className='w-[32px] mr-2' src={point4} alt="point4" />
-                        <p className='text-[16px] font-semibold saira leading-5'>{languageData.infoOfferPoint4}</p>
+                        <p className='text-[16px] font-semibold saira leading-5'>{languageData?.infoOfferPoint4}</p>
                     </div>
                     <div className='flex items-center mt-4'>
                         <img className='w-[32px] mr-2' src={point5} alt="point5" />
-                        <p className='text-[16px] font-semibold saira leading-5'>{languageData.infoOfferPoint5}</p>
+                        <p className='text-[16px] font-semibold saira leading-5'>{languageData?.infoOfferPoint5}</p>
                     </div>
                     <div className='flex items-center mt-4'>
                         <img className='w-[32px] mr-2' src={point6} alt="point6" />
-                        <p className='text-[16px] font-semibold saira leading-5'>{languageData.infoOfferPoint6}</p>
+                        <p className='text-[16px] font-semibold saira leading-5'>{languageData?.infoOfferPoint6}</p>
                     </div>
                 </div>
 
