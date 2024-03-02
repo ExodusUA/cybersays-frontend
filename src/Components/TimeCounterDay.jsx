@@ -5,13 +5,27 @@ const moment = require('moment-timezone');
 
 function TimeCounterDay({ languageData, hidden, title, left, leftTitle, block, setSocialLink }) {
     const { design } = useDesign();
-    const endOfDay = moment().endOf('day');
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft);
 
-    const duration = moment.duration(endOfDay.diff(moment()));
+    function calculateTimeLeft() {
+        const endOfDay = moment().endOf('day');
+        const duration = moment.duration(endOfDay.diff(moment()));
+        return {
+            hoursRemaining: duration.hours(),
+            minutesRemaining: duration.minutes(),
+            secondsRemaining: duration.seconds()
+        };
+    }
 
-    const hoursRemaining = duration.hours();
-    const minutesRemaining = duration.minutes();
-    const secondsRemaining = duration.seconds();
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft(calculateTimeLeft());
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []); 
+
+    const { hoursRemaining, minutesRemaining, secondsRemaining } = timeLeft;
 
     return (
         <div>
