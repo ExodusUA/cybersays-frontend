@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import Slider from './Auth/Slider';
 import LoginForm from './Auth/LoginForm';
-import logoCyber from '../images/CyberSaysPage/logoMain.png';
+import logoCyber from '../images/logoLogin.png';
 
 
 function Auth({ languageData }) {
@@ -38,33 +38,33 @@ function Auth({ languageData }) {
 
 
             <section className='w-screen h-screen relative overflow-hidden'>
-                <div className='w-[400px] h-[400px] absolute right-12 top-12 bg-[#0A4A48] blur-[100px]'></div>
+                
 
                 <div className='lg:flex h-full'>
 
                     <Slider onSlideChange={slideChange} />
-
-                    <div className='w-full text-center bg-dark lg:w-[65%] 2xl:w-[65%] h-full'>
-                        <div className='w-[90%] lg:w-[80%] m-auto lg:relative z-10'>
-
-                            <div className='absolute right-0 top-5 flex items-center align-start z-20'>
+                    <div className='absolute right-0 lg:right-[20px] top-5 flex items-center align-start z-20'>
                                 <Language />
                             </div>
+                    <div className='w-full text-center bg-dark lg:w-[620px] h-full lg:absolute lg:left-10 top-10'>
+                        <div className='w-[90%] lg:w-[620px] m-auto lg:relative z-10'>
 
-                            <div className='pt-[1px] iphone:pt-[10px] lg:pt-[15vh] w-full relative z-[10]'>
-                                <div className=' lg:max-w-[800px] lg:mt-[60px]'>
-                                    <img className='w-[180px]  lg:w-[500px]  lg:m-0 se:mt-[10px] iphone:mt-0' src={logoCyber} alt="Logotype" />
-                                    <p className='w-full lg:w-[90%] text-left text-[24px] leading-7 font-bold lg:text-[30px] text-white lg:leading-9 pb-2  lg:py-8 lg:pt-6 se:mt-[0px] '>
+                            
+
+                            <div className='pt-[1px] iphone:pt-[10px]  w-full relative z-[10] lg:border-2 lg:p-10 lg:bg-[#0D0D0D73] bg-opacity-20 rounded-[32px] border-[#DDBBFD]'>
+                                <div className=' lg:max-w-[600px] '>
+                                    <img className='w-[130px]  lg:w-[250px] m-auto mt-[-30px] lg:mt-0' src={logoCyber} alt="Logotype" />
+                                    <p className='w-full lg:w-[90%] text-center lg:text-left text-[24px] leading-7 font-bold lg:text-[30px] text-white lg:leading-9 pb-2 se:mt-[0px] '>
                                         {currentSlide === 0 && (
                                             <>
                                                 {languageData?.authSlide1}
 
                                                 <div className=' leading-6 mt-2'>
-                                                    <p className='text-[16px] font-bold'>{languageData?.authSlide1li1}</p>
+                                                    <p className='text-[12px] font-bold'>{languageData?.authSlide1li1}</p>
 
-                                                    <p className='text-[16px] font-bold'>{languageData?.authSlide1li2}</p>
+                                                    <p className='text-[12px] font-bold'>{languageData?.authSlide1li2}</p>
 
-                                                    <p className='text-[16px] font-bold'>{languageData?.authSlide1li3}</p>
+                                                    <p className='text-[12px] font-bold'>{languageData?.authSlide1li3}</p>
                                                 </div>
                                             </>
                                         )}
@@ -73,7 +73,7 @@ function Auth({ languageData }) {
                                                 {languageData?.authSlide2}
 
                                                 <div className=' leading-6 mt-2'>
-                                                    <p className='text-[16px] font-bold'>{languageData?.authSlide2li1}</p>
+                                                    <p className='text-[12px] font-bold'>{languageData?.authSlide2li1}</p>
                                                 </div>
                                             </>
                                         )}
@@ -82,7 +82,7 @@ function Auth({ languageData }) {
                                                 {languageData?.authSlide3}
 
                                                 <div className=' leading-6 mt-2'>
-                                                    <p className='text-[16px] font-bold'>{languageData?.authSlide3li1}</p>
+                                                    <p className='text-[12px] font-bold'>{languageData?.authSlide3li1}</p>
                                                 </div>
                                             </>
                                         )}
@@ -91,7 +91,7 @@ function Auth({ languageData }) {
                                                 {languageData?.authSlide4}
 
                                                 <div className=' leading-6 mt-2'>
-                                                    <p className='text-[16px] font-bold'>{languageData?.authSlide4li1}</p>
+                                                    <p className='text-[12px] font-bold'>{languageData?.authSlide4li1}</p>
                                                 </div>
                                             </>
                                         )}
@@ -105,7 +105,7 @@ function Auth({ languageData }) {
                     </div>
                 </div>
 
-                <div className='w-[1000px] h-[1000px] absolute right-[-100px] bottom-[-700px] bg-[#530A59] blur-[100px] z-1 rounded-[1000px]'></div>
+               
             </section>
         </>
 

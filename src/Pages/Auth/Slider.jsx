@@ -24,7 +24,7 @@ function Slider({ onSlideChange }) {
     console.log(onSlideChange)
 
     return (
-        <div className='lg:w-[35%] 2xl:w-[40%] relative '>
+        <div className='lg:w-[100%] relative '>
 
             <Swiper
 
@@ -61,7 +61,7 @@ function Slider({ onSlideChange }) {
 
             </Swiper>
 
-            <div className='absolute w-full bottom-2 z-[10]'>
+            <div className='absolute w-full bottom-8 lg:bottom-2 z-[10]'>
                 <div className='mb-[40px] lg:mb-2 justify-between lg:justify-center flex'>
                     <img className='w-[60px] lg:w-[84px] cursor-pointer buttonPrev' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
                     <img className='w-[60px] lg:w-[84px] cursor-pointer buttonNext' src={right} alt="Right" onClick={e => swiperRef?.slideNext()} />
