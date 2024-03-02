@@ -347,3 +347,13 @@ body {
         font-size: 10pt !important;
     }
 }
+@media screen and (max-height: 770px) and (min-width: 1200px) {
+    .mac-overflow-fix {
+      margin-top: -263px !important;
+    }
+  }
+  @media screen and (max-height: 770px) and (min-width: 1200px) {
+    .mac-img-width {
+      width: 860px !important;
+    }
+  }

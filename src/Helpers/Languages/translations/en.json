@@ -25,30 +25,36 @@
                 {
                     "taskImage": "images/bg-mobile-Task1.png",
                     "newTaskImage": "images/newTask/bg_task1.png",
+                    "taskImageDesk": "images/BgTaskDesk1.png",
+                    "newTaskImageDesk": "images/newTask/bg_task1.png",
                     "taskText": "Enjoy ImLive, be treated like a KING 👑 - and fulfill your wildest fantasies!"
                 }
             ],
             "taskButton": "1/3 Register!"
         },
         "task2": {
-            "taskTitle": "Royal welcome to ImLive: buy 5$, get 10 credits",
+            "taskTitle": "Depost",
             "taskTitleOpen": "Royal welcome to ImLive: buy 5$, get 10 credits",
             "taskBlocks": [
                 {
                     "taskImage": "images/bg-mobile-Task2.png",
                     "newTaskImage": "images/newTask/bg_task2.png",
-                    "taskText": "Deposit $5... ImLive will double the credit. CyberSays will double the dollars!"
+                    "taskImageDesk": "images/BgTaskDesk2.png",
+                    "newTaskImageDesk": "images/newTask/bg_task2.png",
+                    "taskText": "Purchase 5 credits with 5$. ImLive will double the credits and give you 10 👑"
                 }
             ],
             "taskButton": "2/3 Deposit!"
         },
         "task3": {
-            "taskTitle": "Use all credits to get 10$ CashBack from CyberSays",
+            "taskTitle": "Spend",
             "taskTitleOpen": "Use all credits to get 10$ CashBack from CyberSays",
             "taskBlocks": [
                 {
                     "taskImage": "images/bg-mobile-Task3.png",
                     "newTaskImage": "images/newTask/bg_task3.png",
+                    "taskImageDesk": "images/BgTaskDesk3.png",
+                    "newTaskImageDesk": "images/newTask/bg_task3.png",
                     "taskText": "Spend your 10 ImLive credits, be treated like a king, and get $10 cash when you’re done!"
                 }
             ],
@@ -61,6 +67,8 @@
                 {
                     "taskImage": "images/bg-mobile-Task4.png",
                     "newTaskImage": "images/newTask/bg_task4.png",
+                    "taskImageDesk": "images/BgTaskDesk1.png",
+                    "newTaskImageDesk": "images/BgTaskDesk1.png",
                     "taskText": "ImLive doubles your credit, we double your money – it's a win-win for you with an extra $10 in your wallet!"
                 }
             ],
@@ -514,7 +522,10 @@
     "contactQuestionAttach": "Attach files",
     "contactConfirmTitle": "Your message has been sent! We will contact you soon",
     "contactConfirmBtn": "Continue",
-    "timeCounterLink": "*Subject to the daily competition Terms and conditions"
-
-    
+    "timeCounterLink": "*Subject to the daily competition Terms and conditions",
+    "raffleBotLink1": "👬Can I still go to Vegas if my ticket didn’t win? 👬",
+    "raffleBotLink2": "You will need to double your money",
+    "doubleBtnTitle": "CyberSays commands you to...",
+    "doubleBtnAway": "minutes away",
+    "doubleBtnFrom": "from withdraw"
 }
