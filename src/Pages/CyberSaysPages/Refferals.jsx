@@ -101,7 +101,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                 <img className='se:w-[170px]  w-[170px] iphone:w-[240px] double-img-width md:w-[320px] m-auto se:mb-[-3%] iphone:mb-[-13px] lg:mb-[-20px]  relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
 
 
-                <div className='flex flex-col-reverse relative mt-0 iphone:mt-[40px]'>
+                <div className='flex flex-col-reverse relative mt-0 iphone:mt-[65px]'>
                     <div className='se:mt-[0px] lg:mt-[80px] mac:!mt-[00px]'>
                         <div className=' w-full hidden lg:block mb-[-100px] mac:mb-[-60px] pr-2'>
                             <div className=' justify-between flex my-3  mx-10'>
@@ -200,7 +200,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                         </div>
                     </div>
                     <div>
-                        <p className={`text-[14px] sm:text-[24px] font-semibold text-center  se:my-1 iphone:my-2 iphone:px-[30px] refferals-selectMassege lg:my-6 lg:mx-14 sm:mx-0   ${design === '0' ? 'text-[#FFED63]' : 'text-white]'}`}>{languageData?.refferalsSubtitle}</p>
+                        <p className={`text-[14px] sm:text-[24px] font-semibold text-center  se:my-1 iphone:my-3 iphone:px-[30px] refferals-selectMassege lg:my-6 lg:mx-14 sm:mx-0   ${design === '0' ? 'text-[#FFED63]' : 'text-white]'}`}>{languageData?.refferalsSubtitle}</p>
                         <div className=' w-full hidden lg:block pr-2'>
                             <div className=' justify-between flex my-3 mb-[-43px] mx-10'>
                                 <img className='w-[44px] mr-3 cursor-pointer buttonPrevMessage' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
