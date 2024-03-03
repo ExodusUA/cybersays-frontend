@@ -60,16 +60,17 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                 </div>
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[14px] text-center se:py-1 iphone:py-2  px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto mt-2 '>
                     {/*<p className='text-center text-[14px] sm:text-[32px] mac:!text-[24px] font-semibold'>{languageData?.competitionTitle} {siteData?.currentDay}</p>*/}
-                    <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[12px] p-1 px-1  flex justify-between max-w-[380px] md:max-w-[100%] m-auto'>
 
-                        <div className=' leading-4 text-left m-auto'>
-                            {
-                                leaderboardData?.userRankData &&  <p className='gradient-linkDouble saira text-[14px] lg:text-[18px] font-bold'>{languageData?.leaderSheetYou} <span className='saira text-[14px] lg:text-[18px] font-bold'> #{leaderboardData?.userRankData[0]?.user_rank || 0},</span> {languageData?.leaderSheetPoints} <span  className='saira text-[14px] lg:text-[18px] font-bold'>{Number(user?.points).toFixed(0)}</span></p>
-                            }
 
+                    {
+                        leaderboardData?.userRankData &&
+                        <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[12px] p-1 px-1  flex justify-between max-w-[380px] md:max-w-[100%] m-auto'>
+                            <div className=' leading-4 text-left m-auto'>
+                                <p className='gradient-linkDouble saira text-[14px] lg:text-[18px] font-bold'>{languageData?.leaderSheetYou} <span className='saira text-[14px] lg:text-[18px] font-bold'> #{leaderboardData?.userRankData[0]?.user_rank || 0},</span> {languageData?.leaderSheetPoints} <span className='saira text-[14px] lg:text-[18px] font-bold'>{Number(user?.points).toFixed(0)}</span></p>
+                            </div>
                         </div>
-                    
-                    </div>
+                    }
+
                     {
                         loading === false && <div className='flex justify-around items-start my-2 mac:my-2 max-w-[300px] sm:max-w-[350px] w-full m-auto'>
                             {
@@ -128,11 +129,11 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                 <div className='flex justify-center'>
                     <p onClick={e => setRulesModal(true)} className={`text-center text-[12px] sm:text-[14px]  saira font-semibold underline se:mt-2 iphone:mt-7 mac:!mt-1 mb-2 cursor-pointer ${design === '0' ? 'text-[#FFED63]' : 'gradient-link '}`}>{languageData?.competitionRightRules}</p>
                 </div>
-                
+
                 <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
-                    <TimeCounterDay setSocialLink={setSocialLink} left={'m-auto'} leftTitle={'text-center'} title={languageData?.timeCounterTitle}  languageData={languageData} block={'block'} />
+                    <TimeCounterDay setSocialLink={setSocialLink} left={'m-auto'} leftTitle={'text-center'} title={languageData?.timeCounterTitle} languageData={languageData} block={'block'} />
                 </div>
-                
+
             </div>
 
 

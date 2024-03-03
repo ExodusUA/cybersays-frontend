@@ -36,14 +36,13 @@ function LeaderboardModal({ setOpen, leaderboardData, loading, languageData, use
                 <div className='flex justify-end md:my-4'>
                     <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
-                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[12px] p-1 px-1  flex justify-between max-w-[380px] md:max-w-[100%] m-auto'>
-
-                    <div className=' leading-4 text-left m-auto'>
-                    <p className='gradient-linkDouble saira text-[14px] lg:text-[18px] font-bold'>{languageData?.leaderSheetYou} <span className='saira text-[14px] lg:text-[18px] font-bold'> #{leaderboardData?.userRankData[0]?.user_rank || 0},</span> {languageData?.leaderSheetPoints} <span  className='saira text-[14px] lg:text-[18px] font-bold'>{Number(user?.points).toFixed(0)}</span></p>
-
+                {
+                  leaderboardData?.userRankData &&  <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[12px] p-1 px-1  flex justify-between max-w-[380px] md:max-w-[100%] m-auto'>
+                        <div className=' leading-4 text-left m-auto'>
+                            <p className='gradient-linkDouble saira text-[14px] lg:text-[18px] font-bold'>{languageData?.leaderSheetYou} <span className='saira text-[14px] lg:text-[18px] font-bold'> #{leaderboardData?.userRankData[0]?.user_rank || 0},</span> {languageData?.leaderSheetPoints} <span className='saira text-[14px] lg:text-[18px] font-bold'>{Number(user?.points).toFixed(0)}</span></p>
+                        </div>
                     </div>
-
-                </div>
+                }
                 {
                     loading === true
                         ? 'Loading...'
