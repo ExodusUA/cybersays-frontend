@@ -88,14 +88,14 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-double.jpg)] md:bg-[url(./images/CyberSaysPage/bg-double.jpg)]' : ' bg-[#200527]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} onClick={() => setIsOpen(false)}>
             <div className='pt-[57px] md:pt-[90px] px-4  mac-center:!pt-0 max-w-[1170px] m-auto' >
                 <img className='se:w-[170px]  w-[170px] iphone:w-[240px] double-img-width md:w-[320px] m-auto se:mb-[-3%] iphone:mb-[-13px] lg:mb-[-20px]  relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
-                <div className='mac:max-w-[550px] md:max-w-[1200px] md:mx-[120px] m-auto mt-0 iphone:mt-[70px]'>
+                <div className='mac:max-w-[550px] md:max-w-[1200px] md:mx-[120px] m-auto mt-[10px] md:mt-0'>
                     <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  text-center se:max-w-[280px] iphone:max-w-[unset] m-auto py-2  px-4 md:py-2 ${design === '0' ? 'rounded-[100px]' : 'rounded-[14px]'}`}>
                         <p className='text-[14px] iphone:text-[18px] md:text-[28px] mac2:text-[14px] font-semibold  iphone:leading-[unset] se:leading-4 mac2:!leading-[22px]'>{languageData?.doubleTitle}</p>
 
                     </div>
                 </div>
 
-                <p className={`text-[12px] md:text-[14px] ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble font-semibold'}  text-center cursor-pointer flex items-center justify-center iphone:py-2 md:py-2 mb-5 double-subtitle`}>
+                <p className={`text-[12px] md:text-[14px] ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble font-semibold'}  text-center cursor-pointer flex items-center justify-center iphone:py-2 md:py-2 mb-5 double-subtitle mt-0 iphone:mt-[60px] md:mt-0`}>
                     {languageData?.doubleSubtitleSpan}
                     <span className='mx-1'>
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">

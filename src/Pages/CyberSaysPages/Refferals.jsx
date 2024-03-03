@@ -101,7 +101,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                 <img className='se:w-[170px]  w-[170px] iphone:w-[240px] double-img-width md:w-[320px] m-auto se:mb-[-3%] iphone:mb-[-13px] lg:mb-[-20px]  relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
 
 
-                <div className='flex flex-col-reverse relative mt-0 iphone:mt-[65px]'>
+                <div className='flex flex-col-reverse relative '>
                     <div className='se:mt-[0px] lg:mt-[80px] mac:!mt-[00px]'>
                         <div className=' w-full hidden lg:block mb-[-100px] mac:mb-[-60px] pr-2'>
                             <div className=' justify-between flex my-3  mx-10'>
@@ -199,7 +199,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
 
                         </div>
                     </div>
-                    <div>
+                    <div className='mt-0 iphone:mt-[55px] md:mt-0'>
                         <p className={`text-[14px] sm:text-[24px] font-semibold text-center  se:my-1 iphone:my-3 iphone:px-[30px] refferals-selectMassege lg:my-6 lg:mx-14 sm:mx-0   ${design === '0' ? 'text-[#FFED63]' : 'text-white]'}`}>{languageData?.refferalsSubtitle}</p>
                         <div className=' w-full hidden lg:block pr-2'>
                             <div className=' justify-between flex my-3 mb-[-43px] mx-10'>
@@ -266,7 +266,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                         </div>
                         <p className={`text-[14px] sm:text-[24px] font-semibold text-center  se:my-1 iphone:my-3 mac:!my-2 ${design === '0' ? 'text-[#FFED63]' : 'text-white]'}`}>{languageData?.refferalsImage}</p>
                     </div>
-                    <div className=' flex justify-center'>
+                    <div className=' flex justify-center mt-[10px] md:mt-0'>
                         <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  text-center max-w-[800px]  w-full py-1  px-2 ${design === '0' ? 'rounded-[50px]' : 'rounded-[14px] lg:rounded-[24px]'}`}>
                             <p className='text-[14px] iphone:text-[16px]  sm:text-[24px] mac:!text-[мpx]  font-semibold max-w-[640px] lg:max-w-[740px] mac:max-w-[unset] m-auto leading-[18px] sm:leading-[28px] px-2 referral-title lg:py-2 '>{languageData?.refferalsTitle}</p>
                             <div className='flex justify-center gap-1'>
@@ -274,8 +274,8 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                     {languageData?.refferalsLink1}
                                 </p>
                                 <div className='relative'>
-                                    
-                                    
+
+
                                 </div>
 
                             </div>
@@ -292,16 +292,20 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                     <p onClick={e => setOpenAvatar(true)} className={`cursor-pointer text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2 se:mb-2 iphone:mb-5 mac:!mb-2 ${design === '0' ? 'text-white' : 'gradient-link flex justify-center'}`}>{languageData?.refferalsLink2}</p>
                 </div>
                 */}
-                <div className='flex justify-center mt-6 mac:mt-2'>
-                    <button onClick={e => shareRefferalLink()} className={`w-full bg-white  border-[2px] border-[#FFED63] text-black text-[18px] saira font-semibold se:py-1 iphone:py-2 sm:max-w-[350px] ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>
-                        {
-                            isLinkShared === false
-                                ? ' Share Referral Link!'
-                                : 'Link copied!'
-                        }
-                    </button>
+                <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
+                    <div className='sm:max-w-[350px] w-full mx-2'>
+                        <div className='flex justify-center mt-6 mac:mt-2'>
+                            <button onClick={e => shareRefferalLink()} className={`w-full bg-white  border-[2px] border-[#FFED63] text-black text-[18px] saira font-semibold se:py-1 iphone:py-2  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>
+                                {
+                                    isLinkShared === false
+                                        ? ' Share Referral Link!'
+                                        : 'Link copied!'
+                                }
+                            </button>
+                        </div>
+                        <p onClick={e => copyShareLink()} className={`saira text-[14px] cursor-pointer underline text-center mb-[-5px] py-2 pb-3 font-semibold  ${linkShareCopied === true ? 'opacity-60' : ''}`}>Copy link</p>
+                    </div>
                 </div>
-                <p onClick={e => copyShareLink()} className={`saira text-[14px] cursor-pointer underline text-center mb-[-5px] py-2 pb-3 font-semibold  ${linkShareCopied === true ? 'opacity-60' : ''}`}>Copy link</p>
             </div>
 
         </div>

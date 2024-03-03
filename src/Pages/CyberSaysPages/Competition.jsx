@@ -55,10 +55,10 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
 
             <div className='pt-[57px]  md:pt-[90px] mac-center:!pt-0 px-4 max-w-[1170px] m-auto' >
                 <img className='se:w-[170px]  w-[170px] iphone:w-[240px] double-img-width md:w-[320px] m-auto se:mb-[-3%] iphone:mb-[-13px] lg:mb-[-20px]  relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
-                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[14px] text-center se:py-1 mac:!py-0 px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto mt-0 iphone:mt-[65px]'>
+                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[14px] text-center se:py-1 mac:!py-0 px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto mt-[10px] md:mt-0'>
                     <p className='text-center text-[18px] sm:text-[22px]  font-bold'>{languageData?.competitionTitle}</p>
                 </div>
-                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[14px] text-center se:py-1 iphone:py-2  px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto mt-2 '>
+                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[14px] text-center se:py-1 iphone:py-2  px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto mt-2 iphone:mt-[55px] md:mt-0'>
                     {/*<p className='text-center text-[14px] sm:text-[32px] mac:!text-[24px] font-semibold'>{languageData?.competitionTitle} {siteData?.currentDay}</p>*/}
 
 
