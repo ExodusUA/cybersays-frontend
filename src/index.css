@@ -281,6 +281,7 @@ body {
     color: black;
     font-family: Saira !important;
 }
+
 .checkbox-container {
     display: flex;
     position: relative;
@@ -305,14 +306,14 @@ body {
     left: 0;
     height: 16px;
     width: 16px;
-    background-color:white ;
+    background-color: white;
     border: 3px solid #1E1E1E;
     border-radius: 100%;
 }
 
 
 
-.checkbox-container input:checked ~ .checkmark {
+.checkbox-container input:checked~.checkmark {
     background-color: #1E1E1E;
 }
 
@@ -322,7 +323,7 @@ body {
     display: none;
 }
 
-.checkbox-container input:checked ~ .checkmark:after {
+.checkbox-container input:checked~.checkmark:after {
     display: block;
 }
 
@@ -334,26 +335,50 @@ body {
     border: 2px solid white;
     background: #1E1E1E;
     border-radius: 100%;
-    
+
 }
+
 .textStyle p {
     font-size: 12pt !important;
 }
+
 @media screen and (max-width: 600px) {
     table {
-        width: 100% !important; /* Змінюємо ширину таблиці для менших екранів */
+        width: 100% !important;
+        /* Змінюємо ширину таблиці для менших екранів */
     }
+
     .textStyle p {
         font-size: 10pt !important;
     }
 }
+
 @media screen and (max-height: 770px) and (min-width: 1200px) {
     .mac-overflow-fix {
-      margin-top: -263px !important;
+        margin-top: -263px !important;
     }
-  }
-  @media screen and (max-height: 770px) and (min-width: 1200px) {
+    .refferals-selectMassege {
+        margin-top: 10px !important;
+        margin-bottom: 0px !important;
+    }
     .mac-img-width {
-      width: 860px !important;
+        width: 860px !important;
     }
-  }
+    .double-subtitle {
+        padding-top: 2px !important;
+        padding-bottom: 4px !important;
+    }
+    .double-img-width {
+        width: 210px !important;
+        margin-bottom: -10px !important;
+    }
+    .referral-title {
+        padding-bottom: 0px !important;
+    }
+}
+
+@media screen and (max-height: 870px) and (min-width: 1200px) {
+    .mac-img-bottom {
+        margin-bottom: 0px !important;
+    }
+}

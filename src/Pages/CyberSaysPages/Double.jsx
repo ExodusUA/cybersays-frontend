@@ -87,15 +87,15 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-double.jpg)] md:bg-[url(./images/CyberSaysPage/bg-double.jpg)]' : ' bg-[#200527]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} onClick={() => setIsOpen(false)}>
             <div className='pt-[57px] md:pt-[90px] px-4  mac-center:!pt-0 max-w-[1170px] m-auto' >
-                <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[320px] mac2:!w-[170px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
+                <img className='se:w-[170px]  w-[170px] iphone:w-[240px] double-img-width md:w-[320px] m-auto se:mb-[-3%] iphone:mb-[-13px] lg:mb-[-20px]  relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
                 <div className='mac:max-w-[550px] md:max-w-[1200px] md:mx-[120px] m-auto'>
-                    <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  text-center max-w-[280px] sm:max-w-[unset] m-auto py-2  px-4 md:py-2 ${design === '0' ? 'rounded-[100px]' : 'rounded-[14px] lg:rounded-[24px]'}`}>
-                        <p className='text-[14px] iphone:text-[14px] md:text-[24px] mac2:text-[14px] font-semibold  iphone:leading-[unset] se:leading-4 mac2:!leading-[22px]'>{languageData?.doubleTitle}</p>
+                    <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  text-center se:max-w-[280px] iphone:max-w-[unset] m-auto py-2  px-4 md:py-2 ${design === '0' ? 'rounded-[100px]' : 'rounded-[14px]'}`}>
+                        <p className='text-[14px] iphone:text-[18px] md:text-[28px] mac2:text-[14px] font-semibold  iphone:leading-[unset] se:leading-4 mac2:!leading-[22px]'>{languageData?.doubleTitle}</p>
 
                     </div>
                 </div>
 
-                <p className={`text-[12px] md:text-[14px] ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble font-semibold'}  text-center cursor-pointer flex items-center justify-center  md:py-2 mb-5`}>
+                <p className={`text-[12px] md:text-[14px] ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble font-semibold'}  text-center cursor-pointer flex items-center justify-center iphone:py-2 md:py-2 mb-5 double-subtitle`}>
                     {languageData?.doubleSubtitleSpan}
                     <span className='mx-1'>
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,7 +125,7 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
                     }
                 </div>
                 <div className='flex justify-center'>
-                    <p onClick={e => setOpen(true)} className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline mt-2  cursor-pointer  ${design === '0' ? 'text-white' : 'gradient-link flex justify-center'}`}>{languageData?.doublePaid}</p>
+                    <p onClick={e => setOpen(true)} className={`text-center text-[12px] iphone:text-[14px] sm:text-[14px] saira font-semibold underline mt-2  cursor-pointer  ${design === '0' ? 'text-white' : 'gradient-link flex justify-center'}`}>{languageData?.doublePaid}</p>
 
                 </div>
                 <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2'>
