@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import logotype from '../../images/logotype.svg';
 import clock from '../../images//landing/clock.png';
 import { Link } from 'react-router-dom';
-import { otpVerify } from '../../Requests/auth';
 import moment from 'moment';
 import { useNavigate } from 'react-router-dom';
 import { getUserCountry } from '../../Requests/utills';
@@ -13,15 +12,13 @@ function OTPModal({ recaptchaRef, email, refferalCode, special, languageData }) 
     const navigate = useNavigate();
 
     function handleVerify() {
-        const email = 'your@email.com'; // Замініть на потрібну адресу електронної пошти
+       
         if (email.includes('gmail.com')) {
-            window.location.href = 'https://mail.google.com/';
+            window.open('https://mail.google.com/', '_blank');
         } else {
-            // Ось приклад для використання протоколу mailto: для відкриття стандартного поштового додатку
-            window.location.href = 'mailto:' + email;
+            window.location.href = 'mailto:';
         }
     }
-    
 
     /* TIMER */
 
@@ -72,11 +69,11 @@ function OTPModal({ recaptchaRef, email, refferalCode, special, languageData }) 
                     <p className='saira'>{moment.utc(timeLeft.asMilliseconds()).format("mm:ss")}</p>
                 </div>
 
-<div className='flex items-center'>
-<button className='continue_button w-full h-[52px] rounded-[12px] saira mt-5 duration-200 disabled:opacity-70' onClick={e => handleVerify()}>Open in {email.indexOf('gmail.com') ? 'Gmail' : 'Mail App'}</button>
-</div>
-                
-              
+                <div className='flex items-center'>
+                    <button className='continue_button w-full h-[52px] rounded-[12px] saira mt-5 duration-200 disabled:opacity-70' onClick={e => handleVerify()}>Open in {email.indexOf('gmail.com') !== -1 ? 'Gmail' : 'Mail App'}</button>
+                </div>
+
+
                 <p className='saira mt-5 hidden'>{languageData?.verifyCodeLink} <Link className='text-[#9D3EFD] saira' to={'/login'}>{languageData?.verifyCodeLinkSpan}</Link></p>
             </div>
 
