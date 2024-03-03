@@ -12,19 +12,16 @@ function OTPModal({ recaptchaRef, email, refferalCode, special, languageData }) 
     const [isCodeWrong, setIsCodeWrong] = useState(false);
     const navigate = useNavigate();
 
-    const handleVerify = async () => {
-
-        const token = await recaptchaRef.current.executeAsync();
-
-        try {
-            let userCountry = await getUserData();
-            const res = await otpVerify(token, otpCode, refferalCode, email, special, userCountry.country);
-            localStorage.setItem('token', res.data.token);
-            navigate('/')
-        } catch (error) {
-            setIsCodeWrong(true)
+    function handleVerify() {
+        const email = 'your@email.com'; // Замініть на потрібну адресу електронної пошти
+        if (email.includes('gmail.com')) {
+            window.location.href = 'https://mail.google.com/';
+        } else {
+            // Ось приклад для використання протоколу mailto: для відкриття стандартного поштового додатку
+            window.location.href = 'mailto:' + email;
         }
-    };
+    }
+    
 
     /* TIMER */
 
@@ -75,13 +72,12 @@ function OTPModal({ recaptchaRef, email, refferalCode, special, languageData }) 
                     <p className='saira'>{moment.utc(timeLeft.asMilliseconds()).format("mm:ss")}</p>
                 </div>
 
-                <button className='continue_button w-full h-[52px] rounded-[12px] saira mt-5 duration-200 disabled:opacity-70' disabled={otpCode.length < 6} onClick={e => handleVerify()}>{languageData?.verifyCodeBtn}</button>
-                {
-                    isCodeWrong
-                        ? <p className='saira text-[#FF1CBB] mt-5'>{languageData?.verifyCodeError}</p>
-                        : null
-                }
-                <p className='saira mt-5'>{languageData?.verifyCodeLink} <Link className='text-[#9D3EFD] saira' to={'/login'}>{languageData?.verifyCodeLinkSpan}</Link></p>
+<div className='flex items-center'>
+<button className='continue_button w-full h-[52px] rounded-[12px] saira mt-5 duration-200 disabled:opacity-70' onClick={e => handleVerify()}>Open in {email.indexOf('gmail.com') ? 'Gmail' : 'Mail App'}</button>
+</div>
+                
+              
+                <p className='saira mt-5 hidden'>{languageData?.verifyCodeLink} <Link className='text-[#9D3EFD] saira' to={'/login'}>{languageData?.verifyCodeLinkSpan}</Link></p>
             </div>
 
         </div>
