@@ -134,7 +134,7 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded, open, ma
 
     return (
 
-        <div style={{ background: getBackground(), paddingBottom: getPaddingBottom(), marginTop: marginTop() }} className={`w-full rounded-t-[20px] ${rounded} bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  se:p-[6px]  p-2 se:my-0 my-2  `}>
+        <div style={{ background: getBackground(), paddingBottom: getPaddingBottom(), marginTop: marginTop() }} className={`w-full rounded-t-[20px] ${rounded} bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  se:p-[6px]  p-2 se:my-1 my-2  `}>
             {
                 open !== true && getMarkup()
             }

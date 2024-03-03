@@ -68,19 +68,19 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] md:bg-[url(./images/CyberSaysPage/bg-raffle.jpg)]' : 'bg-[#200527]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} onClick={() => setIsOpen(false)}>
             <div className='pt-[57px]  md:pt-[90px] mac-center:!pt-0 px-4 max-w-[970px] m-auto' >
-                <img className='se:w-[170px] mb-[20px] mac:!mb-[15px] w-[170px] iphone:w-[170px] mac2:!w-[170px] md:w-[320px] m-auto ' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
+                <img className='se:w-[170px]  w-[170px] iphone:w-[240px] mac2:w-[170px] md:w-[320px] m-auto se:mb-[3%] iphone:mb-[2%] lg:mb-[-20px] mac-img-bottom relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
 
                 <div className='flex flex-col-reverse'>
 
                     <div>
-                        <img className={`se:w-[280px] iphone:w-[345px]  ${design === '0' ? 'md:w-[770px] mac2:!mt-[-150px]' : 'md:w-[990px] mac-img-width mt-[-110px] mac2:mt-[-110px] iphone:mt-[-30px]'} iphone:mt-[-40px] mob:mt-0 m-auto md:mt-[-100px] mt-[0px] mac2:mt-[-50px] se:mt-[-30px]`} src={design === '0' ? hero : require('../../images/NewDesign/RaffleTicket/hero_image.png')} alt="heroRaffle" />
+                        <img className={`se:w-[280px] iphone:w-[385px]  ${design === '0' ? 'md:w-[770px] mac2:!mt-[-150px]' : 'md:w-[990px] mac-img-width mt-[-110px] mac2:mt-[-110px] iphone:mt-[-30px]'} iphone:mt-[-40px] mob:mt-0 m-auto md:mt-[-100px] mt-[0px] mac2:mt-[-50px] se:mt-[-30px]`} src={design === '0' ? hero : require('../../images/NewDesign/RaffleTicket/hero_image.png')} alt="heroRaffle" />
 
                         <div  className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[30px] text-center flex py-3 md:py-3   px-2  ${isTaskCompleted === false && ' md:mt-[-185px] iphone:mt-[-20px] se:mt-[-80px] mac-overflow-fix'} justify-center relative z-1`} >
                             {
 
                                 isTaskCompleted === false
                                     ? <div>
-                                        <p className='text-[18px] md:text-[24px] font-medium saira text-center se:mb-0 iphone:mb-2 mac:!mb-1  md:text-center'>{languageData?.raffleUnderBtn} </p>
+                                        <p className='text-[18px] md:text-[24px] font-medium saira text-center se:mb-0 iphone:mb-2 mac:!mb-1  md:text-center iphone:px-4'>{languageData?.raffleUnderBtn} </p>
                                         <div className='flex justify-between items-start w-full '>
                                             <div className='text-center w-full'>
                                                 <Link target='_blank' to={imLiveURL}><button className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold p-2 md:py-3 md:w-[95%] ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.raffleLeftBtn}</button></Link>
@@ -127,7 +127,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
 
                         isTaskCompleted === false
                             ? <div className=' text-center  md:mx-0 md:py-2 relative z-1 mac2:!mt-[-20px]'>
-                                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] py-2'>
+                                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] py-2 px-1'>
                                     <p className='  text-[18px] md:text-[32px] mac2:!text-[18px] font-semibold leading-5 lg:leading-9'>
                                         {languageData?.raffleTitle1}
                                     </p>
@@ -216,10 +216,10 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                 </div>
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] py-1 mt-2'>
                     <p className='  text-[12px] md:text-[14px] font-semibold saira text-center text-[#FBC215]'>
-                        👬Can I still go to Vegas if my ticket didn’t win? 👬
+                    {languageData?.raffleBotLink1}
                     </p>
 
-                    <p onClick={e => setWinTicketModal(true)} className={`saira text-[12px] md:text-[14px] font-semibold cursor-pointer text-center  text-[#FD9C36]`}>🤑<span className='underline text-[#FD9C36] saira text-[12px] md:text-[14px]'>You will need to double your money</span> 🤑 </p>
+                    <p onClick={e => setWinTicketModal(true)} className={`saira text-[12px] md:text-[14px] font-semibold cursor-pointer text-center  text-[#FD9C36]`}>🤑<span className='underline text-[#FD9C36] saira text-[12px] md:text-[14px]'>{languageData?.raffleBotLink2}</span> 🤑 </p>
 
                 </div>
                 {/*

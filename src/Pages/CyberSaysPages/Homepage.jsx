@@ -34,10 +34,10 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
             case 0:
             case null:
             case undefined:
-                return <button onClick={e => scrollToPage(1)} className={`w-full md:w-[480px]   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold flex justify-center items-center ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn1}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
-            case 1: return <button onClick={e => scrollToPage(1)} className={`w-full md:w-[480px]  bg-white   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold flex justify-center items-center  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn2}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
-            case 2: return <button onClick={e => scrollToPage(1)} className={`w-full  md:w-[480px] bg-white   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold flex justify-center items-center  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn3}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
-            case 3: return <button onClick={e => scrollToPage(1)} className={`w-full md:w-[480px] bg-white   border-[#FFED63]  text-black text-[16px] mod:text-[18px] saira font-semibold flex justify-center items-center ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn4}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
+                return <button onClick={e => scrollToPage(1)} className={`w-full md:w-[480px]   border-[#FFED63]  text-black text-[18px] saira font-semibold flex justify-center items-center ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn1}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
+            case 1: return <button onClick={e => scrollToPage(1)} className={`w-full md:w-[480px]  bg-white   border-[#FFED63]  text-black text-[18px] saira font-semibold flex justify-center items-center  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-2 py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn2}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
+            case 2: return <button onClick={e => scrollToPage(1)} className={`w-full  md:w-[480px] bg-white   border-[#FFED63]  text-black text-[18px] saira font-semibold flex justify-center items-center  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-2 py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn3}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
+            case 3: return <button onClick={e => scrollToPage(1)} className={`w-full md:w-[480px] bg-white   border-[#FFED63]  text-black text-[18px] saira font-semibold flex justify-center items-center ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-2 py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn4}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
         }
     }
 
@@ -58,7 +58,7 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
 
                     <p className=' text-[18px] md:text-[32px] font-semibold'></p>
                 </div>
-                <img className='se:w-[170px] se:mb-[-5px] w-[170px] iphone:w-[170px] md:w-[280px] m-auto' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
+                <img className='se:w-[170px]  w-[170px] iphone:w-[240px] mac2:w-[170px] md:w-[320px] m-auto se:mb-[0px] iphone:mb-[-10px]  relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
                 <div className='lg:flex justify-between items-end md:items-center '>
                     <div className='w-full lg:hidden block mb-2'>
                         <Swiper
@@ -75,16 +75,16 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                             {
                                 dataTitle.map((item, index) => (
                                     <SwiperSlide key={item}>
-                                        <p className='text-[16px] font-semibold'>{item.desc}</p>
+                                        <p className='se:text-[16px] iphone:text-[18px] iphone:my-3 font-semibold'>{item.desc}</p>
                                     </SwiperSlide>
                                 ))
                             }
 
                         </Swiper>
                     </div>
-                    <div className={`${design === '0' ? ' border-[#FFD700]' : '  border-[#A2DBF0]'} rounded-[16px] border-2 px-2 pb-2 pt-8 m-auto lg:m-[unset]`}>
+                    <div className={`${design === '0' ? ' border-[#FFD700]' : '  border-[#A2DBF0]'} rounded-[16px] border-2 px-1 pb-1 pt-8 m-auto lg:m-[unset]`}>
                         <div className='flex items-center'>
-                            <img className='w-[180px] sm:w-[200px] md:w-[240px] mt-[-70px]' src={design === '0' ? girlOK : require('../../images/NewDesign/Homepage/hero_image.png')} alt="girlOK" />
+                        <img className={`w-[180px] sm:w-[200px] md:w-[240px]  ${design === '0' ? 'mt-[-30px]' : 'mt-[-65px]'}`} src={design === '0' ? girlOK : require('../../images/NewDesign/Homepage/hero_image.png')} alt="girlOK" />
                             <Link to={imLiveURL} target='_blank'><img className='w-[160px] md:w-[240px] md:mt-5 mac:!mt-6 mb-10' src={imLiveLogo} alt="imLiveLogo" /></Link>
                         </div>
                         <div className=' relative '>
