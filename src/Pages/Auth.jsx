@@ -1,9 +1,8 @@
-import React, { useRef, useState } from 'react'
-import { Helmet } from 'react-helmet'
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import Language from '../Components/Language/Language'
-import logotype from '../images/logotype.svg'
+import Language from '../Components/Language/Language';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Slider from './Auth/Slider';
