@@ -17,6 +17,13 @@ import AffiliationTerms from './Pages/AffiliationTerms';
 
 function App() {
 
+  useEffect(() => {
+    if (window.localStorage.getItem('design') === null) {
+      window.localStorage.setItem('design', '1');
+      //window.location.reload();
+    }
+  }, []);
+
   const params = new URLSearchParams(window.location.search);
 
   if (params.get('email')) {
@@ -28,10 +35,10 @@ function App() {
   };
 
   useEffect(() => {
-    if (window.localStorage.getItem('design') === null) {
-      window.localStorage.setItem('design', '1');
-      window.location.reload();
+    if (params.get('ref') !== null) {
+      window.localStorage.setItem('ref', params.get('ref'))
     }
+
   }, []);
 
   const queryClient = new QueryClient()

@@ -71,12 +71,12 @@ function TourModal({ setOpen, languageData, user }) {
                             type: blobImage.type,
                         }),
                     ],
-                    url: '?uid=' + user?.id,
+                    url: '?uid=' + user?.referral_code,
                 })
                     .then(() => console.log('Successful share! 🎉'))
                     .catch(error => console.log('Error sharing:', error));
             } else {
-                window.navigator.clipboard.writeText(window.location.host +  '?uid=' + user?.id)
+                window.navigator.clipboard.writeText(window.location.host +  '?uid=' + user?.referral_code)
 
             }
         }

@@ -42,12 +42,12 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                 .share({
                     title: document.title,
                     text: 'Sharing',
-                    url: '?uid=' + user?.id,
+                    url: '?uid=' + user?.referral_code,
                 })
                 .then(() => console.log('Successful share! 🎉'))
                 .catch(err => console.error(err));
         } else {
-            window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.id)
+            window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.referral_code)
             setIsLinkCopied(true)
 
             setTimeout(() => {

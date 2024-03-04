@@ -47,10 +47,8 @@ function LoginForm({ languageData, referralID }) {
     }
 
     async function socialAuth(email, token) {
-
         try {
             let userCountry = await getUserData();
-
             const res = await socialUserAuth(email, token, refferalCode, special, userCountry.country);
             localStorage.setItem('token', res.token);
             navigate('/')

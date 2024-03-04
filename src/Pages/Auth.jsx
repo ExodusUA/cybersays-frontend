@@ -15,7 +15,7 @@ function Auth({ languageData }) {
     const params = new URLSearchParams(window.location.search);
 
     let referralID = params.get('ref');
-
+    
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const slideChange = (swiper) => {
