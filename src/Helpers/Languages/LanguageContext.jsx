@@ -23,7 +23,7 @@ export const LanguageProvider = ({ children }) => {
                             userLang = 'es';
                             break;
                         case 'BR':
-                        case 'UA':
+                        case 'PT':
                             userLang = 'pt';
                             break;
                         default:
