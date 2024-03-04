@@ -292,8 +292,8 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                             <button onClick={e => shareRefferalLink()} className={`w-full bg-white  border-[2px] border-[#FFED63] text-black text-[18px] saira font-semibold se:py-1 iphone:py-2  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>
                                 {
                                     isLinkShared === false
-                                        ? ' Share Referral Link!'
-                                        : 'Link copied!'
+                                        ? languageData?.referralShareBtn1
+                                        : languageData?.referralShareBtn2
                                 }
                             </button>
                         </div>
