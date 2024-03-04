@@ -46,6 +46,7 @@ import TransactionHistory from '../Components/Transactions/TransactionHistory'
 import TicketsHistory from '../Components/Transactions/TicketsHistory'
 import SocialLink from '../Components/SocialLink'
 import DoubleComplete from '../Components/DoubleComplete'
+import user from '../Requests/user'
 
 var mixpanel = require('mixpanel-browser');
 
@@ -289,6 +290,15 @@ function Main({ languageData }) {
         }
     }, [userData, userCountry])
 
+    useEffect(() => {
+        if (userData === null) return
+
+        if (window.localStorage.getItem('double') !== 'completed' && userData?.deposits === 1) {
+            setDoubleComplete(true)
+            window.localStorage.setItem('double', 'completed')
+        }
+    }, [userData])
+
     const HomepageSwiper = () => {
 
         return (
@@ -428,7 +438,7 @@ function Main({ languageData }) {
             {
                 doubleComplete && <DoubleComplete setOpen={setDoubleComplete} languageData={languageData} user={userData} />
             }
-            
+
         </>
     )
 }
