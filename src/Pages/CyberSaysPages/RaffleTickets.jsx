@@ -67,15 +67,15 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
 
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] md:bg-[url(./images/CyberSaysPage/bg-raffle.jpg)]' : 'bg-[#200527]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} onClick={() => setIsOpen(false)}>
-            <div className='pt-[57px]  md:pt-[90px] mac-center:!pt-0 px-4 max-w-[970px] m-auto' >
-                <img className='se:w-[170px]  w-[170px] iphone:w-[240px] mac2:w-[170px] md:w-[320px] m-auto se:mb-[3%] iphone:mb-[2%] lg:mb-[-20px] mac-img-bottom relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
+            <div className='pt-[57px]  md:pt-[80px] mac-center:!pt-0 px-4 max-w-[970px] m-auto' >
+                <img className='se:w-[170px]  w-[170px] iphone:w-[240px] mac2:w-[170px] md:w-[320px] m-auto se:mb-[3%] iphone:mb-[1%] lg:mb-[-20px] mac-img-bottom relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
 
                 <div className='flex flex-col-reverse '>
 
                     <div className='iphone:mt-[40px] md:mt-0'>
-                        <img className={`se:w-[280px] iphone:w-[385px]  ${design === '0' ? 'md:w-[770px] mac2:!mt-[-150px]' : 'md:w-[990px] mac-img-width mt-[-110px] mac2:mt-[-110px] iphone:mt-[-30px]'} iphone:mt-[-40px] mob:mt-0 m-auto md:mt-[-100px] mt-[0px] mac2:mt-[-50px] se:mt-[-30px]  `} src={design === '0' ? hero : require('../../images/NewDesign/RaffleTicket/hero_image.png')} alt="heroRaffle" />
+                        <img className={`se:w-[280px] iphone:w-[385px]  ${design === '0' ? 'md:w-[770px] mac2:!mt-[-150px]' : 'md:w-[990px] mac-img-width mt-[-110px] mac2:mt-[-110px] iphone:mt-[-30px]'} iphone:mt-[-60px] mob:mt-0 m-auto md:mt-[-100px] mt-[0px] mac2:mt-[-50px] se:mt-[-30px]  `} src={design === '0' ? hero : require('../../images/NewDesign/RaffleTicket/hero_image.png')} alt="heroRaffle" />
 
-                        <div  className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[30px] text-center flex py-3 md:py-3   px-2  ${isTaskCompleted === false && ' md:mt-[-185px] iphone:mt-[-20px] se:mt-[-80px] mac-overflow-fix'} justify-center relative z-1`} >
+                        <div  className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[30px] text-center flex py-1 md:py-3   px-2  ${isTaskCompleted === false && ' md:mt-[-185px] iphone:mt-[-20px] se:mt-[-80px] mac-overflow-fix'} justify-center relative z-1`} >
                             {
 
                                 isTaskCompleted === false

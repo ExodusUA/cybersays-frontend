@@ -32,7 +32,7 @@ function NewLanguageButton() {
             </div>
 
             {langOpen && (
-                <div className={`mt-0 absolute top-[60px] p-4 border-[2px] ${design === '0' ? 'border-[#FFED63] ' : 'border-[#A2DBF0]'} bg-white w-[100px] rounded-[12px] py-4 min-w-[50px]  left-0`}>
+                <div className={`mt-0 absolute top-[60px] p-4 border-[2px] ${design === '0' ? 'border-[#FFED63] ' : 'border-[#A2DBF0]'} bg-[#626161]  w-[100px] rounded-[12px] py-4 min-w-[50px]  left-0`}>
                     <LanguageSwitcher setIsLangOpen={setLangOpen} />
                 </div>
             )}
