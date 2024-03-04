@@ -10,8 +10,10 @@ export const LanguageProvider = ({ children }) => {
     useEffect(() => {
         if (localStorage.getItem('language') === null) {
             const country = API.getUserCountry();
+
             country
                 .then((result) => {
+                    console.log(result);
                     let userLang;
                     switch (result) {
                         case 'EN':
@@ -20,8 +22,8 @@ export const LanguageProvider = ({ children }) => {
                         case 'ES':
                             userLang = 'es';
                             break;
-                        case 'PT':
                         case 'BR':
+                        case 'UA':
                             userLang = 'pt';
                             break;
                         default:

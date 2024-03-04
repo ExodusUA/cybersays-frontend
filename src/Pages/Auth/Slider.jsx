@@ -21,22 +21,15 @@ function Slider({ onSlideChange }) {
         };
     }, [screenWidth]);
 
-    console.log(onSlideChange)
-
     return (
         <div className='lg:w-[100%] relative '>
 
             <Swiper
-
-
                 className='h-[30vh] md:h-[45vh] lg:h-full'
                 onSwiper={(swiper) => {
                     swiperRef = swiper;
                 }}
-            
-                
                 modules={[Navigation, Autoplay]}
-              
                 spaceBetween={0}
                 slidesPerView={1}
                 loop={true}
