@@ -10,6 +10,9 @@ import { useDesign } from '../../Helpers/Design/DesignContext'
 import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
 import crown from '../../images/CyberSaysPage/crown1st.png'
 import TimeCounterDay from '../../Components/TimeCounterDay'
+import oneSt from '../../images/CyberSaysPage/cup1st.png'
+import twoSt from '../../images/CyberSaysPage/cup2st.png'
+import threeSt from '../../images/CyberSaysPage/cup3st.png'
 
 function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading, leaderboardData, setLeaderboardData, siteData, languageData, setRulesModal, setSocialLink }) {
 
@@ -72,11 +75,11 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                     }
 
                     {
-                        loading === false && <div className='flex justify-around items-start my-2 mac:my-2 max-w-[300px] sm:max-w-[350px] w-full m-auto'>
+                        loading === false && <div className='flex justify-around items-center mt-2 mac:mt-2 max-w-[300px] sm:max-w-[350px] w-full m-auto'>
                             {
-                                <div className='mt-[50px] mr-[-50px]'>
+                                <div className='mt-[20px] '>
                                     <p className='text-[16px] saira font-bold leading-3'>#2</p>
-                                    {/*<img className='w-[26px] h-[26px] sm:w-[50px] sm:h-[50px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={cup2} alt="cup2" />*/}
+                                    <img className='w-[26px] h-[26px] sm:w-[40px] sm:h-[40px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto mt-[2px]' src={cup2} alt="cup2" />
                                     <p className={`text-[12px] sm:text-[14px] saira font-medium  ${design === '0' ? 'text-[#FFED63]' : 'text-[#A1B3B0]'}`}>{leaderboardData.todayUsers[1]?.points || 0}</p>
                                     <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>{languageData?.competitionPoints}</p>
                                 </div>
@@ -85,15 +88,15 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                                 <div className='flex justify-center'>
                                     <p className='text-[16px] saira font-bold flex items-center leading-3'><img className='w-[21px] h-[21px] mr-1 mb-1' src={crown} alt="crown" />#1</p>
                                 </div>
-                                {/*<img className='w-[34px] h-[34px] sm:w-[70px] sm:h-[70px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={cup1} alt="cup2" />*/}
+                                <img className='w-[34px] h-[34px] sm:w-[56px] sm:h-[56px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto mt-[2px]' src={cup1} alt="cup2" />
                                 <p className={`text-[12px] sm:text-[14px] saira font-medium  ${design === '0' ? 'text-[#FFED63]' : 'text-[#F2BB02]'}`}> {leaderboardData.todayUsers[0]?.points || 0}</p>
                                 <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>{languageData?.competitionPoints}</p>
                             </div>
                             {
 
-                                <div className='mt-[50px] ml-[-50px]'>
+                                <div className='mt-[20px] '>
                                     <p className='text-[16px] saira font-bold leading-3'>#3</p>
-                                    {/*<img className='w-[26px] h-[26px] sm:w-[50px] sm:h-[50px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto' src={cup3} alt="cup2" />*/}
+                                    <img className='w-[26px] h-[26px] sm:w-[40px] sm:h-[40px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto mt-[2px]' src={cup3} alt="cup2" />
                                     <p className={`text-[12px] sm:text-[14px] saira font-medium ${design === '0' ? 'text-[#FFED63]' : 'text-[#E87001]'}`}>{leaderboardData.todayUsers[2]?.points || 0}</p>
                                     <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>{languageData?.competitionPoints}</p>
                                 </div>
@@ -101,14 +104,14 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                             }
                         </div>
                     }
-
-                    <div className='flex sm:max-w-[400px] md:max-w-[unset] m-auto sm:mt-3'>
+                    <p className='text-center text-[12px] sm:text-[16px] font-medium'>{languageData?.competitionOverBtn}</p>
+                    <div className='flex sm:max-w-[400px] md:max-w-[unset] m-auto sm:mt-1'>
                         <div className='text-center w-full md:mx-2'>
                             <Link target='_blank' to={imLiveURL}>
                                 <button className={` bg-white  border-[2px] border-[#FFED63] text-black text-[18px] saira font-semibold p-2 sm:px-6 w-[95%] md:w-full ${design === '0' ? ' p-2 sm:px-6 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.competitionLeftBtn}</button>
                             </Link>
-                            <p className='saira text-[12px] sm:text-[14px] font-medium'>{languageData?.competitionLeftSection1}</p>
-                            <p className='saira text-[12px] sm:text-[14px] font-medium'>{languageData?.competitionLeftSection2}</p>
+                            <p className='saira text-[12px] sm:text-[12px] font-medium'>{languageData?.competitionLeftSection1} {languageData?.competitionLeftSection2}</p>
+                            
                         </div>
                         <div className='text-center w-full md:mx-2'>
                             <button onClick={e => shareRefferalLink()} className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold w-[95%]  md:w-full  ${design === '0' ? ' p-2 sm:px-6 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>
@@ -118,12 +121,12 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                                         : languageData?.competitionRightBtn2
                                 }
                             </button>
-                            <p className='saira text-[12px] sm:text-[14px] font-medium'>{languageData?.competitionRightSection1}</p>
-                            <p className='saira text-[12px] sm:text-[14px] font-medium'>{languageData?.competitionRightSection2}</p>
+                            <p className='saira text-[10px] sm:text-[12px] font-medium'>{languageData?.competitionRightSection1} {languageData?.competitionRightSection2}</p>
+                           
                         </div>
                     </div>
-                    <p className={`text-center text-[12px] sm:text-[14px]  saira font-semibold mt-2 ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble'} `}>{languageData?.competitionSubtitle}</p>
-                    <p className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline se:mt-0 iphone:mt-0 mac:!mt-0 mac:!mb-2 cursor-pointer ${design === '0' ? 'text-white' : 'gradient-link '}`} onClick={e => setLeaderboardModal(true)}>{languageData?.competitionRightLink1}</p>
+                    <p className={`text-center text-[12px] sm:text-[14px]  saira font-semibold mt-2 ${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'} `}>{languageData?.competitionSubtitle}</p>
+                    <p className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline se:mt-0 iphone:mt-0 mac:!mt-0  cursor-pointer ${design === '0' ? 'text-white' : 'gradient-link '}`} onClick={e => setLeaderboardModal(true)}>{languageData?.competitionRightLink1}</p>
 
                 </div>
                 <div className='flex justify-center'>

@@ -68,17 +68,17 @@ function Double({ languageData, user, imLiveURL, setOpen,setDoubleComplete }) {
             case undefined:
                 return <div className='max-w-[380px] w-full px-1'>
                     <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
-                    <Link to={imLiveURL} target='_blank'> <button className={`w-full border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>1/3: Register!</button></Link>
+                    <Link to={imLiveURL} target='_blank'> <button className={`w-full border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.doubleTaskBtn1}</button></Link>
                     <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>7 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
                 </div>
             case 1: return <div className='max-w-[380px] w-full px-1'>
                 <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
-                <Link to={imLiveURL} target='_blank'><button className={`w-full bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>2/3: Deposit!</button></Link>
+                <Link to={imLiveURL} target='_blank'><button className={`w-full bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.doubleTaskBtn2}</button></Link>
                 <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>5 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
             </div>
             case 2: return <div className='max-w-[380px] w-full px-1'>
                 <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
-                <Link to={imLiveURL} target='_blank'><button className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>3/3: Spend!</button></Link>
+                <Link to={imLiveURL} target='_blank'><button className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.doubleTaskBtn3}</button></Link>
                 <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>3 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
             </div>
 

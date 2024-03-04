@@ -142,6 +142,7 @@
     "competitionRightSection2": "10 competition points",
     "competitionRightLink1": "Leaderboards",
     "competitionRightRules": "Rules of the competition",
+    "competitionOverBtn": "Get as many points as you can to win the 100$ daily competition:",
     "header1": "Earned:",
     "header2": "Contest Points:",
     "header3": "Vegas Tickets:",
@@ -531,5 +532,10 @@
     "doubleCompleteTitle": "Congratulations! Your $10 awaits in your",
     "doubleCompleteTitleSpan": "inbox!",
     "doubleCompleteSubTitle": "Be the king of your friends by referring them to CyberSays and they’ll thank you forever... 👑",
-    "doubleCompleteBtn": "Share"
+    "doubleCompleteBtn": "Share",
+    "doubleTaskBtn1": "1/3: Register!",
+    "doubleTaskBtn2": "2/3: Deposit!",
+    "doubleTaskBtn3": "3/3: Spend!",
+    "referralShareBtn1": "Share Referral Link!",
+    "referralShareBtn2": "Link copied!"
 }
