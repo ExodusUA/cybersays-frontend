@@ -80,7 +80,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
                                 userCountry === 'BR' || userCountry === 'UA' ? user?.allTimeEarned.toFixed(0) * 5 : user?.allTimeEarned.toFixed(0)
                             }
                             {
-                                userCountry === 'BR' || userCountry === 'UA' ? ' BRL' : ''
+                                userCountry === 'BR' || userCountry === 'UA' ? ' R$' : ''
                             }
                         </p>
                         <p className='text-[12px] font-medium text-center saira leading-3 mb-2'>{languageData?.withdrawPrice}</p>
