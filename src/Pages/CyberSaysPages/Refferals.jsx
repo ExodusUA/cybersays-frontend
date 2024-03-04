@@ -28,6 +28,10 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
         }
     }, [selectedGif])
 
+    useEffect(() => {
+        console.log(selectedGif)
+    }, [selectedGif])
+
     const shareRefferalLink = () => {
         if (navigator.share) {
             navigator
@@ -61,9 +65,6 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
         e.preventDefault();
         setSelectedImage(uploadedPhotos[index]);
     };
-
-
-
 
     const [photoLoading, setPhotoLoading] = useState(false);
 
@@ -120,14 +121,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                     prevEl: '.buttonPrevGif',
                                     nextEl: '.buttonNextGif',
                                 }}
-
-                                onSlideChange={(swiper) => {
-                                    const realIndex = swiper.realIndex + 0;
-                                    setSelectedGif(realIndex);
-                                }}
-
                                 loop={true}
-
                                 breakpoints={{
                                     0: {
 

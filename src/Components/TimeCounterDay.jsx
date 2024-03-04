@@ -49,7 +49,7 @@ function TimeCounterDay({ languageData, hidden, title, left, leftTitle, block, s
                 </div>
             </div>
             <div className={`flex justify-center ${block}`}>
-                <Link to='/promotion-terms' target='_blank' > <p className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline cursor-pointer ${design === '0' ? 'text-[#FFED63]' : 'gradient-link '}`}>{languageData?.timeCounterLink}</p></Link>
+                <Link to='/contest-terms' target='_blank' > <p className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline cursor-pointer ${design === '0' ? 'text-[#FFED63]' : 'gradient-link '}`}>{languageData?.timeCounterLink}</p></Link>
             </div>
         </div>
     );

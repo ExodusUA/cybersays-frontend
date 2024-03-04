@@ -8,7 +8,7 @@ import userAPI from '../../../Requests/user'
 function Contact({ user, setOpen, languageData }) {
     const { design } = useDesign()
 
-    const [image, setImage] = useState(null)
+    const [images, setImages] = useState([])
     const inputRef = useRef(null)
     const [issue, setIssue] = useState('')
     const [selectedOption, setSelectedOption] = useState(0);
@@ -56,7 +56,8 @@ function Contact({ user, setOpen, languageData }) {
     }
 
     const handleUpload = async (image) => {
-
+        console.log(image)
+        setImages([...images, image])
         try {
             const upload = await userAPI.uploadAttachment(image)
             setFiles([...files, { token: upload.data.token, image: upload.data.thumbnail }])
@@ -65,8 +66,15 @@ function Contact({ user, setOpen, languageData }) {
         }
     }
 
+    const handleDeleteImage = (index) => {
+        let newImages = images.filter((image, i) => i !== index)
+        let newFiles = files.filter((file, i) => i !== index)
+        setImages(newImages)
+        setFiles(newFiles)
+    }
+
     return (
-        
+
         <div className='w-screen h-screen fixed top-0 z-[99999] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md  lg:flex items-center'>
             <div className='max-w-[600px] m-auto w-full p-4'>
                 <div className='flex justify-end'>
@@ -156,12 +164,14 @@ function Contact({ user, setOpen, languageData }) {
                             </svg></button>
                         <input ref={inputRef} type="file" onChange={e => handleUpload(e.target.files[0])} hidden />
 
+
                         {
-                            files.length > 0 && <div className='flex items-center mt-2'>
+                            files.length > 0 && <div className='grid grid-cols-1 mt-2'>
                                 {
                                     files.map((file, index) => {
-                                        return <div key={index} className='flex items-center'>
-                                            <img className='w-[100px] h-[100px] mr-2' src={file.image} alt="attachment" />
+                                        return <div key={index} className='flex items-center mb-2'>
+                                            <p className='saira text-[14px] mr-2'>{images[index].name}</p>
+                                            <img className='w-[20px] h-[20px]' onClick={e => handleDeleteImage(index)} src={design === '0' ? close : require('../../../images/NewDesign/closeBtn.png')} alt="Close" />
                                         </div>
                                     })
                                 }
