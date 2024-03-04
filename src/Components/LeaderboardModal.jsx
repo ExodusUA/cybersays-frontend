@@ -21,11 +21,11 @@ function LeaderboardModal({ setOpen, leaderboardData, loading, languageData, use
 
     const getDateLabel = (offset) => {
         if (offset === 0) {
-            return <LeaderboardList leaderboardData={leaderboardData.todayUsers} languageData={languageData} day={'Today'} />;
+            return <LeaderboardList leaderboardData={leaderboardData.todayUsers} languageData={languageData} day={languageData?.leaderSheetToday} />;
         } else if (offset === -1) {
-            return <LeaderboardList leaderboardData={leaderboardData.yesterdayUsers} languageData={languageData} day={'Yesterday'} />;
+            return <LeaderboardList leaderboardData={leaderboardData.yesterdayUsers} languageData={languageData} day={languageData?.leaderSheetYesterday} />;
         } else if (offset === -2) {
-            return <LeaderboardList leaderboardData={leaderboardData.dayBeforeYesterdayUsers} languageData={languageData} day={'2 days ago'} />;
+            return <LeaderboardList leaderboardData={leaderboardData.dayBeforeYesterdayUsers} languageData={languageData} day={languageData?.leaderSheetDayAgo} />;
         }
     };
     return (
