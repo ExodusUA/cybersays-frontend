@@ -9,7 +9,7 @@ import doubleIcon from '../../images/NewDesign/doubleIcon.svg'
 import { Link } from 'react-router-dom';
 import TaskCardDesktop from '../../Components/DoubleMoneyPage/TaskCardDesktop';
 
-function Double({ languageData, user, imLiveURL, setOpen }) {
+function Double({ languageData, user, imLiveURL, setOpen,setDoubleComplete }) {
 
     const { design } = useDesign()
 
@@ -69,17 +69,17 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
                 return <div className='max-w-[380px] w-full px-1'>
                     <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
                     <Link to={imLiveURL} target='_blank'> <button className={`w-full border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>1/3: Register!</button></Link>
-                    <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>7 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
+                    <p onClick={e => setDoubleComplete(true)} className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>7 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
                 </div>
             case 1: return <div className='max-w-[380px] w-full px-1'>
                 <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
                 <Link to={imLiveURL} target='_blank'><button className={`w-full bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>2/3: Deposit!</button></Link>
-                <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>5 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
+                <p onClick={e => setDoubleComplete(true)} className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>5 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
             </div>
             case 2: return <div className='max-w-[380px] w-full px-1'>
                 <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
                 <Link to={imLiveURL} target='_blank'><button className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>3/3: Spend!</button></Link>
-                <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>3 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
+                <p onClick={e => setDoubleComplete(true)} className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>3 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
             </div>
 
         }
@@ -119,7 +119,7 @@ function Double({ languageData, user, imLiveURL, setOpen }) {
                         taskStatus !== null && <>
                             <TaskCardDesktop tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task1} setSelectedTask={setSelectedTask} state={taskStatus[0]} manualSelect={selectedTask !== null} open={selectedTask === 1} background={design === '0' ? '#B9A1E1' : '#4F97CB'} rounded={'rounded-[20px]'} mt={'mt-5'}  index={1} imLiveURL={imLiveURL} />
                             <TaskCardDesktop tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task2} setSelectedTask={setSelectedTask} state={taskStatus[1]} manualSelect={selectedTask !== null} open={selectedTask === 2} background={design === '0' ? '#93CC8E' : '#32B28C'} rounded={'rounded-[20px]'} index={2} imLiveURL={imLiveURL} />
-                            <TaskCardDesktop tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task3} setSelectedTask={setSelectedTask} state={taskStatus[2]} manualSelect={selectedTask !== null} open={selectedTask === 3} background={design === '0' ? '#EA7C7C' : '#D76666'} rounded={'rounded-[20px] !pb-[5px]'} index={3} imLiveURL={imLiveURL} />
+                            <TaskCardDesktop setDoubleComplete={setDoubleComplete} tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task3} setSelectedTask={setSelectedTask} state={taskStatus[2]} manualSelect={selectedTask !== null} open={selectedTask === 3} background={design === '0' ? '#EA7C7C' : '#D76666'} rounded={'rounded-[20px] !pb-[5px]'} index={3} imLiveURL={imLiveURL} />
                             {/*<TaskCard user={user} tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task4} setSelectedTask={setSelectedTask} state={taskStatus[3]} manualSelect={selectedTask !== null} open={selectedTask === 4} background={design === '0' ? '#76C2E3' : '#9E64D8'} rounded={'rounded-[20px] !pb-[5px]'} index={4} imLiveURL={imLiveURL} />*/}
                         </>
                     }
