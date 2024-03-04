@@ -45,6 +45,7 @@ import Ticket from '../Components/Transactions/Modals/Ticket'
 import TransactionHistory from '../Components/Transactions/TransactionHistory'
 import TicketsHistory from '../Components/Transactions/TicketsHistory'
 import SocialLink from '../Components/SocialLink'
+import DoubleComplete from '../Components/DoubleComplete'
 
 var mixpanel = require('mixpanel-browser');
 
@@ -126,6 +127,7 @@ function Main({ languageData }) {
     const [ticketsModal, setTicketsModal] = useState(false)
     const [selectedButton, setSelectedButton] = useState('ticket');
     const [socialLink, setSocialLink] = useState(false)
+    const [doubleComplete, setDoubleComplete] = useState(false)
 
     const [selectedMessage, setSelectedMassege] = useState(null);
 
@@ -217,7 +219,7 @@ function Main({ languageData }) {
 
         let data = [];
 
-        if (userCountry === 'BR' ) {
+        if (userCountry === 'BR') {
             data = [require('../images/memes/pt/pt_1.png'), require('../images/memes/pt/pt_2.png'), require('../images/memes/pt/pt_3.png'), require('../images/memes/pt/pt_4.png'), require('../images/memes/pt/pt_5.png'), require('../images/memes/pt/pt_6.png'), require('../images/memes/pt/pt_7.png'), require('../images/memes/pt/pt_8.png'), require('../images/memes/pt/pt_9.png')];
         } else if (userCountry === 'ES') {
             data = [require('../images/memes/es/es_1.png'), require('../images/memes/es/es_2.png'), require('../images/memes/es/es_3.png'), require('../images/memes/es/es_4.png'), require('../images/memes/es/es_5.png'), require('../images/memes/es/es_6.png')]
@@ -309,7 +311,7 @@ function Main({ languageData }) {
                         <Homepage scrollToPage={scrollToPage} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Double setOpen={setWithdrawModal} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
+                        <Double setDoubleComplete={setDoubleComplete} setOpen={setWithdrawModal} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
                     </SwiperSlide>
                     <SwiperSlide>
                         <RaffleTickets setWinTicketModal={setWinTicketModal} scrollToPage={scrollToPage} setWinModal={setWinModal} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} setTourModal={setTourModal} />
@@ -423,7 +425,10 @@ function Main({ languageData }) {
             {
                 toolInfo && <ToolTipInfo setToolInfo={setToolInfo} languageData={languageData} />
             }
-
+            {
+                doubleComplete && <DoubleComplete setOpen={setDoubleComplete} languageData={languageData} user={userData} />
+            }
+            
         </>
     )
 }

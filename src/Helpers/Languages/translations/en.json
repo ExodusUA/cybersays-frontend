@@ -26,7 +26,7 @@
                     "taskImage": "images/bg-mobile-Task1.png",
                     "newTaskImage": "images/newTask/bg_task1.png",
                     "taskImageDesk": "images/BgTaskDesk1.png",
-                    "newTaskImageDesk": "images/newTask/bg_task1.png",
+                    "newTaskImageDesk": "images/BgNewTaskDesk1.png",
                     "taskText": "Enjoy ImLive, be treated like a KING 👑 - and fulfill your wildest fantasies!"
                 }
             ],
@@ -40,8 +40,8 @@
                     "taskImage": "images/bg-mobile-Task2.png",
                     "newTaskImage": "images/newTask/bg_task2.png",
                     "taskImageDesk": "images/BgTaskDesk2.png",
-                    "newTaskImageDesk": "images/newTask/bg_task2.png",
-                    "taskText": "Purchase 5 credits with 5$. ImLive will double the credits and give you 10 👑"
+                    "newTaskImageDesk": "images/BgNewTaskDesk2.png",
+                    "taskText": "Deposit $5... ImLive will double the credit. CyberSays will double the dollars!"
                 }
             ],
             "taskButton": "2/3 Deposit!"
@@ -54,7 +54,7 @@
                     "taskImage": "images/bg-mobile-Task3.png",
                     "newTaskImage": "images/newTask/bg_task3.png",
                     "taskImageDesk": "images/BgTaskDesk3.png",
-                    "newTaskImageDesk": "images/newTask/bg_task3.png",
+                    "newTaskImageDesk": "images/BgNewTaskDesk3.png",
                     "taskText": "Spend your 10 ImLive credits, be treated like a king, and get $10 cash when you’re done!"
                 }
             ],
