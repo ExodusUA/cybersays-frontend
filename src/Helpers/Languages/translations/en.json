@@ -527,5 +527,9 @@
     "raffleBotLink2": "You will need to double your money",
     "doubleBtnTitle": "CyberSays commands you to...",
     "doubleBtnAway": "minutes away",
-    "doubleBtnFrom": "from withdraw"
+    "doubleBtnFrom": "from withdraw",
+    "doubleCompleteTitle": "Congratulations! Your $10 awaits in your",
+    "doubleCompleteTitleSpan": "inbox!",
+    "doubleCompleteSubTitle": "Be the king of your friends by referring them to CyberSays and they’ll thank you forever... 👑",
+    "doubleCompleteBtn": "Share"
 }
