@@ -69,25 +69,25 @@ function Double({ languageData, user, imLiveURL, setOpen,setDoubleComplete }) {
                 return <div className='max-w-[380px] w-full px-1'>
                     <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
                     <Link to={imLiveURL} target='_blank'> <button className={`w-full border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>1/3: Register!</button></Link>
-                    <p onClick={e => setDoubleComplete(true)} className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>7 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
+                    <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>7 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
                 </div>
             case 1: return <div className='max-w-[380px] w-full px-1'>
                 <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
                 <Link to={imLiveURL} target='_blank'><button className={`w-full bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>2/3: Deposit!</button></Link>
-                <p onClick={e => setDoubleComplete(true)} className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>5 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
+                <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>5 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
             </div>
             case 2: return <div className='max-w-[380px] w-full px-1'>
                 <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
                 <Link to={imLiveURL} target='_blank'><button className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>3/3: Spend!</button></Link>
-                <p onClick={e => setDoubleComplete(true)} className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>3 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
+                <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>3 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
             </div>
 
         }
     }
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-double.jpg)] md:bg-[url(./images/CyberSaysPage/bg-double.jpg)]' : ' bg-[#200527]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} onClick={() => setIsOpen(false)}>
-            <div className='pt-[57px] md:pt-[90px] px-4  mac-center:!pt-0 max-w-[1170px] m-auto' >
-                <img className='se:w-[170px]  w-[170px] iphone:w-[240px] double-img-width md:w-[320px] m-auto se:mb-[-3%] iphone:mb-[-13px] lg:mb-[-20px]  relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
+            <div className='pt-[57px] md:pt-[80px] px-4  mac-center:!pt-0 max-w-[1170px] m-auto' >
+                <img className='se:w-[170px]  w-[170px] iphone:w-[240px] double-img-width md:w-[320px] m-auto se:mb-[-3%] iphone:mb-[-13px] lg:mb-[-10px]  relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
                 <div className='mac:max-w-[550px] md:max-w-[1200px] md:mx-[120px] m-auto mt-[10px] md:mt-0'>
                     <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  text-center se:max-w-[280px] iphone:max-w-[unset] m-auto py-2  px-4 md:py-2 ${design === '0' ? 'rounded-[100px]' : 'rounded-[14px]'}`}>
                         <p className='text-[14px] iphone:text-[18px] md:text-[28px] mac2:text-[14px] font-semibold  iphone:leading-[unset] se:leading-4 mac2:!leading-[22px]'>{languageData?.doubleTitle}</p>
@@ -95,7 +95,7 @@ function Double({ languageData, user, imLiveURL, setOpen,setDoubleComplete }) {
                     </div>
                 </div>
 
-                <p className={`text-[12px] md:text-[14px] ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble font-semibold'}  text-center cursor-pointer flex items-center justify-center iphone:py-2 md:py-2 mb-5 double-subtitle mt-0 iphone:mt-[60px] md:mt-0`}>
+                <p className={`text-[12px] md:text-[14px] ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble font-semibold'}  text-center cursor-pointer flex items-center justify-center iphone:py-2 md:py-2 mb-5 double-subtitle mt-0 iphone:mt-[60px] contentForDouble md:mt-[80px]`}>
                     {languageData?.doubleSubtitleSpan}
                     <span className='mx-1'>
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">

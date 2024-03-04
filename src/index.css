@@ -380,6 +380,15 @@ body {
     .timeCounter-title {
         font-size: 22px !important;
     }
+    .contentForDesktop {
+        margin-top: 0px !important;
+    }
+    .contentForCompetitions {
+        margin-top: 8px !important;
+    }
+    .contentForDouble {
+        margin-top: 40px !important;
+    }
 }
 
 @media screen and (max-height: 870px) and (min-width: 1200px) {

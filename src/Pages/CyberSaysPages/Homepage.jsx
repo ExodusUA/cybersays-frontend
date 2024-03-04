@@ -53,14 +53,14 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
 
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-homepage.jpg)] md:bg-[url(./images/CyberSaysPage/bg-homepage.jpg)]' : ' bg-[#200527]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`}>
-            <div className='pt-[57px]  md:pt-[90px] mac-center:!pt-0 px-4 pb-12 max-w-[1170px] m-auto'>
+            <div className='pt-[57px]  md:pt-[80px] mac-center:!pt-0 px-4 pb-12 max-w-[1170px] m-auto'>
                 <div className='max-w-[300px] m-auto'>
 
                     <p className=' text-[18px] md:text-[32px] font-semibold'></p>
                 </div>
                 <img className='se:w-[170px]  w-[170px] iphone:w-[240px] mac2:w-[170px] md:w-[320px] m-auto se:mb-[0px] iphone:mb-[-10px]  relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
                 <div>
-                    <div className='lg:flex justify-between items-end md:items-center mt-0 iphone:mt-[50px] md:mt-0'>
+                    <div className='lg:flex justify-between items-end md:items-center mt-0 iphone:mt-[50px] contentForDesktop md:mt-[70px]'>
                         <div className='w-full lg:hidden block mb-2'>
                             <Swiper
                                 modules={[Autoplay]}

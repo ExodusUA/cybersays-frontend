@@ -16,12 +16,11 @@ function DoubleComplete({ setOpen, languageData, user }) {
     const { design } = useDesign()
 
     return (
-        <div className='w-screen h-screen fixed top-0 z-[99999] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 lg:flex'>
-            <div className='max-w-[600px] m-auto relative'>
-                <div className='flex justify-end md:my-4 lg:mb-10 lg:absolute right-0 top-[-70px]'>
+        <div className='w-screen h-screen fixed top-0 z-[99999] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 flex'>
+            <div className='max-w-[600px] m-auto relative w-full'>
+                <div className='flex justify-end md:my-4 lg:mb-10 absolute right-0 top-[-110px] lg:top-[-70px]'>
                     <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
-
                 <div className='  max-w-[600px] m-auto '>
                     <p className='text-[24px] md:text-[32px] font-semibold text-center leading-8 lg:leading-9 mx-2'>{languageData?.doubleCompleteTitle} <span className=' truncate text-[24px] md:text-[32px] font-semibold ml-1 block lg:inline'>
                         {user?.email}
