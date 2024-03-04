@@ -8,7 +8,6 @@ import Error from './Error'
 import Verification from './Verification'
 import PIX from './PIX'
 import userAPI from '../../Requests/user'
-import mixpanel from 'mixpanel-browser'
 
 
 function Withdraw({ user, setOpen, languageData, userCountry }) {
@@ -58,7 +57,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
         <div>
             <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4'>
                 <div className={`flex ${step === 0 ? 'justify-end' : ' justify-between'}  max-w-[600px] m-auto md:my-4`}>
-                    <svg onClick={e => { if (step === 0) return; setStep(step - 1) }} className={`${step === 0 ? 'hidden' : 'block'} cursor-pointer`} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <svg onClick={e => { if (step === 0) return; setStep(selectedPayment === 'pix' ? 0 : step - 1) }} className={`${step === 0 ? 'hidden' : 'block'} cursor-pointer`} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M17 22L7 12L17 2" stroke="url(#paint0_linear_26_11821)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         <defs>
                             <linearGradient id="paint0_linear_26_11821" x1="17" y1="11.8039" x2="7" y2="11.8039" gradientUnits="userSpaceOnUse">
@@ -80,14 +79,11 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
                             {
                                 userCountry === 'BR' || userCountry === 'UA' ? user?.allTimeEarned.toFixed(0) * 5 : user?.allTimeEarned.toFixed(0)
                             }
-                             {
+                            {
                                 userCountry === 'BR' || userCountry === 'UA' ? ' BRL' : ''
                             }
                         </p>
                         <p className='text-[12px] font-medium text-center saira leading-3 mb-2'>{languageData?.withdrawPrice}</p>
-
-                       
-
                     </div>
                 </div>
                 {
@@ -110,7 +106,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
 
                         </div>
                         <div className='flex justify-center mt-4'>
-                            <button onClick={e => setStep(3)} className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-2 max-w-[350px] outline-none  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>
+                            <button onClick={e => setStep(selectedPayment === 'pix' ? 3 : 1)} className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-2 max-w-[350px] outline-none  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>
                         </div>
                     </div>
                 }
