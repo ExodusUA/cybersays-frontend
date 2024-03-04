@@ -47,7 +47,7 @@ function Auth({ languageData }) {
                                 <Language />
                             </div>
                     <div className='w-full text-center bg-dark lg:w-[620px] h-full lg:absolute lg:left-10 top-10'>
-                        <div className='w-[90%] lg:w-[620px] m-auto lg:relative z-10'>
+                        <div className='w-[90%] lg:w-[640px] m-auto lg:relative z-10'>
 
                             
 
