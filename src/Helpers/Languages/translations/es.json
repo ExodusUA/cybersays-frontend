@@ -23,9 +23,12 @@
             "taskTitleOpen": "Registrarse en ImLive 🎉",
             "taskBlocks": [
                 {
-                    "taskImage": "imagenes\/bg-movil-Tarea1.png",
-                    "taskText": "Disfruta de ImLive, recibe el trato de la REALEZA 👑, ¡y cumple tus fantasías más salvajes!",
-                    "newTaskImage": "images\/newTask\/bg_task1.png"
+                    "taskImage": "images/bg-mobile-Task1.png",
+                    "newTaskImage": "images/newTask/bg_task1.png",
+                    "taskImageDesk": "images/BgTaskDesk1.png",
+                    "newTaskImageDesk": "images/BgNewTaskDesk1.png",
+                    "taskText": "Disfruta de ImLive, recibe el trato de la REALEZA 👑, ¡y cumple tus fantasías más salvajes!"
+                    
                 }
             ],
             "taskButton": "1\/4 ¡Registrarse!"
@@ -35,9 +38,11 @@
             "taskTitleOpen": "Introducción de un Rey a ImLive: deposita $5, recibe $10 de vuelta y:",
             "taskBlocks": [
                 {
-                    "taskImage": "images\/bg-mobile-Task2.png",
-                    "taskText": "Deposita $5... ImLive duplicará el crédito. ¡CyberSays duplicará los dólares!",
-                    "newTaskImage": "images\/newTask\/bg_task2.png"
+                    "taskImage": "images/bg-mobile-Task2.png",
+                    "newTaskImage": "images/newTask/bg_task2.png",
+                    "taskImageDesk": "images/BgTaskDesk2.png",
+                    "newTaskImageDesk": "images/BgNewTaskDesk2.png",
+                    "taskText": "Deposita $5... ImLive duplicará el crédito. ¡CyberSays duplicará los dólares!"
                 }
             ],
             "taskButton": "2\/4 ¡Depositar!"
@@ -47,9 +52,11 @@
             "taskTitleOpen": "Gasta tus créditos y duplica tu dinero:",
             "taskBlocks": [
                 {
-                    "taskImage": "images\/bg-mobile-Task3.png",
-                    "taskText": "Gasta tus 10 créditos en ImLive, recibe el trato de la realeza y obtén $10 en efectivo al terminar.",
-                    "newTaskImage": "images\/newTask\/bg_task3.png"
+                    "taskImage": "images/bg-mobile-Task3.png",
+                    "newTaskImage": "images/newTask/bg_task3.png",
+                    "taskImageDesk": "images/BgTaskDesk3.png",
+                    "newTaskImageDesk": "images/BgNewTaskDesk3.png",
+                    "taskText": "Gasta tus 10 créditos en ImLive, recibe el trato de la realeza y obtén $10 en efectivo al terminar."
                 }
             ],
             "taskButton": "Gastar"
@@ -118,7 +125,7 @@
     "refferalsInfo1": "Serás la persona que envía a tus amigos a duplicar su dinero y divertirse 👬",
     "refferalsInfo2": "Por cada amigo que duplique el dinero, recibirás 30 tickets de sorteo y $1 🃏",
     "refferalsInfo3": "Si tus amigos duplican su dinero, puedes llevarlos a Las Vegas si ganas el sorteo, y ellos pueden llevarte si ganan y aceptaste la oferta de duplicar el dinero",
-    "competitionTitle": "La ",
+    "competitionTitle": "Win the 69$ Daily Competition!",
     "competitionTitleSpan": "competencia diaria",
     "competitionPoints": "Puntos",
     "competitionSubtitle": "Los 3 primeros lugares reciben $69 cada uno, del 4 al 10 reciben $6.90 cada uno",
@@ -131,6 +138,7 @@
     "competitionRightSection2": "10 puntos",
     "competitionRightLink1": "Rankings",
     "competitionRightRules": "Reglas de la competencia",
+    "competitionOverBtn": "Get as many points as you can to win the 100$ daily competition:",
     "header1": "Ganado:",
     "header2": "Puntos:",
     "header3": "Tickets para Las Vegas:",
@@ -482,7 +490,54 @@
     "winTicketBtn": "Ir a la página Duplica Tu Dinero",
     "winTicketEnd": "¡Buena suerte!",
     "winTicketLink": "Ir a los términos completos de la Promoción Vegas",
-    "leaderSheetYou": "Tú:",
+    "leaderSheetYou": "Tu lugar hoy:",
     "leaderSheetPoints": "Puntos de competencia",
-    "leaderSheetFriends": "Amigos referidos"
+    "leaderSheetFriends": "Amigos referidos",
+    "infoOfferTitle": "What do I get when I refer a friends that completes the “Double your money” offer?",
+    "infoOfferPoint1": "A friend that will thank you for making him free money",
+    "infoOfferPoint2": "1$ you can withdraw as cash immediately",
+    "infoOfferPoint3": "30 Vegas Tickets that better your chance to win the Vegas promotion",
+    "infoOfferPoint4": "10  69$ daily competition points that gets you closer to the top 10",
+    "infoOfferPoint5": "A friend you can pick to Vegas if you win the promotion",
+    "infoOfferPoint6": "Your friend will be able to pick you to Vegas if they won the promotion and you completed the “Double your money” offer",
+    "earnedModalTitle": "Latest USD earnings",
+    "TicketModalTitle": "Latest Vegas Tickets earnings",
+    "PointsModalTitle": "Latest contest points earnings",
+    "earnedModalLink": "View full information",
+    "toolInfoLeft1": "Action",
+    "toolInfoPoint1": "USD earned",
+    "toolInfoPoint2": "Points",
+    "toolInfoPoint3": "Tickets",
+    "contactQuestionTitle": "What is your issue?",
+    "contactQuestion1": "I didn't receive my money",
+    "contactQuestion2": "I didn't receive my competition points",
+    "contactQuestion3": "I didn't receive my Vegas tickets",
+    "contactQuestion4": "I have issues with my account",
+    "contactQuestion5": "Forgot my password",
+    "contactQuestion6": "Complaints",
+    "contactQuestion7": "Others - please write about it",
+    "contactQuestionEmail": "Your email",
+    "contactQuestionDesc": "Description",
+    "contactQuestionAttach": "Attach files",
+    "contactConfirmTitle": "Your message has been sent! We will contact you soon",
+    "contactConfirmBtn": "Continue",
+    "timeCounterLink": "*Subject to the daily competition Terms and conditions",
+    "raffleBotLink1": "👬Can I still go to Vegas if my ticket didn’t win? 👬",
+    "raffleBotLink2": "You will need to double your money",
+    "doubleBtnTitle": "CyberSays commands you to...",
+    "doubleBtnAway": "minutes away",
+    "doubleBtnFrom": "from withdraw",
+    "doubleCompleteTitle": "Congratulations! Your $10 awaits in your",
+    "doubleCompleteTitleSpan": "inbox!",
+    "doubleCompleteSubTitle": "Be the king of your friends by referring them to CyberSays and they’ll thank you forever... 👑",
+    "doubleCompleteBtn": "Share",
+    "doubleTaskBtn1": "1/3: Register!",
+    "doubleTaskBtn2": "2/3: Deposit!",
+    "doubleTaskBtn3": "3/3: Spend!",
+    "referralShareBtn1": "Share Referral Link!",
+    "referralShareBtn2": "Link copied!",
+    "ModalMenuToggle": "Choose your design",
+    "leaderSheetToday": "Today",
+    "leaderSheetYesterday": "Yesterday",
+    "leaderSheetDayAgo": "2 days ago"
 }

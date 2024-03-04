@@ -80,7 +80,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                 changeDesign(design === '1' ? '0' : '1')
               }} type="checkbox" checked={checkBox === '1' ? false : true} class="sr-only peer" />
               <div class={`w-[56px] md:w-[72px] border-[2px] h-8 md:h-10  peer-focus:outline-none rounded-full peer  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:start-[4px]  ${design === '0' ? 'after:bg-[#FFED63] border-[#FFED63]' : 'after:bg-[#80d1ee] border-[#80d1ee]'}   after:rounded-full after:h-6 md:after:h-8 after:w-6 md:after:w-8 after:transition-all`}></div>
-              <p className='text-[10px] lg:text-[12px] saira font-medium text-center absolute w-[110px] left-[-25px] lg:left-[-15px]'>Choose your design</p>
+              <p className='text-[10px] lg:text-[12px] saira font-medium text-center absolute w-[110px] left-[-25px] lg:left-[-15px]'>{languageData?.ModalMenuToggle}</p>
             </label>
             <p className='saira text-white font-semibold text-[12px] lg:text-[20px] mr-4'><img className='w-[24px] lg:w-[40px] rounded-full' src={toggleTheme1} alt="toggleTheme1" /></p>
             <NewLanguageButton />

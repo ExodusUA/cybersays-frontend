@@ -26,7 +26,7 @@ function HeaderMenu({ setMenuOpen, user, setTourModal, languageData, userCountry
                         <div className=''>
                             <div className='xl:gap-4 flex px-2 sm:px-4 py-[4px] sm:py-[5px] justify-between'>
                                 <div onClick={e => setEarnedModal(true)} className=' leading-4 md:leading-5 mx-1 cursor-pointer'>
-                                    <p className={`text-[12px] sm:text-[16px]  ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-medium saira text-center `}>{userCountry === 'BR' || userCountry === 'UA' ? 'BRL' : 'USD'} {languageData?.header1}</p>
+                                    <p className={`text-[12px] sm:text-[16px]  ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-medium saira text-center `}>{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : 'USD'} {languageData?.header1}</p>
                                     <p className={`text-[12px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-bold saira text-center flex justify-center items-center`}><img className='w-[16px] h-[16px] mr-[5px]' src={design === '0' ? money : require('../../images/NewDesign/header/dollar.png')} alt="money" />
                                         {
                                             userCountry === 'BR' || userCountry === 'UA'

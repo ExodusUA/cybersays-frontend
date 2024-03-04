@@ -389,6 +389,9 @@ body {
     .contentForDouble {
         margin-top: 40px !important;
     }
+    .contentHomepage {
+        margin-top: 20px !important;
+    }
 }
 
 @media screen and (max-height: 870px) and (min-width: 1200px) {

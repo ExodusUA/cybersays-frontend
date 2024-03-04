@@ -75,7 +75,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                     <div className='iphone:mt-[40px] md:mt-0'>
                         <img className={`se:w-[280px] iphone:w-[385px]  ${design === '0' ? 'md:w-[770px] mac2:!mt-[-150px]' : 'md:w-[990px] mac-img-width mt-[-110px] mac2:mt-[-110px] iphone:mt-[-30px]'} iphone:mt-[-60px] mob:mt-0 m-auto md:mt-[-100px] mt-[0px] mac2:mt-[-50px] se:mt-[-30px]  `} src={design === '0' ? hero : require('../../images/NewDesign/RaffleTicket/hero_image.png')} alt="heroRaffle" />
 
-                        <div  className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[30px] text-center flex py-1 md:py-3   px-2  ${isTaskCompleted === false && ' md:mt-[-185px] iphone:mt-[-20px] se:mt-[-80px] mac-overflow-fix'} justify-center relative z-1`} >
+                        <div  className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[30px] text-center flex py-1 md:py-3   px-2  ${isTaskCompleted === false && ' md:mt-[-175px] iphone:mt-[-20px] se:mt-[-80px] mac-overflow-fix'} justify-center relative z-1`} >
                             {
 
                                 isTaskCompleted === false
@@ -214,7 +214,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                             </div>
                     }
                 </div>
-                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] py-1 mt-2'>
+                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] py-1 contentForCompetitions mt-2 lg:mt-[20px]'>
                     <p className='  text-[12px] md:text-[14px] font-semibold saira text-center text-[#FBC215]'>
                     {languageData?.raffleBotLink1}
                     </p>

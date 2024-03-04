@@ -131,7 +131,7 @@
     "refferalsInfo3": "If your friends double their money, you can take them to Vegas if you win the promotion, and they can take you if they win and you took the double-the-money offer",
     "competitionTitle": "Win the 69$ Daily Competition!",
     "competitionTitleSpan": "daily competition",
-    "competitionPoints": "Contest Points",
+    "competitionPoints": "Competition Points",
     "competitionSubtitle": "First 2 places get $69 each, 3-10 $6.90 each.",
     "competitionLeftBtn": "Enjoy ImLive 💃",
     "competitionLeftSection1": "1 credit bought =",
@@ -144,7 +144,7 @@
     "competitionRightRules": "Rules of the competition",
     "competitionOverBtn": "Get as many points as you can to win the 100$ daily competition:",
     "header1": "Earned:",
-    "header2": "Contest Points:",
+    "header2": "Competition Points",
     "header3": "Vegas Tickets:",
     "modalMenuLink1": "Home page",
     "modalMenuLink2": "Double your money",
@@ -537,5 +537,10 @@
     "doubleTaskBtn2": "2/3: Deposit!",
     "doubleTaskBtn3": "3/3: Spend!",
     "referralShareBtn1": "Share Referral Link!",
-    "referralShareBtn2": "Link copied!"
+    "referralShareBtn2": "Link copied!",
+    "ModalMenuToggle": "Choose your design",
+    "leaderSheetToday": "Today",
+    "leaderSheetYesterday": "Yesterday",
+    "leaderSheetDayAgo": "2 days ago"
+    
 }
