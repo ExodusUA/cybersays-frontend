@@ -141,7 +141,7 @@ function LoginForm({ languageData, referralID }) {
                             <div className={`${showButtons ? '' : 'hidden'}`}>
                                 <div className='flex items-center justify-between w-full mt-2 lg:mt-4 gap-1 lg:gap-4'>
                                     <GoogleAuth loginViaGoogle={loginViaGoogle} languageData={languageData} />
-                                    <FacebookButton loginViaFacebook={loginViaFacebook} languageData={languageData} />
+                                    {/*<FacebookButton loginViaFacebook={loginViaFacebook} languageData={languageData} />*/}
                                     <DiscordButton languageData={languageData} />
                                 </div>
                                 

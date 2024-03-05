@@ -125,7 +125,6 @@
     "refferalsInfo1": "Serás la persona que envía a tus amigos a duplicar su dinero y divertirse 👬",
     "refferalsInfo2": "Por cada amigo que duplique el dinero, recibirás 30 tickets de sorteo y $1 🃏",
     "refferalsInfo3": "Si tus amigos duplican su dinero, puedes llevarlos a Las Vegas si ganas el sorteo, y ellos pueden llevarte si ganan y aceptaste la oferta de duplicar el dinero",
-    "competitionTitle": "Win the 69$ Daily Competition!",
     "competitionTitleSpan": "competencia diaria",
     "competitionPoints": "Puntos",
     "competitionSubtitle": "Los 3 primeros lugares reciben $69 cada uno, del 4 al 10 reciben $6.90 cada uno",
@@ -550,5 +549,13 @@
 
     "earnedModalTitleBR": "Latest R$ earnings",
     "modalMenuLink14": "Read More",
-    "raffleSubTitleLink": "What’s the Vegas Promotion?"
+    "raffleSubTitleLink": "What’s the Vegas Promotion?",
+    "competitionTitle": "Win the 69$ Daily Competition!",
+    "leaderboardsNotUser": "There are no more users",
+    "NamePage1": "Homepage",
+    "NamePage2": "Double your money",
+    "NamePage3": "Vegas Weekend<",
+    "NamePage4": "Competition",
+    "NamePage5": "My referrals",
+    "withdrawGiftTitle": "Gift Card / Cash"
 }

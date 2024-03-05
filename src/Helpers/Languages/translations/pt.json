@@ -124,7 +124,7 @@
     "refferalsInfo1": "Você será a pessoa que permite aos seus amigos cobrando seu dinheiro e se divertirem 👬",
     "refferalsInfo2": "Para cada amigo que dobrar o dinheiro, você receberá 30 bilhetes de sorteio e 1$ 🃏",
     "refferalsInfo3": "Se seus amigos dobrarem o dinheiro, você pode levá-los para Las Vegas se ganhar o sorteio, ou eles podem te levar se ganharem, e se você tiver concluído a oferta de dobrar o dinheiro",
-    "competitionTitle": "Win the 69$ Daily Competition!",
+    
     "competitionTitleSpan": "competição diária",
     "competitionPoints": "Pontos",
     "competitionSubtitle": "Os 3 primeiros lugares recebem $69 cada, do 4º ao 10º $6.90 cada",
@@ -528,7 +528,7 @@
     "raffleBotLink2": "Você precisará dobrar seu dinheiro",
     "doubleBtnTitle": "O CyberSays ordena que...",
     "doubleBtnAway": "minutos de distância",
-    "doubleBtnFrom": "da sacar",
+    "doubleBtnFrom": "de sacar",
     "doubleCompleteTitle": "Parabéns! Seus US$10 te aguardam em sua",
     "doubleCompleteTitleSpan": "caixa de entrada!",
     "doubleCompleteSubTitle": "Seja o rei do camarote indicando seus amigos à CyberSays e eles lhe agradecerão para sempre... 👑",
@@ -549,5 +549,13 @@
 
     "earnedModalTitleBR": "Latest R$ earnings",
     "modalMenuLink14": "Read More",
-    "raffleSubTitleLink": "What’s the Vegas Promotion?"
+    "raffleSubTitleLink": "What’s the Vegas Promotion?",
+    "competitionTitle": "Win the 69$ Daily Competition!",
+    "leaderboardsNotUser": "There are no more users",
+    "NamePage1": "Homepage",
+    "NamePage2": "Double your money",
+    "NamePage3": "Vegas Weekend<",
+    "NamePage4": "Competition",
+    "NamePage5": "My referrals",
+    "withdrawGiftTitle": "Gift Card / Cash"
 }

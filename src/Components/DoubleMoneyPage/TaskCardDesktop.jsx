@@ -4,7 +4,7 @@ import done from '../../images/CyberSaysPage/card_done.png'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import mixpanel from 'mixpanel-browser'
 
-function TaskCardDesktop({ state, background, data, index, imLiveURL, rounded, open, manualSelect, setSelectedTask, tasks, user, mt }) {
+function TaskCardDesktop({ state, background, data, index, imLiveURL, rounded, open, manualSelect, setSelectedTask, tasks, user, mt,languageData }) {
 
     const { design } = useDesign()
 
@@ -86,7 +86,7 @@ function TaskCardDesktop({ state, background, data, index, imLiveURL, rounded, o
                     user_email: user?.email,
                     page: 'Double your Money'
                 });
-            }} className={`saira text-[14px] cursor-pointer underline text-center  pt-1 pb-0 font-semibold mb-[-5px]  ${linkCopied === true ? 'opacity-60' : ''}`}>Copy link</p>
+            }} className={`saira text-[14px] cursor-pointer underline text-center  pt-1 pb-0 font-semibold mb-[-5px]  ${linkCopied === true ? 'opacity-60' : ''}`}>{languageData?.CopyLink}</p>
         </>
     }
 
@@ -147,7 +147,7 @@ function TaskCardDesktop({ state, background, data, index, imLiveURL, rounded, o
 
     return (
 
-        <div onClick={e => setSelectedTask(index)} style={{ background: getBackground(), paddingBottom: getPaddingBottom(), marginTop: marginTop() }} className={`w-full rounded-t-[20px] ${rounded} bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  se:p-[6px]  p-2 se:my-0 my-2 mx-1`}>
+        <div onClick={e => setSelectedTask(index)} style={{ background: getBackground(), paddingBottom: getPaddingBottom(), marginTop: marginTop() }} className={`w-full rounded-t-[20px] ${rounded} bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  se:p-[6px]  p-2 se:my-0 my-2 mx-1 custom-borderTask  ${open ? design === '0' ? ' border-[3px]  !border-[#FFD700]' : 'border-[3px]  !border-[#A2DBF0]' : ''}`}>
 
 
             {

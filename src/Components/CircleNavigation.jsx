@@ -10,7 +10,7 @@ import link4 from '../images/CyberSaysPage/iconRefferals.png'
 import link5 from '../images/CyberSaysPage/iconTicket.png'
 import { useDesign } from '../Helpers/Design/DesignContext'
 
-function CircleNavigation({ setActivePageIndex, activePageIndex }) {
+function CircleNavigation({ setActivePageIndex, activePageIndex, languageData }) {
 
     const { design } = useDesign()
 
@@ -88,7 +88,7 @@ function CircleNavigation({ setActivePageIndex, activePageIndex }) {
                         <div className={`text-black relative text-center duration-200 flex justify-center ${currentSlide === 0 ? 'top-0' : 'top-8 md:top-[60px]'}`}>
                             <div>
                                 <img className={`w-[32px] h-[32px] md:w-[48px] md:h-[48px] m-auto ${design === '0' ? '' : currentSlide === 0 ? 'border-[2px] border-[#FDA52F] rounded-full' : 'border-[2px] border-[#A2DBF0] rounded-full'}  `} src={design === '0' ? link1 : require('../images/NewDesign/circleMenu/page1.png')} alt="link1" />
-                                <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>Homepage</p>
+                                <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>{languageData?.NamePage1}</p>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -96,7 +96,7 @@ function CircleNavigation({ setActivePageIndex, activePageIndex }) {
                         <div className={`text-black relative text-center duration-200 flex justify-center  m-auto  ${currentSlide === 1 ? 'top-0' : 'top-8 md:top-[60px]'}`}>
                             <div>
                                 <img className={`w-[32px] h-[32px] md:w-[48px] md:h-[48px] m-auto ${design === '0' ? '' : currentSlide === 1 ? 'border-[2px] border-[#FDA52F] rounded-full' : 'border-[2px] border-[#A2DBF0] rounded-full'}`} src={design === '0' ? link3 : require('../images/NewDesign/circleMenu/page3.png')} alt="link3" />
-                                <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2 '>Double your money</p>
+                                <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2 '>{languageData?.NamePage2}</p>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -104,7 +104,7 @@ function CircleNavigation({ setActivePageIndex, activePageIndex }) {
                         <div className={`text-black relative text-center duration-200 flex justify-center  ${currentSlide === 2 ? 'top-0' : 'top-8 md:top-[60px]'}`}>
                             <div>
                                 <img className={`w-[32px] h-[32px] md:w-[48px] ${design === '0' ? 'md:h-[42px]' : 'md:h-[48px]'}  m-auto ${design === '0' ? '' : currentSlide === 2 ? 'border-[2px] border-[#FDA52F] rounded-full' : 'border-[2px] border-[#A2DBF0] rounded-full'}`} src={design === '0' ? link5 : require('../images/NewDesign/circleMenu/page2.png')} alt="link5" />
-                                <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>Vegas Weekend</p>
+                                <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>{languageData?.NamePage3}</p>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -112,7 +112,7 @@ function CircleNavigation({ setActivePageIndex, activePageIndex }) {
                         <div className={`text-black relative text-center duration-200 flex justify-center  ${currentSlide === 3 ? 'top-0' : 'top-8 md:top-[60px]'}`}>
                             <div>
                                 <img className={`w-[32px] h-[32px] md:w-[48px] md:h-[48px] m-auto ${design === '0' ? '' : currentSlide === 3 ? 'border-[2px] border-[#FDA52F] rounded-full' : 'border-[2px] border-[#A2DBF0] rounded-full'}`} src={design === '0' ? link2 : require('../images/NewDesign/circleMenu/page2.png')} alt="link2" />
-                                <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>Competition</p>
+                                <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>{languageData?.NamePage4}</p>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -120,7 +120,7 @@ function CircleNavigation({ setActivePageIndex, activePageIndex }) {
                         <div className={`text-black relative text-center duration-200 flex justify-center ${currentSlide === 4 ? 'top-0' : 'top-8 md:top-[60px]'}`}>
                             <div>
                                 <img className={`w-[32px] h-[32px] md:w-[48px]  md:h-[48px] m-auto ${design === '0' ? '' : currentSlide === 4 ? 'border-[2px] border-[#FDA52F] rounded-full' : 'border-[2px] border-[#A2DBF0] rounded-full'}`} src={design === '0' ? link4 : require('../images/NewDesign/circleMenu/page4.png')} alt="link4" />
-                                <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>My referrals</p>
+                                <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>{languageData?.NamePage5}</p>
                             </div>
                         </div>
                     </SwiperSlide>

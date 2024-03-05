@@ -57,7 +57,7 @@ function LeaderboardList({ leaderboardData, languageData, day }) {
                 {
                     leaderboardData.length < 4
                         ? <div className='w-full flex justify-center my-8'>
-                            <p>There are no more users</p>
+                            <p>{languageData?.leaderboardsNotUser}There are no more users</p>
                         </div>
 
                         : leaderboardData.slice(3).map((user, index) => {
