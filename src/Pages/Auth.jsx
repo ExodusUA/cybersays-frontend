@@ -59,11 +59,11 @@ function Auth({ languageData }) {
                                                 {languageData?.authSlide1}
 
                                                 <div className=' leading-6 mt-2'>
-                                                    <p className='text-[12px] font-bold'>{languageData?.authSlide1li1}</p>
+                                                    <p className='text-[12px] lg:text-[20px] lg:mt-1 font-bold'>{languageData?.authSlide1li1}</p>
 
-                                                    <p className='text-[12px] font-bold'>{languageData?.authSlide1li2}</p>
+                                                    <p className='text-[12px] lg:text-[20px] lg:mt-1 font-bold'>{languageData?.authSlide1li2}</p>
 
-                                                    <p className='text-[12px] font-bold'>{languageData?.authSlide1li3}</p>
+                                                    <p className='text-[12px] lg:text-[20px] lg:mt-1 font-bold'>{languageData?.authSlide1li3}</p>
                                                 </div>
                                             </>
                                         )}
@@ -72,7 +72,7 @@ function Auth({ languageData }) {
                                                 {languageData?.authSlide2}
 
                                                 <div className=' leading-6 mt-2'>
-                                                    <p className='text-[12px] font-bold'>{languageData?.authSlide2li1}</p>
+                                                    <p className='text-[12px] lg:text-[20px] font-bold'>{languageData?.authSlide2li1}</p>
                                                 </div>
                                             </>
                                         )}
@@ -81,7 +81,7 @@ function Auth({ languageData }) {
                                                 {languageData?.authSlide3}
 
                                                 <div className=' leading-6 mt-2'>
-                                                    <p className='text-[12px] font-bold'>{languageData?.authSlide3li1}</p>
+                                                    <p className='text-[12px] lg:text-[20px] font-bold'>{languageData?.authSlide3li1}</p>
                                                 </div>
                                             </>
                                         )}
@@ -90,7 +90,7 @@ function Auth({ languageData }) {
                                                 {languageData?.authSlide4}
 
                                                 <div className=' leading-6 mt-2'>
-                                                    <p className='text-[12px] font-bold'>{languageData?.authSlide4li1}</p>
+                                                    <p className='text-[12px] lg:text-[20px] font-bold'>{languageData?.authSlide4li1}</p>
                                                 </div>
                                             </>
                                         )}

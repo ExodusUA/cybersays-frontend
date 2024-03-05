@@ -139,11 +139,12 @@ function LoginForm({ languageData, referralID }) {
                                 <button type='submit' onClick={e => handleSubmit(e)} className='w-full absolute right-1 top-1 continue_button h-[44px] text-[14px] md:text-[16px] rounded-[12px] saira font-bold max-w-[125px] md:max-w-[155px]'>{languageData?.authContinue}</button>
                             </div>
                             <div className={`${showButtons ? '' : 'hidden'}`}>
-                                <div className='lg:flex items-center w-full mt-2 lg:mt-4 gap-4'>
+                                <div className='flex items-center justify-between w-full mt-2 lg:mt-4 gap-1 lg:gap-4'>
                                     <GoogleAuth loginViaGoogle={loginViaGoogle} languageData={languageData} />
                                     <FacebookButton loginViaFacebook={loginViaFacebook} languageData={languageData} />
+                                    <DiscordButton languageData={languageData} />
                                 </div>
-                                <DiscordButton languageData={languageData} />
+                                
                             </div>
                         </div>
                     </form>
