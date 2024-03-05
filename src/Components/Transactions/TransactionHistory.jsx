@@ -93,7 +93,7 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
 
                 {
                     transactionsData?.length > 0
-                        ? transactionsData?.map((transaction, index) => {
+                        ? transactionsData?.reverse().map((transaction, index) => {
                             return getMarkup(transaction.type, transaction.datetime, userCountry === 'BR' || userCountry === 'UA' ? transaction.amount * 5 : transaction.amount)
                         })
                         : <div className='flex justify-center items-center h-[470px]'>
