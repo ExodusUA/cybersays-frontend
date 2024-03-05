@@ -7,6 +7,7 @@ import notReady from '../../images/CyberSaysPage/offerFalse.png';
 import { Link } from 'react-router-dom';
 import { useDesign } from '../../Helpers/Design/DesignContext';
 import doubleIcon from '../../images/NewDesign/doubleIcon.svg';
+import mixpanel from 'mixpanel-browser';
 
 function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModal, scrollToPage, setWinTicketModal }) {
 
@@ -75,7 +76,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                     <div className='iphone:mt-[40px] md:mt-0'>
                         <img className={`se:w-[280px] iphone:w-[385px]  ${design === '0' ? 'md:w-[770px] mac2:!mt-[-150px]' : 'md:w-[990px] mac-img-width mt-[-110px] mac2:mt-[-110px] iphone:mt-[-30px]'} iphone:mt-[-60px] mob:mt-0 m-auto md:mt-[-100px] mt-[0px] mac2:mt-[-50px] se:mt-[-30px]  `} src={design === '0' ? hero : require('../../images/NewDesign/RaffleTicket/hero_image.png')} alt="heroRaffle" />
 
-                        <div  className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[30px] text-center flex py-1 md:py-3   px-2  ${isTaskCompleted === false && ' md:mt-[-175px] iphone:mt-[-20px] se:mt-[-80px] mac-overflow-fix'} justify-center relative z-1`} >
+                        <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[30px] text-center flex py-1 md:py-3   px-2  ${isTaskCompleted === false && ' md:mt-[-175px] iphone:mt-[-20px] se:mt-[-80px] mac-overflow-fix'} justify-center relative z-1`} >
                             {
 
                                 isTaskCompleted === false
@@ -85,7 +86,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                                             <div className='text-center w-full'>
                                                 <Link target='_blank' to={imLiveURL}><button className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold p-2 md:py-2 md:w-[95%] ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.raffleLeftBtn}</button></Link>
                                                 <p className='saira text-[12px] md:text-[14px] font-medium mt-1'>{languageData?.raffleLeftSection1} {languageData?.raffleLeftSection2}</p>
-                                               
+
 
                                             </div>
                                             <div className='text-center w-full'>
@@ -95,13 +96,25 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                                                         : languageData?.raffleRightBtn2
                                                 }</button>
                                                 <p className='saira text-[12px] md:text-[14px] font-medium mt-1'>{languageData?.raffleRightSection1} {languageData?.raffleRightSection2}</p>
-                                                
+
 
                                             </div>
 
                                         </div>
                                         <p className='text-[10px] md:text-[12px] saira text-center cursor-pointer pt-1'>
-                                            {languageData?.raffleRulesDesc} - <span onClick={e => setWinModal(true)} className='text-[10px] md:text-[12px] saira text-center underline cursor-pointer'>{languageData?.raffleRulesDescSpan}</span>
+                                            {languageData?.raffleRulesDesc} - <span onClick={e => {
+                                                setWinModal(true)
+                                                mixpanel.track("raffle_rules", {
+                                                    distinct_id: 'not_set',
+                                                    is_referred: user?.referral_id ? 'Yes' : 'No',
+                                                    vegas_tickets: user?.raffle_tickets,
+                                                    points: user?.points,
+                                                    user_id: user?.id,
+                                                    USD_earned: user?.allTimeEarned,
+                                                    user_email: user?.email,
+                                                    page_name: 'Vegas Weekend'
+                                                });
+                                            }} className='text-[10px] md:text-[12px] saira text-center underline cursor-pointer'>{languageData?.raffleRulesDescSpan}</span>
                                         </p>
                                     </div>
                                     : <div className='flex justify-center'>
@@ -216,10 +229,22 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                 </div>
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] py-1 contentForCompetitions mt-2 lg:mt-[20px]'>
                     <p className='  text-[12px] md:text-[14px] font-semibold saira text-center text-[#FBC215]'>
-                    {languageData?.raffleBotLink1}
+                        {languageData?.raffleBotLink1}
                     </p>
 
-                    <p onClick={e => setWinTicketModal(true)} className={`saira text-[12px] md:text-[14px] font-semibold cursor-pointer text-center  text-[#FD9C36]`}>🤑<span className='underline text-[#FD9C36] saira text-[12px] md:text-[14px]'>{languageData?.raffleBotLink2}</span> 🤑 </p>
+                    <p onClick={e => {
+                        setWinTicketModal(true)
+                        mixpanel.track("how_vegas_weekend", {
+                            distinct_id: 'not_set',
+                            is_referred: user?.referral_id ? 'Yes' : 'No',
+                            vegas_tickets: user?.raffle_tickets,
+                            points: user?.points,
+                            user_id: user?.id,
+                            USD_earned: user?.allTimeEarned,
+                            user_email: user?.email,
+                            page_name: 'Vegas Weekend'
+                        });
+                    }} className={`saira text-[12px] md:text-[14px] font-semibold cursor-pointer text-center  text-[#FD9C36]`}>🤑<span className='underline text-[#FD9C36] saira text-[12px] md:text-[14px]'>{languageData?.raffleBotLink2}</span> 🤑 </p>
 
                 </div>
                 {/*

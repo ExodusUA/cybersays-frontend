@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import logoCyber from '../../images/CyberSaysPage/logoMain.png'
-import TimeCounter from '../../Components/TimeCounter'
+import logoCyber from '../../images/CyberSaysPage/logoMain.png';
 import TaskCard from '../../Components/DoubleMoneyPage/TaskCard';
-import congrats from '../../images/CyberSaysPage/congrats.png'
-import { useDesign } from '../../Helpers/Design/DesignContext'
-import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
-import doubleIcon from '../../images/NewDesign/doubleIcon.svg'
+import { useDesign } from '../../Helpers/Design/DesignContext';
+import newlogoCyber from '../../images/NewDesign/newLogo_main.png';
 import { Link } from 'react-router-dom';
 import TaskCardDesktop from '../../Components/DoubleMoneyPage/TaskCardDesktop';
+import mixpanel from 'mixpanel-browser';
 
-function Double({ languageData, user, imLiveURL, setOpen,setDoubleComplete }) {
+function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
 
     const { design } = useDesign()
 
@@ -117,7 +115,7 @@ function Double({ languageData, user, imLiveURL, setOpen,setDoubleComplete }) {
                 <div className='max-w-[920px] m-auto lg:flex hidden '>
                     {
                         taskStatus !== null && <>
-                            <TaskCardDesktop tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task1} setSelectedTask={setSelectedTask} state={taskStatus[0]} manualSelect={selectedTask !== null} open={selectedTask === 1} background={design === '0' ? '#B9A1E1' : '#4F97CB'} rounded={'rounded-[20px]'} mt={'mt-5'}  index={1} imLiveURL={imLiveURL} />
+                            <TaskCardDesktop tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task1} setSelectedTask={setSelectedTask} state={taskStatus[0]} manualSelect={selectedTask !== null} open={selectedTask === 1} background={design === '0' ? '#B9A1E1' : '#4F97CB'} rounded={'rounded-[20px]'} mt={'mt-5'} index={1} imLiveURL={imLiveURL} />
                             <TaskCardDesktop tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task2} setSelectedTask={setSelectedTask} state={taskStatus[1]} manualSelect={selectedTask !== null} open={selectedTask === 2} background={design === '0' ? '#93CC8E' : '#32B28C'} rounded={'rounded-[20px]'} index={2} imLiveURL={imLiveURL} />
                             <TaskCardDesktop setDoubleComplete={setDoubleComplete} tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task3} setSelectedTask={setSelectedTask} state={taskStatus[2]} manualSelect={selectedTask !== null} open={selectedTask === 3} background={design === '0' ? '#EA7C7C' : '#D76666'} rounded={'rounded-[20px] !pb-[5px]'} index={3} imLiveURL={imLiveURL} />
                             {/*<TaskCard user={user} tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task4} setSelectedTask={setSelectedTask} state={taskStatus[3]} manualSelect={selectedTask !== null} open={selectedTask === 4} background={design === '0' ? '#76C2E3' : '#9E64D8'} rounded={'rounded-[20px] !pb-[5px]'} index={4} imLiveURL={imLiveURL} />*/}
@@ -125,12 +123,25 @@ function Double({ languageData, user, imLiveURL, setOpen,setDoubleComplete }) {
                     }
                 </div>
                 <div className='flex justify-center'>
-                    <p onClick={e => setOpen(true)} className={`text-center text-[12px] iphone:text-[14px] sm:text-[14px] saira font-semibold underline mt-2  cursor-pointer  ${design === '0' ? 'text-white' : 'gradient-link flex justify-center'}`}>{languageData?.doublePaid}</p>
+                    <p onClick={e => {
+                        setOpen(true)
+                        mixpanel.track("way_to_get_paid", {
+                            distinct_id: 'not_set',
+                            is_referred: user?.referral_id ? 'Yes' : 'No',
+                            vegas_tickets: user?.raffle_tickets,
+                            points: user?.points,
+                            user_id: user?.id,
+                            USD_earned: user?.allTimeEarned,
+                            user_email: user?.email,
+                            page: 'Double your Money'
+                        });
+                    }
+                    } className={`text-center text-[12px] iphone:text-[14px] sm:text-[14px] saira font-semibold underline mt-2  cursor-pointer  ${design === '0' ? 'text-white' : 'gradient-link flex justify-center'}`}>{languageData?.doublePaid}</p>
 
                 </div>
                 <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2'>
                     {
-                       getButtonMarkup(selectedTask - 1)
+                        getButtonMarkup(selectedTask - 1)
                     }
                 </div>
                 {/*

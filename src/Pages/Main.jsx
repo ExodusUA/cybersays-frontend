@@ -17,7 +17,7 @@ import Withdraw from '../Components/Transactions/Withdraw'
 import TourModal from '../Components/DoubleMoneyPage/TourModal'
 import LeaderboardModal from '../Components/LeaderboardModal'
 import { SwiperSlide } from 'swiper/react'
-import { Swiper } from 'swiper/react';
+import { Swiper } from 'swiper/react'
 import ChatModal from '../Components/ChatModal'
 import infoAPI from '../Requests/info'
 import MyReferralsModal from '../Components/ProfileReferrals/MyReferralsModal'
@@ -26,13 +26,9 @@ import Message from './CyberSaysPages/Modals/Message'
 import AvatarModal from '../Components/ProfileReferrals/AvatarModal'
 import { useDesign } from '../Helpers/Design/DesignContext'
 import API from '../Helpers/API'
-import LiveFeed from '../Components/LiveFeed'
 import Verify from './Verify'
 import WinVegasModal from '../Components/WinVegasModal'
 import infoBtn from '../images/NewDesign/infoBtn.png'
-import first from '../images/gifs/first.png'
-import second from '../images/gifs/second.png'
-import third from '../images/gifs/third.png'
 import ImageModals from '../Components/ImageModals'
 import CompetitionRules from '../Components/CompetitionRules'
 import ToolTipInfo from '../Components/ToolTipInfo'
@@ -46,7 +42,8 @@ import TransactionHistory from '../Components/Transactions/TransactionHistory'
 import TicketsHistory from '../Components/Transactions/TicketsHistory'
 import SocialLink from '../Components/SocialLink'
 import DoubleComplete from '../Components/DoubleComplete'
-import user from '../Requests/user'
+import { useLanguage } from '../Helpers/Languages/LanguageContext'
+
 
 var mixpanel = require('mixpanel-browser');
 
@@ -93,6 +90,8 @@ function Main({ languageData }) {
         newTextCopied[messageIndex] = true;
         setMessagetCopied(newTextCopied);
     };
+
+    const {language} = useLanguage();
 
     const [imLiveURL, setImLiveURL] = useState(null);
     const navigate = useNavigate()
@@ -179,7 +178,13 @@ function Main({ languageData }) {
 
         mixpanel.track("page_view", {
             distinct_id: uid || 'not_set',
-            ...utmData
+            ...utmData,
+            is_referred: userData?.referral_id ? 'Yes' : 'No',
+            vegas_tickets: userData?.raffle_tickets,
+            points: userData?.points,
+            user_id: userData?.id,
+            USD_earned: userData?.allTimeEarned,
+            page_name: activePageIndex === 0 ? 'Home' : activePageIndex === 1 ? 'Double' : activePageIndex === 2 ? 'Vegas Weekend' : activePageIndex === 3 ? 'Competition' : activePageIndex === 4 ? 'My referrals' : 'Not set',
         });
 
     }, [])
@@ -427,7 +432,10 @@ function Main({ languageData }) {
             }
 
             <div className={`fixed right-2 bottom-4 sm:right-8 sm:bottom-8 z-[99] ${menuOpen && 'hidden'}`}>
-                <img onClick={e => setChatModal(true)} className='w-[24px] sm:w-12 cursor-pointer' src={design === '0' ? chatImage : require('../images/NewDesign/chatBtn.png')} alt="Chat" />
+                <img onClick={e => {
+                    setChatModal(true)
+                }
+                } className='w-[24px] sm:w-12 cursor-pointer' src={design === '0' ? chatImage : require('../images/NewDesign/chatBtn.png')} alt="Chat" />
             </div>
             <div className={`fixed left-2 bottom-4 sm:left-8 sm:bottom-8 z-[99] ${menuOpen && 'hidden'}`}>
                 <img onClick={e => setToolInfo(!toolInfo)} className='w-[24px] sm:w-12 cursor-pointer' src={infoBtn} alt="Chat" />

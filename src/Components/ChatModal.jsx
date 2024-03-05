@@ -8,6 +8,9 @@ import BotMessage from './Messages/BotMessage';
 import { useDesign } from '../Helpers/Design/DesignContext'
 import int from '../images/NewDesign/chatFlag/flag_int.png'
 import ModerMessage from './Messages/ModerMessage';
+import { useLanguage } from '../Helpers/Languages/LanguageContext';
+import mixpanel from 'mixpanel-browser';
+
 
 function ChatModal({ user, setOpen, languageData, userCountry }) {
 
@@ -70,6 +73,7 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
     ]
 
     const { design } = useDesign()
+    const { language } = useLanguage()
 
     const socket = io(process.env.REACT_APP_CHAT_URL, {
         path: '/chat/socket',
@@ -106,6 +110,18 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
         }
         setUserCountry(country)
         setSelectedCountry(country)
+
+        mixpanel.track("chat_click", {
+            distinct_id: 'not_set',
+            language: language,
+            is_referred: user?.referral_id ? 'Yes' : 'No',
+            vegas_tickets: user?.raffle_tickets,
+            points: user?.points,
+            user_id: user?.id,
+            USD_earned: user?.allTimeEarned,
+            chat_region: country,
+            user_email: user?.email
+        })
 
     }, [userCountry])
 
@@ -230,7 +246,7 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
 
     const sanitizeInput = (input) => {
         return input
-      //  return input.replace(/(<([^>]+)>)/gi, "");
+        //  return input.replace(/(<([^>]+)>)/gi, "");
     };
 
 

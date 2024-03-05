@@ -3,12 +3,19 @@ import flag_usa from '../../images/flags/flag-en.png'
 import flag_es from '../../images/flags/flag_es.png'
 import flag_pt from '../../images/flags/flag-pt.png'
 import { useLanguage } from '../../Helpers/Languages/LanguageContext'
+import mixpanel from 'mixpanel-browser'
 
 function LanguageSwitcher({ setIsLangOpen }) {
 
     const { language, changeLanguage } = useLanguage();
 
     const handleLanguageChange = (newLanguage) => {
+
+        mixpanel.track('language_select', {
+            current_language: language,
+            new_language: newLanguage
+        })
+
         changeLanguage(newLanguage);
         setIsLangOpen(false);
     };

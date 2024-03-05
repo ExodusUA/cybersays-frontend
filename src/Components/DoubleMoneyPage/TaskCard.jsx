@@ -3,6 +3,7 @@ import notReady from '../../images/CyberSaysPage/card_notReady.png'
 import done from '../../images/CyberSaysPage/card_done.png'
 import { Link } from 'react-router-dom'
 import { useDesign } from '../../Helpers/Design/DesignContext'
+import mixpanel from 'mixpanel-browser'
 
 function TaskCard({ state, background, data, index, imLiveURL, rounded, open, manualSelect, setSelectedTask, tasks, user }) {
 
@@ -73,7 +74,21 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded, open, ma
             <div className='flex justify-center mt-[-20px] md:mt-[-30px] relative z-50 max-w-[330px] w-full sm:max-w-[555px] m-auto'>
                 <Link className='w-full' to={imLiveURL} target='_blank'><button className={`w-full bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold py-1 sm:py-2 ${design === '0' ? ' se:py-[6px] py-2 md:py-2 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{data?.taskButton}</button></Link>
             </div>
-            <p onClick={e => copyImLiveLink()} className={`saira text-[14px] cursor-pointer underline text-center mb-[-5px] py-2 pb-3 font-semibold  ${linkCopied === true ? 'opacity-60' : ''}`}>Copy link</p>
+            <p onClick={e => {
+                copyImLiveLink()
+                mixpanel.track("copy_link", {
+                    distinct_id: 'not_set',
+                    is_referred: user?.referral_id ? 'Yes' : 'No',
+                    vegas_tickets: user?.raffle_tickets,
+                    points: user?.points,
+                    user_id: user?.id,
+                    USD_earned: user?.allTimeEarned,
+                    user_email: user?.email,
+                    page: 'Double your Money'
+                });
+            }
+
+            } className={`saira text-[14px] cursor-pointer underline text-center mb-[-5px] py-2 pb-3 font-semibold  ${linkCopied === true ? 'opacity-60' : ''}`}>Copy link</p>
         </>
     }
 

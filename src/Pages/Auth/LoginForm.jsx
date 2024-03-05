@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef } from 'react';
 import { useState, useEffect } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import { createUser, socialUserAuth } from '../../Requests/auth';
@@ -11,7 +11,7 @@ import Loader from '../../Components/Loader';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { getUserCountry } from '../../Requests/utills';
 import DiscordButton from '../../Components/Buttons/DiscordButton';
-import API from '../../Helpers/API';
+import mixpanel from 'mixpanel-browser';
 
 function LoginForm({ languageData, referralID }) {
 
@@ -50,9 +50,11 @@ function LoginForm({ languageData, referralID }) {
         try {
             let userCountry = await getUserData();
             const res = await socialUserAuth(email, token, refferalCode, special, userCountry.country);
+            await handleMixpanelEvent(true, 'social')
             localStorage.setItem('token', res.token);
             navigate('/')
         } catch (error) {
+            await handleMixpanelEvent(false, 'social')
             console.log(error)
             setLoading(false)
         }
@@ -105,14 +107,25 @@ function LoginForm({ languageData, referralID }) {
         try {
             const res = await createUser(token, email, refferalCode, userCountry.country)
 
+            await handleMixpanelEvent(true, 'email')
+
             setActiveModal('notification')
             setLoading(false)
+
         } catch (error) {
+            handleMixpanelEvent(false, 'email')
             setLoading(false)
             alert('Error: ', error.message)
         }
 
     };
+
+    const handleMixpanelEvent = async (success, provider) => {
+        mixpanel.track('login', {
+            registered_width: provider,
+            success: success
+        });
+    }
 
 
     return (
