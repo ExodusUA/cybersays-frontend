@@ -63,7 +63,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
         <div>
 
             {
-                user?.earned !== 0 && user?.earned > 0 && promoModal && <PromoModal setImLiveSelected={setImLiveSelected} setPromoModal={setPromoModal} languageData={languageData} />
+                user?.earned !== 0 && user?.earned > 0 && promoModal && <PromoModal setImLiveSelected={setImLiveSelected} setOpen={setPromoModal} languageData={languageData} />
             }
 
             {
