@@ -10,6 +10,7 @@ import PIX from './PIX'
 import userAPI from '../../Requests/user'
 import PromoImLive from './PromoImLive'
 import PromoModal from '../PromoModal'
+import ConfirmImLive from './ConfirmImLive'
 
 
 function Withdraw({ user, setOpen, languageData, userCountry }) {
@@ -21,6 +22,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
     const [confirm, setConfirm] = useState(false)
     const [error, setError] = useState(false)
     const [step, setStep] = useState(0)
+    const [confirmImLive, setConfirmImLive] = useState(0)
 
     const [paymentMethods, setPaymentMethods] = useState([])
 
@@ -67,7 +69,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
             }
 
             {
-                imLiveSelected && <div>МОДАЛКА ЗАПИТУ ВИВЕДЕННЯ ЧЕРЕЗ ImLIVE має виводитись тут</div>
+                imLiveSelected && <ConfirmImLive setOpen={setConfirmImLive} languageData={languageData} closeAll={setOpen} />
             }
 
             <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4'>
@@ -183,6 +185,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
             {
                 error && <Error setOpen={setError} languageData={languageData} closeAll={setOpen} />
             }
+
 
         </div>
     )
