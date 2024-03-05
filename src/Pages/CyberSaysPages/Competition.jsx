@@ -92,7 +92,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                                         <p className='text-[#A1B3B0] saira text-[10px] lg:text-[12px] font-bold'>$69</p>
                                     </div>
                                     <p className={`text-[12px] sm:text-[14px] saira font-medium  ${design === '0' ? 'text-[#FFED63]' : 'text-[#A1B3B0]'}`}>{leaderboardData.todayUsers[1]?.points || 0}</p>
-                                    <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>{languageData?.competitionPoints}</p>
+                                    <p className='text-[12px]  saira font-medium leading-3'>{languageData?.competitionPoints}</p>
                                 </div>
                             }
                             <div>
@@ -104,7 +104,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                                     <p className='text-[#F2BB02] saira text-[14px] lg:text-[18px] font-bold'>$69</p>
                                 </div>
                                 <p className={`text-[12px] sm:text-[14px] saira font-medium  ${design === '0' ? 'text-[#FFED63]' : 'text-[#F2BB02]'}`}> {leaderboardData.todayUsers[0]?.points || 0}</p>
-                                <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>{languageData?.competitionPoints}</p>
+                                <p className='text-[12px]  saira font-medium leading-3'>{languageData?.competitionPoints}</p>
                             </div>
                             {
 
@@ -115,7 +115,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                                         <p className='text-[#E87001] saira text-[10px] lg:text-[12px] font-bold'>$6.90</p>
                                     </div>
                                     <p className={`text-[12px] sm:text-[14px] saira font-medium ${design === '0' ? 'text-[#FFED63]' : 'text-[#E87001]'}`}>{leaderboardData.todayUsers[2]?.points || 0}</p>
-                                    <p className='text-[12px] sm:text-[14px] saira font-medium leading-3'>{languageData?.competitionPoints}</p>
+                                    <p className='text-[12px]  saira font-medium leading-3'>{languageData?.competitionPoints}</p>
                                 </div>
 
                             }
