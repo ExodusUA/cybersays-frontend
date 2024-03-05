@@ -375,6 +375,11 @@ body {
 .blur-image {
     filter: blur(115px); /* Змініть 5px на те значення, яке вам потрібно */
 }
+.custom-borderTask {
+    border-width: 3px;
+    border-style: solid;
+    border-color: transparent;
+}
 @media screen and (max-height: 770px) and (min-width: 1200px) {
     .mac-overflow-fix {
         margin-top: -185px !important;

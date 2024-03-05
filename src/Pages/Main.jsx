@@ -346,7 +346,7 @@ function Main({ languageData }) {
                     </SwiperSlide>
 
                 </Swiper>
-                <CircleNavigation activePageIndex={activePageIndex} setActivePageIndex={setActivePageIndex} />
+                <CircleNavigation languageData={languageData} activePageIndex={activePageIndex} setActivePageIndex={setActivePageIndex} />
 
             </div>
         )

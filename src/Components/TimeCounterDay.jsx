@@ -31,7 +31,7 @@ function TimeCounterDay({ languageData, hidden, title, left, leftTitle, block, s
         <div>
             <p className={`text-[18px] timeCounter-title lg:text-[32px] font-semibold iphone:leading-[unset] se:leading-5 md:leading-[unset] lg:px-4 ${leftTitle}`}>{languageData?.timeCounterTitle2}</p>
             <div className={`lg:w-[300px] ${left} ${hidden}`}>
-                <div className='flex justify-center lg:justify-between items-center leading-5 gap-[18px]  mt-2 '>
+                <div className='flex justify-center lg:justify-between items-center leading-5 gap-[18px]  '>
                     <div className='text-center'>
                         <h2 className={`text-[18px] md:text-[24px] md:font-black ${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'}`}>{hoursRemaining}</h2>
                         <p className={`${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'} text-center font-semibold text-[12px]`}>{languageData?.timeCounterHours}</p>
@@ -48,7 +48,7 @@ function TimeCounterDay({ languageData, hidden, title, left, leftTitle, block, s
                     </div>
                 </div>
             </div>
-            <div className={`flex justify-center ${block}`}>
+            <div className={`flex justify-center ${block} mt-[-6px]`}>
                 <Link to='/contest-terms' target='_blank' > <p className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline cursor-pointer ${design === '0' ? 'text-[#FFED63]' : 'gradient-link '}`}>{languageData?.timeCounterLink}</p></Link>
             </div>
         </div>

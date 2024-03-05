@@ -11,6 +11,7 @@ import userAPI from '../../Requests/user'
 import PromoImLive from './PromoImLive'
 import PromoModal from '../PromoModal'
 import ConfirmImLiveModal from './ConfirmImLive'
+import pt from '../../images/flags/flag-pt.png'
 
 
 function Withdraw({ user, setOpen, languageData, userCountry }) {
@@ -105,7 +106,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
                             step === 0 && <div>
                                 <p className='text-[18px] md:text-[32px] font-semibold text-center my-2'>{languageData?.withdrawTitle2}</p>
                                 <div className={`max-h-[320px]  max-w-[375px] md:max-w-[600px] m-auto`}>
-                                    <div className='flex flex-wrap  justify-center mt-2  m-auto'>
+                                    <div className='flex flex-wrap  justify-center mt-2  m-auto relative'>
                                         {paymentMethods.map((item, index) => (
                                             <div key={index} className='w-[50%] mb-2'>
                                                 <img
@@ -114,11 +115,13 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
                                                     src={item.image}
                                                     alt="social"
                                                 />
+                                                
                                             </div>
                                         ))}
                                         {
                                             user?.earned !== 0 && user?.earned > 0 && <PromoImLive languageData={languageData} />
                                         }
+                                        <p className='absolute saira font-normal text-[14px] left-[23px] bottom-[12px] flex items-center'>{languageData?.withdrawGiftTitle} <img className='w-[24px] ml-[5px]' src={pt} alt="pt" /></p>
                                     </div>
 
                                 </div>

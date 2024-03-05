@@ -23,9 +23,9 @@ function GoogleButton({ loginViaGoogle, languageData }) {
     return (
         <>
 
-            <button onClick={() => googleLogin()} type="button" className='w-[33%] lg:w-full gap-2 lg:gap-4  lg:max-w-[160px] flex bg-[#1E1E1E] px-2 lg:px-3 py-2 lg:py-1 rounded-[8px] lg:rounded-[12px] items-center justify-center'>
+            <button onClick={() => googleLogin()} type="button" className='w-[50%] lg:w-full gap-2 lg:gap-4  flex bg-[#1E1E1E] px-2 lg:px-3 py-3  rounded-[8px] lg:rounded-[12px] items-center justify-center'>
                 <img className='w-4 lg:w-6 h-4 lg:h-6' src={google} alt="Google" />
-                <p className='text-[10px] lg:text-[14px] text-[#888888] font-semibold text-left saira' dangerouslySetInnerHTML={{ __html: languageData?.authGoogle + ' <span class="saira" style="color:#FFFFFF">Google</span>' }} />
+                <p className='text-[12px] lg:text-[14px] text-[#888888] font-semibold text-left saira' dangerouslySetInnerHTML={{ __html: languageData?.authGoogle + ' <span class="saira" style="color:#FFFFFF">Google</span>' }} />
             </button>
 
             {
