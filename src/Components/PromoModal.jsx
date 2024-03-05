@@ -7,7 +7,7 @@ import promoGirlMessage from '../images/NewDesign/promoGirl-message.png'
 
 
 
-function PromoModal({ setOpen, languageData }) {
+function PromoModal({ setOpen, languageData, setImLiveSelected }) {
     const { design } = useDesign()
 
 
@@ -35,7 +35,10 @@ function PromoModal({ setOpen, languageData }) {
 
                 </div>
                 <div className='flex justify-center '>
-                    <button className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-1.5 outline-none  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>
+                    <button onClick={e => {
+                        setImLiveSelected(true)
+                        setOpen(false)
+                    }} className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-1.5 outline-none  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>
                 </div>
                 <div className='flex justify-center'>
                     <p onClick={e => setOpen(false)} className='gradient-link2 saira text-[14px] font-semibold cursor-pointer mt-1'>{languageData?.promoModalLink}</p>
