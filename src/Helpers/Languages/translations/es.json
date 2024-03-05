@@ -539,5 +539,9 @@
     "ModalMenuToggle": "Choose your design",
     "leaderSheetToday": "Today",
     "leaderSheetYesterday": "Yesterday",
-    "leaderSheetDayAgo": "2 days ago"
+    "leaderSheetDayAgo": "2 days ago",
+    "promoModalTitle": "Withdraw with",
+    "promoModalMessage": "Don’t be a fool take this get +30% 65 reais instead of 50",
+    "promoModalLink": "No, thanks",
+    "promoImLiveDesc": "Don’t be a fool take this get +30% 65 reais instead of 50"
 }

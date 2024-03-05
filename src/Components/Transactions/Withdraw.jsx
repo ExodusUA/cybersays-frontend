@@ -8,9 +8,10 @@ import Error from './Error'
 import Verification from './Verification'
 import PIX from './PIX'
 import userAPI from '../../Requests/user'
+import PromoImLive from './PromoImLive'
 
 
-function Withdraw({ user, setOpen, languageData, userCountry }) {
+function Withdraw({ user, setOpen, languageData, userCountry, setPromoModal }) {
     console.log('User Country: ', userCountry)
     const { design } = useDesign()
 
@@ -68,7 +69,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
                     </svg>
                     <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
-                <p className='text-[18px] md:text-[32px] font-semibold text-center'>{languageData?.withdrawTitle1}</p>
+                <p onClick={e => setPromoModal(true)} className='text-[18px] md:text-[32px] font-semibold text-center'>{languageData?.withdrawTitle1}</p>
                 <p className={`text-[12px] ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble font-semibold'} font-medium text-center saira`}>{languageData?.withdrawSubtitle}</p>
                 <div className=' text-center flex justify-center  m-auto mt-3'>
                     <div className={`bg-[#EAEAEA] bg-opacity-30 backdrop-blur-lg ${design === '0' ? 'rounded-[30px]' : ' rounded-[12px]'} px-8`}>
@@ -95,17 +96,17 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
                                     <div key={index} className='w-[50%] mb-2'>
                                         <img
                                             onClick={e => setSelectedPayment(item.name)}
-                                            className={`${selectedPayment === item.name && (design === '0' ? 'outline outline-[2px] !outline-[#FFED63]' : 'outline outline-[2px] !outline-[#A2DBF0]')} border-none w-[160px] md:w-[295px] h-[140px] md:h-[unset] cursor-pointer rounded-[14px] object-cover`}
+                                            className={`${selectedPayment === item.name && (design === '0' ? 'outline outline-[2px] !outline-[#FFED63]' : 'outline outline-[2px] !outline-[#A2DBF0]')} border-none w-[160px] md:w-[295px] h-[140px] md:h-[unset] cursor-pointer rounded-[14px] object-cover m-auto`}
                                             src={item.image}
                                             alt="social"
                                         />
                                     </div>
                                 ))}
-
+                                <PromoImLive languageData={languageData} />
                             </div>
 
                         </div>
-                        <div className='flex justify-center mt-4'>
+                        <div className='flex justify-center mt-2 lg:mt-4'>
                             <button onClick={e => setStep(selectedPayment === 'pix' ? 3 : 1)} className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-2 max-w-[350px] outline-none  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>
                         </div>
                     </div>

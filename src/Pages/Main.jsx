@@ -47,6 +47,7 @@ import TicketsHistory from '../Components/Transactions/TicketsHistory'
 import SocialLink from '../Components/SocialLink'
 import DoubleComplete from '../Components/DoubleComplete'
 import user from '../Requests/user'
+import PromoModal from '../Components/PromoModal'
 
 var mixpanel = require('mixpanel-browser');
 
@@ -129,6 +130,7 @@ function Main({ languageData }) {
     const [selectedButton, setSelectedButton] = useState('ticket');
     const [socialLink, setSocialLink] = useState(false)
     const [doubleComplete, setDoubleComplete] = useState(false)
+    const [promoModal, setPromoModal] = useState(false)
 
     const [selectedMessage, setSelectedMassege] = useState(null);
 
@@ -367,7 +369,7 @@ function Main({ languageData }) {
 
             }
             {
-                menuOpen === true && <ModalMenu setSocialLink={setSocialLink} setSelectedButton={setSelectedButton} selectedButton={selectedButton} setTransactionsModal={setTransactionsModal} userCountry={userCountry} languageData={languageData} setChatModal={setChatModal} chatModal={chatModal} siteData={siteData} scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
+                menuOpen === true && <ModalMenu setPromoModal={setPromoModal} setSocialLink={setSocialLink} setSelectedButton={setSelectedButton} selectedButton={selectedButton} setTransactionsModal={setTransactionsModal} userCountry={userCountry} languageData={languageData} setChatModal={setChatModal} chatModal={chatModal} siteData={siteData} scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
             }
             {
                 tourModal && <TourModal user={userData} languageData={languageData} setOpen={setTourModal} />
@@ -424,6 +426,9 @@ function Main({ languageData }) {
             }
             {
                 imageModal && <ImageModals setSelectedImage={setSelectedImage} selectedImage={selectedImage} setOpen={setImageModal} languageData={languageData} />
+            }
+            {
+                promoModal && <PromoModal setOpen={setPromoModal} languageData={languageData} />
             }
 
             <div className={`fixed right-2 bottom-4 sm:right-8 sm:bottom-8 z-[99] ${menuOpen && 'hidden'}`}>
