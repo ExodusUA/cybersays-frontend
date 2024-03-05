@@ -66,8 +66,8 @@ window.env = {
   "REACT_APP_RECAPTCHA_SITE_KEY": "6LdBDYYpAAAAAO4s_BETKy1EATil7gb8qMB5sAxg",
   "REACT_APP_GOOGLE_CLIENT_ID": "572517381232-l7cci9an60u4tmk5r4pnu4vc0jupu760.apps.googleusercontent.com",
   "REACT_APP_FACEBOOK_APP_ID": "356492313416801",
-  "REACT_APP_API_URL": "https://www.cybersays.club",
-  "REACT_APP_CHAT_URL": "https://www.cybersays.club",
-  "REACT_APP_DISCORD_REDIRECT_URL": "https://www.cybersays.club/auth/discord/callback",
+  "REACT_APP_API_URL": "https://dev.cybersays.club",
+  "REACT_APP_CHAT_URL": "https://dev.cybersays.club",
+  "REACT_APP_DISCORD_REDIRECT_URL": "https://dev.cybersays.club/auth/discord/callback",
   "REACT_APP_DISCORD_CLIENT_ID": "1125125402302615703"
 };
