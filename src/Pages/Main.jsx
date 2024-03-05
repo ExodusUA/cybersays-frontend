@@ -43,6 +43,7 @@ import TicketsHistory from '../Components/Transactions/TicketsHistory'
 import SocialLink from '../Components/SocialLink'
 import DoubleComplete from '../Components/DoubleComplete'
 import { useLanguage } from '../Helpers/Languages/LanguageContext'
+import PromoModal from '../Components/PromoModal'
 
 
 var mixpanel = require('mixpanel-browser');
@@ -91,7 +92,9 @@ function Main({ languageData }) {
         setMessagetCopied(newTextCopied);
     };
 
-    const {language} = useLanguage();
+    const { language } = useLanguage();
+
+    const [promoModal, setPromoModal] = useState(false)
 
     const [imLiveURL, setImLiveURL] = useState(null);
     const navigate = useNavigate()
@@ -372,7 +375,7 @@ function Main({ languageData }) {
 
             }
             {
-                menuOpen === true && <ModalMenu setSocialLink={setSocialLink} setSelectedButton={setSelectedButton} selectedButton={selectedButton} setTransactionsModal={setTransactionsModal} userCountry={userCountry} languageData={languageData} setChatModal={setChatModal} chatModal={chatModal} siteData={siteData} scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
+                menuOpen === true && <ModalMenu setPromoModal={setPromoModal} setSocialLink={setSocialLink} setSelectedButton={setSelectedButton} selectedButton={selectedButton} setTransactionsModal={setTransactionsModal} userCountry={userCountry} languageData={languageData} setChatModal={setChatModal} chatModal={chatModal} siteData={siteData} scrollToPage={scrollToPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen} user={userData} />
             }
             {
                 tourModal && <TourModal user={userData} languageData={languageData} setOpen={setTourModal} />
@@ -445,6 +448,11 @@ function Main({ languageData }) {
             }
             {
                 doubleComplete && <DoubleComplete setOpen={setDoubleComplete} languageData={languageData} user={userData} />
+            }
+
+
+            {
+                promoModal && <PromoModal setOpen={setPromoModal} languageData={languageData} />
             }
 
         </>
