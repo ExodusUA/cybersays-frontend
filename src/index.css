@@ -359,7 +359,9 @@ body {
 .textStyle p {
     font-size: 12pt !important;
 }
-
+.placeBg {
+    background: var(--Card-bg, linear-gradient(94deg, #711876 0%, #355FA3 100%));
+}
 @media screen and (max-width: 600px) {
     table {
         width: 100% !important;
@@ -375,7 +377,7 @@ body {
 }
 @media screen and (max-height: 770px) and (min-width: 1200px) {
     .mac-overflow-fix {
-        margin-top: -220px !important;
+        margin-top: -185px !important;
     }
     .refferals-selectMassege {
         margin-top: 10px !important;
