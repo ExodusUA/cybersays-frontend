@@ -7,9 +7,9 @@ function Terms() {
     return (
         <div>
             <HeaderProfile />
-            <div className='max-w-[1700px] px-2 m-auto overflow-scroll h-screen pb-[50px]'>
+            <div className='max-w-[1300px] px-2 m-auto overflow-scroll h-screen pb-[50px] mt-[20px]'>
                 {termsData.map((paragraph, index) => (
-                    <p className='text-black saira' key={index}>{paragraph}</p>
+                    <p className='text-black saira text-[14px] lg:text-[16px] mt-2' key={index}>{paragraph}</p>
                 ))}
             </div>
 
