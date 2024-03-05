@@ -128,7 +128,7 @@ function TicketsHistory({ setOpen, languageData, user, setSelectedButton, select
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={coin} alt="transaction" />
                     <div className='w-[200px] md:w-[300px]'>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection4Left}</p>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection1Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
@@ -196,10 +196,6 @@ function TicketsHistory({ setOpen, languageData, user, setSelectedButton, select
                         </div>
                 }
             </div>
-
-
-
-
         </div>
     )
 }
