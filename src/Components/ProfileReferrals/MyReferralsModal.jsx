@@ -116,7 +116,7 @@ function MyReferralsModal({ setOpen, user, languageData }) {
                                                 <div className={`w-[2px] h-[50px] ${design === '0' ? 'bg-[#FFED63]' : 'gradient-homepageBtn'}`}></div>
                                                 <div className='w-[70px] md:w-[30px] flex mr-[30px]'>
                                                     {
-                                                        item.completed_tasks && JSON.parse(item.completed_tasks).length > 3
+                                                        item.completed_tasks && JSON.parse(item.completed_tasks).length === 3
                                                             ? <img className='w-[24px] h-[24px] m-auto' src={offerTrue} alt="offerTrue" />
                                                             : <img className='w-[24px] h-[24px] m-auto' src={offerFalse} alt="offerFalse" />
                                                     }
