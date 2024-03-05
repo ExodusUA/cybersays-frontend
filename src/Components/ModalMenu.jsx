@@ -13,6 +13,7 @@ import link10 from '../images/CyberSaysPage/mobileMenuLink/link10.png'
 import link11 from '../images/NewDesign/modalMenu/link11.png'
 import link12 from '../images/NewDesign/modalMenu/link12.png'
 import link13 from '../images/NewDesign/modalMenu/link13.png'
+import link14 from '../images/NewDesign/modalMenu/link14.png'
 import toggleTheme1 from '../images/NewDesign/toggleTheme1.png'
 import toggleTheme2 from '../images/NewDesign/toggleTheme2.png'
 import NewLanguageButton from './Language/NewLanguageButton'
@@ -260,9 +261,10 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
             <div className=' cursor-pointer  ' onClick={e => setWhatAbout(!whatAbout)}>
               <div className='flex  items-center'>
                 <div className='flex items-center' >
-                  <img className='w-[32px] h-[32px] mr-2' src={link11} alt="link11" />
-                  <p className='saira text-[20px] font-semibold cursor-pointer'>Read More</p>
+                  <img className='w-[32px] h-[32px] mr-2' src={link14} alt="link11" />
+                  <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink14}</p>
                 </div>
+
                 <div className='ml-2'>
                   {
                     whatAbout
@@ -296,9 +298,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                     <div className='flex items-center' onClick={e => setOurModal(true)} >
                       <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuLink12}</p>
                     </div>
-                    <div className='flex items-center' onClick={e => setFAQModal(true)} >
-                      <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuLink11}</p>
-                    </div>
+                  
 
                     <div className='flex items-center' onClick={e => setWhyModal(true)} >
                       <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuLink13}</p>
@@ -323,6 +323,10 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                   </div>
                 </>
               }
+            </div>
+            <div className='flex items-center' onClick={e => setFAQModal(true)} >
+              <img className='w-[32px] h-[32px] mr-2' src={link11} alt="link11" />
+              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink11}</p>
             </div>
             <div className='flex items-center' onClick={e => {
               setSettingsModal(true)
