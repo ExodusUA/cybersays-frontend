@@ -213,6 +213,24 @@ body {
     background: var(--New-CS-yellow, linear-gradient(180deg, #FE8648 0%, #FE804D 100%));
 }
 
+.gradient-link2 {
+    background: var(--Linear, linear-gradient(105deg, #8FE5EC -23.05%, #DDBAFC 88.21%));
+    -webkit-background-clip: text;
+    color: transparent;
+    text-decoration: underline;
+    position: relative;
+    display: inline-block;
+}
+
+.gradient-link2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 1px;
+    background: var(--Linear, linear-gradient(105deg, #8FE5EC -23.05%, #DDBAFC 88.21%));
+}
 .gradient-linkDouble {
     background: var(--New-CS-yellow, linear-gradient(180deg, #FAD604 0%, #FE804D 100%));
     -webkit-background-clip: text;

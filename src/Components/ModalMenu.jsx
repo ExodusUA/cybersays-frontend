@@ -33,7 +33,7 @@ import WhyJoin from '../Pages/CyberSaysPages/Modals/WhyJoin'
 import FAQ from '../Pages/CyberSaysPages/Modals/FAQ'
 import userAPI from '../Requests/user'
 
-function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setChatModal, chatModal, languageData, userCountry, setSelectedButton, selectedButton,setSocialLink  }) {
+function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setChatModal, chatModal, languageData, userCountry, setSelectedButton, selectedButton,setSocialLink,setPromoModal  }) {
 
   const { design, changeDesign } = useDesign()
 
@@ -233,7 +233,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
         referralsModal && <MyReferralsModal languageData={languageData} setOpen={setReferralsModal} user={user} />
       }
       {
-        withdrawModal && <Withdraw languageData={languageData} setOpen={setWithdrawModal} user={user} userCountry={userCountry} />
+        withdrawModal && <Withdraw setPromoModal={setPromoModal} languageData={languageData} setOpen={setWithdrawModal} user={user} userCountry={userCountry} />
       }
       {
         transactionsModal && <TransactionHistory languageData={languageData} setOpen={setTransactionsModal} user={user} setWithdrawModal={setWithdrawModal} userCountry={userCountry} />
