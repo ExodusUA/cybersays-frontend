@@ -7,17 +7,17 @@ import promoGirlMessage from '../images/NewDesign/promoGirl-message.png'
 
 
 
-function PromoModal({ setOpen, languageData }) {
+function PromoModal({ languageData, setPromoModal, setImLiveSelected }) {
     const { design } = useDesign()
 
 
     return (
-        <div onClick={e => setOpen(false)} className='w-screen h-screen fixed top-0 z-[99999] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 flex items-center '>
+        <div onClick={e => setPromoModal(false)} className='w-screen h-screen fixed top-0 z-[99999] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 flex items-center '>
             <div onClick={(e) => e.stopPropagation()} className={`max-w-[600px] w-full m-auto relative bg-new-bg-promo bg-no-repeat bg-cover border-[1px] p-2 rounded-[12px] lg:px-4 ${design === '0' ? ' border-[#FFD700]' : '  border-[#A2DBF0]'}`}>
 
 
                 <div className='flex justify-end my-1 md:my-4 '>
-                    <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
+                    <img onClick={e => setPromoModal(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
                 <div className='max-w-[350px] w-full m-auto'>
                     <div className='flex justify-around '>
@@ -35,10 +35,10 @@ function PromoModal({ setOpen, languageData }) {
 
                 </div>
                 <div className='flex justify-center '>
-                    <button className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-1.5 outline-none  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>
+                    <button onClick={e => setImLiveSelected(true)} className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-1.5 outline-none  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>
                 </div>
                 <div className='flex justify-center'>
-                    <p onClick={e => setOpen(false)} className='gradient-link2 saira text-[14px] font-semibold cursor-pointer mt-1'>{languageData?.promoModalLink}</p>
+                    <p onClick={e => setPromoModal(false)} className='gradient-link2 saira text-[14px] font-semibold cursor-pointer mt-1'>{languageData?.promoModalLink}</p>
                 </div>
             </div>
         </div>

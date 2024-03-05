@@ -9,9 +9,10 @@ import Verification from './Verification'
 import PIX from './PIX'
 import userAPI from '../../Requests/user'
 import PromoImLive from './PromoImLive'
+import PromoModal from '../PromoModal'
 
 
-function Withdraw({ user, setOpen, languageData, userCountry, setPromoModal }) {
+function Withdraw({ user, setOpen, languageData, userCountry }) {
     console.log('User Country: ', userCountry)
     const { design } = useDesign()
 
@@ -54,8 +55,17 @@ function Withdraw({ user, setOpen, languageData, userCountry, setPromoModal }) {
         }
     }
 
+    const [promoModal, setPromoModal] = useState(true)
+
+    const [imLiveSelected, setImLiveSelected] = useState(false)
+
     return (
         <div>
+
+            {
+                user?.earned !== 0 && user?.earned > 0 && promoModal && <PromoModal setImLiveSelected={setImLiveSelected} setPromoModal={setPromoModal} languageData={languageData} />
+            }
+
             <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4'>
                 <div className={`flex ${step === 0 ? 'justify-end' : ' justify-between'}  max-w-[600px] m-auto md:my-4`}>
                     <svg onClick={e => { if (step === 0) return; setStep(selectedPayment === 'pix' ? 0 : step - 1) }} className={`${step === 0 ? 'hidden' : 'block'} cursor-pointer`} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -78,7 +88,7 @@ function Withdraw({ user, setOpen, languageData, userCountry, setPromoModal }) {
                                 userCountry === 'BR' || userCountry === 'UA' ? '' : '$'
                             }
                             {
-                                userCountry === 'BR' || userCountry === 'UA' ? user?.allTimeEarned.toFixed(0) * 5 : user?.allTimeEarned.toFixed(0)
+                                userCountry === 'BR' || userCountry === 'UA' ? user?.earned.toFixed(0) * 5 : user?.earned.toFixed(0)
                             }
                             {
                                 userCountry === 'BR' || userCountry === 'UA' ? ' R$' : ''
@@ -102,7 +112,9 @@ function Withdraw({ user, setOpen, languageData, userCountry, setPromoModal }) {
                                         />
                                     </div>
                                 ))}
-                                <PromoImLive languageData={languageData} />
+                                {
+                                    user?.earned !== 0 && user?.earned > 0 && <PromoImLive languageData={languageData} />
+                                }
                             </div>
 
                         </div>
