@@ -113,7 +113,6 @@
     "raffleRightSection1": "Friend doubled money =",
     "raffleRightSection2": "30 competition tickets, 1 competition points",
     "raffleRulesDesc": "*No purchase needed to participate in the promotion.",
-    "raffleRulesDescSpan": "Read More.",
     "raffleRulesLink": "Promotion rules",
     "doubleTitle": "Double your money - have fun!",
     "doubleSubtitleSpan": "A",
@@ -142,7 +141,6 @@
     "competitionRightSection2": "10 competition points",
     "competitionRightLink1": "Leaderboards",
     "competitionRightRules": "Rules of the competition",
-    "competitionOverBtn": "Get as many points as you can to win the 100$ daily competition:",
     "header1": "Earned:",
     "header2": "Competition Points",
     "header3": "Vegas Tickets:",
@@ -293,7 +291,7 @@
     "toolInfoRight1": "Complete the “Double your money” offer",
     "toolInfoRight2": "Collect ticket by buying ImLive credits and refer friends that complete the offer",
     "toolInfoRight3": "Get points by buying ImLive credits and refer friends that complete the offer",
-     "ourMissionTitle": "Our Mission",
+    "ourMissionTitle": "Our Mission",
     "ourMissionSubTitle1": "CyberSays emerged from the simple idea that online platforms should offer more direct value to their users.",
     "ourMissionSubTitle2": "We're dedicated to creating an environment where every action—whether it's a deposit, a referral, or a purchase—has a rewarding outcome.",
     "ourMissionSubTitle3": "Our platform is designed to celebrate and reward the community for their engagement and loyalty, turning everyday activities into opportunities for joy and excitement.",
@@ -305,7 +303,6 @@
             "question": "What am I doing here?",
             "answers": [
                 "You are here to guaranteed 100% double your initial cash deposit, compete for a chance to win a thrilling Vegas weekend, and participate in our 69$ daily contest."
-               
             ]
         },
         {
@@ -495,7 +492,9 @@
     "leaderSheetYou": "Your place today:",
     "leaderSheetPoints": "Competition Points",
     "leaderSheetFriends": "Friends Referred",
-    "infoOfferTitle": "What do I get when I refer a friends that completes the “Double your money” offer?",
+    "raffleRulesDescSpan": "Read More.",
+    "competitionOverBtn": "Get as many points as you can to win the 100$ daily competition:",
+    "infoOfferTitle": "What do I get when I refer a friend that completes the “Double your money” offer?",
     "infoOfferPoint1": "A friend that will thank you for making him free money",
     "infoOfferPoint2": "1$ you can withdraw as cash immediately",
     "infoOfferPoint3": "30 Vegas Tickets that better your chance to win the Vegas promotion",
@@ -533,9 +532,9 @@
     "doubleCompleteTitleSpan": "inbox!",
     "doubleCompleteSubTitle": "Be the king of your friends by referring them to CyberSays and they’ll thank you forever... 👑",
     "doubleCompleteBtn": "Share",
-    "doubleTaskBtn1": "1/3: Register!",
-    "doubleTaskBtn2": "2/3: Deposit!",
-    "doubleTaskBtn3": "3/3: Spend!",
+    "doubleTaskBtn1": "1\/3: Register!",
+    "doubleTaskBtn2": "2\/3: Deposit!",
+    "doubleTaskBtn3": "3\/3: Spend!",
     "referralShareBtn1": "Share Referral Link!",
     "referralShareBtn2": "Link copied!",
     "ModalMenuToggle": "Choose your design",
@@ -545,12 +544,9 @@
     "promoModalMessage": "Don’t be a fool take this get +30% 65 reais instead of 50",
     "promoModalLink": "No, thanks",
     "promoImLiveDesc": "Don’t be a fool take this get +30% 65 reais instead of 50",
-    "confirmLiveDesc": "Are you sure you want to Withdraw with I'mLive",
+    "confirmLiveDesc": "Are you sure you want to Withdraw with ImLive",
 
     "earnedModalTitleBR": "Latest R$ earnings",
     "modalMenuLink14": "Read More",
     "raffleSubTitleLink": "What’s the Vegas Promotion?"
-    
-
-    
 }
