@@ -6,13 +6,15 @@ import imLiveLogo from '../../images/CyberSaysPage/imLiveLogo.png'
 import TimeCounter from '../../Components/TimeCounter'
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import doubleIcon from '../../images/NewDesign/doubleIcon.svg'
+import arrowTextLeft from '../../images/NewDesign/arrowTextLeft.png'
+import arrowTextRight from '../../images/NewDesign/arrowTextRight.png'
 
 
 function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
-
+    let swiperRef;
     const dataTitle = [
         {
             desc: languageData?.homepageTitle1,
@@ -61,10 +63,24 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                 <img className='se:w-[170px]  w-[170px] iphone:w-[240px] mac2:w-[170px] md:w-[320px] m-auto se:mb-[0px] iphone:mb-[-10px]  relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
                 <div>
                     <div className='lg:flex justify-between items-end md:items-center mt-0 iphone:mt-[50px] contentHomepage md:mt-[70px]'>
-                        <div className='w-full lg:hidden block mb-2'>
+                        <div className='w-full lg:hidden flex mb-2 items-center'>
+                            <div className='buttonPrevText w-[60px]'>
+                                <svg className=' w-[20px] cursor-pointer  mr-[10px]' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M22.6665 29.3333L9.33326 16L22.6665 2.66676" stroke="url(#paint0_linear_518_191)" stroke-width="2.66665" stroke-linecap="round" stroke-linejoin="round" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear_518_191" x1="15.9999" y1="29.3333" x2="15.9999" y2="2.66676" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FAD604" />
+                                            <stop offset="1" stop-color="#FE804D" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
                             <Swiper
-                                modules={[Autoplay]}
-
+                                modules={[Navigation, Autoplay]}
+                                navigation={{
+                                    prevEl: '.buttonPrevText',
+                                    nextEl: '.buttonNextText',
+                                }}
                                 loop={true}
                                 breakpoints={{
                                     0: {
@@ -82,6 +98,17 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                                 }
 
                             </Swiper>
+                            <div className='buttonNextText w-[60px]'>
+                                <svg className=' w-[20px] cursor-pointer ml-[20px]' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M9.3335 2.66675L22.6667 16L9.33349 29.3332" stroke="url(#paint0_linear_518_196)" stroke-width="2.66665" stroke-linecap="round" stroke-linejoin="round" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear_518_196" x1="16.0001" y1="2.66675" x2="16.0001" y2="29.3332" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FAD604" />
+                                            <stop offset="1" stop-color="#FE804D" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
                         </div>
                         <div className={`${design === '0' ? ' border-[#FFD700]' : '  border-[#A2DBF0]'} rounded-[16px] border-2 px-1 pb-1 pt-8 m-auto lg:m-[unset]`}>
                             <div className='flex items-center'>
@@ -95,10 +122,18 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                             </div>
                         </div>
                         <div className='ml-1 md:ml-10 w-[200px] sm:w-[unset] mb-4 md:mb-[unset]'>
-                            <div className='max-w-[300px] md:max-w-[580px] w-full hidden lg:block'>
-                                <Swiper
-                                    modules={[Autoplay]}
+                            <div className='max-w-[300px] md:max-w-[580px] w-full hidden lg:flex items-center'>
+                                <div className='buttonPrevText cursor-pointer mr-[20px]'>
+                                    <img className='w-[100px] h-[32px]' src={arrowTextLeft} alt="arrowTextLeft" />
+                                </div>
 
+                                <Swiper
+                                    modules={[Navigation, Autoplay]}
+
+                                    navigation={{
+                                        prevEl: '.buttonPrev2',
+                                        nextEl: '.buttonNext2',
+                                    }}
                                     loop={true}
                                     breakpoints={{
                                         0: {
@@ -110,12 +145,17 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                                     {
                                         dataTitle.map((item, index) => (
                                             <SwiperSlide key={item}>
-                                                <p className='text-[16px] md:text-[32px] font-semibold'>{item.desc}</p>
+                                                <p className='text-[16px] md:text-[32px] font-semibold lg:leading-9'>{item.desc}</p>
                                             </SwiperSlide>
                                         ))
                                     }
 
                                 </Swiper>
+                                <div className='buttonNext2 cursor-pointer ml-[20px]'>
+                                    <img className='w-[100px] h-[32px]' src={arrowTextRight} alt="arrowTextRight" />
+                                </div>
+                                
+
                             </div>
 
                             {/*
