@@ -293,7 +293,7 @@ function Main({ languageData }) {
     useEffect(() => {
         if (userData === null) return
 
-        if (window.localStorage.getItem('double') !== 'completed' && userData?.deposits === 1) {
+        if (window.localStorage.getItem('double') !== 'completed' && userData?.completed_tasks.indexOf('3') !== -1) {
             setDoubleComplete(true)
             window.localStorage.setItem('double', 'completed')
         }
