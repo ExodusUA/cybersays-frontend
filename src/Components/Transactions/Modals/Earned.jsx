@@ -31,7 +31,7 @@ function Earned({ setOpen, languageData, user, setTransactionsModal, userCountry
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}{userCountry === 'BR' || userCountry === 'UA' ? ' R$' : '$'}</p>
+                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}</p>
                     <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionsSection1Right}</p>
                 </div>
             </div>
@@ -44,7 +44,7 @@ function Earned({ setOpen, languageData, user, setTransactionsModal, userCountry
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}{userCountry === 'BR' || userCountry === 'UA' ? ' R$' : '$'}</p>
+                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}</p>
                     <p className='text-[12px] font-normal saira text-right'>{languageData?.transactionsSection2Right}</p>
                 </div>
             </div>
@@ -57,7 +57,7 @@ function Earned({ setOpen, languageData, user, setTransactionsModal, userCountry
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-                    <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right mb-1'>-{amount}{userCountry === 'BR' || userCountry === 'UA' ? ' R$' : '$'}</p>
+                    <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right mb-1'>-{amount}{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}</p>
                     <p className='text-[12px] font-normal saira  text-right'>Withdrawn</p>
                 </div>
             </div>
@@ -72,7 +72,7 @@ function Earned({ setOpen, languageData, user, setTransactionsModal, userCountry
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}{userCountry === 'BR' || userCountry === 'UA' ? ' R$' : '$'}</p>
+                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}</p>
                     <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionsSection4Right}</p>
                 </div>
             </div>
@@ -87,7 +87,7 @@ function Earned({ setOpen, languageData, user, setTransactionsModal, userCountry
                 <div className='flex justify-end md:mt-4 '>
                     <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../../../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
-                <p className='text-[18px] lg:text-[24px] text-center font-semibold gradient-linkDouble'>{languageData?.earnedModalTitle}</p>
+                <p className='text-[18px] lg:text-[24px] text-center font-semibold gradient-linkDouble'>{userCountry === 'BR' || userCountry === 'UA' ? languageData?.earnedModalTitleBR : languageData?.earnedModalTitle}</p>
                 <div className='m-auto max-w-[345px] md:max-w-[600px] w-full h-[250px] overflow-scroll'>
 
                 {

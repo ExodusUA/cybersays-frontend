@@ -31,8 +31,9 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}{userCountry === 'BR' || userCountry === 'UA' ? ' R$' : '$'}</p>
+                  
                     <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionsSection1Right}</p>
+                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}</p>
                 </div>
             </div>
             case 'doubling': return <div className='flex justify-between items-center mt-4'>
@@ -44,8 +45,9 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}{userCountry === 'BR' || userCountry === 'UA' ? ' R$' : '$'}</p>
+                   
                     <p className='text-[12px] font-normal saira text-right'>{languageData?.transactionsSection2Right}</p>
+                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}</p>
                 </div>
             </div>
             case 'withdraw': return <div className='flex justify-between items-center mt-4'>
@@ -57,8 +59,9 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-                    <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right mb-1'>-{amount}{userCountry === 'BR' || userCountry === 'UA' ? ' R$' : '$'}</p>
+                    
                     <p className='text-[12px] font-normal saira  text-right'>Withdrawn</p>
+                    <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right mb-1'>-{amount}{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}</p>
                 </div>
             </div>
             case 'competition': return <div className='flex justify-between items-center mt-4'>
@@ -72,8 +75,9 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}{userCountry === 'BR' || userCountry === 'UA' ? ' R$' : '$'}</p>
+                    
                     <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionsSection4Right}</p>
+                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{amount}{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}</p>
                 </div>
             </div>
         }
