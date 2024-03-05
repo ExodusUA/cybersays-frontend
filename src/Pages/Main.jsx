@@ -419,7 +419,7 @@ function Main({ languageData }) {
                 ticketsModal && <TicketsHistory languageData={languageData} setOpen={setTicketsModal} user={userData} setSelectedButton={setSelectedButton} selectedButton={selectedButton} />
             }
             {
-                openMessage && <Message onCloseCopied={() => {
+                openMessage && <Message user={userData} onCloseCopied={() => {
                     setMessagetCopied(Array(dataMessage.length).fill(false));
 
                 }} selectedMessage={selectedMessage} messageCopied={messageCopied} copyToMessage={copyToMessage} message={selectedMessage !== null ? dataMessage[selectedMessage].desc : ''} setOpenMassege={setOpenMassege} />

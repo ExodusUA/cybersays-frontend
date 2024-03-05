@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import logoCyber from '../../images/CyberSaysPage/logoMain.png'
-import TimeCounter from '../../Components/TimeCounter'
 import cup1 from '../../images/CyberSaysPage/cup1st.png'
 import cup2 from '../../images/CyberSaysPage/cup2st.png'
 import cup3 from '../../images/CyberSaysPage/cup3st.png'
@@ -10,9 +9,7 @@ import { useDesign } from '../../Helpers/Design/DesignContext'
 import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
 import crown from '../../images/CyberSaysPage/crown1st.png'
 import TimeCounterDay from '../../Components/TimeCounterDay'
-import oneSt from '../../images/CyberSaysPage/cup1st.png'
-import twoSt from '../../images/CyberSaysPage/cup2st.png'
-import threeSt from '../../images/CyberSaysPage/cup3st.png'
+import mixpanel from 'mixpanel-browser';
 
 function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading, leaderboardData, setLeaderboardData, siteData, languageData, setRulesModal, setSocialLink }) {
 
@@ -34,6 +31,17 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
     const [isLinkCopied, setIsLinkCopied] = useState(false)
 
     const shareRefferalLink = () => {
+
+        mixpanel.track("refer_friends", {
+            distinct_id: user?.id,
+            is_referred: user?.referral_id ? 'Yes' : 'No',
+            vegas_tickets: user?.raffle_tickets,
+            points: user?.points,
+            user_id: user?.id,
+            USD_earned: user?.allTimeEarned,
+            page_name: 'Refferals',
+        })
+
         if (navigator.share) {
             navigator
                 .share({
@@ -107,11 +115,21 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                     <p className='text-center text-[12px] sm:text-[16px] font-medium'>{languageData?.competitionOverBtn}</p>
                     <div className='flex sm:max-w-[400px] md:max-w-[unset] m-auto sm:mt-1'>
                         <div className='text-center w-full md:mx-2'>
-                            <Link target='_blank' to={imLiveURL}>
+                            <Link target='_blank' onClick={e => {
+                                mixpanel.track("enjoy_ImLive", {
+                                    distinct_id: user?.id,
+                                    is_referred: user?.referral_id ? 'Yes' : 'No',
+                                    vegas_tickets: user?.raffle_tickets,
+                                    points: user?.points,
+                                    user_id: user?.id,
+                                    USD_earned: user?.allTimeEarned,
+                                    page_name: 'Refferals',
+                                })
+                            }} to={imLiveURL}>
                                 <button className={` bg-white  border-[2px] border-[#FFED63] text-black text-[18px] saira font-semibold p-2 sm:px-6 w-[95%] md:w-full ${design === '0' ? ' p-2 sm:px-6 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.competitionLeftBtn}</button>
                             </Link>
                             <p className='saira text-[12px] sm:text-[12px] font-medium'>{languageData?.competitionLeftSection1} {languageData?.competitionLeftSection2}</p>
-                            
+
                         </div>
                         <div className='text-center w-full md:mx-2'>
                             <button onClick={e => shareRefferalLink()} className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold w-[95%]  md:w-full  ${design === '0' ? ' p-2 sm:px-6 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>
@@ -122,11 +140,22 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                                 }
                             </button>
                             <p className='saira text-[10px] sm:text-[12px] font-medium'>{languageData?.competitionRightSection1} {languageData?.competitionRightSection2}</p>
-                           
+
                         </div>
                     </div>
                     <p className={`text-center text-[12px] sm:text-[14px]  saira font-semibold mt-2 ${design === '0' ? 'text-[#FFED63]' : 'gradient-timeCounter'} `}>{languageData?.competitionSubtitle}</p>
-                    <p className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline se:mt-0 iphone:mt-0 mac:!mt-0  cursor-pointer ${design === '0' ? 'text-white' : 'gradient-link '}`} onClick={e => setLeaderboardModal(true)}>{languageData?.competitionRightLink1}</p>
+                    <p className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline se:mt-0 iphone:mt-0 mac:!mt-0  cursor-pointer ${design === '0' ? 'text-white' : 'gradient-link '}`} onClick={e => {
+                        setLeaderboardModal(true)
+                        mixpanel.track("leaderboard", {
+                            distinct_id: user?.id,
+                            is_referred: user?.referral_id ? 'Yes' : 'No',
+                            vegas_tickets: user?.raffle_tickets,
+                            points: user?.points,
+                            user_id: user?.id,
+                            USD_earned: user?.allTimeEarned,
+                            page_name: 'Refferals',
+                        })
+                    }}>{languageData?.competitionRightLink1}</p>
 
                 </div>
                 <div className='flex justify-center'>

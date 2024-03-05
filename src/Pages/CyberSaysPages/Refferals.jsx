@@ -6,7 +6,7 @@ import right from '../../images/CyberSaysPage/swiperBtnDesctopRight.png';
 import { Navigation } from 'swiper/modules';
 import { useDesign } from '../../Helpers/Design/DesignContext';
 import newlogoCyber from '../../images/NewDesign/newLogo_main.png';
-import ToolTip2 from '../../Components/ToolTip2';
+import mixpanel from 'mixpanel-browser';
 
 function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenMassege, setOpenAvatar, selectedMessage, setSelectedMassege, copyToMessage, message, uploadedPhotos, imageModal, setImageModal, selectedImage, setSelectedImage, setInfoOffer }) {
 
@@ -33,6 +33,17 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
     }, [selectedGif])
 
     const shareRefferalLink = () => {
+
+        mixpanel.track("referral_share", {
+            distinct_id: user?.id,
+            is_referred: user?.referral_id ? 'Yes' : 'No',
+            vegas_tickets: user?.raffle_tickets,
+            points: user?.points,
+            user_id: user?.id,
+            USD_earned: user?.allTimeEarned,
+            page_name: 'Refferals',
+        })
+
         if (navigator.share) {
             navigator
                 .share({
@@ -94,6 +105,15 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
     const [linkShareCopied] = useState(false)
 
     const copyShareLink = () => {
+        mixpanel.track("referral_link", {
+            distinct_id: user?.id,
+            is_referred: user?.referral_id ? 'Yes' : 'No',
+            vegas_tickets: user?.raffle_tickets,
+            points: user?.points,
+            user_id: user?.id,
+            USD_earned: user?.allTimeEarned,
+            page_name: 'Refferals',
+        })
         window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.referral_code)
     }
     return (
@@ -106,8 +126,30 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                     <div className='se:mt-[0px] lg:mt-[30px] mac:!mt-[0px]'>
                         <div className=' w-full hidden lg:block mb-[-100px] mac:mb-[-60px] pr-2'>
                             <div className=' justify-between flex my-3  mx-10'>
-                                <img className='w-[44px] mr-3 cursor-pointer buttonPrevGif' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
-                                <img className='w-[44px]  cursor-pointer buttonNextGif' src={right} alt="Right" onClick={e => swiperRef?.slideNext()} />
+                                <img className='w-[44px] mr-3 cursor-pointer buttonPrevGif' src={left} alt="Left" onClick={e => {
+                                    swiperRef?.slidePrev()
+                                    mixpanel.track("image_sideArrows", {
+                                        distinct_id: user?.id,
+                                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                                        vegas_tickets: user?.raffle_tickets,
+                                        points: user?.points,
+                                        user_id: user?.id,
+                                        USD_earned: user?.allTimeEarned,
+                                        page_name: 'Refferals',
+                                    })
+                                }} />
+                                <img className='w-[44px]  cursor-pointer buttonNextGif' src={right} alt="Right" onClick={e => {
+                                    swiperRef?.slideNext()
+                                    mixpanel.track("image_sideArrows", {
+                                        distinct_id: user?.id,
+                                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                                        vegas_tickets: user?.raffle_tickets,
+                                        points: user?.points,
+                                        user_id: user?.id,
+                                        USD_earned: user?.allTimeEarned,
+                                        page_name: 'Refferals',
+                                    })
+                                }} />
                             </div>
                         </div>
                         <div className='max-w-[370px] sm:max-w-[900px] m-auto w-full '>
@@ -149,7 +191,19 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                                     handlePhotoClick(index, e)
                                                     // setImageModal(true)
                                                 }} className={`${selectedGif === index && `${design === '0' ? 'border-[2px] !border-[#FFED63]' : 'border-[2px] !border-[#FE804D]'} opacity-[1] relative`}   rounded-[20px] w-[110px] h-[110px] sm:w-[140px] sm:h-[140px] opacity-[0.5] cursor-pointer object-cover`} src={item} alt="gif1" />
-                                                <svg onClick={e => downloadPhoto(index)} className=' absolute top-1 left-1 cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+                                                <svg onClick={e => {
+                                                    mixpanel.track("image_download", {
+                                                        distinct_id: user?.id,
+                                                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                                                        vegas_tickets: user?.raffle_tickets,
+                                                        points: user?.points,
+                                                        user_id: user?.id,
+                                                        USD_earned: user?.allTimeEarned,
+                                                        page_name: 'Refferals',
+                                                    })
+                                                    downloadPhoto(index)
+                                                }
+                                                } className=' absolute top-1 left-1 cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
                                                     <path d="M4.25 17V19C4.25 19.5304 4.44315 20.0391 4.78697 20.4142C5.13079 20.7893 5.5971 21 6.08333 21H17.0833C17.5696 21 18.0359 20.7893 18.3797 20.4142C18.7235 20.0391 18.9167 19.5304 18.9167 19V17M7 11L11.5833 16M11.5833 16L16.1667 11M11.5833 16V4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
                                             </div>
@@ -197,8 +251,30 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                         <p className={`text-[14px] sm:text-[24px] font-semibold text-center  se:my-1 iphone:my-3 iphone:px-[30px] refferals-selectMassege lg:my-6 lg:mx-14 sm:mx-0   ${design === '0' ? 'text-[#FFED63]' : 'text-white]'}`}>{languageData?.refferalsSubtitle}</p>
                         <div className=' w-full hidden lg:block pr-2'>
                             <div className=' justify-between flex my-3 mb-[-43px] mx-10'>
-                                <img className='w-[44px] mr-3 cursor-pointer buttonPrevMessage' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
-                                <img className='w-[44px]  cursor-pointer buttonNextMessage' src={right} alt="Right" onClick={e => swiperRef?.slideNext()} />
+                                <img className='w-[44px] mr-3 cursor-pointer buttonPrevMessage' src={left} alt="Left" onClick={e => {
+                                    swiperRef?.slidePrev()
+                                    mixpanel.track("message_sideArrows", {
+                                        distinct_id: user?.id,
+                                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                                        vegas_tickets: user?.raffle_tickets,
+                                        points: user?.points,
+                                        user_id: user?.id,
+                                        USD_earned: user?.allTimeEarned,
+                                        page_name: 'Refferals',
+                                    })
+                                }} />
+                                <img className='w-[44px]  cursor-pointer buttonNextMessage' src={right} alt="Right" onClick={e => {
+                                    swiperRef?.slideNext()
+                                    mixpanel.track("message_sideArrows", {
+                                        distinct_id: user?.id,
+                                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                                        vegas_tickets: user?.raffle_tickets,
+                                        points: user?.points,
+                                        user_id: user?.id,
+                                        USD_earned: user?.allTimeEarned,
+                                        page_name: 'Refferals',
+                                    })
+                                }} />
                             </div>
                         </div>
                         <div className='max-w-[370px] sm:max-w-[900px] m-auto w-full '>
@@ -248,6 +324,15 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                             </svg>
                                             <svg onClick={() => {
                                                 setSelectedMassege(index);
+                                                mixpanel.track("full_text", {
+                                                    distinct_id: user?.id,
+                                                    is_referred: user?.referral_id ? 'Yes' : 'No',
+                                                    vegas_tickets: user?.raffle_tickets,
+                                                    points: user?.points,
+                                                    user_id: user?.id,
+                                                    USD_earned: user?.allTimeEarned,
+                                                    page_name: 'Refferals',
+                                                });
                                                 setOpenMassege(true, item.desc);
                                             }} className='cursor-pointer' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M21 21L16.657 16.657M16.657 16.657C17.3998 15.9141 17.9891 15.0321 18.3912 14.0615C18.7932 13.0909 19.0002 12.0506 19.0002 11C19.0002 9.94936 18.7932 8.90905 18.3912 7.93842C17.9891 6.96779 17.3998 6.08585 16.657 5.34296C15.9141 4.60007 15.0321 4.01078 14.0615 3.60874C13.0909 3.20669 12.0506 2.99976 11 2.99976C9.94936 2.99976 8.90905 3.20669 7.93842 3.60874C6.96779 4.01078 6.08585 4.60007 5.34296 5.34296C3.84263 6.84329 2.99976 8.87818 2.99976 11C2.99976 13.1217 3.84263 15.1566 5.34296 16.657C6.84329 18.1573 8.87818 19.0002 11 19.0002C13.1217 19.0002 15.1566 18.1573 16.657 16.657Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -264,7 +349,19 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                         <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  text-center max-w-[800px]  w-full py-1  px-2 ${design === '0' ? 'rounded-[50px]' : 'rounded-[14px] lg:rounded-[24px]'}`}>
                             <p className='text-[14px] iphone:text-[16px]  sm:text-[24px] mac:!text-[мpx]  font-semibold max-w-[640px] lg:max-w-[740px] mac:max-w-[unset] m-auto leading-[18px] sm:leading-[28px] px-2 referral-title lg:py-2 '>{languageData?.refferalsTitle}</p>
                             <div className='flex justify-center gap-1'>
-                                <p className={`text-[12px] sm:text-[14px] font-medium saira flex justify-center items-center underline cursor-pointer ${design === '0' ? 'text-white' : 'gradient-link '}`} onClick={e => setInfoOffer(true)}>
+                                <p className={`text-[12px] sm:text-[14px] font-medium saira flex justify-center items-center underline cursor-pointer ${design === '0' ? 'text-white' : 'gradient-link '}`} onClick={e => {
+                                    setInfoOffer(true)
+                                    mixpanel.track("learnMore", {
+                                        distinct_id: user?.id,
+                                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                                        vegas_tickets: user?.raffle_tickets,
+                                        points: user?.points,
+                                        user_id: user?.id,
+                                        USD_earned: user?.allTimeEarned,
+                                        page_name: 'Refferals',
+                                    });
+
+                                }}>
                                     {languageData?.refferalsLink1}
                                 </p>
                                 <div className='relative'>

@@ -190,6 +190,19 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
             token: '',
             avatar: ''
         });
+
+        mixpanel.track("message_sent", {
+            distinct_id: user?.id,
+            is_referred: user?.referral_id ? 'Yes' : 'No',
+            vegas_tickets: user?.raffle_tickets,
+            points: user?.points,
+            user_id: user?.id,
+            USD_earned: user?.allTimeEarned,
+            page_name: 'Refferals',
+            region: selectedCountry.toUpperCase(),
+            language: language,
+        })
+
         setMessage('');
     };
 
@@ -220,6 +233,20 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
             token: '',
             avatar: ''
         });
+
+        mixpanel.track("gif_select", {
+            distinct_id: user?.id,
+            is_referred: user?.referral_id ? 'Yes' : 'No',
+            vegas_tickets: user?.raffle_tickets,
+            points: user?.points,
+            user_id: user?.id,
+            USD_earned: user?.allTimeEarned,
+            page_name: 'Refferals',
+            region: selectedCountry.toUpperCase(),
+            language: language,
+            gif_selected: gif
+        })
+
         setGifModal(false)
     }
 
