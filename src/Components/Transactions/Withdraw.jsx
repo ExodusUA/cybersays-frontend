@@ -69,7 +69,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
             }
 
             {
-                imLiveSelected ? <ConfirmImLiveModal setOpen={setConfirmImLive} languageData={languageData} closeAll={setOpen} />
+                imLiveSelected ? <ConfirmImLiveModal setConfirm={setConfirm} setOpen={setImLiveSelected} languageData={languageData} closeAll={setOpen} />
                     : <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4'>
                         <div className={`flex ${step === 0 ? 'justify-end' : ' justify-between'}  max-w-[600px] m-auto md:my-4`}>
                             <svg onClick={e => { if (step === 0) return; setStep(selectedPayment === 'pix' ? 0 : step - 1) }} className={`${step === 0 ? 'hidden' : 'block'} cursor-pointer`} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
