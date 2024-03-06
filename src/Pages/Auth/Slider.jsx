@@ -6,7 +6,7 @@ import slides from '../../Helpers/images.json'
 import left from '../../images/landing/left.png'
 import right from '../../images/landing/right.png'
 
-function Slider({ onSlideChange }) {
+function Slider({ onSlideChange, setCurrentSlide,currentSlide }) {
     let swiperRef;
 
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -20,7 +20,7 @@ function Slider({ onSlideChange }) {
             window.removeEventListener("resize", handleResize);
         };
     }, [screenWidth]);
-
+    console.log(currentSlide)
     return (
         <div className='lg:w-[100%] relative '>
 
@@ -33,7 +33,7 @@ function Slider({ onSlideChange }) {
                 spaceBetween={0}
                 slidesPerView={1}
                 loop={true}
-                onSlideChange={(swiper) => onSlideChange(swiper)}
+                onSlideChange={onSlideChange}
                 navigation={{
                     prevEl: '.buttonPrev',
                     nextEl: '.buttonNext',
