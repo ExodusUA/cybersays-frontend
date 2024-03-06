@@ -22,9 +22,9 @@ function HeaderMenu({ setMenuOpen, user, setTourModal, languageData, userCountry
             <div className=' fixed top-0 md:top-3 z-50 p-2  px-4 w-full max-w-[1170px] m-auto'>
                 <div className=' flex items-center justify-between'>
                     <img onClick={() => setMenuOpen(true)} className='w-[24px] sm:w-[32px] h-[24px] sm:h-[32px] cursor-pointer' src={design === '0' ? btnMenu : require('../../images/NewDesign/Homepage/menuToggle.png')} alt="btnMenu" />
-                    <div className={`bg-[#EAEAEA] w-[85%] lg:w-[unset]  border-[2px]  backdrop-blur-lg rounded-[50px] ${design === '0' ? 'bg-opacity-20  border-[#FFED63]' : 'bg-opacity-30 border-[#A2DBF0]'}`}>
+                    <div className={`bg-[#EAEAEA] w-[85%] lg:w-[unset]  border-[2px]  backdrop-blur-lg rounded-[50px] mr-4 lg:mr-0 ${design === '0' ? 'bg-opacity-20  border-[#FFED63]' : 'bg-opacity-30 border-[#A2DBF0]'}`}>
                         <div className=''>
-                            <div className='xl:gap-4 flex px-2 sm:px-4 py-[4px] sm:py-[5px] justify-between'>
+                            <div className='xl:gap-4 flex px-2 sm:px-4 py-[4px] sm:py-[5px] justify-between '>
                                 <div onClick={e => setEarnedModal(true)} className=' leading-4 md:leading-5 mx-1 cursor-pointer'>
                                     <p className={`text-[12px] sm:text-[16px]  ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-medium saira text-center `}>{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : 'USD'} {languageData?.header1}</p>
                                     <p className={`text-[12px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-bold saira text-center flex justify-center items-center`}><img className='w-[16px] h-[16px] mr-[5px]' src={design === '0' ? money : require('../../images/NewDesign/header/dollar.png')} alt="money" />
