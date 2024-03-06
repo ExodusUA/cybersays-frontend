@@ -27,8 +27,8 @@ function PromoModal({ setOpen, languageData, setImLiveSelected }) {
                     <div className='flex items-center justify-around mt-2'>
                         <img className='w-[120px]' src={promoGirl} alt="promoGirl" />
                         <div className=' relative'>
-                            <img className='w-[200px] h-[100px] ml-[-20px]' src={promoGirlMessage} alt="promoGirlMessage" />
-                            <p className=' absolute top-[38px] left-[-10px] saira text-[12px] font-medium w-[180px] leading-4'>{languageData?.promoModalMessage}</p>
+                            <img className='w-[220px] h-[120px] ml-[-20px]' src={promoGirlMessage} alt="promoGirlMessage" />
+                            <p className=' absolute top-[45px] left-[-15px] saira text-[12px] font-medium w-[180px] leading-4 text-center'>{languageData?.promoModalMessage}</p>
                         </div>
                     </div>
 
