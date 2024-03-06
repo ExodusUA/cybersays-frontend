@@ -1,10 +1,15 @@
 import React from 'react'
 import HeaderProfile from '../Components/HeaderProfile'
+import privacyData from '../Pages/socialPageJSON/privacy_en.json';
+import LanguageSocial from '../Components/Language/LanguageSocial';
 
 function Privacy() {
     return (
         <div>
             <HeaderProfile />
+            <div className='absolute right-2 lg:right-[20px] top-1 lg:top-3 flex items-center align-start z-20'>
+                <LanguageSocial />
+            </div>
 
             <div className='textStyle max-w-[1240px] m-auto overflow-scroll h-screen pb-[50px] saira p-2' dangerouslySetInnerHTML={
                 {
@@ -224,7 +229,7 @@ function Privacy() {
             } />
 
         </div>
-    )
+    );
 }
 
 export default Privacy

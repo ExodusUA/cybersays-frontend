@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import mixpanel from 'mixpanel-browser'
 
-function TaskCard({ state, background, data, index, imLiveURL, rounded, open, manualSelect, setSelectedTask, tasks, user }) {
+function TaskCard({ state, background, data, index, imLiveURL, rounded, open, manualSelect, setSelectedTask, tasks, user,languageData }) {
 
     const { design } = useDesign()
 
@@ -88,7 +88,7 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded, open, ma
                 });
             }
 
-            } className={`saira text-[14px] cursor-pointer underline text-center mb-[-5px] py-2 pb-3 font-semibold  ${linkCopied === true ? 'opacity-60' : ''}`}>Copy link</p>
+            } className={`saira text-[14px] cursor-pointer underline text-center mb-[-5px] py-2 pb-3 font-semibold  ${linkCopied === true ? 'opacity-60' : ''}`}>{languageData?.CopyLink}</p>
         </>
     }
 

@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import Slider from './Auth/Slider';
 import LoginForm from './Auth/LoginForm';
 import logoCyber from '../images/logoLogin.png';
-
+import { useSwipeable } from 'react-swipeable';
 
 function Auth({ languageData }) {
 
@@ -23,7 +23,10 @@ function Auth({ languageData }) {
         console.log(swiper.realIndex)
     };
 
-
+    const handlers = useSwipeable({
+        onSwipedLeft: () => setCurrentSlide((prev) => (prev + 1) % 4),
+        onSwipedRight: () => setCurrentSlide((prev) => (prev - 1 + 4) % 4), 
+    });
     return (
         <>
             <Helmet>
@@ -36,12 +39,12 @@ function Auth({ languageData }) {
             </Helmet>
 
 
-            <section className='w-screen h-screen relative overflow-hidden'>
+            <section  {...handlers} className='w-screen h-screen relative overflow-hidden'>
                 
 
                 <div className='lg:flex h-full'>
 
-                    <Slider onSlideChange={slideChange} />
+                    <Slider currentSlide={currentSlide}  setCurrentSlide={setCurrentSlide} onSlideChange={slideChange}  />
                     <div className='absolute right-0 lg:right-[20px] top-5 flex items-center align-start z-20'>
                                 <Language />
                             </div>

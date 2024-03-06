@@ -1,6 +1,6 @@
 import React from 'react'
 import HeaderProfile from '../Components/HeaderProfile'
-
+import LanguageSocial from '../Components/Language/LanguageSocial';
 
 function ContestTerms() {
     
@@ -8,7 +8,9 @@ function ContestTerms() {
         <div>
             
             <HeaderProfile />
-
+            <div className='absolute right-2 lg:right-[20px] top-1 lg:top-3 flex items-center align-start z-20'>
+                <LanguageSocial />
+            </div>
             <div className='textStyle max-w-[1240px] m-auto overflow-scroll h-screen pb-[50px] saira p-2' dangerouslySetInnerHTML={
                 {
                     __html: `<p style="text-align:center;font-size:16pt!important;"><strong>CyberSays.Club -&nbsp;&nbsp;Daily Contest Terms</strong></p>

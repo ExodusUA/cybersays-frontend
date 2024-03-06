@@ -90,17 +90,18 @@ function Earned({ setOpen, languageData, user, setTransactionsModal, userCountry
                 <p className='text-[18px] lg:text-[24px] text-center font-semibold gradient-linkDouble'>{userCountry === 'BR' || userCountry === 'UA' ? languageData?.earnedModalTitleBR : languageData?.earnedModalTitle}</p>
                 <div className='m-auto max-w-[345px] md:max-w-[600px] w-full h-[250px] overflow-scroll'>
 
-                {
-                    transactionsData?.length > 0
-                        ? transactionsData?.reverse().map((transaction, index) => {
-                            return getMarkup(transaction.type, transaction.datetime, userCountry === 'BR' || userCountry === 'UA' ? transaction.amount * 5 : transaction.amount)
-                        })
-                        : <div className='flex justify-center items-center h-[470px]'>
-                            <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
-                        </div>
+                    {
+                        transactionsData?.length > 0
+                            ? transactionsData?.reverse().map((transaction, index) => {
+                                return getMarkup(transaction.type, transaction.datetime, userCountry === 'BR' || userCountry === 'UA' ? transaction.amount * 5 : transaction.amount)
+                            })
+                            : <div className='flex justify-center items-center h-[200px]'>
+                                <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
 
-                }
+                            </div>
 
+                    }
+                    
                 </div>
                 <div className=' flex justify-center'>
                     <p onClick={e => {

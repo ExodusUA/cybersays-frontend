@@ -145,17 +145,17 @@ function Points({ setOpen, languageData, user, setTicketsModal, setSelectedButto
                 <p className='text-[18px] lg:text-[24px] text-center font-semibold gradient-linkDouble'>{languageData?.PointsModalTitle}</p>
                 <div className='m-auto max-w-[345px] md:max-w-[600px] w-full h-[250px] overflow-scroll'>
 
-                    <div className='m-auto max-w-[345px] md:max-w-[600px] w-full mt-3 h-[250px] overflow-scroll'>
+                    
                         {
                             allData?.length > 0
                                 ? allData !== null && allData?.map(ticket => {
                                     return ticket.name === 'ticket' ? getTicketsMarkup(ticket.type, ticket.datetime, ticket.amount) : getPointsMarkup(ticket.type, ticket.datetime, ticket.amount)
                                 })
-                                : <div className='flex justify-center items-center h-[270px]'>
+                                : <div className='flex justify-center items-center h-[200px]'>
                                     <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
                                 </div>
                         }
-                    </div>
+                    
 
                 </div>
                 <div className=' flex justify-center'>

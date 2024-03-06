@@ -62,7 +62,7 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                 </div>
                 <img className='se:w-[170px]  w-[170px] iphone:w-[240px] mac2:w-[170px] md:w-[320px] m-auto se:mb-[0px] iphone:mb-[-10px]  relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
                 <div>
-                    <div className='lg:flex justify-between items-end md:items-center mt-0 iphone:mt-[50px] contentHomepage md:mt-[70px]'>
+                    <div className='lg:flex justify-between items-end md:items-center mt-0 iphone:mt-[30px] contentHomepage md:mt-[70px]'>
                         <div className='w-full lg:hidden flex mb-2 items-center'>
                             <div className='buttonPrevText w-[60px]'>
                                 <svg className=' w-[20px] cursor-pointer  mr-[10px]' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
