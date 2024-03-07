@@ -395,8 +395,9 @@ body {
 }
 .withdrawBg3 {
     background: linear-gradient(179deg, #2C50A6 -22.77%, #2C4087 56.15%, #2A3061 113.63%);
-
-
+}
+.withdrawBg4 {
+    background: linear-gradient(179deg, #B5F2E9 -22.77%, #6AC9BC 56.15%, #3E9589 113.63%);
 }
 .custom-select {
     appearance: none;
@@ -469,5 +470,16 @@ body {
 @media screen and (max-height: 870px) and (min-width: 1200px) {
     .mac-img-bottom {
         margin-bottom: 0px !important;
+    }
+}
+@media screen and (max-width: 399px) {
+    .homepageSE {
+        margin-top: 0px !important;
+    }
+    .competitionSE {
+        margin-top: 6px !important;
+    }
+    .raffleTicketsSE {
+        margin-top: -30px !important;
     }
 }

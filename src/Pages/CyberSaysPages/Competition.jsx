@@ -69,7 +69,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[14px] text-center se:py-1 mac:!py-0 px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto mt-[10px] md:mt-0'>
                     <p className='text-center text-[18px] sm:text-[22px]  font-bold'>{languageData?.competitionTitle}</p>
                 </div>
-                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[14px] text-center se:py-1 iphone:py-2  px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto mt-2 iphone:mt-[40px] contentForCompetitions md:mt-[60px]'>
+                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[14px] text-center se:py-1 iphone:py-2  px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto mt-2 competitionSE iphone:mt-[40px] contentForCompetitions md:mt-[60px]'>
                     {/*<p className='text-center text-[14px] sm:text-[32px] mac:!text-[24px] font-semibold'>{languageData?.competitionTitle} {siteData?.currentDay}</p>*/}
 
 
