@@ -231,6 +231,7 @@ body {
     height: 1px;
     background: var(--Linear, linear-gradient(105deg, #8FE5EC -23.05%, #DDBAFC 88.21%));
 }
+
 .gradient-linkDouble {
     background: var(--New-CS-yellow, linear-gradient(180deg, #FAD604 0%, #FE804D 100%));
     -webkit-background-clip: text;
@@ -359,9 +360,11 @@ body {
 .textStyle p {
     font-size: 12pt !important;
 }
+
 .placeBg {
     background: var(--Card-bg, linear-gradient(94deg, #711876 0%, #355FA3 100%));
 }
+
 @media screen and (max-width: 600px) {
     table {
         width: 100% !important;
@@ -372,48 +375,92 @@ body {
         font-size: 10pt !important;
     }
 }
+
 .blur-image {
-    filter: blur(115px); /* Змініть 5px на те значення, яке вам потрібно */
+    filter: blur(115px);
+    /* Змініть 5px на те значення, яке вам потрібно */
 }
+
 .custom-borderTask {
     border-width: 3px;
     border-style: solid;
     border-color: transparent;
 }
+
+.withdrawBg1 {
+    background: linear-gradient(179deg, #FFE69E -22.77%, #FDA92B 56.15%, #BC6117 113.63%);
+}
+.withdrawBg2 {
+    background: linear-gradient(179deg, #3B689A -22.77%, #2B4868 56.15%, #1D3147 113.63%);
+}
+.withdrawBg3 {
+    background: linear-gradient(179deg, #2C50A6 -22.77%, #2C4087 56.15%, #2A3061 113.63%);
+
+
+}
+.custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('./images/NewDesign/withdraw/selectArrow.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 1rem) center;
+    cursor: pointer;
+    padding-right: 1rem;
+    color: #1E1E1E;
+    font-family: Inter;
+    width: 100%;
+    padding: 0.75rem;
+}
+
+.custom-select option[value="default"] {
+    display: none !important;
+
+}
 @media screen and (max-height: 770px) and (min-width: 1200px) {
     .mac-overflow-fix {
         margin-top: -185px !important;
     }
+
     .refferals-selectMassege {
         margin-top: 10px !important;
         margin-bottom: 0px !important;
     }
+
     .mac-img-width {
         width: 860px !important;
     }
+
     .double-subtitle {
         padding-top: 2px !important;
         padding-bottom: 4px !important;
     }
+
     .double-img-width {
         width: 210px !important;
         margin-bottom: -10px !important;
     }
+
     .referral-title {
         padding-bottom: 0px !important;
     }
+
     .timeCounter-title {
         font-size: 22px !important;
     }
+
     .contentForDesktop {
         margin-top: 0px !important;
     }
+
     .contentForCompetitions {
         margin-top: 8px !important;
     }
+
     .contentForDouble {
         margin-top: 40px !important;
     }
+
     .contentHomepage {
         margin-top: 20px !important;
     }

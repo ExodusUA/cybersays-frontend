@@ -12,7 +12,13 @@ import PromoImLive from './PromoImLive'
 import PromoModal from '../PromoModal'
 import ConfirmImLiveModal from './ConfirmImLive'
 import pt from '../../images/flags/flag-pt.png'
-
+import withdrawLogo1 from '../../images/NewDesign/withdraw/withdrawLogo1.png'
+import withdrawLogo2 from '../../images/NewDesign/withdraw/withdrawLogo2.png'
+import withdrawLogo3 from '../../images/NewDesign/withdraw/withdrawLogo3.png'
+import imLiveLogo from '../../images/NewDesign/imLiveLogo.png'
+import promoGirl from '../../images/NewDesign/promoGirl.png'
+import VisaFlow from './VisaFlow'
+import PaxumFlow from './PaxumFlow'
 
 function Withdraw({ user, setOpen, languageData, userCountry }) {
     console.log('User Country: ', userCountry)
@@ -103,8 +109,9 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
                         {
                             step === 0 && <div>
                                 <p className='text-[18px] md:text-[32px] font-semibold text-center my-2'>{languageData?.withdrawTitle2}</p>
-                                <div className={`max-h-[320px]  max-w-[375px] md:max-w-[600px] m-auto`}>
+                                <div className={`   md:max-w-[600px] m-auto`}>
                                     <div className='flex flex-wrap  justify-center mt-2  m-auto relative'>
+                                        {/*
                                         {paymentMethods.map((item, index) => (
                                             <div key={index} className='w-[50%] mb-2'>
                                                 <img
@@ -113,13 +120,41 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
                                                     src={item.image}
                                                     alt="social"
                                                 />
-                                                
+
                                             </div>
                                         ))}
+                                        */}
+                                        
+                                        <div onClick={e => setSelectedPayment(1)} className={`w-[160px] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg1 m-auto flex justify-center items-center relative ${selectedPayment === 1 && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
+                                            <img className='w-[50px]' src={withdrawLogo1} alt="withdrawLogo1" />
+                                            <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>{languageData?.withdrawGiftTitle}</p>
+                                        </div>
+                                        <div onClick={e => setSelectedPayment(2)} className={`w-[160px] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg2 m-auto flex justify-center items-center relative ${selectedPayment === 2 && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
+                                            <img className='w-[115px]' src={withdrawLogo2} alt="withdrawLogo1" />
+                                            <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>Paxum</p>
+                                        </div>
+                                        <div onClick={e => setSelectedPayment(3)} className={`w-[160px] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg3 m-auto flex justify-center items-center relative mt-2 ${selectedPayment === 3 && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
+                                            <img className='w-[68px]' src={withdrawLogo3} alt="withdrawLogo1" />
+                                            <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>Visa prepaid card</p>
+                                        </div>
+                                        <div onClick={e => setSelectedPayment(4)} className={`w-[160px] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] bg-new-bg-promo bg-no-repeat bg-cover m-auto flex justify-center items-center relative mt-2 ${selectedPayment === 4 && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
+                                            <div>
+                                                <div className='flex items-center justify-center lg:mt-4'>
+                                                    <img className='w-[38px]' src={promoGirl} alt="promoGirl" />
+                                                    <img className='w-[111px]' src={imLiveLogo} alt="imLiveLogo" />
+                                                </div>
+                                                <p className=' text-center saira font-normal text-[14px] leading-[15px] mt-2 lg:mb-1'>ImLive</p>
+                                                <p className=' text-center saira font-normal text-[10px] px-1 lg:px-0 lg:text-[12px] gradient-linkDouble leading-[15px]'>{languageData?.promoImLiveDesc}</p>
+                                            </div>
+                                        </div>
+                                        
+                                        {/*<VisaFlow languageData={languageData} />*/}
+                                        {/*<PaxumFlow languageData={languageData} />*/}
+
                                         {
                                             user?.earned !== 0 && user?.earned > 0 && <PromoImLive languageData={languageData} />
                                         }
-                                        <p className='absolute saira font-normal text-[14px] left-[23px] bottom-[12px] flex items-center'>{languageData?.withdrawGiftTitle} <img className='w-[24px] ml-[5px]' src={pt} alt="pt" /></p>
+
                                     </div>
 
                                 </div>

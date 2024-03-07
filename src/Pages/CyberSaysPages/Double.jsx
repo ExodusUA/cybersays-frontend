@@ -28,7 +28,7 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
         if (finishedTasks.includes(task)) {
             return 'finished'
         } else {
-            if (lastTask === task - 1) {
+            if (lastTask === task + 1) {
                 return 'active'
             } else {
                 return 'inactive'
@@ -59,7 +59,7 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
         setSelectedTask(lastTask)
         setLastTask(lastTask)
     }, [user])
-
+    
     const getButtonMarkup = (task) => {
         switch (task) {
             case null:
@@ -81,6 +81,11 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
                 <Link to={imLiveURL} target='_blank'><button className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.doubleTaskBtn3}</button></Link>
                 <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>3 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
             </div>
+            case 4: return <div className='max-w-[380px] w-full px-1'>
+            <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
+            <Link to={imLiveURL} target='_blank'><button className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.doubleTaskBtn3}</button></Link>
+            <p className='text-center text-[14px] font-semibold saira'> {languageData?.doubleBtnEndTask}</p>
+        </div>
         }
     }
     return (
@@ -116,9 +121,9 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
                 <div className='max-w-[920px] m-auto lg:flex hidden '>
                     {
                         taskStatus !== null && <>
-                            <TaskCardDesktop languageData={languageData} tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task1} setSelectedTask={setSelectedTask} state={taskStatus[0]} manualSelect={selectedTask !== null} open={selectedTask === 1} background={design === '0' ? '#B9A1E1' : '#4F97CB'} rounded={'rounded-[20px]'} mt={'mt-5'} index={1} imLiveURL={imLiveURL} />
-                            <TaskCardDesktop languageData={languageData} tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task2} setSelectedTask={setSelectedTask} state={taskStatus[1]} manualSelect={selectedTask !== null} open={selectedTask === 2} background={design === '0' ? '#93CC8E' : '#32B28C'} rounded={'rounded-[20px]'} index={2} imLiveURL={imLiveURL} />
-                            <TaskCardDesktop languageData={languageData} setDoubleComplete={setDoubleComplete} tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task3} setSelectedTask={setSelectedTask} state={taskStatus[2]} manualSelect={selectedTask !== null} open={selectedTask === 3} background={design === '0' ? '#EA7C7C' : '#D76666'} rounded={'rounded-[20px] !pb-[5px]'} index={3} imLiveURL={imLiveURL} />
+                            <TaskCardDesktop lastTask={lastTask} languageData={languageData} tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task1} setSelectedTask={setSelectedTask} state={taskStatus[0]} manualSelect={selectedTask !== null} open={selectedTask === 1} background={design === '0' ? '#B9A1E1' : '#4F97CB'} rounded={'rounded-[20px]'} mt={'mt-5'} index={1} imLiveURL={imLiveURL} />
+                            <TaskCardDesktop lastTask={lastTask} languageData={languageData} tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task2} setSelectedTask={setSelectedTask} state={taskStatus[1]} manualSelect={selectedTask !== null} open={selectedTask === 2} background={design === '0' ? '#93CC8E' : '#32B28C'} rounded={'rounded-[20px]'} index={2} imLiveURL={imLiveURL} />
+                            <TaskCardDesktop lastTask={lastTask} languageData={languageData} setDoubleComplete={setDoubleComplete} tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task3} setSelectedTask={setSelectedTask} state={taskStatus[2]} manualSelect={selectedTask !== null} open={selectedTask === 3} background={design === '0' ? '#EA7C7C' : '#D76666'} rounded={'rounded-[20px] !pb-[5px]'} index={3} imLiveURL={imLiveURL} />
                             {/*<TaskCard user={user} tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task4} setSelectedTask={setSelectedTask} state={taskStatus[3]} manualSelect={selectedTask !== null} open={selectedTask === 4} background={design === '0' ? '#76C2E3' : '#9E64D8'} rounded={'rounded-[20px] !pb-[5px]'} index={4} imLiveURL={imLiveURL} />*/}
                         </>
                     }
