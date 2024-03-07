@@ -50,7 +50,7 @@ function OTPModal({ recaptchaRef, email, refferalCode, special, languageData }) 
     }
 
     return (
-        <div className='w-screen h-screen bg-modal fixed left-0 top-0 z-[99] bg-cover flex items-center justify-center'>
+        <div className='w-screen h-screen bg-modal fixed left-0 top-0 z-[99999] bg-cover flex items-center justify-center' >
 
             <div className='p-10 rounded-[12px] bg-[#83869b] bg-opacity-25 w-[90%] sm:w-auto border-[1px] border-[#FF1CBB]'>
                 <img className='w-[175px] m-auto' src={logotype} alt="Logo" />
