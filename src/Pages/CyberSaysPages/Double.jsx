@@ -26,6 +26,7 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
         let lastTask = sortedTasks[sortedTasks.length - 1]
 
         if (finishedTasks.includes(task)) {
+          
             return 'finished'
         } else {
             if (lastTask === task + 1) {
@@ -54,17 +55,25 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
         if (user === null) return setLastTask(0)
 
         let tasks = JSON.parse(user?.completed_tasks)
-        if (tasks === null) return setLastTask(0)
+        if (tasks === null) {
+            setLastTask(0)
+            setSelectedTask(1)
+            return
+        }
         let lastTask = tasks[tasks.length - 1]
-        setSelectedTask(lastTask)
+        
+        setSelectedTask(lastTask + 1)
         setLastTask(lastTask)
     }, [user])
-    
+
+    useEffect(() => {
+        console.log('selectedTask', selectedTask)
+    }, [selectedTask])
+
     const getButtonMarkup = (task) => {
         switch (task) {
             case null:
             case undefined:
-            case 0:
             case 1:
                 return <div className='max-w-[380px] w-full px-1'>
                     <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
@@ -82,10 +91,9 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
                 <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>3 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
             </div>
             case 4: return <div className='max-w-[380px] w-full px-1'>
-            <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
-            <Link to={imLiveURL} target='_blank'><button className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.doubleTaskBtn3}</button></Link>
-            <p className='text-center text-[14px] font-semibold saira'> {languageData?.doubleBtnEndTask}</p>
-        </div>
+                <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
+                <Link to={imLiveURL} target='_blank'><button className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.doubleBtnEndTask}</button></Link>
+            </div>
         }
     }
     return (

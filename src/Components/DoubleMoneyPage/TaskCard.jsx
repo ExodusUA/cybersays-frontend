@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import mixpanel from 'mixpanel-browser'
 
-function TaskCard({ state, background, data, index, imLiveURL, rounded, open, manualSelect, setSelectedTask, tasks, user,languageData }) {
+function TaskCard({ state, background, data, index, imLiveURL, rounded, open, manualSelect, setSelectedTask, tasks, user, languageData }) {
 
     const { design } = useDesign()
 
@@ -14,6 +14,12 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded, open, ma
     useEffect(() => {
         if (manualSelect === true) {
             setCardState('inactive')
+
+            if (tasks?.includes(3) && index === 3) {
+                setCardState('active')
+            } else {
+                setCardState('inactive')
+            }
         } else {
             if (index === 1 && state === 'inactive') {
                 setCardState('active')
@@ -39,7 +45,7 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded, open, ma
         navigator.clipboard.writeText(imLiveURL)
         setLinkCopied(true)
     }
-    console.log()
+
     const activeState = () => {
         return <>
             <div className='flex justify-between items-center mx-1  sm:mx-3 cursor-pointer'>
