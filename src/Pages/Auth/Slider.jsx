@@ -60,8 +60,8 @@ function Slider({ onSlideChange, setCurrentSlide,currentSlide }) {
                     <img className='w-[60px] lg:w-[84px] cursor-pointer buttonNext ' src={right} alt="Right" onClick={e => swiperRef?.slideNext()} />
                 </div>
             </div>
-            <img className='w-[60px] lg:w-[84px] cursor-pointer buttonPrev absolute lg:hidden block left-0 top-[100px] z-50' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
-            <img className='w-[60px] lg:w-[84px] cursor-pointer buttonNext absolute lg:hidden block right-0 top-[100px] z-50' src={right} alt="Right" onClick={e => swiperRef?.slideNext()} />
+            <img className='w-[60px] lg:w-[84px] cursor-pointer buttonPrev absolute lg:hidden block left-0 top-[100px] z-10' src={left} alt="Left" onClick={e => swiperRef?.slidePrev()} />
+            <img className='w-[60px] lg:w-[84px] cursor-pointer buttonNext absolute lg:hidden block right-0 top-[100px] z-10' src={right} alt="Right" onClick={e => swiperRef?.slideNext()} />
         </div>
     )
 }

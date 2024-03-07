@@ -11,6 +11,7 @@ import { useDesign } from '../../Helpers/Design/DesignContext'
 import doubleIcon from '../../images/NewDesign/doubleIcon.svg'
 import arrowTextLeft from '../../images/NewDesign/arrowTextLeft.png'
 import arrowTextRight from '../../images/NewDesign/arrowTextRight.png'
+import message from '../../images/NewDesign/Homepage/message.png'
 
 
 function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
@@ -110,10 +111,11 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                                 </svg>
                             </div>
                         </div>
-                        <div className={`${design === '0' ? ' border-[#FFD700]' : '  border-[#A2DBF0]'} rounded-[16px] border-2 px-1 pb-1 pt-8 m-auto lg:m-[unset]`}>
-                            <div className='flex items-center'>
-                                <img className={`w-[180px] sm:w-[200px] md:w-[240px]  ${design === '0' ? 'mt-[-30px]' : 'mt-[-65px]'}`} src={design === '0' ? girlOK : require('../../images/NewDesign/Homepage/hero_image.png')} alt="girlOK" />
-                                <Link to={imLiveURL} target='_blank'><img className='w-[160px] md:w-[240px] md:mt-5 mac:!mt-6 mb-10' src={imLiveLogo} alt="imLiveLogo" /></Link>
+                        <div className={`relative ${design === '0' ? ' border-[#FFD700]' : '  border-[#A2DBF0]'} rounded-[16px] border-2 px-1 pb-1 pt-8 m-auto lg:m-[unset]`}>
+                            <div className='flex items-center '>
+                                <img className={`  ${design === '0' ? 'mt-[-30px] w-[180px] sm:w-[200px] md:w-[240px]' : 'mt-[-30px] md:mt-0 w-[380px] md:w-[470px]'}`} src={design === '0' ? girlOK : require('../../images/NewDesign/Homepage//message.png')} alt="girlOK" />
+                                <Link to={imLiveURL} target='_blank'><img className={`w-[160px] md:w-[240px] md:mt-5 mac:!mt-6 mb-10 ${design === '0' ? 'block' : 'hidden'}`} src={imLiveLogo} alt="imLiveLogo" /></Link>
+                                <p className='text-[22px] lg:text-[34px] saira font-medium w-[165px] lg:w-[240px] leading-6 lg:leading-10 absolute right-[30px] lg:right-[40px] lg:mt-6 gradient-linkDouble'>{languageData?.homepageMessageTitle}</p>
                             </div>
                             <div className=' relative '>
                                 {
@@ -154,7 +156,7 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                                 <div className='buttonNext2 cursor-pointer ml-[20px]'>
                                     <img className='w-[100px] h-[32px]' src={arrowTextRight} alt="arrowTextRight" />
                                 </div>
-                                
+
 
                             </div>
 

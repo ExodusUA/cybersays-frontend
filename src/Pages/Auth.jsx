@@ -47,7 +47,7 @@ function Auth({ languageData }) {
                 <div className='lg:flex h-full'>
 
                     <Slider currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} onSlideChange={slideChange} />
-                    <div className='absolute right-0 lg:right-[20px] top-5 flex items-center align-start z-20'>
+                    <div className='absolute right-0 lg:right-[20px] top-5 flex items-center align-start z-10'>
                         <Language />
                     </div>
                     <div className='w-full text-center bg-dark lg:w-[620px] h-full lg:absolute lg:left-10 top-10'>
@@ -57,8 +57,8 @@ function Auth({ languageData }) {
 
                             <div className='pt-[1px] iphone:pt-[10px]  w-full relative z-[10] lg:border-2 lg:px-10 lg:pt-10 lg:pb-5 lg:bg-[#0D0D0D73] bg-opacity-20 rounded-[32px] border-[#DDBBFD]'>
                                 <div className=' lg:max-w-[600px] '>
-                                    <img className='w-[130px]  lg:w-[250px] m-auto mt-[-30px] lg:mt-0' src={logoCyber} alt="Logotype" />
-                                    <p className='w-full lg:w-[100%] text-center lg:text-left text-[24px] leading-7 font-bold lg:text-[30px] text-white lg:leading-9 pb-2 se:mt-[0px] '>
+                                    <img className='w-[130px]  lg:w-[250px] m-auto mt-[-30px] lg:mt-0 logoLogin' src={logoCyber} alt="Logotype" />
+                                    <p className='w-full lg:w-[100%] text-center lg:text-left text-[24px] leading-7 font-bold lg:text-[32px] text-white lg:leading-9 pb-2 se:mt-[0px] '>
                                         {currentSlide === 0 && (
                                             <>
                                                 {languageData?.authSlide1}
