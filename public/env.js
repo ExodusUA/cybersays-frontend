@@ -3,7 +3,7 @@ window.env = {
   "ACSvcPort": "17532",
   "ALLUSERSPROFILE": "C:\\ProgramData",
   "APPDATA": "C:\\Users\\danie\\AppData\\Roaming",
-  "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\crashpad_15980_RIUGYQIKDUMBWGJQ",
+  "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\crashpad_8568_IIEXEDEIVPXMGBJB",
   "COLOR": "1",
   "COLORTERM": "truecolor",
   "CommonProgramFiles": "C:\\Program Files\\Common Files",
@@ -80,7 +80,7 @@ window.env = {
   "SystemRoot": "C:\\WINDOWS",
   "TEMP": "C:\\Users\\danie\\AppData\\Local\\Temp",
   "TERM_PROGRAM": "vscode",
-  "TERM_PROGRAM_VERSION": "1.87.0",
+  "TERM_PROGRAM_VERSION": "1.87.1",
   "TMP": "C:\\Users\\danie\\AppData\\Local\\Temp",
   "USERDOMAIN": "DANICHOK",
   "USERDOMAIN_ROAMINGPROFILE": "DANICHOK",
@@ -91,7 +91,7 @@ window.env = {
   "VSCODE_GIT_ASKPASS_NODE": "C:\\Users\\danie\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
   "VSCODE_GIT_IPC_HANDLE": "\\\\.\\pipe\\vscode-git-4e9266502d-sock",
   "VSCODE_INJECTION": "1",
-  "VSCODE_NONCE": "211ee94f-a06a-4fc3-9742-8a068eedd7e9",
+  "VSCODE_NONCE": "c12e3535-f4f9-4922-8cb1-dccd2a0fe986",
   "windir": "C:\\WINDOWS",
   "ZES_ENABLE_SYSMAN": "1"
 };
