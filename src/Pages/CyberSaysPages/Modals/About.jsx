@@ -2,7 +2,7 @@ import React from 'react'
 import close from '../../../images/CyberSaysPage/closeMenu.png'
 import { useDesign } from '../../../Helpers/Design/DesignContext'
 
-function About({ user, setOpen, languageData  }) {
+function About({ user, setOpen, languageData }) {
 
     const { design } = useDesign()
 
@@ -15,6 +15,9 @@ function About({ user, setOpen, languageData  }) {
 
                 <h1 className='text-[32px] text-white text-center '>{languageData?.aboutModalTitle}</h1>
                 <div className='max-h-[70vh] overflow-auto mt-4'>
+                    <p className='text-justify saira text-[16px]'>{languageData?.aboutModalDesc5}</p>
+                    <p className='text-justify saira text-[16px]'>{languageData?.aboutModalDesc6}</p>
+
                     <p className='text-justify saira text-[16px]'>{languageData?.aboutModalDesc1}</p>
                     <p className='text-justify saira text-[16px]'>{languageData?.aboutModalDesc2}</p>
                     <p className='text-justify saira text-[16px]'>{languageData?.aboutModalDesc3}</p>
