@@ -84,13 +84,13 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                                         <p className='text-[18px] md:text-[24px] font-medium saira text-center se:mb-0 iphone:mb-2 mac:!mb-1  md:text-center iphone:px-4'>{languageData?.raffleUnderBtn} </p>
                                         <div className='flex justify-between items-start w-full '>
                                             <div className='text-center w-full'>
-                                                <Link target='_blank' to={imLiveURL}><button className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold p-2 md:py-2 md:w-[95%] ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.raffleLeftBtn}</button></Link>
+                                                <Link target='_blank' to={imLiveURL}><button className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[14px] lg:text-[18px] saira font-semibold p-0 md:py-2 w-[97%] md:w-[95%] ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.raffleLeftBtn}</button></Link>
                                                 <p className='saira text-[12px] md:text-[14px] font-medium mt-1'>{languageData?.raffleLeftSection1} {languageData?.raffleLeftSection2}</p>
 
 
                                             </div>
                                             <div className='text-center w-full'>
-                                                <button onClick={e => shareRefferalLink()} className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold p-2 md:py-2 md:w-[95%] ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{
+                                                <button onClick={e => shareRefferalLink()} className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[14px] lg:text-[18px] saira font-semibold p-0 md:py-2 w-[97%] md:w-[95%] ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{
                                                     isLinkCopied === false
                                                         ? languageData?.raffleRightBtn
                                                         : languageData?.raffleRightBtn2
