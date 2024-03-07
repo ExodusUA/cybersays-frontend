@@ -402,6 +402,15 @@ body {
 .withdrawBg4 {
     background: linear-gradient(179deg, #B5F2E9 -22.77%, #6AC9BC 56.15%, #3E9589 113.63%);
 }
+.withdrawBg5 {
+    background: linear-gradient(179deg, #FFF -22.77%, #CECBCB 56.15%, #777 113.63%);
+}
+.withdrawBg6 {
+    background: linear-gradient(172deg, #93B3E3 -4.59%, #2C5BA6 89.21%);
+}
+.withdrawBg7 {
+    background: linear-gradient(172deg, #CDD7DE -4.59%, #7D868C 89.21%);
+}
 
 .custom-select {
     appearance: none;
