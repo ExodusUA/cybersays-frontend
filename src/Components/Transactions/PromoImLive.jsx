@@ -13,7 +13,7 @@ function PromoImLive({ languageData }) {
 
     return (
 
-        <div className={`max-w-[350px] md:max-w-[600px] w-full m-auto relative bg-new-bg-promo bg-no-repeat bg-cover border-[2px] px-2 rounded-[12px] lg:px-4 ${design === '0' ? ' border-[#FFD700]' : '  border-[#A2DBF0]'}`}>
+        <div className={`max-w-[350px] md:max-w-[600px] w-full m-auto relative bg-new-bg-promo bg-no-repeat bg-cover border-[2px] px-2 rounded-[12px] lg:px-4 mt-2 ${design === '0' ? ' border-[#FFD700]' : '  border-[#A2DBF0]'}`}>
             <div className='max-w-[350px] w-full m-auto'>
                 <div className='flex items-center justify-center mt-2'>
                     <img className='w-[120px]' src={promoGirl} alt="promoGirl" />

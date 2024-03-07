@@ -555,5 +555,24 @@
     "NamePage3": "Vegas Weekend<",
     "NamePage4": "Competition",
     "NamePage5": "My referrals",
-    "withdrawGiftTitle": "Gift Card / Cash"
+    "withdrawGiftTitle": "Gift Card / Cash",
+    "doubleBtnEndTask": "Win the Vegas weekend💃",
+    "paxumFlowTitle": "You’ll get a cash voucher to an email of your choice:",
+    "paxumFlowInput": "Enter your Paxum e-mail",
+    "paxumFlowPlaceholder": "Enter your Paxum e-mail",
+    "paxumFlowBtn": "Continue",
+    "paxumFlowLink1": "Don’t have Paxum account?",
+    "paxumFlowLink2": "Create it here",
+    "visaFlowTitle": "You’ll get a cash voucher to an email of your choice:",
+    "visaFlowSubTitle": "Firts withdraw has a minimun of $25 in this type of payment",
+    "visaFlowSelectName1": "Transfer to",
+    "visaFlowSelect1": "Prepaid Virtual Debit Card",
+    "visaFlowInput": "Enter your Paxum e-mail",
+    "visaFlowPlaceholder": "Enter your Paxum e-mail",
+    "visaFlowSelectName2": "Card type",
+    "visaFlowSelect2": "Visa USD",
+    "visaFlowSelectName3": "Value",
+    "visaFlowSelect3": "Visa Prepaid Card",
+    "visaFlowBtn": "Continue"
+
 }

@@ -4,12 +4,12 @@ import done from '../../images/CyberSaysPage/card_done.png'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import mixpanel from 'mixpanel-browser'
 
-function TaskCardDesktop({ state, background, data, index, imLiveURL, rounded, open, manualSelect, setSelectedTask, tasks, user, mt,languageData }) {
+function TaskCardDesktop({ state, background, data, index, imLiveURL, rounded, open, manualSelect, setSelectedTask, tasks, user, mt,languageData,lastTask }) {
 
     const { design } = useDesign()
 
     const [cardState, setCardState] = useState(null)
-
+    
     useEffect(() => {
         if (manualSelect === true) {
             setCardState('inactive')
@@ -38,7 +38,8 @@ function TaskCardDesktop({ state, background, data, index, imLiveURL, rounded, o
         navigator.clipboard.writeText(imLiveURL)
         setLinkCopied(true)
     }
-    console.log()
+    
+    console.log(lastTask)
     const activeState = () => {
         return <>
             <div className={`flex justify-between items-center mx-1  sm:mx-1 cursor-pointer pt-1`}>
@@ -147,7 +148,7 @@ function TaskCardDesktop({ state, background, data, index, imLiveURL, rounded, o
 
     return (
 
-        <div onClick={e => setSelectedTask(index)} style={{ background: getBackground(), paddingBottom: getPaddingBottom(), marginTop: marginTop() }} className={`w-full rounded-t-[20px] ${rounded} bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  se:p-[6px]  p-2 se:my-0 my-2 mx-1 custom-borderTask  ${open ? design === '0' ? ' border-[3px]  !border-[#FFD700]' : 'border-[3px]  !border-[#A2DBF0]' : ''}`}>
+        <div  style={{ background: getBackground(), paddingBottom: getPaddingBottom(), marginTop: marginTop() }} className={`w-full rounded-t-[20px] ${rounded} bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  se:p-[6px]  p-2 se:my-0 my-2 mx-1     ${index  === lastTask + 1 ? design === '0' ? ' border-[3px]  !border-[#FFD700]' : 'border-[3px]  !border-[#A2DBF0]' : ''}`}>
 
 
             {
