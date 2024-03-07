@@ -6,13 +6,16 @@ import withdrawLogo1 from '../../images/NewDesign/withdraw/withdrawLogo1.png'
 import withdrawLogo2 from '../../images/NewDesign/withdraw/withdrawLogo2.png'
 import withdrawLogo3 from '../../images/NewDesign/withdraw/withdrawLogo3.png'
 
-function SelectMethod({ languageData, selectPayment, selectedPayment }) {
+function SelectMethod({ languageData, selectPayment, selectedPayment, userCountry }) {
     const { design } = useDesign()
     return (
         <div>
             <p className='text-[18px] md:text-[32px] font-semibold text-center my-2'>{languageData?.withdrawTitle2}</p>
             <div className={`   md:max-w-[600px] m-auto`}>
                 <div className='flex flex-wrap  justify-center mt-2  m-auto relative'>
+                    {
+                        userCountry === 'BR' || userCountry === 'UA' && <div>PIX</div> /* PIX ТУТ */
+                    }
                     <div onClick={e => selectPayment('xoxoday')} className={`w-[160px] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg1 m-auto flex justify-center items-center relative ${selectedPayment === 'xoxoday' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
                         <img className='w-[50px]' src={withdrawLogo1} alt="withdrawLogo1" />
                         <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>{languageData?.withdrawGiftTitle}</p>
