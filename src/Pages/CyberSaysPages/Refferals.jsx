@@ -123,8 +123,8 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
 
 
                 <div className='flex flex-col-reverse relative '>
-                    <div className='se:mt-[0px] lg:mt-[30px] mac:!mt-[0px]'>
-                        <div className=' w-full hidden lg:block mb-[-100px] mac:mb-[-60px] pr-2'>
+                    <div className='se:mt-[0px] lg:mt-[30px] mac:mt-[30px]'>
+                        <div className=' w-full hidden lg:block mb-[-100px] mac:mb-[-100px] pr-2'>
                             <div className=' justify-between flex my-3  mx-10'>
                                 <img className='w-[44px] mr-3 cursor-pointer buttonPrevGif' src={left} alt="Left" onClick={e => {
                                     swiperRef?.slidePrev()
@@ -247,7 +247,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
 
                         </div>
                     </div>
-                    <div className='mt-0 iphone:mt-[55px] contentForDesktop md:mt-[50px] '>
+                    <div className='mt-0 iphone:mt-[55px] contentForDesktop md:mt-[10px] '>
                         <p className={`text-[14px] sm:text-[24px] font-semibold text-center  se:my-1 iphone:my-3 iphone:px-[30px] refferals-selectMassege lg:my-6 lg:mx-14 sm:mx-0   ${design === '0' ? 'text-[#FFED63]' : 'text-white]'}`}>{languageData?.refferalsSubtitle}</p>
                         <div className=' w-full hidden lg:block pr-2'>
                             <div className=' justify-between flex my-3 mb-[-43px] mx-10'>

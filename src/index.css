@@ -471,3 +471,14 @@ body {
         margin-bottom: 0px !important;
     }
 }
+@media screen and (max-width: 389px) {
+    .homepageSE {
+        margin-top: 0px !important;
+    }
+    .competitionSE {
+        margin-top: 6px !important;
+    }
+    .raffleTicketsSE {
+        margin-top: -30px !important;
+    }
+}
