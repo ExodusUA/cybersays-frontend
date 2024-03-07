@@ -1,85 +1,59 @@
 import React, { useEffect, useState } from 'react'
-import close from '../../images/CyberSaysPage/closeMenu.png'
-import social1 from '../../images/NewDesign/Pix.png'
-import social2 from '../../images/NewDesign/Gift.png'
-import { useDesign } from '../../Helpers/Design/DesignContext'
 import Confirm from './Confirm'
 import Error from './Error'
-import Verification from './Verification'
-import PIX from './PIX'
 import userAPI from '../../Requests/user'
-import PromoImLive from './PromoImLive'
-import PromoModal from '../PromoModal'
-import ConfirmImLiveModal from './ConfirmImLive'
-import pt from '../../images/flags/flag-pt.png'
-import withdrawLogo1 from '../../images/NewDesign/withdraw/withdrawLogo1.png'
-import withdrawLogo2 from '../../images/NewDesign/withdraw/withdrawLogo2.png'
-import withdrawLogo3 from '../../images/NewDesign/withdraw/withdrawLogo3.png'
-import imLiveLogo from '../../images/NewDesign/imLiveLogo.png'
-import promoGirl from '../../images/NewDesign/promoGirl.png'
-import VisaFlow from './VisaFlow'
-import PaxumFlow from './PaxumFlow'
+import ImLivePromoModal from '../Withdraw/ImLivePromoModal'
+import ImLiveFlow from '../Withdraw/ImLiveFlow'
+import PixFlow from '../Withdraw/PixFlow'
+import WithdrawMain from '../Withdraw/WithdrawMain'
+import { useDesign } from '../../Helpers/Design/DesignContext'
+import close from '../../images/CyberSaysPage/closeMenu.png'
+import PaxumFlow from '../Withdraw/PaxumFlow'
+import VisaFlow from '../Withdraw/VisaFlow'
+import XoxodayFlow from '../Withdraw/XoxodayFlow'
+
 
 function Withdraw({ user, setOpen, languageData, userCountry }) {
-    console.log('User Country: ', userCountry)
+
     const { design } = useDesign()
 
     const [selectedPayment, setSelectedPayment] = useState(null)
     const [email, setEmail] = useState(null)
     const [confirm, setConfirm] = useState(false)
     const [error, setError] = useState(false)
-    const [step, setStep] = useState(0)
-    const [confirmImLive, setConfirmImLive] = useState(0)
 
-    const [paymentMethods, setPaymentMethods] = useState([])
+
 
     useEffect(() => {
         if (userCountry === null || userCountry === undefined) return
-
-        let methods = []
-        methods.push({
-            id: 2,
-            name: 'xoxoday',
-            image: social2
-        })
-
-        if (userCountry === 'BR' || userCountry === 'UA') {
-            methods.push({
-                id: 1,
-                name: 'pix',
-                image: social1
-            })
-        }
-
-        setPaymentMethods(methods)
-
     }, [userCountry])
 
-    async function generateOTP() {
+    const [flowStarted, setFlowStarted] = useState(false)
+    const [promoModal, setPromoModal] = useState(true)
+    const [imLiveSelected, setImLiveSelected] = useState(false)
 
-        if (email === null || email === undefined || email.length === '') return alert('Please enter a valid email address')
-        const res = await userAPI.generateOTP(email)
-        if (res.status === 200) {
-            setStep(2)
+    const getMethodComponent = (selectedPayment) => {
+        switch (selectedPayment) {
+            case 'xoxoday': return <XoxodayFlow languageData={languageData} setConfirm={setConfirm} setError={setError} email={email} />
+            case 'pix': return <PixFlow languageData={languageData} setConfirm={setConfirm} setError={setError} email={email} />
+            case 'paxum': return <PaxumFlow languageData={languageData} setConfirm={setConfirm} setSelectedPayment={setSelectedPayment} />
+            case 'visa': return <VisaFlow languageData={languageData} setConfirm={setConfirm} setError={setError} />
+            case 'imlive': return <ImLiveFlow setConfirm={setConfirm} setOpen={setImLiveSelected} languageData={languageData} closeAll={setOpen} setFlowStarted={setFlowStarted} />
+            default: return 'Please select a payment method to continue.'
         }
     }
 
-    const [promoModal, setPromoModal] = useState(true)
-
-    const [imLiveSelected, setImLiveSelected] = useState(false)
-
     return (
         <div>
-
             {
-                user?.earned !== 0 && user?.earned > 0 && promoModal && <PromoModal setImLiveSelected={setImLiveSelected} setOpen={setPromoModal} languageData={languageData} />
+                user?.earned !== 0 && user?.earned > 0 && promoModal && <ImLivePromoModal setImLiveSelected={setImLiveSelected} setOpen={setPromoModal} languageData={languageData} />
             }
-
             {
-                imLiveSelected ? <ConfirmImLiveModal setConfirm={setConfirm} setOpen={setImLiveSelected} languageData={languageData} closeAll={setOpen} />
+                imLiveSelected
+                    ? <ImLiveFlow setConfirm={setConfirm} setOpen={setImLiveSelected} languageData={languageData} closeAll={setOpen} />
                     : <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4'>
-                        <div className={`flex ${step === 0 ? 'justify-end' : ' justify-between'}  max-w-[600px] m-auto md:my-4`}>
-                            <svg onClick={e => { if (step === 0) return; setStep(selectedPayment === 'pix' ? 0 : step - 1) }} className={`${step === 0 ? 'hidden' : 'block'} cursor-pointer`} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <div className={`flex max-w-[600px] m-auto md:my-4 justify-between`}>
+                            <svg onClick={e => setFlowStarted(false)} className='cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M17 22L7 12L17 2" stroke="url(#paint0_linear_26_11821)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 <defs>
                                     <linearGradient id="paint0_linear_26_11821" x1="17" y1="11.8039" x2="7" y2="11.8039" gradientUnits="userSpaceOnUse">
@@ -90,135 +64,17 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
                             </svg>
                             <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../../images/NewDesign/closeBtn.png')} alt="close" />
                         </div>
-                        <p onClick={e => setPromoModal(true)} className='text-[18px] md:text-[32px] font-semibold text-center'>{languageData?.withdrawTitle1}</p>
-                        <p className={`text-[12px] ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble font-semibold'} font-medium text-center saira`}>{languageData?.withdrawSubtitle}</p>
-                        <div className=' text-center flex justify-center  m-auto mt-3'>
-                            <div className={`bg-[#EAEAEA] bg-opacity-30 backdrop-blur-lg ${design === '0' ? 'rounded-[30px]' : ' rounded-[12px]'} px-8`}>
-                                <p className={`text-[32px] w-f ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble font-semibold'} font-bold text-center saira leading-9 mt-1`}>
-                                    {
-                                        userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'
-                                    }
-                                    {
-                                        userCountry === 'BR' || userCountry === 'UA' ? user?.earned.toFixed(0) * 5 : user?.earned.toFixed(0)
-                                    }
-                                   
-                                </p>
-                                <p className='text-[12px] font-medium text-center saira leading-3 mb-2'>{languageData?.withdrawPrice}</p>
-                            </div>
-                        </div>
                         {
-                            step === 0 && <div>
-                                <p className='text-[18px] md:text-[32px] font-semibold text-center my-2'>{languageData?.withdrawTitle2}</p>
-                                <div className={`   md:max-w-[600px] m-auto`}>
-                                    <div className='flex flex-wrap  justify-center mt-2  m-auto relative'>
-                                        {/*
-                                        {paymentMethods.map((item, index) => (
-                                            <div key={index} className='w-[50%] mb-2'>
-                                                <img
-                                                    onClick={e => setSelectedPayment(item.name)}
-                                                    className={`${selectedPayment === item.name && (design === '0' ? 'outline outline-[2px] !outline-[#FFED63]' : 'outline outline-[2px] !outline-[#A2DBF0]')} border-none w-[160px] md:w-[295px] h-[140px] md:h-[unset] cursor-pointer rounded-[14px] object-cover m-auto`}
-                                                    src={item.image}
-                                                    alt="social"
-                                                />
-
-                                            </div>
-                                        ))}
-                                        */}
-                                        
-                                        <div onClick={e => setSelectedPayment(1)} className={`w-[160px] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg1 m-auto flex justify-center items-center relative ${selectedPayment === 1 && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
-                                            <img className='w-[50px]' src={withdrawLogo1} alt="withdrawLogo1" />
-                                            <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>{languageData?.withdrawGiftTitle}</p>
-                                        </div>
-                                        <div onClick={e => setSelectedPayment(2)} className={`w-[160px] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg2 m-auto flex justify-center items-center relative ${selectedPayment === 2 && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
-                                            <img className='w-[115px]' src={withdrawLogo2} alt="withdrawLogo1" />
-                                            <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>Paxum</p>
-                                        </div>
-                                        <div onClick={e => setSelectedPayment(3)} className={`w-[160px] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg3 m-auto flex justify-center items-center relative mt-2 ${selectedPayment === 3 && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
-                                            <img className='w-[68px]' src={withdrawLogo3} alt="withdrawLogo1" />
-                                            <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>Visa prepaid card</p>
-                                        </div>
-                                        <div onClick={e => setSelectedPayment(4)} className={`w-[160px] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] bg-new-bg-promo bg-no-repeat bg-cover m-auto flex justify-center items-center relative mt-2 ${selectedPayment === 4 && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
-                                            <div>
-                                                <div className='flex items-center justify-center lg:mt-4'>
-                                                    <img className='w-[38px]' src={promoGirl} alt="promoGirl" />
-                                                    <img className='w-[111px]' src={imLiveLogo} alt="imLiveLogo" />
-                                                </div>
-                                                <p className=' text-center saira font-normal text-[14px] leading-[15px] mt-2 lg:mb-1'>ImLive</p>
-                                                <p className=' text-center saira font-normal text-[10px] px-1 lg:px-0 lg:text-[12px] gradient-linkDouble leading-[15px]'>{languageData?.promoImLiveDesc}</p>
-                                            </div>
-                                        </div>
-                                        
-                                        {/*<VisaFlow languageData={languageData} />*/}
-                                        {/*<PaxumFlow languageData={languageData} />*/}
-
-                                        {
-                                            user?.earned !== 0 && user?.earned > 0 && <PromoImLive languageData={languageData} />
-                                        }
-
-                                    </div>
-
-                                </div>
-                                <div className='flex justify-center mt-2 lg:mt-4'>
-                                    <button onClick={e => setStep(selectedPayment === 'pix' ? 3 : 1)} className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-2 max-w-[350px] outline-none  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>
-                                </div>
-                            </div>
+                            flowStarted
+                                ? getMethodComponent(selectedPayment)
+                                : <WithdrawMain setFlowStarted={setFlowStarted} selectPayment={setSelectedPayment} selectedPayment={selectedPayment} userCountry={userCountry} user={user} languageData={languageData} />
                         }
-                        {
-                            step === 1 && <div>
-                                <p className='text-[18px] md:text-[24px] font-semibold text-center my-2'>{
-                                    selectedPayment === 'pix' ? languageData?.PIXTitle : languageData?.withdrawTitle3
-                                }</p>
-                                <div className='flex justify-center mt-4'>
-                                    <input className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder={languageData?.withdrawInputEmail} />
-                                </div>
-                                <div className='flex justify-center mt-4'>
-                                    <button onClick={e => generateOTP()} className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-2 max-w-[600px]  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawContinue}</button>
-                                </div>
-                                <div className='bg-[#EAEAEA] bg-opacity-40 backdrop-blur-md rounded-[14px] lg:rounded-[24px] p-2 mt-4 max-w-[600px] w-full m-auto py-3'>
-                                    <p className='text-[12px] font-medium saira'>{languageData?.withdrawLi1}</p>
-                                    <p className='text-[12px] font-medium saira mt-1'>{languageData?.withdrawLi2}</p>
-                                    <p className='text-[12px] font-medium saira mt-1'>{languageData?.withdrawLi3}</p>
-                                    <p className='text-[12px] font-medium saira mt-1'>{languageData?.withdrawLi4}</p>
-                                    <p className='text-[12px] font-medium saira mt-1'>{languageData?.withdrawLi5}</p>
-                                    <p className='text-[12px] font-medium saira mt-1'>{languageData?.withdrawLi6} <span className='saira text-[12px] underline cursor-pointer'>{languageData?.withdrawLi6Span}</span></p>
-                                </div>
-                            </div>
-                        }
-                        {
-                            step === 2 && <Verification setStep={setStep} languageData={languageData} email={email} />
-                        }
-                        {
-                            step === 3 && <PIX setStep={setStep} languageData={languageData} setConfirm={setConfirm} setError={setError} email={email} />
-                        }
-                        {/*
-                <div className={`max-h-[320px] overflow-scroll border-b-[2px] ${design === '0' ? 'border-[#FFED63]' : 'gradient-withdrawBorder'} max-w-[375px] md:max-w-[600px] m-auto`}>
-                    <div className='flex flex-wrap justify-between mt-2  m-auto'>
-                        {paymentMethods.map((item, index) => (
-                            <div key={index} className='w-[33%] mb-2'>
-                                <img
-                                    onClick={e => setSelectedPayment(index)}
-                                    className={`${selectedPayment === index && (design === '0' ? 'border-[2px] !border-[#FFED63]' : 'border-[2px] !border-[#A2DBF0]')} w-[110px] md:w-[190px] h-[140px] md:h-[unset] cursor-pointer rounded-[40px]`}
-                                    src={item.image}
-                                    alt="social"
-                                />
-                            </div>
-                        ))}
-
-                    </div>
-
-                </div>
-                <div className='flex justify-center'>
-                    <p className={`text-[12px] md:text-[14px] font-semibold underline text-center saira cursor-pointer sm:mx-[80px] my-2 md:my-4 ${design === '0' ? 'text-white' : 'gradient-link'}`}>{languageData?.withdrawLink}</p>
-                </div>
-                */}
-
                     </div>
             }
-
-
             {
                 confirm && <Confirm setOpen={setConfirm} languageData={languageData} closeAll={setOpen} />
             }
+
             {
                 error && <Error setOpen={setError} languageData={languageData} closeAll={setOpen} />
             }

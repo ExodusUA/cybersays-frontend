@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import userAPI from '../../Requests/user'
 
-function PIX({ languageData, setStep, setConfirm, setError, email }) {
+function PixFlow({ languageData, setConfirm, setError, email }) {
     const { design } = useDesign()
     const [PIX, setPIX] = useState(null)
     const [CPF, setCPF] = useState(null)
@@ -38,4 +38,4 @@ function PIX({ languageData, setStep, setConfirm, setError, email }) {
     )
 }
 
-export default PIX
+export default PixFlow

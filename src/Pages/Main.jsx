@@ -43,7 +43,7 @@ import TicketsHistory from '../Components/Transactions/TicketsHistory'
 import SocialLink from '../Components/SocialLink'
 import DoubleComplete from '../Components/DoubleComplete'
 import { useLanguage } from '../Helpers/Languages/LanguageContext'
-import PromoModal from '../Components/PromoModal'
+import PromoModal from '../Components/Withdraw/ImLivePromoModal'
 
 
 var mixpanel = require('mixpanel-browser');

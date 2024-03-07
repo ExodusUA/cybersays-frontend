@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { useDesign } from '../../Helpers/Design/DesignContext'
-import CodeInput from './CodeInput'
+import CodeInput from '../Transactions/CodeInput'
 import userAPI from '../../Requests/user'
 
-function Verification({ languageData, setStep, email }) {
+function OTPVerify({ languageData, isVerified, email }) {
     const { design } = useDesign()
     const [code, setCode] = useState(['', '', '', '', '', ''])
 
@@ -14,7 +14,7 @@ function Verification({ languageData, setStep, email }) {
         try {
             const res = await userAPI.verifyOTP(codeNumber, email)
             if (res.data.isValid === true) {
-                setStep(3)
+                isVerified(true)
             }
         } catch (error) {
             alert('Invalid Code')
@@ -34,4 +34,4 @@ function Verification({ languageData, setStep, email }) {
     )
 }
 
-export default Verification
+export default OTPVerify

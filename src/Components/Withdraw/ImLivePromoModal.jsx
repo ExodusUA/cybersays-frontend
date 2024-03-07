@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import close from '../images/CyberSaysPage/closeMenu.png'
-import imLiveLogo from '../images/NewDesign/imLiveLogo.png'
-import { useDesign } from '../Helpers/Design/DesignContext'
-import promoGirl from '../images/NewDesign/promoGirl.png'
-import promoGirlMessage from '../images/NewDesign/promoGirl-message.png'
+import close from '../../images/NewDesign/closeBtn.png'
+import imLiveLogo from '../../images/NewDesign/imLiveLogo.png'
+import { useDesign } from '../../Helpers/Design/DesignContext'
+import promoGirl from '../../images/NewDesign/promoGirl.png'
+import promoGirlMessage from '../../images/NewDesign/promoGirl-message.png'
 
 
 
-function PromoModal({ setOpen, languageData, setImLiveSelected }) {
+function ImLivePromoModal({ setOpen, languageData, setImLiveSelected }) {
     const { design } = useDesign()
 
 
@@ -17,7 +17,7 @@ function PromoModal({ setOpen, languageData, setImLiveSelected }) {
 
 
                 <div className='flex justify-end my-1 md:my-4 '>
-                    <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
+                    <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
                 <div className='max-w-[350px] w-full m-auto'>
                     <div className='flex justify-around '>
@@ -48,6 +48,6 @@ function PromoModal({ setOpen, languageData, setImLiveSelected }) {
     )
 }
 
-export default PromoModal
+export default ImLivePromoModal
 
 
