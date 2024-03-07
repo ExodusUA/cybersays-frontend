@@ -25,13 +25,13 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
             case 'doubling_referral': return <div className='flex justify-between items-center mt-4 '>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={transaction} alt="transaction" />
-                    <div className='w-[200px] md:w-[300px]'>
+                    <div className='w-[200px] md:w-[400px]'>
                         <p className='text-[12px] md:text-[14px] font-semibold saira  leading-4 mb-2'>{languageData?.ticketsSection1Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira '>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-                  
+
                     <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionsSection1Right}</p>
                     <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}{amount}</p>
                 </div>
@@ -39,13 +39,13 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
             case 'doubling': return <div className='flex justify-between items-center mt-4'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
-                    <div className='w-[200px] md:w-[300px]'>
+                    <div className='w-[200px] md:w-[400px]'>
                         <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>{languageData?.transactionsSection1Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-                   
+
                     <p className='text-[12px] font-normal saira text-right'>{languageData?.transactionsSection2Right}</p>
                     <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}{amount}</p>
                 </div>
@@ -53,13 +53,13 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
             case 'withdraw': return <div className='flex justify-between items-center mt-4'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
-                    <div className='w-[200px] md:w-[300px]'>
+                    <div className='w-[200px] md:w-[400px]'>
                         <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>{languageData?.transactionsSection3Left} {languageData?.transactionsSection3Left2}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-                    
+
                     <p className='text-[12px] font-normal saira  text-right'>Withdrawn</p>
                     <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right mb-1'>-{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}{amount}</p>
                 </div>
@@ -67,15 +67,15 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
             case 'competition': return <div className='flex justify-between items-center mt-4'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
-                    <div className='w-[200px] md:w-[300px]'>
-                        <p className='text-[12px]  md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>{languageData?.transactionsSection4Left} <span className='truncate saira text-[12px] md:text-[14px] font-medium ml-1 w-[50px] md:w-[180px] block'>
+                    <div className='w-[200px] md:w-[400px]'>
+                        <p className='text-[12px]  md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>{languageData?.transactionsSection4Left + ' '} 
                             {user?.email}
-                        </span> {languageData?.transactionsSection4Left2}</p>
+                            {languageData?.transactionsSection4Left2}</p>
                         <p className='text-[12px]  md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-                    
+
                     <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionsSection4Right}</p>
                     <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}{amount}</p>
                 </div>

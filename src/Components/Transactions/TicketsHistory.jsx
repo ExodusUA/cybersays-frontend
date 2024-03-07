@@ -49,7 +49,6 @@ function TicketsHistory({ setOpen, languageData, user, setSelectedButton, select
             res.data.points[0].map(point => {
                 allPoints += Number(point.amount)
             })
-            console.log(allPoints)
             setAllPoints(allPoints)
 
             return res.data.points[0];
@@ -57,9 +56,10 @@ function TicketsHistory({ setOpen, languageData, user, setSelectedButton, select
     })
 
     useEffect(() => {
-       
+        if (ticketsData === null || pointsData === null) return
         proccessData(selectedButton === 'ticket' ? ticketsData : pointsData)
-    }, [selectedButton])
+    }, [ticketsData, pointsData, selectedButton])
+    
 
     function proccessData(proccessData) {
         if (proccessData === null) return
@@ -80,10 +80,10 @@ function TicketsHistory({ setOpen, languageData, user, setSelectedButton, select
 
     const getTicketsMarkup = (type, datetime, amount) => {
         switch (type) {
-            case 'doubling_referral': return <div className='flex justify-between items-center mt-2'>
+            case 'tickets_doubling_referral': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={joker} alt="transaction" />
-                    <div className='w-[200px] md:w-[300px]'>
+                    <div className='w-[200px] md:w-[400px]'>
                         <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection1Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
@@ -93,10 +93,10 @@ function TicketsHistory({ setOpen, languageData, user, setSelectedButton, select
                     <p className='text-[12px] font-normal saira text-right'>{languageData?.ticketsSection1Right}</p>
                 </div>
             </div>
-            case 'email_referral': return <div className='flex justify-between items-center mt-2'>
+            case 'tickets_email_referral': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={joker} alt="transaction" />
-                    <div className='w-[200px] md:w-[300px]'>
+                    <div className='w-[200px] md:w-[400px]'>
                         <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection2Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
@@ -106,10 +106,10 @@ function TicketsHistory({ setOpen, languageData, user, setSelectedButton, select
                     <p className='text-[12px] font-normal saira  text-right'>{languageData?.ticketsSection2Right}</p>
                 </div>
             </div>
-            case 'buying_credits': return <div className='flex justify-between items-center mt-2'>
+            case 'tickets_buying_credits': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={joker} alt="transaction" />
-                    <div className='w-[200px] md:w-[300px]'>
+                    <div className='w-[200px] md:w-[400px]'>
                         <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection3Left} {amount} {languageData?.ticketsSection3Left2}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira '>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
@@ -124,10 +124,10 @@ function TicketsHistory({ setOpen, languageData, user, setSelectedButton, select
 
     const getPointsMarkup = (type, datetime, amount) => {
         switch (type) {
-            case 'doubling_referral': return <div className='flex justify-between items-center mt-2'>
+            case 'points_doubling_referral': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={coin} alt="transaction" />
-                    <div className='w-[200px] md:w-[300px]'>
+                    <div className='w-[200px] md:w-[400px]'>
                         <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection1Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
@@ -137,10 +137,10 @@ function TicketsHistory({ setOpen, languageData, user, setSelectedButton, select
                     <p className='text-[12px] font-normal saira  text-right'>{languageData?.ticketsSection4Right}</p>
                 </div>
             </div>
-            case 'email_referral': return <div className='flex justify-between items-center mt-2'>
+            case 'points_email_referral': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={coin} alt="transaction" />
-                    <div className='w-[200px] md:w-[300px]'>
+                    <div className='w-[200px] md:w-[400px]'>
                         <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection5Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
@@ -150,11 +150,11 @@ function TicketsHistory({ setOpen, languageData, user, setSelectedButton, select
                     <p className='text-[12px] font-normal saira  text-right'>{languageData?.ticketsSection5Right}</p>
                 </div>
             </div>
-            case 'buying_credits': return <div className='flex justify-between items-center mt-2'>
+            case 'points_buying_credits': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={coin} alt="transaction" />
-                    <div className='w-[200px] md:w-[300px]'>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection6Left} {amount} {languageData?.ticketsSection6Left2}</p>
+                    <div className='w-[200px] md:w-[400px]'>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection6Left} {amount * 2} {languageData?.ticketsSection6Left2}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira '>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
@@ -175,11 +175,11 @@ function TicketsHistory({ setOpen, languageData, user, setSelectedButton, select
             <div class=" justify-center flex my-2">
                 <div class={`flex border-[1px]  m-auto rounded-[14px] border-[#FDA62D]  `}>
                     <div onClick={e => setSelectedButton('ticket')} className={`${selectedButton === 'ticket' && 'gradient-tourToggle'}  rounded-[12px] px-[20px] py-[5px] md:py-[6px]  cursor-pointer`}>
-                        <p className={`${selectedButton === 'ticket' && '!text-black'} text-white saira font-bold text-[14px] flex items-center`}>Vegas Tickets:<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? joker : require('../../images/NewDesign/header/ticket.png')} alt="joker" /> {allTickets || 0}</p>
+                        <p className={`${selectedButton === 'ticket' && '!text-black'} text-white saira font-bold text-[14px] flex items-center`}>Vegas Tickets:<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? joker : require('../../images/NewDesign/header/ticket.png')} alt="joker" /> {user?.raffle_tickets || 0}</p>
                     </div>
                     <div onClick={e => setSelectedButton('point')} className={`${selectedButton === 'point' && 'gradient-tourToggle'} rounded-[12px] px-[20px] py-[5px] md:py-[6px] cursor-pointer`}>
                         <p className={`${selectedButton === 'point' && '!text-black'} text-white saira font-bold text-[14px] flex items-center`}>
-                            Points:<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? refferals : require('../../images/NewDesign/header/points.png')} alt="refferals" /> {allPoints || 0}
+                            Points:<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? refferals : require('../../images/NewDesign/header/points.png')} alt="refferals" /> {user?.points || 0}
                         </p>
                     </div>
                 </div>

@@ -42,7 +42,9 @@ function Points({ setOpen, languageData, user, setTicketsModal, setSelectedButto
             })
         })
 
-        let sorted = data?.sort((a, b) => new Date(b.datetime) - new Date(a.datetime))
+        let sorted = data?.filter(ticket => {
+            return moment.unix((Number(ticket.datetime))).format('DD MMMM, YYYY') === moment().format('DD MMMM, YYYY')
+        })
 
         setAllData(sorted)
 
@@ -53,7 +55,7 @@ function Points({ setOpen, languageData, user, setTicketsModal, setSelectedButto
             case 'doubling_referral': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={joker} alt="transaction" />
-                    <div className='w-[200px] md:w-[300px]'>
+                    <div className='w-[200px] md:w-[400px]'>
                         <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection1Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
@@ -66,7 +68,7 @@ function Points({ setOpen, languageData, user, setTicketsModal, setSelectedButto
             case 'email_referral': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={joker} alt="transaction" />
-                    <div className='w-[200px] md:w-[300px]'>
+                    <div className='w-[200px] md:w-[400px]'>
                         <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection2Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
@@ -79,7 +81,7 @@ function Points({ setOpen, languageData, user, setTicketsModal, setSelectedButto
             case 'buying_credits': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={joker} alt="transaction" />
-                    <div className='w-[200px] md:w-[300px]'>
+                    <div className='w-[200px] md:w-[400px]'>
                         <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection3Left} {amount} {languageData?.ticketsSection3Left2}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira '>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
@@ -93,10 +95,10 @@ function Points({ setOpen, languageData, user, setTicketsModal, setSelectedButto
     }
     const getPointsMarkup = (type, datetime, amount) => {
         switch (type) {
-            case 'doubling_referral': return <div className='flex justify-between items-center mt-2'>
+            case 'points_doubling_referral': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={coin} alt="transaction" />
-                    <div className='w-[200px] md:w-[300px]'>
+                    <div className='w-[200px] md:w-[400px]'>
                         <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection1Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
@@ -106,10 +108,10 @@ function Points({ setOpen, languageData, user, setTicketsModal, setSelectedButto
                     <p className='text-[12px] font-normal saira  text-right'>{languageData?.ticketsSection4Right}</p>
                 </div>
             </div>
-            case 'email_referral': return <div className='flex justify-between items-center mt-2'>
+            case 'points_email_referral': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={coin} alt="transaction" />
-                    <div className='w-[200px] md:w-[300px]'>
+                    <div className='w-[200px] md:w-[400px]'>
                         <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection5Left}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
@@ -119,10 +121,10 @@ function Points({ setOpen, languageData, user, setTicketsModal, setSelectedButto
                     <p className='text-[12px] font-normal saira  text-right'>{languageData?.ticketsSection5Right}</p>
                 </div>
             </div>
-            case 'buying_credits': return <div className='flex justify-between items-center mt-2'>
+            case 'points_buying_credits': return <div className='flex justify-between items-center mt-2'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={coin} alt="transaction" />
-                    <div className='w-[200px] md:w-[300px]'>
+                    <div className='w-[200px] md:w-[400px]'>
                         <p className='text-[12px] md:text-[14px] font-semibold saira w-[180px] md:w-[unset] leading-4 mb-1'>{languageData?.ticketsSection6Left} {amount} {languageData?.ticketsSection6Left2}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira '>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
@@ -145,17 +147,17 @@ function Points({ setOpen, languageData, user, setTicketsModal, setSelectedButto
                 <p className='text-[18px] lg:text-[24px] text-center font-semibold gradient-linkDouble'>{languageData?.PointsModalTitle}</p>
                 <div className='m-auto max-w-[345px] md:max-w-[600px] w-full h-[250px] overflow-scroll'>
 
-                    
-                        {
-                            allData?.length > 0
-                                ? allData !== null && allData?.map(ticket => {
-                                    return ticket.name === 'ticket' ? getTicketsMarkup(ticket.type, ticket.datetime, ticket.amount) : getPointsMarkup(ticket.type, ticket.datetime, ticket.amount)
-                                })
-                                : <div className='flex justify-center items-center h-[200px]'>
-                                    <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
-                                </div>
-                        }
-                    
+
+                    {
+                        allData?.length > 0
+                            ? allData !== null && allData?.map(ticket => {
+                                return ticket.name === 'ticket' ? getTicketsMarkup(ticket.type, ticket.datetime, ticket.amount) : getPointsMarkup(ticket.type, ticket.datetime, ticket.amount)
+                            })
+                            : <div className='flex justify-center items-center h-[200px]'>
+                                <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
+                            </div>
+                    }
+
 
                 </div>
                 <div className=' flex justify-center'>
