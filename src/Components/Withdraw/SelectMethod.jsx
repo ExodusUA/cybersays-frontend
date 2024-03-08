@@ -1,22 +1,19 @@
 import React from 'react'
 import { useDesign } from '../../Helpers/Design/DesignContext'
-import promoGirl from '../../images/NewDesign/promoGirl.png'
-import imLiveLogo from '../../images/NewDesign/imLiveLogo.png'
 import withdrawLogo1 from '../../images/NewDesign/withdraw/withdrawLogo1.png'
 import withdrawLogo2 from '../../images/NewDesign/withdraw/withdrawLogo2.png'
-import withdrawLogo3 from '../../images/NewDesign/withdraw/withdrawLogo3.png'
 import withdrawLogo4 from '../../images/NewDesign/withdraw/withdrawLogo4.png'
 import withdrawLogo5 from '../../images/NewDesign/withdraw/withdrawLogo5.png'
 import withdrawLogo6 from '../../images/NewDesign/withdraw/withdrawLogo6.png'
 import withdrawLogo7 from '../../images/NewDesign/withdraw/withdrawLogo7.png'
 import flag_pt from '../../images/flags/flag-pt.png'
-import left from '../../images/CyberSaysPage/swiperBtnDesctopLeft.png';
-import right from '../../images/CyberSaysPage/swiperBtnDesctopRight.png';
-import banner from '../../images/NewDesign/withdraw/banner.png';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import left from '../../images/CyberSaysPage/swiperBtnDesctopLeft.png'
+import right from '../../images/CyberSaysPage/swiperBtnDesctopRight.png'
+import banner from '../../images/NewDesign/withdraw/banner.png'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from 'swiper/modules'
 
-function SelectMethod({ languageData, selectPayment, selectedPayment, userCountry }) {
+function SelectMethod({ languageData, selectPayment, selectedPayment, userCountry, setImLiveSelected, setFlowStarted }) {
     const { design } = useDesign()
 
     const getLangFlag = () => {
@@ -175,7 +172,10 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                     </div>
                         */
                     }
-                    <img className=' w-full m-auto relative z-10' src={banner} alt="banner" />
+                    <img onClick={e => {
+                        setImLiveSelected(true)
+
+                    }} className=' w-full m-auto relative z-10' src={banner} alt="banner" />
                     <p className=' absolute z-50 saira font-medium text-[12px] lg:text-[20px] text-center text-[#1E1E1E] w-[150px] lg:w-[250px] top-[25px] right-[10px] lg:right-[10px] lg:top-[40px]'> <span className='saira font-extrabold text-[#A533FF]'>Get +40% </span>of your money with ImLive.</p>
                     {/*
                         <div onClick={e => selectPayment('imlive')} className={`w-[95%] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] bg-new-bg-promo bg-no-repeat bg-cover m-auto flex justify-center items-center relative ${selectedPayment === 'imlive' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>

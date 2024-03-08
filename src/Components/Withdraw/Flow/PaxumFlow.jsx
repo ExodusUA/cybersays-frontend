@@ -9,8 +9,8 @@ function PaxumFlow({ languageData, setConfirm, setSelectedPayment }) {
     const [checkmark, setCheckmark] = useState(false)
 
     const handlePaxumFlow = () => {
-        console.log('Paxum Flow')
-        setSelectedPayment(null)
+        //console.log('Paxum Flow')
+       // setSelectedPayment(null)
         setConfirm(true)
     }
 

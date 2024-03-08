@@ -1,13 +1,11 @@
 import React from 'react'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import SelectMethod from './SelectMethod'
-import SPEIFlow from './Flow/SPEIFlow'
-import PSEFlow from './Flow/PSEFlow'
-import ServiPagFlow from './Flow/ServiPagFlow'
 
-function WithdrawMain({ selectPayment, selectedPayment, userCountry, user, languageData, setFlowStarted }) {
+function WithdrawMain({ selectPayment, selectedPayment, userCountry, user, languageData, setImLiveSelected, setFlowStarted }) {
 
     const { design } = useDesign()
+    
 
     return (
         <>
@@ -29,7 +27,7 @@ function WithdrawMain({ selectPayment, selectedPayment, userCountry, user, langu
             </div>
 
             <div className=' '>
-                <SelectMethod languageData={languageData} selectPayment={selectPayment} selectedPayment={selectedPayment} userCountry={userCountry} />
+                <SelectMethod setImLiveSelected={setImLiveSelected} languageData={languageData} selectPayment={selectPayment} selectedPayment={selectedPayment} userCountry={userCountry} />
                 <div className='flex justify-center mt-2 lg:mt-4'>
                     <button onClick={e => setFlowStarted(true)} className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-2 max-w-[350px] outline-none  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>
                 </div>

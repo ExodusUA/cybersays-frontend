@@ -54,7 +54,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
             }
             {
                 imLiveSelected
-                    ? <ImLiveFlow setConfirm={setConfirm} setOpen={setImLiveSelected} languageData={languageData} closeAll={setOpen} />
+                    ? <ImLiveFlow setFlowStarted={setFlowStarted} setConfirm={setConfirm} setOpen={setImLiveSelected} languageData={languageData} closeAll={setOpen} />
                     : <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4'>
                         <div className={`flex max-w-[600px] m-auto md:my-4 justify-between`}>
                             <svg onClick={e => setFlowStarted(false)} className='cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -71,12 +71,20 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
                         {
                             flowStarted
                                 ? getMethodComponent(selectedPayment)
-                                : <WithdrawMain setFlowStarted={setFlowStarted} selectPayment={setSelectedPayment} selectedPayment={selectedPayment} userCountry={userCountry} user={user} languageData={languageData} />
+                                : <WithdrawMain
+                                    setImLiveSelected={setImLiveSelected}
+                                    setFlowStarted={setFlowStarted}
+                                    selectPayment={setSelectedPayment}
+                                    selectedPayment={selectedPayment}
+                                    userCountry={userCountry}
+                                    user={user}
+                                    languageData={languageData}
+                                />
                         }
                     </div>
             }
             {
-                confirm && <Confirm setOpen={setConfirm} languageData={languageData} closeAll={setOpen} />
+                confirm && <Confirm selectPayment={setSelectedPayment} selectedPayment={selectedPayment} setOpen={setConfirm} languageData={languageData} closeAll={setOpen} />
             }
 
             {
