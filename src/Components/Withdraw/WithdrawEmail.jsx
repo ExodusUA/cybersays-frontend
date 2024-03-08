@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import userAPI from '../../Requests/user'
+import { useLanguage } from '../../Helpers/Languages/LanguageContext'
 
 function WithdrawEmail({ languageData, selectedPayment, setError }) {
     const { design } = useDesign()
+    const {language} = useLanguage();
 
     const [email, setEmail] = useState('')
 
@@ -11,7 +13,7 @@ function WithdrawEmail({ languageData, selectedPayment, setError }) {
         if (email === null || email === undefined || email.length === '') return alert('Please enter a valid email address')
 
         try {
-            const res = await userAPI.generateOTP(email)
+            const res = await userAPI.generateOTP(email, language)
         } catch (error) {
             setError(true)
         }
