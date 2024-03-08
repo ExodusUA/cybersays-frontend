@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import { createUser, socialUserAuth } from '../../Requests/auth';
 import GoogleAuth from '../../Components/Buttons/GoogleButton';
-import FacebookButton from '../../Components/Buttons/FacebookButton';
 import OTPModal from './OTPModal';
 import { useNavigate } from 'react-router-dom';
 import AuthEmailNotification from './AuthEmailNotification';
@@ -12,9 +11,11 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import { getUserCountry } from '../../Requests/utills';
 import DiscordButton from '../../Components/Buttons/DiscordButton';
 import mixpanel from 'mixpanel-browser';
+import { useLanguage } from '../../Helpers/Languages/LanguageContext';
 
 function LoginForm({ languageData, referralID }) {
 
+    const {language} = useLanguage();
 
     const recaptchaRef = useRef();
     const navigate = useNavigate();
@@ -49,7 +50,7 @@ function LoginForm({ languageData, referralID }) {
     async function socialAuth(email, token) {
         try {
             let userCountry = await getUserData();
-            const res = await socialUserAuth(email, token, refferalCode, special, userCountry.country);
+            const res = await socialUserAuth(email, token, refferalCode, special, userCountry.country, language);
             await handleMixpanelEvent(true, 'social')
             localStorage.setItem('token', res.token);
             navigate('/')
@@ -105,7 +106,7 @@ function LoginForm({ languageData, referralID }) {
         const token = await recaptchaRef.current.executeAsync();
 
         try {
-            const res = await createUser(token, email, refferalCode, userCountry.country)
+            const res = await createUser(token, email, refferalCode, userCountry.country, language)
 
             await handleMixpanelEvent(true, 'email')
 

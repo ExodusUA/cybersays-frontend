@@ -142,8 +142,8 @@ async function getPDF() {
 
 }
 
-async function generateOTP(email) {
-    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/generateWithdrawOtp', { email }, {
+async function generateOTP(email, lang) {
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/generateWithdrawOtp', { email, lang }, {
         headers: {
             token: `${getToken()}`
         }

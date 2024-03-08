@@ -3,25 +3,27 @@ import axios from "axios";
 
 /* SOCIAL AUTH */
 
-async function socialUserAuth(email, token, refferalCode, special, country) {
+async function socialUserAuth(email, token, refferalCode, special, country, lang) {
     const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/createBySocial', {
         email,
         token,
         refferalCode,
         special,
-        country
+        country,
+        lang
     });
     return response.data;
 }
 
 /* OTP SENDING */
 
-async function createUser(token, email, refferalCode, country) {
+async function createUser(token, email, refferalCode, country, lang) {
     const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/create', {
         token,
         email,
         refferalCode,
-        country
+        country,
+        lang
     });
     return response;
 }
@@ -54,9 +56,9 @@ async function checkTokenValidity(token) {
 
 /* DISCORD AUTH */
 
-async function discordUserAuth(access_token, type, country, refferalCode) {
+async function discordUserAuth(access_token, type, country, refferalCode, lang) {
     const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/createByDiscord', {
-        access_token, type, country, refferalCode
+        access_token, type, country, refferalCode, lang
     });
     return response;
 }
