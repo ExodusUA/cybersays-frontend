@@ -28,7 +28,7 @@ function WithdrawMain({ selectPayment, selectedPayment, userCountry, user, langu
                 </div>
             </div>
 
-            <div className='max-h-[600px] iphone:max-h-[700px] h-screen lg:h-[unset] pb-[100px] iphone:pb-0 overflow-y-auto '>
+            <div className=' '>
                 <SelectMethod languageData={languageData} selectPayment={selectPayment} selectedPayment={selectedPayment} userCountry={userCountry} />
                 <div className='flex justify-center mt-2 lg:mt-4'>
                     <button onClick={e => setFlowStarted(true)} className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-2 max-w-[350px] outline-none  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>

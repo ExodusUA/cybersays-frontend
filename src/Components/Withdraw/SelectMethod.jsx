@@ -16,8 +16,8 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
     return (
         <div className=''>
             <p className='text-[18px] md:text-[32px] font-semibold text-center my-2'>{languageData?.withdrawTitle2}</p>
-            <div className={`   md:max-w-[600px] m-auto max-h-[600px]  h-screen lg:h-[unset]  overflow-y-auto`}>
-                <div className='  justify-center mt-2  m-auto relative '>
+            <div className={`   md:max-w-[600px] m-auto max-h-[600px]  h-screen lg:h-[unset]  overflow-y-auto withdrawHeight`}>
+                <div className='  justify-center  m-auto relative '>
 
                     <div className='flex flex-wrap gap-2'>
                         {/* BRAZIL */}

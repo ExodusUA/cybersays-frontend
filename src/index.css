@@ -503,6 +503,17 @@ body {
     .logoLogin {
         width: 150px !important;
     }
+    .withdrawHeight {
+        height: 300px !important;
+        padding-bottom: 10px !important;
+    }
+    .memeHeight {
+        margin-top: 30px !important;
+    }
+    .memeWidth {
+       width: 140px !important;
+       height: 140px !important;
+    }
 }
 
 @media screen and (max-height: 870px) and (min-width: 1200px) {
