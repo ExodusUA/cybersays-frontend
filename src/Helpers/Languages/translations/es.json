@@ -594,5 +594,7 @@
     "ServiPagTitle": "You’ll get a cash voucher to an email of your choice:",
     "ServiPagInput1": "Email",
     "ServiPagInput2": "Name",
-    "ServiPagInput3": "National identity card (RUT)"
+    "ServiPagInput3": "National identity card (RUT)",
+
+    "TransactionCompetitionWinner": "Finishing in the 69$ daily competition!"
 }
