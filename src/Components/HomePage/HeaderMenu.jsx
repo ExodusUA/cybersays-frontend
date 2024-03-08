@@ -42,7 +42,7 @@ function HeaderMenu({ setMenuOpen, user, setTourModal, languageData, userCountry
                                 <div onClick={e => setPointsModal(true)} className='leading-4 md:leading-5 mx-1 cursor-pointer'>
                                     <p className={`text-[12px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-medium saira text-center `}>{languageData?.header2}</p>
                                     <p className={`text-[12px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-bold saira text-center flex justify-center items-center`}>
-                                        <img className='w-[16px] h-[16px] mr-[5px]' src={design === '0' ? refferals : require('../../images/NewDesign/header/points.png')} alt="refferals" /> {user && user.points ? user?.points : 0}
+                                        <img className='w-[16px] h-[16px] mr-[5px]' src={design === '0' ? refferals : require('../../images/NewDesign/header/points.png')} alt="refferals" /> {user && user.points ? Number(user?.points).toFixed(0) : 0}
                                     </p>
 
                                 </div>

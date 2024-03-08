@@ -224,13 +224,11 @@ function Main({ languageData }) {
     const [uploadedPhotos, setUploadedPhotos] = useState([]);
 
     useEffect(() => {
-        if (userCountry === null) return
-
         let data = [];
 
-        if (userCountry === 'BR') {
+        if (language === 'pt') {
             data = [require('../images/memes/pt/pt_1.png'), require('../images/memes/pt/pt_2.png'), require('../images/memes/pt/pt_3.png'), require('../images/memes/pt/pt_4.png'), require('../images/memes/pt/pt_5.png'), require('../images/memes/pt/pt_6.png'), require('../images/memes/pt/pt_7.png'), require('../images/memes/pt/pt_8.png'), require('../images/memes/pt/pt_9.png')];
-        } else if (userCountry === 'ES') {
+        } else if (language === 'es') {
             data = [require('../images/memes/es/es_1.png'), require('../images/memes/es/es_2.png'), require('../images/memes/es/es_3.png'), require('../images/memes/es/es_4.png'), require('../images/memes/es/es_5.png'), require('../images/memes/es/es_6.png')]
         } else {
             data = [require('../images/memes/en/en_1.png'), require('../images/memes/en/en_2.png'), require('../images/memes/en/en_3.png'), require('../images/memes/en/en_4.png'), require('../images/memes/en/en_5.png'), require('../images/memes/en/en_6.png'), require('../images/memes/en/en_7.png'), require('../images/memes/en/en_8.png'), require('../images/memes/en/en_9.png')];
@@ -238,7 +236,7 @@ function Main({ languageData }) {
 
         setUploadedPhotos(data);
 
-    }, [userCountry]);
+    }, [language]);
 
     const savePhotosToLocalStorage = (photos) => {
         console.log(photos)

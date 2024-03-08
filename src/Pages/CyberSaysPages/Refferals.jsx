@@ -94,7 +94,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
             link.click();
             link.remove();
             window.URL.revokeObjectURL(blobUrl);
-            console.log('111111111', blobUrl);
+         
         } catch (error) {
             console.error('Error downloading photo:', error);
         }
