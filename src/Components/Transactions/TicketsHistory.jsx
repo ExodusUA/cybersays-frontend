@@ -179,7 +179,7 @@ function TicketsHistory({ setOpen, languageData, user, setSelectedButton, select
                     </div>
                     <div onClick={e => setSelectedButton('point')} className={`${selectedButton === 'point' && 'gradient-tourToggle'} rounded-[12px] px-[20px] py-[5px] md:py-[6px] cursor-pointer`}>
                         <p className={`${selectedButton === 'point' && '!text-black'} text-white saira font-bold text-[14px] flex items-center`}>
-                            Points:<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? refferals : require('../../images/NewDesign/header/points.png')} alt="refferals" /> {user?.points || 0}
+                            Points:<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? refferals : require('../../images/NewDesign/header/points.png')} alt="refferals" /> {Number(user?.points).toFixed(0) || 0}
                         </p>
                     </div>
                 </div>

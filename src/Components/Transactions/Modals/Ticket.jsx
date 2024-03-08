@@ -7,13 +7,14 @@ import moment from 'moment'
 import { useQuery } from '@tanstack/react-query'
 import joker from '../../../images/CyberSaysPage/MyTicketJoker.png'
 import coin from '../../../images/CyberSaysPage/MyTicketCoin.png'
+import Loading from '../../Loading'
 
 function Ticket({ setOpen, languageData, user, setTicketsModal, setSelectedButton }) {
     const { design } = useDesign()
     const [ticketsData, setTicketsData] = useState(null)
     const [allData, setAllData] = useState(null)
 
-    useQuery({
+    const { isLoading } = useQuery({
         queryKey: ['tickets'],
         queryFn: async () => {
             const res = await userAPI.getTickets();
@@ -144,17 +145,21 @@ function Ticket({ setOpen, languageData, user, setTicketsModal, setSelectedButto
                 <p className='text-[18px] lg:text-[24px] text-center font-semibold gradient-linkDouble'>{languageData?.TicketModalTitle}</p>
                 <div className='m-auto max-w-[345px] md:max-w-[600px] w-full h-[250px] overflow-scroll'>
 
-                    
-                        {
-                            allData?.length > 0
-                                ? allData !== null && allData?.map(ticket => {
+
+                    {
+                        isLoading === true || allData === null
+                            ? <div className='flex justify-center h-full items-center'>
+                                <Loading />
+                            </div>
+                            : allData?.length > 0
+                                ? allData !== null && allData?.reverse().map(ticket => {
                                     return ticket.name === 'ticket' ? getTicketsMarkup(ticket.type, ticket.datetime, ticket.amount) : getPointsMarkup(ticket.type, ticket.datetime, ticket.amount)
                                 })
                                 : <div className='flex justify-center items-center h-[200px]'>
                                     <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
                                 </div>
-                        }
-                    
+                    }
+
 
                 </div>
                 <div className=' flex justify-center'>

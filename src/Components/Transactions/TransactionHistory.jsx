@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import close from '../../images/CyberSaysPage/closeMenu.png'
 import transaction from '../../images/CyberSaysPage/TransactionLogo.png'
 import { useQuery } from '@tanstack/react-query'
 import userAPI from '../../Requests/user'
 import moment from 'moment'
 import { useDesign } from '../../Helpers/Design/DesignContext'
+import Loading from '../Loading'
 
 function TransactionHistory({ setOpen, languageData, user, userCountry, setWithdrawModal }) {
     const { design } = useDesign()
 
     const [transactionsData, setTransactionsData] = useState(null)
 
-    useQuery({
+    const { isLoading } = useQuery({
         queryKey: ['transactions'],
         queryFn: async () => {
             const res = await userAPI.getTransactions();
@@ -31,9 +32,8 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-
-                    <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionsSection1Right}</p>
                     <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}{amount}</p>
+                    <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionsSection1Right}</p>
                 </div>
             </div>
             case 'doubling': return <div className='flex justify-between items-center mt-4'>
@@ -45,39 +45,35 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-
-                    <p className='text-[12px] font-normal saira text-right'>{languageData?.transactionsSection2Right}</p>
                     <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}{amount}</p>
+                    <p className='text-[12px] font-normal saira text-right'>{languageData?.transactionsSection2Right}</p>
                 </div>
             </div>
             case 'withdraw': return <div className='flex justify-between items-center mt-4'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
                     <div className='w-[200px] md:w-[400px]'>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>{languageData?.transactionsSection3Left} {languageData?.transactionsSection3Left2}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
+                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>{languageData?.transactionsSection3Left} {languageData?.transactionsSection3Left2}</p>
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-
-                    <p className='text-[12px] font-normal saira  text-right'>Withdrawn</p>
                     <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right mb-1'>-{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}{amount}</p>
+                    <p className='text-[12px] font-normal saira  text-right'>Withdrawn</p>
                 </div>
             </div>
             case 'competition': return <div className='flex justify-between items-center mt-4'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
                     <div className='w-[200px] md:w-[400px]'>
-                        <p className='text-[12px]  md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>{languageData?.transactionsSection4Left + ' '} 
-                            {user?.email}
-                            {languageData?.transactionsSection4Left2}</p>
+                        <p className='text-[12px]  md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>
+                            {languageData?.TransactionCompetitionWinner}</p>
                         <p className='text-[12px]  md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
-
-                    <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionsSection4Right}</p>
                     <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}{amount}</p>
+                    <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionsSection2Right}</p>
                 </div>
             </div>
         }
@@ -92,14 +88,17 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
             <div className='m-auto max-w-[345px] md:max-w-[600px] w-full mt-3 h-[470px] overflow-scroll'>
 
                 {
-                    transactionsData?.length > 0
-                        ? transactionsData?.reverse().map((transaction, index) => {
-                            return getMarkup(transaction.type, transaction.datetime, userCountry === 'BR' || userCountry === 'UA' ? transaction.amount * 5 : transaction.amount)
-                        })
-                        : <div className='flex justify-center items-center h-[470px]'>
-                            <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
+                    isLoading === true || transactionsData === null
+                        ? <div className='flex justify-center h-full items-center'>
+                            <Loading />
                         </div>
-
+                        : transactionsData?.length > 0
+                            ? transactionsData?.reverse().map((transaction, index) => {
+                                return getMarkup(transaction.type, transaction.datetime, userCountry === 'BR' || userCountry === 'UA' ? transaction.amount * 5 : transaction.amount)
+                            })
+                            : <div className='flex justify-center items-center h-[470px]'>
+                                <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
+                            </div>
                 }
 
             </div>

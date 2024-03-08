@@ -28,7 +28,7 @@ function LeaderboardList({ leaderboardData, languageData, day }) {
                         <img className={`border-[2px] rounded-full w-[80px] h-[80px] object-cover m-auto ${design === '0' ? 'border-[#FFED63]' : 'border-[#A1B3B0]'}`} src={twoSt} alt="twoSt" />
                         <p className='saira text-[12px] md:text-[14px] font-medium text-center truncate mx-2 md:mx-1'>{leaderboardData[1].email}</p>
                         <p className={`saira text-[14px] md:text-[16px] font-medium text-center ${design === '0' ? 'text-[#FFED63]' : 'text-[#A1B3B0]'}`}>$69</p>
-                        <p className='saira text-[14px] md:text-[14px] font-medium text-[#FFED63] text-center'>{leaderboardData[1].points} {languageData?.leaderboardsPoints} </p>
+                        <p className='saira text-[14px] md:text-[14px] font-medium text-[#FFED63] text-center'>{Number(leaderboardData[1].points).toFixed(0)} {languageData?.leaderboardsPoints} </p>
                     </div>
                 }
 
@@ -39,7 +39,7 @@ function LeaderboardList({ leaderboardData, languageData, day }) {
                         <img className={`border-[2px] border-[#FFED63] rounded-full w-[120px] h-[120px] object-cover m-auto ${design === '0' ? 'border-[#FFED63]' : 'border-[#F2BB02]'}`} src={oneSt} alt="twoSt" />
                         <p className='saira text-[12px] md:text-[14px] font-medium text-center truncate mx-3 md:mx-2'>{leaderboardData[0].email}</p>
                         <p className={`saira text-[14px] md:text-[16px] font-medium text-[#FFED63] text-center ${design === '0' ? 'text-[#FFED63]' : 'text-[#F2BB02]'}`}>$69</p>
-                        <p className='saira text-[14px] md:text-[14px] font-medium text-[#FFED63] text-center'>{leaderboardData[0].points} {languageData?.leaderboardsPoints} </p>
+                        <p className='saira text-[14px] md:text-[14px] font-medium text-[#FFED63] text-center'>{Number(leaderboardData[0].points).toFixed(0)} {languageData?.leaderboardsPoints} </p>
                     </div>
                 }
 
@@ -49,7 +49,7 @@ function LeaderboardList({ leaderboardData, languageData, day }) {
                         <img className={`border-[2px] border-[#FFED63] rounded-full w-[80px] h-[80px] object-cover m-auto ${design === '0' ? 'border-[#FFED63]' : '!border-[#E87001]'}`} src={threeSt} alt="twoSt" />
                         <p className='saira text-[12px] md:text-[14px] font-medium text-center truncate mx-2 md:mx-1'>{leaderboardData[2].email}</p>
                         <p className={`saira text-[14px] md:text-[16px] font-medium text-[#FFED63] text-center ${design === '0' ? 'text-[#FFED63]' : 'text-[#E87001]'}`}>$6.90</p>
-                        <p className='saira text-[14px] md:text-[14px] font-medium text-[#FFED63] text-center'>{leaderboardData[2].points} {languageData?.leaderboardsPoints} </p>
+                        <p className='saira text-[14px] md:text-[14px] font-medium text-[#FFED63] text-center'>{Number(leaderboardData[2].points).toFixed(0)} {languageData?.leaderboardsPoints} </p>
                     </div>
                 }
             </div>

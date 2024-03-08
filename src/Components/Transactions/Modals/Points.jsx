@@ -7,13 +7,14 @@ import moment from 'moment'
 import { useQuery } from '@tanstack/react-query'
 import joker from '../../../images/CyberSaysPage/MyTicketJoker.png'
 import coin from '../../../images/CyberSaysPage/MyTicketCoin.png'
+import Loading from '../../Loading'
 
 function Points({ setOpen, languageData, user, setTicketsModal, setSelectedButton }) {
     const { design } = useDesign()
     const [pointsData, setPointsData] = useState(null)
     const [allData, setAllData] = useState(null)
 
-    useQuery({
+    const { isLoading } = useQuery({
         queryKey: ['points'],
         queryFn: async () => {
             const res = await userAPI.getPoints();
@@ -149,13 +150,17 @@ function Points({ setOpen, languageData, user, setTicketsModal, setSelectedButto
 
 
                     {
-                        allData?.length > 0
-                            ? allData !== null && allData?.map(ticket => {
-                                return ticket.name === 'ticket' ? getTicketsMarkup(ticket.type, ticket.datetime, ticket.amount) : getPointsMarkup(ticket.type, ticket.datetime, ticket.amount)
-                            })
-                            : <div className='flex justify-center items-center h-[200px]'>
-                                <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
+                        isLoading === true || allData === null
+                            ? <div className='flex justify-center h-full items-center'>
+                                <Loading />
                             </div>
+                            : allData?.length > 0
+                                ? allData !== null && allData?.reverse().map(ticket => {
+                                    return ticket.name === 'ticket' ? getTicketsMarkup(ticket.type, ticket.datetime, ticket.amount) : getPointsMarkup(ticket.type, ticket.datetime, ticket.amount)
+                                })
+                                : <div className='flex justify-center items-center h-[200px]'>
+                                    <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
+                                </div>
                     }
 
 

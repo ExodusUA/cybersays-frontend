@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Confirm from './Confirm'
 import Error from './Error'
-import userAPI from '../../Requests/user'
 import ImLivePromoModal from '../Withdraw/ImLivePromoModal'
 import ImLiveFlow from '../Withdraw/Flow/ImLiveFlow'
 import PixFlow from '../Withdraw/Flow/PixFlow'
@@ -11,6 +10,9 @@ import close from '../../images/CyberSaysPage/closeMenu.png'
 import PaxumFlow from '../Withdraw/Flow/PaxumFlow'
 import VisaFlow from '../Withdraw/Flow/VisaFlow'
 import XoxodayFlow from '../Withdraw/XoxodayFlow'
+import PSEFlow from '../Withdraw/Flow/PSEFlow'
+import ServiPagFlow from '../Withdraw/Flow/ServiPagFlow'
+import SPEIFlow from '../Withdraw/Flow/SPEIFlow'
 
 
 function Withdraw({ user, setOpen, languageData, userCountry }) {
@@ -38,6 +40,9 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
             case 'paxum': return <PaxumFlow languageData={languageData} setConfirm={setConfirm} setSelectedPayment={setSelectedPayment} />
             case 'visa': return <VisaFlow languageData={languageData} setConfirm={setConfirm} setError={setError} />
             case 'imlive': return <ImLiveFlow setConfirm={setConfirm} setOpen={setImLiveSelected} languageData={languageData} closeAll={setOpen} setFlowStarted={setFlowStarted} />
+            case 'pse': return <PSEFlow languageData={languageData} setConfirm={setConfirm} setError={setError} />
+            case 'servipag': return <ServiPagFlow languageData={languageData} setConfirm={setConfirm} setError={setError} />
+            case 'spei': return <SPEIFlow languageData={languageData} setConfirm={setConfirm} setError={setError} />
             default: return 'Please select a payment method to continue.'
         }
     }

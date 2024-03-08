@@ -19,23 +19,48 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
             <div className={`   md:max-w-[600px] m-auto`}>
                 <div className='  justify-center mt-2  m-auto relative'>
 
-                    <div className='flex'>
+                    <div className='flex flex-wrap gap-2'>
+                        {/* BRAZIL */}
                         {
-                            userCountry === 'BR' || userCountry === 'UA' && <div onClick={e => selectPayment('pix')} className={`w-[95%] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg4 m-auto flex justify-center items-center relative mr-2 ${selectedPayment === 'pix' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
+                            userCountry === 'BR' && <div onClick={e => selectPayment('pix')} className={`w-[95%] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg4 m-auto flex justify-center items-center relative mr-2 ${selectedPayment === 'pix' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
                                 <img className='w-[40px]' src={withdrawLogo4} alt="withdrawLogo4" />
                                 <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>Pix</p>
                             </div>
                         }
+                        {
+                            userCountry === 'BR' && <div onClick={e => selectPayment('paxum')} className={`w-[95%] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg2 m-auto flex justify-center items-center relative mr-2 ${selectedPayment === 'paxum' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
+                                <img className='w-[115px]' src={withdrawLogo2} alt="withdrawLogo1" />
+                                <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>Paxum</p>
+                            </div>
+                        }
+                        {/* MEXICO */}
+                        {
+                            userCountry === 'MX' || userCountry === 'UA' && <div onClick={e => selectPayment('spei')} className={`w-[95%] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg5 m-auto flex justify-center items-center relative ${selectedPayment === 'spei' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
+                                <img className='w-[100px]' src={withdrawLogo5} alt="withdrawLogo5" />
+                                <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>SPEI</p>
+                            </div>
+                        }
+                        {/* COLUMBIA */}
+                        {
+                            userCountry === 'CO' || userCountry === 'UA' && <div onClick={e => selectPayment('pse')} className={`w-[95%] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg6 m-auto flex justify-center items-center relative ${selectedPayment === 'pse' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
+                                <img className='w-[100px]' src={withdrawLogo6} alt="withdrawLogo6" />
+                                <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>PSE</p>
+                            </div>
+                        }
+                        {/* CHILE */}
+                        {
+                            userCountry === 'CL' || userCountry === 'UA' && <div onClick={e => selectPayment('servipag')} className={`w-[95%] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg7 m-auto flex justify-center items-center relative ${selectedPayment === 'servipag' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
+                                <img className='w-[150px]' src={withdrawLogo7} alt="withdrawLogo7" />
+                                <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>ServiPag</p>
+                            </div>
+                        }
+
                         <div onClick={e => selectPayment('xoxoday')} className={`w-[95%] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg1 m-auto flex justify-center items-center relative ${selectedPayment === 'xoxoday' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
                             <img className='w-[50px]' src={withdrawLogo1} alt="withdrawLogo1" />
                             <p className=' absolute bottom-1 text-center saira font-normal text-[14px] flex items-center'>{languageData?.withdrawGiftTitle} <img className='w-[24px] h-[18px] ml-1 rounded-[3px]' src={flag_pt} alt="flag_pt" /></p>
                         </div>
                     </div>
-                    <div className='flex  mt-2'>
-                        <div onClick={e => selectPayment('paxum')} className={`w-[95%] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg2 m-auto flex justify-center items-center relative mr-2 ${selectedPayment === 'paxum' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
-                            <img className='w-[115px]' src={withdrawLogo2} alt="withdrawLogo1" />
-                            <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>Paxum</p>
-                        </div>
+                    <div className='flex mt-2'>
 
                         {
                             /*
@@ -54,20 +79,6 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                                 <p className=' text-center saira font-normal text-[14px] leading-[15px] mt-2 lg:mb-1'>ImLive</p>
                                 <p className=' text-center saira font-normal text-[10px] px-1 lg:px-0 lg:text-[12px] gradient-linkDouble leading-[15px]'>{languageData?.promoImLiveDesc}</p>
                             </div>
-                        </div>
-                    </div>
-                    <div className='flex mt-2'>
-                        <div onClick={e => selectPayment('spei')} className={`w-[95%] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg5 m-auto flex justify-center items-center relative ${selectedPayment === 'spei' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
-                            <img className='w-[100px]' src={withdrawLogo5} alt="withdrawLogo5" />
-                            <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>SPEI</p>
-                        </div>
-                        <div onClick={e => selectPayment('pse')} className={`w-[95%] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg6 m-auto flex justify-center items-center relative ${selectedPayment === 'pse' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
-                            <img className='w-[100px]' src={withdrawLogo6} alt="withdrawLogo6" />
-                            <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>PSE</p>
-                        </div>
-                        <div onClick={e => selectPayment('servipag')} className={`w-[95%] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg7 m-auto flex justify-center items-center relative ${selectedPayment === 'servipag' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
-                            <img className='w-[150px]' src={withdrawLogo7} alt="withdrawLogo7" />
-                            <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>ServiPag</p>
                         </div>
                     </div>
                 </div>
