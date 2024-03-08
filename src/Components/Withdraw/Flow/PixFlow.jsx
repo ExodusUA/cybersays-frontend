@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { useDesign } from '../../Helpers/Design/DesignContext'
-import userAPI from '../../Requests/user'
+import { useDesign } from '../../../Helpers/Design/DesignContext'
+import userAPI from '../../../Requests/user'
 
 function PixFlow({ languageData, setConfirm, setError, email }) {
     const { design } = useDesign()

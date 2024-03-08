@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDesign } from '../../Helpers/Design/DesignContext'
+import { useDesign } from '../../../Helpers/Design/DesignContext'
 import { Link } from 'react-router-dom';
 
 function PaxumFlow({ languageData, setConfirm, setSelectedPayment}) {

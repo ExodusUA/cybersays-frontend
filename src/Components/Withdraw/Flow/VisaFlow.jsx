@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { useDesign } from '../../Helpers/Design/DesignContext'
-import OTPVerify from './OTPVerify';
+import { useDesign } from '../../../Helpers/Design/DesignContext'
+import OTPVerify from '../OTPVerify';
 
 function VisaFlow({ languageData, setConfirm, setError }) {
     const { design } = useDesign()

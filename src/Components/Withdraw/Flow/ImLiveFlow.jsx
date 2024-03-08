@@ -1,6 +1,6 @@
 import React from 'react'
-import close from '../../images/CyberSaysPage/closeMenu.png'
-import { useDesign } from '../../Helpers/Design/DesignContext'
+import close from '../../../images/CyberSaysPage/closeMenu.png'
+import { useDesign } from '../../../Helpers/Design/DesignContext'
 
 function ImLiveFlow({ languageData, setConfirm, setFlowStarted }) {
     const { design } = useDesign()
@@ -10,7 +10,7 @@ function ImLiveFlow({ languageData, setConfirm, setFlowStarted }) {
                 <div className={` backdrop-blur-xl bg-opacity-60 p-4 bg-black rounded-[20px] ${design === '0' ? ' border-[#FFD700]' : '  border-[#A2DBF0]'} border`}>
 
                     <div className='flex justify-end mb-2'>
-                        <img onClick={e => setFlowStarted(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../../images/NewDesign/closeBtn.png')} alt="close" />
+                        <img onClick={e => setFlowStarted(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../../../images/NewDesign/closeBtn.png')} alt="close" />
                     </div>
 
                     <h1 className='text-[18px] text-center w-full font-semibold'>{languageData?.confirmLiveDesc}</h1>
