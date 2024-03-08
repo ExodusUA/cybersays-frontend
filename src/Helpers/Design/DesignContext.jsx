@@ -3,7 +3,7 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
 const DesignContext = createContext();
 
 export const DesignProvider = ({ children }) => {
-    const [design, setDesign] = useState(localStorage.getItem('design') || '0');
+    const [design, setDesign] = useState(localStorage.getItem('design') || '1');
 
     useEffect(() => {
         if (localStorage.getItem('design') === null) {
