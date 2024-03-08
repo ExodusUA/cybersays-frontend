@@ -7,6 +7,9 @@ import withdrawLogo5 from '../../images/NewDesign/withdraw/withdrawLogo5.png'
 import withdrawLogo6 from '../../images/NewDesign/withdraw/withdrawLogo6.png'
 import withdrawLogo7 from '../../images/NewDesign/withdraw/withdrawLogo7.png'
 import flag_pt from '../../images/flags/flag-pt.png'
+import flag_mx from '../../images/NewDesign/chatFlag/MX_flag.png'
+import flag_co from '../../images/NewDesign/chatFlag/CO_flag.png'
+import flag_cl from '../../images/NewDesign/chatFlag/CL_flag.png'
 import left from '../../images/CyberSaysPage/swiperBtnDesctopLeft.png'
 import right from '../../images/CyberSaysPage/swiperBtnDesctopRight.png'
 import banner from '../../images/NewDesign/withdraw/banner.png'
@@ -19,9 +22,9 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
     const getLangFlag = () => {
         switch (userCountry) {
             case 'BR': return <img className='w-[20px] ml-2' src={flag_pt} alt="flag_pt" />
-            case 'MX': return <img className='w-[20px] ml-2' src={flag_pt} alt="flag_pt" />
-            case 'CL': return <img className='w-[20px] ml-2' src={flag_pt} alt="flag_pt" />
-            case 'CO': return <img className='w-[20px] ml-2' src={flag_pt} alt="flag_pt" />
+            case 'MX': return <img className='w-[20px] ml-2' src={flag_mx} alt="flag_pt" />
+            case 'CL': return <img className='w-[20px] ml-2' src={flag_cl} alt="flag_pt" />
+            case 'CO': return <img className='w-[20px] ml-2' src={flag_co} alt="flag_pt" />
             case 'UA': return <img className='w-[20px] ml-2' src={'https://flagsapi.com/UA/flat/64.png'} alt="flag_pt" />
             default: return ''
         }
