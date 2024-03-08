@@ -594,6 +594,24 @@
     "ServiPagInput2": "Name",
     "ServiPagInput3": "National identity card (RUT)",
 
-    "TransactionCompetitionWinner": "Finishing in the 69$ daily competition!"
+    "TransactionCompetitionWinner": "Finishing in the 69$ daily competition!",
+    "modalMenuLink15": "Join as an influencer",
+    "modalMenuLink16": "Collaborate with us",
+    "InfluencerTitle": "Join as an influencer",
+    "InfluencerSubTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "InfluencerInput1": "Email",
+    "InfluencerInput2": "Name",
+    "InfluencerSelect1": "Who you are?",
+    "InfluencerOptoin1": "Choose who you are",
+    "InfluencerInput3": "Your message",
+    "InfluencerBtn": "Continue",
+    "collaborateTitle": "Collaborate with us",
+    "collaborateSubTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "collaborateInput1": "Email",
+    "collaborateInput2": "Name",
+    "collaborateSelect1": "Who you are?",
+    "collaborateOptoin1": "Choose who you are",
+    "collaborateInput3": "Your message",
+    "collaborateBtn": "Continue"
 
 }

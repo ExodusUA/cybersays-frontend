@@ -14,10 +14,10 @@ import flag_pt from '../../images/flags/flag-pt.png'
 function SelectMethod({ languageData, selectPayment, selectedPayment, userCountry }) {
     const { design } = useDesign()
     return (
-        <div>
+        <div className=''>
             <p className='text-[18px] md:text-[32px] font-semibold text-center my-2'>{languageData?.withdrawTitle2}</p>
-            <div className={`   md:max-w-[600px] m-auto`}>
-                <div className='  justify-center mt-2  m-auto relative'>
+            <div className={`   md:max-w-[600px] m-auto max-h-[600px]  h-screen lg:h-[unset]  overflow-y-auto withdrawHeight`}>
+                <div className='  justify-center  m-auto relative '>
 
                     <div className='flex flex-wrap gap-2'>
                         {/* BRAZIL */}

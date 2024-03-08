@@ -10,6 +10,7 @@ import LoginForm from './Auth/LoginForm';
 import logoCyber from '../images/logoLogin.png';
 import { useSwipeable } from 'react-swipeable';
 import { Link } from 'react-router-dom';
+import SocialLink from '../Components/SocialLink';
 
 function Auth({ languageData }) {
 
@@ -19,6 +20,7 @@ function Auth({ languageData }) {
 
     const [currentSlide, setCurrentSlide] = useState(0);
     const [checkmark, setCheckmark] = useState(false)
+    const [socialLink, setSocialLink] = useState(false)
 
     const slideChange = (swiper) => {
         setCurrentSlide(swiper.realIndex);
@@ -106,22 +108,17 @@ function Auth({ languageData }) {
                                 <LoginForm languageData={languageData} referralID={referralID} />
 
                                 <div className='flex items-center lg:items-start justify-center gap-2 mt-2 lg:mt-4'>
-                                    <label className='saira text-[12px] lg:text-[14px] max-w-[260px] lg:max-w-[530px] w-full cursor-pointer select-none font-normal leading-4' htmlFor="notification">{languageData?.loginTermsTitle} <Link to={'/contest-terms'} target='_blank'><span className='gradient-TermsLink saira text-[14px] font-semibold'>{languageData?.loginTermsLink}</span></Link> </label>
-                                    <div className='w-[23px] h-[22px] border-2 border-white rounded-[4px] flex justify-center items-center align-middle cursor-pointer' onClick={e => setCheckmark(!checkmark)}>
-                                        {
-                                            checkmark === true && <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
-                                                <path d="M10 3.65088L4.66667 9.65088L2 6.65088" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        }
-                                    </div>
-                                    <input type="checkbox" name="notification" id="notification" hidden onChange={e => setCheckmark(!checkmark)} />
+                                    <label className='saira text-[12px] text-[#CACACA]  w-full cursor-pointer select-none font-normal leading-4' htmlFor="notification">{languageData?.loginTermsTitle} <span onClick={e => setSocialLink(true)} className='gradient-TermsLink saira text-[12px] font-semibold'>{languageData?.loginTermsLink}</span> </label>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-
+                {
+                    socialLink && <SocialLink setOpen={setSocialLink} />
+                }
             </section>
         </>
 

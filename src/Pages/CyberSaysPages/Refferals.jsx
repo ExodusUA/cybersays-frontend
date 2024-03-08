@@ -9,7 +9,10 @@ import newlogoCyber from '../../images/NewDesign/newLogo_main.png';
 import mixpanel from 'mixpanel-browser';
 
 function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenMassege, setOpenAvatar, selectedMessage, setSelectedMassege, copyToMessage, message, uploadedPhotos, imageModal, setImageModal, selectedImage, setSelectedImage, setInfoOffer }) {
-
+    const [dimensions, setDimensions] = useState({
+        height: window.innerHeight,
+        width: window.innerWidth,
+    });
     let swiperRef;
 
     const [blobImage, setBlobImage] = useState(null)
@@ -116,6 +119,30 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
         })
         window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.referral_code)
     }
+
+    useEffect(() => {
+        const handleResize = () => {
+            setDimensions({
+                height: window.innerHeight,
+                width: window.innerWidth,
+            });
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const calculateSlidesPerView = () => {
+        const { width, height } = dimensions;
+        if (height < 800 && width > 1200) {
+            return 6;
+        }
+        if ( width < 1200) {
+            return 2.4;
+        }
+        return 4;
+    };
+
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-terms.jpg)] md:bg-[url(./images/CyberSaysPage/bg-terms.jpg)]' : 'bg-[#200527]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} >
             <div className='pt-[57px]  md:pt-[80px] mac-center:!pt-0 px-4 w-full max-w-[1170px] mac-center:w-[1170px] m-auto' >
@@ -123,8 +150,8 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
 
 
                 <div className='flex flex-col-reverse relative '>
-                    <div className='se:mt-[0px] lg:mt-[30px] mac:mt-[30px]'>
-                        <div className=' w-full hidden lg:block mb-[-100px] mac:mb-[-100px] pr-2'>
+                    <div className='se:mt-[0px] lg:mt-[70px] memeHeight'>
+                        <div className=' w-full hidden lg:block mb-[-140px] mac:mb-[-100px] pr-2'>
                             <div className=' justify-between flex my-3  mx-10'>
                                 <img className='w-[44px] mr-3 cursor-pointer buttonPrevGif' src={left} alt="Left" onClick={e => {
                                     swiperRef?.slidePrev()
@@ -164,22 +191,8 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                     nextEl: '.buttonNextGif',
                                 }}
                                 loop={true}
-                                breakpoints={{
-                                    0: {
-
-                                        slidesPerView: 3,
-                                        spaceBetween: 3,
-                                    },
-                                    650: {
-                                        slidesPerView: 4,
-                                        spaceBetween: 10,
-                                    },
-                                    940: {
-                                        slidesPerView: 6,
-                                        spaceBetween: 10,
-                                    },
-
-                                }}
+                                slidesPerView={calculateSlidesPerView()}
+                                spaceBetween={10} 
                             >
                                 {uploadedPhotos.length > 0 ? (
                                     uploadedPhotos.map((item, index) => (
@@ -190,7 +203,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
 
                                                     handlePhotoClick(index, e)
                                                     // setImageModal(true)
-                                                }} className={`${selectedGif === index && `${design === '0' ? 'border-[2px] !border-[#FFED63]' : 'border-[2px] !border-[#FE804D]'} opacity-[1] relative`}   rounded-[20px] w-[110px] h-[110px] sm:w-[140px] sm:h-[140px] opacity-[0.5] cursor-pointer object-cover`} src={item} alt="gif1" />
+                                                }} className={`${selectedGif === index && `${design === '0' ? 'border-[2px] !border-[#FFED63]' : 'border-[2px] !border-[#FE804D]'} opacity-[1] relative`} border-[2px] border-white  rounded-[12px] w-[150px] h-[150px] sm:w-[230px] sm:h-[230px] memeWidth opacity-[0.5] cursor-pointer object-cover`} src={item} alt="gif1" />
                                                 <svg onClick={e => {
                                                     mixpanel.track("image_download", {
                                                         distinct_id: user?.id,

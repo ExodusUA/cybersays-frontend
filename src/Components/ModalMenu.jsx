@@ -14,6 +14,8 @@ import link11 from '../images/NewDesign/modalMenu/link11.png'
 import link12 from '../images/NewDesign/modalMenu/link12.png'
 import link13 from '../images/NewDesign/modalMenu/link13.png'
 import link14 from '../images/NewDesign/modalMenu/link14.png'
+import link15 from '../images/NewDesign/modalMenu/link15.png'
+import link16 from '../images/NewDesign/modalMenu/link16.png'
 import toggleTheme1 from '../images/NewDesign/toggleTheme1.png'
 import toggleTheme2 from '../images/NewDesign/toggleTheme2.png'
 import NewLanguageButton from './Language/NewLanguageButton'
@@ -33,6 +35,8 @@ import OurMission from '../Pages/CyberSaysPages/Modals/OurMission'
 import WhyJoin from '../Pages/CyberSaysPages/Modals/WhyJoin'
 import FAQ from '../Pages/CyberSaysPages/Modals/FAQ'
 import mixpanel from 'mixpanel-browser'
+import Collaborate from '../Pages/CyberSaysPages/Modals/Collaborate'
+import Influencer from '../Pages/CyberSaysPages/Modals/Influencer'
 
 function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setChatModal, chatModal, languageData, userCountry, setSelectedButton, selectedButton, setSocialLink, setPromoModal }) {
 
@@ -53,6 +57,8 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
   const [FAQModal, setFAQModal] = useState(false)
   const [logoutModal, setLogoutModal] = useState(false)
   const [whatAbout, setWhatAbout] = useState(false)
+  const [collaborate, setCollaborate] = useState(false)
+  const [influencer, setInfluencer] = useState(false)
 
   const [checkBox, setCheckBox] = useState(false)
 
@@ -347,6 +353,14 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <img className='w-[32px] h-[32px] mr-2' src={link13} alt="link10" />
               <p className='saira text-[20px] font-semibold cursor-pointer '>{languageData?.modalMenuBottom5}</p>
             </div>
+            <div className='flex items-center' onClick={e => setInfluencer(true)} >
+              <img className='w-[32px] h-[32px] mr-2' src={link15} alt="link15" />
+              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink15}</p>
+            </div>
+            <div className='flex items-center' onClick={e => setCollaborate(true)} >
+              <img className='w-[32px] h-[32px] mr-2' src={link16} alt="link16" />
+              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink16}</p>
+            </div>
           </div>
           {/*
           <div className=' absolute bottom-4 left-1/2 transform -translate-x-1/2 flex justify-around items-center max-w-[420px] w-full '>
@@ -423,6 +437,12 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
       }
       {
         contactModal && <Contact languageData={languageData} setOpen={setContactModal} user={user} />
+      }
+      {
+        collaborate && <Collaborate languageData={languageData} setOpen={setCollaborate} user={user} />
+      }
+      {
+        influencer && <Influencer languageData={languageData} setOpen={setInfluencer} user={user} />
       }
     </div>
   )
