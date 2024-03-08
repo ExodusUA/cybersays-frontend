@@ -115,7 +115,7 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                             <div className='flex items-center '>
                                 <img className={`  ${design === '0' ? 'mt-[-30px] w-[180px] sm:w-[200px] md:w-[240px]' : 'mt-[-30px] md:mt-0 w-[380px] md:w-[470px]'}`} src={design === '0' ? girlOK : require('../../images/NewDesign/Homepage//message.png')} alt="girlOK" />
                                 <Link to={imLiveURL} target='_blank'><img className={`w-[160px] md:w-[240px] md:mt-5 mac:!mt-6 mb-10 ${design === '0' ? 'block' : 'hidden'}`} src={imLiveLogo} alt="imLiveLogo" /></Link>
-                                <p className='text-[22px] lg:text-[34px] saira font-medium w-[165px] lg:w-[240px] leading-6 lg:leading-10 absolute right-[30px] lg:right-[40px] lg:mt-6 gradient-linkDouble'>{languageData?.homepageMessageTitle}</p>
+                                <p className={`text-[22px] lg:text-[34px] saira font-medium w-[165px] lg:w-[240px] leading-6 lg:leading-10 absolute right-[30px] lg:right-[40px] lg:mt-6 gradient-linkDouble ${design === '0' ? 'hidden' : 'block'}`}>{languageData?.homepageMessageTitle}</p>
                             </div>
                             <div className=' relative '>
                                 {
@@ -125,7 +125,7 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                         </div>
                         <div className='ml-1 md:ml-10 w-[200px] sm:w-[unset] mb-4 md:mb-[unset]'>
                             <div className='max-w-[300px] md:max-w-[580px] w-full hidden lg:flex items-center'>
-                                <div className='buttonPrevText cursor-pointer mr-[20px]'>
+                                <div className='buttonPrev2 cursor-pointer mr-[20px]'>
                                     <img className='w-[100px] h-[32px]' src={arrowTextLeft} alt="arrowTextLeft" />
                                 </div>
 

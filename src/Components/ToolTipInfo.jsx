@@ -4,13 +4,14 @@ import close from '../images/CyberSaysPage/closeMenu.png'
 import what1 from '../images/NewDesign/toolnfo/what1.png'
 import what2 from '../images/NewDesign/toolnfo/what2.png'
 import what3 from '../images/NewDesign/toolnfo/what3.png'
+import what4 from '../images/NewDesign/toolnfo/what4.png'
 
 function ToolTipInfo({ languageData, setToolInfo }) {
     const { design } = useDesign()
 
     return (
         <div className=' w-[97.5%] max-w-[600px] fixed left-[5px] sm:left-[37px] bottom-[30px] sm:bottom-[70px] z-[999999999999] '>
-            <div onClick={e => setToolInfo(false)} className=' cursor-pointer bg-[#0A1225] bg-opacity-90 backdrop-blur-sm mt-[20px] rounded-[12px] lg:rounded-[10x] p-2 lg:p-4 lg:pb-6 '>
+            <div onClick={e => setToolInfo(false)} className=' cursor-pointer bg-[#3c4f7c] bg-opacity-30 backdrop-blur-sm mt-[20px] rounded-[12px] lg:rounded-[10x] p-2 lg:p-4 lg:pb-6 '>
                 <div className='flex justify-end '>
                     <img onClick={e => setToolInfo(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
@@ -38,6 +39,16 @@ function ToolTipInfo({ languageData, setToolInfo }) {
                         <div className='bg-[#EDF1FF] w-full p-1 flex items-center justify-center'>
                             
                             <p className=' saira text-[11px] text-[#1E1E1E] font-semibold leading-[14px] ml-1 text-center'>{languageData?.toolInfoRight2}</p>
+                        </div>
+                    </div>
+                    <div className='flex justify-around mt-2'>
+                        <div className='toolInfoBg4 w-full p-1 rounded-l-[24px] flex items-center'>
+                            <img className='w-[40px]' src={what4} alt="what4" />
+                            <p className='w-[115px] lg:w-[unset] saira text-[14px] text-[#1E1E1E] font-semibold leading-[16px] ml-1'>{languageData?.toolInfolef4}</p>
+                        </div>
+                        <div className='bg-[#EDF1FF] w-full p-1 flex items-center justify-center'>
+                            
+                            <p className=' saira text-[11px] text-[#1E1E1E] font-semibold leading-[14px] ml-1 text-center'>{languageData?.toolInfoRight4}</p>
                         </div>
                     </div>
                     <div className='flex justify-around mt-2'>

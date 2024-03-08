@@ -151,7 +151,17 @@ body {
     width: 0px;
     background: transparent;
 }
-
+.menuScroll::-webkit-scrollbar {
+    width: 5px ;
+    background-color: transparent;
+}
+.menuScroll::-webkit-scrollbar-thumb {
+    width: 5px ;
+    border-radius: 22px;
+    height: 40px;
+    background-color: #A2DBF0;
+   
+}
 .swiper-pagination {
     position: relative !important;
     margin-top: 10px;
@@ -290,7 +300,9 @@ body {
 .toolInfoBg3 {
     background: var(--Purple, linear-gradient(180deg, #FB2C8B 0%, #B114D3 100%));
 }
-
+.toolInfoBg4 {
+    background: var(--New-linear, linear-gradient(180deg, #FA047A 0%, #FE8D4D 100%));
+}
 .blurLogin {
     background: rgba(20, 25, 41, 0.40);
     backdrop-filter: blur(10px);
@@ -514,6 +526,9 @@ body {
        width: 140px !important;
        height: 140px !important;
     }
+    .menuHeight {
+       max-height: 600px !important;
+     }
 }
 
 @media screen and (max-height: 870px) and (min-width: 1200px) {
