@@ -9,17 +9,17 @@ import Slider from './Auth/Slider';
 import LoginForm from './Auth/LoginForm';
 import logoCyber from '../images/logoLogin.png';
 import { useSwipeable } from 'react-swipeable';
-import { Link } from 'react-router-dom';
 import SocialLink from '../Components/SocialLink';
 
 function Auth({ languageData }) {
 
     const params = new URLSearchParams(window.location.search);
 
+    window.localStorage.removeItem('double');
+
     let referralID = params.get('ref');
 
     const [currentSlide, setCurrentSlide] = useState(0);
-    const [checkmark, setCheckmark] = useState(false)
     const [socialLink, setSocialLink] = useState(false)
 
     const slideChange = (swiper) => {
