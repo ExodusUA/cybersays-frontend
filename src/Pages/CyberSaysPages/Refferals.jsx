@@ -135,7 +135,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
     const calculateSlidesPerView = () => {
         const { width, height } = dimensions;
         if (height < 800 && width > 1200) {
-            return 6;
+            return 5;
         }
         if ( width < 1200) {
             return 2.4;
@@ -203,7 +203,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
 
                                                     handlePhotoClick(index, e)
                                                     // setImageModal(true)
-                                                }} className={`${selectedGif === index && `${design === '0' ? 'border-[2px] !border-[#FFED63]' : 'border-[2px] !border-[#FE804D]'} opacity-[1] relative`} border-[2px] border-white  rounded-[12px] w-[150px] h-[150px] sm:w-[230px] sm:h-[230px] memeWidth opacity-[0.5] cursor-pointer object-cover`} src={item} alt="gif1" />
+                                                }} className={`${selectedGif === index && `${design === '0' ? 'border-[2px] !border-[#FFED63]' : 'border-[2px] !border-[#FE804D]'} opacity-[1] relative`} border-[2px] border-white  rounded-[12px] w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] memeWidth opacity-[0.5] cursor-pointer object-cover`} src={item} alt="gif1" />
                                                 <svg onClick={e => {
                                                     mixpanel.track("image_download", {
                                                         distinct_id: user?.id,

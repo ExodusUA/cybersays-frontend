@@ -195,5 +195,23 @@ async function uploadAttachment(attachment) {
     return response;
 }
 
+async function messageCollaborate(email, fields) {
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/contact/collaborate', { email, fields }, {
+        headers: {
+            token: `${getToken()}`
+        }
+    });
+    return response;
+}
 
-export default { getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTickets, getPoints, sendEmail, getModeratorData, getPDF, generateOTP, verifyOTP, createPixWithdraw, createTicket, uploadAttachment };
+async function messageInfluencer(email, fields) {
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/contact/joinInfluencer', { email, fields }, {
+        headers: {
+            token: `${getToken()}`
+        }
+    });
+    return response;
+}
+
+
+export default { getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTickets, getPoints, sendEmail, getModeratorData, getPDF, generateOTP, verifyOTP, createPixWithdraw, createTicket, uploadAttachment, messageCollaborate, messageInfluencer };

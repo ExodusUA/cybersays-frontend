@@ -99,7 +99,7 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded, open, ma
     }
 
     const finishedState = () => {
-        return <div className='flex justify-between items-center mx-1 sm:mx-3 cursor-pointer' onClick={e => setSelectedTask(index)}>
+        return <div className='flex justify-between items-center mx-1 sm:mx-3 cursor-pointer'>
             <p className='saira text-[12px] md:text-[14px] font-medium'>{index}. {data?.taskTitle}</p>
             {
                 tasks?.includes(index) ? <img className='w-[18px] h-[18px]' src={design === '0' ? done : require('../../images/NewDesign/Task/done.png')} alt="done" /> : <img className='w-[18px] h-[18px]' src={design === '0' ? notReady : require('../../images/NewDesign/Task/notReady.png')} alt="notReady" />
@@ -108,7 +108,7 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded, open, ma
     }
 
     const inactiveState = () => {
-        return <div className='flex justify-between items-center mx-1 cursor-pointer  sm:mx-3' onClick={e => setSelectedTask(index)}>
+        return <div className='flex justify-between items-center mx-1 cursor-pointer  sm:mx-3'>
             <p className='saira text-[12px] md:text-[14px] font-medium'>{index}. {data?.taskTitle}</p>
             {
                 tasks?.includes(index) ? <img className='w-[18px] h-[18px]' src={design === '0' ? done : require('../../images/NewDesign/Task/done.png')} alt="done" /> : <img className='w-[18px] h-[18px]' src={design === '0' ? notReady : require('../../images/NewDesign/Task/notReady.png')} alt="notReady" />

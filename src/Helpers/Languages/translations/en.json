@@ -33,7 +33,7 @@
             "taskButton": "1/3 Register!"
         },
         "task2": {
-            "taskTitle": "Depost",
+            "taskTitle": "Deposit",
             "taskTitleOpen": "Royal welcome to ImLive: buy 5$, get 10 credits",
             "taskBlocks": [
                 {
@@ -192,14 +192,14 @@
     "ticketsSection2Left": "Sent mail",
     "ticketsSection2Right": "Vegas tickets",
     "ticketsSection3Left": "For",
-    "ticketsSection3Left2": "credit purchased on ImLive!",
+    "ticketsSection3Left2": "credits purchased on ImLive!",
     "ticketsSection3Right": "Vegas tickets",
     "ticketsSection4Left": "Friend completed succfully double the money and to rceive points",
     "ticketsSection4Right": "Points",
     "ticketsSection5Left": "Sent mail",
     "ticketsSection5Right": "Points",
     "ticketsSection6Left": "For",
-    "ticketsSection6Left2": "credit purchased on ImLive!",
+    "ticketsSection6Left2": "credits purchased on ImLive!",
     "ticketsSection6Right": "Points",
     "aboutModalTitle": "About us",
     "aboutModalDesc1": "Welcome to CyberSays, your gateway to transforming online engagement into tangible, thrilling rewards!",
