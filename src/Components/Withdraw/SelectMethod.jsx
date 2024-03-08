@@ -60,7 +60,7 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                             <p className=' absolute bottom-1 text-center saira font-normal text-[14px] flex items-center'>{languageData?.withdrawGiftTitle} <img className='w-[24px] h-[18px] ml-1 rounded-[3px]' src={flag_pt} alt="flag_pt" /></p>
                         </div>
                     </div>
-                    <div className='flex mt-2'>
+                    <div className='flex mt-2 mb-[5px]'>
 
                         {
                             /*

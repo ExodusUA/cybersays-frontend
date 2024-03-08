@@ -110,9 +110,9 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
           </div>
         </div>
 
-        <div className='max-w-[365px] w-full m-auto h-screen max-h-[800px] overflow-auto mac2:pb-[70px]'>
+        <div className='max-w-[365px] w-full m-auto h-screen max-h-[800px] overflow-auto  menuScroll menuHeight'>
 
-          <div className='iphone:gap-4 se:gap-4 mac:!gap-2.5 grid lg:mt-8 mac:mt-0 '>
+          <div className='iphone:gap-3 se:gap-3 mac:!gap-2 grid lg:mt-8 mac:mt-0 '>
             <div className='flex items-center' onClick={e => {
               scrollToPage(0)
               mixpanel.track("home_Page", {

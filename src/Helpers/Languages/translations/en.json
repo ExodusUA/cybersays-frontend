@@ -118,7 +118,7 @@
     "doubleSubtitleSpan": "A",
     "doubleSubtitle": "will appear after task is completed",
     "doublePaid": "Withdraw",
-    "refferalsTitle": "Earn $1, 30 Vegas tickets, and 10 contest points per each friend referred that completes the offer!",
+    "refferalsTitle": "Earn $1, 30 Vegas tickets, and 10 competition points per each friend referred that completes the offer!",
     "refferalsLink1": "Read More about your referral benefits",
     "refferalsSubtitle": "Select a text and image or simply share your referral link with friends",
     "refferalsImage": "Choose an image",
@@ -141,7 +141,7 @@
     "competitionRightLink1": "Leaderboards",
     "competitionRightRules": "Rules of the competition",
     "header1": "Earned:",
-    "header2": "Competition Points",
+    "header2": "Competition Points:",
     "header3": "Vegas Tickets:",
     "modalMenuLink1": "Home page",
     "modalMenuLink2": "Double your money",
@@ -612,6 +612,9 @@
     "collaborateSelect1": "Who you are?",
     "collaborateOptoin1": "Choose who you are",
     "collaborateInput3": "Your message",
-    "collaborateBtn": "Continue"
+    "collaborateBtn": "Continue",
+    "paxumFlowCheckbox": "I will only be paid with Paxum if I have a valid account.",
+    "toolInfolef4": "Be chosen to go to Vegas",
+    "toolInfoRight4": "If a friend that referred you wins the promotion and you had completed the “Double the Money” offer, they can pick you to go to Vegas."
 
 }

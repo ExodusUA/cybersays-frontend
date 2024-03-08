@@ -596,5 +596,26 @@
     "ServiPagInput2": "Name",
     "ServiPagInput3": "National identity card (RUT)",
 
-    "TransactionCompetitionWinner": "Finishing in the 69$ daily competition!"
+    "TransactionCompetitionWinner": "Finishing in the 69$ daily competition!",
+    "modalMenuLink15": "Join as an influencer",
+    "modalMenuLink16": "Collaborate with us",
+    "InfluencerTitle": "Join as an influencer",
+    "InfluencerSubTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "InfluencerInput1": "Email",
+    "InfluencerInput2": "Name",
+    "InfluencerSelect1": "Who you are?",
+    "InfluencerOptoin1": "Choose who you are",
+    "InfluencerInput3": "Your message",
+    "InfluencerBtn": "Continue",
+    "collaborateTitle": "Collaborate with us",
+    "collaborateSubTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "collaborateInput1": "Email",
+    "collaborateInput2": "Name",
+    "collaborateSelect1": "Who you are?",
+    "collaborateOptoin1": "Choose who you are",
+    "collaborateInput3": "Your message",
+    "collaborateBtn": "Continue",
+    "paxumFlowCheckbox": "I will only be paid with Paxum if I have a valid account.",
+    "toolInfolef4": "Be chosen to go to Vegas",
+    "toolInfoRight4": "If a friend that referred you wins the promotion and you had completed the “Double the Money” offer, they can pick you to go to Vegas."
 }
