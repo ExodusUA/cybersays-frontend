@@ -17,7 +17,14 @@ import AffiliationTerms from './Pages/AffiliationTerms';
 
 function App() {
 
+  const uid = window.location.pathname.split('/')[1];
+
   useEffect(() => {
+
+    if (uid !== null && uid !== undefined && uid !== '') {
+      window.localStorage.setItem('uid', uid);
+    }
+
     if (window.localStorage.getItem('design') === null) {
       window.localStorage.setItem('design', '1');
       //window.location.reload();
@@ -31,7 +38,7 @@ function App() {
   }
 
   if (params.get('uid')) {
-    window.location.href = '/login?ref=' + params.get('uid')
+    window.location.href = '/login' + params.get('uid')
   };
 
   useEffect(() => {

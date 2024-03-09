@@ -1,13 +1,6 @@
 import React, { useState } from 'react'
 import close from '../images/CyberSaysPage/closeMenu.png'
 import { useDesign } from '../Helpers/Design/DesignContext'
-import point1 from '../images/NewDesign/newPoint1.png'
-import point2 from '../images/NewDesign/newPoint2.png'
-import point3 from '../images/NewDesign/newPoint3.png'
-import { PDFDownloadLink, Document, Page, View, Text } from '@react-pdf/renderer'
-import { Link } from 'react-router-dom'
-import imLiveLogo from '../images/CyberSaysPage/imLiveLogo.png'
-import doubleIcon from '../images/NewDesign/doubleIcon.svg'
 import congrats from '../images/CyberSaysPage/congrats.png'
 
 function DoubleComplete({ setOpen, languageData, user }) {
@@ -21,14 +14,14 @@ function DoubleComplete({ setOpen, languageData, user }) {
         if (navigator.share) {
             navigator
                 .share({
-                    url: '?uid=' + user?.referral_code,
+                    url: '/' + user?.referral_code,
                 })
                 .then(() => console.log('Successful share! 🎉'))
                 .catch(err => alert('Error sharing: ' + err));
         } else {
 
 
-            window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.referral_code)
+            window.navigator.clipboard.writeText(window.location.host + '/' + user?.referral_code)
             setIsLinkShared(true)
 
             setTimeout(() => {

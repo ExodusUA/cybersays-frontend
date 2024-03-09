@@ -47,12 +47,12 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                 .share({
                     title: document.title,
                     text: 'Sharing',
-                    url: '?uid=' + user?.referral_code,
+                    url: '/' + user?.referral_code,
                 })
                 .then(() => console.log('Successful share! 🎉'))
                 .catch(err => console.error(err));
         } else {
-            window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.referral_code)
+            window.navigator.clipboard.writeText(window.location.host + '/' + user?.referral_code)
             setIsLinkCopied(true)
 
             setTimeout(() => {

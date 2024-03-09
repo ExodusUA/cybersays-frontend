@@ -57,14 +57,14 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                             type: blobImage.type,
                         }),
                     ],
-                    url: '?uid=' + user?.referral_code,
+                    url: '/' + user?.referral_code,
                 })
                 .then(() => console.log('Successful share! 🎉'))
                 .catch(err => alert('Error sharing: ' + err));
         } else {
 
 
-            window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.referral_code)
+            window.navigator.clipboard.writeText(window.location.host + '/' + user?.referral_code)
             setIsLinkShared(true)
 
             setTimeout(() => {
@@ -117,7 +117,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
             USD_earned: user?.allTimeEarned,
             page_name: 'Refferals',
         })
-        window.navigator.clipboard.writeText(window.location.host + '?uid=' + user?.referral_code)
+        window.navigator.clipboard.writeText(window.location.host + '/' + user?.referral_code)
     }
 
     useEffect(() => {

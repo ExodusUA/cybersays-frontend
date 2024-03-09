@@ -99,7 +99,9 @@ function Main({ languageData }) {
     const [imLiveURL, setImLiveURL] = useState(null);
     const navigate = useNavigate()
     const urlParams = new URLSearchParams(window.location.search);
-    const uid = urlParams.get('uid');
+  
+    const uid = window.location.pathname.split('/')[1]
+   
 
     const [menuOpen, setMenuOpen] = useState(false)
     const [deleteOpen, setDeleteOpen] = useState(false)
@@ -142,6 +144,8 @@ function Main({ languageData }) {
             const res = await API.getUserCountry()
             setUserCountry(res)
         }
+
+        
     }, [])
 
     useQuery({
@@ -363,7 +367,7 @@ function Main({ languageData }) {
 
             <Routes>
                 <Route path="/verify" element={<Verify userData={userData} />} />
-                <Route path="/" element={<AuthCheck>{HomepageSwiper()}</AuthCheck>} />
+                <Route path="/*" element={<AuthCheck>{HomepageSwiper()}</AuthCheck>} />
                 <Route path="/competition" element={<AuthCheck><Competition imLiveURL={imLiveURL} user={userData} /></AuthCheck>} />
                 <Route path="/terms" element={<Terms languageData={languageData} />} />
 

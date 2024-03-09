@@ -71,7 +71,7 @@ function TourModal({ setOpen, languageData, user }) {
                             type: blobImage.type,
                         }),
                     ],
-                    url: '?uid=' + user?.referral_code,
+                    url: '/' + user?.referral_code,
                 })
                     .then(() => console.log('Successful share! 🎉'))
                     .catch(error => console.log('Error sharing:', error));
