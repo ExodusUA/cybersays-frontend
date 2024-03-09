@@ -1,17 +1,31 @@
 import React, { useState } from 'react'
 import { useDesign } from '../../../Helpers/Design/DesignContext'
 import { Link } from 'react-router-dom';
+import { withdrawPaxum } from '../../../Requests/withdraw';
+import { useQueryClient } from '@tanstack/react-query';
 
-function PaxumFlow({ languageData, setConfirm, setSelectedPayment }) {
+
+function PaxumFlow({ languageData, setConfirm, setError }) {
     const { design } = useDesign()
+    const queryClient = useQueryClient()
 
-    const [email, setEmail] = useState('');
+    const [paxumID, setPaxumID] = useState('');
     const [checkmark, setCheckmark] = useState(false)
 
-    const handlePaxumFlow = () => {
-        //console.log('Paxum Flow')
-       // setSelectedPayment(null)
-        setConfirm(true)
+    const handlePaxumFlow = async () => {
+        if (!checkmark) return
+        if (paxumID === '') return alert('Please enter your Paxum ID')
+
+        try {
+            const res = await withdrawPaxum({ paxumID })
+            setConfirm(true)
+        } catch (error) {
+            console.log(error)
+            setError(true)
+        }
+
+        queryClient.invalidateQueries('userData')
+
     }
 
     return (
@@ -20,8 +34,8 @@ function PaxumFlow({ languageData, setConfirm, setSelectedPayment }) {
             <p className='text-[18px] md:text-[32px] font-semibold text-center my-2 lg:leading-[40px]'>{languageData?.paxumFlowTitle}</p>
             <p className='text-[12px] saira mb-1 mt-3'>{languageData?.paxumFlowInput}</p>
             <input
-                value={email}
-                onChange={e => setEmail(e.target.value)}
+                value={paxumID}
+                onChange={e => setPaxumID(e.target.value)}
                 className='bg-white text-[#1E1E1E] w-full h-[45px] rounded-[12px] px-3  focus:ring-0 outline-none saira' placeholder={languageData?.paxumFlowPlaceholder} type="text" />
             <div className='flex items-center justify-center gap-2 mt-2 lg:mt-4'>
                 <div className='w-[23px] h-[22px] border-2 border-white rounded-[4px] flex justify-center items-center align-middle cursor-pointer' onClick={e => setCheckmark(!checkmark)}>
