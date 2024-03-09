@@ -11,6 +11,7 @@ import link5 from '../images/CyberSaysPage/iconTicket.png'
 import { useDesign } from '../Helpers/Design/DesignContext'
 import mixpanel from 'mixpanel-browser'
 import { useLanguage } from '../Helpers/Languages/LanguageContext';
+import moengage from '@moengage/web-sdk';
 
 function CircleNavigation({ setActivePageIndex, activePageIndex, languageData, user }) {
 
@@ -56,6 +57,17 @@ function CircleNavigation({ setActivePageIndex, activePageIndex, languageData, u
 
     const handleEvents = () => {
         mixpanel.track('arrow_Page_click', {
+            distinct_id: user?.id,
+            is_referred: user?.referral_id ? 'Yes' : 'No',
+            language: language,
+            vegas_tickets: user?.raffle_tickets,
+            points: user?.points,
+            user_id: user?.id,
+            USD_earned: user?.allTimeEarned,
+            number_referrals: user?.referral_id ? user?.referral_id.length : 0,
+        })
+
+        moengage.track_event('arrow_Page_click', {
             distinct_id: user?.id,
             is_referred: user?.referral_id ? 'Yes' : 'No',
             language: language,

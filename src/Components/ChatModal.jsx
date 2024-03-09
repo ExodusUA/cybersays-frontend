@@ -10,6 +10,7 @@ import int from '../images/NewDesign/chatFlag/flag_int.png'
 import ModerMessage from './Messages/ModerMessage';
 import { useLanguage } from '../Helpers/Languages/LanguageContext';
 import mixpanel from 'mixpanel-browser';
+import moengage from '@moengage/web-sdk';
 
 
 function ChatModal({ user, setOpen, languageData, userCountry }) {
@@ -72,6 +73,7 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
         },
     ]
 
+
     const { design } = useDesign()
     const { language } = useLanguage()
 
@@ -112,6 +114,18 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
         setSelectedCountry(country)
 
         mixpanel.track("chat_click", {
+            distinct_id: 'not_set',
+            language: language,
+            is_referred: user?.referral_id ? 'Yes' : 'No',
+            vegas_tickets: user?.raffle_tickets,
+            points: user?.points,
+            user_id: user?.id,
+            USD_earned: user?.allTimeEarned,
+            chat_region: country,
+            user_email: user?.email
+        })
+
+        moengage.track_event("chat_click", {
             distinct_id: 'not_set',
             language: language,
             is_referred: user?.referral_id ? 'Yes' : 'No',
@@ -203,6 +217,18 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
             language: language,
         })
 
+        moengage.track_event("message_sent", {
+            distinct_id: user?.id,
+            is_referred: user?.referral_id ? 'Yes' : 'No',
+            vegas_tickets: user?.raffle_tickets,
+            points: user?.points,
+            user_id: user?.id,
+            USD_earned: user?.allTimeEarned,
+            page_name: 'Refferals',
+            region: selectedCountry.toUpperCase(),
+            language: language,
+        })
+
         setMessage('');
     };
 
@@ -246,7 +272,18 @@ function ChatModal({ user, setOpen, languageData, userCountry }) {
             language: language,
             gif_selected: gif
         })
-
+        moengage.track_event("gif_select", {
+            distinct_id: user?.id,
+            is_referred: user?.referral_id ? 'Yes' : 'No',
+            vegas_tickets: user?.raffle_tickets,
+            points: user?.points,
+            user_id: user?.id,
+            USD_earned: user?.allTimeEarned,
+            page_name: 'Refferals',
+            region: selectedCountry.toUpperCase(),
+            language: language,
+            gif_selected: gif
+        })
         setGifModal(false)
     }
 

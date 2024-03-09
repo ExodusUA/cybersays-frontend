@@ -11,6 +11,7 @@ import logoCyber from '../images/logoLogin.png';
 import { useSwipeable } from 'react-swipeable';
 import SocialLink from '../Components/SocialLink';
 
+
 function Auth({ languageData }) {
 
     const params = new URLSearchParams(window.location.search);

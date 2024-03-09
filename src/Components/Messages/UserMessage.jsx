@@ -6,7 +6,7 @@ function UserMessage({ message, owner, index }) {
     const { design } = useDesign()
 
     /* DELETE LATER */
-console.log('UserMessage', message)
+
     const [imageData, setImageData] = useState('');
 
     useEffect(() => {

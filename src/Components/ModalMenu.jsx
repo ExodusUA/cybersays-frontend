@@ -37,6 +37,7 @@ import FAQ from '../Pages/CyberSaysPages/Modals/FAQ'
 import mixpanel from 'mixpanel-browser'
 import Collaborate from '../Pages/CyberSaysPages/Modals/Collaborate'
 import Influencer from '../Pages/CyberSaysPages/Modals/Influencer'
+import moengage from '@moengage/web-sdk'
 
 function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setChatModal, chatModal, languageData, userCountry, setSelectedButton, selectedButton, setSocialLink, setPromoModal }) {
 
@@ -84,6 +85,15 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
             <label class="relative  items-center cursor-pointer mx-2">
               <input onClick={e => {
                 mixpanel.track("choose_design", {
+                  distinct_id: user?.id,
+                  is_referred: user?.referral_id ? 'Yes' : 'No',
+                  vegas_tickets: user?.raffle_tickets,
+                  points: user?.points,
+                  user_id: user?.id,
+                  USD_earned: user?.allTimeEarned,
+                  page_name: 'Menu'
+                })
+                moengage.track_event("choose_design", {
                   distinct_id: user?.id,
                   is_referred: user?.referral_id ? 'Yes' : 'No',
                   vegas_tickets: user?.raffle_tickets,

@@ -14,8 +14,17 @@ import Policy from './Pages/Policy';
 import ContestTerms from './Pages/ContestTerms';
 import PromotionTerms from './Pages/PromotionTerms';
 import AffiliationTerms from './Pages/AffiliationTerms';
+import moengage from '@moengage/web-sdk';
 
 function App() {
+
+  moengage.initialize(
+    {
+      app_id: 'GL6LO1GVSQI7L67UCUGV3MRJ',
+      debug_logs: 0,
+      cluster: 'DC_2'
+    }
+  );
 
   const uid = window.location.pathname.split('/')[1];
 
