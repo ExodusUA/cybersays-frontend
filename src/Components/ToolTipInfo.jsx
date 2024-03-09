@@ -6,6 +6,7 @@ import what2 from '../images/NewDesign/toolnfo/what2.png'
 import what3 from '../images/NewDesign/toolnfo/what3.png'
 import what4 from '../images/NewDesign/toolnfo/what4.png'
 import mixpanel from 'mixpanel-browser'
+import moengage from '@moengage/web-sdk';
 
 function ToolTipInfo({ languageData, setToolInfo, user }) {
     const { design } = useDesign()
@@ -22,6 +23,16 @@ function ToolTipInfo({ languageData, setToolInfo, user }) {
     
             number_referrals: user?.referral_id ? user?.referral_id.length : 0,
         })
+        moengage.track_event('info_icon', {
+            distinct_id: user?.id,
+            is_referred: user?.referral_id ? 'Yes' : 'No',
+            vegas_tickets: user?.raffle_tickets,
+            points: user?.points,
+            user_id: user?.id,
+            USD_earned: user?.allTimeEarned,
+            number_referrals: user?.referral_id ? user?.referral_id.length : 0,
+        })
+        
     }, [])
 
     return (

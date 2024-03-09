@@ -10,6 +10,7 @@ import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
 import crown from '../../images/CyberSaysPage/crown1st.png'
 import TimeCounterDay from '../../Components/TimeCounterDay'
 import mixpanel from 'mixpanel-browser';
+import moengage from '@moengage/web-sdk';
 
 function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading, leaderboardData, setLeaderboardData, siteData, languageData, setRulesModal, setSocialLink }) {
 
@@ -33,6 +34,15 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
     const shareRefferalLink = () => {
 
         mixpanel.track("refer_friends", {
+            distinct_id: user?.id,
+            is_referred: user?.referral_id ? 'Yes' : 'No',
+            vegas_tickets: user?.raffle_tickets,
+            points: user?.points,
+            user_id: user?.id,
+            USD_earned: user?.allTimeEarned,
+            page_name: 'Refferals',
+        })
+        moengage.track_event("refer_friends", {
             distinct_id: user?.id,
             is_referred: user?.referral_id ? 'Yes' : 'No',
             vegas_tickets: user?.raffle_tickets,
@@ -134,6 +144,15 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                                     USD_earned: user?.allTimeEarned,
                                     page_name: 'Refferals',
                                 })
+                                moengage.track_event("enjoy_ImLive", {
+                                    distinct_id: user?.id,
+                                    is_referred: user?.referral_id ? 'Yes' : 'No',
+                                    vegas_tickets: user?.raffle_tickets,
+                                    points: user?.points,
+                                    user_id: user?.id,
+                                    USD_earned: user?.allTimeEarned,
+                                    page_name: 'Refferals',
+                                })
                             }} to={imLiveURL}>
                                 <button className={` bg-white  border-[2px] border-[#FFED63] text-black text-[18px] saira font-semibold p-2 sm:px-6 w-[95%] md:w-full ${design === '0' ? ' p-2 sm:px-6 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.competitionLeftBtn}</button>
                             </Link>
@@ -156,6 +175,15 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                     <p className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline se:mt-0 iphone:mt-0 mac:!mt-0  cursor-pointer ${design === '0' ? 'text-white' : 'gradient-link '}`} onClick={e => {
                         setLeaderboardModal(true)
                         mixpanel.track("leaderboard", {
+                            distinct_id: user?.id,
+                            is_referred: user?.referral_id ? 'Yes' : 'No',
+                            vegas_tickets: user?.raffle_tickets,
+                            points: user?.points,
+                            user_id: user?.id,
+                            USD_earned: user?.allTimeEarned,
+                            page_name: 'Refferals',
+                        })
+                        moengage.track_event("leaderboard", {
                             distinct_id: user?.id,
                             is_referred: user?.referral_id ? 'Yes' : 'No',
                             vegas_tickets: user?.raffle_tickets,

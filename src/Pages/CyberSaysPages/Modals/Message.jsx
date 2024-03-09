@@ -2,6 +2,7 @@ import React from 'react'
 import close from '../../../images/CyberSaysPage/closeMenu.png'
 import { useDesign } from '../../../Helpers/Design/DesignContext'
 import mixpanel from 'mixpanel-browser';
+import moengage from '@moengage/web-sdk';
 
 function Message({ setOpenMassege, message, copyToMessage, messageCopied, onCloseCopied, selectedMessage, languageData, user }) {
 
@@ -23,6 +24,15 @@ function Message({ setOpenMassege, message, copyToMessage, messageCopied, onClos
 
                 <button onClick={e => {
                     mixpanel.track("choose_text", {
+                        distinct_id: user?.id,
+                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                        vegas_tickets: user?.raffle_tickets,
+                        points: user?.points,
+                        user_id: user?.id,
+                        USD_earned: user?.allTimeEarned,
+                        page_name: 'Refferals',
+                    })
+                    moengage.track_event('choose_text', {
                         distinct_id: user?.id,
                         is_referred: user?.referral_id ? 'Yes' : 'No',
                         vegas_tickets: user?.raffle_tickets,

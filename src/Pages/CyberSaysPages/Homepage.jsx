@@ -13,6 +13,7 @@ import arrowTextLeft from '../../images/NewDesign/arrowTextLeft.png'
 import arrowTextRight from '../../images/NewDesign/arrowTextRight.png'
 import { useLanguage } from '../../Helpers/Languages/LanguageContext'
 import mixpanel from 'mixpanel-browser'
+import moengage from '@moengage/web-sdk';
 
 
 function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
@@ -80,6 +81,17 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                                     
                                     number_referrals: user?.referral_id ? user?.referral_id.length : 0,
                                 })
+                                moengage.track_event('arrow_text_click', {
+                                    distinct_id: user?.id,
+                                    is_referred: user?.referral_id ? 'Yes' : 'No',
+                                    language: language,
+                                    vegas_tickets: user?.raffle_tickets,
+                                    points: user?.points,
+                                    user_id: user?.id,
+                                    USD_earned: user?.allTimeEarned,
+                                    language: language,
+                                    number_referrals: user?.referral_id ? user?.referral_id.length : 0,
+                                })
                             }}>
                                 <svg className=' w-[20px] cursor-pointer  mr-[10px]' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                                     <path d="M22.6665 29.3333L9.33326 16L22.6665 2.66676" stroke="url(#paint0_linear_518_191)" stroke-width="2.66665" stroke-linecap="round" stroke-linejoin="round" />
@@ -124,6 +136,17 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                                     user_id: user?.id,
                                     USD_earned: user?.allTimeEarned,
                                 
+                                    number_referrals: user?.referral_id ? user?.referral_id.length : 0,
+                                })
+                                moengage.track_event('arrow_text_click', {
+                                    distinct_id: user?.id,
+                                    is_referred: user?.referral_id ? 'Yes' : 'No',
+                                    language: language,
+                                    vegas_tickets: user?.raffle_tickets,
+                                    points: user?.points,
+                                    user_id: user?.id,
+                                    USD_earned: user?.allTimeEarned,
+                                    language: language,
                                     number_referrals: user?.referral_id ? user?.referral_id.length : 0,
                                 })
                             }}>

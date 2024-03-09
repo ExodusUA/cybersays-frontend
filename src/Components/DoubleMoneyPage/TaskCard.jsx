@@ -4,6 +4,7 @@ import done from '../../images/CyberSaysPage/card_done.png'
 import { Link } from 'react-router-dom'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import mixpanel from 'mixpanel-browser'
+import moengage from '@moengage/web-sdk';
 
 function TaskCard({ state, background, data, index, imLiveURL, rounded, open, manualSelect, setSelectedTask, tasks, user, languageData }) {
 
@@ -83,6 +84,16 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded, open, ma
             <p onClick={e => {
                 copyImLiveLink()
                 mixpanel.track("copy_link", {
+                    distinct_id: 'not_set',
+                    is_referred: user?.referral_id ? 'Yes' : 'No',
+                    vegas_tickets: user?.raffle_tickets,
+                    points: user?.points,
+                    user_id: user?.id,
+                    USD_earned: user?.allTimeEarned,
+                    user_email: user?.email,
+                    page: 'Double your Money'
+                });
+                moengage.track_event("copy_link", {
                     distinct_id: 'not_set',
                     is_referred: user?.referral_id ? 'Yes' : 'No',
                     vegas_tickets: user?.raffle_tickets,

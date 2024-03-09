@@ -121,6 +121,15 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                 USD_earned: user?.allTimeEarned,
                 page_name: 'Menu'
               })
+              moengage.track_event("log_out", {
+                distinct_id: user?.id,
+                is_referred: user?.referral_id ? 'Yes' : 'No',
+                vegas_tickets: user?.raffle_tickets,
+                points: user?.points,
+                user_id: user?.id,
+                USD_earned: user?.allTimeEarned,
+                page_name: 'Menu'
+              })
             }} className={`ml-3 min-w-[28px] lg:min-w-[34px] h-[28px] lg:h-[34px] border-[2px] ${design === '0' ? ' border-[#FFED63]' : 'border-[#A2DBF0]'} bg-[#626161] rounded-full flex justify-center items-center  cursor-pointer`}>
               <svg className='ml-[-5px]' width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 15.75L15.75 12M15.75 12L12 8.25M15.75 12H2M8.25 6.06125V6C8.25 4.6 8.25 3.9 8.5225 3.365C8.7625 2.89375 9.14375 2.5125 9.615 2.2725C10.15 2 10.85 2 12.25 2H18C19.4 2 20.1 2 20.6337 2.2725C21.105 2.5125 21.4875 2.89375 21.7275 3.365C22 3.89875 22 4.59875 22 5.99625V18.005C22 19.4025 22 20.1013 21.7275 20.635C21.4874 21.1055 21.1045 21.4879 20.6337 21.7275C20.1 22 19.4012 22 18.0037 22H12.2462C10.8487 22 10.1487 22 9.615 21.7275C9.14462 21.4878 8.76218 21.1054 8.5225 20.635C8.25 20.1 8.25 19.4 8.25 18V17.9375" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -135,6 +144,15 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
             <div className='flex items-center' onClick={e => {
               scrollToPage(0)
               mixpanel.track("home_Page", {
+                distinct_id: user?.id,
+                is_referred: user?.referral_id ? 'Yes' : 'No',
+                vegas_tickets: user?.raffle_tickets,
+                points: user?.points,
+                user_id: user?.id,
+                USD_earned: user?.allTimeEarned,
+                page_name: 'Menu'
+              })
+              moengage.track_event("home_Page", {
                 distinct_id: user?.id,
                 is_referred: user?.referral_id ? 'Yes' : 'No',
                 vegas_tickets: user?.raffle_tickets,
@@ -158,6 +176,15 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                 USD_earned: user?.allTimeEarned,
                 page_name: 'Menu'
               })
+              moengage.track_event("double_Your_Money", {
+                distinct_id: user?.id,
+                is_referred: user?.referral_id ? 'Yes' : 'No',
+                vegas_tickets: user?.raffle_tickets,
+                points: user?.points,
+                user_id: user?.id,
+                USD_earned: user?.allTimeEarned,
+                page_name: 'Menu'
+              })
             }}>
               <img className='w-[32px] h-[32px] mr-2' src={design === '0' ? link2 : require('../images/NewDesign/modalMenu/link2.png')} alt="link2" />
               <p className='saira text-[20px] font-semibold'>{languageData?.modalMenuLink2}</p>
@@ -165,6 +192,15 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
             <div className='flex items-center' onClick={e => {
               scrollToPage(2)
               mixpanel.track("the_Vegas_Wknd", {
+                distinct_id: user?.id,
+                is_referred: user?.referral_id ? 'Yes' : 'No',
+                vegas_tickets: user?.raffle_tickets,
+                points: user?.points,
+                user_id: user?.id,
+                USD_earned: user?.allTimeEarned,
+                page_name: 'Menu'
+              })
+              moengage.track_event("the_Vegas_Wknd", {
                 distinct_id: user?.id,
                 is_referred: user?.referral_id ? 'Yes' : 'No',
                 vegas_tickets: user?.raffle_tickets,
@@ -188,6 +224,15 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                 USD_earned: user?.allTimeEarned,
                 page_name: 'Menu'
               })
+              moengage.track_event("refer_To_Get_Tickets", {
+                distinct_id: user?.id,
+                is_referred: user?.referral_id ? 'Yes' : 'No',
+                vegas_tickets: user?.raffle_tickets,
+                points: user?.points,
+                user_id: user?.id,
+                USD_earned: user?.allTimeEarned,
+                page_name: 'Menu'
+              })
             }}>
               <img className='w-[32px] h-[32px] mr-2' src={link6} alt="link6" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink6} {siteData?.currentDay} {languageData?.modalMenuLink6Span}</p>
@@ -195,6 +240,15 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
             <div className='flex items-center' onClick={e => {
               scrollToPage(4)
               mixpanel.track("the_12_daily_Competition", {
+                distinct_id: user?.id,
+                is_referred: user?.referral_id ? 'Yes' : 'No',
+                vegas_tickets: user?.raffle_tickets,
+                points: user?.points,
+                user_id: user?.id,
+                USD_earned: user?.allTimeEarned,
+                page_name: 'Menu'
+              })
+              moengage.track_event("the_12_daily_Competition", {
                 distinct_id: user?.id,
                 is_referred: user?.referral_id ? 'Yes' : 'No',
                 vegas_tickets: user?.raffle_tickets,
@@ -218,6 +272,15 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                 USD_earned: user?.allTimeEarned,
                 page_name: 'Menu'
               })
+              moengage.track_event("your_Referrals", {
+                distinct_id: user?.id,
+                is_referred: user?.referral_id ? 'Yes' : 'No',
+                vegas_tickets: user?.raffle_tickets,
+                points: user?.points,
+                user_id: user?.id,
+                USD_earned: user?.allTimeEarned,
+                page_name: 'Menu'
+              })
             }} >
               <img className='w-[32px] h-[32px] mr-2' src={design === '0' ? link5 : require('../images/NewDesign/modalMenu/link4.png')} alt="link5" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink5}</p>
@@ -225,6 +288,15 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
             <div className='flex items-center' onClick={e => {
               setWithdrawModal(true)
               mixpanel.track("way_to_get_paid", {
+                distinct_id: user?.id,
+                is_referred: user?.referral_id ? 'Yes' : 'No',
+                vegas_tickets: user?.raffle_tickets,
+                points: user?.points,
+                user_id: user?.id,
+                USD_earned: user?.allTimeEarned,
+                page_name: 'Menu'
+              })
+              moengage.track_event("way_to_get_paid", {
                 distinct_id: user?.id,
                 is_referred: user?.referral_id ? 'Yes' : 'No',
                 vegas_tickets: user?.raffle_tickets,
@@ -248,6 +320,15 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                 USD_earned: user?.allTimeEarned,
                 page_name: 'Menu'
               })
+              moengage.track_event("chat_room", {
+                distinct_id: user?.id,
+                is_referred: user?.referral_id ? 'Yes' : 'No',
+                vegas_tickets: user?.raffle_tickets,
+                points: user?.points,
+                user_id: user?.id,
+                USD_earned: user?.allTimeEarned,
+                page_name: 'Menu'
+              })
             }} >
               <img className='w-[32px] h-[32px] mr-2' src={link9} alt="link7" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink8}</p>
@@ -263,6 +344,15 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                 USD_earned: user?.allTimeEarned,
                 page_name: 'Menu'
               })
+              moengage.track_event("transaction_history", {
+                distinct_id: user?.id,
+                is_referred: user?.referral_id ? 'Yes' : 'No',
+                vegas_tickets: user?.raffle_tickets,
+                points: user?.points,
+                user_id: user?.id,
+                USD_earned: user?.allTimeEarned,
+                page_name: 'Menu'
+              })
             }} >
               <img className='w-[32px] h-[32px] mr-2' src={link7} alt="link7" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink9}</p>
@@ -270,6 +360,15 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
             <div className='flex items-center' onClick={e => {
               setTicketsModal(true)
               mixpanel.track("tickets_and_points", {
+                distinct_id: user?.id,
+                is_referred: user?.referral_id ? 'Yes' : 'No',
+                vegas_tickets: user?.raffle_tickets,
+                points: user?.points,
+                user_id: user?.id,
+                USD_earned: user?.allTimeEarned,
+                page_name: 'Menu'
+              })
+              moengage.track_event("tickets_and_points", {
                 distinct_id: user?.id,
                 is_referred: user?.referral_id ? 'Yes' : 'No',
                 vegas_tickets: user?.raffle_tickets,
@@ -317,6 +416,15 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                         USD_earned: user?.allTimeEarned,
                         page_name: 'Menu'
                       })
+                      moengage.track_event("about_us", {
+                        distinct_id: user?.id,
+                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                        vegas_tickets: user?.raffle_tickets,
+                        points: user?.points,
+                        user_id: user?.id,
+                        USD_earned: user?.allTimeEarned,
+                        page_name: 'Menu'
+                      })
                     }}  >
                       <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuBottom1}</p>
                     </div>
@@ -331,6 +439,16 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                         USD_earned: user?.allTimeEarned,
                         page_name: 'Menu'
                       })
+                      moengage.track_event("our_mission", {
+                        distinct_id: user?.id,
+                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                        vegas_tickets: user?.raffle_tickets,
+                        points: user?.points,
+                        user_id: user?.id,
+                        USD_earned: user?.allTimeEarned,
+                        page_name: 'Menu'
+                      })
+
                     }} >
                       <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuLink12}</p>
                     </div>
@@ -339,6 +457,15 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                     <div className='flex items-center' onClick={e => {
                       setWhyModal(true)
                       mixpanel.track("why_join_us", {
+                        distinct_id: user?.id,
+                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                        vegas_tickets: user?.raffle_tickets,
+                        points: user?.points,
+                        user_id: user?.id,
+                        USD_earned: user?.allTimeEarned,
+                        page_name: 'Menu'
+                      })
+                      moengage.track_event("why_join_us", {
                         distinct_id: user?.id,
                         is_referred: user?.referral_id ? 'Yes' : 'No',
                         vegas_tickets: user?.raffle_tickets,
@@ -361,12 +488,30 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                         USD_earned: user?.allTimeEarned,
                         page_name: 'Menu'
                       })
+                      moengage.track_event("contact_us", {
+                        distinct_id: user?.id,
+                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                        vegas_tickets: user?.raffle_tickets,
+                        points: user?.points,
+                        user_id: user?.id,
+                        USD_earned: user?.allTimeEarned,
+                        page_name: 'Menu'
+                      })
                     }}  >
                       <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuBottom4}</p>
                     </div>
                     <div className='flex items-center' onClick={e => {
                       setSocialLink(true)
                       mixpanel.track("legal", {
+                        distinct_id: user?.id,
+                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                        vegas_tickets: user?.raffle_tickets,
+                        points: user?.points,
+                        user_id: user?.id,
+                        USD_earned: user?.allTimeEarned,
+                        page_name: 'Menu'
+                      })
+                      moengage.track_event("legal", {
                         distinct_id: user?.id,
                         is_referred: user?.referral_id ? 'Yes' : 'No',
                         vegas_tickets: user?.raffle_tickets,
@@ -393,6 +538,15 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                 USD_earned: user?.allTimeEarned,
                 page_name: 'Menu'
               })
+              moengage.track_event("FAQ", {
+                distinct_id: user?.id,
+                is_referred: user?.referral_id ? 'Yes' : 'No',
+                vegas_tickets: user?.raffle_tickets,
+                points: user?.points,
+                user_id: user?.id,
+                USD_earned: user?.allTimeEarned,
+                page_name: 'Menu'
+              })
             }} >
               <img className='w-[32px] h-[32px] mr-2' src={link11} alt="link11" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink11}</p>
@@ -408,6 +562,15 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                 USD_earned: user?.allTimeEarned,
                 page_name: 'Menu'
               })
+              moengage.track_event("settings", {
+                distinct_id: user?.id,
+                is_referred: user?.referral_id ? 'Yes' : 'No',
+                vegas_tickets: user?.raffle_tickets,
+                points: user?.points,
+                user_id: user?.id,
+                USD_earned: user?.allTimeEarned,
+                page_name: 'Menu'
+              })
             }}  >
               <img className='w-[32px] h-[32px] mr-2' src={link12} alt="link10" />
               <p className='saira text-[20px] font-semibold cursor-pointer '>{languageData?.modalMenuBottom3}</p>
@@ -415,6 +578,15 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
             <div className='flex items-center' onClick={e => {
               setTourModal(true)
               mixpanel.track("Vegas Weekend Tour", {
+                distinct_id: user?.id,
+                is_referred: user?.referral_id ? 'Yes' : 'No',
+                vegas_tickets: user?.raffle_tickets,
+                points: user?.points,
+                user_id: user?.id,
+                USD_earned: user?.allTimeEarned,
+                page_name: 'Menu'
+              })
+              moengage.track_event("Vegas Weekend Tour", {
                 distinct_id: user?.id,
                 is_referred: user?.referral_id ? 'Yes' : 'No',
                 vegas_tickets: user?.raffle_tickets,

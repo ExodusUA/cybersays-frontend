@@ -12,6 +12,7 @@ import { getUserCountry } from '../../Requests/utills';
 import DiscordButton from '../../Components/Buttons/DiscordButton';
 import mixpanel from 'mixpanel-browser';
 import { useLanguage } from '../../Helpers/Languages/LanguageContext';
+import moengage from '@moengage/web-sdk';
 
 function LoginForm({ languageData, referralID }) {
 
@@ -123,6 +124,10 @@ function LoginForm({ languageData, referralID }) {
 
     const handleMixpanelEvent = async (success, provider) => {
         mixpanel.track('login', {
+            registered_width: provider,
+            success: success
+        });
+        moengage.track_event('login', {
             registered_width: provider,
             success: success
         });

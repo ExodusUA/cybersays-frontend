@@ -4,6 +4,7 @@ import flag_es from '../../images/flags/flag_es.png'
 import flag_pt from '../../images/flags/flag-pt.png'
 import { useLanguage } from '../../Helpers/Languages/LanguageContext'
 import mixpanel from 'mixpanel-browser'
+import moengage from '@moengage/web-sdk';
 
 function LanguageSwitcher({ setIsLangOpen }) {
 
@@ -15,7 +16,10 @@ function LanguageSwitcher({ setIsLangOpen }) {
             current_language: language,
             new_language: newLanguage
         })
-
+        moengage.track_event('language_select', {
+            current_language: language,
+            new_language: newLanguage
+        })
         changeLanguage(newLanguage);
         setIsLangOpen(false);
     };

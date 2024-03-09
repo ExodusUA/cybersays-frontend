@@ -7,6 +7,7 @@ import { Navigation } from 'swiper/modules';
 import { useDesign } from '../../Helpers/Design/DesignContext';
 import newlogoCyber from '../../images/NewDesign/newLogo_main.png';
 import mixpanel from 'mixpanel-browser';
+import moengage from '@moengage/web-sdk';
 
 function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenMassege, setOpenAvatar, selectedMessage, setSelectedMassege, copyToMessage, message, uploadedPhotos, imageModal, setImageModal, selectedImage, setSelectedImage, setInfoOffer }) {
     const [dimensions, setDimensions] = useState({
@@ -38,6 +39,15 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
     const shareRefferalLink = () => {
 
         mixpanel.track("referral_share", {
+            distinct_id: user?.id,
+            is_referred: user?.referral_id ? 'Yes' : 'No',
+            vegas_tickets: user?.raffle_tickets,
+            points: user?.points,
+            user_id: user?.id,
+            USD_earned: user?.allTimeEarned,
+            page_name: 'Refferals',
+        })
+        moengage.track_event('referral_share', {
             distinct_id: user?.id,
             is_referred: user?.referral_id ? 'Yes' : 'No',
             vegas_tickets: user?.raffle_tickets,
@@ -117,6 +127,15 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
             USD_earned: user?.allTimeEarned,
             page_name: 'Refferals',
         })
+        moengage.track_event('referral_link', {
+            distinct_id: user?.id,
+            is_referred: user?.referral_id ? 'Yes' : 'No',
+            vegas_tickets: user?.raffle_tickets,
+            points: user?.points,
+            user_id: user?.id,
+            USD_earned: user?.allTimeEarned,
+            page_name: 'Refferals',
+        })
         window.navigator.clipboard.writeText(window.location.host + '/' + user?.referral_code)
     }
 
@@ -164,10 +183,28 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                         USD_earned: user?.allTimeEarned,
                                         page_name: 'Refferals',
                                     })
+                                    moengage.track_event('image_sideArrows', {
+                                        distinct_id: user?.id,
+                                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                                        vegas_tickets: user?.raffle_tickets,
+                                        points: user?.points,
+                                        user_id: user?.id,
+                                        USD_earned: user?.allTimeEarned,
+                                        page_name: 'Refferals',
+                                    })
                                 }} />
                                 <img className='w-[44px]  cursor-pointer buttonNextGif' src={right} alt="Right" onClick={e => {
                                     swiperRef?.slideNext()
                                     mixpanel.track("image_sideArrows", {
+                                        distinct_id: user?.id,
+                                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                                        vegas_tickets: user?.raffle_tickets,
+                                        points: user?.points,
+                                        user_id: user?.id,
+                                        USD_earned: user?.allTimeEarned,
+                                        page_name: 'Refferals',
+                                    })
+                                    moengage.track_event('image_sideArrows', {
                                         distinct_id: user?.id,
                                         is_referred: user?.referral_id ? 'Yes' : 'No',
                                         vegas_tickets: user?.raffle_tickets,
@@ -206,6 +243,15 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                                 }} className={`${selectedGif === index && `${design === '0' ? 'border-[2px] !border-[#FFED63]' : 'border-[2px] !border-[#FE804D]'} opacity-[1] relative`} border-[2px] border-white  rounded-[12px] w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] memeWidth opacity-[0.5] cursor-pointer object-cover`} src={item} alt="gif1" />
                                                 <svg onClick={e => {
                                                     mixpanel.track("image_download", {
+                                                        distinct_id: user?.id,
+                                                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                                                        vegas_tickets: user?.raffle_tickets,
+                                                        points: user?.points,
+                                                        user_id: user?.id,
+                                                        USD_earned: user?.allTimeEarned,
+                                                        page_name: 'Refferals',
+                                                    })
+                                                    moengage.track_event('image_download', {
                                                         distinct_id: user?.id,
                                                         is_referred: user?.referral_id ? 'Yes' : 'No',
                                                         vegas_tickets: user?.raffle_tickets,
@@ -275,10 +321,28 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                         USD_earned: user?.allTimeEarned,
                                         page_name: 'Refferals',
                                     })
+                                    moengage.track_event('message_sideArrows', {
+                                        distinct_id: user?.id,
+                                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                                        vegas_tickets: user?.raffle_tickets,
+                                        points: user?.points,
+                                        user_id: user?.id,
+                                        USD_earned: user?.allTimeEarned,
+                                        page_name: 'Refferals',
+                                    })
                                 }} />
                                 <img className='w-[44px]  cursor-pointer buttonNextMessage' src={right} alt="Right" onClick={e => {
                                     swiperRef?.slideNext()
                                     mixpanel.track("message_sideArrows", {
+                                        distinct_id: user?.id,
+                                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                                        vegas_tickets: user?.raffle_tickets,
+                                        points: user?.points,
+                                        user_id: user?.id,
+                                        USD_earned: user?.allTimeEarned,
+                                        page_name: 'Refferals',
+                                    })
+                                    moengage.track_event('message_sideArrows', {
                                         distinct_id: user?.id,
                                         is_referred: user?.referral_id ? 'Yes' : 'No',
                                         vegas_tickets: user?.raffle_tickets,
@@ -346,6 +410,15 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                                     USD_earned: user?.allTimeEarned,
                                                     page_name: 'Refferals',
                                                 });
+                                                moengage.track_event('full_text', {
+                                                    distinct_id: user?.id,
+                                                    is_referred: user?.referral_id ? 'Yes' : 'No',
+                                                    vegas_tickets: user?.raffle_tickets,
+                                                    points: user?.points,
+                                                    user_id: user?.id,
+                                                    USD_earned: user?.allTimeEarned,
+                                                    page_name: 'Refferals',
+                                                });
                                                 setOpenMassege(true, item.desc);
                                             }} className='cursor-pointer' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M21 21L16.657 16.657M16.657 16.657C17.3998 15.9141 17.9891 15.0321 18.3912 14.0615C18.7932 13.0909 19.0002 12.0506 19.0002 11C19.0002 9.94936 18.7932 8.90905 18.3912 7.93842C17.9891 6.96779 17.3998 6.08585 16.657 5.34296C15.9141 4.60007 15.0321 4.01078 14.0615 3.60874C13.0909 3.20669 12.0506 2.99976 11 2.99976C9.94936 2.99976 8.90905 3.20669 7.93842 3.60874C6.96779 4.01078 6.08585 4.60007 5.34296 5.34296C3.84263 6.84329 2.99976 8.87818 2.99976 11C2.99976 13.1217 3.84263 15.1566 5.34296 16.657C6.84329 18.1573 8.87818 19.0002 11 19.0002C13.1217 19.0002 15.1566 18.1573 16.657 16.657Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -365,6 +438,15 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                 <p className={`text-[12px] sm:text-[14px] font-medium saira flex justify-center items-center underline cursor-pointer ${design === '0' ? 'text-white' : 'gradient-link '}`} onClick={e => {
                                     setInfoOffer(true)
                                     mixpanel.track("learnMore", {
+                                        distinct_id: user?.id,
+                                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                                        vegas_tickets: user?.raffle_tickets,
+                                        points: user?.points,
+                                        user_id: user?.id,
+                                        USD_earned: user?.allTimeEarned,
+                                        page_name: 'Refferals',
+                                    });
+                                    moengage.track_event('learnMore', {
                                         distinct_id: user?.id,
                                         is_referred: user?.referral_id ? 'Yes' : 'No',
                                         vegas_tickets: user?.raffle_tickets,

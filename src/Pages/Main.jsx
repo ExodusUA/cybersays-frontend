@@ -44,6 +44,7 @@ import SocialLink from '../Components/SocialLink'
 import DoubleComplete from '../Components/DoubleComplete'
 import { useLanguage } from '../Helpers/Languages/LanguageContext'
 import PromoModal from '../Components/Withdraw/ImLivePromoModal'
+import moengage from '@moengage/web-sdk';
 
 
 var mixpanel = require('mixpanel-browser');
@@ -193,7 +194,16 @@ function Main({ languageData }) {
             USD_earned: userData?.allTimeEarned,
             page_name: activePageIndex === 0 ? 'Home' : activePageIndex === 1 ? 'Double' : activePageIndex === 2 ? 'Vegas Weekend' : activePageIndex === 3 ? 'Competition' : activePageIndex === 4 ? 'My referrals' : 'Not set',
         });
-
+        moengage.track_event("page_view", {
+            distinct_id: uid || 'not_set',
+            ...utmData,
+            is_referred: userData?.referral_id ? 'Yes' : 'No',
+            vegas_tickets: userData?.raffle_tickets,
+            points: userData?.points,
+            user_id: userData?.id,
+            USD_earned: userData?.allTimeEarned,
+            page_name: activePageIndex === 0 ? 'Home' : activePageIndex === 1 ? 'Double' : activePageIndex === 2 ? 'Vegas Weekend' : activePageIndex === 3 ? 'Competition' : activePageIndex === 4 ? 'My referrals' : 'Not set',
+        });
     }, [])
 
     const [activePageIndex, setActivePageIndex] = React.useState(0)

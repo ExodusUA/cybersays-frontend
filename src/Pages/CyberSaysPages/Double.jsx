@@ -6,6 +6,7 @@ import newlogoCyber from '../../images/NewDesign/newLogo_main.png';
 import { Link } from 'react-router-dom';
 import TaskCardDesktop from '../../Components/DoubleMoneyPage/TaskCardDesktop';
 import mixpanel from 'mixpanel-browser';
+import moengage from '@moengage/web-sdk';
 
 function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
 
@@ -140,6 +141,16 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
                     <p onClick={e => {
                         setOpen(true)
                         mixpanel.track("way_to_get_paid", {
+                            distinct_id: 'not_set',
+                            is_referred: user?.referral_id ? 'Yes' : 'No',
+                            vegas_tickets: user?.raffle_tickets,
+                            points: user?.points,
+                            user_id: user?.id,
+                            USD_earned: user?.allTimeEarned,
+                            user_email: user?.email,
+                            page: 'Double your Money'
+                        });
+                        moengage.track_event("way_to_get_paid", {
                             distinct_id: 'not_set',
                             is_referred: user?.referral_id ? 'Yes' : 'No',
                             vegas_tickets: user?.raffle_tickets,

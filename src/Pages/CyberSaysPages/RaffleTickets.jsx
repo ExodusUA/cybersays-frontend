@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { useDesign } from '../../Helpers/Design/DesignContext';
 import doubleIcon from '../../images/NewDesign/doubleIcon.svg';
 import mixpanel from 'mixpanel-browser';
+import moengage from '@moengage/web-sdk';
 
 function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModal, scrollToPage, setWinTicketModal }) {
 
@@ -105,6 +106,16 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                                             {languageData?.raffleRulesDesc} - <span onClick={e => {
                                                 setWinModal(true)
                                                 mixpanel.track("raffle_rules", {
+                                                    distinct_id: 'not_set',
+                                                    is_referred: user?.referral_id ? 'Yes' : 'No',
+                                                    vegas_tickets: user?.raffle_tickets,
+                                                    points: user?.points,
+                                                    user_id: user?.id,
+                                                    USD_earned: user?.allTimeEarned,
+                                                    user_email: user?.email,
+                                                    page_name: 'Vegas Weekend'
+                                                });
+                                                moengage.track_event('raffle_rules', {
                                                     distinct_id: 'not_set',
                                                     is_referred: user?.referral_id ? 'Yes' : 'No',
                                                     vegas_tickets: user?.raffle_tickets,
@@ -235,6 +246,16 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                     <p onClick={e => {
                         setWinTicketModal(true)
                         mixpanel.track("how_vegas_weekend", {
+                            distinct_id: 'not_set',
+                            is_referred: user?.referral_id ? 'Yes' : 'No',
+                            vegas_tickets: user?.raffle_tickets,
+                            points: user?.points,
+                            user_id: user?.id,
+                            USD_earned: user?.allTimeEarned,
+                            user_email: user?.email,
+                            page_name: 'Vegas Weekend'
+                        });
+                        moengage.track_event('how_vegas_weekend', {
                             distinct_id: 'not_set',
                             is_referred: user?.referral_id ? 'Yes' : 'No',
                             vegas_tickets: user?.raffle_tickets,

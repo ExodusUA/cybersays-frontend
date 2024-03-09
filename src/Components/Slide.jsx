@@ -2,7 +2,7 @@ import React from 'react'
 import netflix from '../images/product.jpeg'
 import coin from '../images/coin.png'
 var mixpanel = require('mixpanel-browser');
-
+import moengage from '@moengage/web-sdk';
 function Slide({ languageData, targetURL, uid }) {
 
     const [isLinkCopied, setIsLinkCopied] = React.useState(false);
@@ -56,6 +56,10 @@ function Slide({ languageData, targetURL, uid }) {
 
                         e.preventDefault();
                         mixpanel.track("cyber_says_click", {
+                            distinct_id: uid || 'not_set',
+                            ...utmData
+                        });
+                        moengage.track_event("cyber_says_click", {
                             distinct_id: uid || 'not_set',
                             ...utmData
                         });

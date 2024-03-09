@@ -3,6 +3,7 @@ import { useDesign } from '../Helpers/Design/DesignContext';
 import { Link } from 'react-router-dom';
 import mixpanel from 'mixpanel-browser';
 import { useLanguage } from '../Helpers/Languages/LanguageContext';
+import moengage from '@moengage/web-sdk';
 const moment = require('moment-timezone');
 
 
@@ -27,7 +28,7 @@ function TimeCounterDay({ languageData, hidden, title, left, leftTitle, block, s
         }, 1000);
 
         return () => clearInterval(timer);
-    }, []); 
+    }, []);
 
     const { hoursRemaining, minutesRemaining, secondsRemaining } = timeLeft;
 
@@ -55,6 +56,17 @@ function TimeCounterDay({ languageData, hidden, title, left, leftTitle, block, s
             <div className={`flex justify-center ${block} mt-[-6px]`}>
                 <Link onClick={e => {
                     mixpanel.track('daily_competition_terms', {
+                        distinct_id: user?.id,
+                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                        language: language,
+                        vegas_tickets: user?.raffle_tickets,
+                        points: user?.points,
+                        user_id: user?.id,
+                        USD_earned: user?.allTimeEarned,
+                        language: language,
+                        number_referrals: user?.referral_id ? user?.referral_id.length : 0,
+                    })
+                    moengage.track_event('daily_competition_terms', {
                         distinct_id: user?.id,
                         is_referred: user?.referral_id ? 'Yes' : 'No',
                         language: language,

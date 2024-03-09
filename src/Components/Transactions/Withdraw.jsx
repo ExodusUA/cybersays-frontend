@@ -15,6 +15,7 @@ import ServiPagFlow from '../Withdraw/Flow/ServiPagFlow'
 import SPEIFlow from '../Withdraw/Flow/SPEIFlow'
 import mixpanel from 'mixpanel-browser'
 import { useLanguage } from '../../Helpers/Languages/LanguageContext'
+import moengage from '@moengage/web-sdk';
 
 
 function Withdraw({ user, setOpen, languageData, userCountry }) {
@@ -38,6 +39,17 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
 
     useEffect(() => {
         mixpanel.track('Withdraw', {
+            distinct_id: user?.id,
+            is_referred: user?.referral_id ? 'Yes' : 'No',
+            language: language,
+            vegas_tickets: user?.raffle_tickets,
+            points: user?.points,
+            user_id: user?.id,
+            USD_earned: user?.allTimeEarned,
+            language: language,
+            number_referrals: user?.referral_id ? user?.referral_id.length : 0,
+        })
+        moengage.track_event('Withdraw', {
             distinct_id: user?.id,
             is_referred: user?.referral_id ? 'Yes' : 'No',
             language: language,
