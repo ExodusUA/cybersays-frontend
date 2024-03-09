@@ -165,7 +165,7 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                         </div>
                     }
                 </div>
-                <div onClick={e => selectPayment('imlive')} className=' mt-2 mb-[5px] relative max-w-[345px] lg:max-w-[600px] w-full m-auto cursor-pointer'>
+                <div onClick={e => selectPayment('imlive')} className=' mt-2 mb-[5px] relative max-w-[390px] lg:max-w-[600px] w-full m-auto cursor-pointer'>
 
                     {
                         /*
@@ -179,7 +179,7 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                         setImLiveSelected(true)
 
                     }} className=' w-full m-auto relative z-10' src={banner} alt="banner" />
-                    <p className=' absolute z-50 saira font-medium text-[12px] lg:text-[20px] text-center text-[#1E1E1E] w-[150px] lg:w-[250px] top-[25px] right-[10px] lg:right-[10px] lg:top-[40px]'> <span className='saira font-extrabold text-[#A533FF]'>Get +40% </span>of your money with ImLive.</p>
+                    <p className=' absolute z-50 saira font-medium text-[12px] lg:text-[20px] text-center text-[#1E1E1E] w-[150px] lg:w-[250px] top-[25px] right-[10px] lg:right-[10px] lg:top-[40px]'> <span className='saira font-extrabold text-[#A533FF]'>{languageData?.withdrawBanner} </span>{languageData?.withdrawBannerSpan}</p>
                     {/*
                         <div onClick={e => selectPayment('imlive')} className={`w-[95%] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] bg-new-bg-promo bg-no-repeat bg-cover m-auto flex justify-center items-center relative ${selectedPayment === 'imlive' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
                             <div>
