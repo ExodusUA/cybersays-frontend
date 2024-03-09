@@ -1,13 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDesign } from '../Helpers/Design/DesignContext'
 import close from '../images/CyberSaysPage/closeMenu.png'
 import what1 from '../images/NewDesign/toolnfo/what1.png'
 import what2 from '../images/NewDesign/toolnfo/what2.png'
 import what3 from '../images/NewDesign/toolnfo/what3.png'
 import what4 from '../images/NewDesign/toolnfo/what4.png'
+import mixpanel from 'mixpanel-browser'
 
-function ToolTipInfo({ languageData, setToolInfo }) {
+function ToolTipInfo({ languageData, setToolInfo, user }) {
     const { design } = useDesign()
+
+    useEffect(() => {
+        mixpanel.track('info_icon', {
+            distinct_id: user?.id,
+            is_referred: user?.referral_id ? 'Yes' : 'No',
+            
+            vegas_tickets: user?.raffle_tickets,
+            points: user?.points,
+            user_id: user?.id,
+            USD_earned: user?.allTimeEarned,
+    
+            number_referrals: user?.referral_id ? user?.referral_id.length : 0,
+        })
+    }, [])
 
     return (
         <div className=' w-[97.5%] max-w-[600px] fixed left-[5px] sm:left-[37px] bottom-[30px] sm:bottom-[70px] z-[999999999999] '>

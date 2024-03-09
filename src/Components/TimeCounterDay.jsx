@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useDesign } from '../Helpers/Design/DesignContext';
 import { Link } from 'react-router-dom';
+import mixpanel from 'mixpanel-browser';
+import { useLanguage } from '../Helpers/Languages/LanguageContext';
 const moment = require('moment-timezone');
 
-function TimeCounterDay({ languageData, hidden, title, left, leftTitle, block, setSocialLink }) {
+
+function TimeCounterDay({ languageData, hidden, title, left, leftTitle, block, setSocialLink, user }) {
     const { design } = useDesign();
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft);
+    const { language } = useLanguage();
 
     function calculateTimeLeft() {
         const endOfDay = moment().endOf('day');
@@ -49,7 +53,19 @@ function TimeCounterDay({ languageData, hidden, title, left, leftTitle, block, s
                 </div>
             </div>
             <div className={`flex justify-center ${block} mt-[-6px]`}>
-                <Link to='/contest-terms' target='_blank' > <p className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline cursor-pointer ${design === '0' ? 'text-[#FFED63]' : 'gradient-link '}`}>{languageData?.timeCounterLink}</p></Link>
+                <Link onClick={e => {
+                    mixpanel.track('daily_competition_terms', {
+                        distinct_id: user?.id,
+                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                        language: language,
+                        vegas_tickets: user?.raffle_tickets,
+                        points: user?.points,
+                        user_id: user?.id,
+                        USD_earned: user?.allTimeEarned,
+                        language: language,
+                        number_referrals: user?.referral_id ? user?.referral_id.length : 0,
+                    })
+                }} to='/contest-terms' target='_blank' > <p className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline cursor-pointer ${design === '0' ? 'text-[#FFED63]' : 'gradient-link '}`}>{languageData?.timeCounterLink}</p></Link>
             </div>
         </div>
     );

@@ -9,10 +9,13 @@ import link3 from '../images/CyberSaysPage/iconDouble.png'
 import link4 from '../images/CyberSaysPage/iconRefferals.png'
 import link5 from '../images/CyberSaysPage/iconTicket.png'
 import { useDesign } from '../Helpers/Design/DesignContext'
+import mixpanel from 'mixpanel-browser'
+import { useLanguage } from '../Helpers/Languages/LanguageContext';
 
-function CircleNavigation({ setActivePageIndex, activePageIndex, languageData }) {
+function CircleNavigation({ setActivePageIndex, activePageIndex, languageData, user }) {
 
     const { design } = useDesign()
+    const {language} = useLanguage()
 
     let [swiper, setSwiper] = useState(null);
 
@@ -51,6 +54,19 @@ function CircleNavigation({ setActivePageIndex, activePageIndex, languageData })
         setActivePageIndex(activePageIndex + 1)
     }
 
+    const handleEvents = () => {
+        mixpanel.track('arrow_Page_click', {
+            distinct_id: user?.id,
+            is_referred: user?.referral_id ? 'Yes' : 'No',
+            language: language,
+            vegas_tickets: user?.raffle_tickets,
+            points: user?.points,
+            user_id: user?.id,
+            USD_earned: user?.allTimeEarned,
+            number_referrals: user?.referral_id ? user?.referral_id.length : 0,
+        })
+    }  
+
     return (
         <div className='flex justify-center'>
             <div className=' fixed bottom-0 z-50 w-[375px] md:w-[500px]'>
@@ -59,10 +75,12 @@ function CircleNavigation({ setActivePageIndex, activePageIndex, languageData })
                         <img className='w-[16px] h-[16px] md:w-[32px] md:h-[32px] cursor-pointer buttonPrev' src={left} alt="Left" onClick={e => {
                             swiper.slidePrev()
                             swipeLeft()
+                            handleEvents()
                         }} />
                         <img className='w-[16px] h-[16px] md:w-[32px] md:h-[32px] cursor-pointer buttonNext' src={right} alt="Right" onClick={e => {
                             swiper.slideNext()
                             swipeRight()
+                            handleEvents()
                         }} />
                     </div>
                 </div>

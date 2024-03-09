@@ -11,7 +11,8 @@ import { useDesign } from '../../Helpers/Design/DesignContext'
 import doubleIcon from '../../images/NewDesign/doubleIcon.svg'
 import arrowTextLeft from '../../images/NewDesign/arrowTextLeft.png'
 import arrowTextRight from '../../images/NewDesign/arrowTextRight.png'
-import message from '../../images/NewDesign/Homepage/message.png'
+import { useLanguage } from '../../Helpers/Languages/LanguageContext'
+import mixpanel from 'mixpanel-browser'
 
 
 function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
@@ -27,6 +28,8 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
             desc: languageData?.homepageTitle3,
         }
     ]
+
+    const { language } = useLanguage()
 
     const { design } = useDesign()
 
@@ -65,7 +68,19 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                 <div>
                     <div className='lg:flex justify-between items-end md:items-center mt-0 homepageSE iphone:mt-[30px] contentHomepage md:mt-[70px]'>
                         <div className='w-full lg:hidden flex mb-2 items-center'>
-                            <div className='buttonPrevText w-[60px]'>
+                            <div className='buttonPrevText w-[60px]' onClick={e => {
+                                mixpanel.track('arrow_text_click', {
+                                    distinct_id: user?.id,
+                                    is_referred: user?.referral_id ? 'Yes' : 'No',
+                                    language: language,
+                                    vegas_tickets: user?.raffle_tickets,
+                                    points: user?.points,
+                                    user_id: user?.id,
+                                    USD_earned: user?.allTimeEarned,
+                                    
+                                    number_referrals: user?.referral_id ? user?.referral_id.length : 0,
+                                })
+                            }}>
                                 <svg className=' w-[20px] cursor-pointer  mr-[10px]' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                                     <path d="M22.6665 29.3333L9.33326 16L22.6665 2.66676" stroke="url(#paint0_linear_518_191)" stroke-width="2.66665" stroke-linecap="round" stroke-linejoin="round" />
                                     <defs>
@@ -99,7 +114,19 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                                 }
 
                             </Swiper>
-                            <div className='buttonNextText w-[60px]'>
+                            <div className='buttonNextText w-[60px]' onClick={e => {
+                                mixpanel.track('arrow_text_click', {
+                                    distinct_id: user?.id,
+                                    is_referred: user?.referral_id ? 'Yes' : 'No',
+                                    language: language,
+                                    vegas_tickets: user?.raffle_tickets,
+                                    points: user?.points,
+                                    user_id: user?.id,
+                                    USD_earned: user?.allTimeEarned,
+                                
+                                    number_referrals: user?.referral_id ? user?.referral_id.length : 0,
+                                })
+                            }}>
                                 <svg className=' w-[20px] cursor-pointer ml-[20px]' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                                     <path d="M9.3335 2.66675L22.6667 16L9.33349 29.3332" stroke="url(#paint0_linear_518_196)" stroke-width="2.66665" stroke-linecap="round" stroke-linejoin="round" />
                                     <defs>

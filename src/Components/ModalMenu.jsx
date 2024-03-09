@@ -83,6 +83,15 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
 
             <label class="relative  items-center cursor-pointer mx-2">
               <input onClick={e => {
+                mixpanel.track("choose_design", {
+                  distinct_id: user?.id,
+                  is_referred: user?.referral_id ? 'Yes' : 'No',
+                  vegas_tickets: user?.raffle_tickets,
+                  points: user?.points,
+                  user_id: user?.id,
+                  USD_earned: user?.allTimeEarned,
+                  page_name: 'Menu'
+                })
                 setCheckBox(design === '1' ? '0' : '1')
                 changeDesign(design === '1' ? '0' : '1')
               }} type="checkbox" checked={checkBox === '1' ? false : true} class="sr-only peer" />
@@ -301,12 +310,34 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                     }}  >
                       <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuBottom1}</p>
                     </div>
-                    <div className='flex items-center' onClick={e => setOurModal(true)} >
+                    <div className='flex items-center' onClick={e => {
+                      setOurModal(true)
+                      mixpanel.track("our_mission", {
+                        distinct_id: user?.id,
+                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                        vegas_tickets: user?.raffle_tickets,
+                        points: user?.points,
+                        user_id: user?.id,
+                        USD_earned: user?.allTimeEarned,
+                        page_name: 'Menu'
+                      })
+                    }} >
                       <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuLink12}</p>
                     </div>
-                  
 
-                    <div className='flex items-center' onClick={e => setWhyModal(true)} >
+
+                    <div className='flex items-center' onClick={e => {
+                      setWhyModal(true)
+                      mixpanel.track("why_join_us", {
+                        distinct_id: user?.id,
+                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                        vegas_tickets: user?.raffle_tickets,
+                        points: user?.points,
+                        user_id: user?.id,
+                        USD_earned: user?.allTimeEarned,
+                        page_name: 'Menu'
+                      })
+                    }} >
                       <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuLink13}</p>
                     </div>
                     <div className='flex items-center' onClick={e => {
@@ -323,14 +354,36 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                     }}  >
                       <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuBottom4}</p>
                     </div>
-                    <div className='flex items-center' onClick={e => setSocialLink(true)}  >
+                    <div className='flex items-center' onClick={e => {
+                      setSocialLink(true)
+                      mixpanel.track("legal", {
+                        distinct_id: user?.id,
+                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                        vegas_tickets: user?.raffle_tickets,
+                        points: user?.points,
+                        user_id: user?.id,
+                        USD_earned: user?.allTimeEarned,
+                        page_name: 'Menu'
+                      })
+                    }}  >
                       <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuBottom2}</p>
                     </div>
                   </div>
                 </>
               }
             </div>
-            <div className='flex items-center' onClick={e => setFAQModal(true)} >
+            <div className='flex items-center' onClick={e => {
+              setFAQModal(true)
+              mixpanel.track("FAQ", {
+                distinct_id: user?.id,
+                is_referred: user?.referral_id ? 'Yes' : 'No',
+                vegas_tickets: user?.raffle_tickets,
+                points: user?.points,
+                user_id: user?.id,
+                USD_earned: user?.allTimeEarned,
+                page_name: 'Menu'
+              })
+            }} >
               <img className='w-[32px] h-[32px] mr-2' src={link11} alt="link11" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink11}</p>
             </div>
@@ -349,7 +402,18 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <img className='w-[32px] h-[32px] mr-2' src={link12} alt="link10" />
               <p className='saira text-[20px] font-semibold cursor-pointer '>{languageData?.modalMenuBottom3}</p>
             </div>
-            <div className='flex items-center' onClick={e => setTourModal(true)}  >
+            <div className='flex items-center' onClick={e => {
+              setTourModal(true)
+              mixpanel.track("Vegas Weekend Tour", {
+                distinct_id: user?.id,
+                is_referred: user?.referral_id ? 'Yes' : 'No',
+                vegas_tickets: user?.raffle_tickets,
+                points: user?.points,
+                user_id: user?.id,
+                USD_earned: user?.allTimeEarned,
+                page_name: 'Menu'
+              })
+            }}  >
               <img className='w-[32px] h-[32px] mr-2' src={link13} alt="link10" />
               <p className='saira text-[20px] font-semibold cursor-pointer '>{languageData?.modalMenuBottom5}</p>
             </div>

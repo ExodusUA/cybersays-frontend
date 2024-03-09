@@ -344,7 +344,7 @@ function Main({ languageData }) {
                     </SwiperSlide>
 
                 </Swiper>
-                <CircleNavigation languageData={languageData} activePageIndex={activePageIndex} setActivePageIndex={setActivePageIndex} />
+                <CircleNavigation languageData={languageData} activePageIndex={activePageIndex} setActivePageIndex={setActivePageIndex} user={userData} />
 
             </div>
         )
@@ -442,7 +442,7 @@ function Main({ languageData }) {
                 <img onClick={e => setToolInfo(!toolInfo)} className='w-[24px] sm:w-12 cursor-pointer' src={infoBtn} alt="Chat" />
             </div>
             {
-                toolInfo && <ToolTipInfo setToolInfo={setToolInfo} languageData={languageData} />
+                toolInfo && <ToolTipInfo setToolInfo={setToolInfo} languageData={languageData} user={userData} />
             }
             {
                 doubleComplete && <DoubleComplete setOpen={setDoubleComplete} languageData={languageData} user={userData} />
