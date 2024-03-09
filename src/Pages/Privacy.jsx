@@ -235,7 +235,210 @@ let en_text = `<div>
     <p style="margin-top:0pt; margin-bottom:0pt; line-height:normal;">&nbsp;</p>
 </div>
 </div>`
-let es_text = ``
+let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Cybersays.club - Pol&iacute;tica de privacidad</strong></p>
+<p>&Uacute;ltima revisi&oacute;n: Febrero 2024</p>
+<p><strong>INTRODUCCI&Oacute;N</strong></p>
+<p>Pythia Grant Ltd. incluyendo sus filiales (colectivamente, la <strong>&quot;Empresa&quot;,&nbsp;</strong>&quot;<strong>nosotros</strong>&quot;, &quot;<strong>nuestro</strong>&quot; o &quot;<strong>nos&quot;</strong>) est&aacute;n profundamente comprometidos a salvaguardar las expectativas de privacidad de sus usuarios (&quot;<strong>Usuario(s)</strong>&quot;, &quot;<strong>usted</strong>&quot; o &quot;<strong>su</strong>&quot;).&nbsp;</p>
+<p>En consecuencia, hemos puesto en marcha esta pol&iacute;tica de privacidad (&quot;<strong>Pol&iacute;tica</strong>&quot;), que describe nuestras pr&aacute;cticas de protecci&oacute;n de datos, incluyendo c&oacute;mo recopilamos, utilizamos, revelamos y protegemos su informaci&oacute;n personal, as&iacute; como sus derechos con respecto a su informaci&oacute;n personal.</p>
+<p>Le rogamos que lea atentamente esta Pol&iacute;tica y la utilice para tomar decisiones con conocimiento de causa, ya que su acceso y uso de nuestro servicio, ya sea visitando nuestro sitio web, <a href="http://www.Cybersays.club">www.Cybersays.club</a> (&quot;<strong>Sitio web</strong>&quot;) o creando una cuenta a trav&eacute;s de nuestro servicio (colectivamente &quot;<strong>Servicio</strong>&quot;), significa que ha le&iacute;do y comprendido todos los t&eacute;rminos aqu&iacute; detallados y por la presente acepta esta Pol&iacute;tica y la recopilaci&oacute;n, uso, conservaci&oacute;n y divulgaci&oacute;n de su informaci&oacute;n personal de acuerdo con estos t&eacute;rminos.&nbsp;</p>
+<p><strong>Si no est&aacute; de acuerdo con los t&eacute;rminos de esta Pol&iacute;tica, le rogamos que no utilice nuestros Servicios</strong>. Usted no est&aacute; legalmente obligado a proporcionarnos ninguna informaci&oacute;n personal, pero sin ella, no podremos ofrecerle toda la gama o la mejor experiencia de uso de nuestros Servicios.</p>
+<p>La informaci&oacute;n personal se define como cualquier informaci&oacute;n que identifique a un individuo o que pudiera razonablemente identificar a un individuo con un esfuerzo razonable, incluyendo sin limitaci&oacute;n (1) el nombre de usuario, (2) los datos de identificaci&oacute;n de su navegador y (3) los datos de identificaci&oacute;n de sus redes sociales (es decir, sus datos de usuario de Facebook) en lo sucesivo denominados la &quot;<strong>Informaci&oacute;n Personal</strong>&quot;. Las actividades de tratamiento incluyen, entre otras, la recopilaci&oacute;n, el uso, la conservaci&oacute;n y la divulgaci&oacute;n de dichos datos.</p>
+<p>Sus Datos Personales ser&aacute;n procesados por nosotros (incluyendo cualquiera de nuestros agentes y/o empleados), y (en su caso) cualquier otra Empresa de nuestro grupo Empresarial y/o nuestros socios y subcontratistas, de acuerdo con esta Pol&iacute;tica.&nbsp;</p>
+<p>Si tiene alguna pregunta sobre esta Pol&iacute;tica o sobre la forma en que utilizamos sus Datos Personales, consulte nuestro &iacute;ndice y la secci&oacute;n 12. &quot;&iquest;C&Oacute;MO CONTACTAR CON NOSOTROS? &quot;&iquest;C&Oacute;MO CONTACTAR CON NOSOTROS?&quot; a continuaci&oacute;n. La Empresa es el controlador de la Informaci&oacute;n Personal recopilada, y es responsable del procesamiento de su Informaci&oacute;n Personal.</p>
+<p>En esta Pol&iacute;tica, usted puede conocer m&aacute;s sobre:</p>
+<ol>
+    <li><strong>&iquest;QU&Eacute; INFORMACI&Oacute;N RECOPILAMOS?</strong></li>
+    <li><strong>MENORES DE EDAD</strong></li>
+    <li><strong>FINES Y CONDICIONES DEL TRATAMIENTO DE LA INFORMACI&Oacute;N PERSONAL</strong></li>
+    <li><strong>MARKETING</strong></li>
+    <li><strong>&iquest;CON QUI&Eacute;N COMPARTIMOS LA INFORMACI&Oacute;N?</strong></li>
+    <li><strong>TRANSFERENCIA INTERNACIONAL DE INFORMACI&Oacute;N</strong></li>
+    <li><strong>TECNOLOG&Iacute;AS DE SEGUIMIENTO DE TERCEROS</strong></li>
+    <li><strong>CONSERVACI&Oacute;N DE LA INFORMACI&Oacute;N PERSONAL</strong></li>
+    <li><strong>SUS DERECHOS</strong></li>
+    <li><strong>CAMBIOS EN LA POL&Iacute;TICA DE PRIVACIDAD</strong></li>
+    <li><strong>VERSI&Oacute;N LING&Uuml;&Iacute;STICA</strong></li>
+    <li><strong>&iquest;C&Oacute;MO CONTACTARNOS?</strong></li>
+</ol>
+<p><br></p>
+<ol>
+    <li><strong>&iquest;QU&Eacute; INFORMACI&Oacute;N RECOPILAMOS?</strong></li>
+</ol>
+<p>Recogemos Informaci&oacute;n Personal de nuestros Usuarios y visitantes de nuestro Servicio, que consiste en lo siguiente:</p>
+<ul>
+    <li><strong>Registro e inicio de sesi&oacute;n:&nbsp;</strong>Cuando abra una cuenta y se registre para utilizar nuestro Servicio, se le pedir&aacute; que nos facilite ciertos datos sobre usted, como: su direcci&oacute;n de correo electr&oacute;nico, sus datos de usuario de Facebook y su contrase&ntilde;a. Tenga en cuenta que cuando desee actualizar el perfil de su cuenta, tambi&eacute;n recopilaremos sus datos personales.</li>
+    <li><strong>Informaci&oacute;n voluntaria</strong>: Tambi&eacute;n recopilamos informaci&oacute;n que usted nos proporciona voluntariamente para personalizar su cuenta o para una funci&oacute;n espec&iacute;fica. Adem&aacute;s, recopilamos su comunicaci&oacute;n cuando responde a comunicaciones nuestras, nos proporciona comentarios, se comunica con nosotros por correo electr&oacute;nico o comparte informaci&oacute;n adicional sobre usted a trav&eacute;s de su uso del Servicio.&nbsp;</li>
+    <li><strong>Informaci&oacute;n sobre el dispositivo</strong>: Recopilamos tipos espec&iacute;ficos de detalles de conexi&oacute;n e informaci&oacute;n con respecto a su dispositivo, software o hardware que podr&iacute;an identificarle, como: identificadores &uacute;nicos del dispositivo (por ejemplo, UDID, IMEI, direcci&oacute;n MAC), huella digital del navegador, direcci&oacute;n IP, direcci&oacute;n de blockchain, tipo de monedero y datos de geolocalizaci&oacute;n.</li>
+    <li><strong>Informaci&oacute;n que recopilamos de terceros</strong>: A veces recopilamos Informaci&oacute;n Personal de terceros proveedores de servicios, como la informaci&oacute;n que se recoge para verificar su identidad y evitar actividades fraudulentas o ilegales.</li>
+    <li><strong>Historial de inicio de sesi&oacute;n e informaci&oacute;n t&eacute;cnica</strong>: Para mejorar la funcionalidad del Servicio y ofrecerle una mejor experiencia de usuario<strong>,&nbsp;</strong>recopilamos la informaci&oacute;n t&eacute;cnica transmitida por su dispositivo, incluida determinada informaci&oacute;n de software y hardware (por ejemplo, el tipo de navegador y sistema operativo que utiliza su dispositivo, el idioma preferido, la hora de acceso y el nombre de dominio del sitio web desde el que ha accedido al Servicio, etc.).</li>
+    <li><strong>Informaci&oacute;n anal&iacute;tica</strong>: Recopilamos informaci&oacute;n sobre su uso del Servicio, como el uso de las aplicaciones, archivos de registro, actividad del usuario (por ejemplo, p&aacute;ginas visitadas, movimientos del usuario, tiempo empleado, navegaci&oacute;n en l&iacute;nea, clics, acciones, etc.), marcas de tiempo, alertas, etc. Esta informaci&oacute;n se recopila, entre otras cosas, para solucionar errores y fallos, as&iacute; como para fines de investigaci&oacute;n y an&aacute;lisis sobre el uso que usted hace del Servicio.</li>
+</ul>
+<ol>
+    <li><strong>MENORES DE EDAD</strong></li>
+</ol>
+<p>El Servicio no est&aacute; dise&ntilde;ado ni dirigido a personas menores de 18 a&ntilde;os o a personas menores de la edad de consentimiento legal con respecto al uso del Servicio de cualquier jurisdicci&oacute;n, la que sea superior (&quot;Mayor&iacute;a de edad <strong>legal</strong>&quot;).&nbsp;</p>
+<p>No recopilamos informaci&oacute;n personal de menores.&nbsp;</p>
+<p><strong>Si usted no es legalmente mayor de edad, se le proh&iacute;be acceder o utilizar el Servicio y se le proh&iacute;be proporcionarnos cualquier Informaci&oacute;n Personal.</strong></p>
+<p>Nos reservamos el derecho de acceder y verificar cualquier Informaci&oacute;n Personal recopilada de usted. En el evento de que tengamos sensibilizaci&oacute;n de que un usuario que no es Legalmente Mayor de Edad ha compartido cualquier informaci&oacute;n, descartaremos dicha informaci&oacute;n.&nbsp;</p>
+<ol>
+    <li><strong>FINES Y CONDICIONES DEL TRATAMIENTO DE LA INFORMACI&Oacute;N PERSONAL&nbsp;</strong></li>
+</ol>
+<p>En esta secci&oacute;n se describen las finalidades subyacentes y los fundamentos jur&iacute;dicos del tratamiento de sus Datos Personales:</p>
+<table cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td valign="top">
+                <p><strong>Prop&oacute;sito</strong></p>
+            </td>
+            <td valign="top">
+                <p><strong>Base jur&iacute;dica</strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <p><strong>Prestaci&oacute;n de nuestro Servicio; apoyo y relaciones con los clientes</strong>. Utilizamos sus Datos Personales, como su nombre de usuario y su direcci&oacute;n de correo electr&oacute;nico, con fines de atenci&oacute;n al cliente, as&iacute; como para presentarle nuestros Sitios Web. Esto incluye, por ejemplo, la gesti&oacute;n y actualizaci&oacute;n de su cuenta, la prestaci&oacute;n y funcionamiento del Servicio, mantenerle informado sobre nuestras &uacute;ltimas actualizaciones o responder a cualquiera de sus consultas, as&iacute; como a su solicitud para ejercer sus derechos de Usuario.</p>
+            </td>
+            <td valign="top">
+                <p>Las bases legales para procesar estos datos son el cumplimiento de nuestras obligaciones contractuales con usted, por ejemplo, como se describe en esta Pol&iacute;tica y/o Condiciones de Uso (Art. 6.1(b) GDPR); su consentimiento (por ejemplo, cuando usted acepta proporcionar Informaci&oacute;n Personal al aceptar nuestro Aviso de Cookies, Pol&iacute;tica y Condiciones de Uso) (Art. 6.1(a) GDPR); el cumplimiento de nuestras obligaciones legales (Art. 6.1(c) GDPR); y nuestros intereses leg&iacute;timos (Art. 6.1(f) GDPR). Nuestros intereses leg&iacute;timos en este caso son el cumplimiento de nuestras pol&iacute;ticas, la protecci&oacute;n contra el fraude y el uso indebido de nuestro Servicio.</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <p><strong>Mejora de nuestro Servicio</strong>. Recopilamos y analizamos informaci&oacute;n sobre usted y su uso de nuestro Servicio para mejorar la facilidad de uso y la eficacia de nuestro Servicio, incluida la depuraci&oacute;n para identificar y reparar errores o la realizaci&oacute;n de investigaciones internas para el desarrollo tecnol&oacute;gico y la demostraci&oacute;n.</p>
+            </td>
+            <td valign="top">
+                <p>La base legal para procesar estos datos son nuestros intereses leg&iacute;timos (Art. 6.1(f) GDPR), en este caso - proporcionar y mejorar nuestro Servicio.</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <p><strong>Marketing, publicidad y an&aacute;lisis</strong>. Utilizamos sus Datos Personales para ofrecerle publicidad personalizada, incluida la publicidad basada en el comportamiento cuando visita nuestro Servicio, para comercializar nuestro Servicio y para recopilar informaci&oacute;n de uso agregada con fines anal&iacute;ticos, estad&iacute;sticos y de investigaci&oacute;n, incluida la notificaci&oacute;n de ofertas promocionales.</p>
+            </td>
+            <td valign="top">
+                <p>Las bases legales para procesar estos datos son su consentimiento (cuando sea necesario) y nuestros intereses leg&iacute;timos (Art. 6.1(a), 6.1(f) GDPR).&nbsp;</p>
+                <p>Nuestros intereses leg&iacute;timos en este caso son proporcionarle servicios, contenidos y anuncios personalizados que se ajusten mejor a sus intereses, as&iacute; como promocionar nuestro Servicio.&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <p><strong>Integridad.&nbsp;</strong>Procesamos cierta informaci&oacute;n sobre usted y su uso de los Servicios para mantener la integridad y seguridad de los mismos.</p>
+            </td>
+            <td valign="top">
+                <p>Las bases jur&iacute;dicas para el tratamiento de estos datos son el cumplimiento de nuestras obligaciones legales (Art. 6.1(c) GDPR) y nuestros intereses leg&iacute;timos (Art. 6.1(f) GDPR). Nuestros intereses leg&iacute;timos en este caso son mantener la integridad de nuestros Servicios y la seguridad de nuestros usuarios finales.</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <p><strong>Resoluci&oacute;n de disputas y protecci&oacute;n de nuestras reclamaciones legales</strong>. Recopilamos su Informaci&oacute;n Personal con el fin de investigar la violaci&oacute;n de nuestras pol&iacute;ticas, permitirnos resolver disputas en relaci&oacute;n con su uso del Servicio y establecer y defender nuestras reclamaciones legales.</p>
+            </td>
+            <td valign="top">
+                <p>La base jur&iacute;dica para el tratamiento de estos datos son nuestros intereses leg&iacute;timos (Art. 6.1(f) GDPR). Nuestros intereses leg&iacute;timos en este caso son establecer y defender nuestras reclamaciones legales.</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <p><strong>Transacciones corporativas</strong>. Compartiremos su informaci&oacute;n personal con posibles compradores, sucesores o inversores de la Empresa o en el evento de una transacci&oacute;n corporativa (por ejemplo, venta de una parte sustancial de nuestro negocio, fusi&oacute;n, reorganizaci&oacute;n, quiebra, consolidaci&oacute;n o venta de un activo o transferencia en la operaci&oacute;n del mismo) en relaci&oacute;n con la Empresa.</p>
+            </td>
+            <td valign="top">
+                <p>La base jur&iacute;dica para el tratamiento de estos datos son nuestros intereses leg&iacute;timos (Art. 6.1(f) GDPR).&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <p><strong>Prevenci&oacute;n del fraude o de la violaci&oacute;n de nuestras pol&iacute;ticas</strong>. Procesamos su Informaci&oacute;n Personal para detectar y prevenir actividades fraudulentas e ilegales o cualquier otro tipo de actividad que ponga en peligro o afecte negativamente a la integridad del Servicio, incluyendo la identificaci&oacute;n de riesgos asociados a su actividad en nuestro Servicio. Tambi&eacute;n investigaremos cualquier violaci&oacute;n de nuestras pol&iacute;ticas y las haremos cumplir.</p>
+            </td>
+            <td valign="top">
+                <p>La base legal para procesar estos datos son nuestros intereses leg&iacute;timos (Art. 6.1(f) GDPR). Nuestros intereses leg&iacute;timos en este caso son proteger a nuestra Empresa y a otros usuarios contra el fraude.</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <p><strong>Cumplimiento de las leyes aplicables</strong>. Procesamos sus Datos Personales para cumplir con nuestras diversas obligaciones legales, como la legislaci&oacute;n sobre contenidos para adultos (cuando proceda), la lucha contra el blanqueo de dinero, la verificaci&oacute;n de la identidad (por ejemplo, en caso de sospecha de que un menor utilice nuestro Servicio), la prevenci&oacute;n del fraude, el cumplimiento de los derechos de los interesados, etc.</p>
+            </td>
+            <td valign="top">
+                <p>La base legal para procesar estos datos es cumplir con nuestras diversas obligaciones legales (Art. 6.1(c) GDPR) y nuestros intereses leg&iacute;timos (Art. 6.1(f) GDPR).&nbsp;</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>Cuando usted no haya consentido (o haya retirado su consentimiento) al tratamiento de sus Datos Personales por nuestra parte, seguiremos tratando sus Datos Personales : (a) cuando el tratamiento sea necesario para la ejecuci&oacute;n del contrato (es decir, las Condiciones de Uso) entre usted y nosotros; y/o (b) cuando el tratamiento sea necesario para el cumplimiento de una obligaci&oacute;n legal a la que estemos sujetos; (c) cuando el tratamiento sea necesario a efectos de un inter&eacute;s leg&iacute;timo de la Empresa y sus filiales (incluido el marketing).</p>
+<ol>
+    <li><strong>MARKETING</strong></li>
+</ol>
+<p>Utilizaremos sus Datos Personales, como su direcci&oacute;n de correo electr&oacute;nico, recopilados por nosotros mismos o a trav&eacute;s de nuestros subcontratistas de confianza, con el fin de proporcionarle material promocional a trav&eacute;s de diferentes t&eacute;cnicas de marketing, como el correo electr&oacute;nico directo, el marketing telef&oacute;nico, los SMS relativos al Servicio, as&iacute; como a productos, servicios, sitios web y aplicaciones relacionados con los socios comerciales de la Empresa y sus afiliados (colectivamente: &quot;<strong>Afiliados de marketing</strong>&quot;), que consideremos que puedan interesarle.</p>
+<p>Tambi&eacute;n compartimos y divulgamos Informaci&oacute;n Personal con nuestros Afiliados de Marketing con el prop&oacute;sito de proporcionarle diferentes ofertas de marketing, que nosotros, o nuestros Afiliados de Marketing, creemos que son relevantes para usted.&nbsp;</p>
+<p>Utilizaremos sus Datos Personales con el fin de proporcionarle material promocional &uacute;nicamente cuando tengamos un inter&eacute;s leg&iacute;timo en hacerlo, o cuando hayamos obtenido su consentimiento afirmativo.</p>
+<p>Tiene la posibilidad de rechazar en cualquier momento la recepci&oacute;n de nuevas ofertas de marketing por nuestra parte o por parte de nuestros socios comerciales y afiliados de marketing: siguiendo los enlaces insertados en los correos electr&oacute;nicos promocionales (por ejemplo, seleccionando el enlace de exclusi&oacute;n voluntaria) o poni&eacute;ndose en contacto con nuestro servicio de atenci&oacute;n al cliente.&nbsp;</p>
+<p>Tenga en cuenta que aunque cancele su suscripci&oacute;n a nuestra lista de correo de marketing, seguiremos envi&aacute;ndole actualizaciones y notificaciones relacionadas con el servicio.</p>
+<ol>
+    <li><strong>&iquest;CON QUI&Eacute;N COMPARTIMOS LA INFORMACI&Oacute;N?</strong></li>
+</ol>
+<p>No alquilamos, vendemos ni compartimos su Informaci&oacute;n Personal con terceros (&quot;<strong>Destinatarios</strong>&quot;) excepto en los casos descritos en esta Pol&iacute;tica.&nbsp;&nbsp;La Informaci&oacute;n Personal se revelar&aacute; a los Destinatarios s&oacute;lo en la medida necesaria para el fin espec&iacute;fico, tal y como se estipula en esta Pol&iacute;tica.</p>
+<p>Divulgamos Informaci&oacute;n Personal con cualquiera de los siguientes destinatarios:</p>
+<ul>
+    <li>Empresas de la Sociedad y otras Empresas afiliadas;</li>
+    <li>Subcontratistas y terceros proveedores de servicios, as&iacute; como sus subcontratistas, que a modo de ejemplo incluyen (pero no se limitan a) Empresas de computaci&oacute;n en nube, filiales de marketing, servicios de verificaci&oacute;n de identidad y prevenci&oacute;n del fraude y otros verificadores de datos;</li>
+    <li>Proveedores de servicios de pago, procesadores de pagos&nbsp;</li>
+    <li>A cualquier tercero que preste servicios en relaci&oacute;n con el funcionamiento o la promoci&oacute;n del Servicio;</li>
+    <li>Auditores, contratistas o asesores de cualquiera de los procesos Empresariales de la Empresa;</li>
+    <li>A terceros que investiguen, detecten o prevengan actividades fraudulentas o ilegales (por ejemplo, autoridades gubernamentales, polic&iacute;a, bancos y otras organizaciones de investigaci&oacute;n);</li>
+    <li>Organismos gubernamentales y reguladores, de conformidad con las leyes y reglamentos aplicables;</li>
+    <li>Agencias o autoridades encargadas de hacer cumplir la ley, como respuesta a su solicitud; y</li>
+    <li>Compradores potenciales o inversores en cualquiera de las Empresas del grupo de la Empresa (si procede), o en el caso de una transacci&oacute;n corporativa (por ejemplo, la venta de una parte sustancial de nuestro negocio, fusi&oacute;n, reorganizaci&oacute;n, quiebra, consolidaci&oacute;n o venta de un activo o transferencia en la operaci&oacute;n del mismo) en relaci&oacute;n con cualquier Empresa de la Empresa (en tal evento, la Empresa adquirente o cesionaria asumir&aacute; los derechos y obligaciones descritos en esta Pol&iacute;tica).</li>
+    <li>Investigaci&oacute;n, diagn&oacute;sticos t&eacute;cnicos y proveedores de an&aacute;lisis;&nbsp;</li>
+    <li>Socios de marketing y publicidad, de acuerdo con nuestra pol&iacute;tica de marketing (v&eacute;ase m&aacute;s arriba, en el apartado &quot;<strong>Marketing</strong>&quot;); y</li>
+    <li>Siempre que creamos de buena fe que la divulgaci&oacute;n es necesaria para proteger nuestros derechos o reclamaciones legales, hacer cumplir nuestras pol&iacute;ticas (incluidas nuestras Condiciones de uso y Pol&iacute;tica), proteger su seguridad o la de otros, as&iacute; como para investigar o prevenir cualquier fraude, por motivos de seguridad o para ayudarnos con cualquier otro problema t&eacute;cnico relacionado.</li>
+</ul>
+<ol>
+    <li><strong>TRANSFERENCIA INTERNACIONAL DE INFORMACI&Oacute;N</strong></li>
+</ol>
+<p>Dado que operamos a nivel mundial, es necesario para la prestaci&oacute;n del Servicio y en la medida requerida para el prop&oacute;sito espec&iacute;fico, seg&uacute;n lo estipulado en esta Pol&iacute;tica transferir su Informaci&oacute;n Personal a pa&iacute;ses fuera del Espacio Econ&oacute;mico Europeo (&quot;<strong>EEE</strong>&quot;). Las leyes de protecci&oacute;n de datos y otras leyes de estos pa&iacute;ses no son tan exhaustivas como las del EEE.&nbsp;</p>
+<p>En estas circunstancias, hacemos todo lo posible para garantizar que sus Datos Personales est&eacute;n protegidos de acuerdo con nuestra Pol&iacute;tica, a trav&eacute;s de medios contractuales (como el uso de las cl&aacute;usulas contractuales est&aacute;ndar aprobadas por la Comisi&oacute;n Europea pertinente para la transferencia de datos, disponibles <a href="https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en">aqu&iacute;</a>) u otros medios (como garantizar que las decisiones de la Comisi&oacute;n Europea determinen que dichas jurisdicciones ofrecen un nivel de protecci&oacute;n adecuado, disponible <a href="https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en">aqu&iacute;</a>).</p>
+<ol>
+    <li><strong>TECNOLOG&Iacute;AS DE SEGUIMIENTO DE TERCEROS</strong></li>
+</ol>
+<p>Utilizamos tecnolog&iacute;a publicitaria de terceros en nuestros sitios web para publicar anuncios cuando usted visita o utiliza nuestro Servicio. Utilizamos y autorizamos a terceros a utilizar balizas web, cookies, p&iacute;xeles, scripts, etiquetas y otras tecnolog&iacute;as (&quot;<strong>Tecnolog&iacute;as de seguimiento</strong>&quot;).&nbsp;</p>
+<p>Las tecnolog&iacute;as de seguimiento recopilan autom&aacute;ticamente informaci&oacute;n sobre usted, su comportamiento en l&iacute;nea en los sitios web y su dispositivo (por ejemplo, su ordenador o dispositivo m&oacute;vil), con diferentes fines, entre ellos mejorar y personalizar su navegaci&oacute;n en nuestro Servicio y mejorar el rendimiento de nuestro Servicio. Los terceros utilizan esta informaci&oacute;n para ofrecerle contenidos espec&iacute;ficos.</p>
+<p>Puede configurar su navegador para que rechace todas las cookies de terceros, o para que le avise cuando se env&iacute;en cookies, tambi&eacute;n puede darse de baja de muchas redes publicitarias de terceros, incluidas las operadas por miembros de la Network Advertising Initiative (&quot;<strong>NAI</strong>&quot;) y la Digital Advertising Alliance (&quot;<strong>DAA</strong>&quot;).</p>
+<p>Tambi&eacute;n permitimos que terceros recopilen informaci&oacute;n sobre usted a trav&eacute;s de tecnolog&iacute;as de seguimiento. Para obtener m&aacute;s informaci&oacute;n, visite nuestro Aviso sobre cookies.&nbsp;</p>
+<ol>
+    <li><strong>CONSERVACI&Oacute;N DE LA INFORMACI&Oacute;N PERSONAL</strong></li>
+</ol>
+<p>Si se ha registrado con una cuenta a trav&eacute;s de nuestro Servicio, la Empresa conservar&aacute; su Informaci&oacute;n personal durante el periodo en que su cuenta est&eacute; activa. Adem&aacute;s, la Empresa conservar&aacute; su Informaci&oacute;n Personal durante per&iacute;odos adicionales, para permitir a la Empresa cumplir con sus obligaciones legales en virtud de las leyes o reglamentos aplicables.</p>
+<p>Adem&aacute;s, la Empresa conservar&aacute; su informaci&oacute;n personal durante periodos m&aacute;s largos, siempre que la conservaci&oacute;n de dicha informaci&oacute;n s&oacute;lo sea necesaria para los intereses leg&iacute;timos de la Empresa, como la prevenci&oacute;n del fraude y el mantenimiento de registros, la resoluci&oacute;n o la excisi&oacute;n de reclamaciones relativas a posibles litigios.</p>
+<ol>
+    <li><strong>SUS DERECHOS</strong></li>
+</ol>
+<p>Usted tiene ciertos derechos en relaci&oacute;n con la recopilaci&oacute;n y el tratamiento de sus datos personales. En la medida en que estos derechos le sean aplicables y le conciernan, puede ejercerlos poni&eacute;ndose en contacto con nosotros a trav&eacute;s de los datos de contacto disponibles en la secci&oacute;n &quot;&iquest;C&Oacute;MO CONTACTARNOS?&quot; y ejercer los siguientes derechos:&nbsp;</p>
+<ol>
+    <li>Derechos de acceso - Usted puede obtener en cualquier momento una copia de los Datos Personales que obran en poder de la Empresa;</li>
+    <li>Derecho a la portabilidad de los datos - Usted tiene derecho a recibir sus Datos Personales, en un formato estructurado, de uso com&uacute;n y lectura mec&aacute;nica y a solicitar que sus Datos Personales sean transmitidos a un tercero de su elecci&oacute;n;</li>
+    <li>Derecho de rectificaci&oacute;n - En el evento de que los datos que la Empresa posea sobre usted sean inexactos, incompletos o no est&eacute;n actualizados, usted tiene la posibilidad de solicitar la rectificaci&oacute;n de dichos datos (excepto en los casos en que se requiera mantener la informaci&oacute;n en su formato original en virtud de las leyes y reglamentos aplicables);</li>
+    <li>Derecho de supresi&oacute;n - Tiene la posibilidad de solicitar en cualquier momento que la Empresa borre los datos que tiene sobre usted enviando un correo electr&oacute;nico a la Empresa tal y como se indica en esta Pol&iacute;tica. No obstante, se le advierte de que, con la eliminaci&oacute;n de sus Datos Personales, es posible que ya no pueda utilizar el Servicio o que se cierre totalmente la cuenta;</li>
+    <li>Derecho a la limitaci&oacute;n del tratamiento, oposici&oacute;n al tratamiento - En cualquier momento, usted tiene derecho a solicitar que la Empresa restrinja o deje de realizar determinados tratamientos de datos siempre que no exista otro fundamento jur&iacute;dico que autorice a la Empresa a tratar dichos datos;</li>
+    <li>Derecho a retirar su consentimiento - Usted tiene derecho a retirar el consentimiento dado en cualquier momento. La retirada del consentimiento no afectar&aacute; a la legalidad del tratamiento;</li>
+    <li>Derecho a presentar una queja - Todas las solicitudes, quejas o consultas deben dirigirse a la Empresa con el asunto &quot;Privacidad&quot;. Estudiaremos todas las solicitudes, quejas o consultas y le proporcionaremos una respuesta a su debido tiempo. Tambi&eacute;n puede presentar una queja ante la autoridad de protecci&oacute;n de datos pertinente si no est&aacute; satisfecho con la forma en que tratamos su informaci&oacute;n personal. Nos tomamos muy en serio nuestras obligaciones y le rogamos que nos comunique primero cualquier preocupaci&oacute;n para que podamos intentar resolverla.</li>
+</ol>
+<p><br></p>
+<p>Tenga en cuenta que estos derechos no son absolutos y pueden estar sujetos a nuestros propios intereses leg&iacute;timos y a los requisitos normativos. Le invitamos a ponerse en contacto con nosotros para cualquier pregunta, solicitud o queja a trav&eacute;s de nuestros datos de contacto que figuran a continuaci&oacute;n.</p>
+<p>Nos esforzaremos por responderle en un plazo razonable. No dude en ponerse en contacto con nosotros en cualquier momento. Si no est&aacute; satisfecho con nuestra respuesta, puede presentar una reclamaci&oacute;n ante la autoridad de control competente.</p>
+<p>Asimismo, debe tener en cuenta que, a menos que se haya registrado y haya creado una cuenta en nuestro Sitio Web, no podr&iacute;amos responder a su demanda, ya que no disponemos de informaci&oacute;n suficiente para identificarle. Tambi&eacute;n podr&iacute;amos rectificar, reponer o eliminar informaci&oacute;n incompleta o inexacta, en cualquier momento y a nuestra propia discreci&oacute;n, de acuerdo con nuestras pol&iacute;ticas internas. Del mismo modo, le pediremos que nos proporcione informaci&oacute;n adicional para verificar adecuadamente su identidad si as&iacute; lo solicita.</p>
+<ol>
+    <li><strong>CAMBIOS EN LA POL&Iacute;TICA DE PRIVACIDAD</strong></li>
+</ol>
+<p>Nos reservamos el derecho a modificar esta Pol&iacute;tica en cualquier momento, por lo que le rogamos que vuelva a visitar esta p&aacute;gina con frecuencia. Haremos todos los esfuerzos razonables para notificarle en caso de que se realicen cambios sustanciales en esta Pol&iacute;tica, tal y como exige la ley. Cualquier modificaci&oacute;n, actualizaci&oacute;n o alteraci&oacute;n entrar&aacute; en vigor en el momento en que publiquemos esta Pol&iacute;tica en nuestros Sitios Web y a partir de la fecha indicada como &quot;&Uacute;ltima revisi&oacute;n&quot;, y su uso continuado del Servicio despu&eacute;s de la fecha de la &Uacute;ltima revisi&oacute;n constituir&aacute; la aceptaci&oacute;n de dichos cambios y el Acuerdo de obligarse por ellos.</p>
+<ol>
+    <li><strong>VERSI&Oacute;N LING&Uuml;&Iacute;STICA</strong></li>
+</ol>
+<p>La Pol&iacute;tica ha sido redactada en lengua inglesa, que es la versi&oacute;n original y de control de esta Pol&iacute;tica. Todas las traducciones de esta Pol&iacute;tica a otros idiomas se har&aacute;n &uacute;nicamente por conveniencia y no controlar&aacute;n el significado o la aplicaci&oacute;n de esta Pol&iacute;tica. En caso de discrepancia entre los significados de las versiones traducidas de la Pol&iacute;tica y la versi&oacute;n en lengua inglesa, prevalecer&aacute; el significado de la versi&oacute;n en lengua inglesa.</p>
+<p><strong>&nbsp;C&Oacute;MO PONERSE EN CONTACTO CON NOSOTROS</strong></p>
+<p>Si tiene alguna pregunta general sobre el Servicio o la informaci&oacute;n que recopilamos sobre usted y c&oacute;mo la procesamos, p&oacute;ngase en contacto con nosotros por correo electr&oacute;nico:</p>
+<ul>
+    <li>Pythia Grant Ltd. &nbsp;</li>
+    <li>Attn: Responsable de protecci&oacute;n de datos de Cybersays.club</li>
+    <li><a href="mailto:DPO@Cybersays.club">DPO@Cybersays.club&nbsp;</a></li>
+</ul>
+<p>Nos esforzaremos por responderle en un plazo razonable. No dude en ponerse en contacto con nosotros en cualquier momento. Si no est&aacute; satisfecho con nuestra respuesta, puede dirigirse a la autoridad supervisora de protecci&oacute;n de datos aplicable.&nbsp;</p><p><br></p>`
 let pt_text = `<p style="text-align:center;font-size:16pt!important;" class="p14">
 <span class="s1"
   ><strong>Cybersays.club - Pol&iacute;tica de privacidade</strong></span
@@ -1057,5 +1260,5 @@ Fique &agrave; vontade para entrar em contato conosco a qualquer momento.
 Se n&atilde;o estiver satisfeito com nossa resposta, voc&ecirc; pode
 entrar em contato com a autoridade supervisora de prote&ccedil;&atilde;o
 de dados aplic&aacute;vel.
-</p>`
+</p><p><br></p>`
 

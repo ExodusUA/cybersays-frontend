@@ -269,7 +269,257 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Cy
 <p><br></p>
 <p>For information, support or questions, please contact us at <a href="mailto:dailycontest@cybersays.club">dailycontest@cybersays.club</a></p>
 <p><br></p>`
-let es_text = ``
+let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>CyberSays.Club - Condiciones del concurso diario</strong></p>
+<p>&nbsp; &nbsp; &nbsp;&Uacute;ltima modificaci&oacute;n: febrero 2024</p>
+<p>A continuaci&oacute;n se exponen los t&eacute;rminos y condiciones del concurso diario de la Empresa (&quot;<strong>Cyber Says</strong>&quot; y &quot;<strong>Cyber Says Contest Terms</strong>&quot;; &quot;<strong>Concurso</strong>&quot;), patrocinado por Pythia Grant Ltd (&quot;<strong>Empresa</strong>&quot;, &quot;<strong>nosotros</strong>&quot; o &quot;<strong>nos</strong>&quot; o &quot;<strong>nuestro</strong>&quot;). La participaci&oacute;n en el <strong>Concurso&nbsp;</strong>estar&aacute; sujeta<strong>&nbsp;</strong>a las disposiciones que figuran a continuaci&oacute;n y a los T&eacute;rminos y Condiciones de la Empresa, los T&eacute;rminos y Condiciones de ImLive.com (colectivamente &quot;<strong>T&eacute;rminos</strong>&quot;) y la Pol&iacute;tica de Privacidad (&quot;<strong>Pol&iacute;tica de Privacidad</strong>&quot;).</p>
+<p>Los t&eacute;rminos en may&uacute;sculas utilizados pero no definidos en el presente documento tendr&aacute;n el significado que se les atribuye en las Condiciones.</p>
+<p><br></p>
+<p><strong>General</strong></p>
+<ol>
+    <li>El Concurso Cyber Says es un concurso diario programado para comenzar el 29 de febrero de 2024, hasta el 2 de julio de 2024&nbsp;y se desarrollar&aacute; diariamente y continuar&aacute; mientras se presente in situ (el &quot;<strong>Periodo del Concurso</strong>&quot;).&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Usted acepta que para participar en el Concurso Cyber Says (incluyendo, sin limitaci&oacute;n, para ganar cualquier recompensa), cumplir&aacute; plenamente con todas las leyes, reglamentos, estatutos, ordenanzas y disposiciones aplicables a usted y a nosotros, incluyendo, sin limitaci&oacute;n, estas Condiciones del Concurso Cyber Says y las Condiciones.</li>
+</ol>
+<p><br></p>
+<p><strong>Requisitos para participar en el Concurso</strong></p>
+<ol>
+    <li>Para poder participar en el Concurso Cyber Says usted declara y garantiza que usted:&nbsp;</li>
+</ol>
+<ul>
+    <li>ha creado una cuenta nueva y leg&iacute;tima registrada en Cybersays.club;&nbsp;</li>
+    <li>tiene al menos dieciocho (18) a&ntilde;os (a menos que la mayor&iacute;a de edad aplicable en su estado de residencia en el momento de la inscripci&oacute;n sea superior) o m&aacute;s;&nbsp;</li>
+    <li>re&uacute;ne los requisitos legales y reglamentarios para participar en el Concurso Cyber Says;&nbsp;</li>
+    <li>tiene pleno derecho y autoridad para participar en el Concurso Cyber Says; (denominados colectivamente, &quot;<strong>Usuarios Elegibles</strong>&quot;).</li>
+</ul>
+<p><br></p>
+<p>&quot;<strong>Oferta en l&iacute;nea</strong>&quot; significar&aacute; la culminaci&oacute;n de todos los pasos siguientes -&nbsp;</p>
+<ul>
+    <li>Crear una cuenta nueva y leg&iacute;tima en ImLive.com</li>
+    <li>Realizar una compra m&iacute;nima de cinco (5) cr&eacute;ditos en <a href="http://www.ImLive.com">www.ImLive.com</a> - usted reconoce que al realizar una compra m&iacute;nima de cinco cr&eacute;ditos en <a href="http://www.ImLive.com">www.ImLive.com</a> , recibir&aacute; autom&aacute;ticamente una bonificaci&oacute;n adicional &uacute;nica de cinco cr&eacute;ditos;</li>
+    <li>Gastar la totalidad de los diez (10) cr&eacute;ditos que recibi&oacute; en <a href="http://www.ImLive.com">www.ImLive.com</a> .</li>
+</ul>
+<p><br></p>
+<p>Como parte de este Concurso, usted reconoce que (i) cualquier bonificaci&oacute;n de cr&eacute;dito recibida en ImLive.com como parte de este Concurso <strong>no es canjeable, no es reembolsable, no es transferible y no es intercambiable</strong>; (ii) estas bonificaciones de cr&eacute;dito deben utilizarse <strong>&uacute;nicamente en&nbsp;</strong>ImLive.com; (iii) estas bonificaciones de cr&eacute;dito no tienen ning&uacute;n valor pecuniario ni de ning&uacute;n tipo fuera de ImLive.com; (iv) usted es el &uacute;nico responsable del uso que haga de los servicios de ImLive.com y del uso de dichos cr&eacute;ditos; y (v) usted ha le&iacute;do los <em>T&eacute;rminos y CONDICIONES de ImLive.com</em> antes de utilizar los servicios de www.ImLive.com o de utilizar cualquiera de los bonos de cr&eacute;dito de sus servicios.</p>
+<p><br></p>
+<ol>
+    <li>Como parte de este Concurso, usted reconoce que la Empresa, a su entera discreci&oacute;n, puede rechazar o descalificar su participaci&oacute;n en el Concurso si alguno de los datos que proporcion&oacute; durante el registro o, en su caso, al culminar la Oferta en l&iacute;nea (i) falta, es inexacto y/o est&aacute; desactualizado; (ii) parece ser falso, fraudulento; o (iii) infringe las Condiciones del Concurso Cyber Says, las Condiciones o cualquier ley o reglamento aplicable.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>No podr&aacute; utilizar varias direcciones de correo electr&oacute;nico, cuentas y/o identidades o cualquier otro m&eacute;todo para participar en el Concurso Cyber Says m&aacute;s de una vez. No podr&aacute; inscribirse en nombre de otra persona.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Queda estrictamente prohibido el uso de m&eacute;todos de participaci&oacute;n robotizados, mec&aacute;nicos o preprogramados de cualquier otra forma. Los participantes no podr&aacute;n utilizar dichas herramientas de manipulaci&oacute;n y la Empresa se reserva el derecho (a su entera discreci&oacute;n), de vez en cuando, de implementar procesos de participaci&oacute;n que puedan frustrar o prohibir dicha participaci&oacute;n automatizada; siempre y cuando, sin embargo, ning&uacute;n participante en ning&uacute;n Concurso pueda confiar o insistir en el hecho de que la Empresa no tome o se niegue a tomar cualquiera de las medidas anteriores o a determinar, a su entera discreci&oacute;n, que la participaci&oacute;n de un participante debe ser descontada porque la participaci&oacute;n de otro participante s&iacute; lo fue o viceversa. Cualquier uso de un sistema automatizado o cualquier m&eacute;todo similar para participar en cualquier Concurso est&aacute; estrictamente prohibido y puede dar lugar a su descalificaci&oacute;n del Concurso y/o del uso futuro de los Servicios. La persona a la que el operador correspondiente haya asignado la direcci&oacute;n de correo electr&oacute;nico ser&aacute; considerada propietaria de dicha direcci&oacute;n.</li>
+</ol>
+<p>&nbsp;</p>
+<ol>
+    <li>La Empresa se reserva el derecho de limitar el Concurso a participantes ubicados en una jurisdicci&oacute;n concreta, en cuyo caso s&oacute;lo podr&aacute;n participar en el Concurso los usuarios que residan en dicha jurisdicci&oacute;n en el momento de la inscripci&oacute;n.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>No podr&aacute;n participar en el Concurso los usuarios (nacionales y residentes) de Israel, Chipre y Andorra.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Los empleados de la Empresa (incluidos, entre otros, los empleados a tiempo parcial o temporales), directivos y representantes, agencias de promoci&oacute;n y/o patrocinadores que participen directamente en la administraci&oacute;n, desarrollo, cumplimiento y ejecuci&oacute;n de un Concurso espec&iacute;fico, as&iacute; como los familiares directos y otros miembros del hogar (es decir, c&oacute;nyuges, padres, abuelos, hijos, nietos, compa&ntilde;eros de habitaci&oacute;n, compa&ntilde;eros de piso, parejas sentimentales, socios y hermanos) de cualquiera de los anteriores no podr&aacute;n introducirse y/o ganar un Concurso.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Tenga en cuenta que el uso de los Servicios, que pueden descargarse gratuitamente, requiere una conexi&oacute;n a Internet y un dispositivo compatible. Debe introducir el Concurso durante el Periodo del Concurso correspondiente para poder optar a ganar el/los premio(s) aplicable(s).</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Se le podr&aacute; pedir en cualquier momento que nos proporcione a nosotros o a nuestro tercero designado una prueba de su edad y/o identidad y/o residencia y deber&aacute;, cuando se le solicite, poder presentar una documentaci&oacute;n v&aacute;lida que nos permita verificar su, residencia y/o identidad a satisfacci&oacute;n razonable de nuestro equipo. Si no puede presentar documentos satisfactorios, podremos excluirle del Concurso Cyber Says y podr&aacute; perder todos los privilegios o premios que le hayan sido asignados sin compensaci&oacute;n de ning&uacute;n tipo. Por la presente, usted renuncia irrevocablemente a cualquier reclamaci&oacute;n o derecho en relaci&oacute;n con dicha exclusi&oacute;n y/o confiscaci&oacute;n.</li>
+</ol>
+<p><br></p>
+<p><strong>Elegibilidad para recibir puntos virtuales del Concurso y selecci&oacute;n de ganadores</strong></p>
+<ol>
+    <li>El Concurso Cyber Says consiste en un concurso diario, cuyos ganadores tendr&aacute;n derecho a ganar los Premios (que se detallan a continuaci&oacute;n).&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Los Usuarios Elegibles tienen derecho a ganar puntos virtuales de una de las siguientes maneras -.&nbsp;<ol>
+            <li><strong>10&nbsp;</strong>puntos virtuales por cada amigo que haya remitido a nuestros Servicios y que sea considerado Usuario Elegible <strong>y</strong><strong>&nbsp;</strong>que haya culminado con &eacute;xito la Oferta en l&iacute;nea;&nbsp;</li>
+            <li><strong>0,5&nbsp;</strong>puntos virtuales por cada cr&eacute;dito real comprado en ImLive.com, a partir de la segunda compra (es decir, a partir de 11 cr&eacute;ditos). Es decir, no se dar&aacute;n puntos virtuales por los 5 primeros cr&eacute;ditos que se compren).</li>
+        </ol>
+    </li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Usted entiende y reconoce que no hay l&iacute;mite en el n&uacute;mero de cr&eacute;ditos que puede comprar y, por lo tanto, en el n&uacute;mero de puntos virtuales que puede optar a recibir.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Usted reconoce que la obtenci&oacute;n de puntos virtuales est&aacute; sujeta al pleno cumplimiento de las presentes Condiciones del Concurso Cyber Says y de los T&eacute;rminos. Cualquier participante podr&aacute; ser descalificado o anulado a nuestra entera discreci&oacute;n si la Empresa considera que dicho participante no cumple las Condiciones del Concurso Cyber Says o las Condiciones.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>El ganador diario del Concurso ser&aacute; el participante que haya ganado y acumulado m&aacute;s puntos virtuales al final de cada d&iacute;a.&nbsp;</li>
+</ol>
+<p>&nbsp;&nbsp;</p>
+<ol>
+    <li>No se tendr&aacute; en cuenta ninguna otra forma o m&eacute;todo para enviar una participaci&oacute;n, a menos que se establezca lo contrario en la descripci&oacute;n del Concurso Cyber Says.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Como parte de este Concurso, usted reconoce que (i) cualquier punto virtual recibido como parte de este Concurso <strong>no es canjeable, no es reembolsable, no es transferible y no es intercambiable</strong>; (ii) estos puntos virtuales est&aacute;n destinados a proporcionar su puntuaci&oacute;n en el Concurso y no pueden ser utilizados fuera de este Concurso o para cualquier otro prop&oacute;sito; (iii) estos puntos virtuales no tienen ning&uacute;n valor pecuniario o cualquier tipo de valor dentro o fuera del Concurso, salvo que se indique expl&iacute;citamente en el presente p&aacute;rrafo; (iv) usted es el &uacute;nico responsable del uso que haga de nuestros Servicios.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>El n&uacute;mero de puntos virtuales se restablecer&aacute; al final de cada jornada.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>El ganador diario se anunciar&aacute; in situ, al final de cada d&iacute;a.&nbsp; &nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>La elecci&oacute;n de los ganadores es definitiva y vinculante, salvo que se indique lo contrario en las presentes Condiciones del Concurso Cyber Says.</li>
+</ol>
+<p><br></p>
+<p><strong>Premios</strong></p>
+<ol>
+    <li>El premio se otorgar&aacute; &uacute;nicamente a diez ganadores diarios -<ol>
+            <li>Para el 1er lugar y 2do Lugar - el ganador tendr&aacute; derecho a recibir - sesenta y nueve d&oacute;lares ($ 69USD);</li>
+            <li>Por el puesto 3er hasta el puesto 10mo - el ganador tendr&aacute; derecho a recibir - 6,90$ USD&nbsp;</li>
+        </ol>
+    </li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Los premios no son transferibles ni canjeables. &nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>En el evento de que -<ol>
+            <li>dos o m&aacute;s Usuarios Elegibles alcancen la misma cantidad de puntos virtuales diarios, entonces se elegir&aacute; al Usuario Elegible con el mayor n&uacute;mero de Amigo Referido.&nbsp;</li>
+            <li>dos o m&aacute;s Usuarios Elegibles tienen el mismo n&uacute;mero de Amigos Referidos, entonces se elegir&aacute; al Usuario Elegible que haya comprado m&aacute;s cr&eacute;ditos en ImLive.com.&nbsp;</li>
+            <li>dos o m&aacute;s Usuarios Elegibles tienen la misma cantidad de cr&eacute;ditos de ImLive.com, entonces se elegir&aacute; al Usuario Elegible que haya culminado primero la Oferta en L&iacute;nea.&nbsp;</li>
+        </ol>
+    </li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Los ganadores del Concurso Cyber Says son los &uacute;nicos responsables de declarar y pagar todos y cada uno de los impuestos aplicables relacionados con los Premios y de pagar cualquier gasto asociado a los mismos que no est&eacute; espec&iacute;ficamente previsto en las Condiciones del Concurso Cyber Says.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Al participar en el Concurso Cyber Says, usted autoriza a la Empresa a ponerse en contacto con usted, con el fin de administrar el Concurso Cyber Says y otorgar los Premios.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Realizaremos tres intentos para ponernos en contacto con el ganador potencial en un plazo de setenta y dos (72) horas. Si no logramos ponernos en contacto con el ganador potencial dentro de este plazo especificado o queda descalificado por cualquier otro motivo o no cumple con estas Condiciones o T&eacute;rminos del Concurso Cyber Says, la Empresa podr&aacute; renunciar al Premio y conced&eacute;rselo potencialmente a otro ganador.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Es su exclusiva responsabilidad notificarnos por escrito si ha cambiado su direcci&oacute;n de correo electr&oacute;nico durante el Periodo del Concurso.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Nuestras decisiones relativas a la administraci&oacute;n y funcionamiento de cualquier Concurso, incluyendo, sin limitaci&oacute;n, la selecci&oacute;n de los posibles ganadores son definitivas y vinculantes en todos los asuntos relacionados con el Concurso.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>No est&aacute; permitido transferir ni sustituir ning&uacute;n Premio recibido por participar en un Concurso. Todos los premios se ofrecen &quot;tal cual&quot;, sin garant&iacute;a expresa ni impl&iacute;cita.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Los premios se entregar&aacute;n a los ganadores y estar&aacute;n disponibles para su retirada en un plazo de 2 d&iacute;as h&aacute;biles a partir de la recepci&oacute;n por parte de la Empresa de los datos completos del ganador (necesarios para la entrega del Premio), a menos que la Empresa, a su entera discreci&oacute;n, tenga alg&uacute;n motivo para creer que el ganador no re&uacute;ne los requisitos para participar en el Concurso Cyber Says o para ser galardonado con los Premios.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Los premios se conceder&aacute;n a los ganadores a trav&eacute;s de sus terceros proveedores de Cyber Says, tal y como se detalla en los T&eacute;rminos y Condiciones de Cyber Says.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>No se entregar&aacute;n premios a ning&uacute;n participante que no re&uacute;na los requisitos para participar en el Concurso o que incumpla las Condiciones del Concurso Cyber Says, las Condiciones o cualquier otra norma de participaci&oacute;n en el Concurso.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Si alguna ley aplicable, las Condiciones del Concurso Cyber Says, las Condiciones exigen a alg&uacute;n ganador potencial el cumplimiento de condiciones o requisitos adicionales para poder participar en el Concurso y recibir el Premio, dicho ganador potencial deber&aacute; cumplir &iacute;ntegramente dichos requisitos en el plazo establecido por nosotros antes y como condici&oacute;n para recibir el Premio. Si un ganador potencial es descalificado por cualquier motivo, podremos otorgar el premio correspondiente a un ganador alternativo de entre los participantes elegibles restantes, a nuestra entera discreci&oacute;n.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>La Empresa no se responsabiliza en modo alguno de, ninguna garant&iacute;a, representaci&oacute;n o garant&iacute;a, expresa o impl&iacute;cita, de hecho o de derecho, relacionada con cualquiera de los Premios, en lo que respecta al uso, valor o disfrute de los Premios, incluyendo, sin limitaci&oacute;n, su calidad, estado o idoneidad para un fin.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Los premios y la participaci&oacute;n en el Concurso Cyber Says no est&aacute;n disponibles para personas menores de edad en su jurisdicci&oacute;n.</li>
+</ol>
+<p><br></p>
+<p><strong>Limitaciones de responsabilidad y exenci&oacute;n</strong></p>
+<ol>
+    <li>Al introducirse en este Concurso, usted acepta liberar, indemnizar y eximir de responsabilidad a la Empresa, y a sus respectivas Empresas matrices, subsidiarias, afiliadas, distribuidoras, proveedoras y organizaciones de publicidad, promoci&oacute;n y juzgamiento y a cada uno de sus respectivos empleados, funcionarios, directores, accionistas y agentes (colectivamente, los &quot;<strong>Exonerados</strong>&quot;) de y contra cualquier y toda reclamaci&oacute;n, acci&oacute;n, da&ntilde;o, p&eacute;rdida, costo, gasto (incluyendo honorarios razonables de abogados/legales), lesiones o causas de acci&oacute;n de cualquier tipo que de cualquier forma, ahora o en el futuro, puedan surgir de o estar relacionadas con el Concurso, incluyendo sin limitaci&oacute;n (i) la administraci&oacute;n del Concurso, tales como errores tipogr&aacute;ficos, de impresi&oacute;n, de siembra, humanos o de otro tipo relacionados con o en conexi&oacute;n con el Concurso, el procesamiento de las inscripciones, el anuncio del Premio o cualquier material relacionado, inscripciones inexactas, fraudulentas, incompletas, ilegibles, tard&iacute;as, perdidas, robadas, mal enviadas, no entregadas, incompletas o da&ntilde;adas, cualquier retraso en la entrega o falta de disponibilidad del Premio o de los materiales del Premio; (ii) Su participaci&oacute;n en el Concurso ofrecido por los Exonerados o su aceptaci&oacute;n o uso de un Concurso, o participaci&oacute;n en cualquier actividad relacionada con el Premio, incluyendo, sin limitaci&oacute;n, cualquier actividad relacionada con el mismo, y muerte y lesiones corporales (incluyendo angustia emocional), debidas en todo o en parte, directa o indirectamente, a la participaci&oacute;n en el Concurso o en cualquier actividad relacionada con el Concurso y por cualquier reclamaci&oacute;n o causa de acci&oacute;n basada en derechos de publicidad, difamaci&oacute;n o invasi&oacute;n de la privacidad; (iii) Cualquier acto u omisi&oacute;n, ya sea negligente, intencionado o de otro tipo, causado por los Exonerados y/o cualquier Concurso; (iv) la participaci&oacute;n de cualquier otro usuario en el Concurso.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Usted acepta que los Exonerados no son responsables de ninguna informaci&oacute;n incorrecta o inexacta, ya sea causada por los Servicios, por otros usuarios o por cualquiera de los equipos o programaci&oacute;n asociados o utilizados en el Concurso y que los Exonerados no asumen ninguna responsabilidad por (i) cualquier lesi&oacute;n o da&ntilde;o a personas o bienes que pueda ser causado, directa o indirectamente, en su totalidad o en parte, por la participaci&oacute;n de un usuario en un Concurso o la recepci&oacute;n o uso o mal uso de cualquier Premio; (ii) cualquier error, omisi&oacute;n, interrupci&oacute;n, supresi&oacute;n, defecto o retraso en el funcionamiento o la transmisi&oacute;n en los Servicios; (iii) cualquier aver&iacute;a o fallo inform&aacute;tico, telef&oacute;nico, por cable, por sat&eacute;lite, de red, electr&oacute;nico o de hardware o software de Internet, problemas de conexi&oacute;n o disponibilidad; (iv) transmisiones confusas o desordenadas, accesibilidad o disponibilidad del proveedor de servicios/Internet/sitio web/red de uso; (v) congesti&oacute;n del tr&aacute;fico; (vi) intervenci&oacute;n humana no autorizada; o (vii) robo o destrucci&oacute;n, manipulaci&oacute;n o acceso no autorizado a las participaciones y/o a la informaci&oacute;n de participaci&oacute;n. Si, por cualquier motivo, el Concurso no pudiera desarrollarse seg&uacute;n lo previsto debido a la infecci&oacute;n por virus inform&aacute;ticos, intervenci&oacute;n no autorizada, fraude, manipulaci&oacute;n, fallos t&eacute;cnicos o cualquier otra causa ajena al control de los Destinatarios y que, en opini&oacute;n exclusiva de los Destinatarios, corrompa o afecte a la administraci&oacute;n, seguridad, imparcialidad, integridad o correcto desarrollo del Concurso, los Exonerados se reservan el derecho, a su entera discreci&oacute;n, de cancelar, finalizar, modificar o suspender dicho Concurso y la Empresa seleccionar&aacute; al ganador o ganadores de entre todas las inscripciones admisibles recibidas para dicho Concurso antes de la acci&oacute;n emprendida.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>En ning&uacute;n evento los Exonerados ser&aacute;n responsables por cualquier da&ntilde;o o p&eacute;rdida de cualquier tipo, incluyendo da&ntilde;os indirectos, incidentales, consecuenciales o punitivos, aparte de los gastos reales de su bolsillo que surjan de su participaci&oacute;n en un Concurso. Sin perjuicio de lo anterior, los Servicios se proporcionan &quot;tal cual&quot;, sin garant&iacute;a de ning&uacute;n tipo, ni expresa ni impl&iacute;cita, incluidas, entre otras, las garant&iacute;as impl&iacute;citas de comerciabilidad, idoneidad para un fin determinado o no infracci&oacute;n. Es posible que algunas jurisdicciones no permitan la limitaci&oacute;n o exclusi&oacute;n de responsabilidad por da&ntilde;os incidentales o consecuentes o la exclusi&oacute;n de garant&iacute;as impl&iacute;citas, por lo que es posible que algunas de las limitaciones o exclusiones anteriores no sean aplicables en su caso. En tales casos, nuestra responsabilidad se limitar&aacute; al m&aacute;ximo permitido por la legislaci&oacute;n aplicable.</li>
+</ol>
+<p><br></p>
+<p><strong>Condiciones generales adicionales</strong></p>
+<ol>
+    <li>Todas las solicitudes de participaci&oacute;n en un Concurso pasar&aacute;n a ser propiedad exclusiva de la Empresa y no ser&aacute;n reconocidas y/o devueltas. Se considerar&aacute;n nulas las inscripciones recibidas que procedan de participantes no elegibles y/o que no cumplan las Condiciones del Concurso Cyber Says o las Condiciones. Las participaciones que se determinen fraudulentas se considerar&aacute;n nulas, y la persona que realice dicha participaci&oacute;n podr&aacute; ser excluida de la participaci&oacute;n en el Concurso y, a discreci&oacute;n exclusiva de la Empresa y caso por caso, se le podr&aacute; prohibir cualquier participaci&oacute;n futura en cualquier Concurso y/o servicios futuros de la Empresa. Por la presente, acepta que en ning&uacute;n caso tendr&aacute; derecho a reclamarnos por solicitudes que no hayamos recibido o de las que no hayamos acusado acuse de recibo, por el motivo que sea, o que se hayan recibido antes o despu&eacute;s del Periodo del Concurso.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>La Empresa podr&aacute; cancelar, modificar, alterar, cambiar o suspender el Concurso Cyber Says, y cualquiera de los Premios o beneficios ofrecidos en virtud del mismo, incluyendo, sin limitaci&oacute;n, cuando sea necesario por razones de seguridad o cualquier otra raz&oacute;n, a su entera discreci&oacute;n, para cumplir con la ley o reglamento aplicable, debido al abuso o de otra manera cuando debido a circunstancias fuera de su control (incluyendo, sin limitaci&oacute;n, un caso de fuerza mayor, incendio, inundaci&oacute;n, epidemia u otra emergencia sanitaria nacional, terremoto, explosi&oacute;n, conflicto laboral o huelga, caso fortuito o enemigo p&uacute;blico, fallo del sat&eacute;lite o del equipo, revuelta o disturbios civiles, amenaza o actividad terrorista, guerra (declarada o no declarada,) o cualquier ley, orden o reglamento del gobierno federal, estatal o local, orden de cualquier tribunal o jurisdicci&oacute;n, crisis de salud p&uacute;blica u otra causa que no est&eacute; razonablemente bajo su control. En caso de que el Concurso se finalice, cancele o posponga por cualquier motivo, el/los Premio(s) real(es) se otorgar&aacute;(n) &uacute;nicamente en la medida en que lo exija la ley.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>La Empresa se reserva el derecho a modificar los Premios y las condiciones de este Concurso Cyber Says en cualquier momento y sin previo aviso. Usted reconoce que ser&aacute; responsable de mantenerse al d&iacute;a de todos y cada uno de los cambios introducidos en el Concurso. En caso de modificaci&oacute;n del Concurso, su participaci&oacute;n continuada en el Concurso constituye la aceptaci&oacute;n de los T&eacute;rminos y Condiciones modificados de dicho Concurso.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>&nbsp;Si tenemos conocimiento de cualquier fraude, enga&ntilde;o, mala conducta (por ejemplo lenguaje fuerte, insultos, amenazas), falta de honradez o acci&oacute;n similar en relaci&oacute;n con su participaci&oacute;n en el Concurso Cyber Says, o si actuara de forma perturbadora o con la intenci&oacute;n de perturbar o socavar el funcionamiento leg&iacute;timo del Concurso Cyber Says o si incumpliera cualquiera de estas Condiciones del Concurso Cyber Says, los reglamentos y normas que se apliquen a su uso de los Servicios y/o a su participaci&oacute;n en cualquier Concurso Cyber Says, entonces (i) nos reservamos el derecho absoluto a descalificarle autom&aacute;tica e inmediatamente o a invalidar su participaci&oacute;n, y (ii) tambi&eacute;n nos reservamos el derecho a reclamarle da&ntilde;os y perjuicios y otros recursos en la m&aacute;xima medida permitida por la ley. Si el fraude, el enga&ntilde;o, la mala conducta, la falta de honradez u otra acci&oacute;n s&oacute;lo se descubre despu&eacute;s de que se le haya concedido cualquier premio aplicable, entonces se le exigir&aacute;, previa solicitud, que nos devuelva el Premio (o proporcione una compensaci&oacute;n equivalente) inmediatamente despu&eacute;s de recibir nuestra solicitud de hacerlo. Sin perjuicio de lo anterior, la Empresa podr&aacute; bloquear a cualquier participante que, a juicio exclusivo de la Empresa, haya sido descalificado, tenga una elegibilidad cuestionable o sea inelegible por cualquier otro motivo para participar en el Concurso.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Ganar un Premio constituye su consentimiento para que la Empresa pueda utilizar la siguiente informaci&oacute;n relativa a usted: nombre, nombre de usuario, pa&iacute;s de residencia y el Premio y por la presente nos concede a nosotros y a nuestros afiliados, un derecho y licencia perpetuos, ilimitados, no exclusivos, mundiales, totalmente pagados y libres de Regal&iacute;as, para utilizar (a) su nombre y nombre de usuario; (b) su imagen, fotograf&iacute;a y semejanza; (c) su testimonio con respecto a la participaci&oacute;n y/o uso de nuestros servicios o productos; y (d) los detalles relativos a su victoria (colectivamente, la <strong>&quot;Informaci&oacute;n</strong>&quot;), y a reproducir, distribuir, mostrar p&uacute;blicamente, representar p&uacute;blicamente y realizar trabajos derivados, basados en dicha Informaci&oacute;n, en cualquier formato de medio de comunicaci&oacute;n, incluso a trav&eacute;s de medios de difusi&oacute;n, para fines de relaciones p&uacute;blicas, marketing y promoci&oacute;n relacionados con el Concurso Cyber Says o la Empresa. Todo tratamiento de datos personales por nuestra parte se realizar&aacute; de conformidad con los t&eacute;rminos de nuestra <em>Pol&iacute;tica de Privacidad.</em></li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Si gana un Premio, por la presente renuncia a todos y cada uno de los derechos de paternidad, integridad y cualesquiera otros derechos que se conozcan o denominen &quot;derechos morales&quot; sobre la Informaci&oacute;n que pueda adquirir en virtud de la presente liberaci&oacute;n o por ministerio de la ley. Usted entiende que no tendr&aacute; derecho a ning&uacute;n pago u otro reconocimiento en relaci&oacute;n con el uso que la Empresa haga de la Informaci&oacute;n.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Todos los productos, servicios y nombres de Empresas referenciados y/o incluidos son marcas registradas de sus propietarios originales. El uso de cualquier marca, nombre, imagen o semejanza es s&oacute;lo para fines de identificaci&oacute;n y referencia y no implica ninguna asociaci&oacute;n con el titular de la marca, el individuo respectivo o su marca. La Empresa renuncia expresamente a cualquier afiliaci&oacute;n con marcas comerciales o derechos de publicidad de terceros a los que se haga referencia y/o que se incluyan en el concurso Cyber Says o en materiales relacionados. El uso de cualquier marca, nombre, imagen o semejanza no pretende inducir a error, confundir al cliente o infringir los derechos de autor, derechos de publicidad o marca comercial de terceros. Dicho uso no indica en modo alguno ninguna relaci&oacute;n con terceros, ni significa que dichos terceros sean la fuente, respalden, aprueben o patrocinen el uso de nuestros Servicios. No hacemos ninguna reclamaci&oacute;n comercial por el uso de ning&uacute;n copyright, derecho de publicidad o marca comercial de terceros, ni sugerencia de patrocinio o respaldo, y cualquier uso de este tipo se proporciona &uacute;nicamente con fines informativos.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Todos los Concursos estar&aacute;n sujetos a todas las leyes y reglamentos federales, estatales y locales aplicables, y son nulos donde est&eacute;n prohibidos o restringidos por la ley.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>La Empresa se reserva el derecho a: (i) finalizar o declarar nulo y sin efecto cualquier Concurso y rescindir cualquier premio, si a su juicio, las Condiciones del Concurso Cyber Says o la integridad del Concurso han sido violadas o comprometidas de cualquier forma, intencionadamente o no, por cualquier persona, participante o no en el Concurso; (ii) alterar o modificar estas Condiciones del Concurso Cyber Says en cualquier momento; y/o (iii) detener o finalizar cualquier Concurso en cualquier momento sin previo aviso. Los cambios materiales a estas reglas se publicar&aacute;n en los Servicios, cuando sea pr&aacute;ctico.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Este documento ha sido redactado en lengua inglesa, que es la versi&oacute;n original y de control de esta Pol&iacute;tica. Todas las traducciones de este documento a otros idiomas se har&aacute;n &uacute;nicamente por conveniencia y no controlar&aacute;n el significado o la aplicaci&oacute;n de este documento. En caso de discrepancia entre los significados de las versiones traducidas del documento y la versi&oacute;n en lengua inglesa, prevalecer&aacute; el significado de la versi&oacute;n en lengua inglesa.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>La Empresa ser&aacute; el &uacute;nico &aacute;rbitro en todos los asuntos relacionados con cualquier Concurso y la interpretaci&oacute;n de estas Condiciones del Concurso Cyber Says y las Condiciones. Las decisiones de la Empresa ser&aacute;n definitivas en todos los asuntos, incluyendo, sin limitaci&oacute;n, si cualquier participaci&oacute;n presentada es v&aacute;lida o no. La participaci&oacute;n en cualquier Concurso implica el Acuerdo por parte de los participantes de respetar las Condiciones del Concurso Cyber Says y las Condiciones, as&iacute; como cualquier otra norma establecida por la Empresa.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>El Concurso se regir&aacute; por las leyes de la Rep&uacute;blica de Chipre y los participantes en el Concurso se someten a la jurisdicci&oacute;n exclusiva de los tribunales de la Rep&uacute;blica de Chipre.</li>
+</ol>
+<p>&nbsp;&nbsp;</p>
+<ol>
+    <li>En caso de conflicto entre las presentes Condiciones del Concurso Cyber Says o las Condiciones, prevalecer&aacute;n las presentes Condiciones del Concurso Cyber Says.</li>
+</ol>
+<p><br></p>
+<p>PRECAUCI&Oacute;N: CUALQUIER INTENTO DE DA&Ntilde;AR DELIBERADAMENTE LOS SERVICIOS DE LA EMPRESA O DE SOCAVAR EL FUNCIONAMIENTO LEG&Iacute;TIMO DEL CONCURSO OFRECIDO POR LA EMPRESA CONSTITUYE UNA VIOLACI&Oacute;N DE LAS LEYES PENALES Y CIVILES. EN CASO DE QUE SE PRODUZCA TAL INTENTO, LA EMPRESA SE RESERVA EL DERECHO A RECLAMAR DA&Ntilde;OS Y PERJUICIOS A CUALQUIERA DE DICHAS PERSONAS EN LA M&Aacute;XIMA MEDIDA PERMITIDA POR LA LEY.</p>
+<p><br></p>
+<p>Para informaci&oacute;n, asistencia o preguntas, p&oacute;ngase en contacto con nosotros en <a href="mailto:dailycontest@cybersays.club">dailycontest@cybersays.club.</a></p>
+<p><br></p>`
 let pt_text = `<p style="text-align:center;font-size:16pt!important;" class="p1">
 <span class="s1"
   ><strong

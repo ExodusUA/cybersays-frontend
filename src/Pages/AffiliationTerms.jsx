@@ -97,7 +97,80 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Cy
     </li>
 </ol>
 <p><br></p>`
-let es_text = ``
+let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Condiciones del Programa de Referencia de Cybersays.club</strong></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &Uacute;ltima revisi&oacute;n: Febrero 2024</p>
+<p>Al inscribirse, utilizar o participar en cualquiera de los programas (el &quot;<strong>Programa</strong>&quot; o los &quot;<strong>Programas&quot;)&nbsp;</strong>operados por Pythia Grant Ltd. (la &quot;<strong>Empresa</strong>&quot;) a trav&eacute;s del sitio <a href="http://www.Cybersays.club">www.Cybersays.club</a> (el &quot;<strong>Sitio</strong>&quot;), usted (tal y como se define a continuaci&oacute;n), est&aacute; estableciendo un Acuerdo vinculante con la Empresa.</p>
+<p>AL PARTICIPAR EN LOS PROGRAMAS Y AL UTILIZAR EL SITIO, EL USUARIO CONFIRMA QUE ACEPTA Y EST&Aacute; DE ACUERDO CON EL PRESENTE ACUERDO Y CON TODOS LOS T&Eacute;RMINOS Y CONDICIONES ESTABLECIDOS A CONTINUACI&Oacute;N, INCLUIDA <a href="https://pussycash.com/antispam.asp">LA POL&Iacute;TICA ANTISPAM</a> (los &quot;<strong>T&eacute;rminos</strong>&quot;).&nbsp;</p>
+<p>ADEM&Aacute;S, SI ESTE ACUERDO EST&Aacute; SIENDO ACORDADO POR UNA EMPRESA U OTRA ENTIDAD LEGAL, ENTONCES LA PERSONA QUE ACUERDA ESTE ACUERDO EN NOMBRE DE ESA EMPRESA O ENTIDAD LEGAL POR LA PRESENTE DECLARA Y GARANTIZA QUE EST&Aacute; AUTORIZADA Y LEGALMENTE CAPACITADA PARA VINCULAR A ESA EMPRESA O ENTIDAD A ESTE ACUERDO OPERATIVO.</p>
+<p>&iexcl;QUEDA TERMINANTEMENTE PROHIBIDO PROMOCIONAR EL SITIO POR CORREO ELECTR&Oacute;NICO!</p>
+<p>El env&iacute;o de spam por SMS est&aacute; estrictamente prohibido.&nbsp;</p>
+<p>El incumplimiento de cualquiera de los t&eacute;rminos de la Pol&iacute;tica Anti-Email y Anti-Spam dirigir&aacute; a la finalizaci&oacute;n inmediata de su cuenta y la p&eacute;rdida de todos sus pagos elegibles.&nbsp;</p>
+<ol>
+    <li><strong>Programa de remisi&oacute;n</strong>:&nbsp;<ol>
+            <li><strong>Programa de pago de $1 por registro -&nbsp;</strong>En este programa se le pagar&aacute;&nbsp;$1USD&nbsp;por cada nuevo y leg&iacute;timo usuario registrado referido que env&iacute;e a ImLive.com, dentro del periodo del programa de referidos.&nbsp;&nbsp;No se requieren objetivos ni m&iacute;nimos<strong>.&nbsp;</strong></li>
+            <li>Por<strong>&nbsp;&quot;Usuario Referido que se inscribe&quot;&nbsp;</strong>se entender&aacute; un Usuario Referido que:<ol>
+                    <ol>
+                        <li>Creado una nueva cuenta de usuario Cybersays.Club ,&nbsp;<strong>y&nbsp;</strong></li>
+                        <li>Utiliz&oacute; el enlace referido para crear una nueva cuenta registr&aacute;ndose e inscribi&eacute;ndose por primera vez en ImLive.com,&nbsp;<strong>y</strong><strong>&nbsp;</strong></li>
+                        <li>Realiz&oacute; una primera compra de 5$ USD (o cualquier otra suma acordada espec&iacute;ficamente entre las partes) en su primera compra de cr&eacute;ditos, en ImLive.com para recibir una bonificaci&oacute;n adicional de 5 cr&eacute;ditos (total de 10 cr&eacute;ditos) y&nbsp;</li>
+                        <li>Gaste la totalidad de sus 10 cr&eacute;ditos en ImLive.com.&nbsp;</li>
+                    </ol>
+                </ol>
+            </li>
+            <li>Por<strong>&nbsp;&quot;Per&iacute;odo del Programa de Referencia&quot;&nbsp;</strong>se entender&aacute; un m&aacute;ximo de 24 horas a partir del momento en que se registr&oacute; por primera vez en el Sitio. &nbsp;</li>
+        </ol>
+    </li>
+</ol>
+<p>La Empresa puede cambiar esta definici&oacute;n, a su entera discreci&oacute;n, de vez en cuando, tal como se presenta en el sitio.&nbsp;</p>
+<p><br></p>
+<ol>
+    <li><strong>SU RESPONSABILIDAD</strong>
+        <ol>
+            <li>Por la presente, usted garantiza y declara que son mayores de 18 a&ntilde;os y que, en todos los aspectos, est&aacute;n cualificados y son competentes para introducir estos T&eacute;rminos.</li>
+            <li>Por la presente, usted declara, garantiza y se compromete con la Empresa a lo siguiente:</li>
+        </ol>
+    </li>
+</ol>
+<p>(a) Usted es legalmente competente y tiene plena autoridad para establecer el presente Acuerdo y los T&eacute;rminos; (b) El sitio web del Afiliado y todos los materiales, contenidos y servicios ofrecidos a trav&eacute;s y en asociaci&oacute;n con el sitio web del Afiliado no contienen en ning&uacute;n momento lo siguiente&nbsp;<br>Violar ninguna ley, o regulaci&oacute;n o promover actividades ilegales de ning&uacute;n tipo&nbsp;<br>Usted cumplir&aacute; con todas las leyes federales, estatales y locales aplicables en el desempe&ntilde;o de sus obligaciones, incluyendo pero no limit&aacute;ndose a las regulaciones relativas a: la prohibici&oacute;n de participar en cualquier actividad que se considere spoofing, la prohibici&oacute;n de enviar correos electr&oacute;nicos no solicitados (spam), la prohibici&oacute;n de utilizar un encabezado enga&ntilde;oso en la l&iacute;nea de asunto de todos y cada uno de los correos electr&oacute;nicos enviados, tener un enlace de eliminaci&oacute;n v&aacute;lido en todos y cada uno de los correos electr&oacute;nicos que env&iacute;e y utilizar una direcci&oacute;n &quot;de&quot; v&aacute;lida en todos y cada uno de los correos electr&oacute;nicos enviados;</p>
+<p>(f) Por la presente se compromete a cumplir con todos los t&eacute;rminos de la Pol&iacute;tica Anti-Spam del Sitio y entiende que el incumplimiento de cualquiera de los t&eacute;rminos de la Pol&iacute;tica Anti-Spam del Sitio dar&aacute; lugar a la finalizaci&oacute;n inmediata de su cuenta y a la posible confiscaci&oacute;n de todas sus ganancias, as&iacute; como al posible inicio de acciones legales contra el Afiliado.</p>
+<ol>
+    <li><strong>DERECHOS DE PROPIEDAD.</strong></li>
+</ol>
+<p>Todos los materiales del Sitio y los Materiales son propiedad de la Empresa, constituyen una valiosa propiedad intelectual, tienen derechos de autor y est&aacute;n protegidos por las disposiciones de los tratados y las leyes mundiales de derechos de autor.&nbsp;</p>
+<p>Los materiales de la Empresa, incluidos los que aparecen en el Sitio y en los Programas, no podr&aacute;n reproducirse, copiarse, editarse, publicarse, transmitirse ni cargarse de ninguna forma sin autorizaci&oacute;n por escrito. La suscripci&oacute;n al Sitio o la participaci&oacute;n en el Programa no le otorgan ning&uacute;n derecho expreso o impl&iacute;cito sobre ninguna de las marcas comerciales, derechos de autor u otra informaci&oacute;n de propiedad de la Empresa.&nbsp;</p>
+<p>No se garantiza que los materiales disponibles en los sitios web de la Empresa sean apropiados o est&eacute;n disponibles para su uso en otros lugares, y se proh&iacute;be el acceso a los mismos desde jurisdicciones en las que su contenido sea ilegal. Queda expresamente excluida la aplicaci&oacute;n de la Convenci&oacute;n de las Naciones Unidas sobre los Contratos de Compraventa Internacional de Mercader&iacute;as.</p>
+<ol>
+    <li><strong>CONFIDENCIALIDAD</strong>
+        <ol>
+            <li>Usted acepta que toda la informaci&oacute;n que se le facilite en el curso de las relaciones entre las partes, o de la que tenga conocimiento, incluyendo, sin limitaci&oacute;n, la informaci&oacute;n comercial y financiera de la Empresa, sus listas de clientes y sus estrategias de marketing (la &quot;<strong>Informaci&oacute;n Confidencial</strong>&quot;), ser&aacute; estrictamente confidencial y no podr&aacute; (a) ser&aacute; utilizada, directa o indirectamente, por Usted para sus propios fines comerciales o para cualquier otro prop&oacute;sito (incluyendo, sin limitaci&oacute;n, la promoci&oacute;n de otras Empresas o servicios); (b) no ser&aacute; revelada por Usted a ning&uacute;n tercero, excepto a sus empleados que tengan necesidad de conocerla con el fin de llevar a cabo el presente Acuerdo; y (c) no realizar&aacute; ni permitir&aacute; que nadie realice, directa o indirectamente, ingenier&iacute;a inversa, descompilaci&oacute;n, desensamblaje, creaci&oacute;n de trabajos derivados, modificaci&oacute;n, traducci&oacute;n, creaci&oacute;n y/o transferencia de copias de la Informaci&oacute;n Confidencial, eliminaci&oacute;n de cualquier identificaci&oacute;n, incluidos los avisos de derechos de autor, marcas comerciales, patentes u otros avisos, contenidos en los Sitios Web de la Empresa o relacionados con los mismos . Lo anterior no se aplicar&aacute; a la informaci&oacute;n que est&eacute; o haya llegado a estar a disposici&oacute;n del p&uacute;blico en general por causas ajenas al Afiliado, o que fuera conocida por Usted antes de su divulgaci&oacute;n por parte de la Empresa, seg&uacute;n conste en los registros escritos del Afiliado.</li>
+            <li>La Empresa poseer&aacute; y conservar&aacute; todos los derechos, t&iacute;tulos e intereses sobre todos los nombres, direcciones y otros datos de identificaci&oacute;n personal de los registros y clientes potenciales recomendados, y usted no tendr&aacute; derecho a que se le facilite ninguno de estos datos. Usted no conservar&aacute; ning&uacute;n dato relativo a la identidad de los Referred Sign-Ups, Leads o de cualquier persona o Empresa que haya facilitado sus datos a la Empresa a trav&eacute;s del enlace de la p&aacute;gina web del Afiliado.</li>
+        </ol>
+    </li>
+    <li><strong>FRAUDE</strong>
+        <ol>
+            <li>En caso de que la Empresa determine, a su entera y absoluta discreci&oacute;n, que el afiliado est&aacute; involucrado en cualquier actividad fraudulenta, como participar en el programa de mala fe y/o enga&ntilde;ar al programa y/o proporcionar informaci&oacute;n falsa o enga&ntilde;osa (la &quot;<strong>actividad fraudulenta</strong>&quot;), la Empresa tendr&aacute; derecho, a su entera y absoluta discreci&oacute;n, a cancelar la participaci&oacute;n del afiliado y finalizar la cuenta del afiliado, en todos y cada uno de los programas, en cualquier momento, sin notificaci&oacute;n previa, y a retener todas las ganancias de comisiones del afiliado en el programa.</li>
+            <li>Por la presente, usted acepta que la Empresa pueda compensar el contracargo o deducir de otro modo de la comisi&oacute;n y/o de cualquier cantidad debida al afiliado.</li>
+        </ol>
+    </li>
+    <li>La Empresa podr&aacute; finalizar en cualquier momento, y sin causa alguna, la cuenta del afiliado en el sitio.</li>
+    <li>Usted entiende y acepta que cualquiera de las siguientes acciones por su parte o por parte de cualquier persona bajo su control tendr&aacute; como resultado la finalizaci&oacute;n inmediata de la(s) cuenta(s) del Afiliado y la p&eacute;rdida de todas las Comisiones y ganancias no pagadas del Afiliado (previo aviso del Sitio):&nbsp;<br>(a) Enviar CUALQUIER correo electr&oacute;nico promocional en nombre de los sitios que participan en el/los Programa(s);&nbsp;<br>(b) Promocionar contenidos como: bestialidad, pornograf&iacute;a infantil/menor, violaci&oacute;n, obscenidad, violencia o cualquier otra actividad ilegal; (c)&nbsp;<br>Intentar defraudar a la Empresa de cualquier forma;&nbsp;<br>(d) Proporcionar informaci&oacute;n incorrecta o incompleta sobre la cuenta;&nbsp;<br>(e) Violar o infringir cualquier derecho de cualquier persona o entidad, incluyendo sin limitaci&oacute;n, cualquier derecho de autor, derecho de marca, derecho de patente, derecho de publicidad, derecho de privacidad o cualquier otro derecho intelectual, personal o de propiedad;&nbsp;<br>(f) Mostrar anuncios sexualmente expl&iacute;citos a los consumidores, a menos que los consumidores est&eacute;n buscando activamente contenidos sexualmente expl&iacute;citos o a menos que los consumidores hayan dado su consentimiento para ver contenidos sexualmente expl&iacute;citos;&nbsp;<br>(g) Mostrar anuncios emergentes sexualmente expl&iacute;citos en sitios que no sean para adultos, para promocionar cualquiera de los Sitios. La Empresa tiene la &uacute;nica deserci&oacute;n de determinar si un sitio est&aacute; orientado a adultos o no en lo que respecta a esta cl&aacute;usula; (h<br>) Cualquier otro incumplimiento de las Condiciones, en su versi&oacute;n modificada de vez en cuando, o de las normas y reglamentos de cualquier Programa(s);&nbsp;<br>o&nbsp;<br>(i) La Empresa tiene razones para creer que cualquiera de los anteriores ha ocurrido o es probable que ocurra.</li>
+    <li><strong>VARIOS</strong>
+        <ol>
+            <li>Usted est&aacute; sujeto a las Condiciones, as&iacute; como a las normas y reglamentos espec&iacute;ficos de cada Programa.</li>
+            <li>Adem&aacute;s de las Condiciones, el Sitio puede tener Condiciones de Uso adicionales que son, y pasar&aacute;n a ser, parte integrante de las Condiciones.</li>
+            <li>El presente Acuerdo constituye el acuerdo completo entre Usted y la Empresa con respecto al objeto del mismo, y los T&eacute;rminos sustituyen a todos los entendimientos, escritos y declaraciones anteriores, ya sean orales o escritos, y s&oacute;lo podr&aacute;n ser modificados por la Empresa.</li>
+            <li>Si un tribunal de jurisdicci&oacute;n competente declarara nula o inaplicable en cualquier medida alguna de las disposiciones del presente Acuerdo, dicha disposici&oacute;n se considerar&aacute; extirpada y eliminada s&oacute;lo en la medida necesaria para que las disposiciones restantes y el presente Acuerdo sean aplicables. Salvo que se disponga espec&iacute;ficamente lo contrario, las disposiciones del presente Acuerdo sobrevivir&aacute;n a su finalizaci&oacute;n.</li>
+            <li><strong>No&nbsp;</strong>podr&aacute; hacer publicidad o solicitar miembros para la Empresa o cualquiera de los sitios web de la Empresa por correo electr&oacute;nico, mensajes de texto, mensajes de Twitter, llamadas telef&oacute;nicas, folletos, octavillas, correo postal, carteles, cupones, folletos, solicitudes en persona o solicitud por cualquier otro medio a menos que tenga un permiso por escrito de la Empresa.</li>
+            <li>Usted reconoce y acepta que la Empresa no ofrece garant&iacute;as de ning&uacute;n tipo con&nbsp;</li>
+            <li>Usted tambi&eacute;n entiende y acepta que la Empresa puede compartir informaci&oacute;n personal seleccionada con terceros con fines de verificaci&oacute;n y complementaci&oacute;n de datos.</li>
+            <li>La Empresa se reserva el derecho a modificar las condiciones de los Programas, as&iacute; como las escalas de pago, en cualquier momento y a su entera y absoluta discreci&oacute;n. Todos y cada uno de los cambios ser&aacute;n aplicables y v&aacute;lidos a partir de la publicaci&oacute;n de los t&eacute;rminos en el Sitio sin previo aviso.</li>
+            <li>Las partes del presente documento son y seguir&aacute;n siendo contratistas independientes, y nada de lo aqu&iacute; estipulado se considerar&aacute; que crea ninguna relaci&oacute;n de agencia, asociaci&oacute;n o Empresa conjunta entre las partes. Ninguna de las partes se considerar&aacute; empleada o representante legal de la otra, ni tendr&aacute; derecho o autoridad para crear ninguna obligaci&oacute;n en nombre de la otra parte.</li>
+            <li>Este Acuerdo se regir&aacute; por las leyes de Chipre y el tribunal aplicable en Chipre tendr&aacute; la jurisdicci&oacute;n exclusiva con respecto a cualquier acci&oacute;n que surja de este Acuerdo.</li>
+            <li>Todas las disposiciones del presente documento que, de forma expresa o por su naturaleza, deban sobrevivir a la finalizaci&oacute;n o expiraci&oacute;n de este Acuerdo para lograr su prop&oacute;sito, sobrevivir&aacute;n hasta que ya no sea necesario que sobrevivan para lograr dicho prop&oacute;sito.</li>
+        </ol>
+    </li>
+</ol>
+<p><br></p>`
 let pt_text = `<p style="text-align:center;font-size:16pt!important;" class="p14">
 <span class="s22"
   ><strong
@@ -524,4 +597,5 @@ de Mercadorias est&aacute; expressamente exclu&iacute;da.
     >
   </li>
 </ol>
-</ol>`
+</ol>
+<p><br></p>`

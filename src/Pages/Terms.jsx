@@ -455,7 +455,220 @@ let en_text =  `<p style="text-align:center;font-size:16pt!important;"><strong>C
 <p>If you have any questions, would like to provide us feedback or receive more information about us, please feel
     free to email us.&nbsp;</p>
 <p><br></p>`
-let es_text =  '<div>Termos de Uso2</div>'
+let es_text =  `<p style="text-align:center;font-size:16pt!important;"><strong>Cybersays.Club - Condiciones de uso</strong></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&Uacute;ltima revisi&oacute;n:&nbsp;Febrero 2024</p>
+<p>Las presentes Condiciones de uso (&quot;<strong>Condiciones</strong>&quot;) constituyen un Acuerdo legal vinculante entre Pythia Grant Ltd. (&quot;<strong>Empresa</strong>&quot;, &quot;<strong>nosotros</strong>&quot; o &quot;<strong>nuestro</strong>&quot;) y usted (&quot;<strong>Usuario final</strong>&quot;, &quot;<strong>usted</strong>&quot; o &quot;<strong>su</strong>&quot;), y rigen su acceso y uso de todas las funciones y otros servicios proporcionados por la Empresa, incluido, sin limitaci&oacute;n, nuestro sitio web: <a href="http://www.Cybersays.club">www.Cybersays.club</a> (&quot;<strong>Sitio web</strong>&quot;; colectivamente, los &quot;<strong>Servicios</strong>&quot;).&nbsp;</p>
+<p><br></p>
+<p>Al registrar una cuenta y acceder a los Servicios, usted afirma haber le&iacute;do, comprendido y aceptado quedar vinculado por estas Condiciones, as&iacute; como por nuestra&nbsp;<em>Pol&iacute;tica de Privacidad</em>, que podemos actualizar de vez en cuando, cada una incorporada aqu&iacute; por referencia&nbsp;(&quot;<strong>Pol&iacute;ticas</strong>&quot;).&nbsp;</p>
+<p>Si no est&aacute; de acuerdo con estas Pol&iacute;ticas, no debe registrar una cuenta ni utilizar o acceder de otro modo a los Servicios.&nbsp;&nbsp;Al utilizar nuestros Servicios, usted acepta de forma inequ&iacute;voca los T&eacute;rminos y Condiciones de nuestros Socios (tal y como se definen a continuaci&oacute;n), incluidos, entre otros, los T&eacute;rminos y Condiciones especificados en <a href="http://www.ImLive.com">www.ImLive.com</a> (&quot;<strong>T&eacute;rminos de los Socios</strong>&quot;).&nbsp;</p>
+<p>Estos Acuerdos complementar&aacute;n todos los Acuerdos anteriores que haya podido tener con nosotros o con cualquiera de nuestros Afiliados. Por lo tanto, le animamos a que lea detenidamente estas Condiciones y todos los t&eacute;rminos que puedan afectar a su uso de los Servicios.</p>
+<p>Podemos revisar los T&eacute;rminos en cualquier momento actualizando los T&eacute;rminos en nuestros Servicios. Usted debe visitar peri&oacute;dicamente estos T&eacute;rminos para revisar los t&eacute;rminos actuales que se aplican a su uso de los Servicios. Cualquier uso de los Servicios por su parte tras la publicaci&oacute;n por nuestra parte de cualquiera de dichas modificaciones constituir&aacute; su aceptaci&oacute;n de estos T&eacute;rminos en su versi&oacute;n modificada. Podremos, a nuestra entera discreci&oacute;n y en cualquier momento, dejar de prestar los Servicios, o cualquier parte de los mismos, sin previo aviso.&nbsp;</p>
+<p>USTED RECONOCE QUE LOS SERVICIOS SON ESTRICTAMENTE PARA FINES DE ENTRETENIMIENTO.</p>
+<p>&nbsp;</p>
+<p>Al registrar una cuenta o acceder de cualquier otro modo a los Servicios, en la medida m&aacute;xima permitida por la Legislaci&oacute;n Aplicable (tal y como se define m&aacute;s adelante), usted acepta que cualquier reclamaci&oacute;n, disputa o controversia de cualquier naturaleza que surja o est&eacute; relacionada con estas Condiciones, o con su uso de los Servicios, se resolver&aacute; de acuerdo con el proceso descrito en la Secci&oacute;n 13. &quot;Varios&quot; m&aacute;s adelante.</p>
+<ol>
+    <li><strong>DEFINICIONES</strong></li>
+</ol>
+<p>A efectos del presente Acuerdo, los siguientes t&eacute;rminos en may&uacute;sculas tendr&aacute;n el significado que se les atribuye en el mismo:</p>
+<ol>
+    <ol>
+        <li>&quot;<strong>Cuenta</strong>&quot; significa una cuenta creada por usted a trav&eacute;s de nuestro Sitio Web que le permite acceder a los Servicios.</li>
+        <li><strong>&quot;Informaci&oacute;n de la cuenta</strong>&quot; se refiere a cualquier tipo de informaci&oacute;n que podamos solicitar al usuario final en el proceso de registro, incluidos, entre otros, la direcci&oacute;n de correo electr&oacute;nico, el nombre de usuario, los datos de su ID de Facebook y Google, y los datos de identificaci&oacute;n de la cuenta del&nbsp;sitio web de su&nbsp;socio.</li>
+        <li><strong>&quot;Afiliada&quot;&nbsp;</strong>se refiere a las filiales, Empresas conjuntas y otras entidades corporativas de la Empresa y sus agentes, consultor, empleados, funcionarios y directores.</li>
+        <li><strong>&quot;Ley aplicable&quot;&nbsp;</strong>significa cualquier ley, estatuto, norma, reglamento, orden, circular, decreto, directiva, sentencia, decisi&oacute;n u otro mandato similar de cualquier autoridad gubernamental central, nacional, estatal o local aplicable que tenga jurisdicci&oacute;n competente sobre, o aplicaci&oacute;n, relacionada con el Usuario Final, o asunto en cuesti&oacute;n.</li>
+        <li><strong>&quot;Derechos de Propiedad Intelectual&quot;&nbsp;</strong>significa cualesquiera patentes, marcas registradas, derechos de autor, derechos de dise&ntilde;o (sean registrables o no), logotipos, derechos de autor, nombres comerciales, Empresariales y de dominio, derechos morales, know-how, secretos comerciales, derechos sobre bases de datos, derechos sobre programas inform&aacute;ticos y cualesquiera otros derechos u obligaciones similares, sean registrables o no (e incluyendo todas las solicitudes y renovaciones o extensiones de tales derechos) en cualquier pa&iacute;s.</li>
+        <li><strong>&quot;Ofertas&quot;&nbsp;</strong>se refiere a cualquier oferta especial en l&iacute;nea y sus reglas, tal y como se presentan en el sitio web, y pueden cambiar de vez en cuando, por los Socios o la Empresa en los Servicios en los que el Usuario Final puede participar. &nbsp;</li>
+    </ol>
+</ol>
+<p>La Oferta incluir&aacute; la posibilidad de duplicar la cantidad inicial adquirida por el Usuario Final, &uacute;nicamente con respecto a su compra inicial. es decir, por los 5 cr&eacute;ditos iniciales adquiridos, el Usuario recibir&aacute; 10 cr&eacute;ditos para su uso en ImLive.com.&nbsp;</p>
+<p>Adem&aacute;s, el Usuario podr&aacute; recibir un importe real de devoluci&oacute;n de efectivo. Debido a&nbsp;la diferencia de divisas - los valores del importe de devoluci&oacute;n en efectivo, en la Oferta, ser&aacute;n los siguientes:</p>
+<ul>
+    <li>Por los cinco (5) cr&eacute;ditos iniciales que se compren en $USD o en EURO - el Usuario recibir&aacute; diez d&oacute;lares estadounidenses ($10 USD), al gastar la totalidad de los 10 cr&eacute;ditos.&nbsp;</li>
+    <li>Por los primeros e iniciales cinco (5) cr&eacute;ditos -comprados en libras esterlinas GBP- el Usuario recibir&aacute; doce d&oacute;lares estadounidenses con cincuenta centavos ($12,50 USD), al gastar la totalidad de los 10 cr&eacute;ditos.&nbsp;</li>
+</ul>
+<ol>
+    <ol>
+        <li><strong>&quot;Socio(s)&quot;&nbsp;</strong>se refiere a cualquier proveedor de servicios externo que proporcione Ofertas al Usuario Final en o a trav&eacute;s de los Servicios.</li>
+        <li><strong>&quot;Premio</strong>&quot; significa cualquier beneficio o ventaja que los Usuarios Finales puedan recibir al culminar con &eacute;xito las Ofertas sujetas a los T&eacute;rminos, T&eacute;rminos del Socio.&nbsp;</li>
+        <li><strong>&quot;Proveedor&quot;</strong>, tal y como se define en la Secci&oacute;n 6.</li>
+        <li><strong>&quot;Sitio(s) web</strong>&quot; significa el sitio,&nbsp;www.Cybersays.club, y cualquier otro sitio seg&uacute;n lo defina la Empresa, a su entera discreci&oacute;n, de vez en cuando.&nbsp;</li>
+    </ol>
+</ol>
+<p><br></p>
+<ol>
+    <li><strong>Uso de nuestros servicios y ofertas</strong></li>
+</ol>
+<p>Para acceder o participar en las Ofertas que se ponen a su disposici&oacute;n en nuestro Sitio Web, debe crear una Cuenta con nosotros.&nbsp;</p>
+<p>Tenga en cuenta que los Servicios pueden no ser totalmente compatibles con todas las plataformas, dispositivos y sistemas operativos, por lo que le animamos a que verifique usted mismo todos los requisitos de compatibilidad y actualice cuando sea necesario el software de terceros de vez en cuando para poder recibir los Servicios, las actualizaciones y participar en las Ofertas disponibles en nuestro Sitio Web.&nbsp;</p>
+<p>Cuando cree una Cuenta, es posible que se le pida que proporcione Informaci&oacute;n de la Cuenta, que puede implicar:&nbsp;</p>
+<ol>
+    <li>Registrar un nombre de usuario y una contrase&ntilde;a &uacute;nicos (si procede) ;&nbsp;</li>
+    <li>Proporcionar informaci&oacute;n de contacto, como su direcci&oacute;n de correo electr&oacute;nico;&nbsp;</li>
+    <li>Proporcionar cualquier otra informaci&oacute;n que solicitemos durante el proceso de registro de la cuenta.&nbsp;</li>
+</ol>
+<p><br></p>
+<p>Al acceder o utilizar nuestros Servicios o participar en nuestras Ofertas, usted se compromete a cumplir todo lo siguiente:&nbsp;</p>
+<ol>
+    <li>Ha alcanzado la mayor&iacute;a de edad tanto en el territorio en el que reside;</li>
+    <li>Usted es el &uacute;nico responsable de mantener segura la Informaci&oacute;n de su Cuenta y de cualquier cosa que ocurra en su Cuenta, independientemente de que las acciones hayan sido realizadas por usted o por un tercero no autorizado que haya obtenido acceso a su Cuenta;</li>
+    <li>S&oacute;lo podr&aacute; registrarse en una &uacute;nica Cuenta y no podr&aacute; utilizar ni acceder a varias Cuentas al mismo tiempo;</li>
+    <li>No crear&aacute; una Cuenta con una identidad falsa ni proporcionar&aacute; informaci&oacute;n incorrecta, ni crear&aacute; una Cuenta en nombre de otra persona que no sea usted;&nbsp;</li>
+    <li>No compartir&aacute; ni dar&aacute; acceso a la Informaci&oacute;n de su Cuenta a nadie, ni har&aacute; nada que pueda poner en peligro la seguridad de su Cuenta;&nbsp;</li>
+    <li>Deber&aacute; notificarnos inmediatamente, tal y como se detalla en la Secci&oacute;n 16 &quot;Contacte con nosotros&quot; de estas Condiciones, si ha perdido el control de su contrase&ntilde;a o sospecha que se est&aacute; produciendo una actividad no autorizada en su Cuenta, incluido el robo o la divulgaci&oacute;n no autorizada de la Informaci&oacute;n de su Cuenta;</li>
+    <li>Usted no nos considerar&aacute; responsables de cualquier p&eacute;rdida, da&ntilde;o, acceso no autorizado o cualquier violaci&oacute;n de su Cuenta y de la divulgaci&oacute;n de la Informaci&oacute;n de su Cuenta.</li>
+</ol>
+<p>Como titular de su Cuenta, usted es el &uacute;nico responsable del cumplimiento de estas Condiciones y de las Condiciones de Socio y s&oacute;lo usted tiene derecho a todos los beneficios derivados de las mismas.&nbsp;</p>
+<p><br></p>
+<ol>
+    <li><strong>Verificaci&oacute;n de la cuenta</strong></li>
+</ol>
+<p>Nos reservamos el derecho a verificar en cualquier momento sus datos de registro, como nombre, direcci&oacute;n, edad, solicit&aacute;ndole determinados documentos. En caso de que no facilite la documentaci&oacute;n requerida, podremos, a nuestra entera discreci&oacute;n, negarnos a prestarle los Servicios y retener cualquier Premio.</p>
+<p>Usted se compromete a actualizar cualquier informaci&oacute;n o dato que nos haya facilitado o a proporcionar documentaci&oacute;n adicional como parte de los esfuerzos continuos para prevenir actividades ilegales y fraudulentas, o para cumplir con cualquier otra pol&iacute;tica o protocolo que decidamos establecer. Usted acepta que toda la informaci&oacute;n y los datos que nos proporcione, ya sea en el momento de registrarse para obtener una cuenta o en cualquier otro momento posterior, ser&aacute;n veraces, exactos y verificables en todos los aspectos, y que al proporcionar dicha informaci&oacute;n y datos, da su consentimiento para que los enviemos a terceros proveedores de verificaci&oacute;n.</p>
+<p><br></p>
+<ol>
+    <li><strong>Dispositivo e informaci&oacute;n personal</strong></li>
+</ol>
+<p>El uso de los Servicios requiere una conexi&oacute;n a Internet a nuestros servidores y usted entiende y reconoce que es el &uacute;nico responsable de pagar cualquier tarifa, incluidas las tarifas de conexi&oacute;n a Internet o m&oacute;viles necesarias para acceder o utilizar nuestros Servicios.&nbsp;&nbsp;Es posible que necesitemos recopilar cierta informaci&oacute;n de usted y de su dispositivo con conexi&oacute;n a Internet para poner a su disposici&oacute;n el software y los Servicios, como la Informaci&oacute;n de su Cuenta, el sistema de hardware, los datos de conexi&oacute;n a Internet y cualquier otro dato relacionado con el funcionamiento y la prestaci&oacute;n de los Servicios.&nbsp;&nbsp;Tenga en cuenta que utilizaremos y conservaremos dicha informaci&oacute;n de acuerdo con nuestra&nbsp;<em>Pol&iacute;tica de Privacidad.</em></p>
+<ol>
+    <li><strong>Ofertas&nbsp;</strong></li>
+</ol>
+<p>Al acceder o utilizar nuestros Servicios, puede optar por seleccionar y participar en Ofertas, tal y como se presentan in situ y pueden modificarse de vez en cuando.&nbsp;</p>
+<p><br></p>
+<p><strong>Usted comprende y reconoce que</strong>:&nbsp;</p>
+<ol>
+    <li>Los Servicios le proporcionar&aacute;n Ofertas, y cuando elija participar en una Oferta, ser&aacute; redirigido a la p&aacute;gina web del Socio.</li>
+    <li>Actuamos &uacute;nicamente como intermediarios, proporcionando una plataforma para mostrar las Ofertas de los Socios.&nbsp;</li>
+    <li>No somos responsables del contenido, la calidad o el cumplimiento de estas Ofertas, y cualquier problema o disputa que surja de estas interacciones debe resolverse directamente con los Socios de la Oferta.</li>
+    <li>Usted es consciente de que es el &uacute;nico responsable de revisar y cumplir las condiciones de uso del Socio relacionadas con cada Oferta pertinente.&nbsp;</li>
+    <li>No asumimos ninguna responsabilidad ni avalamos la exactitud, ni la disponibilidad de ning&uacute;n contenido o material puesto a disposici&oacute;n en la Oferta o en los servicios del Socio.</li>
+</ol>
+<p><br></p>
+<p>Le recomendamos encarecidamente que guarde o haga una captura de pantalla de cada Oferta que haya culminado con &eacute;xito, ya que es posible que se le solicite que nos proporcione dicha prueba en caso de que se produzca o surja alg&uacute;n problema relacionado con la Oferta. &nbsp;&nbsp;Usted reconoce y acepta que podemos cambiar, modificar o actualizar las Condiciones de vez en cuando, y que dichas condiciones revisadas se aplicar&aacute;n a su uso de los Servicios, as&iacute; como a todas las Ofertas posteriores en las que participe. Asimismo, acepta que revisar&aacute; las presentes Condiciones, las Condiciones de los Socios y cualquier condici&oacute;n relativa a la introducci&oacute;n o participaci&oacute;n en cualquier Oferta.</p>
+<p><br></p>
+<p>Nos tomamos el fraude muy en serio. Tenga en cuenta que, adem&aacute;s de emprender cualquier acci&oacute;n legal deseable o necesaria, nos reservamos el derecho de finalizar su uso de los Servicios y confiscar su Premio. Le notificaremos antes de dicha confiscaci&oacute;n o finalizaci&oacute;n para darle la oportunidad de presentar una apelaci&oacute;n a trav&eacute;s de los Servicios; no obstante, nuestra determinaci&oacute;n, a nuestra entera discreci&oacute;n, ser&aacute; definitiva y vinculante para usted.</p>
+<p><br></p>
+<ol>
+    <li><strong>Pago y premios&nbsp;</strong></li>
+</ol>
+<p>Al utilizar nuestros Servicios, usted entiende y reconoce que puede recibir determinados Premios tal y como se presentan en nuestro Sitio Web. El incumplimiento de cualquiera de las disposiciones contenidas en las Condiciones o en las Condiciones de Socio dar&aacute; lugar a la finalizaci&oacute;n de su Cuenta y a la p&eacute;rdida de su derecho a recibir un premio.&nbsp;</p>
+<p><strong>Limitaci&oacute;n de edad</strong>. La informaci&oacute;n contenida en este Sitio Web o en nuestros Servicios o cualquier recompensa asociada <strong>no est&aacute;&nbsp;</strong>destinada a ser distribuida o utilizada por ninguna persona en ning&uacute;n pa&iacute;s en el que dicha distribuci&oacute;n o uso sea contrario a las leyes o reglamentos locales o a cualquier Ley Aplicable, ni a ninguna persona menor de dieciocho (18) a&ntilde;os o menor de la mayor&iacute;a de edad en su pa&iacute;s de residencia o nacionalidad.&nbsp;&nbsp;Es responsabilidad de los visitantes y Usuarios Finales de este Sitio Web cerciorarse de los t&eacute;rminos de y cumplir con todas las Leyes Aplicables y con estos T&eacute;rminos y Condiciones de los Socios.</p>
+<p><br></p>
+<p>Por la presente, usted exime a la Empresa de toda responsabilidad relacionada de cualquier modo con cualquiera de las acciones que pueda llevar a cabo o cualquier actividad en la que pueda participar y que est&eacute; relacionada de cualquier modo con la Empresa o el uso de los Servicios.</p>
+<p>Por favor, tenga en cuenta: Podemos utilizar a otros terceros para realizar ciertas funciones relacionadas con el negocio, como <a href="https://www.xoxoday.com/">https://www.xoxoday.com/</a> y/o <a href="https://www.paypal.com/cy/home">https://www.paypal.com/cy/home</a><strong>&nbsp;(&quot;Proveedores&quot;). &nbsp;</strong></p>
+<p>Usted es el &uacute;nico responsable de revisar los T&eacute;rminos y Condiciones que rigen su uso de los servicios del Proveedor. Usted comprende y reconoce que las condiciones de los servicios del Proveedor pueden diferir de las presentes Condiciones.&nbsp;</p>
+<p>Los requisitos para optar a los Premios, tal y como se presentan in situ y pueden modificarse de vez en cuando, son &uacute;nicamente para los Usuarios finales que se hayan registrado correctamente en nuestros Servicios, que tengan una Cuenta activa v&aacute;lida y que cumplan estas Condiciones y las Condiciones de los socios.&nbsp;</p>
+<p>Usted entiende y acepta que los pagos a los que pueda tener derecho son estrictamente para su propio beneficio y que nadie m&aacute;s tiene derecho a ellos o a beneficiarse de los mismos. El incumplimiento de estas Condiciones o de las Condiciones de los Socios puede dar lugar al cierre de su Cuenta y a la p&eacute;rdida de todos los pagos acumulados por su uso de los Servicios. &nbsp;</p>
+<p>Todos los pagos podr&aacute;n ser confiscados, revocados, eliminados, considerados nulos, si su Cuenta es finalizada o suspendida por cualquier motivo, a nuestra entera y absoluta discreci&oacute;n, o si los Servicios dejan de estar disponibles.&nbsp;</p>
+<p>Si su Cuenta es finalizada, suspendida y/o si cualquier pago de su Cuenta es confiscado selectivamente, revocado, borrado, considerado nulo, no se le conceder&aacute; ning&uacute;n reembolso, no se le abonar&aacute; ning&uacute;n pago ni se convertir&aacute; en dinero en efectivo u otras formas de reembolso.</p>
+<ol>
+    <li><strong>Final Declaraciones de los usuarios y usos prohibidos</strong></li>
+</ol>
+<p>S&oacute;lo podr&aacute; utilizar los Servicios para fines l&iacute;citos. Usted es el &uacute;nico responsable de toda su actividad en relaci&oacute;n con los Servicios. Usted garantiza y declara que tiene prohibido (y no permitir&aacute; que ning&uacute;n tercero lo haga) realizar cualquier acci&oacute;n que:&nbsp;</p>
+<ol>
+    <li>Sea ilegal, violento, amenazador, abusivo, invasivo de la privacidad de cualquier persona, acosador, difamatorio, calumnioso, falso, enga&ntilde;oso, fraudulento, enga&ntilde;oso, falso, tortuoso, ofensivo o inapropiado de cualquier otro modo, seg&uacute;n determinemos a nuestra entera discreci&oacute;n;&nbsp;</li>
+    <li>Infrinja, viole o se apropie indebidamente de cualquier derecho de terceros, incluido cualquier derecho de autor, marca registrada, patente, secreto comercial, derecho moral, derecho a la intimidad o cualquier otro derecho de propiedad intelectual o de propiedad que pueda existir en la actualidad o en el futuro;&nbsp;</li>
+    <li>Viola cualquier derecho de publicidad, u otro derecho de cualquier persona o entidad, o cualquier ley u obligaci&oacute;n contractual, incluyendo sin limitaci&oacute;n los derechos de conformidad con las leyes y reglamentos de protecci&oacute;n de datos, anti-spam y privacidad;&nbsp;</li>
+    <li>Copie, modifique, adapte, traduzca a cualquier idioma, distribuya o cree trabajos derivados basados en los Servicios;</li>
+    <li>Sublicencie, subarriende, arriende, preste, ceda, venda, conceda licencias, distribuya, alquile, exporte, reexporte u otorgue otros derechos sobre los Servicios y cualquier intento por su parte de llevar a cabo tal acci&oacute;n ser&aacute; nulo;</li>
+    <li>Descompile, desmonte, realice ingenier&iacute;a inversa o intente reconstruir, identifique o descubra cualquier c&oacute;digo fuente, ideas subyacentes, t&eacute;cnicas de interfaz de usuario subyacentes o algoritmos de los Servicios por cualquier medio;&nbsp;</li>
+    <li>Elimine, oculte o altere cualquier aviso de derechos de autor y/u otros avisos de propiedad contenidos en los Servicios o relacionados con ellos;</li>
+    <li>Implique una actividad comercial no permitida expresamente por nosotros;&nbsp;</li>
+    <li>Contenga software da&ntilde;ino o malicioso o c&oacute;digos inform&aacute;ticos, archivos o programas dise&ntilde;ados o destinados a da&ntilde;ar, interrumpir, interferir o limitar el correcto funcionamiento de cualquier software o hardware, o que permita obtener acceso no autorizado a cualquier sistema, dato, contrase&ntilde;a u otra informaci&oacute;n nuestra, de nuestros Usuarios finales o de cualquier otra persona o entidad;&nbsp;</li>
+    <li>Utiliza o pone en marcha cualquier sistema automatizado, incluidos, entre otros, &quot;robots&quot;, &quot;ara&ntilde;as&quot;, &quot;lectores fuera de l&iacute;nea&quot;, etc., que acceda a los Servicios de forma que env&iacute;e m&aacute;s mensajes de solicitud a nuestros servidores de los que un ser humano puede producir razonablemente en el mismo periodo de tiempo;&nbsp;</li>
+    <li>Transmita datos no v&aacute;lidos, gusanos, virus, troyanos o cualquier c&oacute;digo de naturaleza destructiva;&nbsp;</li>
+    <li>Transmita spam, cartas en cadena, materiales relacionados con cualquier campa&ntilde;a pol&iacute;tica, solicitudes comerciales, correos masivos o cualquier forma de spam u otros textos o correos electr&oacute;nicos no solicitados;</li>
+    <li>Suplante a cualquier individuo o entidad, incluyendo, sin limitaci&oacute;n, a nuestros empleados o representantes;&nbsp;</li>
+    <li>Utilice un n&uacute;mero de tel&eacute;fono o un correo electr&oacute;nico falsos, una identidad falsa o intente utilizar la Cuenta de otro usuario;&nbsp;</li>
+    <li>Utiliza los Servicios para el blanqueo de dinero, la financiaci&oacute;n del terrorismo u otras finanzas o actividades il&iacute;citas;&nbsp;</li>
+    <li>Se dirija a ni&ntilde;os o personas menores de edad en cualquier jurisdicci&oacute;n en la que los Servicios est&eacute;n disponibles;</li>
+    <li>Realice cualquier actividad que interrumpa o intente interrumpir el funcionamiento de los Servicios.&nbsp;</li>
+    <li>Realice cualquier actividad destinada a defraudar a la Empresa o a terceros o a eludir cualquier restricci&oacute;n contractual o legal, independientemente de que dicho intento haya causado a la Empresa alg&uacute;n perjuicio real.&nbsp;</li>
+</ol>
+<p>Cualquier persona que se involucre, participe o muestre un comportamiento que pueda ser interpretado, a nuestra entera discreci&oacute;n, como m&eacute;todos desleales al participar en los Servicios, incluyendo pero no limitado a:&nbsp;</p>
+<ol>
+    <li>la apertura o utilizaci&oacute;n de cuentas m&uacute;ltiples;&nbsp;</li>
+    <li>la colusi&oacute;n o acoso a otro Usuario Final;&nbsp;</li>
+    <li>el incumplimiento de estas Condiciones;&nbsp;</li>
+    <li>la violaci&oacute;n de la seguridad de su Cuenta; y/o&nbsp;</li>
+    <li>cualquier otro acto u omisi&oacute;n (ya sea mediante el uso de tecnolog&iacute;a automatizada o de otro tipo), estar&aacute; sujeto a una sanci&oacute;n inmediata (seg&uacute;n determinemos a nuestra entera discreci&oacute;n), que puede incluir, sin limitaci&oacute;n, la inhabilitaci&oacute;n total o parcial de la capacidad de uso o acceso a nuestros Servicios, as&iacute; como otras acciones legales. Nos reservamos el derecho a revelar o informar de cualquier blanqueo de dinero u otra actividad sospechosa a las fuerzas del orden y a las autoridades reguladoras.&nbsp;</li>
+</ol>
+<p>Tenga en cuenta que al acceder y utilizar los servicios de Partner, usted entiende y reconoce que puede estar expuesto a temas maduros, sexualidad humana y materiales expl&iacute;citos.&nbsp;</p>
+<p>Si usted es: (i) es menor de la edad legal de visi&oacute;n madura en su estado o pa&iacute;s; (ii) est&aacute; obligado por la ley de su pa&iacute;s a no mirar material sexual; (iii) se siente ofendido por el material sexualmente expl&iacute;cito; o (iv) no tiene permiso para acceder, introducir o utilizar los servicios puestos a su disposici&oacute;n en dichos sitios web, por lo que se le pide que no introduzca los servicios de los Socios.&nbsp;</p>
+<p>Usted entiende y reconoce que, en tal caso, usted es el &uacute;nico responsable del Premio que reciba, y nosotros no seremos responsables de ninguna acci&oacute;n que usted lleve a cabo que pudiera considerarse ilegal en su jurisdicci&oacute;n y/o en virtud de cualquier Ley Aplicable.&nbsp;</p>
+<p>Tambi&eacute;n acepta y confirma que no redistribuir&aacute; sus Premios a nadie, y que no permitir&aacute; que ning&uacute;n menor o cualquier otra persona se beneficie de los Premios que haya ganado o ganado a trav&eacute;s de los Servicios o que acceda o utilice los servicios del Socio. Por la presente, usted exime a la Empresa de toda responsabilidad relacionada de cualquier modo con cualquier acci&oacute;n que pueda llevar a cabo o cualquier actividad en la que pueda participar y que est&eacute; relacionada de cualquier modo con la Empresa o el uso de los Servicios.</p>
+<p><br></p>
+<p>Cualquier intento de da&ntilde;ar deliberadamente los Servicios o la violaci&oacute;n de las leyes penales o civiles y en caso de que tal intento se haga, nos reservamos el derecho de reclamarle da&ntilde;os y perjuicios y otros recursos en la m&aacute;xima medida, seg&uacute;n lo permitido por la Ley Aplicable.</p>
+<p>Nos reservamos el derecho a ejercer los medios legales que consideremos necesarios para impedir el uso no autorizado de los Servicios, incluyendo, entre otros, barreras tecnol&oacute;gicas, mapeo de IP y contactar directamente con su operador de telefon&iacute;a m&oacute;vil (celular) en relaci&oacute;n con dicho uso no autorizado.</p>
+<ol>
+    <li><strong>Enlaces de terceros&nbsp;</strong></li>
+</ol>
+<p>Algunas partes de los Servicios incluir&aacute;n enlaces a sitios web pertenecientes a terceros (como los sitios web de los Socios).&nbsp;&nbsp;<strong>No tenemos ning&uacute;n control sobre los sitios web de terceros, y todo uso de los sitios web de terceros corre por su cuenta y riesgo.</strong></p>
+<p>Podemos tener relaciones directas con socios, y podemos ser compensados por dichos socios en funci&oacute;n de su interacci&oacute;n con las ofertas, sitios web o servicios de los socios.&nbsp;&nbsp;Dicha compensaci&oacute;n no es, y no debe ser vista como, una aprobaci&oacute;n o recomendaci&oacute;n por nuestra parte.&nbsp;</p>
+<p><br></p>
+<p><strong>No nos hacemos responsables de las p&eacute;rdidas o da&ntilde;os, directos o indirectos, que puedan derivarse del uso o la confianza depositada en la informaci&oacute;n contenida en los sitios web o servicios de cualquier socio o tercero.</strong></p>
+<p><br></p>
+<p>Le recomendamos que lea detenidamente las condiciones de uso y la pol&iacute;tica de privacidad de dichos sitios web y/o servicios de terceros, ya que sus condiciones y su pol&iacute;tica de privacidad, y no las nuestras, se aplicar&aacute;n a cualquiera de sus interacciones con dichos terceros, as&iacute; como a cualquier requisito o limitaci&oacute;n espec&iacute;ficos asociados a sus ofertas o servicios. Siempre debe revisar sus pr&aacute;cticas cuidadosamente antes de aceptar la prestaci&oacute;n de cualquier servicio por parte de estos terceros.</p>
+<ol>
+    <li><strong>Licencia</strong></li>
+</ol>
+<p>Sujeto al cumplimiento por su parte de las Condiciones, le concedemos una licencia personal, limitada, no comercial, no exclusiva, no sublicenciable, no transferible y libremente revocable para utilizar los Servicios.&nbsp;&nbsp;Los Servicios incluyen materiales de los que somos propietarios o licenciatarios y que est&aacute;n protegidos por derechos de autor, marcas registradas, patentes y otros Derechos de Propiedad Intelectual mundiales y por la Legislaci&oacute;n Aplicable.&nbsp;&nbsp;<strong>No le&nbsp;</strong>concedemos a usted ni a ninguna otra parte ning&uacute;n derecho, t&iacute;tulo o inter&eacute;s sobre los Servicios o cualquier material disponible en nuestros Servicios.&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Usted entiende y reconoce todo lo siguiente -.</strong></p>
+<ol>
+    <li>El uso de los Servicios es &uacute;nicamente para entretenimiento personal y no comercial y no para ning&uacute;n otro prop&oacute;sito;</li>
+    <li>Cualquier material disponible en nuestros Servicios, incluidos los que aparecen en nuestro Sitio Web, no debe ser reproducido, copiado, editado, publicado, transmitido o cargado de ninguna manera sin nuestro permiso por escrito. El registro en nuestros Servicios o la participaci&oacute;n en Ofertas no le otorgan ning&uacute;n derecho expreso o impl&iacute;cito sobre ninguna de las marcas comerciales, derechos de autor u otra informaci&oacute;n de propiedad de la Empresa;</li>
+    <li>Si incumple o no acepta las Condiciones o las Condiciones de los socios, su licencia para acceder y/o utilizar los Servicios quedar&aacute; inmediatamente finalizada y ya no podr&aacute; acceder y/o utilizar nuestros Servicios.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li><strong>Sin garant&iacute;a</strong></li>
+</ol>
+<p>Usted acepta expresamente que el uso que haga de los Servicios corre por su cuenta y riesgo y es consciente de que los Servicios y las Ofertas se proporcionan &quot;tal cual&quot; y &quot;seg&uacute;n est&eacute;n disponibles&quot;, sin ning&uacute;n tipo de representaci&oacute;n o garant&iacute;a, ya sea expresa o impl&iacute;cita (ya sea por ley, estatuto o de otro modo), incluidas, entre otras, las garant&iacute;as impl&iacute;citas de comerciabilidad, idoneidad para un fin determinado y no infracci&oacute;n (ya sea en virtud de la legislaci&oacute;n aplicable o de otro modo).&nbsp;</p>
+<p>La Empresa no ofrece ninguna declaraci&oacute;n ni garant&iacute;a, expresa o impl&iacute;cita, de que su acceso a los Servicios y/o su uso de los mismos sea preciso, libre de errores, completo, ininterrumpido, continuo, o de que se corrija cualquier defecto, o de que el sitio web est&eacute; libre de virus y errores.&nbsp;&nbsp;La Empresa no se hace responsable de la funcionalidad total o parcial, la exactitud o la fiabilidad de la informaci&oacute;n o los materiales obtenidos por usted a trav&eacute;s de los Servicios.</p>
+<ol>
+    <li><strong>Limitaci&oacute;n de responsabilidad</strong></li>
+</ol>
+<p>En la medida m&aacute;xima permitida por la legislaci&oacute;n aplicable, en ning&uacute;n caso la Empresa, sus filiales, licenciantes o proveedores de servicios, ni ninguno de sus respectivos directivos, directores, agentes, socios, empleados o representantes, ser&aacute;n responsables ni asumir&aacute;n obligaci&oacute;n alguna frente a usted o cualquier persona en su nombre, independientemente de la forma de la acci&oacute;n, por cualquier da&ntilde;o o p&eacute;rdida directa, indirecta, especial, incidental o consecuente de cualquier tipo, cualquier p&eacute;rdida o cualquier da&ntilde;o derivado o relacionado con su uso autorizado o no autorizado de los Servicios, de los pagos, cualquier servicio, producto o contenido proporcionado por terceros, ya sea basado en contrato, agravio, negligencia, responsabilidad estricta. En caso de reclamaci&oacute;n, su &uacute;nico y exclusivo recurso es dejar de utilizar los Servicios.&nbsp;</p>
+<p><br></p>
+<p>La Empresa no ser&aacute; responsable de los actos u omisiones cometidos por su proveedor de servicios de Internet u otro tercero con el que usted haya contratado el acceso a los Servicios.&nbsp;</p>
+<p>Usted acepta y confirma que: (i) usted es libre de elegir si desea utilizar los Servicios y lo hace a su entera opci&oacute;n, discreci&oacute;n y riesgo; (ii) la Empresa no ser&aacute; responsable ante usted ni ante ning&uacute;n tercero por cualquier modificaci&oacute;n, suspensi&oacute;n o interrupci&oacute;n de los Servicios; (iii) cualquier reclamaci&oacute;n o causa de acci&oacute;n, independientemente de la forma de acci&oacute;n, que usted pueda tener derivada de o relacionada con el uso de los Servicios o de estas Condiciones, deber&aacute; presentarse en el plazo de un (1) a&ntilde;o despu&eacute;s de que dicha reclamaci&oacute;n o causa de acci&oacute;n haya surgido.</p>
+<p><br></p>
+<p><br></p>
+<ol>
+    <li><strong>Indemnizaci&oacute;n</strong></li>
+</ol>
+<p>Por la presente, acepta indemnizar y eximir de responsabilidad a la Empresa, sus directivos, directores, empleados o agentes por cualquier reclamaci&oacute;n, asunto, queja, coste, responsabilidad y acci&oacute;n que surja o est&eacute; relacionada con el uso que usted haga de los Servicios, incluyendo, pero sin limitarse a:&nbsp;</p>
+<ol>
+    <li>Su incumplimiento de cualquier Ley Aplicable;&nbsp;</li>
+    <li>Cualquier reclamaci&oacute;n de infracci&oacute;n o apropiaci&oacute;n indebida de cualquier derecho de terceros, incluyendo pero no limitado a cualquier, derechos de autor, derechos de privacidad o Derechos de Propiedad Intelectual en los Servicios;&nbsp;</li>
+    <li>El incumplimiento por su parte de cualquier disposici&oacute;n de estas Condiciones, Condiciones del socio; o&nbsp;</li>
+    <li>Su uso o mal uso de los Servicios.&nbsp;</li>
+</ol>
+<p>Usted se compromete a notificar con prontitud a la Empresa cualquier reclamaci&oacute;n de terceros y a cooperar plenamente con la Empresa en la defensa de dichas reclamaciones a su exclusivo cargo. Asimismo, acepta que, a la entera discreci&oacute;n de la Empresa, &eacute;sta tendr&aacute; el control de la defensa o resoluci&oacute;n de dichas reclamaciones.</p>
+<p><br></p>
+<ol>
+    <li><strong>Varios</strong></li>
+</ol>
+<p>Estas Condiciones se regir&aacute;n e interpretar&aacute;n de conformidad con la legislaci&oacute;n de Chipre, sin dar efecto a sus principios o normas de conflicto de leyes. Cualquier acci&oacute;n que se emprenda en relaci&oacute;n con estas Condiciones se interpondr&aacute; exclusivamente ante los tribunales de Chipre, y usted consiente irrevocablemente en su jurisdicci&oacute;n. Podemos ceder nuestros derechos y obligaciones en virtud del presente documento a cualquier tercero sin previo aviso.&nbsp;</p>
+<p>Usted no ceder&aacute; ninguno de sus derechos u obligaciones en virtud del presente, y cualquier cesi&oacute;n ser&aacute; nula y sin efecto. Todas las disposiciones del presente documento que, expresamente o por su naturaleza, deban sobrevivir a la finalizaci&oacute;n o expiraci&oacute;n de estas Condiciones para lograr su prop&oacute;sito, sobrevivir&aacute;n a la finalizaci&oacute;n o expiraci&oacute;n, incluyendo, sin limitaci&oacute;n, las Secciones 2/5/6/7/8/9/10/11/12/13 de estas Condiciones. Cualquier traducci&oacute;n de estas Condiciones de uso se proporciona &uacute;nicamente para su comodidad. Los significados de los T&eacute;rminos, Condiciones y representaciones aqu&iacute; contenidos est&aacute;n sujetos a definiciones e interpretaciones en lengua inglesa y, en caso de disputa, prevalecer&aacute; la versi&oacute;n en lengua inglesa. Cualquier traducci&oacute;n proporcionada puede no representar con exactitud la informaci&oacute;n de la versi&oacute;n original en lengua inglesa de estas Condiciones.</p>
+<ol>
+    <li><strong>&nbsp; &nbsp; Condiciones y finalizaci&oacute;n</strong></li>
+</ol>
+<p>Estas Condiciones se aplican a usted y a nosotros a partir de la fecha en que las acepte seg&uacute;n lo dispuesto anteriormente. Nos reservamos el derecho, sin previo aviso y a nuestra entera discreci&oacute;n, de finalizar estas Condiciones, revocar o renunciar a sus pagos o finalizar o suspender su acceso o uso de todos o parte de los Servicios con efecto inmediato, en cualquier momento, incluyendo, <em>entre otros,&nbsp;</em>si sospechamos a nuestra entera discreci&oacute;n que (i) ha participado o est&aacute; participando en una actividad fraudulenta o en cualquier actividad ilegal en virtud de cualquier Ley Aplicable; (ii) nos ha proporcionado informaci&oacute;n falsa o nos ha ocultado cualquier informaci&oacute;n; o (iii) ha participado en una actividad que vulnera (incluidas supuestas vulneraciones) las presentes Condiciones, las Condiciones de socio.&nbsp;</p>
+<p><br></p>
+<p><br></p>
+<ol>
+    <li><strong>Cambios</strong></li>
+</ol>
+<p>Nos reservamos el derecho a modificar cualquiera de las Condiciones en cualquier momento publicando las versiones revisadas en nuestro Sitio Web o notificando de otro modo dicha modificaci&oacute;n por correo electr&oacute;nico, a trav&eacute;s de los Servicios o mediante un anuncio en nuestro Sitio Web. La notificaci&oacute;n se considerar&aacute; efectuada veinticuatro (24) horas despu&eacute;s de que se le env&iacute;e el correo electr&oacute;nico.&nbsp;</p>
+<p>Las notificaciones publicadas en nuestro Sitio Web se considerar&aacute;n realizadas cinco (5) d&iacute;as despu&eacute;s de la publicaci&oacute;n inicial. Nos reservamos el derecho a determinar la forma y los medios de proporcionar notificaciones a nuestro Usuario final. Las versiones revisadas entrar&aacute;n en vigor tras el periodo de notificaci&oacute;n aplicable, a menos que usted acepte expresamente las versiones revisadas con anterioridad haciendo clic en el bot&oacute;n de aceptaci&oacute;n. Su aceptaci&oacute;n expresa o el uso continuado de los Servicios tras el periodo de notificaci&oacute;n aplicable constituir&aacute; su aceptaci&oacute;n de quedar vinculado por las Condiciones revisadas, seg&uacute;n corresponda. &nbsp;&nbsp;Si alguna disposici&oacute;n de las Condiciones se considera inaplicable, dicha disposici&oacute;n se modificar&aacute; &uacute;nicamente en la medida necesaria para hacerla aplicable y no afectar&aacute; a la aplicabilidad o validez de las disposiciones restantes, que permanecer&aacute;n en pleno vigor y efecto.</p>
+<p><br></p>
+<p><br></p>
+<ol>
+    <li><strong>Contacte con nosotros</strong></li>
+</ol>
+<p>Si tiene alguna pregunta, desea hacernos llegar sus comentarios o recibir m&aacute;s informaci&oacute;n sobre nosotros, no dude en enviarnos un correo electr&oacute;nico.&nbsp;</p>
+<p><br></p>`
 let pt_text =  `<p style="text-align:center;font-size:16pt!important;" class="p14">
 <span class="s1"><strong>Cybersays.Club - Termos de uso</strong></span>
 </p>

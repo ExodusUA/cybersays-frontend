@@ -569,7 +569,297 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
         href="mailto:vegas@cybersays.club">vegas@cybersays.club</a>&nbsp;</p>
 <p>&nbsp;</p>
 <p><br></p>`
-let es_text = ``
+let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Pythia Grant Ltd. - Condiciones de promoci&oacute;n de CyberSays.Club</strong></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&Uacute;ltima revisi&oacute;n: Marzo 2024</p>
+<p>A continuaci&oacute;n se exponen los T&eacute;rminos y Condiciones de la promoci&oacute;n de la Empresa (&quot;<strong>Cyber Says</strong>&quot; y &quot;<strong>Condiciones de la promoci&oacute;n Cyber Says</strong>&quot;; &quot;<strong>Promoci&oacute;n</strong>&quot;), patrocinada por Pythia Grant Ltd. (&quot;<strong>Empresa</strong>&quot;, &quot;<strong>nosotros</strong>&quot; o &quot;<strong>nos</strong>&quot; o &quot;<strong>nuestro</strong>&quot;).&nbsp;</p>
+<p>La participaci&oacute;n en la Promoci&oacute;n estar&aacute; sujeta a las disposiciones que figuran a continuaci&oacute;n y a los T&eacute;rminos y Condiciones (&quot;<strong>T&eacute;rminos</strong>&quot;) y la Pol&iacute;tica de Privacidad<strong>&nbsp;</strong>(&quot;<strong>Pol&iacute;tica de Privacidad</strong>&quot;) de la Empresa.</p>
+<p>Los t&eacute;rminos en may&uacute;sculas utilizados pero no definidos en el presente documento tendr&aacute;n el significado que se les atribuye en las Condiciones.</p>
+<p><strong>NO ES NECESARIO REALIZAR NINGUNA COMPRA NI EFECTUAR NING&Uacute;N PAGO PARA ENTRAR O GANAR UN PREMIO</strong><strong>.&nbsp;</strong></p>
+<p><strong>General</strong></p>
+<ol>
+    <li>La promoci&oacute;n Cyber Says comenzar&aacute; el 11 de marzo de 2024 a las: 00:00:01 UTC y concluir&aacute; el 2 de julio de , 2024, a las: 23:59:59 UTC (el &quot;<strong>Periodo de la Promoci&oacute;n</strong>&quot;).&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Usted acepta que para participar en la Promoci&oacute;n Cyber Says (incluyendo, sin limitaci&oacute;n, para ganar cualquier recompensa), cumplir&aacute; plenamente con todas las leyes, reglamentos, estatutos, ordenanzas y disposiciones aplicables a usted y a nosotros, incluyendo, sin limitaci&oacute;n, estas Condiciones de la Promoci&oacute;n Cyber Says y las Condiciones.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>No hay ning&uacute;n costo por introducirse en la Promoci&oacute;n ni ninguna obligaci&oacute;n asociada a la participaci&oacute;n en la misma, salvo lo descrito a continuaci&oacute;n.&nbsp;</li>
+</ol>
+<p><br></p>
+<p><strong>Requisitos para participar en la promoci&oacute;n</strong></p>
+<ol>
+    <li>Para poder participar en la promoci&oacute;n Cyber Says, usted declara y garantiza que cumplir&aacute; todas las condiciones siguientes:</li>
+</ol>
+<ul>
+    <li>tener una cuenta registrada en los Servicios;&nbsp;</li>
+    <li>tener al menos dieciocho (18) a&ntilde;os (a menos que la mayor&iacute;a de edad aplicable en su estado de residencia en el momento de la inscripci&oacute;n sea superior) o m&aacute;s;&nbsp;</li>
+    <li>reunir los requisitos legales y reglamentarios aplicables para participar en la promoci&oacute;n &quot;Cyber Says&quot;;&nbsp;</li>
+    <li>tener pleno derecho y autoridad para participar en la promoci&oacute;n Cyber Says.</li>
+</ul>
+<p><br></p>
+<p>Adem&aacute;s de las condiciones acumulativas expuestas anteriormente, para poder participar en la promoci&oacute;n Cyber Says, usted declara y garantiza que cumplir&aacute; <strong>una de las siguientes&nbsp;</strong>condiciones:</p>
+<ul>
+    <li>Crear una cuenta nueva y leg&iacute;tima y realice una primera compra en <a href="http://www.ImLive.com">www.ImLive.com</a> ;&nbsp;</li>
+    <li>Crear una cuenta nueva y leg&iacute;tima en otros sitios web de terceros, tal y como presente y dicte la Empresa en la promoci&oacute;n Cyber Says, de vez en cuando (&quot;<strong>Sitio web de terceros</strong>&quot;); <strong>O bien&nbsp;</strong></li>
+    <li>Culminar el formulario de env&iacute;o gratuito, tal y como se define a continuaci&oacute;n (denominados colectivamente, &quot;<strong>Usuarios Elegibles</strong>&quot;).</li>
+</ul>
+<p><br></p>
+<ol>
+    <li>&quot;<strong>Formulario de correo gratuito</strong>&quot; significar&aacute; el env&iacute;o <em>del formulario</em> por correo certificado a trav&eacute;s de un servicio de mensajer&iacute;a internacional, a la direcci&oacute;n registrada de la Empresa en Agias Zonis &amp; Thessalonikis, Nicolaou Pentadromos Centre, Oficina 903A, Limassol, Chipre, 3025 incluyendo en el correo todo lo siguiente -.&nbsp;</li>
+</ol>
+<ul>
+    <li>Copia impresa del formulario;</li>
+    <li>Sus datos de identificaci&oacute;n de usuario de Cyber Says;</li>
+    <li>Breve explicaci&oacute;n de los motivos para ser elegido ganador al azar.</li>
+</ul>
+<p><br></p>
+<ol>
+    <li>Como parte de esta Promoci&oacute;n, usted reconoce que (i) cualquier bonificaci&oacute;n de cr&eacute;dito recibida en ImLive.com o en cualquier Sitio Web de Terceros como parte de esta Promoci&oacute;n <strong>no es canjeable, no es reembolsable y no es intercambiable; (ii) estas bonificaciones de cr&eacute;dito&nbsp;</strong>deben utilizarse &uacute;nicamente en ImLive.com o en cualquier sitio web de terceros pertinente <strong>&uacute;nicamente; (iii) estos bonos de cr&eacute;dito&nbsp;</strong>no tienen ning&uacute;n valor pecuniario ni ning&uacute;n tipo de valor fuera de ImLive.com o fuera del sitio web de terceros pertinente; (iv) usted es el &uacute;nico responsable del uso que haga de los servicios de ImLive.com o de cualquier sitio web de terceros pertinente, as&iacute; como del uso de dichos cr&eacute;ditos; y (v) ha le&iacute;do las <em>los T&eacute;rminos y Condiciones de ImLive.com</em> o, en su caso, los T&eacute;rminos y Condiciones del Sitio Web de Terceros pertinente antes de utilizar los servicios correspondientes o de utilizar cualquiera de los bonos de cr&eacute;dito de sus servicios.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Como parte de esta Promoci&oacute;n, usted reconoce que la Empresa, a su entera discreci&oacute;n, puede rechazar o descalificar su participaci&oacute;n en la Promoci&oacute;n si alguno de los datos que ha facilitado al culminar su participaci&oacute;n en la Promoci&oacute;n, tal y como se detalla en la secci&oacute;n 4 anterior o en el Formulario de env&iacute;o gratuito, (i) falta, es inexacto y/o no est&aacute; actualizado; (ii) parece ser falso, fraudulento o infringe de cualquier otro modo las Condiciones de la promoci&oacute;n Cyber Says, las Condiciones o cualquier ley o normativa aplicable.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>No podr&aacute; utilizar varias direcciones de correo electr&oacute;nico, cuentas y/o identidades o cualquier otro m&eacute;todo para participar en la Promoci&oacute;n Cyber Says m&aacute;s de una vez. No podr&aacute; inscribirse en nombre de otra persona.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Queda estrictamente prohibido el uso de m&eacute;todos de participaci&oacute;n robotizados, mec&aacute;nicos o preprogramados de cualquier otra forma. Los participantes no podr&aacute;n utilizar dichas herramientas de manipulaci&oacute;n y la Empresa se reserva el derecho (a su entera discreci&oacute;n), de vez en cuando, de implementar procesos de participaci&oacute;n que puedan frustrar o prohibir dicha participaci&oacute;n automatizada; siempre y cuando, no obstante, ning&uacute;n participante de ninguna Promoci&oacute;n pueda confiar o insistir en el hecho de que la Empresa no tome o se niegue a tomar alguna de las medidas anteriores o a determinar, a su entera discreci&oacute;n, que la participaci&oacute;n de un participante debe ser descontada porque la participaci&oacute;n de otro participante s&iacute; lo fue o viceversa. Cualquier uso de un sistema automatizado o cualquier m&eacute;todo similar para participar en cualquier Promoci&oacute;n est&aacute; estrictamente prohibido y puede dar lugar a su descalificaci&oacute;n de la Promoci&oacute;n y/o del uso futuro de los Servicios. La persona a la que el operador correspondiente haya asignado la direcci&oacute;n de correo electr&oacute;nico ser&aacute; considerada propietaria de dicha direcci&oacute;n.</li>
+</ol>
+<p>&nbsp;</p>
+<ol>
+    <li>La Empresa se reserva el derecho de limitar la Promoci&oacute;n a los participantes ubicados en una jurisdicci&oacute;n concreta, en cuyo caso s&oacute;lo podr&aacute;n participar en la Promoci&oacute;n los usuarios que residan en dicha jurisdicci&oacute;n en el momento de la inscripci&oacute;n.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Los empleados de la Empresa (incluidos, entre otros, los empleados a tiempo parcial o temporales), directivos y representantes, agencias de promoci&oacute;n y/o patrocinadores que participen directamente en la administraci&oacute;n, desarrollo, cumplimiento y ejecuci&oacute;n de una Promoci&oacute;n espec&iacute;fica, as&iacute; como los familiares directos y otros miembros del hogar (es decir, c&oacute;nyuges, padres, abuelos, hijos, nietos, compa&ntilde;eros de habitaci&oacute;n, compa&ntilde;eros de piso, parejas sentimentales, socios y hermanos) de cualquiera de los anteriores no podr&aacute;n introducirse y/o ganar una Promoci&oacute;n.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>La participaci&oacute;n en la Promoci&oacute;n no est&aacute; disponible para usuarios (nacionales y residentes) de Suecia, Israel, Chipre y Andorra.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Tenga en cuenta que el uso de los Servicios, que pueden descargarse gratuitamente, requiere una conexi&oacute;n a Internet y un dispositivo compatible. Debe introducir la Promoci&oacute;n durante el Periodo de Promoci&oacute;n de la Promoci&oacute;n correspondiente para poder optar a ganar el/los premio(s) aplicable(s).</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Se le podr&aacute; pedir en cualquier momento que nos proporcione a nosotros o a nuestro tercero designado una prueba de su edad y/o identidad y/o residencia y deber&aacute;, cuando se le solicite, poder presentar una documentaci&oacute;n v&aacute;lida que nos permita verificar su, residencia y/o identidad a satisfacci&oacute;n razonable de nuestro equipo. Si no puede presentar documentos satisfactorios, podremos excluirle de la Promoci&oacute;n Cyber Says y podr&aacute; perder todos los privilegios o premios que le hayan sido asignados sin compensaci&oacute;n de ning&uacute;n tipo. Por la presente, renuncia irrevocablemente a cualquier reclamaci&oacute;n o derecho en relaci&oacute;n con dicha exclusi&oacute;n y/o confiscaci&oacute;n.</li>
+</ol>
+<p><br></p>
+<p><strong>Requisitos para recibir las entradas de la promoci&oacute;n y selecci&oacute;n de los ganadores</strong></p>
+<ol>
+    <li>La Promoci&oacute;n Cyber Says consiste en una promoci&oacute;n cuyos ganadores tendr&aacute;n derecho a ganar los Premios (que se detallan a continuaci&oacute;n).</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Los Usuarios Elegibles tendr&aacute;n derecho a ganar un (1) ticket para participar en la Promoci&oacute;n por cada segunda transacci&oacute;n y superior de compra de cr&eacute;ditos reales en www.ImLive.com <strong>o en&nbsp;</strong>cualquier otro Sitio Web de Terceros (excluyendo los cr&eacute;ditos de bonificaci&oacute;n), (es decir, a partir de los 6 cr&eacute;ditos reales comprados y superiores). &nbsp;</li>
+</ol>
+<p>Cada cr&eacute;dito real (1) adquirido equivaldr&aacute; a un (1) billete. &nbsp;</p>
+<p><br></p>
+<p>Usted entiende y reconoce que no hay l&iacute;mite en el n&uacute;mero de cr&eacute;ditos que puede comprar y, por lo tanto, en el n&uacute;mero de entradas de la Promoci&oacute;n que puede optar a recibir.</p>
+<p><br></p>
+<ol>
+    <li><strong>Tambi&eacute;n puede recibir entradas participando gratuitamente en la promoci&oacute;n Cyber Says.&nbsp;</strong></li>
+</ol>
+<p>A este respecto<strong>,&nbsp;</strong>puede ponerse en contacto con la Empresa, tal y como se indica en el formulario de correo gratuito, durante el periodo de la promoci&oacute;n, a trav&eacute;s de correo certificado internacional a la direcci&oacute;n registrada de la Empresa en Agias Zonis &amp; Thessalonikis, Nicolaou Pentadromos Centre, Office 903A, Limassol, Chipre, 3025, e incluir todo lo siguiente -.</p>
+<ol>
+    <ol>
+        <li>El asunto del correo debe incluir &quot;<strong>Solicitud de participaci&oacute;n gratuita - Promoci&oacute;n Cyber Says</strong>&quot;;</li>
+        <li>El correo debe contener su nombre de usuario, n&uacute;mero de cuenta Cyber Says ID, n&uacute;mero de tel&eacute;fono, direcci&oacute;n de correo electr&oacute;nico y fecha de nacimiento.</li>
+        <li>El correo deber&aacute; ser recibido por nosotros durante el Periodo de Promoci&oacute;n aplicable para la Promoci&oacute;n en cuesti&oacute;n y ser&aacute; aceptado no m&aacute;s tarde del <strong>7 de julio de 2024.</strong></li>
+        <li>Independientemente de lo anterior, cualquier correo enviado una vez finalizado el Periodo de la Promoci&oacute;n no se considerar&aacute; una participaci&oacute;n v&aacute;lida y no dar&aacute; derecho al participante a ninguna entrada, aunque el correo haya sido recibido por nosotros antes del <strong>7 de julio de 2024</strong>;</li>
+        <li>Cada (1) correo v&aacute;lido recibido por nosotros le permitir&aacute; recibir un (1) ticket para la Promoci&oacute;n Cyber Says.</li>
+    </ol>
+</ol>
+<p><br></p>
+<ol>
+    <li><strong>Amigos recomendados</strong>. Usted reconoce que, para aumentar sus posibilidades de ganar, tambi&eacute;n puede recomendar a algunos de sus amigos. Cada usuario apto que haya recomendado a un nuevo amigo leg&iacute;timo de conformidad con las presentes Condiciones de la promoci&oacute;n Cyber Says y las Condiciones y<strong>&nbsp;</strong>que<strong>&nbsp;</strong>re&uacute;na los requisitos para participar en la promoci&oacute;n tal y como se describe en la secci&oacute;n 4 de estas Condiciones <strong>y&nbsp;</strong>haya culminado la Oferta en l&iacute;nea (&quot;<strong>Amigo recomendado</strong>&quot;) recibir&aacute; treinta (30) tickets por cada amigo recomendado leg&iacute;timo y nuevo.</li>
+</ol>
+<p><br></p>
+<p>&quot;<strong>Oferta en l&iacute;nea</strong>&quot; significar&aacute; la culminaci&oacute;n de todos los pasos siguientes -&nbsp;</p>
+<ul>
+    <li><strong>Crear una cuenta nueva y leg&iacute;tima en ImLive.com&nbsp;</strong><strong>o</strong><strong>, en su caso, en el sitio web de terceros.</strong></li>
+    <li><strong>Realice una compra m&iacute;nima de cinco cr&eacute;ditos en&nbsp;</strong>ImLive.com <strong>o</strong><strong>, en su caso, en el sitio web de terceros&nbsp;</strong>- usted reconoce que al realizar una compra m&iacute;nima de cinco cr&eacute;ditos en ImLive.com, recibir&aacute; autom&aacute;ticamente una bonificaci&oacute;n adicional &uacute;nica de cinco cr&eacute;ditos.</li>
+    <li><strong>Gaste la totalidad de los diez (10) cr&eacute;ditos que ha recibido en ImLive.com&nbsp;</strong><strong>o,&nbsp;</strong><strong>en su caso, en el sitio web de terceros.</strong></li>
+</ul>
+<p><br></p>
+<ol>
+    <li>Las probabilidades de ganar se basan en el n&uacute;mero de tickets v&aacute;lidos. Los ganadores ser&aacute;n elegidos al azar entre todos los tickets v&aacute;lidos por un sistema inform&aacute;tico automatizado.</li>
+</ol>
+<p>&nbsp;</p>
+<ol>
+    <li>Cualquier solicitud de participaci&oacute;n que no cumpla lo anterior, las Condiciones de la promoci&oacute;n Cyber Says o nuestras Condiciones podr&aacute; ser descalificada o anulada a nuestra entera discreci&oacute;n. No se tendr&aacute; en cuenta ninguna otra forma o m&eacute;todo para enviar una participaci&oacute;n, a menos que se establezca lo contrario en la descripci&oacute;n espec&iacute;fica de la Promoci&oacute;n Cyber Says.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>El ganador ser&aacute; seleccionado al azar el <strong>14 de julio de 2024</strong>.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>La elecci&oacute;n de los ganadores es definitiva y vinculante, salvo que se indique lo contrario en las presentes Condiciones de la promoci&oacute;n Cyber Says.</li>
+</ol>
+<p><br></p>
+<p><strong>Premios/Valor Aproximado de Venta al P&uacute;blico (&quot;VAVP&quot;)</strong></p>
+<ol>
+    <li>El premio ser&aacute; -<ol>
+            <li>Billete de avi&oacute;n en clase turista a Las Vegas, Nevada, EE.UU. y dos (2) noches de hotel para -.<ol>
+                    <li>El ganador y para dos (2) de los Amigos Recomendados del ganador (si procede);&nbsp;</li>
+                    <li>El ganador y un (1) Amigo Recomendado y un (1) Usuario Apto que haya recomendado al ganador (cuando proceda) <strong>y&nbsp;</strong>haya culminado la Oferta en l&iacute;nea (&quot;<strong>Amigo Recomendado</strong>&quot;); (ambos colectivamente &quot;<strong>Amigos Viajeros</strong>&quot;)</li>
+                </ol>
+            </li>
+            <li>Mil d&oacute;lares (1.000,00 USD) en cr&eacute;ditos para utilizar en <a href="http://www.ImLive.com">www.ImLive.com</a> (no canjeables ni reembolsables) <strong>s&oacute;lo&nbsp;</strong>para el ganador; y&nbsp;</li>
+            <li>Mil d&oacute;lares ($1.000,00 USD) para el ganador y, en su caso, quinientos d&oacute;lares ($500,00 USD) para cada uno de los dos Amigos de viaje del ganador (v&eacute;ase la definici&oacute;n m&aacute;s abajo) de asignaci&oacute;n como parte del viaje a Las Vegas, Cena con estrellas del porno y Paseo en Cadillac (denominados colectivamente &quot;<strong>Premios</strong>&quot; en las secciones 20.a, 20.b y 20.c). VAVP: cinco mil d&oacute;lares ($5.000,00 USD).</li>
+        </ol>
+    </li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Para evitar cualquier duda, el ganador y sus dos Amigos de viaje (en su caso, seg&uacute;n la secci&oacute;n 21 anterior) son los &uacute;nicos responsables de todos y cada uno de los gastos no especificados relacionados con la aceptaci&oacute;n y el uso de los Premios.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>El ganador reconoce y acepta que -&nbsp;<ol>
+            <li>En caso de no poder contar con dos Amigos de Viaje elegibles, el ganador tendr&aacute; que volar solo y el Premio concedido para los dos Amigos de Viaje podr&aacute; ser cancelado y anulado (seg&uacute;n el criterio exclusivo de la Empresa);</li>
+            <li>Para evitar cualquier duda, en el evento de que alguno de los Amigos Viajeros no se adhiera a las disposiciones descritas en las Condiciones de la Promoci&oacute;n CyberSays o en las Condiciones, o incurra en una violaci&oacute;n de cualquier ley o regulaci&oacute;n aplicable, los dos Amigos Viajeros no ser&aacute;n elegibles para la concesi&oacute;n de los Premios;</li>
+            <li>La Empresa se reserva el derecho exclusivo de determinar el hotel y el periodo de vuelo para los Premios. Si el ganador no est&aacute; disponible en dicha fecha por cualquier motivo, el ganador, y en su caso los dos Travel Friends, perder&aacute;n los Premios sin ning&uacute;n tipo de compensaci&oacute;n;</li>
+            <li>La disponibilidad de los Premios, incluidos los destinos de los premios, depende de la ubicaci&oacute;n geogr&aacute;fica del ganador que re&uacute;na los requisitos y de la disponibilidad de vuelos. La disponibilidad de los Premios puede estar sujeta a ciertos cambios a discreci&oacute;n exclusiva de la Empresa, siempre que el VAVP de los Premios no supere los cinco mil d&oacute;lares ($5.000,00 USD).</li>
+        </ol>
+    </li>
+</ol>
+<p><br></p>
+<ol>
+    <li>El ganador y, en su caso, sus dos amigos de viaje deber&aacute;n presentar un pasaporte v&aacute;lido con una <strong>validez m&iacute;nima de seis meses&nbsp;</strong>en el momento de su vuelo a Las Vegas, NV, EE.UU. En su caso, deber&aacute;n disponer de un visado o autorizaci&oacute;n v&aacute;lidos, de lo contrario los Premios podr&aacute;n quedar anulados.&nbsp;</li>
+</ol>
+<p>A este respecto, la Empresa podr&aacute;, a su entera discreci&oacute;n, elegir un lugar alternativo al que el ganador podr&aacute; volar.</p>
+<p><br></p>
+<ol>
+    <li>Los premios son intransferibles y no pueden canjearse por un equivalente en met&aacute;lico.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Los ganadores de la Promoci&oacute;n Cyber Says son los &uacute;nicos responsables de declarar y pagar todos y cada uno de los impuestos aplicables relacionados con los Premios y de pagar cualquier gasto asociado a los mismos que no est&eacute; espec&iacute;ficamente previsto en las Condiciones de la Promoci&oacute;n Cyber Says.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Al participar en la Promoci&oacute;n Cyber Says, usted autoriza a la Empresa a ponerse en contacto con usted, con el fin de administrar la Promoci&oacute;n Cyber Says y otorgar los Premios. Notificaremos a cada ganador potencial mediante el env&iacute;o de una notificaci&oacute;n a trav&eacute;s de la direcci&oacute;n de correo electr&oacute;nico (que se utiliz&oacute; para registrarse en los Servicios), en un plazo de quince (15) d&iacute;as h&aacute;biles a partir de la finalizaci&oacute;n del Periodo de la Promoci&oacute;n.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Realizaremos tres intentos para ponernos en contacto con el ganador potencial en un plazo de setenta y dos (72) horas. Si no logramos ponernos en contacto con el ganador potencial dentro de este plazo especificado o queda descalificado por cualquier otro motivo o no cumple estas Condiciones de la Promoci&oacute;n Cyber Says o las Condiciones, la Empresa podr&aacute; renunciar al Premio y conced&eacute;rselo potencialmente a otro ganador.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Es su exclusiva responsabilidad notificarnos por escrito si ha cambiado su direcci&oacute;n de correo electr&oacute;nico durante el Periodo de la Promoci&oacute;n.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Nuestras decisiones relativas a la administraci&oacute;n y el funcionamiento de cualquier Promoci&oacute;n, incluyendo, sin limitaci&oacute;n, la selecci&oacute;n de los posibles ganadores entre todos los participantes que cumplan los requisitos, son definitivas y vinculantes en todos los asuntos relacionados con la Promoci&oacute;n.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Usted reconoce y acepta que la Empresa se reserva el derecho, a su entera discreci&oacute;n, de transferir autom&aacute;ticamente a cada Usuario Elegible y/o a los Amigos de Viaje que no hayan sido elegidos como ganador/es de esta Promoci&oacute;n para participar en futuras Promociones similares, excepto cuando est&eacute; expl&iacute;citamente prohibido por las leyes o reglamentos aplicables.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>No est&aacute; permitido transferir ni sustituir ning&uacute;n Premio recibido por participar en una Promoci&oacute;n. Todos los premios se ofrecen &quot;tal cual&quot;, sin garant&iacute;a expresa ni impl&iacute;cita.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Los premios se entregar&aacute;n a los ganadores en un plazo de 30 d&iacute;as laborables, a partir de la recepci&oacute;n por parte de la Empresa de los datos completos del ganador (necesarios para la entrega del premio), a menos que la Empresa, a su entera discreci&oacute;n, tenga motivos para creer que el ganador no re&uacute;ne los requisitos para participar en la promoci&oacute;n Cyber Says o para ser galardonado con los premios.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Los premios se conceder&aacute;n a los ganadores a trav&eacute;s de su correo electr&oacute;nico personal utilizado para registrarse en los Servicios de la Empresa.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>No se entregar&aacute; ning&uacute;n premio a ning&uacute;n participante que no re&uacute;na los requisitos para participar en la Promoci&oacute;n o que incumpla las Condiciones de la Promoci&oacute;n Cyber Says, las Condiciones o cualquier otra norma de participaci&oacute;n en la Promoci&oacute;n.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Si alguna ley aplicable, las Condiciones de la promoci&oacute;n Cyber Says, las Condiciones, exigen a alg&uacute;n ganador potencial el cumplimiento de condiciones o requisitos adicionales para poder participar en la Promoci&oacute;n y recibir el Premio, dicho ganador potencial deber&aacute; cumplir &iacute;ntegramente dichos requisitos en el plazo establecido por nosotros antes y como condici&oacute;n para recibir el Premio. Si un ganador potencial es descalificado por cualquier motivo, podremos otorgar el premio correspondiente a un ganador alternativo de entre el resto de participantes que cumplan los requisitos, a nuestra entera discreci&oacute;n.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>La Empresa no se responsabiliza en modo alguno de, ninguna garant&iacute;a, representaci&oacute;n o garant&iacute;a, expresa o impl&iacute;cita, de hecho o de derecho, relacionada con cualquiera de los Premios, en lo que respecta al uso, valor o disfrute de los Premios, incluyendo, sin limitaci&oacute;n, su calidad, estado o idoneidad para un fin.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Los premios y la participaci&oacute;n en la promoci&oacute;n Cyber Says no est&aacute;n disponibles para menores de 18 o 21 a&ntilde;os (dependiendo de su jurisdicci&oacute;n).&nbsp;</li>
+</ol>
+<p><br></p>
+<p><strong>Limitaciones de responsabilidad y exenci&oacute;n</strong></p>
+<ol>
+    <li>Al introducirse en esta Promoci&oacute;n, usted acepta liberar, indemnizar y eximir de responsabilidad a la Empresa, y a sus respectivas Empresas matrices, subsidiarias, afiliadas, distribuidoras, proveedoras y organizaciones de publicidad, promoci&oacute;n y juzgamiento y a cada uno de sus respectivos empleados, funcionarios, directores, accionistas y agentes (colectivamente, los &quot;<strong>Exonerados&quot;)&nbsp;</strong>de y contra cualquier y toda reclamaci&oacute;n, acci&oacute;n, da&ntilde;o, p&eacute;rdida, costo, gasto (incluyendo honorarios razonables de abogados/legales), lesiones o causas de acci&oacute;n de cualquier tipo que, de cualquier forma, ahora o en el futuro, puedan surgir de o estar relacionadas con la Promoci&oacute;n, incluyendo sin limitaci&oacute;n (i) la administraci&oacute;n de la Promoci&oacute;n, como errores tipogr&aacute;ficos, de impresi&oacute;n, de siembra, humanos o de otro tipo relacionados con o en conexi&oacute;n con la Promoci&oacute;n, el procesamiento de las participaciones, el anuncio del Premio o cualquier material relacionado, participaciones inexactas, fraudulentas, incompletas, ilegibles, tard&iacute;as, perdidas, robadas, mal dirigidas, no entregadas, incompletas o da&ntilde;adas, cualquier retraso en la entrega o falta de disponibilidad del Premio o de los materiales del Premio; (ii) Su participaci&oacute;n en la Promoci&oacute;n ofrecida por los Exonerados o su aceptaci&oacute;n o uso de un Premio, o participaci&oacute;n en cualquier actividad relacionada con el Premio, incluyendo, sin limitaci&oacute;n, cualquier viaje relacionado con el mismo, y muerte y lesiones corporales (incluyendo angustia emocional), debidas en su totalidad o en parte, directa o indirectamente, a la participaci&oacute;n en las Promociones o cualquier actividad relacionada con la Promoci&oacute;n y por cualquier reclamaci&oacute;n o causa de acci&oacute;n basada en derechos de publicidad, difamaci&oacute;n o invasi&oacute;n de la privacidad; (iii) Cualquier acto u omisi&oacute;n, ya sea negligente, intencionado o de otro tipo, causado por los Exonerados y/o cualquier Promoci&oacute;n; (iv) la participaci&oacute;n de cualquier otro usuario en la Promoci&oacute;n.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>Usted acepta que los Exonerados no son responsables de ninguna informaci&oacute;n incorrecta o inexacta, ya sea causada por los Servicios, otros usuarios o por cualquiera de los equipos o programaci&oacute;n asociados o utilizados en la Promoci&oacute;n y que los Exonerados no asumen ninguna responsabilidad por (i) cualquier lesi&oacute;n o da&ntilde;o a personas o bienes que pueda ser causado, directa o indirectamente, en su totalidad o en parte, por la participaci&oacute;n de un usuario en una Promoci&oacute;n o la recepci&oacute;n o uso o mal uso de cualquier premio; (ii) cualquier error, omisi&oacute;n, interrupci&oacute;n, supresi&oacute;n, defecto o retraso en el funcionamiento o la transmisi&oacute;n en los Servicios; (iii) cualquier aver&iacute;a o fallo inform&aacute;tico, telef&oacute;nico, por cable, por sat&eacute;lite, de red, electr&oacute;nico o de hardware o software de Internet, problemas de conexi&oacute;n o disponibilidad; (iv) transmisiones confusas o desordenadas, accesibilidad o disponibilidad del proveedor de servicios/Internet/sitio web/red de uso; (v) congesti&oacute;n del tr&aacute;fico; (vi) intervenci&oacute;n humana no autorizada; o (vii) robo o destrucci&oacute;n, manipulaci&oacute;n o acceso no autorizado a las participaciones y/o a la informaci&oacute;n de participaci&oacute;n. Si, por cualquier motivo, una Promoci&oacute;n no pudiera llevarse a cabo seg&uacute;n lo previsto debido a la infecci&oacute;n por virus inform&aacute;ticos, intervenci&oacute;n no autorizada, fraude, manipulaci&oacute;n, fallos t&eacute;cnicos o cualquier otra causa ajena al control de los Destinatarios y que, en opini&oacute;n exclusiva de los Destinatarios, corrompa o afecte a la administraci&oacute;n, seguridad, imparcialidad, integridad o correcto desarrollo de una Promoci&oacute;n, los Destinatarios se reservan el derecho, a su entera discreci&oacute;n, de cancelar, finalizar, modificar o suspender dicha Promoci&oacute;n y seleccionar al ganador o ganadores entre todas las inscripciones v&aacute;lidas recibidas para dicha Promoci&oacute;n antes de la medida adoptada.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>En ning&uacute;n evento los Exonerados ser&aacute;n responsables por da&ntilde;os o p&eacute;rdidas de cualquier tipo, incluyendo da&ntilde;os indirectos, incidentales, consecuenciales o punitivos, aparte de los gastos reales de su bolsillo que surjan de su participaci&oacute;n en una Promoci&oacute;n. Sin perjuicio de lo anterior, los Servicios se proporcionan &quot;tal cual&quot;, sin garant&iacute;a de ning&uacute;n tipo, ni expresa ni impl&iacute;cita, incluidas, entre otras, las garant&iacute;as impl&iacute;citas de comerciabilidad, idoneidad para un fin determinado o no infracci&oacute;n. Es posible que algunas jurisdicciones no permitan la limitaci&oacute;n o exclusi&oacute;n de responsabilidad por da&ntilde;os incidentales o consecuentes o la exclusi&oacute;n de garant&iacute;as impl&iacute;citas, por lo que es posible que algunas de las limitaciones o exclusiones anteriores no sean aplicables en su caso. En tales casos, nuestra responsabilidad se limitar&aacute; al m&aacute;ximo permitido por la legislaci&oacute;n aplicable.</li>
+</ol>
+<p><br></p>
+<p><strong>Condiciones generales adicionales</strong></p>
+<ol>
+    <li>Todas las solicitudes de participaci&oacute;n en una Promoci&oacute;n pasar&aacute;n a ser propiedad exclusiva de la Empresa y no ser&aacute;n reconocidas y/o devueltas. Se considerar&aacute;n nulas las inscripciones recibidas que procedan de participantes no elegibles y/o que no cumplan las Condiciones de la Promoci&oacute;n Cyber Says o las Condiciones. Las participaciones que se determinen fraudulentas se considerar&aacute;n nulas, y la persona que las realice podr&aacute; ser excluida de la participaci&oacute;n en la Promoci&oacute;n y, a discreci&oacute;n exclusiva de la Empresa y en funci&oacute;n de cada caso, se le podr&aacute; prohibir cualquier participaci&oacute;n en futuras Promociones y/o servicios de la Empresa. La prueba de env&iacute;o o presentaci&oacute;n no se considerar&aacute; prueba de recepci&oacute;n. Por la presente, acepta que en ning&uacute;n caso tendr&aacute; derecho a reclamarnos por solicitudes que no hayamos recibido o de las que no hayamos acusado recibo, por el motivo que sea, o que se hayan recibido antes o despu&eacute;s del Periodo de promoci&oacute;n de la Promoci&oacute;n correspondiente.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>La Empresa podr&aacute; cancelar, modificar, alterar, cambiar o suspender la Promoci&oacute;n Cyber Says, y cualquiera de los Premios o beneficios ofrecidos en virtud de la misma, incluyendo, sin limitaci&oacute;n, cuando sea necesario por razones de seguridad o cualquier otra raz&oacute;n, a su entera discreci&oacute;n, para cumplir con la ley o reglamento aplicable, debido al abuso o de otra manera cuando debido a circunstancias fuera de su control (incluyendo, sin limitaci&oacute;n, un caso de fuerza mayor, incendio, inundaci&oacute;n, epidemia u otra emergencia sanitaria nacional, terremoto, explosi&oacute;n, conflicto laboral o huelga, caso fortuito o enemigo p&uacute;blico, fallo del sat&eacute;lite o del equipo, revuelta o disturbios civiles, amenaza o actividad terrorista, guerra (declarada o no declarada,) o cualquier ley, orden o reglamento del gobierno federal, estatal o local, orden de cualquier tribunal o jurisdicci&oacute;n, crisis de salud p&uacute;blica u otra causa que no est&eacute; razonablemente bajo su control. En caso de que la Promoci&oacute;n se finalice, cancele o posponga por cualquier motivo, el valor real/apreciado del/de los premio(s) se otorgar&aacute; &uacute;nicamente en la medida en que lo exija la ley.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>La Empresa se reserva el derecho a modificar los premios y/o las condiciones de esta promoci&oacute;n de Cyber Says (incluidos, entre otros,&nbsp;el per&iacute;odo de promoci&oacute;n correspondiente, las fechas relacionadas o los premios) en cualquier momento y sin previo aviso.&nbsp;</li>
+</ol>
+<p><br></p>
+<p>Usted reconoce que ser&aacute; responsable de mantenerse al d&iacute;a de todos y cada uno de los cambios introducidos en la Promoci&oacute;n. En caso de modificaci&oacute;n de la Promoci&oacute;n, su participaci&oacute;n continuada en la Promoci&oacute;n constituye la aceptaci&oacute;n de los T&eacute;rminos y Condiciones modificados de dicha Promoci&oacute;n.</p>
+<p><br></p>
+<ol>
+    <li>&nbsp;Si tenemos conocimiento de cualquier fraude, enga&ntilde;o, conducta indebida (por ejemplo lenguaje fuerte, insultos, amenazas), deshonestidad o acci&oacute;n similar en relaci&oacute;n con su participaci&oacute;n en la Promoci&oacute;n Cyber Says, o si actuara de forma perturbadora o con la intenci&oacute;n de perturbar o socavar el funcionamiento leg&iacute;timo de la Promoci&oacute;n Cyber Says o si incumpliera cualquiera de las presentes Condiciones dela Promoci&oacute;n Cyber Says, los reglamentos y normas que se apliquen a su uso de los Servicios y/o a su participaci&oacute;n en cualquier Promoci&oacute;n Cyber Says, entonces (i) nos reservamos el derecho absoluto a descalificarle autom&aacute;tica e inmediatamente o a invalidar su participaci&oacute;n, y (ii) tambi&eacute;n nos reservamos el derecho a reclamarle da&ntilde;os y perjuicios y otros recursos en la m&aacute;xima medida permitida por la ley. Si el fraude, el enga&ntilde;o, la mala conducta, la falta de honradez u otra acci&oacute;n s&oacute;lo se descubre despu&eacute;s de que se le haya concedido cualquier premio aplicable, se le exigir&aacute;, previa solicitud, que nos devuelva el Premio (o que proporcione una compensaci&oacute;n equivalente) inmediatamente despu&eacute;s de recibir nuestra solicitud de hacerlo. Sin perjuicio de lo anterior, la Empresa podr&aacute; bloquear a cualquier participante que, a juicio exclusivo de la Empresa, haya sido descalificado, tenga una elegibilidad cuestionable o sea inelegible por cualquier otro motivo para participar en la Promoci&oacute;n.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>&nbsp; &nbsp; 100.Ganar un Premio constituye su consentimiento para que la Empresa pueda utilizar la siguiente informaci&oacute;n relativa a usted: nombre, nombre de usuario, pa&iacute;s de residencia y el Premio y por la presente nos concede a nosotros y a nuestros afiliados, un derecho y licencia perpetuos, ilimitados, no exclusivos, mundiales, totalmente pagados y libres de Regal&iacute;as, para utilizar (a) su nombre y nombre de usuario; (b) su imagen, fotograf&iacute;a y semejanza; (c) su testimonio con respecto a la participaci&oacute;n y/o uso de nuestros servicios o productos; y (d) los detalles relativos a su victoria (colectivamente, la <strong>&quot;Informaci&oacute;n</strong>&quot;), y para reproducir, distribuir, mostrar p&uacute;blicamente, ejecutar p&uacute;blicamente y hacer trabajos derivados, basados en dicha Informaci&oacute;n, en cualquier formato de medio de comunicaci&oacute;n, incluso a trav&eacute;s de medios de radiodifusi&oacute;n, con fines de relaciones p&uacute;blicas, marketing y promoci&oacute;n relacionados con la Promoci&oacute;n Cyber Says o la Empresa. Todo tratamiento de datos personales por nuestra parte se realizar&aacute; de conformidad con los t&eacute;rminos de nuestra<em>&nbsp;Pol&iacute;tica de Privacidad.</em></li>
+</ol>
+<p><br></p>
+<ol>
+    <li>&nbsp; &nbsp; 101.Si gana un Premio, por la presente renuncia a todos y cada uno de los derechos de paternidad, integridad y cualesquiera otros derechos que se conozcan o denominen &quot;derechos morales&quot; sobre la Informaci&oacute;n que pueda adquirir en virtud del presente comunicado o por ministerio de la ley. Usted entiende que no tendr&aacute; derecho a ning&uacute;n pago u otro reconocimiento en relaci&oacute;n con el uso que la Empresa haga de la Informaci&oacute;n.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>&nbsp; &nbsp; 102.Todos los productos, servicios y nombres de Empresas referenciados y/o incluidos son marcas registradas de sus propietarios originales. El uso de cualquier marca, nombre, imagen o semejanza es s&oacute;lo para fines de identificaci&oacute;n y referencia y no implica ninguna asociaci&oacute;n con el titular de la marca, el individuo respectivo o su marca. La Empresa renuncia expresamente a cualquier afiliaci&oacute;n con marcas comerciales o derechos de publicidad de terceros a los que se haga referencia y/o que se incluyan en la promoci&oacute;n Cyber Says o en materiales relacionados. El uso de cualquier marca, nombre, imagen o semejanza no pretende inducir a error, confundir al cliente o infringir los derechos de autor, derechos de publicidad o marca comercial de terceros. Dicho uso no indica en modo alguno ninguna relaci&oacute;n con terceros, ni significa que dichos terceros sean la fuente, respalden, aprueben o patrocinen el uso de nuestros Servicios. No hacemos ninguna reclamaci&oacute;n comercial por el uso de ning&uacute;n copyright, derecho de publicidad o marca comercial de terceros, ni sugerencia de patrocinio o respaldo, y cualquier uso de este tipo se proporciona &uacute;nicamente con fines informativos.&nbsp;</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>&nbsp; &nbsp; 103.Todas las Promociones estar&aacute;n sujetas a todas las leyes y reglamentos federales, estatales y locales aplicables, y ser&aacute;n nulas donde est&eacute;n prohibidas o restringidas por la ley.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>&nbsp; &nbsp; 104.La Empresa se reserva el derecho a: (i) finalizar o declarar nula cualquier Promoci&oacute;n y rescindir cualquier premio, si a su juicio, las Condiciones de la Promoci&oacute;n Cyber Says o la integridad de la Promoci&oacute;n han sido violadas o comprometidas de cualquier forma, intencionadamente o no, por cualquier persona, participante o no en la Promoci&oacute;n; (ii) alterar o modificar estas Condiciones de la Promoci&oacute;n Cyber Says en cualquier momento; y/o (iii) detener o finalizar cualquier Promoci&oacute;n en cualquier momento sin previo aviso. Los cambios sustanciales de estas bases se publicar&aacute;n en los Servicios, cuando sea posible.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>&nbsp; &nbsp; 105.La Empresa ser&aacute; el &uacute;nico &aacute;rbitro en todos los asuntos relacionados con cualquier Promoci&oacute;n y la interpretaci&oacute;n de estas Condiciones de la Promoci&oacute;n Cyber Says y las Condiciones. Las decisiones de la Empresa ser&aacute;n definitivas en todos los asuntos, incluyendo, sin limitaci&oacute;n, si cualquier participaci&oacute;n presentada es v&aacute;lida o no. La participaci&oacute;n en cualquier promoci&oacute;n implica el Acuerdo por parte de los participantes de respetar las Condiciones de la promoci&oacute;n Cyber Says y las Condiciones, as&iacute; como cualquier otra norma establecida por la Empresa.</li>
+</ol>
+<p><br></p>
+<ol>
+    <li>&nbsp; &nbsp; 106.La Promoci&oacute;n se regir&aacute; por las leyes de la Rep&uacute;blica de Chipre y los participantes en la Promoci&oacute;n se someten a la jurisdicci&oacute;n exclusiva de los tribunales de la Rep&uacute;blica de Chipre.</li>
+</ol>
+<p>&nbsp;&nbsp;</p>
+<ol>
+    <li>&nbsp; &nbsp; 107.En caso de conflicto entre las presentes Condiciones de la promoci&oacute;n Cyber Says o las Condiciones, prevalecer&aacute;n las presentes Condiciones de la promoci&oacute;n Cyber Says.</li>
+</ol>
+<p><br></p>
+<p>PRECAUCI&Oacute;N: CUALQUIER INTENTO DE DA&Ntilde;AR DELIBERADAMENTE LOS SERVICIOS DE LA EMPRESA O DE SOCAVAR EL FUNCIONAMIENTO LEG&Iacute;TIMO DE LA PROMOCI&Oacute;N OFRECIDA POR LA EMPRESA CONSTITUYE UNA VIOLACI&Oacute;N DE LAS LEYES PENALES Y CIVILES. EN CASO DE QUE SE PRODUZCA TAL INTENTO, LA EMPRESA SE RESERVA EL DERECHO A RECLAMAR DA&Ntilde;OS Y PERJUICIOS A CUALQUIERA DE DICHAS PERSONAS EN LA M&Aacute;XIMA MEDIDA PERMITIDA POR LA LEY.</p>
+<p>Para informaci&oacute;n, asistencia o preguntas, p&oacute;ngase en contacto con nosotros en vegas@cybersays.club. &nbsp;</p>
+<p><br></p>`
 let pt_text = `<p style="text-align:center;font-size:16pt!important;" class="p14">
 <span class="s1"
   ><strong
@@ -1670,4 +1960,5 @@ M&Aacute;XIMA PERMITIDA POR LEI.
 <p class="p19">
 Para obter informa&ccedil;&otilde;es, suporte ou d&uacute;vidas, entre em
 contato conosco pelo e-mail vegas@cybersays.club
-</p>`
+</p>
+<p><br></p>`
