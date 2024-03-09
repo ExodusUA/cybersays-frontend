@@ -9,6 +9,7 @@ function WithdrawMain({ selectPayment, selectedPayment, userCountry, user, langu
 
     return (
         <>
+        <div>
             <p className='text-[18px] md:text-[32px] font-semibold text-center'>{languageData?.withdrawTitle1}</p>
             <p className={`text-[12px] ${design === '0' ? 'text-[#FFED63]' : 'gradient-linkDouble font-semibold'} font-medium text-center saira`}>{languageData?.withdrawSubtitle}</p>
             <div className=' text-center flex justify-center  m-auto mt-3'>
@@ -33,7 +34,7 @@ function WithdrawMain({ selectPayment, selectedPayment, userCountry, user, langu
                 </div>
             </div>
 
-
+            </div>
         </>
     )
 }
