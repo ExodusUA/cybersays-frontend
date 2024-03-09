@@ -27,6 +27,7 @@ function Confirm({ languageData, setOpen, closeAll, selectedPayment, selectPayme
 
                     <div className='flex items-center gap-4'>
                         <button onClick={e => {
+                            window.location.reload()
                             selectPayment(null)
                             closeAll(false)
                         }} className={`w-full bg-[white]  px-6 py-3 saira p-2 mt-4 text-[18px] text-[#5f5f5f] font-semibold ${design === '0' ? '  rounded-[50px] border-[2px] bg-white ' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawContinue}</button>
