@@ -25,216 +25,210 @@ function Privacy() {
 export default Privacy
 let en_text = `<div>
 <p style="margin-top:0pt; margin-bottom:14pt; text-align:center; line-height:115%; font-size:16pt!important;"><strong><u>Cybersays.club - Privacy Policy</u></strong></p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:right; line-height:115%; font-size:12pt;">Last revised: <u>February 2024</u></p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:14pt"><strong><u>INTRODUCTION</u></strong></p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">Pythia Grant Ltd.&nbsp; including its affiliates (collectively, the<strong>&nbsp;&quot;Company&quot;,&nbsp;</strong>&quot;<strong>we</strong>&quot;, &quot;<strong>our</strong>&quot; or &quot;<strong>us</strong>&quot;) are deeply committed to safeguarding the privacy expectations of its users (&ldquo;<strong>User(s)</strong>&rdquo;, &ldquo;<strong>you</strong>&rdquo; or &ldquo;<strong>your</strong>&rdquo;).</p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">Accordingly, we have put in place this privacy policy (&quot;<strong>Policy</strong>&quot;), which outlines our data protection practices, including how we collect, use, disclose and protect your personal information, as well as your rights with respect to your personal information.</p>
-<p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:115%; font-size:12pt;;"><span style="line-height:115%; font-size:12pt;">Please read this Policy very carefully and use it to make informed decisions, as your access to and use of our service, whether by visiting our website,&nbsp;</span><a href="http://www.Cybersays.club" style="text-decoration:none;"><u><span style="line-height:115%; font-size:12pt; color:#0000ff;">www.Cybersays.club</span></u></a><span style="line-height:115%; font-size:12pt;">&nbsp;(&quot;</span><strong><span style="line-height:115%; font-size:12pt;">Website</span></strong><span style="line-height:115%; font-size:12pt;">&quot;) or by creating an account through our service (collectively &quot;</span><strong><span style="line-height:115%; font-size:12pt;">Service</span></strong><span style="line-height:115%; font-size:12pt;">&quot;), signifies that you have read and understand all the terms detailed herein and you hereby agree to this Policy and to the collection, use, retention and disclosure of your personal information in accordance with these terms.&nbsp;</span></p>
-<p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:115%; font-size:12pt;"><strong>If you do not agree to the terms of this Policy, please do not use our Services</strong>.&nbsp;You are&nbsp;not&nbsp;legally required to provide us with any personal information, but without it, we will not be able to provide you with the full range or with the best experience of using our Services.</p>
-<p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:115%; font-size:12pt;">Personal information is defined as any information that identifies an individual or could reasonably identify an individual with reasonable effort, including without limitation (1) User name, (2) your browser identification details and (3) your Social media identification details (i.e. you Facebook User details) hereinafter referred to as the &quot;<strong>Personal Information</strong>&quot;. Processing activities include, among other things, the collection, use, retention and disclosure of such data.</p>
-<p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:115%; font-size:12pt;">Your Personal Information will be processed by us (including any of our agents and/or employees), and (where appropriate) any other company in our company group and/or our partners and subcontractors, in accordance with this Policy.</p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">If you have any questions regarding this Policy or the way we use your Personal Information, please refer to our table of contents and to the section 12. &quot;HOW TO CONTACT US?&quot; below. The Company is the controller of the Personal Information collected, and is responsible for the processing of your Personal Information.</p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">In this Policy, you can learn about:</p>
-<ol type="1" style="margin:0pt; padding-left:0pt;">
-    <li style="margin-left:12.74pt; line-height:normal; padding-left:5.26pt; font-size:12pt; font-weight:bold;">WHAT INFORMATION WE COLLECT?</li>
-    <li style="margin-left:12.74pt; line-height:normal; padding-left:5.26pt; font-size:12pt; font-weight:bold;">MINORS</li>
-    <li style="margin-left:12.74pt; line-height:normal; padding-left:5.26pt; font-size:12pt; font-weight:bold;">PURPOSES AND CONDITIONS FOR PROCESSING PERSONAL INFORMATION</li>
-    <li style="margin-left:12.74pt; line-height:normal; padding-left:5.26pt; font-size:12pt; font-weight:bold;">MARKETING</li>
-    <li style="margin-left:12.74pt; line-height:normal; padding-left:5.26pt; font-size:12pt; font-weight:bold;">WITH WHOM WE SHARE INFORMATION?</li>
-    <li style="margin-left:12.74pt; line-height:normal; padding-left:5.26pt; font-size:12pt; font-weight:bold;">INTERNATIONAL TRANSFER OF INFORMATION</li>
-    <li style="margin-left:12.74pt; line-height:normal; padding-left:5.26pt; font-size:12pt; font-weight:bold;">THIRD PARTY TRACKING TECHNOLOGIES</li>
-    <li style="margin-left:12.74pt; line-height:normal; padding-left:5.26pt; font-size:12pt; font-weight:bold;">RETENTION OF PERSONAL INFORMATION</li>
-    <li style="margin-left:12.74pt; line-height:normal; padding-left:5.26pt; font-size:12pt; font-weight:bold;">YOUR RIGHTS</li>
-    <li style="margin-left:17.81pt; line-height:normal; padding-left:0.19pt; font-size:12pt; font-weight:bold;">CHANGES TO THE PRIVACY POLICY</li>
-    <li style="margin-left:17.81pt; line-height:normal; padding-left:0.19pt; font-size:12pt; font-weight:bold;">LANGUAGE VERSION</li>
-    <li style="margin-left:17.81pt; line-height:normal; padding-left:0.19pt; font-size:12pt; font-weight:bold;">HOW TO CONTACT US?</li>
+<p>Last revised: March 2024</p>
+<p><strong>INTRODUCTION</strong></p>
+<p>Pythia Grant Ltd.&nbsp;&nbsp;including its affiliates (collectively, the<strong>&nbsp;&quot;Company&quot;,&nbsp;</strong>&quot;<strong>we</strong>&quot;, &quot;<strong>our</strong>&quot; or &quot;<strong>us</strong>&quot;) are deeply committed to safeguarding the privacy expectations of its users (&ldquo;<strong>User(s)</strong>&rdquo;, &ldquo;<strong>you</strong>&rdquo; or &ldquo;<strong>your</strong>&rdquo;).&nbsp;</p>
+<p>Accordingly, we have put in place this privacy policy (&quot;<strong>Policy</strong>&quot;), which outlines our data protection practices, including how we collect, use, disclose and protect your personal information, as well as your rights with respect to your personal information.</p>
+<p>Please read this Policy very carefully and use it to make informed decisions, as your access to and use of our service, whether by visiting our website, <a href="http://www.Cybersays.club">www.Cybersays.club</a>, <a href="http://www.Cybersays.com">www.Cybersays.com</a>, <a href="http://www.EllaComanda.com">www.EllaComanda.com</a>, www.EllaComandas.com, www.ElaComanda.com (&quot;<strong>Website/s</strong>&quot;) or by creating an account through our service (collectively &quot;<strong>Service</strong>&quot;), signifies that you have read and understand all the terms detailed herein and you hereby agree to this Policy and to the collection, use, retention and disclosure of your personal information in accordance with these terms.&nbsp;</p>
+<p><strong>If you do not agree to the terms of this Policy, please do not use our Services</strong>.&nbsp;You are&nbsp;not&nbsp;legally required to provide us with any personal information, but without it, we will not be able to provide you with the full range or with the best experience of using our Services.</p>
+<p>Personal information is defined as any information that identifies an individual or could reasonably identify an individual with reasonable effort, including without limitation (1) User name, (2) your browser identification details and (3) your Social media identification details (i.e. you Facebook User details) hereinafter referred to as the &quot;<strong>Personal Information</strong>&quot;. Processing activities include, among other things, the collection, use, retention and disclosure of such data.</p>
+<p>Your Personal Information will be processed by us (including any of our agents and/or employees), and (where appropriate) any other company in our company group and/or our partners and subcontractors, in accordance with this Policy.&nbsp;</p>
+<p>If you have any questions regarding this Policy or the way we use your Personal Information, please refer to our table of contents and to the section 12. &quot;HOW TO CONTACT US?&quot; below. The Company is the controller of the Personal Information collected, and is responsible for the processing of your Personal Information.</p>
+<p>In this Policy, you can learn about:</p>
+<ol>
+  <li><strong>WHAT INFORMATION WE COLLECT?</strong></li>
+  <li><strong>MINORS</strong></li>
+  <li><strong>PURPOSES AND CONDITIONS FOR PROCESSING PERSONAL INFORMATION</strong></li>
+  <li><strong>MARKETING</strong></li>
+  <li><strong>WITH WHOM WE SHARE INFORMATION?</strong></li>
+  <li><strong>INTERNATIONAL TRANSFER OF INFORMATION</strong></li>
+  <li><strong>THIRD PARTY TRACKING TECHNOLOGIES</strong></li>
+  <li><strong>RETENTION OF PERSONAL INFORMATION</strong></li>
+  <li><strong>YOUR RIGHTS</strong></li>
+  <li><strong>CHANGES TO THE PRIVACY POLICY</strong></li>
+  <li><strong>LANGUAGE VERSION</strong></li>
+  <li><strong>HOW TO CONTACT US?</strong></li>
 </ol>
-<p style="margin-top:10pt; margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt;"></p>
-<ol type="1" style="margin:0pt; padding-left:0pt;">
-    <li style="line-height:115%; font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="width:18.26pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>WHAT INFORMATION WE COLLECT?</li>
+<p><br></p>
+<ol>
+  <li><strong>WHAT INFORMATION WE COLLECT?</strong></li>
 </ol>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">We collect Personal Information from our Users and visitors of our Service, which consists of the following:</p>
-<ul type="square" style="margin:0pt; padding-left:0pt;">
-    <li style="margin-top:6pt; margin-left:27.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><strong><span style="font-family:Calibri;">Registration and login:</span></strong><span style="font-family:Calibri;">&nbsp;When you open an account and register to use our Service, you will be asked to provide us with certain details about yourself, such as: your email address, your Facebook User details and password. Please note that when you wish to update your account profile, we also collect Personal Information from you.</span></li>
-    <li style="margin-top:6pt; margin-left:27.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><strong><span style="font-family:Calibri;">Voluntary information</span></strong><span style="font-family:Calibri;">: We also collect information which you provide us voluntarily in order to personalize your account or for a specific function, which you voluntarily provide to us at your discretion for a specific function. In addition, we collect your communication when you respond to communications from us, provide us with feedback, communicate with us via email or share additional information about yourself through your use of the Service.&nbsp;</span></li>
-    <li style="margin-top:6pt; margin-left:27.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><strong><span style="font-family:Calibri;">Device information</span></strong><span style="font-family:Calibri;">: We collect specific types of connection details and information with regard to your device, software or hardware that could identify you, such as: device&rsquo;s unique identifiers (e.g. UDID, IMEI, MAC address), browser fingerprinting, IP address, blockchain address, wallet type, and geo-location data.</span></li>
-    <li style="margin-top:6pt; margin-left:27.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><strong><span style="font-family:Calibri;">Information we collect from third parties</span></strong><span style="font-family:Calibri;">: We sometimes collect Personal Information from third party service providers, such as information which is gathered in order to verify your identity and prevent fraudulent or illegal activity.</span></li>
+<p>We collect Personal Information from our Users and visitors of our Service, which consists of the following:</p>
+<ul>
+  <li><strong>Registration and login:</strong> When you open an account and register to use our Service, you will be asked to provide us with certain details about yourself, such as: your email address, your Facebook User details and password. Please note that when you wish to update your account profile, we also collect Personal Information from you.</li>
+  <li><strong>Voluntary information</strong>: We also collect information which you provide us voluntarily in order to personalize your account or for a specific function, which you voluntarily provide to us at your discretion for a specific function. In addition, we collect your communication when you respond to communications from us, provide us with feedback, communicate with us via email or share additional information about yourself through your use of the Service.&nbsp;</li>
+  <li><strong>Device information</strong>: We collect specific types of connection details and information with regard to your device, software or hardware that could identify you, such as: device&rsquo;s unique identifiers (e.g. UDID, IMEI, MAC address), browser fingerprinting, IP address, blockchain address, wallet type, and geo-location data.</li>
+  <li><strong>Information we collect from third parties</strong>: We sometimes collect Personal Information from third party service providers, such as information which is gathered in order to verify your identity and prevent fraudulent or illegal activity.</li>
+  <li><strong>Log-in history and technical information</strong>: To enhance the functionality of the Service and to provide you with a better user experience,<strong>&nbsp;</strong>we collect technical information transmitted by your device, including certain software and hardware information (e.g. the type of browser and operating system your device uses, language preference, access time and the domain name of the website from which you linked to the Service; etc.).</li>
+  <li><strong>Analytics information</strong>: We collect information about your use of the Service, such as applications&apos; usage, log files, user activity (e.g. pages viewed, user&apos;s movements, time spent, online browsing, clicks, actions, etc.), time stamps, alerts, etc. This information is collected for amongst other things troubleshooting errors and bugs as well as for research and analytics purposes about your use of the Service.</li>
 </ul>
-<ul type="square" style="margin:0pt; padding-left:0pt;">
-    <li style="margin-top:6pt; margin-left:27.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><strong><span style="font-family:Calibri;">Log-in history and technical information</span></strong><span style="font-family:Calibri;">: To enhance the functionality of the Service and to provide you with a better user experience,</span><strong><span style="font-family:Calibri;">&nbsp;</span></strong><span style="font-family:Calibri;">we collect technical information transmitted by your device, including certain software and hardware information (e.g. the type of browser and operating system your device uses, language preference, access time and the domain name of the website from which you linked to the Service; etc.).</span></li>
-    <li style="margin-top:6pt; margin-left:27.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><strong><span style="font-family:Calibri;">Analytics information</span></strong><span style="font-family:Calibri;">: We collect information about your use of the Service, such as applications&apos; usage, log files, user activity (e.g. pages viewed, user&apos;s movements, time spent, online browsing, clicks, actions, etc.), time stamps, alerts, etc. This information is collected for amongst other things troubleshooting errors and bugs as well as for research and analytics purposes about your use of the Service.</span></li>
-</ul>
-<ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
-    <li style="line-height:115%; font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="width:23.26pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>MINORS</li>
+<ol>
+  <li><strong>MINORS</strong></li>
 </ol>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">The Service are not designed or directed to persons under the age of 18 or persons under the age of legal consent with respect to the use of the Service of any jurisdiction, whichever is higher (&ldquo;<strong>Legally of Age</strong>&rdquo;).</p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">We do not collect Personal Information of a minor.</p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;"><strong>If you are not Legally of Age, you are prohibited to access or use the Service and you are prohibited to provide any Personal Information to us.</strong></p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">We reserve the right to access and verify any Personal Information collected from you. In the event that we become aware that a user who is not Legally of Age has shared any information, we shall discard such information.</p>
-<ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
-    <li style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="width:23.26pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>PURPOSES AND CONDITIONS FOR PROCESSING PERSONAL INFORMATION</li>
+<p>The Service are not designed or directed to persons under the age of 18 or persons under the age of legal consent with respect to the use of the Service of any jurisdiction, whichever is higher (&ldquo;<strong>Legally of Age</strong>&rdquo;).&nbsp;</p>
+<p>We do not collect Personal Information of a minor.&nbsp;</p>
+<p><strong>If you are not Legally of Age, you are prohibited to access or use the Service and you are prohibited to provide any Personal Information to us.</strong></p>
+<p>We reserve the right to access and verify any Personal Information collected from you. In the event that we become aware that a user who is not Legally of Age has shared any information, we shall discard such information.&nbsp;</p>
+<ol>
+  <li><strong>PURPOSES AND CONDITIONS FOR PROCESSING PERSONAL INFORMATION&nbsp;</strong></li>
 </ol>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">This section outlines the underlying purposes and legal bases for the processing of your Personal Information:</p>
-<table cellspacing="0" cellpadding="0" style="width:468.55pt; border:0.75pt solid #000000; border-collapse:collapse;">
-    <tbody>
-        <tr>
-            <td style="width:224.3pt; border-right-style:solid; border-right-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top; background-color:#aeaaaa;">
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; line-height:115%; font-size:12pt;"><strong>Purpose</strong></p>
-            </td>
-            <td style="width:221.9pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top; background-color:#aeaaaa;">
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; line-height:115%; font-size:12pt;"><strong>Legal basis</strong></p>
-            </td>
-        </tr>
-        <tr>
-            <td style="width:224.3pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify; line-height:115%; font-size:12pt;"><strong>Provision of our Service; support and customer relations</strong>. We use your Personal Information, such as your username and email address for customer services purposes as well as to present our Websites to you. This includes, for example, managing and updating your account, providing and operating the Service, keeping you informed about our last updates or responding to any of your inquiries, as well as your request to exercise your User rights.</p>
-            </td>
-            <td style="width:221.9pt; border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify; line-height:115%; font-size:12pt;">The legal bases for processing this data are the performance of our contractual obligations towards you for example as described under this Policy and/or Terms of Use (Art. 6.1(b) GDPR); your consent (for example, when you agree to provide Personal Information by accepting our Cookie Notice, Policy and Terms of Use) (Art. 6.1(a) GDPR); compliance with our legal obligations (Art. 6.1(c) GDPR); and our legitimate interests (Art. 6.1(f) GDPR). Our legitimate interests in this case are enforcing our policies, protection against fraud and misuse of our Service.</p>
-            </td>
-        </tr>
-        <tr>
-            <td style="width:224.3pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify; line-height:115%; font-size:12pt;"><strong>Improving our Service</strong>. We collect and analyze information about you and your usage of our Service to improve the usability and effectiveness of our Service, including debugging to identify and repair errors or undertaking internal research for technological development and demonstration.</p>
-            </td>
-            <td style="width:221.9pt; border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify; line-height:115%; font-size:12pt;">The legal basis for processing this data is our legitimate interests (Art. 6.1(f) GDPR), in this case &ndash; providing and improving our Service.</p>
-            </td>
-        </tr>
-        <tr>
-            <td style="width:224.3pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify; line-height:115%; font-size:12pt;"><strong>Marketing, advertising and analytics</strong>. We use your Personal Information in order to provide you with personalized advertisements, including behavioral advertising when you visit our Service, to market our Service and to gather aggregate usage information for analytics, statistical and research purposes, including notification of promotional offers.</p>
-            </td>
-            <td style="width:221.9pt; border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify; line-height:115%; font-size:12pt;">The legal bases for processing this data are your consent (when required) and our legitimate interests (Art. 6.1(a), 6.1(f) GDPR).</p>
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify; line-height:115%; font-size:12pt;">Our legitimate interests in this case are providing you with tailored services, content and advertisements that better fit your interests as well as to promote our Service.</p>
-            </td>
-        </tr>
-        <tr>
-            <td style="width:224.3pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify; line-height:115%; font-size:12pt;"><strong>Integrity.</strong> We process certain information about you and your usage of the Services in order to keep the integrity and security of the Services.</p>
-            </td>
-            <td style="width:221.9pt; border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify; line-height:115%; font-size:12pt;">The legal bases for processing this data are compliance with our legal obligations (Art. 6.1(c) GDPR) and our legitimate interests (Art. 6.1(f) GDPR). Our legitimate interests in this case are keeping the integrity of our Services and the safety of our end-users.</p>
-            </td>
-        </tr>
-        <tr>
-            <td style="width:224.3pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify; line-height:115%; font-size:12pt;"><strong>Dispute resolution and protection of our legal claims</strong>. We collect your Personal Information in order to investigate violation of our policies, enable us to resolve disputes in connection with your use of the Service and to establish and defend our legal claims.</p>
-            </td>
-            <td style="width:221.9pt; border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify; line-height:115%; font-size:12pt;">The legal basis for processing this data is our legitimate interests (Art. 6.1(f) GDPR). Our legitimate interests in this case are to establish and defend our legal claims.</p>
-            </td>
-        </tr>
-        <tr>
-            <td style="width:224.3pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                <p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;"><strong>Corporate transactions</strong>. We will share your Personal Information with a potential purchasers, successors or investors in the Company or in the event of a corporate transaction (e.g. sale of a substantial part of our business, merger, reorganization, bankruptcy, consolidation or asset sale of an asset or transfer in the operation thereof) in relation to the Company.</p>
-            </td>
-            <td style="width:221.9pt; border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify; line-height:115%; font-size:12pt;">The legal basis for processing this data is our legitimate interests (Art. 6.1(f) GDPR).</p>
-            </td>
-        </tr>
-        <tr>
-            <td style="width:224.3pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                <p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;"><strong>Prevention of fraud or violation of our policies</strong>. We process your Personal Information to detect and prevent fraudulent and illegal activity or any other type of activity that jeopardizes or negatively affect the integrity of the Service, including by identifying risks associated with your activity on our Service. We will also investigate any violations of our policies and enforce them.</p>
-            </td>
-            <td style="width:221.9pt; border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify; line-height:115%; font-size:12pt;">The legal basis for processing this data is our legitimate interests (Art. 6.1(f) GDPR). Our legitimate interests in this case are to protect our Company and other Users against fraud.</p>
-            </td>
-        </tr>
-        <tr>
-            <td style="width:224.3pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                <p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;"><strong>Compliance with applicable laws</strong>. We process your Personal Information to comply with our various legal obligations such as adult content legislation (where applicable), anti-money laundering, identity verification (e.g., suspicion of minor using our Service), prevention of fraud, complying with data subject rights etc.</p>
-            </td>
-            <td style="width:221.9pt; border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify; line-height:115%; font-size:12pt;">The legal basis for processing this data is to comply with our various legal obligations (Art. 6.1(c) GDPR) and our legitimate interests (Art. 6.1(f) GDPR).</p>
-            </td>
-        </tr>
-    </tbody>
+<p>This section outlines the underlying purposes and legal bases for the processing of your Personal Information:</p>
+<table cellspacing="0" cellpadding="0">
+  <tbody>
+      <tr>
+          <td valign="top">
+              <p><strong>Purpose</strong></p>
+          </td>
+          <td valign="top">
+              <p><strong>Legal basis</strong></p>
+          </td>
+      </tr>
+      <tr>
+          <td valign="top">
+              <p><strong>Provision of our Service; support and customer relations</strong>. We use your Personal Information, such as your username and email address for customer services purposes as well as to present our Websites to you. This includes, for example, managing and updating your account, providing and operating the Service, keeping you informed about our last updates or responding to any of your inquiries, as well as your request to exercise your User rights.</p>
+          </td>
+          <td valign="top">
+              <p>The legal bases for processing this data are the performance of our contractual obligations towards you for example as described under this Policy and/or Terms of Use (Art. 6.1(b) GDPR); your consent (for example, when you agree to provide Personal Information by accepting our Cookie Notice, Policy and Terms of Use) (Art. 6.1(a) GDPR); compliance with our legal obligations (Art. 6.1(c) GDPR); and our legitimate interests (Art. 6.1(f) GDPR). Our legitimate interests in this case are enforcing our policies, protection against fraud and misuse of our Service.</p>
+          </td>
+      </tr>
+      <tr>
+          <td valign="top">
+              <p><strong>Improving our Service</strong>. We collect and analyze information about you and your usage of our Service to improve the usability and effectiveness of our Service, including debugging to identify and repair errors or undertaking internal research for technological development and demonstration.</p>
+          </td>
+          <td valign="top">
+              <p>The legal basis for processing this data is our legitimate interests (Art. 6.1(f) GDPR), in this case &ndash; providing and improving our Service.</p>
+          </td>
+      </tr>
+      <tr>
+          <td valign="top">
+              <p><strong>Marketing, advertising and analytics</strong>. We use your Personal Information in order to provide you with personalized advertisements, including behavioral advertising when you visit our Service, to market our Service and to gather aggregate usage information for analytics, statistical and research purposes, including notification of promotional offers.</p>
+          </td>
+          <td valign="top">
+              <p>The legal bases for processing this data are your consent (when required) and our legitimate interests (Art. 6.1(a), 6.1(f) GDPR).&nbsp;</p>
+              <p>Our legitimate interests in this case are providing you with tailored services, content and advertisements that better fit your interests as well as to promote our Service.&nbsp;</p>
+          </td>
+      </tr>
+      <tr>
+          <td valign="top">
+              <p><strong>Integrity.</strong> We process certain information about you and your usage of the Services in order to keep the integrity and security of the Services.</p>
+          </td>
+          <td valign="top">
+              <p>The legal bases for processing this data are compliance with our legal obligations (Art. 6.1(c) GDPR) and our legitimate interests (Art. 6.1(f) GDPR). Our legitimate interests in this case are keeping the integrity of our Services and the safety of our end-users.</p>
+          </td>
+      </tr>
+      <tr>
+          <td valign="top">
+              <p><strong>Dispute resolution and protection of our legal claims</strong>. We collect your Personal Information in order to investigate violation of our policies, enable us to resolve disputes in connection with your use of the Service and to establish and defend our legal claims.</p>
+          </td>
+          <td valign="top">
+              <p>The legal basis for processing this data is our legitimate interests (Art. 6.1(f) GDPR). Our legitimate interests in this case are to establish and defend our legal claims.</p>
+          </td>
+      </tr>
+      <tr>
+          <td valign="top">
+              <p><strong>Corporate transactions</strong>. We will share your Personal Information with a potential purchasers, successors or investors in the Company or in the event of a corporate transaction (e.g. sale of a substantial part of our business, merger, reorganization, bankruptcy, consolidation or asset sale of an asset or transfer in the operation thereof) in relation to the Company.</p>
+          </td>
+          <td valign="top">
+              <p>The legal basis for processing this data is our legitimate interests (Art. 6.1(f) GDPR).&nbsp;</p>
+          </td>
+      </tr>
+      <tr>
+          <td valign="top">
+              <p><strong>Prevention of fraud or violation of our policies</strong>. We process your Personal Information to detect and prevent fraudulent and illegal activity or any other type of activity that jeopardizes or negatively affect the integrity of the Service, including by identifying risks associated with your activity on our Service. We will also investigate any violations of our policies and enforce them.</p>
+          </td>
+          <td valign="top">
+              <p>The legal basis for processing this data is our legitimate interests (Art. 6.1(f) GDPR). Our legitimate interests in this case are to protect our Company and other Users against fraud.</p>
+          </td>
+      </tr>
+      <tr>
+          <td valign="top">
+              <p><strong>Compliance with applicable laws</strong>. We process your Personal Information to comply with our various legal obligations such as adult content legislation (where applicable), anti-money laundering, identity verification (e.g., suspicion of minor using our Service), prevention of fraud, complying with data subject rights etc.</p>
+          </td>
+          <td valign="top">
+              <p>The legal basis for processing this data is to comply with our various legal obligations (Art. 6.1(c) GDPR) and our legitimate interests (Art. 6.1(f) GDPR).&nbsp;</p>
+          </td>
+      </tr>
+  </tbody>
 </table>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">Where you have not consented (or have withdrawn your consent) to the processing of your Personal Information by us, we will continue to process your Personal Information : (a) where processing is required for the performance of the contract (i.e. the Terms of Use) between you and us; and/or (b) where processing is necessary for compliance with a legal obligation to which we are subject; (c) where processing is necessary for the purposes of a legitimate interest of the Company and its affiliates (including for marketing).</p>
-<ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
-    <li style="line-height:115%; font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="width:23.26pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>MARKETING</li>
+<p>Where you have not consented (or have withdrawn your consent) to the processing of your Personal Information by us, we will continue to process your Personal Information : (a) where processing is required for the performance of the contract (i.e. the Terms of Use) between you and us; and/or (b) where processing is necessary for compliance with a legal obligation to which we are subject; (c) where processing is necessary for the purposes of a legitimate interest of the Company and its affiliates (including for marketing).</p>
+<ol>
+  <li><strong>MARKETING</strong></li>
 </ol>
-<p style="margin-top:0pt; margin-bottom:8pt; text-align:justify; line-height:115%; font-size:12pt;">We will use your Personal Information, such as your email address, collected by ourselves or through our trusted third party subcontractors for the purpose of providing you with promotional materials via different marketing techniques such as direct email, telephone marketing, SMS concerning the Service as well as products, services, websites and applications which relate to the Company&apos;s business partners and its affiliates (collectively: &ldquo;<strong>Marketing Affiliates</strong>&rdquo;), which we believe could interest you.</p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">We also share and disclose Personal Information with our Marketing Affiliates for the purpose of providing you different marketing offers, which we, or our Marketing Affiliates, believe are relevant for you.</p>
-<p style="margin-top:0pt; margin-bottom:8pt; text-align:justify; line-height:115%; font-size:12pt;">We will use your Personal Information for the purpose of providing you with promotional materials solely where we have a legitimate interest in doing so, or where we have obtained your affirmative consent.</p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">You have the possibility at any time to decline receiving further marketing offers from us or from our business partners and marketing affiliates by either: following the links inserted in the promotional emails (e.g., selecting the opt-out link) or contacting our customer support.</p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">Please note that even if you unsubscribe from our marketing mailing list, we shall continue to send you service-related updates and notifications.</p>
-<ol start="5" type="1" style="margin:0pt; padding-left:0pt;">
-    <li style="line-height:115%; font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="width:23.26pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>WITH WHOM WE SHARE INFORMATION?</li>
+<p>We will use your Personal Information, such as your email address, collected by ourselves or through our trusted third party subcontractors for the purpose of providing you with promotional materials via different marketing techniques such as direct email, telephone marketing, SMS concerning the Service as well as products, services, websites and applications which relate to the Company&apos;s business partners and its affiliates (collectively: &ldquo;<strong>Marketing Affiliates</strong>&rdquo;), which we believe could interest you.</p>
+<p>We also share and disclose Personal Information with our Marketing Affiliates for the purpose of providing you different marketing offers, which we, or our Marketing Affiliates, believe are relevant for you.&nbsp;</p>
+<p>We will use your Personal Information for the purpose of providing you with promotional materials solely where we have a legitimate interest in doing so, or where we have obtained your affirmative consent.</p>
+<p>You have the possibility at any time to decline receiving further marketing offers from us or from our business partners and marketing affiliates by either: following the links inserted in the promotional emails (e.g., selecting the opt-out link) or contacting our customer support.&nbsp;</p>
+<p>Please note that even if you unsubscribe from our marketing mailing list, we shall continue to send you service-related updates and notifications.</p>
+<ol>
+  <li><strong>WITH WHOM WE SHARE INFORMATION?</strong></li>
 </ol>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">We do not rent, sell, or share your Personal Information with third parties (&ldquo;<strong>Recipients</strong>&rdquo;) except as described in this Policy.&nbsp; The Personal Information will be disclosed to Recipients only to the extent required for the specific purpose, as stipulated in this Policy.</p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">We disclose Personal Information with any of the following recipients:</p>
-<ul type="square" style="margin:0pt; padding-left:0pt;">
-    <li style="margin-top:6pt; margin-left:9.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><span style="font-family:Calibri;">Companies within the Company and other affiliated companies;</span></li>
-    <li style="margin-top:6pt; margin-left:9.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><span style="font-family:Calibri;">Subcontractors and third party service providers, as well as their subcontractors, which by way of example include (but is not limited to) cloud computing companies, marketing affiliates, identity verification and fraud prevention services, and other data verifiers;</span></li>
-    <li style="margin-top:6pt; margin-left:9.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><span style="font-family:Calibri;">Payment service providers, payment processors&nbsp;</span></li>
-    <li style="margin-top:6pt; margin-left:9.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><span style="font-family:Calibri;">To any third parties who provide services in relation to the operation or promotion of the Service;</span></li>
-    <li style="margin-top:6pt; margin-left:9.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><span style="font-family:Calibri;">Auditors, contractors or advisers of any of the Company&rsquo;s business processes;</span></li>
-    <li style="margin-top:6pt; margin-left:9.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><span style="font-family:Calibri;">To any third parties who investigate, detect or prevent fraudulent or illegal activity (e.g. governmental authorities, police, banks and other investigatory organizations);</span></li>
-    <li style="margin-top:6pt; margin-left:9.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><span style="font-family:Calibri;">Governmental and regulatory bodies, in accordance with applicable laws and regulations;</span></li>
-    <li style="margin-top:6pt; margin-left:9.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><span style="font-family:Calibri;">Law enforcement agencies or authorities, as a response to their request; and</span></li>
-    <li style="margin-top:6pt; margin-left:9.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><span style="font-family:Calibri;">Potential purchasers or investors in any of the companies within the Company&apos;s group (if applicable), or in the event of a corporate transaction (e.g. sale of a substantial part of our business, merger, reorganization, bankruptcy, consolidation or asset sale of an asset or transfer in the operation thereof) in relation to any company within the Company (in such event, the acquiring company or transferee will assume the rights and obligations as described in this Policy).</span></li>
-    <li style="margin-top:6pt; margin-left:9.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><span style="font-family:Calibri;">Research, technical diagnostics and analytics vendors;&nbsp;</span></li>
-    <li style="margin-top:6pt; margin-left:9.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><span style="font-family:Calibri;">Marketing and advertising partners, in accordance with our marketing policy (see above, under &quot;</span><strong><span style="font-family:Calibri;">Marketing</span></strong><span style="font-family:Calibri;">&quot;); and</span></li>
-    <li style="margin-top:6pt; margin-left:9.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><span style="font-family:Calibri;">Whenever we believe in good faith that disclosure is necessary to protect our rights or legal claims, enforce our policies (including our Terms of Use and Policy), protect your safety or the safety of others, as well as to investigate or prevent any fraud, for security reasons or to help us with any other related technical issue.</span></li>
+<p>We do not rent, sell, or share your Personal Information with third parties (&ldquo;<strong>Recipients</strong>&rdquo;) except as described in this Policy.&nbsp;&nbsp;The Personal Information will be disclosed to Recipients only to the extent required for the specific purpose, as stipulated in this Policy.</p>
+<p>We disclose Personal Information with any of the following recipients:</p>
+<ul>
+  <li>Companies within the Company and other affiliated companies;</li>
+  <li>Subcontractors and third party service providers, as well as their subcontractors, which by way of example include (but is not limited to) cloud computing companies, marketing affiliates, identity verification and fraud prevention services, and other data verifiers;</li>
+  <li>Payment service providers, payment processors&nbsp;</li>
+  <li>To any third parties who provide services in relation to the operation or promotion of the Service;</li>
+  <li>Auditors, contractors or advisers of any of the Company&rsquo;s business processes;</li>
+  <li>To any third parties who investigate, detect or prevent fraudulent or illegal activity (e.g. governmental authorities, police, banks and other investigatory organizations);</li>
+  <li>Governmental and regulatory bodies, in accordance with applicable laws and regulations;</li>
+  <li>Law enforcement agencies or authorities, as a response to their request; and</li>
+  <li>Potential purchasers or investors in any of the companies within the Company&apos;s group (if applicable), or in the event of a corporate transaction (e.g. sale of a substantial part of our business, merger, reorganization, bankruptcy, consolidation or asset sale of an asset or transfer in the operation thereof) in relation to any company within the Company (in such event, the acquiring company or transferee will assume the rights and obligations as described in this Policy).</li>
+  <li>Research, technical diagnostics and analytics vendors;&nbsp;</li>
+  <li>Marketing and advertising partners, in accordance with our marketing policy (see above, under &quot;<strong>Marketing</strong>&quot;); and</li>
+  <li>Whenever we believe in good faith that disclosure is necessary to protect our rights or legal claims, enforce our policies (including our Terms of Use and Policy), protect your safety or the safety of others, as well as to investigate or prevent any fraud, for security reasons or to help us with any other related technical issue.</li>
 </ul>
-<ol start="6" type="1" style="margin:0pt; padding-left:0pt;">
-    <li style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="width:23.26pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>INTERNATIONAL TRANSFER OF INFORMATION</li>
+<ol>
+  <li><strong>INTERNATIONAL TRANSFER OF INFORMATION</strong></li>
 </ol>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">Since we operate globally, it is necessary for the provision of the Service and to the extent required for the specific purpose, as stipulated in this Policy to transfer your Personal Information to countries outside the European Economic Area (&quot;<strong>EEA</strong>&quot;). The data protection and other laws of these countries are not as comprehensive as those in the EEA.</p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%;"><span style="line-height:115%; font-size:12pt;">In these circumstances, we use our best efforts to ensure that your Personal Information is protected in accordance with our Policy, through contractual means (such as by using the standard contractual clauses approved by the relevant European Commission for data transfer, as available&nbsp;</span><a href="https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en" style="text-decoration:none;"><u><span style="line-height:115%; font-size:12pt; color:#0000ff;">here</span></u></a><span style="line-height:115%; font-size:12pt;">) or other means (such as ensuring that the European Commission decisions determined that such jurisdictions offer an adequate level of protection as available&nbsp;</span><a href="https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en" style="text-decoration:none;"><u><span style="line-height:115%; font-size:12pt; color:#0000ff;">here</span></u></a><span style="line-height:115%; font-size:12pt; color:#595959;">).</span></p>
-<ol start="7" type="1" style="margin:0pt; padding-left:0pt;">
-    <li style="line-height:115%; font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="width:23.26pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>THIRD PARTY TRACKING TECHNOLOGIES</li>
+<p>Since we operate globally, it is necessary for the provision of the Service and to the extent required for the specific purpose, as stipulated in this Policy to transfer your Personal Information to countries outside the European Economic Area (&quot;<strong>EEA</strong>&quot;). The data protection and other laws of these countries are not as comprehensive as those in the EEA.&nbsp;</p>
+<p>In these circumstances, we use our best efforts to ensure that your Personal Information is protected in accordance with our Policy, through contractual means (such as by using the standard contractual clauses approved by the relevant European Commission for data transfer, as available <a href="https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en">here</a>) or other means (such as ensuring that the European Commission decisions determined that such jurisdictions offer an adequate level of protection as available <a href="https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en">here</a>).</p>
+<ol>
+  <li><strong>THIRD PARTY TRACKING TECHNOLOGIES</strong></li>
 </ol>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">We use third-party advertising technology across our Websites to serve advertisements when you visit or use our Service. We use and authorize third parties to use web beacons, cookies, pixels, scripts, tags and other technologies (&quot;<strong>Tracking Technologies</strong>&quot;).</p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">The Tracking Technologies automatically collect information about you, your online behavior on the Websites, and your device (for example your computer or mobile device), for different purposes, including improving and personalizing your navigation on our Service and enhancing our Service&rsquo; performance. Third parties use this information to provide you with targeted content.</p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">You can set your browser to refuse all third party cookies, or to alert you when cookies are being sent, also you can opt-out of many third party ad networks, including those operated by members of the Network Advertising Initiative (&quot;<strong>NAI</strong>&quot;) and the Digital Advertising Alliance (&quot;<strong>DAA</strong>&quot;).</p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">We also allow third parties to collect information about you through Tracking Technologies. To learn more please visit our Cookie Notice.</p>
-<ol start="8" type="1" style="margin:0pt; padding-left:0pt;">
-    <li style="line-height:115%; font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="width:23.26pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>RETENTION OF PERSONAL INFORMATION</li>
+<p>We use third-party advertising technology across our Websites to serve advertisements when you visit or use our Service. We use and authorize third parties to use web beacons, cookies, pixels, scripts, tags and other technologies (&quot;<strong>Tracking Technologies</strong>&quot;).&nbsp;</p>
+<p>The Tracking Technologies automatically collect information about you, your online behavior on the Websites, and your device (for example your computer or mobile device), for different purposes, including improving and personalizing your navigation on our Service and enhancing our Service&rsquo; performance. Third parties use this information to provide you with targeted content.</p>
+<p>You can set your browser to refuse all third party cookies, or to alert you when cookies are being sent, also you can opt-out of many third party ad networks, including those operated by members of the Network Advertising Initiative (&quot;<strong>NAI</strong>&quot;) and the Digital Advertising Alliance (&quot;<strong>DAA</strong>&quot;).</p>
+<p>We also allow third parties to collect information about you through Tracking Technologies. To learn more please visit our Cookie Notice.&nbsp;</p>
+<ol>
+  <li><strong>RETENTION OF PERSONAL INFORMATION</strong></li>
 </ol>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">If you have registered with an account through our Service, the Company will retain your Personal Information during the period your account is active. In addition, the Company will retain your Personal Information for additional periods, to enable the Company to meet its legal obligations under applicable laws or regulations.</p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">In addition, the Company shall retain your Personal Information for longer periods, provided that retaining such information is only necessary for the Company&rsquo;s legitimate interests, such as fraud prevention and record keeping, resolving or excising claims regarding potential disputes.</p>
-<ol start="9" type="1" style="margin:0pt; padding-left:0pt;">
-    <li style="line-height:115%; font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="width:23.26pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>YOUR RIGHTS</li>
+<p>If you have registered with an account through our Service, the Company will retain your Personal Information during the period your account is active. In addition, the Company will retain your Personal Information for additional periods, to enable the Company to meet its legal obligations under applicable laws or regulations.</p>
+<p>In addition, the Company shall retain your Personal Information for longer periods, provided that retaining such information is only necessary for the Company&rsquo;s legitimate interests, such as fraud prevention and record keeping, resolving or excising claims regarding potential disputes.</p>
+<ol>
+  <li><strong>YOUR RIGHTS</strong></li>
 </ol>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">You have certain rights regarding the collection and processing of Personal Information. To the extent these rights apply to and concern you, you can exercise them by contacting us via the contact details available under the section below &quot;HOW TO CONTACT US?&quot; and exercise the following rights:</p>
-<ol type="1" class="awlist1" style="margin:0pt; padding-left:0pt;">
-    <li style="margin-top:6pt; margin-left:36pt; text-indent:-18pt; text-align:justify; line-height:115%; font-size:12pt;"><span style="width:9.9pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Rights of access &ndash; You can obtain a copy of the Personal Information held by the Company at any time;</li>
-    <li style="margin-left:36pt; text-indent:-18pt; text-align:justify; line-height:115%; font-size:12pt;"><span style="width:9.9pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Right of data portability &ndash; You have the right to receive your Personal Information, in a structured, commonly used and machine-readable format and to request that your Personal Information be transmitted to a third party of your choice;</li>
-    <li style="margin-left:36pt; text-indent:-18pt; text-align:justify; line-height:115%; font-size:12pt;"><span style="width:9.9pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Right of rectification &ndash; In the event that the data held about you by the Company is inaccurate, incomplete or outdated, you have the possibility to request the rectification of said data (except in cases where the information is required to be kept in its original format under any applicable laws and regulations);</li>
-    <li style="margin-left:36pt; text-indent:-18pt; text-align:justify; line-height:115%; font-size:12pt;"><span style="width:9.9pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Right of erasure &ndash; You have the possibility at any time to request that the Company erases data held about you by sending an email to the Company as outlined in this Policy. However, you are advised that with the deletion of your Personal Information, you might not be able to use the Service anymore or the account might be totally closed;</li>
-    <li style="margin-left:36pt; text-indent:-18pt; text-align:justify; line-height:115%; font-size:12pt;"><span style="width:9.9pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Right to restriction of processing, objection to processing &ndash; At any time, you have the right to request that the Company restricts or ceases to conduct certain data processes provided that there exists no other lawful basis on which the Company is authorized to process said data;</li>
-    <li style="margin-left:36pt; text-indent:-18pt; text-align:justify; line-height:115%; font-size:12pt;"><span style="width:9.9pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Right to withdraw your consent &ndash; You have the right to withdraw your given consent at any time. The withdrawal of consent will not affect the lawfulness of processing;</li>
-    <li style="margin-left:36pt; text-indent:-18pt; text-align:justify; line-height:115%; font-size:12pt;"><span style="width:9.9pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Right to lodge a complaint &ndash; All requests, complaints or queries should be addressed to the Company with the subject &lsquo;Privacy&rsquo;. We will consider any requests, complaints or queries and provide you with a reply in a timely manner. You can also file a complaint with the relevant data protection authority should you not be satisfied with the way in which we handle your Personal Information. We take our obligations seriously and we ask that any concerns be first brought to our attention, so that we can try to resolve this.</li>
+<p>You have certain rights regarding the collection and processing of Personal Information. To the extent these rights apply to and concern you, you can exercise them by contacting us via the contact details available under the section below &quot;HOW TO CONTACT US?&quot; and exercise the following rights:&nbsp;</p>
+<ol>
+  <li>Rights of access &ndash; You can obtain a copy of the Personal Information held by the Company at any time;</li>
+  <li>Right of data portability &ndash; You have the right to receive your Personal Information, in a structured, commonly used and machine-readable format and to request that your Personal Information be transmitted to a third party of your choice;</li>
+  <li>Right of rectification &ndash; In the event that the data held about you by the Company is inaccurate, incomplete or outdated, you have the possibility to request the rectification of said data (except in cases where the information is required to be kept in its original format under any applicable laws and regulations);</li>
+  <li>Right of erasure &ndash; You have the possibility at any time to request that the Company erases data held about you by sending an email to the Company as outlined in this Policy. However, you are advised that with the deletion of your Personal Information, you might not be able to use the Service anymore or the account might be totally closed;</li>
+  <li>Right to restriction of processing, objection to processing &ndash; At any time, you have the right to request that the Company restricts or ceases to conduct certain data processes provided that there exists no other lawful basis on which the Company is authorized to process said data;</li>
+  <li>Right to withdraw your consent &ndash; You have the right to withdraw your given consent at any time. The withdrawal of consent will not affect the lawfulness of processing;</li>
+  <li>Right to lodge a complaint &ndash; All requests, complaints or queries should be addressed to the Company with the subject &lsquo;Privacy&rsquo;. We will consider any requests, complaints or queries and provide you with a reply in a timely manner. You can also file a complaint with the relevant data protection authority should you not be satisfied with the way in which we handle your Personal Information. We take our obligations seriously and we ask that any concerns be first brought to our attention, so that we can try to resolve this.</li>
 </ol>
-<p style="margin-top:0pt; margin-left:36pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">&nbsp;</p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">Please note that these rights are not absolute, and can be subject to our own legitimate interests and regulatory requirements. You are welcome to contact us for any questions, requests or complaints through our contact details below.</p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">We will make an effort to reply within a reasonable timeframe. Please feel free to reach out to us at any time. If you are unsatisfied with our response, you can lodge a complaint with the competent supervisory authority.</p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">Also, you should be aware that unless you have registered and created an account on our Website, we could not be able to respond to your request as we do not have sufficient information to identify you. We could also rectify, replenish or remove incomplete or inaccurate information, at any time and at our own discretion, in accordance with our internal policies. Similarly, we will ask you to provide us with additional information in order to adequately verify your identity upon your request.</p>
-<ol start="10" type="1" style="margin:0pt; padding-left:0pt;">
-    <li style="line-height:115%; font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="width:18.19pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>CHANGES TO THE PRIVACY POLICY</li>
+<p><br></p>
+<p>Please note that these rights are not absolute, and can be subject to our own legitimate interests and regulatory requirements. You are welcome to contact us for any questions, requests or complaints through our contact details below.</p>
+<p>We will make an effort to reply within a reasonable timeframe. Please feel free to reach out to us at any time. If you are unsatisfied with our response, you can lodge a complaint with the competent supervisory authority.</p>
+<p>Also, you should be aware that unless you have registered and created an account on our Website, we could not be able to respond to your request as we do not have sufficient information to identify you. We could also rectify, replenish or remove incomplete or inaccurate information, at any time and at our own discretion, in accordance with our internal policies. Similarly, we will ask you to provide us with additional information in order to adequately verify your identity upon your request.</p>
+<ol>
+  <li><strong>CHANGES TO THE PRIVACY POLICY</strong></li>
 </ol>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">We reserve the right to change this Policy at any time, so please re-visit this page frequently. We will use reasonable efforts to notify you in the event substantial changes are made to this Policy, as required by law. Any modifications, updates, alteration will be effective upon our publishing of this Privacy on our Websites and as of the stated &ldquo;Last Revised&rdquo; date, and your continued use of the Service after the Last Revised date will constitute acceptance of, and agreement to be bound by those changes.</p>
-<ol start="11" type="1" style="margin:0pt; padding-left:0pt;">
-    <li style="line-height:115%; font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="width:18.19pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>LANGUAGE VERSION</li>
+<p>We reserve the right to change this Policy at any time, so please re-visit this page frequently. We will use reasonable efforts to notify you in the event substantial changes are made to this Policy, as required by law. Any modifications, updates, alteration will be effective upon our publishing of this Privacy on our Websites and as of the stated &ldquo;Last Revised&rdquo; date, and your continued use of the Service after the Last Revised date will constitute acceptance of, and agreement to be bound by those changes.</p>
+<ol>
+  <li><strong>LANGUAGE VERSION</strong></li>
 </ol>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">The Policy has been drafted in the English language, which is the original and controlling version of this Policy. All translations of this Policy into other languages shall be solely for convenience and shall not control the meaning or application of this Policy. In the event of any discrepancy between the meanings of any translated versions of the Policy and the English language version, the meaning of the English language version shall prevail.</p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">&nbsp;<strong>HOW TO CONTACT US</strong></p>
-<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:115%; font-size:12pt;">If you have any general questions about the Service or the information that we collect about you and how we process it, please contact us via email:</p>
-<ul type="square" style="margin:0pt; padding-left:0pt;">
-    <li style="margin-top:6pt; margin-left:27.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><span style="font-family:Calibri;">Pythia Grant Ltd.</span><span style="font-family:Calibri;">&nbsp;&nbsp;</span></li>
-    <li style="margin-top:6pt; margin-left:27.58pt; margin-bottom:6pt; text-align:justify; line-height:115%; padding-left:8.42pt; font-family:serif; font-size:12pt;"><span style="font-family:Calibri;">Attn: Cybersays.club Data Protection Officer</span></li>
-    <li style="margin-left:27.58pt; margin-bottom:14pt; line-height:normal; padding-left:8.42pt; font-family:serif; font-size:12pt;"><a href="mailto:DPO@Cybersays.club" style="text-decoration:none;"><u><span style="font-family:'Segoe UI'; font-size:9pt; color:#0000ff;">DPO@Cybersays.club</span></u></a><span style="font-family:'Segoe UI'; font-size:9pt;">&nbsp;</span></li>
+<p>The Policy has been drafted in the English language, which is the original and controlling version of this Policy. All translations of this Policy into other languages shall be solely for convenience and shall not control the meaning or application of this Policy. In the event of any discrepancy between the meanings of any translated versions of the Policy and the English language version, the meaning of the English language version shall prevail.</p>
+<p>&nbsp;<strong>HOW TO CONTACT US</strong></p>
+<p>If you have any general questions about the Service or the information that we collect about you and how we process it, please contact us via email:</p>
+<ul>
+  <li>Pythia Grant Ltd. &nbsp;</li>
+  <li>Attn: Cybersays.club Data Protection Officer</li>
+  <li><a href="mailto:DPO@Cybersays.club">DPO@Cybersays.club</a>&nbsp;</li>
 </ul>
-<p style="margin-top:0pt; margin-bottom:0pt; line-height:115%; font-size:12pt;">We will make an effort to reply within a reasonable timeframe. Please feel free to reach out to us at any time. If you are unsatisfied with our response, you can reach out to the applicable data protection supervisory authority<span style="color:#595959;">.</span></p>
-<div style="clear:both;">
-    <p style="margin-top:0pt; margin-bottom:0pt; line-height:normal;"></p>
-    <p style="margin-top:0pt; margin-bottom:0pt; line-height:normal;">&nbsp;</p>
-</div>
-</div>`
+<p>We will make an effort to reply within a reasonable timeframe. Please feel free to reach out to us at any time. If you are unsatisfied with our response, you can reach out to the applicable data protection supervisory authority.&nbsp;</p>
+<p><br></p>`
 let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Cybersays.club - Pol&iacute;tica de privacidad</strong></p>
 <p>&Uacute;ltima revisi&oacute;n: Febrero 2024</p>
 <p><strong>INTRODUCCI&Oacute;N</strong></p>
