@@ -67,6 +67,11 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
         }
     }
 
+    const handleImLiveRedirect = () => {
+        window.location.replace(imLiveURL)
+        window.open(window.location.href + '#vegas', '_blank')
+    }
+
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-raffle.jpg)] md:bg-[url(./images/CyberSaysPage/bg-raffle.jpg)]' : 'bg-[#200527]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} onClick={() => setIsOpen(false)}>
             <div className='pt-[57px]  md:pt-[80px] mac-center:!pt-0 px-4 max-w-[970px] m-auto' >
@@ -85,7 +90,10 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                                         <p className='text-[18px] md:text-[24px] font-medium saira text-center se:mb-0 iphone:mb-2 mac:!mb-1  md:text-center iphone:px-4'>{languageData?.raffleUnderBtn} </p>
                                         <div className='flex justify-between items-start w-full '>
                                             <div className='text-center w-full'>
-                                                <Link target='_blank' to={imLiveURL}><button className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[14px] lg:text-[18px] saira font-semibold p-0 md:py-2 w-[97%] md:w-[95%] ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.raffleLeftBtn}</button></Link>
+                                                <Link onClick={e => {
+                                                   // e.preventDefault()
+                                                   // handleImLiveRedirect()
+                                                }} target='_blank' to={imLiveURL}><button className={` bg-white  border-[2px] border-[#FFED63]  text-black text-[14px] lg:text-[18px] saira font-semibold p-0 md:py-2 w-[97%] md:w-[95%] ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.raffleLeftBtn}</button></Link>
                                                 <p className='saira text-[12px] md:text-[14px] font-medium mt-1'>{languageData?.raffleLeftSection1} {languageData?.raffleLeftSection2}</p>
 
 

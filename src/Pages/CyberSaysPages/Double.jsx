@@ -27,7 +27,7 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
         let lastTask = sortedTasks[sortedTasks.length - 1]
 
         if (finishedTasks.includes(task)) {
-          
+
             return 'finished'
         } else {
             if (lastTask === task + 1) {
@@ -62,7 +62,7 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
             return
         }
         let lastTask = tasks[tasks.length - 1]
-        
+
         setSelectedTask(lastTask + 1)
         setLastTask(lastTask)
     }, [user])
@@ -78,25 +78,46 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
             case 1:
                 return <div className='max-w-[380px] w-full px-1'>
                     <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
-                    <Link to={imLiveURL} target='_blank'> <button className={`w-full border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.doubleTaskBtn1}</button></Link>
+                    <Link onClick={e => {
+                        //e.preventDefault()
+                        //handleImLiveRedirect()
+                    }} to={imLiveURL} target='_blank'> <button className={`w-full border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.doubleTaskBtn1}</button></Link>
                     <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>7 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
                 </div>
             case 2: return <div className='max-w-[380px] w-full px-1'>
                 <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
-                <Link to={imLiveURL} target='_blank'><button className={`w-full bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.doubleTaskBtn2}</button></Link>
+                <Link onClick={e => {
+                    //e.preventDefault()
+                        //handleImLiveRedirect()
+                }} to={imLiveURL} target='_blank'><button className={`w-full bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.doubleTaskBtn2}</button></Link>
                 <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>5 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
             </div>
             case 3: return <div className='max-w-[380px] w-full px-1'>
                 <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
-                <Link to={imLiveURL} target='_blank'><button className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.doubleTaskBtn3}</button></Link>
+                <Link onClick={e => {
+                    //e.preventDefault()
+                        //handleImLiveRedirect()
+                }} to={imLiveURL} target='_blank'><button className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.doubleTaskBtn3}</button></Link>
                 <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>3 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
             </div>
             case 4: return <div className='max-w-[380px] w-full px-1'>
                 <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
-                <Link to={imLiveURL} target='_blank'><button className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.doubleBtnEndTask}</button></Link>
+                <Link onClick={e => {
+                    //e.preventDefault()
+                        //handleImLiveRedirect()
+                }} to={imLiveURL} target='_blank'><button className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.doubleBtnEndTask}</button></Link>
             </div>
         }
     }
+
+    /*
+    const handleImLiveRedirect = async () => {
+        window.location.replace(imLiveURL);
+        await new Promise(resolve => setTimeout(resolve, 100));
+        window.open(window.location.href + '#double', '_blank');
+    }
+    */
+
     return (
         <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-double.jpg)] md:bg-[url(./images/CyberSaysPage/bg-double.jpg)]' : ' bg-[#200527]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`} onClick={() => setIsOpen(false)}>
             <div className='pt-[57px] md:pt-[80px] px-4  mac-center:!pt-0 max-w-[1170px] m-auto' >

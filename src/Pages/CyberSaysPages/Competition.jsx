@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import logoCyber from '../../images/CyberSaysPage/logoMain.png'
-import cup1 from '../../images/CyberSaysPage/cup1st.png'
-import cup2 from '../../images/CyberSaysPage/cup2st.png'
-import cup3 from '../../images/CyberSaysPage/cup3st.png'
 import infoAPI from '../../Requests/info'
 import { Link } from 'react-router-dom'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
 import crown from '../../images/CyberSaysPage/crown1st.png'
 import TimeCounterDay from '../../Components/TimeCounterDay'
-import mixpanel from 'mixpanel-browser';
-import moengage from '@moengage/web-sdk';
+import mixpanel from 'mixpanel-browser'
+import moengage from '@moengage/web-sdk'
 
 function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading, leaderboardData, setLeaderboardData, siteData, languageData, setRulesModal, setSocialLink }) {
 
@@ -69,6 +66,11 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                 setIsLinkCopied(false)
             }, 3000)
         }
+    }
+
+    const handleImLiveRedirect = () => {
+        window.location.replace(imLiveURL)
+        window.open(window.location.href + '#competition', '_blank')
     }
 
     return (
@@ -153,6 +155,8 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                                     USD_earned: user?.allTimeEarned,
                                     page_name: 'Refferals',
                                 })
+                                //e.preventDefault()
+                                //handleImLiveRedirect()
                             }} to={imLiveURL}>
                                 <button className={` bg-white  border-[2px] border-[#FFED63] text-black text-[18px] saira font-semibold p-2 sm:px-6 w-[95%] md:w-full ${design === '0' ? ' p-2 sm:px-6 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.competitionLeftBtn}</button>
                             </Link>

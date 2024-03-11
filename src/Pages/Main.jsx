@@ -103,7 +103,6 @@ function Main({ languageData }) {
   
     const uid = window.location.pathname.split('/')[1]
    
-
     const [menuOpen, setMenuOpen] = useState(false)
     const [deleteOpen, setDeleteOpen] = useState(false)
 
@@ -146,6 +145,22 @@ function Main({ languageData }) {
             setUserCountry(res)
         }
 
+        
+    }, [])
+
+    useEffect(() => {
+        if (window.location.hash === '#double') {
+            setActivePageIndex(1)
+        } else if (window.location.hash === '#vegas') {
+            setActivePageIndex(2)
+        } else if (window.location.hash === '#competition') {
+            setActivePageIndex(3)
+        } else if (window.location.hash === '#referrals') {
+            setActivePageIndex(4)
+        }
+
+        //clear hash and # from url
+        
         
     }, [])
 
@@ -305,7 +320,9 @@ function Main({ languageData }) {
             let linkData = imLiveLinks.find(link => link.CultureCode.indexOf(userCountry) !== -1)
             console.log(imLiveLinks)
             if (linkData === undefined) linkData = imLiveLinks.find(link => link.CultureCode.indexOf('en') !== -1)
-            let link = `http://imlive.com//wmaster.ashx?QueryID=197&WID=${linkData.CybersaysWid}&linkID=701&from=freevideo6&cbname=CyberSays&c=${linkData.CultureCode}&promocode=${userData?.id}`
+            
+            //let link = `https://imlive.com//wmaster.ashx?QueryID=197&WID=${linkData.CybersaysWid}&linkID=701&from=freevideo6&cbname=CyberSays&c=${linkData.CultureCode}&promocode=${userData?.id}`
+            let link = `https://imlive.com/wmaster2.ashx?QueryID=197&WID=${linkData.CybersaysWid}&linkID=701&from=freevideo6&cbname=CyberSays&c=${linkData.CultureCode}&promocode=${userData?.id}`
             setImLiveURL(link)
         }
     }, [userData, userCountry])
