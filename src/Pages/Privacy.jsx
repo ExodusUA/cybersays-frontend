@@ -1,6 +1,5 @@
 import React from 'react'
 import HeaderProfile from '../Components/HeaderProfile'
-import privacyData from '../Pages/socialPageJSON/privacy_en.json';
 import LanguageSocial from '../Components/Language/LanguageSocial';
 import { useLanguage } from '../Helpers/Languages/LanguageContext';
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import HeaderProfile from '../Components/HeaderProfile'
-import termsData from '../Pages/socialPageJSON/terms_en.json';
 import LanguageSocial from '../Components/Language/LanguageSocial';
 import { useLanguage } from '../Helpers/Languages/LanguageContext';
 
