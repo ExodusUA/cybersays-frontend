@@ -382,6 +382,49 @@ body {
     background: var(--Card-bg, linear-gradient(94deg, #711876 0%, #355FA3 100%));
 }
 
+.react-international-phone-input {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background: #F5F5F5 !important;
+    padding: 16px;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -1px;
+    color: #000000;
+    outline: none;
+    border: 0 !important;
+}
+
+.react-international-phone-country-selector-button {
+    background: #F5F5F5 !important;
+    border: 0 !important;
+}
+
+.react-international-phone-input {
+    color: black !important;
+    border: 0 !important;
+    font-size: 16px !important;
+}
+
+.react-international-phone-country-selector-dropdown {
+    background: white !important;
+    color: black !important;
+    border: 0 !important;
+    outline: none !important;
+}
+
+.react-international-phone-country-selector-dropdown * {
+    background: white !important;
+    border: 0 !important;
+    color: black !important;
+    font-family: Saira !important;
+    outline: none !important;
+}
+
 @media screen and (max-width: 600px) {
     table {
         width: 100% !important;
