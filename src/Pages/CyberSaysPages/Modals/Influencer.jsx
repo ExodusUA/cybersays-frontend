@@ -32,22 +32,22 @@ function Influencer({ user, setOpen, languageData }) {
 
     const selectedWho = [
         {
-            option: 'Crypto Influencer',
+            option: languageData?.InfluencerWhoOption1,
         },
         {
-            option: 'Top Model',
+            option: languageData?.InfluencerWhoOption2,
         },
         {
-            option: 'Content Creator on Instagram',
+            option: languageData?.InfluencerWhoOption3,
         },
         {
-            option: 'Content Creator on YouTube',
+            option: languageData?.InfluencerWhoOption4,
         },
         {
-            option: 'TikToker',
+            option: languageData?.InfluencerWhoOption5,
         },
         {
-            option: 'Other',
+            option: languageData?.InfluencerWhoOption6,
         }
     ]
     const selectedInstagram = [
@@ -177,7 +177,7 @@ function Influencer({ user, setOpen, languageData }) {
                                 <div className='flex justify-center'>
                                     <input className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder={languageData?.InfluencerInput1} />
                                 </div>
-                                <p className='saira text-[12px] font-medium my-1'>Phone</p>
+                                <p className='saira text-[12px] font-medium my-1'>{languageData?.InfluencerInputPhone}</p>
                                 <PhoneInput
                                     className="w-full  max-w-[600px] text-[16px] saira font-semibold  text-black outline-none rounded-[12px]"
                                     style={{ width: '100%', padding: '5px', backgroundColor: '#F5F5F5' }}
@@ -191,11 +191,11 @@ function Influencer({ user, setOpen, languageData }) {
                                     <input className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={name} onChange={e => setName(e.target.value)} placeholder={languageData?.InfluencerInput2} />
                                 </div>
                                 <div>
-                                    <p className='saira text-[12px] font-medium my-1'>Who are you?</p>
+                                    <p className='saira text-[12px] font-medium my-1'>{languageData?.InfluencerWho}</p>
                                     <div className={` bg-white px-3 py-2 lg:py-3 mt-1 border ${design === '0' ? 'rounded-[18px]' : 'rounded-[12px]'}`} >
                                         <div onClick={e => setWho(!who)} className={`flex  items-center justify-between cursor-pointer`}>
                                             <div className='flex items-center' >
-                                                <p className='saira text-[16px] font-normal text-[#1E1E1E]'>Choose who you are</p>
+                                                <p className='saira text-[16px] font-normal text-[#1E1E1E]'>{languageData?.InfluencerWhoSelect}</p>
                                             </div>
                                             <div className='ml-2'>
                                                 {
@@ -219,7 +219,7 @@ function Influencer({ user, setOpen, languageData }) {
                                                     selectedWho.map((item, index) => (
                                                         <div key={index} className='flex items-center gap-1'>
                                                             <label className="checkbox-container flex items-center ml-2">
-                                                                <input id={item.option} name={item.option} value={item.option} checked={optionInstagram === index} onChange={e => setOptionInstagram(index)} type="checkbox" />
+                                                                <input id={item.option} name={item.option} value={item.option} checked={optionWho === index} onChange={e => setOptionWho(index)} type="checkbox" />
                                                                 <span className="checkmark"></span>
                                                                 <p htmlFor={item.option} className='text-[#1E1E1E] saira text-[16px] font-normal'>{item.option}</p>
                                                             </label>
@@ -232,16 +232,16 @@ function Influencer({ user, setOpen, languageData }) {
                                         </>
                                     }
                                 </div>
-                                <p className='saira text-[12px] font-medium my-1'>Social network nickname</p>
+                                <p className='saira text-[12px] font-medium my-1'>{languageData?.InfluencerNickname}</p>
                                 <div className='flex justify-center'>
-                                    <input className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={nickname} onChange={e => setNickname(e.target.value)} placeholder='Social network nickname' />
+                                    <input className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={nickname} onChange={e => setNickname(e.target.value)} placeholder={languageData?.InfluencerNickname} />
                                 </div>
                                 <div>
-                                    <p className='saira text-[12px] font-medium my-1'>Social network and followers</p>
+                                    <p className='saira text-[12px] font-medium my-1'>{languageData?.InfluencerFollowers}</p>
                                     <div className={` bg-white px-3 py-2 lg:py-3 mt-1 border ${design === '0' ? 'rounded-[18px]' : 'rounded-[12px]'}`} >
                                         <div onClick={e => setSocialOpen(!socialOpen)} className={`flex  items-center justify-between cursor-pointer`}>
                                             <div className='flex items-center' >
-                                                <p className='saira text-[16px] font-normal text-[#1E1E1E]'>Social network and followers</p>
+                                                <p className='saira text-[16px] font-normal text-[#1E1E1E]'>{languageData?.InfluencerFollowers}</p>
                                             </div>
                                             <div className='ml-2'>
                                                 {
@@ -441,7 +441,7 @@ function Influencer({ user, setOpen, languageData }) {
                                 <svg className='m-auto my-4' width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M42.9981 73.501L78.2481 38.251L71.2481 31.251L42.9981 59.501L28.748 45.251L21.748 52.251L42.9981 73.501ZM49.9981 100.501C43.0814 100.501 36.5814 99.1877 30.4981 96.561C24.4147 93.9343 19.123 90.3727 14.623 85.876C10.123 81.376 6.56138 76.0843 3.93805 70.001C1.31471 63.9176 0.00138021 57.4176 -0.00195312 50.501C-0.00195312 43.5843 1.31138 37.0843 3.93805 31.001C6.56471 24.9176 10.1264 19.626 14.623 15.126C19.123 10.626 24.4147 7.06431 30.4981 4.44098C36.5814 1.81764 43.0814 0.50431 49.9981 0.500977C56.9147 0.500977 63.4147 1.81431 69.4981 4.44098C75.5814 7.06764 80.8731 10.6293 85.3731 15.126C89.8731 19.626 93.4364 24.9176 96.063 31.001C98.6897 37.0843 100.001 43.5843 99.9981 50.501C99.9981 57.4176 98.6847 63.9176 96.0581 70.001C93.4314 76.0843 89.8697 81.376 85.3731 85.876C80.8731 90.376 75.5814 93.9393 69.4981 96.566C63.4147 99.1926 56.9147 100.504 49.9981 100.501Z" fill="#48EFAC" />
                                 </svg>
-                                <h1 className='text-[24px] text-center text-[#48EFAC]  w-full font-semibold'>Thank you for the request. Our team will contact you soon</h1>
+                                <h1 className='text-[24px] text-center text-[#48EFAC]  w-full font-semibold'>{languageData?.InfluencerThanks}</h1>
 
                                 <div className='flex items-center gap-4'>
                                     <button onClick={e => setOpen(false)} className={`w-full bg-[white]  px-6 py-3 saira p-2 mt-4 text-[18px] text-[#5f5f5f] font-semibold ${design === '0' ? '  rounded-[50px] border-[2px] bg-white ' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawContinue}</button>
