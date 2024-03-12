@@ -15,7 +15,7 @@ import ContestTerms from './Pages/ContestTerms';
 import PromotionTerms from './Pages/PromotionTerms';
 import AffiliationTerms from './Pages/AffiliationTerms';
 import moengage from '@moengage/web-sdk';
-import ImLivePromo from './Pages/ImLivePromo';
+import Admin from './Pages/Admin';
 
 function App() {
 
@@ -122,7 +122,7 @@ function App() {
             <Route path="/contest-terms" element={<ContestTerms />} />
             <Route path="/promotion-terms" element={<PromotionTerms />} />
             <Route path="/affiliation-terms" element={<AffiliationTerms />} />
-            <Route path="/promo" element={<ImLivePromo languageData={languageData} />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         </BrowserRouter>
       </DesignProvider>
