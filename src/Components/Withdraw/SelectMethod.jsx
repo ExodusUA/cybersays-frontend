@@ -41,6 +41,8 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                         <Swiper
                             style={{ zIndex: 0 }}
 
+
+                            
                             modules={[Navigation]}
                             navigation={{
                                 prevEl: '.buttonPrevGif',
