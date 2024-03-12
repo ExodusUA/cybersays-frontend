@@ -161,7 +161,7 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                                 </svg>
                             </div>
                         </div>
-                        <div className={`relative ${design === '0' ? ' border-[#FFD700]' : '  border-[#A2DBF0]'} rounded-[16px] border-2 px-1 pb-1 pt-8 m-auto lg:m-[unset]`}>
+                        <div className={`relative ${design === '0' ? ' border-[#FFD700]' : '  border-[#A2DBF0] homepageMainBlock'} rounded-[16px] border-2 px-1 pb-1 pt-8  m-auto lg:m-[unset]`}>
                             <div className='flex items-center '>
                                 <img className={`  ${design === '0' ? 'mt-[-30px] w-[180px] sm:w-[200px] md:w-[240px]' : 'mt-[-30px] md:mt-0 w-[380px] md:w-[470px]'}`} src={design === '0' ? girlOK : require('../../images/NewDesign/Homepage//message.png')} alt="girlOK" />
                                 <Link to={imLiveURL} target='_blank'><img className={`w-[160px] md:w-[240px] md:mt-5 mac:!mt-6 mb-10 ${design === '0' ? 'block' : 'hidden'}`} src={imLiveLogo} alt="imLiveLogo" /></Link>

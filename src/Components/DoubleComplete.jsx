@@ -36,9 +36,9 @@ function DoubleComplete({ setOpen, languageData, user }) {
                     <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
                 <div className='  max-w-[600px] m-auto '>
-                    <p className='text-[24px] md:text-[32px] font-semibold text-center leading-8 lg:leading-9 mx-2'>{languageData?.doubleCompleteTitle} <span className=' truncate text-[24px] md:text-[32px] font-semibold ml-1 block lg:inline'>
+                    <p className='text-[24px] md:text-[32px] font-semibold text-center leading-8 lg:leading-9 mx-2'>{languageData?.doubleCompleteTitle} {/* <span className=' truncate text-[24px] md:text-[32px] font-semibold ml-1 block lg:inline'>
                         {user?.email}
-                    </span> {languageData?.doubleCompleteTitleSpan}</p>
+                    </span> {languageData?.doubleCompleteTitleSpan}*/}</p>
                     <img className='max-w-[345px] md:max-w-[400px] w-full m-auto mt-2 my-4' src={congrats} alt="congrats" />
                     <p className='text-[20px]  font-medium text-center saira leading-6 lg:leading-[unset]'>{languageData?.doubleCompleteSubTitle}</p>
                     <div className='flex justify-center mx-2'>

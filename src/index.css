@@ -584,6 +584,9 @@ body {
     .leaderboardsHeight {
         height: 200px !important;
     }
+    .homepageMainBlock {
+        padding-top: 0px !important;
+    }
 }
 
 @media screen and (max-height: 791px) and (min-width: 1200px) {
