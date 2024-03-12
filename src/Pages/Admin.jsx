@@ -20,7 +20,7 @@ function Admin() {
     fetchTransactions()
 }, []);
 
-const [transactions, setTransactions] = useState([]);
+const [transactions, setTransactions] = useState(null);
 
 const fetchTransactions = async () => {
     const res = await getTransactions();

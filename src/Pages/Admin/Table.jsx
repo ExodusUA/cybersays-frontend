@@ -24,7 +24,7 @@ function TableComponent({ data }) {
             </thead>
             <tbody class="text-gray-700">
                 {
-                    data.map((transaction, index) => (
+                   data && data.map((transaction, index) => (
                         <tr key={index}>
                             <td class="py-3 px-4 text-black">{transaction.id}</td>
                             <td class="py-3 px-4 text-black">{transaction.email}</td>
