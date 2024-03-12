@@ -1,13 +1,12 @@
 import React from 'react';
 import { changeTransactionStatusD24 } from '../../Requests/admin';
 
-function TableComponent({ data }) {
+function TableComponent({ data, invalidateQueries }) {
 
 
     const transactionStatusD24 = async (id, status) => {
-        // Approve transaction
         const res = await changeTransactionStatusD24(id, status);
-       // window.location.reload();
+        invalidateQueries()
     }
 
     const getStatusName = (status) => {
@@ -46,12 +45,18 @@ function TableComponent({ data }) {
                             <td class="py-3 px-4 text-black">{transaction.type}</td>
                             <td class="py-3 px-4 text-black">{getStatusName(transaction.status)}</td>
                             <td class="py-3 px-4">
-                                <button onClick={() => transactionStatusD24(transaction.id, 3)} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                    Approve
-                                </button>
-                                <button onClick={() => transactionStatusD24(transaction.id, 4)} class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2">
-                                    Decline
-                                </button>
+                                {
+                                    transaction.status === 3 || transaction.status === 4
+                                        ? <div>-</div>
+                                        : <>
+                                            <button onClick={() => transactionStatusD24(transaction.id, 3)} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                                Approve
+                                            </button>
+                                            <button onClick={() => transactionStatusD24(transaction.id, 4)} class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2">
+                                                Decline
+                                            </button>
+                                        </>
+                                }
                             </td>
                         </tr>
                     ))

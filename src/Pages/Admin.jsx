@@ -2,8 +2,12 @@ import React, { useEffect, useState } from 'react';
 import HeaderProfile from '../Components/HeaderProfile';
 import TableComponent from './Admin/Table';
 import { getTransactions, getTransactionsD24 } from '../Requests/admin';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
+
 
 function Admin() {
+
+  const queryClient = useQueryClient();
 
   //page login & password protected
 
@@ -17,34 +21,36 @@ function Admin() {
         window.location.href = '/';
     }
 */
-    fetchTransactions()
-    fetchTransactionsD24()
   }, []);
 
   const [transactions, setTransactions] = useState([]);
 
-  const fetchTransactions = async () => {
-    const res = await getTransactions();
-    if (res.data === null) return;
+  useQuery({
+    queryKey: ['transactions'],
+    queryFn: async () => {
+      const res = await getTransactions();
+      setTransactions((prev) => {
+        return [...prev, ...res.data];
+      });
+      return res
+    }
+  });
 
-    setTransactions((prev) => {
-      return [...prev, ...res.data];
-    });
-  };
+  useQuery({
+    queryKey: ['transactions24'],
+    queryFn: async () => {
+      const res = await getTransactionsD24();
+      res.data = res.data.map((transaction) => {
+        transaction.type = transaction.currency === "BRL" ? "PIX (D24)" : "D24";
+        return transaction;
+      });
 
-  const fetchTransactionsD24 = async () => {
-    const res = await getTransactionsD24();
-    if (res.data === null) return;
-    
-    res.data = res.data.map((transaction) => {
-      transaction.type = transaction.currency === "BRL" ? "PIX (D24)" : "D24";
-      return transaction;
-    });
-
-    setTransactions((prev) => {
-      return [...prev, ...res.data];
-    });
-  };
+      setTransactions((prev) => {
+        return [...prev, ...res.data];
+      });
+      return res
+    }
+  });
 
   useEffect(() => {
 
@@ -55,6 +61,11 @@ function Admin() {
     });
   }, [transactions]);
 
+  const invalidateQueries = () => {
+    queryClient.invalidateQueries('transactions');
+    queryClient.invalidateQueries('transactions24');
+  }
+
   return (
     <div className='overflow-y-auto max-h-screen'>
       <HeaderProfile />
@@ -62,7 +73,7 @@ function Admin() {
       <div className='pt-8 max-w-[1440px] m-auto w-full dark-text'>
         <h1 className='text-black saira text-[26px]'>Latest transactions</h1>
 
-        <TableComponent data={transactions} />
+        <TableComponent data={transactions} invalidateQueries={invalidateQueries} />
       </div>
 
     </div>
