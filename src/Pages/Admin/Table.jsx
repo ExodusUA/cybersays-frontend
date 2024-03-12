@@ -5,7 +5,12 @@ function TableComponent({ data, invalidateQueries }) {
 
 
     const transactionStatusD24 = async (id, status) => {
-        const res = await changeTransactionStatusD24(id, status);
+        try {
+            const res = await changeTransactionStatusD24(id, status);
+            alert(res.data.message)
+        } catch (error) {
+            alert(error.response.data.message)
+        }
         invalidateQueries()
     }
 
