@@ -14,7 +14,7 @@ function LeaderboardList({ leaderboardData, languageData, day }) {
         console.log('leaderboardData', leaderboardData)
     }, [leaderboardData])
 
-
+    const displayedUsers = leaderboardData.slice(0, 10);
 
     return (
         <div className='relative'>
@@ -53,14 +53,14 @@ function LeaderboardList({ leaderboardData, languageData, day }) {
                     </div>
                 }
             </div>
-            <div className='h-[240px] md:h-[350px] overflow-scroll'>
+            <div className='h-[240px] iphone:h-[unset] overflow-y-auto lg:overflow-y-visible md:h-[195px] leaderboardsScroll'>
                 {
                     leaderboardData.length < 4
                         ? <div className='w-full flex justify-center my-8'>
                             <p>{languageData?.leaderboardsNotUser}</p>
                         </div>
 
-                        : leaderboardData.slice(3).map((user, index) => {
+                        : displayedUsers.slice(3).map((user, index) => {
                             console.log('user', user)
                             return (
                                <LeaderboardUser user={user} index={index} languageData={languageData}  />

@@ -148,7 +148,7 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
                         </>
                     }
                 </div>
-                <div className='max-w-[920px] m-auto lg:flex hidden '>
+                <div className='max-w-[920px] m-auto lg:flex hidden mt-[-10px]'>
                     {
                         taskStatus !== null && <>
                             <TaskCardDesktop lastTask={lastTask} languageData={languageData} tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task1} setSelectedTask={setSelectedTask} state={taskStatus[0]} manualSelect={selectedTask !== null} open={selectedTask === 1} background={design === '0' ? '#B9A1E1' : '#4F97CB'} rounded={'rounded-[20px]'} mt={'mt-5'} index={1} imLiveURL={imLiveURL} />

@@ -159,7 +159,7 @@ function TaskCardDesktop({ state, background, data, index, imLiveURL, rounded, o
 
     return (
 
-        <div  style={{ background: getBackground(), paddingBottom: getPaddingBottom(), marginTop: marginTop() }} className={`w-full rounded-t-[20px] ${rounded} bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  se:p-[6px]  p-2 se:my-0 my-2 mx-1     ${index  === lastTask + 1 ? design === '0' ? ' border-[3px]  !border-[#FFD700]' : 'border-[3px]  !border-[#A2DBF0]' : ''}`}>
+        <div  style={{ background: getBackground(), paddingBottom: getPaddingBottom(), }} className={`w-full h-[225px] rounded-t-[20px] ${rounded} bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  se:p-[6px]  p-2 se:my-0 my-2 mx-1     ${index  === lastTask + 1 ? design === '0' ? ' border-[3px]  !border-[#FFD700] !mt-[-10px]' : 'border-[3px]  !border-[#A2DBF0] !mt-[-10px]' : ''}`}>
 
 
             {
