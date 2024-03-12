@@ -8,6 +8,7 @@ function Admin() {
   //page login & password protected
 
   useEffect(() => {
+    /*
     const username = prompt('Enter username');
     const password = prompt('Enter password');
 
@@ -15,7 +16,7 @@ function Admin() {
     if (username !== 'admin' || password !== 'admin') {
         window.location.href = '/';
     }
-
+*/
     fetchTransactions()
 }, []);
 
@@ -23,6 +24,7 @@ const [transactions, setTransactions] = useState([]);
 
 const fetchTransactions = async () => {
     const res = await getTransactions();
+    console.log(res.data);
 
     setTransactions(res.data);
 };
