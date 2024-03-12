@@ -1,13 +1,22 @@
 import React from 'react';
-import { changeTransactionStatus } from '../../Requests/admin';
+import { changeTransactionStatusD24 } from '../../Requests/admin';
 
 function TableComponent({ data }) {
 
 
-    const transactionStatus = async (id, status) => {
+    const transactionStatusD24 = async (id, status) => {
         // Approve transaction
+        const res = await changeTransactionStatusD24(id, status);
+        window.location.reload();
+    }
 
-        const res = await changeTransactionStatus(id, status);
+    const getStatusName = (status) => {
+        switch (status) {
+            case 1: return 'Processing';
+            case 2: return 'Pending';
+            case 3: return 'Approved';
+            case 4: return 'Declined';
+        }
     }
 
     return (
@@ -19,29 +28,34 @@ function TableComponent({ data }) {
                     <th class="text-left py-3 px-4 uppercase font-semibold text-sm text-black">User ID</th>
                     <th class="text-left py-3 px-4 uppercase font-semibold text-sm text-black">Amount</th>
                     <th class="text-left py-3 px-4 uppercase font-semibold text-sm text-black">Date</th>
+                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm text-black">Withdraw Method</th>
                     <th class="text-left py-3 px-4 uppercase font-semibold text-sm text-black">Status</th>
+                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm text-black">Actions</th>
                 </tr>
             </thead>
             <tbody class="text-gray-700">
                 {
-                   data && data.map((transaction, index) => (
+                    data && data.map((transaction, index) => (
                         <tr key={index}>
-                            <td class="py-3 px-4 text-black">{transaction.id}</td>
+                            <td class="py-3 px-4 text-black">{transaction.transactionId}</td>
                             <td class="py-3 px-4 text-black">{transaction.email}</td>
                             <td class="py-3 px-4 text-black">{transaction.userID}</td>
                             <td class="py-3 px-4 text-black">{transaction.amount}</td>
+
                             <td class="py-3 px-4 text-black">{transaction.datetime}</td>
+                            <td class="py-3 px-4 text-black">{transaction.type}</td>
+                            <td class="py-3 px-4 text-black">{getStatusName(transaction.status)}</td>
                             <td class="py-3 px-4">
-                                <button onClick={() => transactionStatus(transaction.id, 3)} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                <button onClick={() => transactionStatusD24(transaction.transactionId, 3)} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                                     Approve
                                 </button>
-                                <button onClick={() => transactionStatus(transaction.id, 4)} class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2">
+                                <button onClick={() => transactionStatusD24(transaction.transactionId, 4)} class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2">
                                     Decline
                                 </button>
                             </td>
                         </tr>
                     ))
-                }  
+                }
             </tbody>
         </table>
     )
