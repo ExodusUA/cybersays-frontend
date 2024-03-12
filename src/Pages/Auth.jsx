@@ -10,6 +10,7 @@ import LoginForm from './Auth/LoginForm';
 import logoCyber from '../images/logoLogin.png';
 import { useSwipeable } from 'react-swipeable';
 import SocialLink from '../Components/SocialLink';
+import { Link } from 'react-router-dom';
 
 
 function Auth({ languageData }) {
@@ -112,7 +113,31 @@ function Auth({ languageData }) {
                                 <LoginForm languageData={languageData} referralID={referralID} />
 
                                 <div className='flex items-center lg:items-start justify-center gap-2 mt-2 lg:mt-4'>
-                                    <label className='saira text-[12px] text-[#CACACA]  w-full cursor-pointer select-none font-normal leading-4' htmlFor="notification">{languageData?.loginTermsTitle} <span onClick={e => setSocialLink(true)} className='gradient-TermsLink saira text-[12px] font-semibold'>{languageData?.loginTermsLink}</span> </label>
+                                    <p className='saira text-[12px] text-[#CACACA]  w-full cursor-pointer select-none font-normal leading-4'>
+                                        {languageData?.loginTermsTitle}
+
+                                        <Link target='_blank' to='/terms' className='saira text-[12px] font-semibold ml-1 underline'>
+                                            <span className=' saira text-[12px] font-normal underline'>{languageData?.loginTermsLink}</span>,
+                                        </Link>
+                                        <Link target='_blank' to={'/privacy'} className='saira text-[12px] font-semibold underline'>
+                                            <span className=' saira text-[12px] font-normal underline'>Privacy Policy</span>,
+                                        </Link>
+                                        <Link target='_blank' to={'/terms'} className='saira text-[12px] font-semibold underline'>
+                                            <span className=' saira text-[12px] font-normal underline'>Terms of Use</span>,
+                                        </Link>
+                                        <Link target='_blank' to={'/contest-terms'} className='saira text-[12px] font-semibold underline'>
+                                            <span className=' saira text-[12px] font-normal underline'>Contest Terms</span>,
+                                        </Link>
+                                        <Link  className='saira text-[12px] font-semiboldunderline'>
+                                            <span className=' saira text-[12px] font-normal underline'></span>,
+                                        </Link>
+                                        <Link target='_blank' to={'/promotion-terms'} className='saira text-[12px] font-semibold underline'>
+                                            <span className=' saira text-[12px] font-normal underline'>Promotion Terms</span>,
+                                        </Link>
+                                        <Link target='_blank' to={'/affiliation-terms'} className='saira text-[12px] font-semibold underline'>
+                                            <span className=' saira text-[12px] font-normal underline'>Affliation Terms</span>
+                                        </Link>
+                                    </p>
 
                                 </div>
                             </div>

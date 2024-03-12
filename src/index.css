@@ -529,9 +529,11 @@ body {
     }
 
     .mac-img-width {
-        width: 860px !important;
+        width: 800px !important;
     }
-
+    .mac-img-width2 {
+        width: 640px !important;
+    }
     .double-subtitle {
         padding-top: 2px !important;
         padding-bottom: 4px !important;
@@ -589,7 +591,9 @@ body {
     .homepageMainBlock {
         padding-top: 0px !important;
     }
-    
+    .raffleTicketsTitle {
+        font-size: 24px !important;
+    }
 }
 
 @media screen and (max-height: 791px) and (min-width: 1200px) {

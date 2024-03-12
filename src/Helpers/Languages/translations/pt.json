@@ -30,7 +30,7 @@
                     "taskText": "Curta a ImLive, seja tratado como um REI 👑 - e realize suas fantasias mais loucas!"
                 }
             ],
-            "taskButton": "1\/4 Registrar!"
+            "taskButton": "1\/3 Registrar!"
         },
         "task2": {
             "taskTitle": "Depositar",
@@ -44,7 +44,7 @@
                     "taskText": "Deposite $5... o ImLive dobrará o crédito. O CyberSays dobrará os dólares!"
                 }
             ],
-            "taskButton": "2\/4 Depositar!"
+            "taskButton": "2\/3 Depositar!"
         },
         "task3": {
             "taskTitle": "Gastar",
