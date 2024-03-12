@@ -41,7 +41,7 @@ function Admin() {
     queryFn: async () => {
       const res = await getTransactionsD24();
       res.data = res.data.map((transaction) => {
-        transaction.type = transaction.currency === "BRL" ? "PIX (D24)" : "D24";
+        transaction.type = transaction.personCODE ? "PIX (D24)" : "D24";
         return transaction;
       });
 
