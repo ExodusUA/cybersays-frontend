@@ -30,7 +30,7 @@ function XoxodayFlow({ languageData, setConfirm, setError }) {
             {
                 step === 1
                     ? <>
-                        <WithdrawEmail languageData={languageData} email={email} setEmail={setEmail} handleXoxodayFlow={handleXoxodayFlow} setError={setError} />
+                        <WithdrawEmail languageData={languageData} email={email} setEmail={setEmail} handleXoxodayFlow={handleXoxodayFlow} setError={setError} setStep={setStep} />
                     </>
                     : <>
                         <OTPVerify languageData={languageData} setStep={setStep} email={email} isVerified={setIsVerified} />

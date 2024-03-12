@@ -29,7 +29,11 @@ function Collaborate({ user, setOpen, languageData }) {
         let data = {
             email: email,
             name: name,
-            message: message
+            message: message,
+            phone: phone,
+            url: URL,
+            job: job,
+            role: optionWho
         }
 
         const res = await userAPI.messageCollaborate(email, data)
@@ -119,7 +123,7 @@ function Collaborate({ user, setOpen, languageData }) {
                                                     selectedWho.map((item, index) => (
                                                         <div key={index} className='flex items-center gap-1'>
                                                             <label className="checkbox-container flex items-center ml-2">
-                                                                <input id={item.option} name={item.option} value={item.option} checked={optionWho === index} onChange={e => setUserCountry(index)} type="checkbox" />
+                                                                <input id={item.option} name={item.option} value={item.option} checked={optionWho === item.option} onChange={e => setUserCountry(item.option)} type="checkbox" />
                                                                 <span className="checkmark"></span>
                                                                 <p htmlFor={item.option} className='text-[#1E1E1E] saira text-[16px] font-normal'>{item.option}</p>
                                                             </label>

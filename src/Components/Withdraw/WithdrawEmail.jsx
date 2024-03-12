@@ -3,7 +3,7 @@ import { useDesign } from '../../Helpers/Design/DesignContext'
 import userAPI from '../../Requests/user'
 import { useLanguage } from '../../Helpers/Languages/LanguageContext'
 
-function WithdrawEmail({ languageData, selectedPayment, setError }) {
+function WithdrawEmail({ languageData, selectedPayment, setError, setStep }) {
     const { design } = useDesign()
     const {language} = useLanguage();
 
@@ -14,6 +14,7 @@ function WithdrawEmail({ languageData, selectedPayment, setError }) {
 
         try {
             const res = await userAPI.generateOTP(email, language)
+            setStep(2)
         } catch (error) {
             setError(true)
         }

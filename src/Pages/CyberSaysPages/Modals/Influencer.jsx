@@ -149,7 +149,14 @@ function Influencer({ user, setOpen, languageData }) {
         let data = {
             email: email,
             name: name,
-            message: message
+            message: message,
+            phone: phone,
+            nickname: nickname,
+            role: optionWho,
+            instagram: optionInstagram,
+            facebook: optionFacebook,
+            twitter: optionTwitter,
+            tiktok: optionTiktok
         }
 
         const res = await userAPI.messageCollaborate(email, data)
@@ -195,7 +202,7 @@ function Influencer({ user, setOpen, languageData }) {
                                     <div className={` bg-white px-3 py-2 lg:py-3 mt-1 border ${design === '0' ? 'rounded-[18px]' : 'rounded-[12px]'}`} >
                                         <div onClick={e => setWho(!who)} className={`flex  items-center justify-between cursor-pointer`}>
                                             <div className='flex items-center' >
-                                                <p className='saira text-[16px] font-normal text-[#1E1E1E]'>{languageData?.InfluencerWhoSelect}</p>
+                                                <p className='saira text-[16px] font-normal text-[#1E1E1E]'>{optionWho || languageData?.InfluencerWhoSelect}</p>
                                             </div>
                                             <div className='ml-2'>
                                                 {
@@ -219,7 +226,10 @@ function Influencer({ user, setOpen, languageData }) {
                                                     selectedWho.map((item, index) => (
                                                         <div key={index} className='flex items-center gap-1'>
                                                             <label className="checkbox-container flex items-center ml-2">
-                                                                <input id={item.option} name={item.option} value={item.option} checked={optionWho === index} onChange={e => setOptionWho(index)} type="checkbox" />
+                                                                <input id={item.option} name={item.option} value={item.option} checked={optionWho === item.option} onChange={e => {
+                                                                    setOptionWho(item.option)
+                                                                    setWho(false)
+                                                                }} type="checkbox" />
                                                                 <span className="checkmark"></span>
                                                                 <p htmlFor={item.option} className='text-[#1E1E1E] saira text-[16px] font-normal'>{item.option}</p>
                                                             </label>
@@ -241,7 +251,7 @@ function Influencer({ user, setOpen, languageData }) {
                                     <div className={` bg-white px-3 py-2 lg:py-3 mt-1 border ${design === '0' ? 'rounded-[18px]' : 'rounded-[12px]'}`} >
                                         <div onClick={e => setSocialOpen(!socialOpen)} className={`flex  items-center justify-between cursor-pointer`}>
                                             <div className='flex items-center' >
-                                                <p className='saira text-[16px] font-normal text-[#1E1E1E]'>{languageData?.InfluencerFollowers}</p>
+                                                <p className='saira text-[16px] font-normal text-[#1E1E1E]'>{ languageData?.InfluencerFollowers}</p>
                                             </div>
                                             <div className='ml-2'>
                                                 {
@@ -287,7 +297,10 @@ function Influencer({ user, setOpen, languageData }) {
                                                                     selectedInstagram.map((item, index) => (
                                                                         <div key={index} className='flex items-center gap-1'>
                                                                             <label className="checkbox-container flex items-center ml-2">
-                                                                                <input id={item.option} name={item.option} value={item.option} checked={optionInstagram === index} onChange={e => setOptionInstagram(index)} type="checkbox" />
+                                                                                <input id={item.option} name={item.option} value={item.option} checked={optionInstagram === item.option} onChange={e => {
+                                                                                    setOptionInstagram(item.option)
+                                                                                    setInstagram(false)
+                                                                                }} type="checkbox" />
                                                                                 <span className="checkmark"></span>
                                                                                 <p htmlFor={item.option} className='text-[#1E1E1E] saira text-[16px] font-normal'>{item.option}</p>
                                                                             </label>
@@ -326,7 +339,10 @@ function Influencer({ user, setOpen, languageData }) {
                                                                     selectedFacebook.map((item, index) => (
                                                                         <div key={index} className='flex items-center gap-1'>
                                                                             <label className="checkbox-container flex items-center ml-2">
-                                                                                <input id={item.option} name={item.option} value={item.option} checked={optionFacebook === index} onChange={e => setOptionFacebook(index)} type="checkbox" />
+                                                                                <input id={item.option} name={item.option} value={item.option} checked={optionFacebook === item.option} onChange={e => {
+                                                                                    setOptionFacebook(item.option)
+                                                                                    setFacebook(false)
+                                                                                }} type="checkbox" />
                                                                                 <span className="checkmark"></span>
                                                                                 <p htmlFor={item.option} className='text-[#1E1E1E] saira text-[16px] font-normal'>{item.option}</p>
                                                                             </label>
@@ -365,7 +381,10 @@ function Influencer({ user, setOpen, languageData }) {
                                                                     selectedTwitter.map((item, index) => (
                                                                         <div key={index} className='flex items-center gap-1'>
                                                                             <label className="checkbox-container flex items-center ml-2">
-                                                                                <input id={item.option} name={item.option} value={item.option} checked={optionTwitter === index} onChange={e => setOptionTwitter(index)} type="checkbox" />
+                                                                                <input id={item.option} name={item.option} value={item.option} checked={optionTwitter === item.option} onChange={e => {
+                                                                                    setOptionTwitter(item.option)
+                                                                                    setTwitter(false)
+                                                                                }} type="checkbox" />
                                                                                 <span className="checkmark"></span>
                                                                                 <p htmlFor={item.option} className='text-[#1E1E1E] saira text-[16px] font-normal'>{item.option}</p>
                                                                             </label>
@@ -404,7 +423,10 @@ function Influencer({ user, setOpen, languageData }) {
                                                                     selectedTikTok.map((item, index) => (
                                                                         <div key={index} className='flex items-center gap-1'>
                                                                             <label className="checkbox-container flex items-center ml-2">
-                                                                                <input id={item.option} name={item.option} value={item.option} checked={optionTiktok === index} onChange={e => setOptionTiktok(index)} type="checkbox" />
+                                                                                <input id={item.option} name={item.option} value={item.option} checked={optionTiktok === item.option} onChange={e => {
+                                                                                    setOptionTiktok(item.option)
+                                                                                    setTiktok(false)
+                                                                                }} type="checkbox" />
                                                                                 <span className="checkmark"></span>
                                                                                 <p htmlFor={item.option} className='text-[#1E1E1E] saira text-[16px] font-normal'>{item.option}</p>
                                                                             </label>
@@ -425,7 +447,7 @@ function Influencer({ user, setOpen, languageData }) {
                                 </div>
                                 <p className='saira text-[12px] font-medium my-1'>{languageData?.InfluencerInput3}</p>
                                 <div className='flex justify-center'>
-                                    <textarea className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none h-[100px] resize-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={message} onChange={e => setMessage(e.target.value)} placeholder={languageData?.InfluencerInput3} />
+                                    <textarea className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none h-[100px] resize-none ${design === '0' ? '  rounded-[12px]' : ' rounded-[12px] '}`} type="text" value={message} onChange={e => setMessage(e.target.value)} placeholder={languageData?.InfluencerInput3} />
                                 </div>
                                 <div className='flex justify-center mt-4'>
                                     <button onClick={e => handleSend()} className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-2 max-w-[600px]  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.InfluencerBtn}</button>

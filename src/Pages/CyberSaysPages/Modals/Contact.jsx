@@ -90,7 +90,7 @@ function Contact({ user, setOpen, languageData }) {
                             <div className={` bg-white px-5 py-2 lg:py-3 mt-2 border ${design === '0' ? 'rounded-[18px] border-[#FFED63]' : 'rounded-[12px] border-[#A2DBF0]'}`} >
                                 <div onClick={e => setWhatAbout(!whatAbout)} className={`flex  items-center justify-between cursor-pointer`}>
                                     <div className='flex items-center' >
-                                        <p className='saira text-[14px] font-semibold  text-[#1E1E1E]'>{languageData?.contactQuestionTitle}</p>
+                                        <p className='saira text-[14px] font-semibold  text-[#1E1E1E]'>{selectedOption || languageData?.contactQuestionTitle}</p>
                                     </div>
                                     <div className='ml-2'>
                                         {
@@ -109,44 +109,65 @@ function Contact({ user, setOpen, languageData }) {
                                     whatAbout && <>
                                         <div className='mt-2'>
                                             <label className="checkbox-container flex items-center ml-2">
-                                                <input checked={selectedOption === 0}
-                                                    onChange={() => setSelectedOption(0)} type="checkbox" />
+                                                <input checked={selectedOption === languageData?.contactQuestion1}
+                                                    onChange={() => {
+                                                        setSelectedOption(languageData?.contactQuestion1)
+                                                        setWhatAbout(false)
+                                                    }} type="checkbox" />
                                                 <span className="checkmark"></span>
                                                 <p className='text-[#1E1E1E] saira text-[14px] font-medium'>{languageData?.contactQuestion1}</p>
                                             </label>
                                             <label className="checkbox-container flex items-center ml-2">
-                                                <input checked={selectedOption === 1}
-                                                    onChange={() => setSelectedOption(1)} type="checkbox" />
+                                                <input checked={selectedOption === languageData?.contactQuestion2}
+                                                    onChange={() => {
+                                                        setSelectedOption(languageData?.contactQuestion2)
+                                                        setWhatAbout(false)
+                                                    }} type="checkbox" />
                                                 <span className="checkmark"></span>
                                                 <p className='text-[#1E1E1E] saira text-[14px] font-medium'>{languageData?.contactQuestion2}</p>
                                             </label>
                                             <label className="checkbox-container flex items-center ml-2">
-                                                <input checked={selectedOption === 2}
-                                                    onChange={() => setSelectedOption(2)} type="checkbox" />
+                                                <input checked={selectedOption === languageData?.contactQuestion3}
+                                                    onChange={() => {
+                                                        setSelectedOption(languageData?.contactQuestion3)
+                                                        setWhatAbout(false)
+                                                    }} type="checkbox" />
                                                 <span className="checkmark"></span>
                                                 <p className='text-[#1E1E1E] saira text-[14px] font-medium'>{languageData?.contactQuestion3}</p>
                                             </label>
                                             <label className="checkbox-container flex items-center ml-2">
-                                                <input checked={selectedOption === 3}
-                                                    onChange={() => setSelectedOption(3)} type="checkbox" />
+                                                <input checked={selectedOption === languageData?.contactQuestion4}
+                                                    onChange={() => {
+                                                        setSelectedOption(languageData?.contactQuestion4)
+                                                        setWhatAbout(false)
+                                                    }} type="checkbox" />
                                                 <span className="checkmark"></span>
                                                 <p className='text-[#1E1E1E] saira text-[14px] font-medium'>{languageData?.contactQuestion4}</p>
                                             </label>
                                             <label className="checkbox-container flex items-center ml-2">
-                                                <input checked={selectedOption === 4}
-                                                    onChange={() => setSelectedOption(4)} type="checkbox" />
+                                                <input checked={selectedOption === languageData?.contactQuestion5}
+                                                    onChange={() => {
+                                                        setSelectedOption(languageData?.contactQuestion5)
+                                                        setWhatAbout(false)
+                                                    }} type="checkbox" />
                                                 <span className="checkmark"></span>
                                                 <p className='text-[#1E1E1E] saira text-[14px] font-medium'>{languageData?.contactQuestion5}</p>
                                             </label>
                                             <label className="checkbox-container flex items-center ml-2">
-                                                <input checked={selectedOption === 5}
-                                                    onChange={() => setSelectedOption(5)} type="checkbox" />
+                                                <input checked={selectedOption === languageData?.contactQuestion6}
+                                                    onChange={() => {
+                                                        setSelectedOption(languageData?.contactQuestion6)
+                                                        setWhatAbout(false)
+                                                    }} type="checkbox" />
                                                 <span className="checkmark"></span>
                                                 <p className='text-[#1E1E1E] saira text-[14px] font-medium'>{languageData?.contactQuestion6}</p>
                                             </label>
                                             <label className="checkbox-container flex items-center ml-2">
-                                                <input checked={selectedOption === 6}
-                                                    onChange={() => setSelectedOption(6)} type="checkbox" />
+                                                <input checked={selectedOption === languageData?.contactQuestion7}
+                                                    onChange={() => {
+                                                        setSelectedOption(languageData?.contactQuestion7)
+                                                        setWhatAbout(false)
+                                                    }} type="checkbox" />
                                                 <span className="checkmark"></span>
                                                 <p className='text-[#1E1E1E] saira text-[14px] font-medium'>{languageData?.contactQuestion7}</p>
                                             </label>
