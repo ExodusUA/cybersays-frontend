@@ -38,10 +38,10 @@ async function withdrawPix(pixKey, personCODE, email) {
   return response;
 }
 
-async function withdrawD24(pixKey, personCODE, email) {
+async function withdrawD24(pixKey, personCODE, country) {
   const response = await axios.post(
     process.env.REACT_APP_API_URL + "/api/v1/user/withdrawD24",
-    { pixKey, personCODE },
+    { pixKey, personCODE, country },
     {
       headers: {
         token: `${getToken()}`,

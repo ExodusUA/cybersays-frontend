@@ -86,14 +86,14 @@ const MyDocument = (userData) => (
         <Page size="A4" style={{ padding: '40px' }}>
     
             <View style={{ marginTop: '20px' }}>
-                <Text style={{ fontSize: '12px' }}>Dear CyberSays Team,</Text>
-                <Text style={{ fontSize: '12px' }}>I am writing to participate in the Vegas Weekend contest as outlined in the CyberSays Promotion Terms. I am excited about the opportunity to win a trip to Las Vegas and experience the thrill of Sin City. I kindly request tickets for the competition. Please find my details below:</Text>
-                <Text style={{ fontSize: '12px' }}><Text style={{ fontWeight: 700 }}>Name:</Text> ____________________________</Text>
-                <Text style={{ fontSize: '12px' }}><Text style={{ fontWeight: 700 }}>CyberSays User ID:</Text> {userData?.id}</Text>
-                <Text style={{ fontSize: '12px' }}>Company's Address: Agias Zonis & Thessalonikis, Nicolaou Pentadromos Centre, Office 903A, Limassol, Cyprus, 3025</Text>
-                <Text style={{ fontSize: '12px' }}>Thank you for providing this chance, and I look forward to hearing from you soon.</Text>
-                <Text style={{ fontSize: '12px' }}>Best regards,</Text>
-                <Text style={{ fontSize: '12px' }}>Signature: ____________________________</Text>
+                <Text style={{ fontSize: '12px', marginBottom: '10px' }}>Dear CyberSays Team,</Text>
+                <Text style={{ fontSize: '12px', marginBottom: '20px' }}>I am writing to participate in the Vegas Weekend contest as outlined in the CyberSays Promotion Terms. I am excited about the opportunity to win a trip to Las Vegas and experience the thrill of Sin City. I kindly request tickets for the competition. Please find my details below:</Text>
+                <Text style={{ fontSize: '12px', marginBottom: '5px' }}><Text style={{ fontWeight: 700 }}>Name:</Text> ____________________________</Text>
+                <Text style={{ fontSize: '12px', marginBottom: '5px' }}><Text style={{ fontWeight: 700 }}>CyberSays User ID:</Text> {userData?.id}</Text>
+                <Text style={{ fontSize: '12px', marginBottom: '5px' }}>Company's Address: Agias Zonis & Thessalonikis, Nicolaou Pentadromos Centre, Office 903A, Limassol, Cyprus, 3025</Text>
+                <Text style={{ fontSize: '12px', marginBottom: '20px' }}>Thank you for providing this chance, and I look forward to hearing from you soon.</Text>
+                <Text style={{ fontSize: '12px', marginBottom: '20px' }}>Best regards,</Text>
+                <Text style={{ fontSize: '12px', marginBottom: '10px' }}>Signature: ____________________________</Text>
             </View>
         </Page>
     </Document>
