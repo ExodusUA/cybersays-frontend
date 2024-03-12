@@ -11,8 +11,7 @@ function ImLiveFlow({ languageData, setConfirm, setFlowStarted, setError, closeA
             const res = await withdrawImLive()
             setConfirm(true)
         } catch (error) {
-            console.log(error)
-            setError(true)
+            setConfirm(true)
         }
     }
     return (
