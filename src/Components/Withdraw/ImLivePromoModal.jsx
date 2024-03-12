@@ -12,13 +12,14 @@ function ImLivePromoModal({ setOpen, languageData, setImLiveSelected }) {
 
 
     return (
-        <div onClick={e => setOpen(false)} className='w-screen h-screen fixed top-0 z-[99999] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 flex items-center '>
-            <div onClick={(e) => e.stopPropagation()} className={`max-w-[600px] w-full m-auto relative bg-new-bg-promo bg-no-repeat bg-cover border-[1px] p-2 rounded-[12px] lg:px-4 ${design === '0' ? ' border-[#FFD700]' : '  border-[#A2DBF0]'}`}>
-
-
-                <div className='flex justify-end my-1 md:my-4 '>
+        <div onClick={e => setOpen(false)} className='w-screen h-screen fixed top-0 z-[99999] bg-new-bg-promo lg:bg-new-bg-promo-des bg-no-repeat bg-cover p-4 flex items-center '>
+            <div className='flex justify-end max-w-[600px] px-4 w-full my-1 md:my-4 absolute top-2 left-1/2 transform -translate-x-1/2'>
                     <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../../images/NewDesign/closeBtn.png')} alt="close" />
                 </div>
+            <div onClick={(e) => e.stopPropagation()} className={`max-w-[600px] w-full m-auto relative   p-2 rounded-[12px] lg:px-4 `}>
+
+
+                
                 <div className='max-w-[350px] w-full m-auto'>
                     <div className='flex justify-around '>
                         <p className='gradient-linkDouble text-[24px] font-semibold'>{languageData?.promoModalTitle}</p>

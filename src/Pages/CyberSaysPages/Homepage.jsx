@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import logoCyber from '../../images/CyberSaysPage/logoMain.png'
 import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
-import girlOK from '../../images/CyberSaysPage/girl_OK.png'
+import girlOK from '../../images/NewDesign/Homepage/message3.png'
 import imLiveLogo from '../../images/CyberSaysPage/imLiveLogo.png'
 import TimeCounter from '../../Components/TimeCounter'
 import { Link } from 'react-router-dom'
@@ -41,10 +41,10 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
             case 0:
             case null:
             case undefined:
-                return <button onClick={e => scrollToPage(1)} className={`w-full md:w-[480px]   border-[#FFED63]  text-black text-[18px] saira font-semibold flex justify-center items-center ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn1}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
-            case 1: return <button onClick={e => scrollToPage(1)} className={`w-full md:w-[480px]  bg-white   border-[#FFED63]  text-black text-[18px] saira font-semibold flex justify-center items-center  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-2 py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn2}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
-            case 2: return <button onClick={e => scrollToPage(1)} className={`w-full  md:w-[480px] bg-white   border-[#FFED63]  text-black text-[14px] lg:text-[18px] saira font-semibold flex justify-center items-center  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-2 py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn3}</button>
-            case 3: return <button onClick={e => scrollToPage(1)} className={`w-full md:w-[480px] bg-white   border-[#FFED63]  text-black text-[18px] saira font-semibold flex justify-center items-center ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-2 py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn4}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
+                return <button onClick={e => scrollToPage(1)} className={`w-full    border-[#FFED63]  text-black text-[18px] saira font-semibold flex justify-center items-center ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn1}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
+            case 1: return <button onClick={e => scrollToPage(1)} className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px] saira font-semibold flex justify-center items-center  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-2 py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn2}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
+            case 2: return <button onClick={e => scrollToPage(1)} className={`w-full   bg-white   border-[#FFED63]  text-black text-[14px] lg:text-[18px] saira font-semibold flex justify-center items-center  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-2 py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn3}</button>
+            case 3: return <button onClick={e => scrollToPage(1)} className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px] saira font-semibold flex justify-center items-center ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-2 py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn4}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
         }
     }
 
@@ -161,11 +161,11 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                                 </svg>
                             </div>
                         </div>
-                        <div className={`relative ${design === '0' ? ' border-[#FFD700]' : '  border-[#A2DBF0] homepageMainBlock'} rounded-[16px] border-2 px-1 pb-1 pt-8  m-auto lg:m-[unset]`}>
-                            <div className='flex items-center '>
-                                <img className={`  ${design === '0' ? 'mt-[-30px] w-[180px] sm:w-[200px] md:w-[240px]' : 'mt-[-30px] md:mt-0 w-[380px] md:w-[470px]'}`} src={design === '0' ? girlOK : require('../../images/NewDesign/Homepage//message.png')} alt="girlOK" />
-                                <Link to={imLiveURL} target='_blank'><img className={`w-[160px] md:w-[240px] md:mt-5 mac:!mt-6 mb-10 ${design === '0' ? 'block' : 'hidden'}`} src={imLiveLogo} alt="imLiveLogo" /></Link>
-                                <p className={`text-[22px] lg:text-[34px] saira font-medium w-[165px] lg:w-[240px] leading-6 lg:leading-10 absolute right-[30px] lg:right-[40px] lg:mt-6 gradient-linkDouble ${design === '0' ? 'hidden' : 'block'}`}>{languageData?.homepageMessageTitle}</p>
+                        <div className={`relative ${design === '0' ? ' border-[#FFD700] rounded-[24px] lg:rounded-[32px]' : '  border-[#A2DBF0] homepageMainBlock rounded-[16px]'}  border-2 px-1 pb-1 pt-8 lg:pt-0  m-auto lg:m-[unset]`}>
+                            <div className='flex items-center relative max-w-[380px] md:max-w-[470px] w-full m-auto'>
+                                <img className={`m-auto ${design === '0' ? 'mt-[-25px] lg:mt-[10px] w-[380px] md:w-[470px]' : 'mt-[-30px] md:mt-0 w-[380px] md:w-[470px]'}`} src={design === '0' ? girlOK : require('../../images/NewDesign/Homepage/message2.png')} alt="girlOK" />
+                                {/*<Link to={imLiveURL} target='_blank'><img className={`w-[160px] md:w-[240px] md:mt-5 mac:!mt-6 mb-10 ${design === '0' ? 'block' : 'hidden'}`} src={imLiveLogo} alt="imLiveLogo" /></Link>*/}
+                                <p className={` saira font-medium absolute ${design === '0' ? 'text-[16px] lg:text-[24px] w-[115px] lg:w-[200px] text-[#FFED63] leading-6 lg:leading-8 right-[20px] iphone:right-[35px] lg:right-[10px] mt-[35px] lg:mt-[90px]' : 'text-[22px] lg:text-[34px] w-[165px] lg:w-[240px] right-[30px] iphone:right-[40px] lg:right-[40px] mt-[20px] lg:mt-[50px] gradient-linkDouble leading-6 lg:leading-10'}`}>{languageData?.homepageMessageTitle}</p>
                             </div>
                             <div className=' relative '>
                                 {

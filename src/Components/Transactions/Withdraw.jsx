@@ -65,7 +65,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
     const getMethodComponent = (selectedPayment) => {
         switch (selectedPayment) {
             case 'xoxoday': return <XoxodayFlow languageData={languageData} setConfirm={setConfirm} setError={setError} email={email} />
-            case 'pix': return <PixFlow languageData={languageData} setConfirm={setConfirm} setError={setError} email={user?.email} userCountry={userCountry} />
+            case 'pix': return <PixFlow languageData={languageData} setConfirm={setConfirm} setError={setError} email={user?.email} />
             case 'paxum': return <PaxumFlow languageData={languageData} setConfirm={setConfirm} setSelectedPayment={setSelectedPayment} setError={setError} />
             case 'visa': return <VisaFlow languageData={languageData} setConfirm={setConfirm} setError={setError} />
             case 'imlive': return <ImLiveFlow setConfirm={setConfirm} setOpen={setImLiveSelected} languageData={languageData} closeAll={setOpen} setFlowStarted={setFlowStarted} setError={setError} />
