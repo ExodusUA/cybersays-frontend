@@ -515,7 +515,9 @@ body {
     height: 1px;
     background: var(--Linear-3, linear-gradient(90deg, #FBD409 0.25%, #FF9141 32.18%, #FF3D7D 64.73%, #B415D7 100%));
 }
-
+.competitionPlaceBG {
+    background: linear-gradient(180deg, #9D9D9D 0%, #373737 100%);
+}
 @media screen and (max-height: 770px) and (min-width: 1200px) {
     .mac-overflow-fix {
         margin-top: -185px !important;
@@ -587,6 +589,7 @@ body {
     .homepageMainBlock {
         padding-top: 0px !important;
     }
+    
 }
 
 @media screen and (max-height: 791px) and (min-width: 1200px) {
