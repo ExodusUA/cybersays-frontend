@@ -5,12 +5,12 @@ import { useDesign } from '../../Helpers/Design/DesignContext'
 import mixpanel from 'mixpanel-browser'
 import moengage from '@moengage/web-sdk';
 
-function TaskCardDesktop({ state, background, data, index, imLiveURL, rounded, open, manualSelect, setSelectedTask, tasks, user, mt,languageData,lastTask }) {
+function TaskCardDesktop({ state, background, data, index, imLiveURL, rounded, open, manualSelect, setSelectedTask, tasks, user, mt, languageData, lastTask }) {
 
     const { design } = useDesign()
 
     const [cardState, setCardState] = useState(null)
-    
+
     useEffect(() => {
         if (manualSelect === true) {
             setCardState('inactive')
@@ -39,7 +39,7 @@ function TaskCardDesktop({ state, background, data, index, imLiveURL, rounded, o
         navigator.clipboard.writeText(imLiveURL)
         setLinkCopied(true)
     }
-    
+
     console.log(lastTask)
     const activeState = () => {
         return <>
@@ -76,29 +76,31 @@ function TaskCardDesktop({ state, background, data, index, imLiveURL, rounded, o
                 <Link className='w-full' to={imLiveURL} target='_blank'><button className={`w-full bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold py-1 sm:py-2 ${design === '0' ? ' se:py-[6px] py-2 md:py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{data?.taskButton}</button></Link>
             </div>
             */}
-            <p onClick={e => {
-                copyImLiveLink()
-                mixpanel.track("copy_link", {
-                    distinct_id: 'not_set',
-                    is_referred: user?.referral_id ? 'Yes' : 'No',
-                    vegas_tickets: user?.raffle_tickets,
-                    points: user?.points,
-                    user_id: user?.id,
-                    USD_earned: user?.allTimeEarned,
-                    user_email: user?.email,
-                    page: 'Double your Money'
-                });
-                moengage.track_event("copy_link", {
-                    distinct_id: 'not_set',
-                    is_referred: user?.referral_id ? 'Yes' : 'No',
-                    vegas_tickets: user?.raffle_tickets,
-                    points: user?.points,
-                    user_id: user?.id,
-                    USD_earned: user?.allTimeEarned,
-                    user_email: user?.email,
-                    page: 'Double your Money'
-                });
-            }} className={`saira text-[14px] cursor-pointer underline text-center  pt-1 pb-0 font-semibold mb-[-5px]  ${linkCopied === true ? 'opacity-60' : ''}`}>{languageData?.CopyLink}</p>
+            <div className='flex justify-center'>
+                <p onClick={e => {
+                    copyImLiveLink()
+                    mixpanel.track("copy_link", {
+                        distinct_id: 'not_set',
+                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                        vegas_tickets: user?.raffle_tickets,
+                        points: user?.points,
+                        user_id: user?.id,
+                        USD_earned: user?.allTimeEarned,
+                        user_email: user?.email,
+                        page: 'Double your Money'
+                    });
+                    moengage.track_event("copy_link", {
+                        distinct_id: 'not_set',
+                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                        vegas_tickets: user?.raffle_tickets,
+                        points: user?.points,
+                        user_id: user?.id,
+                        USD_earned: user?.allTimeEarned,
+                        user_email: user?.email,
+                        page: 'Double your Money'
+                    });
+                }} className={`saira text-[14px] cursor-pointer underline text-center  pt-1 pb-0 font-semibold mb-[-5px] gradient-link ${linkCopied === true ? 'opacity-60' : ''}`}>{languageData?.CopyLink}</p>
+            </div>
         </>
     }
 
@@ -159,7 +161,7 @@ function TaskCardDesktop({ state, background, data, index, imLiveURL, rounded, o
 
     return (
 
-        <div  style={{ background: getBackground(), paddingBottom: getPaddingBottom(), }} className={`w-full h-[225px] rounded-t-[20px] ${rounded} bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  se:p-[6px]  p-2 se:my-0 my-2 mx-1     ${index  === lastTask + 1 ? design === '0' ? ' border-[3px]  !border-[#FFD700] !mt-[-10px]' : 'border-[3px]  !border-[#A2DBF0] !mt-[-10px]' : ''}`}>
+        <div style={{ background: getBackground(), paddingBottom: getPaddingBottom(), }} className={`w-full h-[225px] rounded-t-[20px] ${rounded} bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg  se:p-[6px]  p-2 se:my-0 my-2 mx-1     ${index === lastTask + 1 ? design === '0' ? ' border-[3px]  !border-[#FFD700] !mt-[-10px]' : 'border-[3px]  !border-[#A2DBF0] !mt-[-10px]' : ''}`}>
 
 
             {

@@ -53,7 +53,7 @@ function LeaderboardList({ leaderboardData, languageData, day }) {
                     </div>
                 }
             </div>
-            <div className='h-[240px] iphone:h-[unset] overflow-y-auto lg:overflow-y-visible md:h-[195px] leaderboardsScroll'>
+            <div className='h-[240px] iphone:h-[unset] overflow-y-auto lg:overflow-y-visible md:h-[250px] leaderboardsHeight leaderboardsScroll'>
                 {
                     leaderboardData.length < 4
                         ? <div className='w-full flex justify-center my-8'>

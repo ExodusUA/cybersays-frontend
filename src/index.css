@@ -581,6 +581,9 @@ body {
     .leaderboardsScroll {
         overflow-y: auto !important;
     }
+    .leaderboardsHeight {
+        height: 200px !important;
+    }
 }
 
 @media screen and (max-height: 791px) and (min-width: 1200px) {
