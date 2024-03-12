@@ -21,7 +21,17 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
         }
     })
 
-    const getMarkup = (type, datetime, amount) => {
+    async function getTransactionStatus(status) {
+        switch (status) {
+            case 1: return 'Processing'
+            case 2: return 'Pending'
+            case 3: return 'Approved'
+            case 4: return 'Declined'
+        }
+       
+    }
+
+    const getMarkup = (type, datetime, amount, id, status) => {
         switch (type) {
             case 'doubling_referral': return <div className='flex justify-between items-center mt-4 '>
                 <div className='flex items-center'>
@@ -57,6 +67,8 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
                     <div className='w-[200px] md:w-[400px]'>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                         <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>{languageData?.transactionsSection3Left}</p>
+                        <p className='text-[12px] font-normal saira'>Transaction ID: {id} </p>
+                       
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
@@ -96,7 +108,7 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
                         </div>
                         : transactionsData?.length > 0
                             ? transactionsData?.reverse().map((transaction, index) => {
-                                return getMarkup(transaction.type, transaction.datetime, userCountry === 'BR' || userCountry === 'UA' ? transaction.amount * 5 : transaction.amount)
+                                return getMarkup(transaction.type, transaction.datetime, userCountry === 'BR' || userCountry === 'UA' ? transaction.amount * 5 : transaction.amount, transaction.id, transaction.withdraw_status)
                             })
                             : <div className='flex justify-center items-center h-[470px]'>
                                 <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>

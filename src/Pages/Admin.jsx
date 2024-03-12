@@ -25,7 +25,7 @@ function Admin() {
 
   const fetchTransactions = async () => {
     const res = await getTransactions();
-    console.log(res.data);
+    if (res.data === null) return;
 
     setTransactions((prev) => {
       return [...prev, ...res.data];
@@ -34,7 +34,8 @@ function Admin() {
 
   const fetchTransactionsD24 = async () => {
     const res = await getTransactionsD24();
-
+    if (res.data === null) return;
+    
     res.data = res.data.map((transaction) => {
       transaction.type = transaction.currency === "BRL" ? "PIX (D24)" : "D24";
       return transaction;

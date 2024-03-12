@@ -127,11 +127,19 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                         </div>
                     }
                     {
-                        userCountry !== 'BR' || userCountry !== 'UA' &&
+                        userCountry !== 'BR' &&
 
                         <div className={`   md:max-w-[620px] m-auto max-h-[600px]  h-screen lg:h-[unset]  overflow-y-auto withdrawHeight`}>
                             <div className='flex  gap-2 my-2'>
 
+                                {/* BRAZIL */}
+
+                                {
+                                    userCountry === 'BR' || userCountry === 'UA' && <div onClick={e => selectPayment('pix')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg4 m-auto flex justify-center items-center relative mr-2 ${selectedPayment === 'pix' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
+                                        <img className='w-[40px]' src={withdrawLogo4} alt="withdrawLogo4" />
+                                        <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>Pix</p>
+                                    </div>
+                                }
 
                                 {/* MEXICO */}
                                 {
@@ -155,7 +163,7 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                                     </div>
                                 }
                                 {
-                                    userCountry !== 'BR' || userCountry !== 'UA' && <div onClick={e => selectPayment('xoxoday')} className={`w-[95%] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg1 m-auto flex justify-center items-center relative ${selectedPayment === 'xoxoday' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
+                                    userCountry !== 'BR' || userCountry === 'UA' && <div onClick={e => selectPayment('xoxoday')} className={`w-[95%] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg1 m-auto flex justify-center items-center relative ${selectedPayment === 'xoxoday' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
                                         <img className='w-[50px]' src={withdrawLogo1} alt="withdrawLogo1" />
                                         <p className=' absolute bottom-1 text-center saira font-normal text-[14px] flex items-center'>{languageData?.withdrawGiftTitle} <img className='w-[24px] h-[18px] ml-1 rounded-[3px]' src={flag_pt} alt="flag_pt" /></p>
                                     </div>

@@ -7,7 +7,7 @@ function TableComponent({ data }) {
     const transactionStatusD24 = async (id, status) => {
         // Approve transaction
         const res = await changeTransactionStatusD24(id, status);
-        window.location.reload();
+       // window.location.reload();
     }
 
     const getStatusName = (status) => {
@@ -46,10 +46,10 @@ function TableComponent({ data }) {
                             <td class="py-3 px-4 text-black">{transaction.type}</td>
                             <td class="py-3 px-4 text-black">{getStatusName(transaction.status)}</td>
                             <td class="py-3 px-4">
-                                <button onClick={() => transactionStatusD24(transaction.transactionId, 3)} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                <button onClick={() => transactionStatusD24(transaction.id, 3)} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                                     Approve
                                 </button>
-                                <button onClick={() => transactionStatusD24(transaction.transactionId, 4)} class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2">
+                                <button onClick={() => transactionStatusD24(transaction.id, 4)} class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2">
                                     Decline
                                 </button>
                             </td>

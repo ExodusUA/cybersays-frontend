@@ -66,6 +66,8 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
   useEffect(() => {
     if (window.localStorage.getItem('design')) {
       setCheckBox(window.localStorage.getItem('design'))
+    } else {
+      setCheckBox('0')
     }
   }, [checkBox])
 
@@ -80,7 +82,9 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
         <div className='flex justify-between items-center max-w-[1170px] m-auto md:px-4 '>
           <img onClick={() => setMenuOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
           <div className='flex justify-between items-center'>
-            <p className='2 saira text-white font-semibold text-[12px] lg:text-[20px]'><img className='w-[24px] lg:w-[40px] rounded-full' src={toggleTheme2} alt="toggleTheme2" /></p>
+            <p className='2 saira text-white font-semibold text-[12px] lg:text-[20px]'>
+              <img className='w-[24px] lg:w-[40px] rounded-full' src={toggleTheme1} alt="toggleTheme2" />
+            </p>
 
             <label class="relative  items-center cursor-pointer mx-2">
               <input onClick={e => {
@@ -104,11 +108,11 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                 })
                 setCheckBox(design === '1' ? '0' : '1')
                 changeDesign(design === '1' ? '0' : '1')
-              }} type="checkbox" checked={checkBox === '1' ? false : true} class="sr-only peer" />
+              }} type="checkbox" checked={checkBox === '0' ? false : true} class="sr-only peer" />
               <div class={`w-[56px] md:w-[72px] border-[2px] h-8 md:h-10  peer-focus:outline-none rounded-full peer  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:start-[4px]  ${design === '0' ? 'after:bg-[#FFED63] border-[#FFED63]' : 'after:bg-[#80d1ee] border-[#80d1ee]'}   after:rounded-full after:h-6 md:after:h-8 after:w-6 md:after:w-8 after:transition-all`}></div>
               <p className='text-[10px] lg:text-[12px] saira font-medium text-center absolute w-[110px] left-[-25px] lg:left-[-15px]'>{languageData?.ModalMenuToggle}</p>
             </label>
-            <p className='saira text-white font-semibold text-[12px] lg:text-[20px] mr-4'><img className='w-[24px] lg:w-[40px] rounded-full' src={toggleTheme1} alt="toggleTheme1" /></p>
+            <p className='saira text-white font-semibold text-[12px] lg:text-[20px] mr-4'><img className='w-[24px] lg:w-[40px] rounded-full' src={toggleTheme2} alt="toggleTheme1" /></p>
             <NewLanguageButton />
             <div onClick={e => {
               setLogoutModal(true)

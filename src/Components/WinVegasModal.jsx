@@ -25,7 +25,7 @@ function WinVegasModal({ setOpen, languageData, user }) {
                     <p className=' m-auto text-[18px] lg:text-[24px] font-semibold text-center'>
                         {languageData?.winTitle}
                     </p>
-                
+
                     <div className='mt-4'>
                         <div className='flex items-center'>
                             <img className='w-[32px] h-[32px] mr-2' src={point1} alt="point1" />
@@ -44,15 +44,15 @@ function WinVegasModal({ setOpen, languageData, user }) {
                         </div>
                         <ul className='list-disc ml-[60px] mt-1'>
                             <li className='saira text-[12px] lg:text-[14px] font-medium'>{languageData?.winPoint2li1}</li>
-                        
-                            
+
+
 
                         </ul>
                     </div>
                     <div className='mt-4'>
                         <div className='flex items-center'>
                             <img className='w-[32px] h-[32px] mr-2' src={point3} alt="point2" />
-                            
+
                             <p className='saira text-[16px] lg:text-[20px] font-semibold text-left'>{languageData?.winPoint3Title}</p>
 
                         </div>
@@ -64,7 +64,7 @@ function WinVegasModal({ setOpen, languageData, user }) {
                                     }
                                 </PDFDownloadLink>
 
-                                </li>
+                            </li>
                             <li className='saira text-[14px] font-medium'>{languageData?.winPoint3li2}</li>
                             <li className='saira text-[14px] font-medium'>{languageData?.winPoint3li3}</li>
 
@@ -72,7 +72,7 @@ function WinVegasModal({ setOpen, languageData, user }) {
                     </div>
                     <p className='text-[18px] lg:text-[24px] text-center font-semibold gradient-goodluck mt-2'>{languageData?.winPointEnd}</p>
                     <Link onClick={e => setOpen(false)} to='/promotion-terms' target='_blank' ><p className='text-[8px] lg:text-[10px] text-center font-semibold text-[#D9D9D9] mt-2 underline'>{languageData?.winPointEndLink}</p></Link>
-                    
+
                 </div>
             </div>
         </div>
@@ -81,23 +81,19 @@ function WinVegasModal({ setOpen, languageData, user }) {
 
 export default WinVegasModal
 
-
 const MyDocument = (userData) => (
     <Document>
         <Page size="A4" style={{ padding: '40px' }}>
-            <Text style={{ textAlign: 'center', fontSize: '24px', fontWeight: 700 }}>Free Post Form</Text>
-            <View style={{ display: 'flex', alignItems: 'left', marginTop: '20px' }}>
-                <Text style={{ fontSize: '12px' }}><Text style={{ fontWeight: 700 }}>Company's Address:</Text></Text>
-                <Text style={{ fontSize: '12px' }}>Agias Zonis & Thessalonikis, Nicolaou Pentadromos Centre, Office 903A, Limassol, Cyprus, 3025</Text>
-            </View>
+    
             <View style={{ marginTop: '20px' }}>
-                <Text style={{ fontSize: '12px' }}><Text style={{ fontWeight: 700 }}>User ID:</Text> {userData?.id}</Text>
-            </View>
-            <View style={{ marginTop: '20px' }}>
+                <Text style={{ fontSize: '12px' }}>Dear CyberSays Team,</Text>
+                <Text style={{ fontSize: '12px' }}>I am writing to participate in the Vegas Weekend contest as outlined in the CyberSays Promotion Terms. I am excited about the opportunity to win a trip to Las Vegas and experience the thrill of Sin City. I kindly request tickets for the competition. Please find my details below:</Text>
                 <Text style={{ fontSize: '12px' }}><Text style={{ fontWeight: 700 }}>Name:</Text> ____________________________</Text>
-            </View>
-            <View style={{ marginTop: '20px' }}>
-                <Text style={{ fontSize: '12px' }}><Text style={{ fontWeight: 700 }}>Signature:</Text> ____________________________</Text>
+                <Text style={{ fontSize: '12px' }}><Text style={{ fontWeight: 700 }}>CyberSays User ID:</Text> {userData?.id}</Text>
+                <Text style={{ fontSize: '12px' }}>Company's Address: Agias Zonis & Thessalonikis, Nicolaou Pentadromos Centre, Office 903A, Limassol, Cyprus, 3025</Text>
+                <Text style={{ fontSize: '12px' }}>Thank you for providing this chance, and I look forward to hearing from you soon.</Text>
+                <Text style={{ fontSize: '12px' }}>Best regards,</Text>
+                <Text style={{ fontSize: '12px' }}>Signature: ____________________________</Text>
             </View>
         </Page>
     </Document>
