@@ -713,10 +713,10 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
             </div>
             <div className='flex justify-around mt-[60px] lg:mt-[70px]'>
               <p onClick={e => setInfluencer(true)} className={`saira text-[14px] lg:text-[18px] cursor-pointer underline text-center font-bold gradient-link leading-[24px]`}>{languageData?.modalMenuLink15}</p>
-              <p className={`saira text-[14px] lg:text-[18px] cursor-pointer underline text-center font-bold gradient-link leading-[24px]`}>{languageData?.modalMenuLink16}</p>
+              <p onClick={e => setCollaborate(true)} className={`saira text-[14px] lg:text-[18px] cursor-pointer underline text-center font-bold gradient-link leading-[24px]`}>{languageData?.modalMenuLink16}</p>
             </div>
-            <div onClick={e => setCollaborate(true)} className='flex justify-center'>
-              <p className={`saira text-[14px] lg:text-[18px] cursor-pointer underline text-center font-bold gradient-link leading-[24px]`}>{languageData?.modalMenuLink18}</p>
+            <div  className='flex justify-center'>
+              <p onClick={e => setContactModal(true)} className={`saira text-[14px] lg:text-[18px] cursor-pointer underline text-center font-bold gradient-link leading-[24px]`}>{languageData?.modalMenuLink18}</p>
             </div>
             
           </div>
