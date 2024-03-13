@@ -62,7 +62,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                 .share({
                     title: document.title,
                     text: dataMessage[selectedMessage]?.desc + '. Image Link: ' + 'https://' + window.location.host + uploadedPhotos[selectedGif],
-                //url: '/' + user?.referral_code,
+                url: '/' + user?.referral_code,
                     
                 })
                 .then(() => console.log('Successful share! 🎉'))
