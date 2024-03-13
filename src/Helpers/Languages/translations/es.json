@@ -656,6 +656,19 @@
     "withdrawBannerSpan3": "to spend now!",
     "withdrawBannerBtn": "Get Now",
     "withdrawBannerSubtitle": "* The percentages of the benefit are calculated based on the basic rate of 6.9 BRL for 1 ImLive credit. Percentages will go down while buying higher credit packages in ImLive, however that option always hold a benefit.",
-    "modalMenuLink17": "Earnings",
-    "modalMenuCopyLinkTitle": "love cybersays refer your friends earn 1$ tickets and points"
+    
+    "modalMenuLink17": "My earnings",
+    "modalMenuCopyLinkTitle": "Be the king of your friends - refer them",
+    "modalMenuCopyLinkSubTitle": "For every friend that completed offer:",
+    "modalMenuLink18": "Customer support",
+    "transactionApprovedTitle": "Your withdrawal request through ",
+    "transactionApprovedSpan": "is approved",
+    "transactionApprovedRight": "Withdraw approved",
+    "transactionPendingTitle": "Your withdrawal request through",
+    "transactionPendingSpan": "is pending",
+    "transactionPendingRight": "Pending",
+    "transactionRejectedTitle": "Your withdrawal request through",
+    "transactionRejectedSpan": "is rejected",
+    "transactionRejectedRight": "Withdraw rejected",
+    "transactionID": "Transaction ID:"
 }
