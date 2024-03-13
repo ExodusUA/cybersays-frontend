@@ -99,7 +99,7 @@ function Collaborate({ user, setOpen, languageData }) {
                                     <div className={` bg-white px-3 py-2 lg:py-3 mt-1 border ${design === '0' ? 'rounded-[18px]' : 'rounded-[12px]'}`} >
                                         <div onClick={e => setWho(!who)} className={`flex  items-center justify-between cursor-pointer`}>
                                             <div className='flex items-center' >
-                                                <p className='saira text-[16px] font-normal text-[#1E1E1E]'>{languageData?.collaborateWhoSelect}</p>
+                                                <p className='saira text-[16px] font-normal text-[#1E1E1E]'>{optionWho || languageData?.collaborateWhoSelect}</p>
                                             </div>
                                             <div className='ml-2'>
                                                 {
@@ -123,7 +123,10 @@ function Collaborate({ user, setOpen, languageData }) {
                                                     selectedWho.map((item, index) => (
                                                         <div key={index} className='flex items-center gap-1'>
                                                             <label className="checkbox-container flex items-center ml-2">
-                                                                <input id={item.option} name={item.option} value={item.option} checked={optionWho === item.option} onChange={e => setUserCountry(item.option)} type="checkbox" />
+                                                                <input id={item.option} name={item.option} value={item.option} checked={optionWho === item.option} onChange={e => {
+                                                                    setOptionWho(item.option)
+                                                                    setWho(false)
+                                                                }} type="checkbox" />
                                                                 <span className="checkmark"></span>
                                                                 <p htmlFor={item.option} className='text-[#1E1E1E] saira text-[16px] font-normal'>{item.option}</p>
                                                             </label>

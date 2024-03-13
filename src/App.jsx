@@ -36,7 +36,7 @@ function App() {
     }
 
     if (window.localStorage.getItem('design') === null) {
-      window.localStorage.setItem('design', '0');
+      window.localStorage.setItem('design', '1');
       //window.location.reload();
     }
   }, []);

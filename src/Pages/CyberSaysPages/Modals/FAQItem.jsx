@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
-import plus from '../../../images/activeLink2.png'
-import minus from '../../../images/activeLink3.png'
-import { Link } from 'react-router-dom'
 
-function FAQItem({ data }) {
+function FAQItem({ data, referrals, contact, setFAQOpen }) {
 
     const [open, setOpen] = useState(false)
 
@@ -30,7 +27,15 @@ function FAQItem({ data }) {
                     <div >
                         {
                             data.answers.map((item, index) => (
-                                <p className='text-[#D9D9D9] text-[14px] saira font-medium mb-2'>{data.link && <a className='mr-1 underline text-[14px] saira font-medium' href={data.link} > {data.linkName} </a>}{item}</p>
+                                <p className='text-[#D9D9D9] text-[14px] saira font-medium mb-2'>{data.link && <a className='mr-1 underline text-[14px] saira font-medium' onClick={e => {
+                                    if (data.link === '[referralsModal]') {
+                                        setFAQOpen(false)
+                                        referrals(true)
+                                    } else if (data.link === '[contactForm]') {
+                                        setFAQOpen(false)
+                                        contact(true)
+                                    }
+                                }} href={'#'} > {data.linkName} </a>}{item}</p>
                             ))
                         }
                     </div>

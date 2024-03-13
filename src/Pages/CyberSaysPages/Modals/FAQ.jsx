@@ -3,7 +3,7 @@ import close from '../../../images/CyberSaysPage/closeMenu.png'
 import { useDesign } from '../../../Helpers/Design/DesignContext'
 import FAQItem from './FAQItem'
 
-function FAQ({ setOpen, languageData  }) {
+function FAQ({ setOpen, languageData, setContactOpen, setReferralsOpen }) {
 
     const { design } = useDesign()
     const [creatorsOpen, setCreatorsOpen] = React.useState(false)
@@ -21,7 +21,7 @@ function FAQ({ setOpen, languageData  }) {
                     <div className='h-screen max-h-[800px] overflow-y-auto pb-[20px] mac2:pb-[130px]'>
                         {
                             languageData?.FAQ_Questions?.map((item, index) => (
-                                index !== 5 && index !== 6 && <FAQItem setCreatorsOpen={setCreatorsOpen}  data={item} key={index} index={index} itemsCount={languageData?.FAQ_Questions.length} />
+                                index !== 5 && index !== 6 && <FAQItem setFAQOpen={setOpen} referrals={setReferralsOpen} contact={setContactOpen} setCreatorsOpen={setCreatorsOpen} data={item} key={index} index={index} itemsCount={languageData?.FAQ_Questions.length} />
                             ))
                         }
                     </div>

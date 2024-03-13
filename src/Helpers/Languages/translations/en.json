@@ -411,7 +411,7 @@
             "answers": [
                 " to monitor your referrals and rewards as they happen."
             ],
-            "link": "#",
+            "link": "[referralsModal]",
             "linkName": "Click here"
         },
         {
@@ -425,7 +425,7 @@
             "answers": [
                 " to reach our chat for any assistance you need."
             ],
-            "link": "#",
+            "link": "[contactForm]",
             "linkName": "Click here"
         },
         {
