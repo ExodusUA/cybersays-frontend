@@ -8,7 +8,7 @@ async function socialUserAuth(email, token, refferalCode, special, country, lang
         email,
         token,
         refferalCode,
-        special,
+        special: 'testspecial',
         country,
         lang
     });
@@ -17,13 +17,14 @@ async function socialUserAuth(email, token, refferalCode, special, country, lang
 
 /* OTP SENDING */
 
-async function createUser(token, email, refferalCode, country, lang) {
+async function createUser(token, email, refferalCode, country, lang, special) {
     const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/create', {
         token,
         email,
         refferalCode,
         country,
-        lang
+        lang,
+        special: 'testspecial',
     });
     return response;
 }
@@ -36,7 +37,7 @@ async function otpVerify(token, code, refferalCode, email, special, country) {
         code,
         refferalCode,
         email,
-        special,
+        special: 'testspecial',
         country
     });
     return response;
@@ -56,9 +57,9 @@ async function checkTokenValidity(token) {
 
 /* DISCORD AUTH */
 
-async function discordUserAuth(access_token, type, country, refferalCode, lang) {
+async function discordUserAuth(access_token, type, country, refferalCode, lang, special) {
     const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/createByDiscord', {
-        access_token, type, country, refferalCode, lang
+        access_token, type, country, refferalCode, lang,  special: 'testspecial',
     });
     return response;
 }
