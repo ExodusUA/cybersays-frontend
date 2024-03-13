@@ -11,11 +11,13 @@ function XoxodayFlow({ languageData, setConfirm, setError }) {
 
     const [email, setEmail] = useState('');
 
-    const [isVerified, setIsVerified] = useState(false)
+    const [isVerified, setIsVerified] = useState(null)
 
     useEffect(() => {
         if (isVerified) {
             setConfirm(true)
+        } else if (isVerified === false) {
+            setError(true)
         }
     }, [isVerified])
 

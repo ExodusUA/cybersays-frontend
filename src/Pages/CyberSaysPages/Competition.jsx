@@ -57,7 +57,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                     url: '/' + user?.referral_code,
                 })
                 .then(() => console.log('Successful share! 🎉'))
-                .catch(err => console.error(err));
+               
         } else {
             window.navigator.clipboard.writeText(window.location.host + '/' + user?.referral_code)
             setIsLinkCopied(true)

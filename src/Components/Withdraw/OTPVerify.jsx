@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 import CodeInput from '../Transactions/CodeInput'
 import userAPI from '../../Requests/user'
+import { withdrawXoxoday } from '../../Requests/withdraw'
 
 function OTPVerify({ languageData, isVerified, email }) {
     const { design } = useDesign()
@@ -14,7 +15,13 @@ function OTPVerify({ languageData, isVerified, email }) {
         try {
             const res = await userAPI.verifyOTP(codeNumber, email)
             if (res.data.isValid === true) {
-                isVerified(true)
+                try {
+                    const res = await withdrawXoxoday()
+                    isVerified(true)
+                } catch (error) {
+                    alert('Error! Maybe we don`t have a suitable campaign for you, please try again later')
+                    isVerified(false)
+                }
             }
         } catch (error) {
             alert('Invalid Code')

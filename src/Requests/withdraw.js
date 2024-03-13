@@ -51,4 +51,16 @@ async function withdrawD24(pixKey, personCODE, country) {
   return response;
 }
 
-export { withdrawPaxum, withdrawImLive, withdrawPix, withdrawD24 };
+async function withdrawXoxoday() {
+  const res = await axios.post(
+    process.env.REACT_APP_API_URL + "/api/v1/user/xoxoDayWithdraw",
+    {},
+    {
+      headers: {
+        token: `${getToken()}`,
+      },
+    }
+  );
+}
+
+export { withdrawPaxum, withdrawImLive, withdrawPix, withdrawD24, withdrawXoxoday };

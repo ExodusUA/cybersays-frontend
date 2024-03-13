@@ -1,5 +1,6 @@
 import React from 'react';
-import { changeTransactionStatusD24 } from '../../Requests/admin';
+import { changeTransactionStatusD24, changeXoxodayStatus } from '../../Requests/admin';
+import { toast } from 'react-toastify';
 
 function TableComponent({ data, invalidateQueries }) {
 
@@ -7,9 +8,19 @@ function TableComponent({ data, invalidateQueries }) {
     const transactionStatusD24 = async (id, status) => {
         try {
             const res = await changeTransactionStatusD24(id, status);
-            alert(res.data.message)
+            toast.success('Transaction status changed successfully')
         } catch (error) {
-            alert(error.response.data.message)
+            toast.error('Error changing transaction status: ' + error.response.data.message)
+        }
+        invalidateQueries()
+    }
+
+    const transactionStatusXoxoday = async (id, status) => {
+        try {
+            const res = await changeXoxodayStatus(id, status);
+            toast.success('Transaction status changed successfully')
+        } catch (error) {
+            toast.error('Error changing transaction status: ' + error.response.data.message)
         }
         invalidateQueries()
     }
@@ -52,12 +63,16 @@ function TableComponent({ data, invalidateQueries }) {
                             <td class="py-3 px-4">
                                 {
                                     transaction.status === 3 || transaction.status === 4
-                                        ? <div>-</div>
+                                        ? <div className='text-black'>-</div>
                                         : <>
-                                            <button onClick={() => transactionStatusD24(transaction.id, 3)} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            <button onClick={() => {
+                                                transaction.type === 'Xoxoday' ? transactionStatusXoxoday(transaction.id, 3) : transactionStatusD24(transaction.id, 3)
+                                            }} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                                                 Approve
                                             </button>
-                                            <button onClick={() => transactionStatusD24(transaction.id, 4)} class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2">
+                                            <button onClick={() => {
+                                                transaction.type === 'Xoxoday' ? transactionStatusXoxoday(transaction.id, 4) : transactionStatusD24(transaction.id, 4)
+                                            }} class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2">
                                                 Decline
                                             </button>
                                         </>

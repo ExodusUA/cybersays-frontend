@@ -3,11 +3,9 @@ import { useDesign } from '../../Helpers/Design/DesignContext'
 import userAPI from '../../Requests/user'
 import { useLanguage } from '../../Helpers/Languages/LanguageContext'
 
-function WithdrawEmail({ languageData, selectedPayment, setError, setStep }) {
+function WithdrawEmail({ languageData, selectedPayment, setError, setStep, email, setEmail }) {
     const { design } = useDesign()
     const {language} = useLanguage();
-
-    const [email, setEmail] = useState('')
 
     async function generateOTP() {
         if (email === null || email === undefined || email.length === '') return alert('Please enter a valid email address')

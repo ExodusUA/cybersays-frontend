@@ -70,7 +70,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                     url: '/' + user?.referral_code,
                 })
                 .then(() => console.log('Successful share! 🎉'))
-                .catch(err => alert('Error sharing: ' + err));
+               
         } else {
 
 

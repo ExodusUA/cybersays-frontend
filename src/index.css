@@ -630,3 +630,8 @@ body {
 .dark-text> {
     color: #0A1225;
 }
+
+.Toastify__toast-body div {
+    color: #0A1225;
+    font-family: 'saira';
+}

@@ -74,7 +74,7 @@ function TourModal({ setOpen, languageData, user }) {
                     url: '/' + user?.referral_code,
                 })
                     .then(() => console.log('Successful share! 🎉'))
-                    .catch(error => console.log('Error sharing:', error));
+                    
             } else {
                 window.navigator.clipboard.writeText(window.location.host +  '?uid=' + user?.referral_code)
 

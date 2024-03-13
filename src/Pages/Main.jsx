@@ -463,7 +463,7 @@ function Main({ languageData }) {
                 imageModal && <ImageModals setSelectedImage={setSelectedImage} selectedImage={selectedImage} setOpen={setImageModal} languageData={languageData} />
             }
 
-            <div className={`fixed right-2 bottom-4 sm:right-8 sm:bottom-8 z-[99] ${menuOpen && 'hidden'}`}>
+            <div className={`fixed right-2 bottom-4 sm:right-8 sm:bottom-8 z-[99] hidden ${menuOpen && 'hidden'}`}>
                 <img onClick={e => {
                     setChatModal(true)
                 }
