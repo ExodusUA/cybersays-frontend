@@ -598,7 +598,7 @@ body {
 
 @media screen and (max-height: 791px) and (min-width: 1200px) {
     .memeHeight {
-        margin-top: 40px !important;
+        margin-top: 30px !important;
     }
 }
 

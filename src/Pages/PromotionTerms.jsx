@@ -31,7 +31,7 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
 <p><strong>NO PURCHASE NECESSARY OR PAYMENT REQUIRED TO ENTER OR WIN A PRIZE</strong><strong>.&nbsp;</strong></p>
 <p><strong>General</strong></p>
 <ol>
-  <li>The Cyber Says Promotion shall commence on March 11, 2024 at: 00:00:01 UTC and shall conclude on July 2<sup>st</sup> , 2024, at: 23:59:59 UTC (the &ldquo;<strong>Promotion Period</strong>&rdquo;).&nbsp;</li>
+  <li>The Cyber Says Promotion shall commence on March 13<sup>th</sup>, 2024 at: 00:00:01 UTC and shall conclude on July 21<sup>st</sup> , 2024, at: 23:59:59 UTC (the &ldquo;<strong>Promotion Period</strong>&rdquo;).&nbsp;</li>
 </ol>
 <p><br></p>
 <ol>
@@ -151,7 +151,7 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
 </ol>
 <p><br></p>
 <ol>
-  <li>The winner will be selected randomly on <strong>July 14, 2024</strong>.&nbsp;</li>
+  <li>The winner will be selected randomly on <strong>July 21<sup>st</sup>, 2024</strong>.&nbsp;</li>
 </ol>
 <p><br></p>
 <ol>
