@@ -21,7 +21,7 @@ function Earned({ setOpen, languageData, user, setTransactionsModal, userCountry
         }
     })
 
-    const getMarkup = (type, datetime, amount, id) => {
+    const getMarkup = (type, datetime, amount, id, status) => {
         switch (type) {
             case 'doubling_referral': return <div className='flex justify-between items-center mt-4 '>
                 <div className='flex items-center'>
@@ -55,7 +55,7 @@ function Earned({ setOpen, languageData, user, setTransactionsModal, userCountry
                     <div className='w-[200px] md:w-[400px]'>
                         <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>{languageData?.transactionsSection3Left} {languageData?.transactionsSection3Left2}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
-                        <p className='text-[12px] font-normal saira'>Transaction ID: {id} </p>
+                        <p className='text-[12px] font-normal saira'>Transaction ID: {id} | Status: {status === 1 || status === 2 ? 'Pending' : status === 3 ? 'Approved' : status === 4 ? 'Declined' : 'No Data'}</p>
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
@@ -98,7 +98,7 @@ function Earned({ setOpen, languageData, user, setTransactionsModal, userCountry
                             </div>
                             : transactionsData?.length > 0
                                 ? transactionsData?.reverse().map((transaction, index) => {
-                                    return getMarkup(transaction.type, transaction.datetime, userCountry === 'BR' || userCountry === 'UA' ? transaction.amount * 5 : transaction.amount, transaction.id)
+                                    return getMarkup(transaction.type, transaction.datetime, userCountry === 'BR' || userCountry === 'UA' ? transaction.amount * 5 : transaction.amount, transaction.id, transaction.withdraw_status)
                                 })
                                 : <div className='flex justify-center items-center h-[200px]'>
                                     <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>

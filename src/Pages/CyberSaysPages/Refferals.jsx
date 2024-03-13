@@ -60,14 +60,14 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
         if (navigator.share) {
             navigator
                 .share({
-                    title: document.title,
-                    text: dataMessage[selectedMessage]?.desc,
+                    //title: document.title,
+                    //text: dataMessage[selectedMessage]?.desc + '. Image Link: ' + 'http://' + window.location.host + uploadedPhotos[selectedGif],
+                    //url: '/' + user?.referral_code,
                     files: [
                         new File([blobImage], 'file.png', {
                             type: blobImage.type,
                         }),
                     ],
-                    url: '/' + user?.referral_code,
                 })
                 .then(() => console.log('Successful share! 🎉'))
                
