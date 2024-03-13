@@ -25,9 +25,23 @@ function Admin() {
     fetchPaxumTransactions()
     fetchTransactionsD24()
     fetchXoxodayTransaction()
+    fetchRoyalPageTransactions()
   }, []);
 
   const [transactions, setTransactions] = useState([]);
+
+  const fetchRoyalPageTransactions = async () => {
+    const res = await getTransactions();
+    res.data = res.data.map((transaction) => {
+      transaction.type = 'RoyalPag'
+      return transaction;
+    });
+
+    setTransactions((prev) => {
+      return [...prev, ...res.data];
+    });
+    return res
+  }
 
   const fetchPaxumTransactions = async () => {
     const res = await getTransactions();
@@ -73,6 +87,8 @@ function Admin() {
     fetchPaxumTransactions()
     fetchXoxodayTransaction()
     fetchTransactionsD24()
+    fetchRoyalPageTransactions()
+
   }
 
   return (

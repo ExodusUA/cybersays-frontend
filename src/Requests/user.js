@@ -170,6 +170,16 @@ async function createPixWithdraw(pixKey, personCODE, email) {
     return response;
 
 }
+//proccessPointsWithdraw
+async function processPixWithdraw(id, status) {
+
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/proccessPointsWithdraw', { id, status }, {
+        headers: {
+            token: `${getToken()}`
+        }
+    });
+    return response;
+}
 
 async function createTicket(email, issue, message, attachments) {
     const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/ticket', { email, issue, message, attachments }, {
@@ -214,4 +224,4 @@ async function messageInfluencer(email, fields) {
 }
 
 
-export default { getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTickets, getPoints, sendEmail, getModeratorData, getPDF, generateOTP, verifyOTP, createPixWithdraw, createTicket, uploadAttachment, messageCollaborate, messageInfluencer };
+export default { processPixWithdraw, getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTickets, getPoints, sendEmail, getModeratorData, getPDF, generateOTP, verifyOTP, createPixWithdraw, createTicket, uploadAttachment, messageCollaborate, messageInfluencer };

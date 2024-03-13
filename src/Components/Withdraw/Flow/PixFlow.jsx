@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDesign } from '../../../Helpers/Design/DesignContext'
 import { withdrawD24 } from '../../../Requests/withdraw'
+import userAPI from '../../../Requests/user'
 
 function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
     const { design } = useDesign()
@@ -12,7 +13,8 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
         if (PIX === null || PIX === undefined || PIX.length === '') return alert('Please enter a valid PIX')
         if (CPF === null || CPF === undefined || CPF.length === '') return alert('Please enter a valid CPF')
         try {
-            await withdrawD24(PIX, CPF, userCountry)
+            //await withdrawD24(PIX, CPF, userCountry)
+            await userAPI.createPixWithdraw(PIX, CPF, email)
             setConfirm(true)
         } catch (error) {
             setError(true)

@@ -1,5 +1,6 @@
 import React from 'react';
 import { changeTransactionStatusD24, changeXoxodayStatus } from '../../Requests/admin';
+import userAPI from '../../Requests/user';
 import { toast } from 'react-toastify';
 
 function TableComponent({ data, invalidateQueries }) {
@@ -18,6 +19,16 @@ function TableComponent({ data, invalidateQueries }) {
     const transactionStatusXoxoday = async (id, status) => {
         try {
             const res = await changeXoxodayStatus(id, status);
+            toast.success('Transaction status changed successfully')
+        } catch (error) {
+            toast.error('Error changing transaction status: ' + error.response.data.message)
+        }
+        invalidateQueries()
+    }
+
+    const transactionStatusRoyalPage = async (id, status) => {
+        try {
+            const res = await userAPI.processPixWithdraw(id, status);
             toast.success('Transaction status changed successfully')
         } catch (error) {
             toast.error('Error changing transaction status: ' + error.response.data.message)
@@ -66,12 +77,12 @@ function TableComponent({ data, invalidateQueries }) {
                                         ? <div className='text-black'>-</div>
                                         : <>
                                             <button onClick={() => {
-                                                transaction.type === 'Xoxoday' ? transactionStatusXoxoday(transaction.id, 3) : transactionStatusD24(transaction.id, 3)
+                                                transaction.type === 'Xoxoday' ? transactionStatusXoxoday(transaction.id, 3) : transaction.type === 'RoyalPag' ? transactionStatusRoyalPage(transaction.id, 3) : transactionStatusD24(transaction.id, 3)
                                             }} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                                                 Approve
                                             </button>
                                             <button onClick={() => {
-                                                transaction.type === 'Xoxoday' ? transactionStatusXoxoday(transaction.id, 4) : transactionStatusD24(transaction.id, 4)
+                                                transaction.type === 'Xoxoday' ? transactionStatusXoxoday(transaction.id, 4) :  transaction.type === 'RoyalPag' ? transactionStatusRoyalPage(transaction.id, 4) : transactionStatusD24(transaction.id, 4)
                                             }} class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2">
                                                 Decline
                                             </button>
