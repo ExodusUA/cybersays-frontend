@@ -82,12 +82,12 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
                     <div className='w-[200px] md:w-[400px]'>
                         <p className='text-[12px]  md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>
                             {languageData?.TransactionCompetitionWinner}</p>
-                        <p className='text-[12px]  md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
+                        <p className='text-[12px] text-[#D7D7D7]  font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
                     <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}{amount}</p>
-                    <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionsSection2Right}</p>
+                    <p className='text-[12px] font-normal saira text-right'>{languageData?.transactionsSection2Right}</p>
                 </div>
             </div>
         }
