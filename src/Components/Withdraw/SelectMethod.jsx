@@ -33,7 +33,7 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
     return (
         <div className=''>
             <p className='text-[18px] md:text-[32px] font-semibold text-center my-2'>{languageData?.withdrawTitle2}</p>
-            <div className={`   md:max-w-[900px] m-auto`}>
+            <div className={` max-w-[390px]  md:max-w-[900px] m-auto`}>
                 <div className='  justify-center  m-auto relative '>
 
 
@@ -68,14 +68,14 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
 
                                 {/* BRAZIL */}
                                 {
-                                    (userCountry === 'BR' || userCountry === 'UA') && <SwiperSlide className='min-w-[240px]'> <div onClick={e => selectPayment('pix')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg4 m-auto flex justify-center items-center relative mr-2 ${selectedPayment === 'pix' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
+                                    (userCountry === 'BR' || userCountry === 'UA') && <SwiperSlide className='min-w-[150px] lg:min-w-[240px]'> <div onClick={e => selectPayment('pix')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg4 m-auto flex justify-center items-center relative mr-2 ${selectedPayment === 'pix' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
                                         <img className='w-[40px]' src={withdrawLogo4} alt="withdrawLogo4" />
                                         <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>Pix</p>
                                     </div>
                                     </SwiperSlide>
                                 }
                                 {
-                                    (userCountry === 'BR' || userCountry === 'UA') && <SwiperSlide className='min-w-[240px]'> <div onClick={e => selectPayment('paxum')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg2 m-auto flex justify-center items-center relative mr-2 ${selectedPayment === 'paxum' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
+                                    (userCountry === 'BR' || userCountry === 'UA') && <SwiperSlide className='min-w-[150px] lg:min-w-[240px]'> <div onClick={e => selectPayment('paxum')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg2 m-auto flex justify-center items-center relative mr-2 ${selectedPayment === 'paxum' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
                                         <img className='w-[115px]' src={withdrawLogo2} alt="withdrawLogo1" />
                                         <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>Paxum</p>
                                     </div>
@@ -85,7 +85,7 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
 
                                 {/* MEXICO */}
                                 {
-                                    (userCountry === 'MX' || userCountry === 'UA') && <SwiperSlide className='min-w-[240px]'> <div onClick={e => selectPayment('spei')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg5 m-auto flex justify-center items-center relative ${selectedPayment === 'spei' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
+                                    (userCountry === 'MX' || userCountry === 'UA') && <SwiperSlide className='min-w-[150px] lg:min-w-[240px]'> <div onClick={e => selectPayment('spei')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg5 m-auto flex justify-center items-center relative ${selectedPayment === 'spei' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
                                         <img className='w-[100px]' src={withdrawLogo5} alt="withdrawLogo5" />
                                         <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>SPEI</p>
                                     </div>
@@ -94,7 +94,7 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
 
                                 {/* COLUMBIA */}
                                 {
-                                    (userCountry === 'CO' || userCountry === 'UA') && <SwiperSlide className='min-w-[240px]'> <div onClick={e => selectPayment('pse')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg6 m-auto flex justify-center items-center relative ${selectedPayment === 'pse' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
+                                    (userCountry === 'CO' || userCountry === 'UA') && <SwiperSlide className='min-w-[150px] lg:min-w-[240px]'> <div onClick={e => selectPayment('pse')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg6 m-auto flex justify-center items-center relative ${selectedPayment === 'pse' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
                                         <img className='w-[100px]' src={withdrawLogo6} alt="withdrawLogo6" />
                                         <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>PSE</p>
                                     </div>
@@ -104,7 +104,7 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
 
                                 {/* CHILE */}
                                 {
-                                    (userCountry === 'CL' || userCountry === 'UA') && <SwiperSlide className='min-w-[240px]'> <div onClick={e => selectPayment('servipag')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg7 m-auto flex justify-center items-center relative ${selectedPayment === 'servipag' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
+                                    (userCountry === 'CL' || userCountry === 'UA') && <SwiperSlide className='min-w-[150px] lg:min-w-[240px]'> <div onClick={e => selectPayment('servipag')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg7 m-auto flex justify-center items-center relative ${selectedPayment === 'servipag' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
                                         <img className='w-[150px]' src={withdrawLogo7} alt="withdrawLogo7" />
                                         <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>ServiPag</p>
                                     </div>
@@ -112,7 +112,7 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                                 }
 
 
-                                <SwiperSlide className='min-w-[240px]'>
+                                <SwiperSlide className='min-w-[150px] lg:min-w-[240px]'>
                                     <div onClick={e => selectPayment('xoxoday')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg1 m-auto flex justify-center items-center relative ${selectedPayment === 'xoxoday' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
                                         <img className='w-[50px]' src={withdrawLogo1} alt="withdrawLogo1" />
                                         <p className=' absolute bottom-1 text-center saira font-normal text-[14px] flex items-center'>{languageData?.withdrawGiftTitle} {getLangFlag()}</p>
@@ -128,7 +128,11 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                     </div>
 
                 </div>
-                <div onClick={e => selectPayment('imlive')} className=' mt-2 mb-[5px] relative max-w-[390px] lg:max-w-[600px] w-full m-auto cursor-pointer'>
+                <div className='flex justify-center mt-2 lg:mt-4'>
+                    <button onClick={e => setFlowStarted(true)} className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-2 max-w-[390px] outline-none  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>
+                </div>
+                <p className='text-[14px] font-semibold text-center mt-1'>{languageData?.withdrawBannerTitle}</p>
+                <div onClick={e => selectPayment('imlive')} className=' mt-2 mb-[5px] relative max-w-[390px]  w-full m-auto cursor-pointer'>
 
                     {
                         /*
@@ -141,8 +145,14 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                     <img onClick={e => {
                         setImLiveSelected(true)
 
-                    }} className=' w-full m-auto relative z-10' src={banner} alt="banner" />
-                    <p className=' absolute z-50 saira font-medium text-[12px] lg:text-[20px] text-center text-[#1E1E1E] w-[150px] lg:w-[250px] top-[25px] right-[10px] lg:right-[10px] lg:top-[40px]'> <span className='saira font-extrabold text-[#A533FF]'>{languageData?.withdrawBanner} </span>{languageData?.withdrawBannerSpan}</p>
+                    }} className=' w-full max-w-[400px] m-auto relative z-10' src={banner} alt="banner" />
+                    <p className=' absolute z-50 saira font-medium text-[9px] w-[140px] top-[20px] iphone:top-[25px] right-[5px] leading-[12px] iphone:right-[15px] text-[#A533FF]'> <span className='saira font-extrabold text-[#A533FF]'>(nickname) </span>
+                    {languageData?.withdrawBannerMessage}</p>
+                    <div className=' absolute w-[150px] right-[10px] iphone:right-[15px] top-[75px] iphone:top-[90px] z-10'>
+                        <p className='saira text-[12px] text-center text-[#9430E3] font-bold leading-4'>{languageData?.withdrawBannerSpan1} <span className='saira text-[12px] text-center text-[#9430E3] font-normal'>(credits should earn)</span> {languageData?.withdrawBannerSpan2} <span className='saira text-[12px] text-center text-black font-medium'>{languageData?.withdrawBannerSpan3}</span></p>
+                        <button className='text-[#9430E3] border-2 border-[#9430E3] w-full text-[12px] saira font-extrabold rounded-[9px] py-[2px] cursor-pointer mt-1'>{languageData?.withdrawBannerBtn}</button>
+                    </div>
+                    <p className='saira text-[10px] text-center text-[#A533FF] font-semibold leading-[12px] mt-2'>{languageData?.withdrawBannerSubtitle}</p>
                     {/*
                         <div onClick={e => selectPayment('imlive')} className={`w-[95%] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] bg-new-bg-promo bg-no-repeat bg-cover m-auto flex justify-center items-center relative ${selectedPayment === 'imlive' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
                             <div>

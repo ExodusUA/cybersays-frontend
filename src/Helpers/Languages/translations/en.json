@@ -642,6 +642,15 @@
     "collaborateWhoOption1": "Local business",
     "collaborateWhoOption2": "Agent",
     "collaborateWhoOption3": "Worldwide company",
-    "collaborateWhoOption4": "Other"
+    "collaborateWhoOption4": "Other",
+    "withdrawBannerTitle": "Or get +38% value as ImLive credits:",
+    "withdrawBannerMessage": "is waiting for you... You can’t finish the job, can you!?",
+    "withdrawBannerSpan1": "Get ",
+    "withdrawBannerSpan2": "credits",
+    "withdrawBannerSpan3": "to spend now!",
+    "withdrawBannerBtn": "Get Now",
+    "withdrawBannerSubtitle": "* The percentages of the benefit are calculated based on the basic rate of 6.9 BRL for 1 ImLive credit. Percentages will go down while buying higher credit packages in ImLive, however that option always hold a benefit.",
+    "modalMenuLink17": "Earnings",
+    "modalMenuCopyLinkTitle": "love cybersays refer your friends earn 1$ tickets and points"
 
 }

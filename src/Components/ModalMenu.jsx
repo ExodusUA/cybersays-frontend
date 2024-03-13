@@ -58,8 +58,10 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
   const [FAQModal, setFAQModal] = useState(false)
   const [logoutModal, setLogoutModal] = useState(false)
   const [whatAbout, setWhatAbout] = useState(false)
+  const [earnings, setEarnings] = useState(false)
   const [collaborate, setCollaborate] = useState(false)
   const [influencer, setInfluencer] = useState(false)
+  const [linkCopied, setLinkCopied] = useState(false)
 
   const [checkBox, setCheckBox] = useState(false)
 
@@ -143,8 +145,13 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
         </div>
 
         <div className='max-w-[365px] w-full m-auto h-screen max-h-[800px] overflow-auto  menuScroll menuHeight'>
-
-          <div className='iphone:gap-3 se:gap-3 mac:!gap-2 grid lg:mt-8 mac:mt-0 '>
+          <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] px-2 py-1'>
+            <p className='text-[16px] text-center font-semibold leading-5'>{languageData?.modalMenuCopyLinkTitle}</p>
+            <div className='flex justify-center'>
+              <p onClick={e => setLinkCopied(true)} className={`saira text-[14px] cursor-pointer underline text-center font-semibold gradient-link ${linkCopied === true ? 'opacity-60' : ''}`}>{languageData?.CopyLink}</p>
+            </div>
+          </div>
+          <div className='iphone:gap-3 se:gap-3 mac:!gap-2 grid lg:mt-2 mac:mt-0 '>
             <div className='flex items-center' onClick={e => {
               scrollToPage(0)
               mixpanel.track("home_Page", {
@@ -289,30 +296,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <img className='w-[32px] h-[32px] mr-2' src={design === '0' ? link5 : require('../images/NewDesign/modalMenu/link4.png')} alt="link5" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink5}</p>
             </div>
-            <div className='flex items-center' onClick={e => {
-              setWithdrawModal(true)
-              mixpanel.track("way_to_get_paid", {
-                distinct_id: user?.id,
-                is_referred: user?.referral_id ? 'Yes' : 'No',
-                vegas_tickets: user?.raffle_tickets,
-                points: user?.points,
-                user_id: user?.id,
-                USD_earned: user?.allTimeEarned,
-                page_name: 'Menu'
-              })
-              moengage.track_event("way_to_get_paid", {
-                distinct_id: user?.id,
-                is_referred: user?.referral_id ? 'Yes' : 'No',
-                vegas_tickets: user?.raffle_tickets,
-                points: user?.points,
-                user_id: user?.id,
-                USD_earned: user?.allTimeEarned,
-                page_name: 'Menu'
-              })
-            }}>
-              <img className='w-[32px] h-[32px] mr-2' src={link8} alt="link7" />
-              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink7}</p>
-            </div>
+
             <div className='flex items-center' onClick={e => {
               setChatModal(true)
               mixpanel.track("chat_room", {
@@ -337,30 +321,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <img className='w-[32px] h-[32px] mr-2' src={link9} alt="link7" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink8}</p>
             </div>
-            <div className='flex items-center' onClick={e => {
-              setTransactionsModal(true)
-              mixpanel.track("transaction_history", {
-                distinct_id: user?.id,
-                is_referred: user?.referral_id ? 'Yes' : 'No',
-                vegas_tickets: user?.raffle_tickets,
-                points: user?.points,
-                user_id: user?.id,
-                USD_earned: user?.allTimeEarned,
-                page_name: 'Menu'
-              })
-              moengage.track_event("transaction_history", {
-                distinct_id: user?.id,
-                is_referred: user?.referral_id ? 'Yes' : 'No',
-                vegas_tickets: user?.raffle_tickets,
-                points: user?.points,
-                user_id: user?.id,
-                USD_earned: user?.allTimeEarned,
-                page_name: 'Menu'
-              })
-            }} >
-              <img className='w-[32px] h-[32px] mr-2' src={link7} alt="link7" />
-              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink9}</p>
-            </div>
+
             <div className='flex items-center' onClick={e => {
               setTicketsModal(true)
               mixpanel.track("tickets_and_points", {
@@ -385,7 +346,14 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <img className='w-[32px] h-[32px] mr-2' src={link10} alt="link10" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink10}</p>
             </div>
-
+            <div className='flex items-center' onClick={e => setInfluencer(true)} >
+              <img className='w-[32px] h-[32px] mr-2' src={link15} alt="link15" />
+              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink15}</p>
+            </div>
+            <div className='flex items-center' onClick={e => setCollaborate(true)} >
+              <img className='w-[32px] h-[32px] mr-2' src={link16} alt="link16" />
+              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink16}</p>
+            </div>
             <div className=' cursor-pointer  ' onClick={e => setWhatAbout(!whatAbout)}>
               <div className='flex  items-center'>
                 <div className='flex items-center' >
@@ -531,6 +499,81 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                 </>
               }
             </div>
+            <div className=' cursor-pointer  ' onClick={e => setEarnings(!earnings)}>
+              <div className='flex  items-center'>
+                <div className='flex items-center' >
+                  <img className='w-[32px] h-[32px] mr-2' src={link7} alt="link11" />
+                  <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink17}</p>
+                </div>
+
+                <div className='ml-2'>
+                  {
+                    earnings
+                      ?
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 17L12 7L22 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      : <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 7L12 17L2 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                  }
+                </div>
+              </div>
+              {
+                earnings && <>
+                  <div className='mt-1'>
+                    <div className='flex items-center' onClick={e => {
+                      setTransactionsModal(true)
+                      mixpanel.track("transaction_history", {
+                        distinct_id: user?.id,
+                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                        vegas_tickets: user?.raffle_tickets,
+                        points: user?.points,
+                        user_id: user?.id,
+                        USD_earned: user?.allTimeEarned,
+                        page_name: 'Menu'
+                      })
+                      moengage.track_event("transaction_history", {
+                        distinct_id: user?.id,
+                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                        vegas_tickets: user?.raffle_tickets,
+                        points: user?.points,
+                        user_id: user?.id,
+                        USD_earned: user?.allTimeEarned,
+                        page_name: 'Menu'
+                      })
+                    }} >
+
+                      <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuLink9}</p>
+                    </div>
+                    <div className='flex items-center' onClick={e => {
+                      setWithdrawModal(true)
+                      mixpanel.track("way_to_get_paid", {
+                        distinct_id: user?.id,
+                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                        vegas_tickets: user?.raffle_tickets,
+                        points: user?.points,
+                        user_id: user?.id,
+                        USD_earned: user?.allTimeEarned,
+                        page_name: 'Menu'
+                      })
+                      moengage.track_event("way_to_get_paid", {
+                        distinct_id: user?.id,
+                        is_referred: user?.referral_id ? 'Yes' : 'No',
+                        vegas_tickets: user?.raffle_tickets,
+                        points: user?.points,
+                        user_id: user?.id,
+                        USD_earned: user?.allTimeEarned,
+                        page_name: 'Menu'
+                      })
+                    }}>
+
+                      <p className='saira text-[20px] font-semibold cursor-pointer ml-[40px]'>{languageData?.modalMenuLink7}</p>
+                    </div>
+                  </div>
+                </>
+              }
+            </div>
             <div className='flex items-center' onClick={e => {
               setFAQModal(true)
               mixpanel.track("FAQ", {
@@ -603,14 +646,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <img className='w-[32px] h-[32px] mr-2' src={link13} alt="link10" />
               <p className='saira text-[20px] font-semibold cursor-pointer '>{languageData?.modalMenuBottom5}</p>
             </div>
-            <div className='flex items-center' onClick={e => setInfluencer(true)} >
-              <img className='w-[32px] h-[32px] mr-2' src={link15} alt="link15" />
-              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink15}</p>
-            </div>
-            <div className='flex items-center' onClick={e => setCollaborate(true)} >
-              <img className='w-[32px] h-[32px] mr-2' src={link16} alt="link16" />
-              <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink16}</p>
-            </div>
+
           </div>
           {/*
           <div className=' absolute bottom-4 left-1/2 transform -translate-x-1/2 flex justify-around items-center max-w-[420px] w-full '>
