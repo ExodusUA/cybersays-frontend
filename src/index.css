@@ -635,3 +635,6 @@ body {
     color: #0A1225;
     font-family: 'saira';
 }
+.langaugeBtnShadow {
+    box-shadow: 0px 4px 20px 0px rgba(107, 74, 219, 0.70);
+}

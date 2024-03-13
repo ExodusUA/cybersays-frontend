@@ -28,7 +28,7 @@ function WithdrawMain({ selectPayment, selectedPayment, userCountry, user, langu
             </div>
 
             <div className=' '>
-                <SelectMethod setFlowStarted={setFlowStarted} setImLiveSelected={setImLiveSelected} languageData={languageData} selectPayment={selectPayment} selectedPayment={selectedPayment} userCountry={userCountry} />
+                <SelectMethod user={user} setFlowStarted={setFlowStarted} setImLiveSelected={setImLiveSelected} languageData={languageData} selectPayment={selectPayment} selectedPayment={selectedPayment} userCountry={userCountry} />
                 
             </div>
 
