@@ -61,7 +61,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
             navigator
                 .share({
                     title: document.title,
-                    text: dataMessage[selectedMessage]?.desc + '. Image Link: ' + 'http://' + window.location.host + uploadedPhotos[selectedGif],
+                    text: dataMessage[selectedMessage]?.desc + '. Image Link: ' + 'https://' + window.location.host + uploadedPhotos[selectedGif],
                 //url: '/' + user?.referral_code,
                     
                 })
