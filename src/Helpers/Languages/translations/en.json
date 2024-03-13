@@ -409,8 +409,10 @@
         {
             "question": "How can I track my referrals and rewards in real-time?",
             "answers": [
-                "Click here to monitor your referrals and rewards as they happen."
-            ]
+                " to monitor your referrals and rewards as they happen."
+            ],
+            "link": "#",
+            "linkName": "Click here"
         },
         {
             "question": "Why don't I see my deposit on ImLive even after depositing?",
@@ -421,8 +423,10 @@
         {
             "question": "Who can I contact for support if I encounter issues with my account or rewards?",
             "answers": [
-                "Click here to reach our chat for any assistance you need."
-            ]
+                " to reach our chat for any assistance you need."
+            ],
+            "link": "#",
+            "linkName": "Click here"
         },
         {
             "question": "What are the terms of service?",

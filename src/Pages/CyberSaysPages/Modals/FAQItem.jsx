@@ -8,9 +8,9 @@ function FAQItem({ data }) {
     const [open, setOpen] = useState(false)
 
     return (
-        <div className='w-full md:w-[650px] cursor-pointer box-border m-auto ' onClick={e => setOpen(!open)}>
+        <div className='w-full md:w-[650px] cursor-pointer box-border m-auto ' >
 
-            <div className='flex justify-between py-[20px] items-center'>
+            <div className='flex justify-between py-[20px] items-center' onClick={e => setOpen(!open)}>
                 <p className={`text-[16x] duration-200 saira font-semibold text-white`}>{data.question}</p>
                 <div className='mr-2'>
                     {
@@ -30,7 +30,7 @@ function FAQItem({ data }) {
                     <div >
                         {
                             data.answers.map((item, index) => (
-                                <p className='text-[#D9D9D9] text-[14px] saira font-medium mb-2'>{item}</p>
+                                <p className='text-[#D9D9D9] text-[14px] saira font-medium mb-2'>{data.link && <a className='mr-1 underline text-[14px] saira font-medium' href={data.link} > {data.linkName} </a>}{item}</p>
                             ))
                         }
                     </div>
