@@ -49,7 +49,13 @@ function TourModal({ setOpen, languageData, user }) {
 
         async function getBlob() {
             if (dataShort[currentSlide]) {
-                const blob = await fetch(dataShort[currentSlide].img).then(r => r.blob());
+                
+                console.log(dataShort[currentSlide])
+                let url = window.location.href + dataShort[currentSlide].video
+                url = url.replace('/static', 'static')
+                const blob = await fetch(url).then(r => r.blob());
+                console.log(window.location.href + dataShort[currentSlide].video)
+                console.log(blob)
                 setBlobImage(blob);
             }
         }
@@ -67,7 +73,7 @@ function TourModal({ setOpen, languageData, user }) {
                     title: 'CyberSays',
                     text: selectedSlide.descShort,
                     files: [
-                        new File([blobImage], 'file.png', {
+                        new File([blobImage], 'file.mp4', {
                             type: blobImage.type,
                         }),
                     ],
