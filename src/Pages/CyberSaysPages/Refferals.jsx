@@ -62,7 +62,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                 .share({
                     title: document.title,
                     //text: dataMessage[selectedMessage]?.desc + '. Image Link: ' + 'https://' + window.location.host + uploadedPhotos[selectedGif],
-                    text: dataMessage[selectedMessage]?.desc + '. Link: ' + 'https://' + window.location.host + '/' + user?.referral_code,
+                    text: dataMessage[selectedMessage]?.desc + ' ' + 'https://' + window.location.host + '/' + user?.referral_code,
                     files: [
                         new File([blobImage], 'file.png', {
                             type: blobImage.type,
