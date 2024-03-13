@@ -24,6 +24,7 @@ function Auth({ languageData }) {
 
     const [currentSlide, setCurrentSlide] = useState(0);
     const [socialLink, setSocialLink] = useState(false)
+    const [swiperRef, setSwiperRef] = useState(null);
 
     const slideChange = (swiper) => {
         setCurrentSlide(swiper.realIndex);
@@ -31,9 +32,11 @@ function Auth({ languageData }) {
     };
 
     const handlers = useSwipeable({
-        onSwipedLeft: () => setCurrentSlide((prev) => (prev + 1) % 4),
-        onSwipedRight: () => setCurrentSlide((prev) => (prev - 1 + 4) % 4),
+        onSwipedLeft: () => swiperRef?.slideNext(),
+        onSwipedRight: () => swiperRef?.slidePrev(),
     });
+
+    
     return (
         <>
             <Helmet>
@@ -51,7 +54,7 @@ function Auth({ languageData }) {
 
                 <div className='lg:flex h-full'>
 
-                    <Slider currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} onSlideChange={slideChange} />
+                    <Slider swiperRef={swiperRef} setSwiperRef={setSwiperRef} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} onSlideChange={slideChange} />
                     <div className='absolute right-0 lg:right-[20px] top-5 flex items-center align-start z-10'>
                         <Language />
                     </div>
