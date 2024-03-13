@@ -45,6 +45,7 @@ import DoubleComplete from '../Components/DoubleComplete'
 import { useLanguage } from '../Helpers/Languages/LanguageContext'
 import PromoModal from '../Components/Withdraw/ImLivePromoModal'
 import moengage from '@moengage/web-sdk';
+import Referral from './Referral'
 
 
 var mixpanel = require('mixpanel-browser');
@@ -394,7 +395,8 @@ function Main({ languageData }) {
 
             <Routes>
                 <Route path="/verify" element={<Verify userData={userData} />} />
-                <Route path="/*" element={<AuthCheck>{HomepageSwiper()}</AuthCheck>} />
+                <Route path="/" element={<AuthCheck>{HomepageSwiper()}</AuthCheck>} />
+                <Route path="/*" element={<AuthCheck><Referral/></AuthCheck>} />
                 <Route path="/competition" element={<AuthCheck><Competition imLiveURL={imLiveURL} user={userData} /></AuthCheck>} />
                 <Route path="/terms" element={<Terms languageData={languageData} />} />
 

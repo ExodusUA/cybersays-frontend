@@ -26,7 +26,7 @@ function App() {
       cluster: 'DC_2'
     }
   );
-
+  const params = new URLSearchParams(window.location.search);
   const ref = window.location.pathname.split('/')[1];
 
   useEffect(() => {
@@ -35,13 +35,17 @@ function App() {
       window.localStorage.setItem('ref', ref);
     }
 
+    if (params.get('uid') !== null) {
+      window.localStorage.setItem('uid', params.get('uid'));
+    }
+
     if (window.localStorage.getItem('design') === null) {
       window.localStorage.setItem('design', '1');
       //window.location.reload();
     }
   }, []);
 
-  const params = new URLSearchParams(window.location.search);
+  
 
   if (params.get('email')) {
     window.localStorage.setItem('email', params.get('email'))

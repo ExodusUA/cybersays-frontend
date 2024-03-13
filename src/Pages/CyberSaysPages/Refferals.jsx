@@ -62,16 +62,10 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                 .share({
                     title: document.title,
                     //text: dataMessage[selectedMessage]?.desc + '. Image Link: ' + 'https://' + window.location.host + uploadedPhotos[selectedGif],
-                    text: dataMessage[selectedMessage]?.desc + ' ' + 'https://' + window.location.host + '/' + user?.referral_code,
-                    files: [
-                        new File([blobImage], 'file.png', {
-                            type: blobImage.type,
-                        }),
-                    ],
-                    //url: '/' + user?.referral_code,
+                    text: dataMessage[selectedMessage]?.desc + '. ' + window.location.origin + '/' + user?.referral_code + uploadedPhotos[selectedGif],
                 })
                 .then(() => console.log('Successful share! 🎉'))
-               
+
         } else {
 
 
@@ -108,7 +102,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
             link.click();
             link.remove();
             window.URL.revokeObjectURL(blobUrl);
-         
+
         } catch (error) {
             console.error('Error downloading photo:', error);
         }
@@ -157,7 +151,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
         if (height < 800 && width > 1200) {
             return 5;
         }
-        if ( width < 1200) {
+        if (width < 1200) {
             return 2.4;
         }
         return 4;
@@ -230,7 +224,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                 }}
                                 loop={true}
                                 slidesPerView={calculateSlidesPerView()}
-                                spaceBetween={10} 
+                                spaceBetween={10}
                             >
                                 {uploadedPhotos.length > 0 ? (
                                     uploadedPhotos.map((item, index) => (

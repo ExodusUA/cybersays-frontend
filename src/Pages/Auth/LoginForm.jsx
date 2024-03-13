@@ -24,7 +24,7 @@ function LoginForm({ languageData, referralID }) {
     const [activeModal, setActiveModal] = useState(null);
     const queryParams = new URLSearchParams(window.location.search);
     let refferalCode = referralID;
-    let special = queryParams.get('special');
+    let special = window.localStorage.getItem('uid');
 
     if (special === undefined || special === null) special = null
     if (refferalCode === undefined || refferalCode === null) refferalCode = null
@@ -107,7 +107,7 @@ function LoginForm({ languageData, referralID }) {
         const token = await recaptchaRef.current.executeAsync();
 
         try {
-            const res = await createUser(token, email, refferalCode, userCountry.country, language)
+            const res = await createUser(token, email, refferalCode, userCountry.country, language, special)
 
             await handleMixpanelEvent(true, 'email')
 

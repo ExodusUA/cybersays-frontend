@@ -8,7 +8,7 @@ async function socialUserAuth(email, token, refferalCode, special, country, lang
         email,
         token,
         refferalCode,
-        special: 'testspecial',
+        special,
         country,
         lang
     });
@@ -24,7 +24,7 @@ async function createUser(token, email, refferalCode, country, lang, special) {
         refferalCode,
         country,
         lang,
-        special: 'testspecial',
+        special,
     });
     return response;
 }
@@ -37,7 +37,7 @@ async function otpVerify(token, code, refferalCode, email, special, country) {
         code,
         refferalCode,
         email,
-        special: 'testspecial',
+        special,
         country
     });
     return response;
