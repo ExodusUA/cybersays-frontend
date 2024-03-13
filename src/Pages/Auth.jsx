@@ -114,15 +114,17 @@ function Auth({ languageData }) {
                                 <LoginForm languageData={languageData} referralID={referralID} />
 
                                 <div className='flex items-center lg:items-start justify-center gap-2 mt-2 lg:mt-4'>
-                                    <p className='saira text-[12px] text-[#CACACA]  w-full cursor-pointer select-none font-normal leading-4'>
+                                    <p className='saira text-[8px] text-[#CACACA]  w-full cursor-pointer select-none font-normal leading-4'>
                                         {languageData?.loginTermsTitle}
 
-                                        <Link target='_blank' to='/terms' className='saira text-[12px] font-semibold ml-1 underline'>
-                                            <span className=' saira text-[12px] font-normal underline'>{languageData?.loginTermsLink}</span>,
+                                        <Link target='_blank' to='/terms' className='saira text-[8px] font-semibold ml-1 '>
+                                            <span className=' saira text-[8px] font-normal underline'>Terms of Use</span> & 
                                         </Link>
-                                        <Link target='_blank' to={'/privacy'} className='saira text-[12px] font-semibold underline'>
-                                            <span className=' saira text-[12px] font-normal underline'>Privacy Policy</span>,
+                                        
+                                        <Link target='_blank' to={'/privacy'} className='saira text-[8px] font-semibold underline'>
+                                            <span className=' saira text-[8px] font-normal underline'> Privacy Policy</span>,
                                         </Link>
+                                        {/*
                                         <Link target='_blank' to={'/terms'} className='saira text-[12px] font-semibold underline'>
                                             <span className=' saira text-[12px] font-normal underline'>Terms of Use</span>,
                                         </Link>
@@ -138,6 +140,7 @@ function Auth({ languageData }) {
                                         <Link target='_blank' to={'/affiliation-terms'} className='saira text-[12px] font-semibold underline'>
                                             <span className=' saira text-[12px] font-normal underline'>Affliation Terms</span>
                                         </Link>
+                                        */}
                                     </p>
 
                                 </div>
