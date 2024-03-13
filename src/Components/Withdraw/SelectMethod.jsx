@@ -149,10 +149,10 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                             setImLiveSelected(true)
 
                         }} className=' w-full max-w-[400px] m-auto relative z-10' src={banner} alt="banner" />
-                        <p className=' absolute z-50 saira font-medium text-[9px] w-[140px] top-[20px] iphone:top-[25px] right-[5px] leading-[12px] iphone:right-[15px] text-[#A533FF]'> <span className='saira font-extrabold text-[#A533FF]'>(nickname) </span>
+                        <p className=' absolute z-50 saira font-medium text-[9px] w-[140px] top-[20px] iphone:top-[25px] right-[5px] leading-[12px] iphone:right-[15px] text-[#A533FF]'> <span className='saira font-extrabold text-[#A533FF]'>I'mLive </span>
                             {languageData?.withdrawBannerMessage}</p>
                         <div className=' absolute w-[150px] right-[10px] iphone:right-[15px] top-[75px] iphone:top-[90px] z-10'>
-                            <p className='saira text-[12px] text-center text-[#9430E3] font-bold leading-4'>{languageData?.withdrawBannerSpan1} <span className='saira text-[12px] text-center text-[#9430E3] font-normal'>(credits should earn)</span> {languageData?.withdrawBannerSpan2} <span className='saira text-[12px] text-center text-black font-medium'>{languageData?.withdrawBannerSpan3}</span></p>
+                            <p className='saira text-[12px] text-center text-[#9430E3] font-bold leading-4'>{languageData?.withdrawBannerSpan1} <span className='saira text-[12px] text-center text-[#9430E3] font-normal'></span> {languageData?.withdrawBannerSpan2} <span className='saira text-[12px] text-center text-black font-medium'>{languageData?.withdrawBannerSpan3}</span></p>
                             <button className='text-[#9430E3] border-2 border-[#9430E3] w-full text-[12px] saira font-extrabold rounded-[9px] py-[2px] cursor-pointer mt-1'>{languageData?.withdrawBannerBtn}</button>
                         </div>
                         <p className='saira text-[10px] text-center text-[#A533FF] font-semibold leading-[12px] mt-2'>{languageData?.withdrawBannerSubtitle}</p>
