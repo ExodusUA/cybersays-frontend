@@ -396,7 +396,7 @@ function Main({ languageData }) {
             <Routes>
                 <Route path="/verify" element={<Verify userData={userData} />} />
                 <Route path="/" element={<AuthCheck>{HomepageSwiper()}</AuthCheck>} />
-                <Route path="/*" element={<AuthCheck><Referral/></AuthCheck>} />
+                <Route path="/*" element={<Referral/>} />
                 <Route path="/competition" element={<AuthCheck><Competition imLiveURL={imLiveURL} user={userData} /></AuthCheck>} />
                 <Route path="/terms" element={<Terms languageData={languageData} />} />
 
