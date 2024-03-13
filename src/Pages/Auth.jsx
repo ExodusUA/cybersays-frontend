@@ -20,9 +20,7 @@ function Auth({ languageData }) {
     window.localStorage.removeItem('double');
 
 
-    let referralID = window.localStorage.getItem('uid') === 'login' ? null : window.localStorage.getItem('uid');
-
-    window.localStorage.removeItem('uid');
+    let referralID = window.localStorage.getItem('ref') === 'login' ? null : window.localStorage.getItem('ref');
 
     const [currentSlide, setCurrentSlide] = useState(0);
     const [socialLink, setSocialLink] = useState(false)

@@ -76,7 +76,7 @@ function TourModal({ setOpen, languageData, user }) {
                     .then(() => console.log('Successful share! 🎉'))
                     
             } else {
-                window.navigator.clipboard.writeText(window.location.host +  '?uid=' + user?.referral_code)
+                window.navigator.clipboard.writeText(window.location.host +  '/' + user?.referral_code)
 
             }
         }
