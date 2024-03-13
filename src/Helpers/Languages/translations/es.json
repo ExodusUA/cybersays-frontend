@@ -409,8 +409,10 @@
         {
             "question": "¿Cómo puedo seguir mis recomendaciones y recompensas en tiempo real?",
             "answers": [
-                "Haz clic aquí para supervisar tus recomendaciones y recompensas a medida que se producen."
-            ]
+                " para supervisar tus recomendaciones y recompensas a medida que se producen."
+            ],
+            "link": "#",
+            "linkName": "Haz clic aquí"
         },
         {
             "question": "¿Por qué no veo mi depósito en ImLive incluso después de depositar?",
@@ -421,8 +423,10 @@
         {
             "question": "¿Con quién puedo ponerme en contacto si tengo problemas con mi cuenta o mis premios?",
             "answers": [
-                "Haz clic aquí para acceder a nuestro chat y recibir la ayuda que necesites."
-            ]
+                " para acceder a nuestro chat y recibir la ayuda que necesites."
+            ],
+            "link": "#",
+            "linkName": "Haz clic aquí"
         },
         {
             "question": "¿Cuáles son los términos de servicio?",
