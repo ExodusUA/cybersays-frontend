@@ -47,7 +47,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                     url: '/' + user?.referral_code,
                 })
                 .then(() => console.log('Successful share! 🎉'))
-                
+
         } else {
             window.navigator.clipboard.writeText(window.location.host + '/' + user?.referral_code)
             setIsLinkCopied(true)
@@ -163,7 +163,10 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                                     <p className='  text-[18px] md:text-[32px] raffleTicketsTitle font-semibold leading-5 lg:leading-9'>
                                         {languageData?.raffleTitle1}
                                     </p>
-                                    <p onClick={e => setWinModal(true)} className='gradient-tourToggle max-w-[240px] m-auto rounded-[14px] w-full text-[#1E1E1E] saira text-[14px] font-semibold cursor-pointer mt-2 '>{languageData?.raffleSubTitleLink}</p>
+                                    <div className='flex justify-around sm:justify-center'>
+                                        <p onClick={e => setWinModal(true)} className={`${design === '0' ? 'bg-[#FFED63]' : 'gradient-tourToggle'} px-2 py-[2px] lg:px-4 rounded-[14px] text-[#1E1E1E] saira text-[12px] lg:text-[14px] font-semibold cursor-pointer mt-2 sm:mr-6`}>{languageData?.raffleSubTitleLink}</p>
+                                        <p onClick={e => setTourModal(true)} className={`${design === '0' ? 'bg-[#FFED63]' : 'gradient-tourToggle'} px-2 py-[2px] lg:px-4 rounded-[14px] text-[#1E1E1E] saira text-[12px] lg:text-[14px] font-semibold cursor-pointer mt-2 `}>{languageData?.raffleSubTitleLink2}</p>
+                                    </div>
                                 </div>
                                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[30px] text-center flex  mt-1 justify-center items-center'>
                                     <p className='text-[16px] lg:text-[32px] font-semibold mr-2'>Vegas weekend</p>

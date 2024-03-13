@@ -670,5 +670,6 @@
     "transactionRejectedTitle": "Your withdrawal request through",
     "transactionRejectedSpan": "is rejected",
     "transactionRejectedRight": "Withdraw rejected",
-    "transactionID": "Transaction ID:"
+    "transactionID": "Transaction ID:",
+    "raffleSubTitleLink2": "Take the Vegas Tour"
 }
