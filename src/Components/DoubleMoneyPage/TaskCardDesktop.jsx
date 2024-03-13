@@ -99,7 +99,7 @@ function TaskCardDesktop({ state, background, data, index, imLiveURL, rounded, o
                         user_email: user?.email,
                         page: 'Double your Money'
                     });
-                }} className={`saira text-[14px] cursor-pointer underline text-center  pt-1 pb-0 font-semibold mb-[-5px] gradient-link ${linkCopied === true ? 'opacity-60' : ''}`}>{languageData?.CopyLink}</p>
+                }} className={`saira text-[14px] cursor-pointer underline text-center  pt-1 pb-0 font-semibold mb-[-5px] gradient-link`}>{linkCopied === true ? languageData?.CopyLinkDone : languageData?.CopyLink}</p>
             </div>
         </>
     }

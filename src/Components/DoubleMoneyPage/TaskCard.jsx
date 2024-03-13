@@ -105,7 +105,7 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded, open, ma
                 });
             }
 
-            } className={`saira text-[14px] cursor-pointer underline text-center mb-[-5px] py-2 pb-3 font-semibold  ${linkCopied === true ? 'opacity-60' : ''}`}>{languageData?.CopyLink}</p>
+            } className={`saira text-[14px] cursor-pointer underline text-center mb-[-5px] py-2 pb-3 font-semibold `}>{linkCopied === true ? languageData?.CopyLinkDone : languageData?.CopyLink}</p>
         </>
     }
 

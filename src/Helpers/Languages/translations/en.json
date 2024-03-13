@@ -669,7 +669,8 @@
     "transactionRejectedSpan": "is rejected",
     "transactionRejectedRight": "Withdraw rejected",
     "transactionID": "Transaction ID:",
-    "raffleSubTitleLink2": "Take the Vegas Tour"
+    "raffleSubTitleLink2": "Take the Vegas Tour",
+    "CopyLinkDone": "Link Copied!"
 
 
 }

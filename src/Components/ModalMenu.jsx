@@ -156,7 +156,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
             <span className='flex items-center text-[10px] saira font-medium'> <img className='w-[12px] h-[12px] mx-[5px]' src={design === '0' ? refferals : require('../images/NewDesign/header/points.png')} alt="refferals" /> 30</span>
             </p>
             <div className='flex justify-center'>
-              <p onClick={e => setLinkCopied(true)} className={`saira text-[14px] cursor-pointer underline text-center font-bold gradient-link ${linkCopied === true ? 'opacity-60' : ''}`}>{languageData?.CopyLink}</p>
+              <p onClick={e => setLinkCopied(true)} className={`saira text-[14px] cursor-pointer underline text-center font-bold gradient-link`}>{linkCopied === true ? languageData?.CopyLinkDone : languageData?.CopyLink}</p>
             </div>
           </div>
           <div className='iphone:gap-3 se:gap-3 mac:!gap-2 grid lg:mt-2 mac:mt-0 '>

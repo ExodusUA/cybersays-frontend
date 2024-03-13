@@ -584,7 +584,7 @@
     "aboutModalDesc6": "Drawing inspiration from the children's game 'Simon Says'; CyberSays also includes gamification elements, ending in amazing rewards and unlimited fun for its users.",
     "loginTermsTitle": "Ao se registrar na CyberSays, você declara que tem 18 anos ou mais e que concorda com o nosso",
     "loginTermsLink": "Terms & Services",
-    "homepageMessageTitle": "My wish is your command",
+    "homepageMessageTitle": "Meu desejo é o seu comando",
     "SPEITitle": "You’ll get a cash voucher to an email of your choice:",
     "SPEIInput1": "Nombre",
     "SPEIInput2": "Apellido",
@@ -671,5 +671,6 @@
     "transactionRejectedSpan": "is rejected",
     "transactionRejectedRight": "Withdraw rejected",
     "transactionID": "Transaction ID:",
-    "raffleSubTitleLink2": "Take the Vegas Tour"
+    "raffleSubTitleLink2": "Take the Vegas Tour",
+    "CopyLinkDone": "Link Copied!"
 }
