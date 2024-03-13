@@ -61,9 +61,14 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
             navigator
                 .share({
                     title: document.title,
-                    text: dataMessage[selectedMessage]?.desc + '. Image Link: ' + 'https://' + window.location.host + uploadedPhotos[selectedGif],
-                    url: '/' + user?.referral_code,
-                    
+                    //text: dataMessage[selectedMessage]?.desc + '. Image Link: ' + 'https://' + window.location.host + uploadedPhotos[selectedGif],
+                    text: dataMessage[selectedMessage]?.desc + ' ' + 'https://' + window.location.host + '/' + user?.referral_code,
+                    files: [
+                        new File([blobImage], 'file.png', {
+                            type: blobImage.type,
+                        }),
+                    ],
+                    //url: '/' + user?.referral_code,
                 })
                 .then(() => console.log('Successful share! 🎉'))
                
@@ -165,8 +170,8 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
 
 
                 <div className='flex flex-col-reverse relative '>
-                    <div className='se:mt-[0px] lg:mt-[45px] memeHeight'>
-                        <div className=' w-full hidden lg:block mb-[-110px] mac:mb-[-100px] pr-2'>
+                    <div className='se:mt-[0px] lg:mt-[70px] memeHeight'>
+                        <div className=' w-full hidden lg:block mb-[-140px] mac:mb-[-100px] pr-2'>
                             <div className=' justify-between flex my-3  mx-10'>
                                 <img className='w-[44px] mr-3 cursor-pointer buttonPrevGif' src={left} alt="Left" onClick={e => {
                                     swiperRef?.slidePrev()
