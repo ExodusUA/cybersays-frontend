@@ -27,12 +27,12 @@ function App() {
     }
   );
 
-  const uid = window.location.pathname.split('/')[1];
+  const ref = window.location.pathname.split('/')[1];
 
   useEffect(() => {
 
-    if (uid !== null && uid !== undefined && uid !== '') {
-      window.localStorage.setItem('uid', uid);
+    if (ref !== null && ref !== undefined && ref !== '' && ref !== 'login') {
+      window.localStorage.setItem('ref', ref);
     }
 
     if (window.localStorage.getItem('design') === null) {
