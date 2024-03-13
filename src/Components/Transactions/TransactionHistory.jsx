@@ -28,7 +28,7 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
             case 3: return 'Approved'
             case 4: return 'Declined'
         }
-       
+
     }
 
     const getMarkup = (type, datetime, amount, id, status) => {
@@ -60,22 +60,22 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
                 </div>
             </div>
             case 'withdraw':
-                case 'paxum_withdraw':
-                 return <div className='flex justify-between items-center mt-4'>
-                <div className='flex items-center'>
-                    <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
-                    <div className='w-[200px] md:w-[400px]'>
-                        <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>{languageData?.transactionsSection3Left}</p>
-                        <p className='text-[12px] font-normal saira'>Transaction ID: {id} </p>
-                       
+            case 'paxum_withdraw':
+                return <div className='flex justify-between items-center mt-4'>
+                    <div className='flex items-center'>
+                        <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
+                        <div className='w-[200px] md:w-[400px]'>
+                            <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
+                            <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>{languageData?.transactionsSection3Left}</p>
+                            <p className='text-[12px] font-normal saira'>Transaction ID: {id} </p>
+
+                        </div>
+                    </div>
+                    <div className='w-[100px] leading-[18px]'>
+                        <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right mb-1'>-{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}{amount}</p>
+                        <p className='text-[12px] font-normal saira  text-right'>Withdrawn</p>
                     </div>
                 </div>
-                <div className='w-[100px] leading-[18px]'>
-                    <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right mb-1'>-{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}{amount}</p>
-                    <p className='text-[12px] font-normal saira  text-right'>Withdrawn</p>
-                </div>
-            </div>
             case 'competition': return <div className='flex justify-between items-center mt-4'>
                 <div className='flex items-center'>
                     <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
@@ -114,8 +114,72 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
                                 <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
                             </div>
                 }
+                {/*
+                 APPROVED 
+                <div className='flex justify-between items-center mt-4'>
+                    <div className='flex items-center'>
+                        <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
+                        <div className='w-[200px] md:w-[320px]'>
+                            <p className='text-[10px] md:text-[14px] font-semibold saira w-[130px] md:w-[unset] leading-3 lg:leading-4'>{languageData?.transactionApprovedTitle}
+                                (payment method)
+                                {languageData?.transactionApprovedSpan}</p>
+                            <p className='text-[10px] md:text-[14px] text-[#D7D7D7] font-light saira'>{moment.unix((Number(1))).format('DD MMMM, YYYY, hh:mm A')}</p>
+                            <p className='text-[10px] md:text-[14px] text-[#D7D7D7] font-light saira leading-3'>{languageData?.transactionID} </p>
 
+                        </div>
+                    </div>
+                    <div className='w-[150px] leading-[18px]'>
+                        <p className='text-[20px] text-[#50EA56] font-semibold saira text-right mb-1'>+{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}10</p>
+                        <p className='text-[12px] text-[#50EA56] font-normal saira  text-right'>{languageData?.transactionApprovedRight}</p>
+                    </div>
+                </div>
+ */}
+
+
+                {/*
+                 PENDING 
+                <div className='flex justify-between items-center mt-4'>
+                    <div className='flex items-center'>
+                        <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
+                        <div className='w-[200px] md:w-[320px]'>
+                            <p className='text-[10px] md:text-[14px] font-semibold saira w-[130px] md:w-[unset] leading-3 lg:leading-4'>{languageData?.transactionPendingTitle}
+                            (payment method)
+                                {languageData?.transactionPendingSpan}</p>
+                            <p className='text-[10px] md:text-[14px] text-[#D7D7D7] font-light saira'>{moment.unix((Number(1))).format('DD MMMM, YYYY, hh:mm A')}</p>
+                            <p className='text-[10px] md:text-[14px] text-[#D7D7D7] font-light saira leading-3'>{languageData?.transactionID} </p>
+
+                        </div>
+                    </div>
+                    <div className='w-[150px] leading-[18px]'>
+                        <p className='text-[20px] text-[#FF9636] font-semibold saira text-right mb-1'>+{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}10</p>
+                        <p className='text-[12px] text-[#FF9636] font-normal saira  text-right'>{languageData?.transactionPendingRight}</p>
+                    </div>
+                </div>
+*/}
+
+
+                {/*
+                 REJECTED
+                <div className='flex justify-between items-center mt-4'>
+                    <div className='flex items-center'>
+                        <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
+                        <div className='w-[200px] md:w-[320px]'>
+                            <p className='text-[10px] md:text-[14px] font-semibold saira w-[130px] md:w-[unset] leading-3 lg:leading-4'>{languageData?.transactionRejectedTitle}
+                            (payment method)
+                                {languageData?.transactionRejectedSpan}</p>
+                            <p className='text-[10px] md:text-[14px] text-[#D7D7D7] font-light saira'>{moment.unix((Number(1))).format('DD MMMM, YYYY, hh:mm A')}</p>
+                            <p className='text-[10px] md:text-[14px] text-[#D7D7D7] font-light saira leading-3'>{languageData?.transactionID} </p>
+
+                        </div>
+                    </div>
+                    <div className='w-[150px] leading-[18px]'>
+                        <p className='text-[20px] text-[#FF3C3C] font-semibold saira text-right mb-1'>-{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}10</p>
+                        <p className='text-[12px] text-[#FF3C3C] font-normal saira  text-right'>{languageData?.transactionRejectedRight}</p>
+                    </div>
+                </div>
+                */}
             </div>
+
             <div className='flex justify-center'>
                 <button onClick={e => {
                     setWithdrawModal(true)
