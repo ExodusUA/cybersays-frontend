@@ -70,15 +70,6 @@ function ToolTipInfo({ languageData, setToolInfo, user }) {
                         </div>
                     </div>
                     <div className='flex justify-around mt-2'>
-                        <div className='toolInfoBg4 w-full p-1 rounded-l-[24px] flex items-center'>
-                            <img className='w-[40px]' src={what4} alt="what4" />
-                            <p className='w-[165px] lg:w-[unset] saira text-[14px] text-[#1E1E1E] font-semibold leading-[16px] ml-1'>{languageData?.toolInfolef4}</p>
-                        </div>
-                        <div className='bg-[#EDF1FF] w-full p-1 flex items-center justify-center'>
-                            <p className=' saira text-[11px] text-[#1E1E1E] font-semibold leading-[14px] ml-1 text-center'>{languageData?.toolInfoRight4}</p>
-                        </div>
-                    </div>
-                    <div className='flex justify-around mt-2'>
                         <div className='toolInfoBg3 w-full p-1 rounded-l-[24px] flex items-center'>
                             <img className='w-[40px]' src={what3} alt="what1" />
                             <p className='w-[115px] lg:w-[unset] saira text-[14px] text-[#1E1E1E] font-semibold leading-[16px] ml-1'>{languageData?.toolInfolef3}</p>
@@ -88,6 +79,16 @@ function ToolTipInfo({ languageData, setToolInfo, user }) {
                             <p className=' saira text-[11px] text-[#1E1E1E] font-semibold leading-[14px] ml-1 text-center'>{languageData?.toolInfoRight3}</p>
                         </div>
                     </div>
+                    <div className='flex justify-around mt-2'>
+                        <div className='toolInfoBg4 w-full p-1 rounded-l-[34px] lg:rounded-l-[24px] flex items-center'>
+                            <img className='w-[40px]' src={what4} alt="what4" />
+                            <p className='w-[165px] lg:w-[unset] saira text-[14px] text-[#1E1E1E] font-semibold leading-[16px] ml-1'>{languageData?.toolInfolef4}</p>
+                        </div>
+                        <div className='bg-[#EDF1FF] w-full p-1 flex items-center justify-center'>
+                            <p className=' saira text-[11px] text-[#1E1E1E] font-semibold leading-[14px] ml-1 text-center'>{languageData?.toolInfoRight4}</p>
+                        </div>
+                    </div>
+                    
                 </div>
                 {/*
                 <div>

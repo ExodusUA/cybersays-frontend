@@ -144,7 +144,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
           </div>
         </div>
 
-        <div className='max-w-[365px] w-full m-auto h-screen max-h-[800px] overflow-auto  menuScroll menuHeight'>
+        <div className='max-w-[365px] w-full m-auto h-screen max-h-[800px] overflow-auto  menuScroll menuHeight pb-[80px] lg:pb-4 mt-2'>
           <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] px-2 py-1'>
             <p className='text-[16px] text-center font-semibold leading-5'>{languageData?.modalMenuCopyLinkTitle}</p>
             <div className='flex justify-center'>
