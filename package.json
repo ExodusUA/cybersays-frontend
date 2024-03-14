@@ -1,7 +1,7 @@
 {
   "name": "cybersays-frontend",
   "version": "0.1.0",
-  "homepage": "https://cybersays-frontend.vercel.app",
+  "homepage": "https://www.cybersays.club",
   "private": true,
   "dependencies": {
     "@moengage/web-sdk": "^1.0.8",
