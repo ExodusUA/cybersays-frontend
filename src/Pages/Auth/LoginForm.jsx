@@ -141,7 +141,9 @@ function LoginForm({ languageData, referralID }) {
                     <form onSubmit={e => handleSubmit(e)}>
                         <div className='grid grid-cols-1 lg:block mt-2  w-full lg:m-left p-1 lg:p-5 bg-[#83869b] bg-opacity-20 backdrop-blur-lg border-[1px] border-[#DDBBFD]  rounded-[14px] lg:rounded-[24px]'>
                             <div className='text-left  relative'>
-                                <input onChange={e => setEmail(e.target.value)} value={email} type="email" className='w-full h-[52px] rounded-[12px] px-4 text-gray saira' placeholder={languageData?.authEnterEmail} />
+                                <input onBlur={e => {
+                                    window.scrollTo(0, 0);
+                                }} onChange={e => setEmail(e.target.value)} value={email} type="email" className='w-full h-[52px] rounded-[12px] px-4 text-gray saira' placeholder={languageData?.authEnterEmail} />
                                 <button type='submit' onClick={e => handleSubmit(e)} className='w-full absolute right-1 top-1 continue_button h-[44px] text-[14px] md:text-[16px] rounded-[12px] saira font-bold max-w-[125px] md:max-w-[155px]'>{languageData?.authContinue}</button>
                             </div>
                             <div className={`${showButtons ? '' : 'hidden'}`}>
