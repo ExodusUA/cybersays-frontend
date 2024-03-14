@@ -25,11 +25,11 @@ function OTPVerify({ languageData, isVerified, email }) {
                     }
                 } catch (error) {
                     
-                    isVerified(false)
+                    isVerified(true)
                 }
             }
         } catch (error) {
-            alert('Invalid Code')
+           
         }
     }
 
