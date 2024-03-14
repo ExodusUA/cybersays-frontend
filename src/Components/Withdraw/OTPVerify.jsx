@@ -17,9 +17,14 @@ function OTPVerify({ languageData, isVerified, email }) {
             if (res.data.isValid === true) {
                 try {
                     const res = await withdrawXoxoday()
-                    isVerified(true)
+                    if (res.data?.isWithdrawCreated === true) {
+                        isVerified(true)
+                    } else {
+                        alert('Error! Maybe we don`t have a suitable campaign for you, please try again later')
+                        isVerified(false)
+                    }
                 } catch (error) {
-                    alert('Error! Maybe we don`t have a suitable campaign for you, please try again later')
+                    
                     isVerified(false)
                 }
             }
