@@ -63,6 +63,11 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                     title: document.title,
                     //text: dataMessage[selectedMessage]?.desc + '. Image Link: ' + 'https://' + window.location.host + uploadedPhotos[selectedGif],
                     text: dataMessage[selectedMessage]?.desc + '. ' + window.location.origin + '/' + user?.referral_code + uploadedPhotos[selectedGif],
+                    files: [
+                        new File([blobImage], 'file.png', {
+                            type: blobImage.type,
+                        }),
+                    ],
                 })
                 .then(() => console.log('Successful share! 🎉'))
 
