@@ -264,7 +264,7 @@
     "winPoint1li1": "⁠Every extra credit you buy on top of the first 5 you buy in the double the money offer will give you 1 Vegas tickets (no bonus credits included)",
     "winPoint2Title": "Refer friends that complete the double the money offer",
     "winPoint2li1": "Refer your friends and get 30 Vegas tickets for each friend that completes the double the money offer",
-    "winPoint3Title": "Send a Free Post Form by mail to our office",
+    "winPoint3Title": "Send a Free Post Form via international registered mail to the company’s registered address as appears on the downloadable form:",
     "winPoint3li1": "⁠Download the form",
     "winPoint3li2": "⁠⁠Fill your details and send it to our offices in Cyprus (address detailed on the downloadable form)",
     "winPoint3li3": "Every letter you send can include one form only and will reward you with one ticket",
@@ -673,7 +673,17 @@
     "raffleSubTitleLink2": "Take the Vegas Tour",
     "CopyLinkDone": "Link Copied!",
 
-    "timeCounterLink2": "Vegas Promotion Rules"
+    "timeCounterLink2": "Vegas Promotion Rules",
+    "pixType": "Pix type",
+    "pixTypeOption1": "CPF / CNPJ",
+    "pixTypeOption2": "Cellphone",
+    "pixTypeOption3": "E-mail",
+    "pixTypeOption4": "Random",
+    "pixTypeSelectMain": "Select Pix type",
+    "pixTypeSelectName1": "Enter CPF / CNPJ",
+    "pixTypeSelectName2": "Enter cellphone",
+    "pixTypeSelectName3": "Enter recipient email",
+    "pixTypeSelectName4": "Random"
 
 
 }

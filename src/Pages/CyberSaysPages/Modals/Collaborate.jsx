@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import close from '../../../images/CyberSaysPage/closeMenu.png'
 import { useDesign } from '../../../Helpers/Design/DesignContext'
 import userAPI from '../../../Requests/user'
@@ -56,6 +56,11 @@ function Collaborate({ user, setOpen, languageData }) {
             option: languageData?.collaborateWhoOption4,
         }
     ]
+    useEffect(() => {
+        if (user !== undefined) {
+            setUserCountry(user.country.toLowerCase());
+        }
+    }, [user]);
     return (
         <div className='w-screen h-screen fixed top-0 z-[99999] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
             <div className='max-w-[600px] m-auto'>
@@ -75,13 +80,16 @@ function Collaborate({ user, setOpen, languageData }) {
                                     <input className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder={languageData?.collaborateInput1} />
                                 </div>
                                 <p className='saira text-[12px] font-medium my-1'>{languageData?.collaboratePhone}</p>
-                                <PhoneInput
-                                    className="w-full  max-w-[600px] text-[16px] saira font-semibold  text-black outline-none rounded-[12px]"
-                                    style={{ width: '100%', padding: '5px', backgroundColor: '#F5F5F5' }}
-                                    defaultCountry={userCountry}
-                                    value={phone}
-                                    onChange={(phone) => setPhone(phone)}
-                                />
+                                {
+                                    userCountry !== null &&
+                                    <PhoneInput
+                                        className="w-full  max-w-[600px] text-[16px] saira font-semibold  text-black outline-none rounded-[12px]"
+                                        style={{ width: '100%', padding: '5px', backgroundColor: '#F5F5F5' }}
+                                        defaultCountry={userCountry}
+                                        value={phone}
+                                        onChange={(phone) => setPhone(phone)}
+                                    />
+                                }
                                 <p className='saira text-[12px] font-medium my-1'>{languageData?.collaborateInput2}</p>
                                 <div className='flex justify-center'>
                                     <input className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={name} onChange={e => setName(e.target.value)} placeholder={languageData?.collaborateInput2} />

@@ -769,7 +769,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
         tourModal && <TourModal languageData={languageData} setOpen={setTourModal} user={user} />
       }
       {
-        referralsModal && <MyReferralsModal languageData={languageData} setOpen={setReferralsModal} user={user} />
+        referralsModal && <MyReferralsModal scrollToPage={scrollToPage} languageData={languageData} setOpen={setReferralsModal} user={user} />
       }
       {
         withdrawModal && <Withdraw setPromoModal={setPromoModal} languageData={languageData} setOpen={setWithdrawModal} user={user} userCountry={userCountry} />
