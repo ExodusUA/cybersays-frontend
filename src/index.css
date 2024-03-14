@@ -529,11 +529,12 @@ body {
         width: 145px !important;
         height: 145px !important;
     }
+    .mac-overflow-fix {
+        margin-top: -200px !important;
+    }
 }
 @media screen and (max-height: 770px) and (min-width: 1200px) {
-    .mac-overflow-fix {
-        margin-top: -185px !important;
-    }
+    
 
     .refferals-selectMassege {
         margin-top: 10px !important;

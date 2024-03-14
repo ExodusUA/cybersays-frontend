@@ -672,5 +672,17 @@
     "transactionRejectedRight": "Withdraw rejected",
     "transactionID": "Transaction ID:",
     "raffleSubTitleLink2": "Take the Vegas Tour",
-    "CopyLinkDone": "Link Copied!"
+    "CopyLinkDone": "Link Copied!",
+
+    "timeCounterLink2": "Vegas Promotion Rules",
+    "pixType": "Pix type",
+    "pixTypeOption1": "CPF / CNPJ",
+    "pixTypeOption2": "Cellphone",
+    "pixTypeOption3": "E-mail",
+    "pixTypeOption4": "Random",
+    "pixTypeSelectMain": "Select Pix type",
+    "pixTypeSelectName1": "Enter CPF / CNPJ",
+    "pixTypeSelectName2": "Enter cellphone",
+    "pixTypeSelectName3": "Enter recipient email",
+    "pixTypeSelectName4": "Random"
 }

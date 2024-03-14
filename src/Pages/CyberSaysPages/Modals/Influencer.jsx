@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import close from '../../../images/CyberSaysPage/closeMenu.png'
 import { useDesign } from '../../../Helpers/Design/DesignContext'
 import userAPI from '../../../Requests/user'
@@ -165,7 +165,12 @@ function Influencer({ user, setOpen, languageData }) {
             setIsDone(true)
         }
     }
-
+    useEffect(() => {
+        if (user !== undefined) {
+            setUserCountry(user.country.toLowerCase());
+        }
+    }, [user]);
+   
     return (
         <div className='w-screen h-screen fixed top-0 z-[99999] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
             <div className='max-w-[600px] m-auto'>
@@ -185,14 +190,16 @@ function Influencer({ user, setOpen, languageData }) {
                                     <input className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder={languageData?.InfluencerInput1} />
                                 </div>
                                 <p className='saira text-[12px] font-medium my-1'>{languageData?.InfluencerInputPhone}</p>
-                                <PhoneInput
-                                    className="w-full  max-w-[600px] text-[16px] saira font-semibold  text-black outline-none rounded-[12px]"
-                                    style={{ width: '100%', padding: '5px', backgroundColor: '#F5F5F5' }}
-                                    defaultCountry={userCountry}
-                                    value={phone}
-                                    onChange={(phone) => setPhone(phone)}
-                                />
-
+                                {
+                                    userCountry !== null &&
+                                    <PhoneInput
+                                        className="w-full  max-w-[600px] text-[16px] saira font-semibold  text-black outline-none rounded-[12px]"
+                                        style={{ width: '100%', padding: '5px', backgroundColor: '#F5F5F5' }}
+                                        defaultCountry={userCountry}
+                                        value={phone}
+                                        onChange={(phone) => setPhone(phone)}
+                                    />
+                                }
                                 <p className='saira text-[12px] font-medium my-1'>{languageData?.InfluencerInput2}</p>
                                 <div className='flex justify-center'>
                                     <input className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={name} onChange={e => setName(e.target.value)} placeholder={languageData?.InfluencerInput2} />
@@ -251,7 +258,7 @@ function Influencer({ user, setOpen, languageData }) {
                                     <div className={` bg-white px-3 py-2 lg:py-3 mt-1 border ${design === '0' ? 'rounded-[18px]' : 'rounded-[12px]'}`} >
                                         <div onClick={e => setSocialOpen(!socialOpen)} className={`flex  items-center justify-between cursor-pointer`}>
                                             <div className='flex items-center' >
-                                                <p className='saira text-[16px] font-normal text-[#1E1E1E]'>{ languageData?.InfluencerFollowers}</p>
+                                                <p className='saira text-[16px] font-normal text-[#1E1E1E]'>{languageData?.InfluencerFollowers}</p>
                                             </div>
                                             <div className='ml-2'>
                                                 {

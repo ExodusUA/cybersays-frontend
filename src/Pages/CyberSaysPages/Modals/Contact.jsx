@@ -143,6 +143,7 @@ function Contact({ user, setOpen, languageData }) {
                                                 <span className="checkmark"></span>
                                                 <p className='text-[#1E1E1E] saira text-[14px] font-medium'>{languageData?.contactQuestion4}</p>
                                             </label>
+                                            {/*
                                             <label className="checkbox-container flex items-center ml-2">
                                                 <input checked={selectedOption === languageData?.contactQuestion5}
                                                     onChange={() => {
@@ -152,6 +153,7 @@ function Contact({ user, setOpen, languageData }) {
                                                 <span className="checkmark"></span>
                                                 <p className='text-[#1E1E1E] saira text-[14px] font-medium'>{languageData?.contactQuestion5}</p>
                                             </label>
+                                            */}
                                             <label className="checkbox-container flex items-center ml-2">
                                                 <input checked={selectedOption === languageData?.contactQuestion6}
                                                     onChange={() => {

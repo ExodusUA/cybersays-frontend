@@ -6,7 +6,7 @@ import { useQuery, useQueryClient } from '@tanstack/react-query'
 import userAPI from '../../Requests/user'
 import { useDesign } from '../../Helpers/Design/DesignContext'
 
-function MyReferralsModal({ setOpen, user, languageData }) {
+function MyReferralsModal({ setOpen, user, languageData,scrollToPage }) {
     const { design } = useDesign()
 
     const [referralData, setReferralData] = useState([])
@@ -154,7 +154,7 @@ function MyReferralsModal({ setOpen, user, languageData }) {
                                 }
 
                                 <p className='saira text-[16px] font-semibold text-center my-5'>{languageData?.myReferralsSubTitle2}</p>
-                                <button onClick={e => shareRefferalLink()} className={`w-full bg-white text-black text-[18px] saira font-semibold py-2 ${design === '0' ? ' rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>
+                                <button onClick={e => scrollToPage(4)} className={`w-full bg-white text-black text-[18px] saira font-semibold py-2 ${design === '0' ? ' rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>
                                     {
                                         isLinkCopied === false
                                             ? 'Refer your friends 👬'
