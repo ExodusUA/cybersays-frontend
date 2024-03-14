@@ -131,32 +131,33 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                 <div className='flex justify-center mt-2 lg:mt-4'>
                     <button onClick={e => setFlowStarted(true)} className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-2 max-w-[390px] outline-none  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>
                 </div>
-                <p className='text-[14px] font-semibold text-center mt-1'>{languageData?.withdrawBannerTitle}</p>
+
 
 
                 {user?.earned.toFixed(0) !== '0' && (
-                    
-                    <div onClick={e => selectPayment('imlive')} className=' mt-2 mb-[5px] relative max-w-[390px]  w-full m-auto cursor-pointer'>
-                        {
-                            /*
-                            <div onClick={e => selectPayment('visa')} className={`w-[160px] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg3 m-auto flex justify-center items-center relative mt-2 ${selectedPayment === 'visa' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
-                            <img className='w-[68px]' src={withdrawLogo3} alt="withdrawLogo1" />
-                            <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>Visa prepaid card</p>
-                        </div>
-                            */
-                        }
-                        <img onClick={e => {
-                            setImLiveSelected(true)
+                    <>
+                        <p className='text-[14px] font-semibold text-center mt-1'>{languageData?.withdrawBannerTitle}</p>
+                        <div onClick={e => selectPayment('imlive')} className=' mt-2 mb-[5px] relative max-w-[390px]  w-full m-auto cursor-pointer'>
+                            {
+                                /*
+                                <div onClick={e => selectPayment('visa')} className={`w-[160px] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg3 m-auto flex justify-center items-center relative mt-2 ${selectedPayment === 'visa' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
+                                <img className='w-[68px]' src={withdrawLogo3} alt="withdrawLogo1" />
+                                <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>Visa prepaid card</p>
+                            </div>
+                                */
+                            }
+                            <img onClick={e => {
+                                setImLiveSelected(true)
 
-                        }} className=' w-full max-w-[400px] m-auto relative z-10' src={banner} alt="banner" />
-                        <p className=' absolute z-50 saira font-medium text-[9px] w-[140px] top-[20px] iphone:top-[25px] right-[5px] leading-[12px] iphone:right-[15px] text-[#A533FF]'> <span className='saira font-extrabold text-[#A533FF]'>I'mLive </span>
-                            {languageData?.withdrawBannerMessage}</p>
-                        <div className=' absolute w-[150px] right-[10px] iphone:right-[15px] top-[75px] iphone:top-[90px] z-10'>
-                            <p className='saira text-[12px] text-center text-[#9430E3] font-bold leading-4'>{languageData?.withdrawBannerSpan1} <span className='saira text-[12px] text-center text-[#9430E3] font-normal'></span> {languageData?.withdrawBannerSpan2} <span className='saira text-[12px] text-center text-black font-medium'>{languageData?.withdrawBannerSpan3}</span></p>
-                            <button className='text-[#9430E3] border-2 border-[#9430E3] w-full text-[12px] saira font-extrabold rounded-[9px] py-[2px] cursor-pointer mt-1'>{languageData?.withdrawBannerBtn}</button>
-                        </div>
-                        <p className='saira text-[10px] text-center text-[#A533FF] font-semibold leading-[12px] mt-2'>{languageData?.withdrawBannerSubtitle}</p>
-                        {/*
+                            }} className=' w-full max-w-[400px] m-auto relative z-10' src={banner} alt="banner" />
+                            <p className=' absolute z-50 saira font-medium text-[9px] w-[140px] top-[20px] iphone:top-[25px] right-[5px] leading-[12px] iphone:right-[15px] text-[#A533FF]'> <span className='saira font-extrabold text-[#A533FF]'>I'mLive </span>
+                                {languageData?.withdrawBannerMessage}</p>
+                            <div className=' absolute w-[150px] right-[10px] iphone:right-[15px] top-[75px] iphone:top-[90px] z-10'>
+                                <p className='saira text-[12px] text-center text-[#9430E3] font-bold leading-4'>{languageData?.withdrawBannerSpan1} <span className='saira text-[12px] text-center text-[#9430E3] font-normal'></span> {languageData?.withdrawBannerSpan2} <span className='saira text-[12px] text-center text-black font-medium'>{languageData?.withdrawBannerSpan3}</span></p>
+                                <button className='text-[#9430E3] border-2 border-[#9430E3] w-full text-[12px] saira font-extrabold rounded-[9px] py-[2px] cursor-pointer mt-1'>{languageData?.withdrawBannerBtn}</button>
+                            </div>
+                            <p className='saira text-[10px] text-center text-[#A533FF] font-semibold leading-[12px] mt-2'>{languageData?.withdrawBannerSubtitle}</p>
+                            {/*
                         <div onClick={e => selectPayment('imlive')} className={`w-[95%] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] bg-new-bg-promo bg-no-repeat bg-cover m-auto flex justify-center items-center relative ${selectedPayment === 'imlive' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
                             <div>
                                 <div className='flex items-center justify-center lg:mt-4'>
@@ -168,7 +169,8 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                             </div>
                         </div>
                         */}
-                    </div>
+                        </div>
+                    </>
                 )}
             </div>
         </div>

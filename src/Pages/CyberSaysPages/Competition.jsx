@@ -57,7 +57,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                     url: '/' + user?.referral_code,
                 })
                 .then(() => console.log('Successful share! 🎉'))
-               
+
         } else {
             window.navigator.clipboard.writeText(window.location.host + '/' + user?.referral_code)
             setIsLinkCopied(true)
@@ -78,8 +78,10 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
 
             <div className='pt-[57px]  md:pt-[80px] mac-center:!pt-0 px-4 max-w-[1170px] m-auto' >
                 <img className='se:w-[170px]  w-[170px] iphone:w-[240px] double-img-width md:w-[320px] m-auto se:mb-[-3%] iphone:mb-[-13px] lg:mb-[-10px]  relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
-                <div className=' rounded-[14px] text-center se:py-1 mac:!py-0 px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto  competitionSE iphone:mt-[40px] contentForCompetitions md:mt-[60px]'>
-                    <p className='text-center text-[18px] lg:text-[32px]  font-semibold'>{languageData?.competitionTitle}</p>
+                <div className=' rounded-[14px] text-center se:py-1 mac:!py-0 px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto  competitionSE iphone:mt-[20px] contentForCompetitions md:mt-[60px]'>
+                    <p className='text-center text-[18px] lg:text-[32px]  font-semibold flex items-center gap-2 justify-center'>{languageData?.competitionTitle}
+                        <span className='saira competitionPlaceBG px-2 rounded-[8px] border-[2px] border-[#FCBC1B] text-[12px] '>$69</span>
+                        {languageData?.competitionTitle2}</p>
                 </div>
                 <div className='bg-[#EAEAEA] bg-opacity-10 backdrop-blur-lg rounded-[14px] text-center se:py-1 iphone:py-2  px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto '>
                     {/*<p className='text-center text-[14px] sm:text-[32px] mac:!text-[24px] font-semibold'>{languageData?.competitionTitle} {siteData?.currentDay}</p>*/}

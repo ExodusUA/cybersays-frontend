@@ -30,7 +30,7 @@
                     "taskText": "Enjoy ImLive, be treated like a KING 👑 - and fulfill your wildest fantasies!"
                 }
             ],
-            "taskButton": "1/3 Register on ImLive!"
+            "taskButton": "1/3: Register on ImLive!"
         },
         "task2": {
             "taskTitle": "Deposit",
@@ -244,10 +244,10 @@
     "authSlide4": "3. Win the 69$ daily competition",
     "authSlide4li1": "Earn points by engaging further in CyberSays. Finish first in our top 10 to win 69$, daily! ",
     "authEnterEmail": "Enter your e-mail",
-    "authContinue": "Continue",
-    "authDiscord": "Continue with",
-    "authGoogle": "Continue with",
-    "authFacebook": "Continue with",
+    "authContinue": "Join/Login",
+    "authDiscord": "Join/Login with",
+    "authGoogle": "Join/Login with",
+    "authFacebook": "Join/Login with",
     "verifyCodeTitle": "Verify your account",
     "verifyCodePlaceholder": "Enter verification code sent by e-mail",
     "verifyCodeError": "Code is wrong",
@@ -552,7 +552,8 @@
     "earnedModalTitleBR": "Latest R$ earnings",
     "modalMenuLink14": "Read More",
     "raffleSubTitleLink": "What’s the Vegas Promotion?",
-    "competitionTitle": "Win the 69$ Daily Competition!",
+    "competitionTitle": "Win the ",
+    "competitionTitle2": " Daily Competition!",
     "leaderboardsNotUser": "There are no more users",
     "NamePage1": "Homepage",
     "NamePage2": "Double your money",

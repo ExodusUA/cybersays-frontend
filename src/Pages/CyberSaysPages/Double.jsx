@@ -63,7 +63,7 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
         }
         let lastTask = tasks[tasks.length - 1]
 
-        setSelectedTask(lastTask + 1)
+        setSelectedTask(lastTask)
         setLastTask(lastTask)
     }, [user])
 

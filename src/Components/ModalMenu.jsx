@@ -151,9 +151,9 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
           <div className='border-[1px] border-white rounded-[14px] px-2 py-1'>
             <p className='text-[14px] text-center font-normal leading-5 saira'>{languageData?.modalMenuCopyLinkTitle}</p>
             <p className='text-[12px] text-center font-light leading-5 saira flex items-center justify-center'> {languageData?.modalMenuCopyLinkSubTitle}
-            <span className='flex items-center text-[10px] saira font-medium'> <img className='w-[12px] h-[12px] mx-[5px]' src={design === '0' ? money : require('../images/NewDesign/header/dollar.png')} alt="refferals" /> 1</span>
-            <span className='flex items-center text-[10px] saira font-medium'> <img className='w-[12px] h-[12px] mx-[5px]' src={design === '0' ? joker : require('../images/NewDesign/header/ticket.png')} alt="refferals" /> 10</span>
-            <span className='flex items-center text-[10px] saira font-medium'> <img className='w-[12px] h-[12px] mx-[5px]' src={design === '0' ? refferals : require('../images/NewDesign/header/points.png')} alt="refferals" /> 30</span>
+              <span className='flex items-center text-[10px] saira font-medium'> <img className='w-[12px] h-[12px] mx-[5px]' src={design === '0' ? money : require('../images/NewDesign/header/dollar.png')} alt="refferals" /> 1</span>
+              <span className='flex items-center text-[10px] saira font-medium'> <img className='w-[12px] h-[12px] mx-[5px]' src={design === '0' ? joker : require('../images/NewDesign/header/ticket.png')} alt="refferals" /> 10</span>
+              <span className='flex items-center text-[10px] saira font-medium'> <img className='w-[12px] h-[12px] mx-[5px]' src={design === '0' ? refferals : require('../images/NewDesign/header/points.png')} alt="refferals" /> 30</span>
             </p>
             <div className='flex justify-center'>
               <p onClick={e => setLinkCopied(true)} className={`saira text-[14px] cursor-pointer underline text-center font-bold gradient-link`}>{linkCopied === true ? languageData?.CopyLinkDone : languageData?.CopyLink}</p>
@@ -392,7 +392,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink16}</p>
             </div>
             */}
-            
+
             <div className=' cursor-pointer  ' onClick={e => setEarnings(!earnings)}>
               <div className='flex  items-center'>
                 <div className='flex items-center' >
@@ -516,7 +516,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                 </>
               }
             </div>
-            
+
             <div className='flex items-center' onClick={e => {
               setSettingsModal(true)
               mixpanel.track("settings", {
@@ -565,7 +565,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <img className='w-[32px] h-[32px] mr-2' src={link11} alt="link11" />
               <p className='saira text-[20px] font-semibold cursor-pointer'>{languageData?.modalMenuLink11}</p>
             </div>
-            
+
             <div className=' cursor-pointer  ' onClick={e => setWhatAbout(!whatAbout)}>
               <div className='flex  items-center'>
                 <div className='flex items-center' >
@@ -711,14 +711,16 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                 </>
               }
             </div>
-            <div className='flex justify-around mt-[60px] lg:mt-[70px]'>
-              <p onClick={e => setInfluencer(true)} className={`saira text-[14px] lg:text-[18px] cursor-pointer underline text-center font-bold gradient-link leading-[24px]`}>{languageData?.modalMenuLink15}</p>
-              <p onClick={e => setCollaborate(true)} className={`saira text-[14px] lg:text-[18px] cursor-pointer underline text-center font-bold gradient-link leading-[24px]`}>{languageData?.modalMenuLink16}</p>
+            <div className='fixed bottom-10 left-0 justify-center w-screen'>
+              <div className='flex justify-center mt-[60px] lg:mt-[70px] gap-4'>
+                <p onClick={e => setInfluencer(true)} className={`saira text-[14px] lg:text-[18px] cursor-pointer underline text-center font-bold gradient-link leading-[24px]`}>{languageData?.modalMenuLink15}</p>
+                <p onClick={e => setCollaborate(true)} className={`saira text-[14px] lg:text-[18px] cursor-pointer underline text-center font-bold gradient-link leading-[24px]`}>{languageData?.modalMenuLink16}</p>
+              </div>
+              <div className='flex justify-center'>
+                <p onClick={e => setContactModal(true)} className={`saira text-[14px] lg:text-[18px] cursor-pointer underline text-center font-bold gradient-link leading-[24px]`}>{languageData?.modalMenuLink18}</p>
+              </div>
             </div>
-            <div  className='flex justify-center'>
-              <p onClick={e => setContactModal(true)} className={`saira text-[14px] lg:text-[18px] cursor-pointer underline text-center font-bold gradient-link leading-[24px]`}>{languageData?.modalMenuLink18}</p>
-            </div>
-            
+
           </div>
           {/*
           <div className=' absolute bottom-4 left-1/2 transform -translate-x-1/2 flex justify-around items-center max-w-[420px] w-full '>

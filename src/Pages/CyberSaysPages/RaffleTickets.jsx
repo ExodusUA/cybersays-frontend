@@ -79,10 +79,10 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
 
                 <div className='flex flex-col-reverse '>
 
-                    <div className='iphone:mt-[40px] md:mt-0'>
+                    <div className='iphone:mt-[50px] md:mt-0'>
                         <img className={`se:w-[280px] iphone:w-[385px]  ${design === '0' ? 'md:w-[770px] raffleTicketsSE2 mac-img-width2 mt-[-110px] mac2:mt-[-110px] iphone:mt-[-30px] mb-6' : 'md:w-[990px] raffleTicketsSE mac-img-width mt-[-110px] mac2:mt-[-110px] iphone:mt-[-30px]'} iphone:mt-[-90px] mob:mt-0 m-auto md:mt-[-90px] mt-[0px] mac2:mt-[-50px] se:mt-[-30px]  `} src={design === '0' ? hero : require('../../images/NewDesign/RaffleTicket/hero_image.png')} alt="heroRaffle" />
 
-                        <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[30px] text-center flex py-1 md:py-3   px-2  ${isTaskCompleted === false && ' md:mt-[-125px] iphone:mt-[-50px] se:mt-[-80px] mac-overflow-fix'} justify-center relative z-1`} >
+                        <div className={`bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[30px] text-center flex py-1 md:py-3   px-2  ${isTaskCompleted === false && ' md:mt-[-125px] iphone:mt-[-20px] se:mt-[-80px] mac-overflow-fix'} justify-center relative z-1`} >
                             {
 
                                 isTaskCompleted === false
