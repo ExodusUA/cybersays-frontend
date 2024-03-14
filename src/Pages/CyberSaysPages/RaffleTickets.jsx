@@ -77,7 +77,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
             <div className='pt-[57px]  md:pt-[80px] mac-center:!pt-0 px-4 max-w-[970px] m-auto' >
                 <img className='se:w-[170px]  w-[170px] iphone:w-[240px] mac2:w-[170px] md:w-[320px] m-auto se:mb-[3%] iphone:mb-[1%]  lg:mb-[-10px] mac-img-bottom relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
 
-                <div className='flex flex-col-reverse '>
+                <div className='flex flex-col-reverse competitionSE iphone:mt-[40px]  md:mt-[0px]'>
 
                     <div className='iphone:mt-[50px] md:mt-0'>
                         <img className={`se:w-[280px] iphone:w-[385px]  ${design === '0' ? 'md:w-[770px] raffleTicketsSE2 mac-img-width2 mt-[-110px] mac2:mt-[-110px] iphone:mt-[-30px] mb-6' : 'md:w-[990px] raffleTicketsSE mac-img-width mt-[-110px] mac2:mt-[-110px] iphone:mt-[-30px]'} iphone:mt-[-90px] mob:mt-0 m-auto md:mt-[-90px] mt-[0px] mac2:mt-[-50px] se:mt-[-30px]  `} src={design === '0' ? hero : require('../../images/NewDesign/RaffleTicket/hero_image.png')} alt="heroRaffle" />
