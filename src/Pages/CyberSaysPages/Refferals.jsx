@@ -8,6 +8,7 @@ import { useDesign } from '../../Helpers/Design/DesignContext';
 import newlogoCyber from '../../images/NewDesign/newLogo_main.png';
 import mixpanel from 'mixpanel-browser';
 import moengage from '@moengage/web-sdk';
+import { useLanguage } from '../../Helpers/Languages/LanguageContext';
 
 function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenMassege, setOpenAvatar, selectedMessage, setSelectedMassege, copyToMessage, message, uploadedPhotos, imageModal, setImageModal, selectedImage, setSelectedImage, setInfoOffer }) {
     const [dimensions, setDimensions] = useState({
@@ -15,6 +16,8 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
         width: window.innerWidth,
     });
     let swiperRef;
+
+    const {language} = useLanguage()
 
     const [blobImage, setBlobImage] = useState(null)
     const [selectedGif, setSelectedGif] = useState(0);
@@ -62,17 +65,11 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                 .share({
                     title: document.title,
                     //text: dataMessage[selectedMessage]?.desc + '. Image Link: ' + 'https://' + window.location.host + uploadedPhotos[selectedGif],
-                    text: dataMessage[selectedMessage]?.desc + 'Referral link:' + 'https://' + window.location.host + '/' + user?.referral_code,
-                    files: [
-                        new File([blobImage], 'file.png', {
-                            type: blobImage.type,
-                        }),
-                    ],
+                    text: dataMessage[selectedMessage]?.desc + ' Referral link: ' + 'https://' + window.location.host + `/share/${language}_${selectedGif + 1}?ref=` + user?.referral_code,
                 })
                 .then(() => console.log('Successful share! 🎉'))
 
         } else {
-
 
             window.navigator.clipboard.writeText(window.location.host + '/' + user?.referral_code)
             setIsLinkShared(true)
