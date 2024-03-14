@@ -9,7 +9,7 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
     const [CPF, setCPF] = useState(null)
     const [mail, setMail] = useState(null)
     const [pixType, setPixType] = useState(null)
-    const [pixTypeOption, setPixTypeOption] = useState(null)
+    const [pixTypeOption, setPixTypeOption] = useState(languageData?.pixTypeOption1)
     const selectedPixType = [
         {
             option: languageData?.pixTypeOption1,
@@ -43,7 +43,9 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
         <div className='max-w-[600px] w-full m-auto'>
             <p className='text-[18px] md:text-[32px] font-semibold text-center mt-2'>{languageData?.PIXTitle}</p>
             <div>
-                <p className='saira text-[12px] font-medium my-1'>{languageData?.pixType}</p>
+                {
+                    /*
+                    <p className='saira text-[12px] font-medium my-1'>{languageData?.pixType}</p>
                 <div className={` bg-white px-3 py-2 lg:py-3 mt-1 border relative ${design === '0' ? 'rounded-[18px]' : 'rounded-[12px]'}`} >
                     <div onClick={e => setPixType(!pixType)} className={`flex  items-center justify-between cursor-pointer`}>
                         <div className='flex items-center' >
@@ -64,6 +66,8 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
                     </div>
 
                 </div>
+                    */
+                }
                 {
                     pixType && <>
                         <div className={`bg-white px-3 py-2 lg:py-3 mt-2 border absolute shadow-sm max-w-[600px] w-full ${design === '0' ? 'rounded-[18px]' : 'rounded-[12px]'}`} >
@@ -98,7 +102,7 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
                 (pixTypeOption === languageData?.pixTypeOption1 || pixTypeOption === languageData?.pixTypeOption2 || pixTypeOption === languageData?.pixTypeOption3 || pixTypeOption === languageData?.pixTypeOption4) && <div>
                     <p className='saira text-[12px] font-medium my-1'>{pixTypeOption === languageData?.pixTypeOption1 && languageData?.pixTypeSelectName1 || pixTypeOption === languageData?.pixTypeOption2 && languageData?.pixTypeSelectName2 || pixTypeOption === languageData?.pixTypeOption3 && languageData?.pixTypeSelectName3 || pixTypeOption === languageData?.pixTypeOption4 && languageData?.pixTypeSelectName4}</p>
                     <div className='flex justify-center'>
-                        <input className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={mail} onChange={e => setMail(e.target.value)}
+                        <input className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={CPF} onChange={e => setCPF(e.target.value)}
                             placeholder={
                                 pixTypeOption === languageData?.pixTypeOption1 && '000.000.000-00' || pixTypeOption === languageData?.pixTypeOption2 && '(XX)XXXXX-XXXX' || pixTypeOption === languageData?.pixTypeOption3 && 'username@cybersays.com' || pixTypeOption === languageData?.pixTypeOption4 && 'Random'} />
                     </div>

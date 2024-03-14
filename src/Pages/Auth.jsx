@@ -70,17 +70,17 @@ function Auth({ languageData }) {
                             <div className='pt-[1px] iphone:pt-[10px]  w-full relative z-[10] lg:border-2 lg:px-10 lg:pt-10 lg:pb-5 lg:bg-[#0D0D0D73] bg-opacity-20 rounded-[32px] border-[#DDBBFD]'>
                                 <div className=' lg:max-w-[600px] '>
                                     <img className='w-[130px]  lg:w-[250px] m-auto mt-[-30px] lg:mt-0 logoLogin' src={logoCyber} alt="Logotype" />
-                                    <p className={`w-full lg:w-[100%] text-center lg:text-left text-[18px] leading-7 font-bold lg:text-[32px] text-white lg:leading-9 pb-2 se:mt-[0px] h-[154px] ${language === 'es' && 'md:min-h-[210px]'} md:min-h-[180px]`}>
+                                    <p className={`w-full lg:w-[100%] text-center lg:text-left text-[20px] leading-7 font-bold lg:text-[32px] text-white lg:leading-9 pb-2 se:mt-[0px] h-[154px] ${language === 'es' && 'md:min-h-[210px]'} md:min-h-[180px]`}>
                                         {currentSlide === 0 && (
                                             <>
                                                 {languageData?.authSlide1}
 
                                                 <div className=' leading-6 mt-2'>
-                                                    <p className='text-[14px] lg:text-[20px] lg:mt-1 font-bold'>{languageData?.authSlide1li1}</p>
+                                                    <p className='text-[16px] lg:text-[20px] lg:mt-1 font-bold'>{languageData?.authSlide1li1}</p>
 
-                                                    <p className='text-[14px] lg:text-[20px] lg:mt-1 font-bold'>{languageData?.authSlide1li2}</p>
+                                                    <p className='text-[16px] lg:text-[20px] lg:mt-1 font-bold'>{languageData?.authSlide1li2}</p>
 
-                                                    <p className='text-[14px] lg:text-[20px] lg:mt-1 font-bold'>{languageData?.authSlide1li3}</p>
+                                                    <p className='text-[16px] lg:text-[20px] lg:mt-1 font-bold'>{languageData?.authSlide1li3}</p>
                                                 </div>
                                             </>
                                         )}
