@@ -16,6 +16,8 @@ import PromotionTerms from './Pages/PromotionTerms';
 import AffiliationTerms from './Pages/AffiliationTerms';
 import moengage from '@moengage/web-sdk';
 import Admin from './Pages/Admin';
+import Referral from './Pages/Referral';
+import { Helmet } from 'react-helmet';
 
 function App() {
 
@@ -45,7 +47,7 @@ function App() {
     }
   }, []);
 
-  
+
 
   if (params.get('email')) {
     window.localStorage.setItem('email', params.get('email'))
@@ -127,6 +129,17 @@ function App() {
             <Route path="/promotion-terms" element={<PromotionTerms />} />
             <Route path="/affiliation-terms" element={<AffiliationTerms />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="/testroute" element={
+              <>
+                <Helmet>
+                  <title>Route 1</title>
+                  <meta name="description" content="Description for Route 1" />
+                  <meta property="og:image" content="https://i.pinimg.com/736x/6c/f0/89/6cf089effa29ceeb8e7bbe4df6d47d40.jpg" />
+                  {/* Додайте інші мета-теги за потреби */}
+                </Helmet>
+                <Referral />
+              </>
+            } />
           </Routes>
         </BrowserRouter>
       </DesignProvider>
