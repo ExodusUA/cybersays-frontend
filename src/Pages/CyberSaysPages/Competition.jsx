@@ -79,7 +79,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
 
             <div className='pt-[57px]  md:pt-[80px] mac-center:!pt-0 px-4 max-w-[1170px] m-auto' >
                 <img className='se:w-[170px]  w-[170px] iphone:w-[240px] double-img-width md:w-[320px] m-auto se:mb-[-3%] iphone:mb-[-13px] lg:mb-[-10px]  relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
-                <div className=' rounded-[14px] text-center se:py-1 mac:!py-0 px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto  competitionSE iphone:mt-[40px] contentForCompetitions md:mt-[60px]'>
+                <div className=' rounded-[14px] text-center se:py-1 mac:!py-0 px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto  competitionSE iphone2:mt-[40px] contentForCompetitions md:mt-[60px]'>
                     <p className={`text-center  ${language === 'es' && 'text-[14px]'} mb-2 text-[16px] lg:text-[30px]  font-semibold flex items-center gap-2 justify-center`}>{languageData?.competitionTitle}
                         <span className='saira competitionPlaceBG px-2 rounded-[8px] lg:rounded-[12px] border-[2px] border-[#FCBC1B] text-[12px] lg:text-[24px]'>$69</span>
                         {languageData?.competitionTitle2}</p>

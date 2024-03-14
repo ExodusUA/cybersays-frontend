@@ -61,7 +61,7 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded, open, ma
                 {
                     data?.taskBlocks?.map((task, key) => {
                         return <div key={key} className='flex  items-center se:mt-1 mt-2 relative '>
-                            <img className={`w-[95%] sm:w-[555px] ${design === '0' ? 'min-h-[86px]' : 'min-h-[100px] iphone:min-h-[110px]'}  sm:min-h-[145px] m-auto relative `} src={design === '0' ? task?.taskImage : task?.newTaskImage} alt="Task Icon" />
+                            <img className={`w-[98%] sm:w-[555px] ${design === '0' ? 'min-h-[86px]' : 'min-h-[100px] iphone:min-h-[110px]'}  sm:min-h-[145px] m-auto relative `} src={design === '0' ? task?.taskImage : task?.newTaskImage} alt="Task Icon" />
                             <p className={`saira text-[10px] iphone:text-[12px] sm:text-[14px] text-black font-medium absolute text-left leading-[12px] sm:leading-[20px] ${index === 1 ? `${design === '0' ? 'w-[150px] sm:w-[265px] top-[15px] iphone:top-[20px] sm:top-[25px] right-[35px] iphone:right-[55px] sm:right-[45px]' : 'w-[180px] sm:w-[305px] top-[24px] iphone:top-[20px] sm:top-[30px] right-[20px] iphone:right-[33px] sm:right-[25px] text-white'}` :
                                 index === 2 ? `${design === '0' ? 'w-[140px] sm:w-[235px]  top-[15px] sm:top-[25px] left-[37px] iphone:left-[50px] sm:left-[55px]' : 'w-[200px] sm:w-[330px]  top-[25px] iphone:top-[25px] sm:top-[35px] left-[32px] iphone:left-[50px] sm:left-[45px] text-white'}` :
                                     index === 3 ? `${design === '0' ? 'w-[160px] sm:w-[270px] top-[15px] sm:top-[25px] right-[40px] iphone:right-[60px] sm:right-[65px]' : 'w-[205px] sm:w-[350px] top-[22px] iphone:top-[20px] sm:top-[30px] right-[40px] iphone:right-[50px] sm:right-[55px] text-white'}` :
@@ -72,7 +72,7 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded, open, ma
                 }
             </div>
 
-            <div className='flex justify-center mt-[-20px] md:mt-[-30px] relative z-50 w-[95%] sm:max-w-[555px] m-auto'>
+            <div className='flex justify-center mt-[-20px] md:mt-[-30px] relative z-50 w-[98%] sm:max-w-[555px] m-auto'>
                 <Link className='w-full' to={imLiveURL} target='_blank'><button className={`w-full bg-white  border-[2px] border-[#FFED63]  text-black text-[18px] saira font-semibold py-1 sm:py-2 ${design === '0' ? ' se:py-[6px] py-2 md:py-2 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{data?.taskButton}</button></Link>
             </div>
             <p onClick={e => {

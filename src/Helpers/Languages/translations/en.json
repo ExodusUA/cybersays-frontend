@@ -30,7 +30,7 @@
                     "taskText": "Enjoy ImLive, be treated like a KING 👑 - and fulfill your wildest fantasies!"
                 }
             ],
-            "taskButton": "1\/3: Register on ImLive!"
+            "taskButton": "1\/3: Register on ImLive 🎉"
         },
         "task2": {
             "taskTitle": "Deposit",
@@ -44,7 +44,7 @@
                     "taskText": "Deposit $5... ImLive will double the credit. CyberSays will double the dollars!"
                 }
             ],
-            "taskButton": "2\/3: Deposit $5, get 10 credits! "
+            "taskButton": "2\/3: Deposit $5, get 10 credits 💸"
         },
         "task3": {
             "taskTitle": "Spend",
@@ -58,7 +58,7 @@
                     "taskText": "Spend your 10 ImLive credits, be treated like a king, and get $10 cash when you’re done!"
                 }
             ],
-            "taskButton": "3\/3: Spend all credits, get $10 back!"
+            "taskButton": "3\/3: Spend all credits, get $10 back 🤑"
         },
         "task4": {
             "taskTitle": "Withdraw your cash 🤑",
@@ -550,7 +550,7 @@
     "confirmLiveDesc": "Are you sure you want to Withdraw with ImLive",
     "earnedModalTitleBR": "Latest R$ earnings",
     "modalMenuLink14": "Read More",
-    "raffleSubTitleLink": "What’s the Vegas Promotion?",
+    "raffleSubTitleLink": "How can I earn Vegas tickets?",
     "competitionTitle": "Win the ",
     "competitionTitle2": " Daily Competition!",
     "leaderboardsNotUser": "There are no more users",

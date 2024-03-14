@@ -67,7 +67,7 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                 </div>
                 <img className='se:w-[170px]  w-[170px] iphone:w-[240px] mac2:w-[170px] md:w-[320px] m-auto se:mb-[0px] iphone:mb-[-10px]  relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
                 <div>
-                    <div className='lg:flex justify-between items-end md:items-center mt-0 homepageSE iphone:mt-[30px] contentHomepage md:mt-[70px]'>
+                    <div className='lg:flex justify-between items-end md:items-center mt-0 homepageSE iphone2:mt-[30px] contentHomepage md:mt-[70px]'>
                         <div className='w-full lg:hidden flex mb-2 items-center'>
                             <div className='buttonPrevText w-[60px]' onClick={e => {
                                 mixpanel.track('arrow_text_click', {
