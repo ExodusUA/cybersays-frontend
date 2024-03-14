@@ -23,7 +23,7 @@ function Admin() {
     }
 */
     fetchPaxumTransactions()
-    fetchTransactionsD24()
+    // fetchTransactionsD24()
     fetchXoxodayTransaction()
     fetchRoyalPageTransactions()
   }, []);
@@ -71,6 +71,8 @@ function Admin() {
 
   const fetchXoxodayTransaction = async () => {
     const res = await getXoxodayTransaction()
+
+    if (res.data === null) return
 
     res.data = res.data.map((transaction) => {
       transaction.type = 'Xoxoday'
