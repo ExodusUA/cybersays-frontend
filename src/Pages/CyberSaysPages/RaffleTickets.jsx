@@ -290,7 +290,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                 </p>
                 */}
                 <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
-                    <TimeCounter left={'m-auto'} leftTitle={'text-center'} title={languageData?.timeCounterTitle} languageData={languageData} block={'hidden'} />
+                    <TimeCounter left={'m-auto'} leftTitle={'text-center'} title={languageData?.timeCounterTitle} languageData={languageData} block={'block'} />
                 </div>
             </div>
 

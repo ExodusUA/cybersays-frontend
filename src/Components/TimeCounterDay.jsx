@@ -53,7 +53,7 @@ function TimeCounterDay({ languageData, hidden, title, left, leftTitle, block, s
                     </div>
                 </div>
             </div>
-            <div className={`flex justify-center ${block} mt-[-6px]`}>
+            <div className={`flex justify-center ${block} mt-[-10px]`}>
                 <Link onClick={e => {
                     mixpanel.track('daily_competition_terms', {
                         distinct_id: user?.id,
@@ -77,7 +77,7 @@ function TimeCounterDay({ languageData, hidden, title, left, leftTitle, block, s
                         language: language,
                         number_referrals: user?.referral_id ? user?.referral_id.length : 0,
                     })
-                }} to='/contest-terms' target='_blank' > <p className={`text-center text-[12px] sm:text-[14px] saira font-semibold underline cursor-pointer ${design === '0' ? 'text-[#FFED63]' : 'gradient-link '}`}>{languageData?.timeCounterLink}</p></Link>
+                }} to='/contest-terms' target='_blank' > <p className={`text-center text-[8px] sm:text-[12px] saira font-semibold underline cursor-pointer ${design === '0' ? 'text-[#FFED63]' : 'gradient-link '}`}>{languageData?.timeCounterLink}</p></Link>
             </div>
         </div>
     );

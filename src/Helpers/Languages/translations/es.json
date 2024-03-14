@@ -23,40 +23,39 @@
             "taskTitleOpen": "Registrarse en ImLive 🎉",
             "taskBlocks": [
                 {
-                    "taskImage": "images/bg-mobile-Task1.png",
-                    "newTaskImage": "images/newTask/bg_task1.png",
-                    "taskImageDesk": "images/BgTaskDesk1.png",
-                    "newTaskImageDesk": "images/BgNewTaskDesk1.png",
-                    "taskText": "Disfruta de ImLive, recibe el trato de la REALEZA 👑, ¡y cumple tus fantasías más salvajes!"
-                    
+                    "taskImage": "imagenes\/bg-movil-Tarea1.png",
+                    "taskText": "Disfruta de ImLive, recibe el trato de la REALEZA 👑, ¡y cumple tus fantasías más salvajes!",
+                    "newTaskImage": "images\/newTask\/bg_task1.png",
+                    "taskImageDesk": "images\/BgTaskDesk1.png",
+                    "newTaskImageDesk": "images\/BgNewTaskDesk1.png"
                 }
             ],
-            "taskButton": "1\/3 ¡Registrarse!"
+            "taskButton": "1\/4 ¡Registrarse!"
         },
         "task2": {
             "taskTitle": "Depositar",
             "taskTitleOpen": "Introducción de un Rey a ImLive: deposita $5, recibe $10 de vuelta y:",
             "taskBlocks": [
                 {
-                    "taskImage": "images/bg-mobile-Task2.png",
-                    "newTaskImage": "images/newTask/bg_task2.png",
-                    "taskImageDesk": "images/BgTaskDesk2.png",
-                    "newTaskImageDesk": "images/BgNewTaskDesk2.png",
-                    "taskText": "Deposita $5... ImLive duplicará el crédito. ¡CyberSays duplicará los dólares!"
+                    "taskImage": "images\/bg-mobile-Task2.png",
+                    "taskText": "Deposita $5... ImLive duplicará el crédito. ¡CyberSays duplicará los dólares!",
+                    "newTaskImage": "images\/newTask\/bg_task2.png",
+                    "taskImageDesk": "images\/BgTaskDesk2.png",
+                    "newTaskImageDesk": "images\/BgNewTaskDesk2.png"
                 }
             ],
-            "taskButton": "2\/3 ¡Depositar!"
+            "taskButton": "2\/4 ¡Depositar!"
         },
         "task3": {
             "taskTitle": "Gastar",
             "taskTitleOpen": "Gasta tus créditos y duplica tu dinero:",
             "taskBlocks": [
                 {
-                    "taskImage": "images/bg-mobile-Task3.png",
-                    "newTaskImage": "images/newTask/bg_task3.png",
-                    "taskImageDesk": "images/BgTaskDesk3.png",
-                    "newTaskImageDesk": "images/BgNewTaskDesk3.png",
-                    "taskText": "Gasta tus 10 créditos en ImLive, recibe el trato de la realeza y obtén $10 en efectivo al terminar."
+                    "taskImage": "images\/bg-mobile-Task3.png",
+                    "taskText": "Gasta tus 10 créditos en ImLive, recibe el trato de la realeza y obtén $10 en efectivo al terminar.",
+                    "newTaskImage": "images\/newTask\/bg_task3.png",
+                    "taskImageDesk": "images\/BgTaskDesk3.png",
+                    "newTaskImageDesk": "images\/BgNewTaskDesk3.png"
                 }
             ],
             "taskButton": "Gastar"
@@ -68,7 +67,9 @@
                 {
                     "taskImage": "images\/bg-mobile-Task4.png",
                     "taskText": "ImLive duplica tu crédito, nosotros duplicamos tu dinero: ¡es un beneficio mutuo para ti con $10 adicionales en tu billetera!",
-                    "newTaskImage": "images\/newTask\/bg_task4.png"
+                    "newTaskImage": "images\/newTask\/bg_task4.png",
+                    "taskImageDesk": "images\/BgTaskDesk1.png",
+                    "newTaskImageDesk": "images\/BgTaskDesk1.png"
                 }
             ],
             "taskButton": "Obtener $10 de CyberSays"
@@ -80,8 +81,8 @@
     "homepageTitle4": "Duplica tu dinero y gana el fin de semana en Las Vegas!",
     "homepageTitle5": "Recibe el trato de la realeza en ImLive y gana el fin de semana en Las Vegas",
     "homepageBtn1": "Duplica Tu Dinero 🤑",
-    "homepageBtn2": "2\/3: Deposita para obtener un reembolso del 200% 🤑",
-    "homepageBtn3": "3\/3: Gasta para obtener un reembolso del 200% 🤑",
+    "homepageBtn2": "2\/4: Deposita para obtener un reembolso del 200% 🤑",
+    "homepageBtn3": "3\/4: Gasta para obtener un reembolso del 200% 🤑",
     "homepageBtn4": "Gana el fin de semana en Las Vegas 💃",
     "timeCounterTitle": "Gana un increíble viaje a Las Vegas que el dinero no puede comprar",
     "timeCounterDays": "Días",
@@ -117,7 +118,7 @@
     "doublePaid": "Elige tu forma de recibir el pago",
     "refferalsTitle": "Comparte con tus amigos para ser la persona que los hace ganar y llevarlos a Las Vegas",
     "refferalsLink1": "Más información",
-    "refferalsSubtitle": "Elige texto e imagen o mantenlo simple sin nada más",
+    "refferalsSubtitle": "Selecciona un texto e imagen o simplemente comparte tu enlace de referido con amigos",
     "refferalsImage": "Elige una imagen",
     "refferalsLink2": "Elige una experiencia personalizada",
     "refferalsSome": "Añade algunas fotos",
@@ -125,6 +126,7 @@
     "refferalsInfo1": "Serás la persona que envía a tus amigos a duplicar su dinero y divertirse 👬",
     "refferalsInfo2": "Por cada amigo que duplique el dinero, recibirás 30 tickets de sorteo y $1 🃏",
     "refferalsInfo3": "Si tus amigos duplican su dinero, puedes llevarlos a Las Vegas si ganas el sorteo, y ellos pueden llevarte si ganan y aceptaste la oferta de duplicar el dinero",
+    "competitionTitle": "La ",
     "competitionTitleSpan": "competencia diaria",
     "competitionPoints": "Puntos",
     "competitionSubtitle": "Los 3 primeros lugares reciben $69 cada uno, del 4 al 10 reciben $6.90 cada uno",
@@ -216,7 +218,7 @@
     "tourLongToggle": "Versión larga",
     "tourShortBtn": "Comparte el tour",
     "tourLongBtn": "Comparte el tour",
-    "authSlide1": "“Mi deseo es tu comando - deja que la emoción te invada.”",
+    "authSlide1": "CyberSays: Duplica Tu Dinero, Duplica tus Ganancias",
     "authSlide2": "Tu Dinero, Tus Reglas: Elige Cómo Quieres Cobrar",
     "authSlide3": "Completa una Oferta de $5 y Mira Cómo Tus Ganancias se Disparan",
     "authSlide4": "Duplica Tu Dinero: ¡Gana $10 al instante y solicítalo ahora!",
@@ -242,9 +244,9 @@
     "aboutModalDesc4": "CyberSays - donde cada clic trae una recompensa, y cada recompensa trae una sonrisa (rentable)",
     "settingsBtn": "Aplicar cambios",
     "settingsBtnDone": "¡Guardado!",
-    "authSlide1li1": "1. Duplica Tu Dinero",
-    "authSlide1li2": "2. Ten la oportunidad de ganar la promoción de Las Vegas",
-    "authSlide1li3": "3. Gana el concurso diario de 69$",
+    "authSlide1li1": "1 Duplica Tu Dinero",
+    "authSlide1li2": "2 Ten la oportunidad de ganar la promoción de Las Vegas",
+    "authSlide1li3": "3 Gana el concurso diario de 69$",
     "authSlide2li1": "Deposita 5$ en el sitio de nuestro colaborador, disfruta utilizándolos, ¡y duplícalos para obtener una devolución inmediata de 10$ de CyberSays!",
     "authSlide3li1": "Consigue entradas para Las Vegas para tener la oportunidad de ganar nuestra increíble promoción de Las Vegas: ¡un fin de semana de tus sueños que nunca olvidarás!",
     "authSlide4li1": "Gana puntos participando más en CyberSays. ¡Termina primero en nuestro top 10 para ganar 69$, todos los días! ",
@@ -272,12 +274,12 @@
     "winPointEndLink": "Ir a los términos completos de la Promoción Vegas",
     "rulesTitle": "🎉 ¡Bienvenidos al concurso de CyberSays! 🎉",
     "rulesSubTitle": "A partir de [fill in date] de 2024 y a diario, únete a nosotros en el Concurso CyberSays.",
-    "rulesPoint1Title": "Para participar:",
-    "rulesPoint1li1": "Inicia sesión en ImLive.com",
-    "rulesPoint1li2": "Compre 5 créditos y reciba una bonificación de 5 más",
-    "rulesPoint2Title": "Formas de obtener recompensas:",
+    "rulesPoint1Title": "¿Cómo gano el concurso diario?",
+    "rulesPoint1li1": "Consigue tantos Puntos de Competición como puedas recomendando a tus amigos y haciendo que completen la oferta \"Duplica tu dinero\" o comprando más créditos Imlive a partir de la segunda compra.",
+    "rulesPoint1li2": "Todos los días, los puntos de competición se reinician a las 00:00 UTC en la zona horaria.",
+    "rulesPoint2Title": "¿Cuáles son las recompensas?",
     "rulesPoint2li1": "Gasta los 10 créditos en ImLive y recibe 10 USD en CyberSays",
-    "rulesPoint2li2": "$69 para el 1er lugar y $6.90 del 2do al 10mo ¡diariamente!",
+    "rulesPoint2li2": "$69 USD para el 1.º y 2.º lugar y $6.90 USD para el 3.º al 10.º lugar cada uno, ¡todos los días!",
     "rulesPoint2li3": "1 USD + 30 entradas a Las Vegas + 10 puntos por cada persona que complete la oferta.",
     "rulesPoint2li4": "1 Ticket Vegas + 0.5 Puntos por cada crédito comprado después de la primera compra en ImLive.com",
     "rulesEnd": "¡Mucha suerte a todos los participantes en el Concurso CyberSays!",
@@ -409,10 +411,8 @@
         {
             "question": "¿Cómo puedo seguir mis recomendaciones y recompensas en tiempo real?",
             "answers": [
-                " para supervisar tus recomendaciones y recompensas a medida que se producen."
-            ],
-            "link": "#",
-            "linkName": "Haz clic aquí"
+                "Haz clic aquí para supervisar tus recomendaciones y recompensas a medida que se producen."
+            ]
         },
         {
             "question": "¿Por qué no veo mi depósito en ImLive incluso después de depositar?",
@@ -423,10 +423,8 @@
         {
             "question": "¿Con quién puedo ponerme en contacto si tengo problemas con mi cuenta o mis premios?",
             "answers": [
-                " para acceder a nuestro chat y recibir la ayuda que necesites."
-            ],
-            "link": "#",
-            "linkName": "Haz clic aquí"
+                "Haz clic aquí para acceder a nuestro chat y recibir la ayuda que necesites."
+            ]
         },
         {
             "question": "¿Cuáles son los términos de servicio?",
@@ -492,13 +490,11 @@
     "winTicketBtn": "Ir a la página Duplica Tu Dinero",
     "winTicketEnd": "¡Buena suerte!",
     "winTicketLink": "Ir a los términos completos de la Promoción Vegas",
-    "leaderSheetYou": "Tu lugar hoy:",
+    "leaderSheetYou": "Tú:",
     "leaderSheetPoints": "Puntos de competencia",
     "leaderSheetFriends": "Amigos referidos",
-    "leaderSheetDayAgo": "2 days ago",
-
     "raffleRulesDescSpan": "Más información.",
-    "competitionOverBtn": "Consigue tantos puntos como puedas para ganar la competición diaria de 69$:",
+    "competitionOverBtn": "Consigue tantos puntos como puedas para ganar la competición diaria de 100$:",
     "infoOfferTitle": "¿Qué obtengo cuando recomiendo a un amigo que completa la oferta \"Duplica Tu Dinero\"?",
     "infoOfferPoint1": "Un amigo que te agradecerá que le hagas dinero gratis.",
     "infoOfferPoint2": "1$ puedes retirarlo en efectivo inmediatamente",
@@ -533,7 +529,7 @@
     "doubleBtnTitle": "CyberSays te ordena que...",
     "doubleBtnAway": "minutos de distancia",
     "doubleBtnFrom": "del retiro",
-    "doubleCompleteTitle": "¡Felicidades, tienes 10$ dólares esperándote, ve a buscarlo y retíralo!",
+    "doubleCompleteTitle": "¡Felicidades! Tus $10 te esperan en tu",
     "doubleCompleteTitleSpan": "¡Buzón de entrada!",
     "doubleCompleteSubTitle": "Sé el rey de tus amigos recomendándolos a CyberSays y te lo agradecerán por siempre... 👑",
     "doubleCompleteBtn": "Compartir",
@@ -550,56 +546,6 @@
     "promoModalLink": "No, gracias",
     "promoImLiveDesc": "No seas tonto toma esto consigue +30% 65 reales en lugar de 50",
     "confirmLiveDesc": "¿Estás seguro de querer Retirar con ImLive?",
-
-    "earnedModalTitleBR": "Latest R$ earnings",
-    "modalMenuLink14": "Leer Más",
-    "raffleSubTitleLink": "What’s the Vegas Promotion?",
-    "competitionTitle": "Win the 69$ Daily Competition!",
-    "leaderboardsNotUser": "There are no more users",
-    "NamePage1": "Página de inicio",
-    "NamePage2": "Duplica tu dinero",
-    "NamePage3": "Fin de Semana en Vegas",
-    "NamePage4": "Competencia",
-    "NamePage5": "Mis referidos",
-    "withdrawGiftTitle": "Gift Card / Cash",
-    "doubleBtnEndTask": "Win the Vegas weekend💃",
-    "paxumFlowTitle": "You’ll get a cash voucher to an email of your choice:",
-    "paxumFlowInput": "Enter your Paxum e-mail",
-    "paxumFlowPlaceholder": "Enter your Paxum e-mail",
-    "paxumFlowBtn": "Continuar",
-    "paxumFlowLink1": "Don’t have Paxum account?",
-    "paxumFlowLink2": "Create it here",
-    "visaFlowTitle": "You’ll get a cash voucher to an email of your choice:",
-    "visaFlowSubTitle": "Firts withdraw has a minimun of $25 in this type of payment",
-    "visaFlowSelectName1": "Transfer to",
-    "visaFlowSelect1": "Prepaid Virtual Debit Card",
-    "visaFlowInput": "Enter your Paxum e-mail",
-    "visaFlowPlaceholder": "Enter your Paxum e-mail",
-    "visaFlowSelectName2": "Card type",
-    "visaFlowSelect2": "Visa USD",
-    "visaFlowSelectName3": "Value",
-    "visaFlowSelect3": "Visa Prepaid Card",
-    "visaFlowBtn": "Continuar",
-    "aboutModalDesc5": "CyberSays is a cutting-edge global social referral platform that motivates its community with rewards like contests, prizes, and cashback for interacting with high-quality partners in various sectors.",
-    "aboutModalDesc6": "Drawing inspiration from the children's game 'Simon Says'; CyberSays also includes gamification elements, ending in amazing rewards and unlimited fun for its users.",
-    "loginTermsTitle": "Al registrarte en CyberSays declaras que tienes 18 años o más y que estás de acuerdo con nuestro",
-    "loginTermsLink": "Terms & Services",
-    "homepageMessageTitle": "Mi deseo es tu mandato",
-    "SPEITitle": "You’ll get a cash voucher to an email of your choice:",
-    "SPEIInput1": "Nombre",
-    "SPEIInput2": "Apellido",
-    "SPEISelect1": "Tipo de Documento",
-    "SPEIInput3": "Documento",
-    "SPEIInput4": "Correo electrónico",
-    "PSETitle": "You’ll get a cash voucher to an email of your choice:",
-    "PSEInput1": "Email",
-    "PSEInput2": "Nombre",
-    "PSEInput3": "National identity card (CC)",
-    "ServiPagTitle": "You’ll get a cash voucher to an email of your choice:",
-    "ServiPagInput1": "Email",
-    "ServiPagInput2": "Nombre",
-    "ServiPagInput3": "National identity card (RUT)",
-
     "TransactionCompetitionWinner": "¡Terminando en la competencia diaria de 69$!",
     "modalMenuLink15": "Únete como influencer",
     "modalMenuLink16": "Programa de socios",
@@ -621,7 +567,7 @@
     "collaborateBtn": "Continuar",
     "paxumFlowCheckbox": "Sólo me pagarán con Paxum si tengo una cuenta válida.",
     "toolInfolef4": "¿Nuestro boleto no ganó para Las Vegas? ¡Aún puedes ir!",
-    "toolInfoRight4": "Si tu amigo recomendado gana la promoción, podrá elegirte para ir a Las Vegas.",
+    "toolInfoRight4": "Si un amigo que has recomendado o tu recomendador han ganado la promoción y has completado la oferta, ¡podrán elegirte para ir a Las Vegas!",
     "withdrawConfirmPaxum": "Recibimos tu solicitud. Nuestro equipo responderá una vez que el retiro sea exitoso",
     "withdrawBanner": "Obtén +40%",
     "withdrawBannerSpan": "de tu dinero con ImLive.",
