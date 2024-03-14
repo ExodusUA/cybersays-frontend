@@ -13,17 +13,6 @@ function Referral() {
 
     return (
         <div className='text-black'>
-
-            <Helmet>
-                <title>Referral</title>
-                <meta name="description"
-                    content='Referral' />
-                <meta property="og:title" content='Referral' />
-                <meta property="og:image" content={imagePath} />
-                <meta property="og:description"
-                    content='Referral' />
-            </Helmet>
-
             Referrals
         </div>
     )
