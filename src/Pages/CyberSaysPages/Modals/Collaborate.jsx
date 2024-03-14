@@ -74,7 +74,7 @@ function Collaborate({ user, setOpen, languageData }) {
                                 <div className='flex justify-center'>
                                     <input className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder={languageData?.collaborateInput1} />
                                 </div>
-                                <p className='saira text-[12px] font-medium my-1'>{languageData?.collaboratePhone}Phone</p>
+                                <p className='saira text-[12px] font-medium my-1'>{languageData?.collaboratePhone}</p>
                                 <PhoneInput
                                     className="w-full  max-w-[600px] text-[16px] saira font-semibold  text-black outline-none rounded-[12px]"
                                     style={{ width: '100%', padding: '5px', backgroundColor: '#F5F5F5' }}

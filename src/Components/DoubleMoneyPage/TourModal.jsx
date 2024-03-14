@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import close from '../../images/CyberSaysPage/closeMenu.png'
-import video1 from '../../images/NewDesign/video/video1.mp4'
-import video2 from '../../images/NewDesign/video/video2.mp4'
-import video3 from '../../images/NewDesign/video/video3.mp4'
+import video1 from '../../images/NewDesign/video/video1.gif'
+import video2 from '../../images/NewDesign/video/video2.gif'
+import video3 from '../../images/NewDesign/video/video3.gif'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
@@ -122,9 +122,7 @@ function TourModal({ setOpen, languageData, user }) {
                     {dataShort.map((item, index) => (
                         <SwiperSlide className='px-4' key={item}>
                             <p className=' text-[16px] md:text-[22px] font-semibold text-center'>{item.title}</p>
-                            <video loop autoPlay className='w-[375px] h-[300px] object-cover md:w-full m-auto mt-3 rounded-[12px]'>
-                                <source src={item.video} type="video/mp4" />
-                            </video>
+                            <img className='w-[375px] h-[300px] object-cover md:w-full m-auto mt-3 rounded-[12px]' src={item.video} alt="" />
                             <p className='saira font-medium text-center text-[14px]  lg:mt-4'>{item.descShort}</p>
 
                         </SwiperSlide>

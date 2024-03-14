@@ -164,8 +164,8 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                                         {languageData?.raffleTitle1}
                                     </p>
                                     <div className='flex justify-around sm:justify-center'>
-                                        <p onClick={e => setTourModal(true)} className={`${design === '0' ? 'bg-[#FFED63]' : 'gradient-tourToggle'} px-2 py-[2px] lg:px-4 rounded-[14px] text-[#1E1E1E] saira text-[12px] lg:text-[14px] font-semibold cursor-pointer mt-2 `}>{languageData?.raffleSubTitleLink2}</p>
-                                        <p onClick={e => setWinModal(true)} className={`${design === '0' ? 'bg-[#FFED63]' : 'gradient-tourToggle'} px-2 py-[2px] lg:px-4 rounded-[14px] text-[#1E1E1E] saira text-[12px] lg:text-[14px] font-semibold cursor-pointer mt-2 sm:mr-6`}>{languageData?.raffleSubTitleLink}</p>
+                                        <p onClick={e => setTourModal(true)} className={`${design === '0' ? 'bg-[#FFED63]' : 'gradient-tourToggle'} px-2 py-[2px] lg:px-4 rounded-[14px] text-[#1E1E1E] saira text-[12px] lg:text-[14px] font-semibold cursor-pointer mt-2 sm:mr-6`}>{languageData?.raffleSubTitleLink2}</p>
+                                        <p onClick={e => setWinModal(true)} className={`${design === '0' ? 'bg-[#FFED63]' : 'gradient-tourToggle'} px-2 py-[2px] lg:px-4 rounded-[14px] text-[#1E1E1E] saira text-[12px] lg:text-[14px] font-semibold cursor-pointer mt-2 `}>{languageData?.raffleSubTitleLink}</p>
                                     </div>
                                 </div>
                                 {/*

@@ -18,7 +18,6 @@ function About({ user, setOpen, languageData }) {
                     <p className='text-justify saira text-[16px]'>{languageData?.aboutModalDesc5}</p>
                     <p className='text-justify saira text-[16px]'>{languageData?.aboutModalDesc6}</p>
 
-                    <p className='text-justify saira text-[16px]'>{languageData?.aboutModalDesc1}</p>
                     <p className='text-justify saira text-[16px]'>{languageData?.aboutModalDesc2}</p>
                     <p className='text-justify saira text-[16px]'>{languageData?.aboutModalDesc3}</p>
                     <p className='text-justify saira text-[16px]'>{languageData?.aboutModalDesc4}</p>
