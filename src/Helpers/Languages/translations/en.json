@@ -1,7 +1,7 @@
 {
     "siteTitle": "CyberSays",
     "metaDescription": "Enjoy and earn in TreatCoin through CyberSays!",
-    "HeaderTitle": "CyberSays... <span class='text-gradient'>Double your money!</span>",
+    "HeaderTitle": "CyberSays... <span class='text-gradient'>Double your money!<\/span>",
     "HeaderSubTitle": "Buy, enjoy, X2 your money!",
     "HeaderButton": "Start now",
     "LatestOffers": "Latest Offers",
@@ -23,52 +23,52 @@
             "taskTitleOpen": "Register to ImLive  🎉",
             "taskBlocks": [
                 {
-                    "taskImage": "images/bg-mobile-Task1.png",
-                    "newTaskImage": "images/newTask/bg_task1.png",
-                    "taskImageDesk": "images/BgTaskDesk1.png",
-                    "newTaskImageDesk": "images/BgNewTaskDesk1.png",
+                    "taskImage": "images\/bg-mobile-Task1.png",
+                    "newTaskImage": "images\/newTask\/bg_task1.png",
+                    "taskImageDesk": "images\/BgTaskDesk1.png",
+                    "newTaskImageDesk": "images\/BgNewTaskDesk1.png",
                     "taskText": "Enjoy ImLive, be treated like a KING 👑 - and fulfill your wildest fantasies!"
                 }
             ],
-            "taskButton": "1/3: Register on ImLive!"
+            "taskButton": "1\/3: Register on ImLive!"
         },
         "task2": {
             "taskTitle": "Deposit",
             "taskTitleOpen": "Royal welcome to ImLive: buy 5$, get 10 credits",
             "taskBlocks": [
                 {
-                    "taskImage": "images/bg-mobile-Task2.png",
-                    "newTaskImage": "images/newTask/bg_task2.png",
-                    "taskImageDesk": "images/BgTaskDesk2.png",
-                    "newTaskImageDesk": "images/BgNewTaskDesk2.png",
+                    "taskImage": "images\/bg-mobile-Task2.png",
+                    "newTaskImage": "images\/newTask\/bg_task2.png",
+                    "taskImageDesk": "images\/BgTaskDesk2.png",
+                    "newTaskImageDesk": "images\/BgNewTaskDesk2.png",
                     "taskText": "Deposit $5... ImLive will double the credit. CyberSays will double the dollars!"
                 }
             ],
-            "taskButton": "2/3: Deposit $5, get 10 credits! "
+            "taskButton": "2\/3: Deposit $5, get 10 credits! "
         },
         "task3": {
             "taskTitle": "Spend",
             "taskTitleOpen": "Use all credits to get 10$ CashBack from CyberSays",
             "taskBlocks": [
                 {
-                    "taskImage": "images/bg-mobile-Task3.png",
-                    "newTaskImage": "images/newTask/bg_task3.png",
-                    "taskImageDesk": "images/BgTaskDesk3.png",
-                    "newTaskImageDesk": "images/BgNewTaskDesk3.png",
+                    "taskImage": "images\/bg-mobile-Task3.png",
+                    "newTaskImage": "images\/newTask\/bg_task3.png",
+                    "taskImageDesk": "images\/BgTaskDesk3.png",
+                    "newTaskImageDesk": "images\/BgNewTaskDesk3.png",
                     "taskText": "Spend your 10 ImLive credits, be treated like a king, and get $10 cash when you’re done!"
                 }
             ],
-            "taskButton": "3/3: Spend all credits, get $10 back!"
+            "taskButton": "3\/3: Spend all credits, get $10 back!"
         },
         "task4": {
             "taskTitle": "Withdraw your cash 🤑",
             "taskTitleOpen": "Withdraw your cash 🤑",
             "taskBlocks": [
                 {
-                    "taskImage": "images/bg-mobile-Task4.png",
-                    "newTaskImage": "images/newTask/bg_task4.png",
-                    "taskImageDesk": "images/BgTaskDesk1.png",
-                    "newTaskImageDesk": "images/BgTaskDesk1.png",
+                    "taskImage": "images\/bg-mobile-Task4.png",
+                    "newTaskImage": "images\/newTask\/bg_task4.png",
+                    "taskImageDesk": "images\/BgTaskDesk1.png",
+                    "newTaskImageDesk": "images\/BgTaskDesk1.png",
                     "taskText": "ImLive doubles your credit, we double your money – it's a win-win for you with an extra $10 in your wallet!"
                 }
             ],
@@ -81,8 +81,8 @@
     "homepageTitle4": "Double your money and have the chance to win the Vegas weekend!",
     "homepageTitle5": "Get the king treatment in ImLive and win the Vegas weekend",
     "homepageBtn1": "Double your money ",
-    "homepageBtn2": "2/3: Deposit for 200% Cashback",
-    "homepageBtn3": "3/3: Spend for 200% Cashback 🤑",
+    "homepageBtn2": "2\/3: Deposit for 200% Cashback",
+    "homepageBtn3": "3\/3: Spend for 200% Cashback 🤑",
     "homepageBtn4": "Win the Vegas Weekend 💃",
     "timeCounterTitle": "Countdown to Vegas Promotion:",
     "timeCounterTitle2": "Countdown to day’s end:",
@@ -184,7 +184,7 @@
     "transactionsSection3Left2": "to Pix",
     "transactionsSection3Right": "Added to Balance",
     "transactionsSection4Left": "Withdraw money",
-    "transactionsSection4Left2": "/ Pix",
+    "transactionsSection4Left2": "\/ Pix",
     "transactionsSection4Right": "Withdrawn",
     "ticketsTitle": "My Tickets & Points",
     "ticketsSection1Left": "Your friend doubled their money",
@@ -244,17 +244,17 @@
     "authSlide4": "3. Win the 69$ daily competition",
     "authSlide4li1": "Earn points by engaging further in CyberSays. Finish first in our top 10 to win 69$, daily! ",
     "authEnterEmail": "Enter your e-mail",
-    "authContinue": "Join/Login",
-    "authDiscord": "Join/Login with",
-    "authGoogle": "Join/Login with",
-    "authFacebook": "Join/Login with",
+    "authContinue": "Join\/Login",
+    "authDiscord": "Join\/Login with",
+    "authGoogle": "Join\/Login with",
+    "authFacebook": "Join\/Login with",
     "verifyCodeTitle": "Verify your account",
     "verifyCodePlaceholder": "Enter verification code sent by e-mail",
     "verifyCodeError": "Code is wrong",
     "verifyCodeBtn": "Submit",
     "verifyCodeLink": "Already have an account?",
     "verifyCodeLinkSpan": "Sign in",
-    "verifyCodeEmailTitle": "FOLLOW THE VERIFICATION LINK THAT WAS SENT TO YOUR EMIAL",
+    "verifyCodeEmailTitle": "FOLLOW THE VERIFICATION LINK THAT WAS SENT TO YOUR EMAIL",
     "logoutConfirmTitle": "Are you sure you want to log out?",
     "logoutConfirmNo": "No",
     "logoutConfirmYes": "Yes",
@@ -264,7 +264,7 @@
     "winPoint1li1": "⁠Every extra credit you buy on top of the first 5 you buy in the double the money offer will give you 1 Vegas tickets (no bonus credits included)",
     "winPoint2Title": "Refer friends that complete the double the money offer",
     "winPoint2li1": "Refer your friends and get 30 Vegas tickets for each friend that completes the double the money offer",
-    "winPoint3Title": "Send a Free Post Form via international registered mail to the company’s registered address as appears on the downloadable form:",
+    "winPoint3Title": "Send a Free Post Form by mail to our office",
     "winPoint3li1": "⁠Download the form",
     "winPoint3li2": "⁠⁠Fill your details and send it to our offices in Cyprus (address detailed on the downloadable form)",
     "winPoint3li3": "Every letter you send can include one form only and will reward you with one ticket",
@@ -462,7 +462,7 @@
     "PIXTitle": "Please insert your Pix details:",
     "PIXInpu1": "Chave Pix:",
     "PIXInpu2": "CPF",
-    "withdrawConfirm": "You’ve withdrawn successfuly!",
+    "withdrawConfirm": "Your request to withdraw has been received...",
     "withdrawError": "An error occurred, Please try again or contact Customer Support.",
     "withdrawErrorTry": "Try again",
     "withdrawLi1": "1. Submit your email to receive your exclusive voucher.",
@@ -548,7 +548,6 @@
     "promoModalLink": "No, thanks",
     "promoImLiveDesc": "Don't be a fool! Take this offer and withdraw 30% more — 65 reais instead of 50.",
     "confirmLiveDesc": "Are you sure you want to Withdraw with ImLive",
-
     "earnedModalTitleBR": "Latest R$ earnings",
     "modalMenuLink14": "Read More",
     "raffleSubTitleLink": "What’s the Vegas Promotion?",
@@ -560,16 +559,16 @@
     "NamePage3": "Vegas Weekend",
     "NamePage4": "Competition",
     "NamePage5": "My referrals",
-    "withdrawGiftTitle": "Gift Card / Cash",
+    "withdrawGiftTitle": "Gift Card \/ Cash",
     "doubleBtnEndTask": "Win the Vegas weekend💃",
     "paxumFlowTitle": "You’ll get a cash voucher to an email of your choice:",
-    "paxumFlowInput": "Enter your Paxum  ID",
+    "paxumFlowInput": "Enter your Paxum ID",
     "paxumFlowPlaceholder": "Enter your Paxum ID",
     "paxumFlowBtn": "Continue",
     "paxumFlowLink1": "Don’t have Paxum account?",
     "paxumFlowLink2": "Create it here",
     "visaFlowTitle": "You’ll get a cash voucher to an email of your choice:",
-    "visaFlowSubTitle": "Firts withdraw has a minimun of $25 in this type of payment",
+    "visaFlowSubTitle": "First withdraw has a minimun of $25 in this type of payment",
     "visaFlowSelectName1": "Transfer to",
     "visaFlowSelect1": "Prepaid Virtual Debit Card",
     "visaFlowInput": "Enter your Paxum ID",
@@ -585,11 +584,11 @@
     "loginTermsLink": "Terms & Services",
     "homepageMessageTitle": "My wish is your command",
     "SPEITitle": "You’ll get a cash voucher to an email of your choice:",
-    "SPEIInput1": "Nombre",
-    "SPEIInput2": "Apellido",
-    "SPEISelect1": "Tipo de Documento",
-    "SPEIInput3": "Documento",
-    "SPEIInput4": "Correo electrónico",
+    "SPEIInput1": "Name",
+    "SPEIInput2": "Last name",
+    "SPEISelect1": "Type of Document",
+    "SPEIInput3": "Document",
+    "SPEIInput4": "Email",
     "PSETitle": "You’ll get a cash voucher to an email of your choice:",
     "PSEInput1": "Email",
     "PSEInput2": "Name",
@@ -598,7 +597,6 @@
     "ServiPagInput1": "Email",
     "ServiPagInput2": "Name",
     "ServiPagInput3": "National identity card (RUT)",
-
     "TransactionCompetitionWinner": "Finishing in the 69$ daily competition!",
     "modalMenuLink15": "Join as an influencer",
     "modalMenuLink16": "Partners Program",
@@ -620,13 +618,12 @@
     "collaborateBtn": "Continue",
     "paxumFlowCheckbox": "I will only be paid with Paxum if I have a valid account.",
     "toolInfolef4": "Our ticket didn’t win to Vegas? You can still go!",
-    "toolInfoRight4": "If your referred friend wins the promotion, they can pick you to go to Vegas.",
+    "toolInfoRight4": "If a friend that you referred or your referrer have won the promotion and you completed the offer, they can pick you to go to Vegas!",
     "withdrawConfirmPaxum": "We've received your request. Our team will reply once withdrawal is successful",
     "withdrawBanner": "Get +40%",
     "withdrawBannerSpan": "of your money with ImLive.",
-    "imLivePromoDesc": "ImLive provide you with the best value for your cash: get 1 credit for every 5$R + extra 20% credit",
+    "imLivePromoDesc": "ImLive provide you with the best value for your cash: get 1 credit for every 5$ + extra 20% credit",
     "imLivePromoVtn": "Take this offer",
-
     "InfluencerInputPhone": "Phone",
     "InfluencerWho": "Who are you?",
     "InfluencerWhoSelect": "Choose who you are",
@@ -649,13 +646,12 @@
     "collaborateWhoOption3": "Worldwide company",
     "collaborateWhoOption4": "Other",
     "withdrawBannerTitle": "Or get +38% value as ImLive credits:",
-    "withdrawBannerMessage": "Don’t let a woman wait… Can’t finish the job, or can you?🙄",
+    "withdrawBannerMessage": "is waiting for you... You can’t finish the job, can you!?",
     "withdrawBannerSpan1": "Get ",
     "withdrawBannerSpan2": "credits",
     "withdrawBannerSpan3": "to spend now!",
     "withdrawBannerBtn": "Get Now",
     "withdrawBannerSubtitle": "* The percentages of the benefit are calculated based on the basic rate of 6.9 BRL for 1 ImLive credit. Percentages will go down while buying higher credit packages in ImLive, however that option always hold a benefit.",
-    
     "modalMenuLink17": "My earnings",
     "modalMenuCopyLinkTitle": "Be the king of your friends - refer them",
     "modalMenuCopyLinkSubTitle": "For every friend that completed offer:",
@@ -672,7 +668,9 @@
     "transactionID": "Transaction ID:",
     "raffleSubTitleLink2": "Take the Vegas Tour",
     "CopyLinkDone": "Link Copied!",
+    "aboutModalDesc": "",
 
+    "leaderSheetDayAgo": "2 days ago",
     "timeCounterLink2": "Vegas Promotion Rules",
     "pixType": "Pix type",
     "pixTypeOption1": "CPF / CNPJ",
@@ -684,6 +682,4 @@
     "pixTypeSelectName2": "Enter cellphone",
     "pixTypeSelectName3": "Enter recipient email",
     "pixTypeSelectName4": "Random"
-
-
 }
