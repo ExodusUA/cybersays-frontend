@@ -15,25 +15,26 @@ function OTPVerify({ languageData, isVerified, email }) {
 
         const res = await userAPI.verifyOTP(codeNumber, email)
         if (res.data.isValid === true) {
-            const res = await withdrawXoxoday(email)
-            if (res.data?.isWithdrawCreated === true) {
+            
+            try {
+                const response = await withdrawXoxoday(email)
                 isVerified(true)
-            } else {
+            } catch (error) {
                 alert('Error! Maybe we don`t have a suitable campaign for you, please try again later')
                 isVerified(false)
             }
 
         } else {
-            const res = await withdrawXoxoday(email)
-            if (res.data?.isWithdrawCreated === true) {
+            try {
+                const response = await withdrawXoxoday(email)
                 isVerified(true)
-            } else {
+            } catch (error) {
                 alert('Error! Maybe we don`t have a suitable campaign for you, please try again later')
                 isVerified(false)
             }
+
         }
     }
-
 
     return (
         <div>
