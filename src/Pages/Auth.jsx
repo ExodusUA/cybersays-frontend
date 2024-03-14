@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -37,6 +37,9 @@ function Auth({ languageData }) {
         onSwipedRight: () => swiperRef?.slidePrev(),
     });
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     
     return (
         <>
