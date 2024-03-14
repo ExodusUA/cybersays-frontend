@@ -62,9 +62,9 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded, open, ma
                     data?.taskBlocks?.map((task, key) => {
                         return <div key={key} className='flex  items-center se:mt-1 mt-2 relative '>
                             <img className='w-[95%] sm:w-[555px] min-h-[86px] sm:min-h-[145px] m-auto relative' src={design === '0' ? task?.taskImage : task?.newTaskImage} alt="Task Icon" />
-                            <p className={`saira text-[10px] sm:text-[14px] text-black font-medium absolute text-left leading-[12px] sm:leading-[20px] ${index === 1 ? `${design === '0' ? 'w-[150px] sm:w-[265px] top-[15px] sm:top-[25px] right-[25px] sm:right-[45px]' : 'w-[180px] sm:w-[305px] top-[22px] sm:top-[30px] right-[35px] sm:right-[25px] text-white'}` :
-                                index === 2 ? `${design === '0' ? 'w-[140px] sm:w-[235px]  top-[15px] sm:top-[25px] left-[35px] sm:left-[55px]' : 'w-[200px] sm:w-[330px]  top-[20px] sm:top-[35px] left-[50px] sm:left-[45px] text-white'}` :
-                                    index === 3 ? `${design === '0' ? 'w-[160px] sm:w-[270px] top-[15px] sm:top-[25px] right-[35px] sm:right-[65px]' : 'w-[205px] sm:w-[350px] top-[18px] sm:top-[30px] right-[65px] sm:right-[55px] text-white'}` :
+                            <p className={`saira text-[10px] sm:text-[14px] text-black font-medium absolute text-left leading-[11px] sm:leading-[20px] ${index === 1 ? `${design === '0' ? 'w-[150px] sm:w-[265px] top-[15px] sm:top-[25px] right-[35px] sm:right-[45px]' : 'w-[180px] sm:w-[305px] top-[20px] sm:top-[30px] right-[20px] sm:right-[25px] text-white'}` :
+                                index === 2 ? `${design === '0' ? 'w-[140px] sm:w-[235px]  top-[15px] sm:top-[25px] left-[37px] sm:left-[55px]' : 'w-[200px] sm:w-[330px]  top-[20px] sm:top-[35px] left-[32px] iphone:left-[40px] sm:left-[45px] text-white'}` :
+                                    index === 3 ? `${design === '0' ? 'w-[160px] sm:w-[270px] top-[15px] sm:top-[25px] right-[38px] sm:right-[65px]' : 'w-[205px] sm:w-[350px] top-[18px] sm:top-[30px] right-[40px] iphone:right-[50px] sm:right-[55px] text-white'}` :
                                         index === 4 ? `${design === '0' ? 'w-[165px] sm:w-[280px] top-[10px] sm:top-[15px] left-[60px] sm:left-[100px]' : 'w-[200px] sm:w-[340px] top-[18px] sm:top-[30px] left-[40px] sm:left-[70px] text-white'}` :
                                             ''}`}>{task?.taskText}</p>
                         </div>

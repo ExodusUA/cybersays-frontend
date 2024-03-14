@@ -57,8 +57,8 @@ function HeaderMenu({ setMenuOpen, user, setTourModal, languageData, userCountry
                                     setEarnedModal(true)
                                     handleEvents('usd_earned_click')
                                 }} className=' leading-4 md:leading-5 mx-1 cursor-pointer'>
-                                    <p className={`text-[12px] sm:text-[16px]  ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-medium saira text-center `}>{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : 'USD'} {languageData?.header1}</p>
-                                    <p className={`text-[12px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-bold saira text-center flex justify-center items-center`}><img className='w-[16px] h-[16px] mr-[5px]' src={design === '0' ? money : require('../../images/NewDesign/header/dollar.png')} alt="money" />
+                                    <p className={`text-[11px] sm:text-[16px]  ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-medium saira text-center `}>{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : 'USD'} {languageData?.header1}</p>
+                                    <p className={`text-[11px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-bold saira text-center flex justify-center items-center`}><img className='w-[16px] h-[16px] mr-[5px]' src={design === '0' ? money : require('../../images/NewDesign/header/dollar.png')} alt="money" />
                                         {
                                             userCountry === 'BR' || userCountry === 'UA'
                                                 ? user?.earned.toFixed(0) * 5 || 0
@@ -70,15 +70,15 @@ function HeaderMenu({ setMenuOpen, user, setTourModal, languageData, userCountry
                                     setTicketShortModal(true)
                                     handleEvents('vegas_tickets')
                                 }} className=' leading-4 md:leading-5 mx-1 cursor-pointer'>
-                                    <p className={`text-[12px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-medium saira text-center `}>{languageData?.header3}</p>
-                                    <p className={`text-[12px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-bold saira text-center flex justify-center items-center`}><img className='w-[16px] h-[16px] mr-[5px]' src={design === '0' ? joker : require('../../images/NewDesign/header/ticket.png')} alt="joker" /> {user?.raffle_tickets || 0}</p>
+                                    <p className={`text-[11px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-medium saira text-center `}>{languageData?.header3}</p>
+                                    <p className={`text-[11px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-bold saira text-center flex justify-center items-center`}><img className='w-[16px] h-[16px] mr-[5px]' src={design === '0' ? joker : require('../../images/NewDesign/header/ticket.png')} alt="joker" /> {user?.raffle_tickets || 0}</p>
                                 </div>
                                 <div onClick={e => {
                                     setPointsModal(true)
                                     handleEvents('competition_points')
                                 }} className='leading-4 md:leading-5 mx-1 cursor-pointer'>
-                                    <p className={`text-[12px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-medium saira text-center `}>{languageData?.header2}</p>
-                                    <p className={`text-[12px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-bold saira text-center flex justify-center items-center`}>
+                                    <p className={`text-[11px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-medium saira text-center `}>{languageData?.header2}</p>
+                                    <p className={`text-[11px] sm:text-[16px] ${design === '0' ? 'text-[#1E1E1E]' : 'text-white'} font-bold saira text-center flex justify-center items-center`}>
                                         <img className='w-[16px] h-[16px] mr-[5px]' src={design === '0' ? refferals : require('../../images/NewDesign/header/points.png')} alt="refferals" /> {user && user.points ? user.points === '0.0' ? 0 : Number(user?.points).toFixed(1) : 0}
                                     </p>
 

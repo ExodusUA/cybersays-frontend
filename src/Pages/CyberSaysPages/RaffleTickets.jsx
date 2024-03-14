@@ -77,7 +77,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
             <div className='pt-[57px]  md:pt-[80px] mac-center:!pt-0 px-4 max-w-[970px] m-auto' >
                 <img className='se:w-[170px]  w-[170px] iphone:w-[240px] mac2:w-[170px] md:w-[320px] m-auto se:mb-[3%] iphone:mb-[1%]  lg:mb-[-10px] mac-img-bottom relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
 
-                <div className='flex flex-col-reverse '>
+                <div className='flex flex-col-reverse competitionSE iphone:mt-[40px]  md:mt-[0px]'>
 
                     <div className='iphone:mt-[50px] md:mt-0'>
                         <img className={`se:w-[280px] iphone:w-[385px]  ${design === '0' ? 'md:w-[770px] raffleTicketsSE2 mac-img-width2 mt-[-110px] mac2:mt-[-110px] iphone:mt-[-30px] mb-6' : 'md:w-[990px] raffleTicketsSE mac-img-width mt-[-110px] mac2:mt-[-110px] iphone:mt-[-30px]'} iphone:mt-[-90px] mob:mt-0 m-auto md:mt-[-90px] mt-[0px] mac2:mt-[-50px] se:mt-[-30px]  `} src={design === '0' ? hero : require('../../images/NewDesign/RaffleTicket/hero_image.png')} alt="heroRaffle" />
@@ -164,8 +164,8 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                                         {languageData?.raffleTitle1}
                                     </p>
                                     <div className='flex justify-around sm:justify-center'>
-                                        <p onClick={e => setWinModal(true)} className={`${design === '0' ? 'bg-[#FFED63]' : 'gradient-tourToggle'} px-2 py-[2px] lg:px-4 rounded-[14px] text-[#1E1E1E] saira text-[12px] lg:text-[14px] font-semibold cursor-pointer mt-2 sm:mr-6`}>{languageData?.raffleSubTitleLink}</p>
                                         <p onClick={e => setTourModal(true)} className={`${design === '0' ? 'bg-[#FFED63]' : 'gradient-tourToggle'} px-2 py-[2px] lg:px-4 rounded-[14px] text-[#1E1E1E] saira text-[12px] lg:text-[14px] font-semibold cursor-pointer mt-2 `}>{languageData?.raffleSubTitleLink2}</p>
+                                        <p onClick={e => setWinModal(true)} className={`${design === '0' ? 'bg-[#FFED63]' : 'gradient-tourToggle'} px-2 py-[2px] lg:px-4 rounded-[14px] text-[#1E1E1E] saira text-[12px] lg:text-[14px] font-semibold cursor-pointer mt-2 sm:mr-6`}>{languageData?.raffleSubTitleLink}</p>
                                     </div>
                                 </div>
                                 {/*
@@ -289,7 +289,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                     <span onClick={e => setWinModal(true)} className={`saira  underline ml-2 ${design === '0' ? 'text-[#FFED63]' : 'gradient-link'}`}>{languageData?.raffleRulesLink}</span>
                 </p>
                 */}
-                <div className='flex absolute se:bottom-[130px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
+                <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
                     <TimeCounter left={'m-auto'} leftTitle={'text-center'} title={languageData?.timeCounterTitle} languageData={languageData} block={'hidden'} />
                 </div>
             </div>

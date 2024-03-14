@@ -518,6 +518,18 @@ body {
 .competitionPlaceBG {
     background: linear-gradient(180deg, #9D9D9D 0%, #373737 100%);
 }
+@media screen and (max-height: 870px) and (min-width: 1200px) {
+    .mac-img-bottom {
+        margin-bottom: 0px !important;
+    }
+    .menuHeight {
+        max-height: 600px !important;
+    }
+    .memeWidth {
+        width: 145px !important;
+        height: 145px !important;
+    }
+}
 @media screen and (max-height: 770px) and (min-width: 1200px) {
     .mac-overflow-fix {
         margin-top: -185px !important;
@@ -576,12 +588,6 @@ body {
         height: 300px !important;
         padding-bottom: 10px !important;
     }
-
-
-    .menuHeight {
-        max-height: 600px !important;
-    }
-
     .leaderboardsScroll {
         overflow-y: auto !important;
     }
@@ -594,24 +600,19 @@ body {
     .raffleTicketsTitle {
         font-size: 24px !important;
     }
+    .menuHeight {
+        max-height: 520px !important;
+    }
 }
 
 @media screen and (max-height: 791px) and (min-width: 1200px) {
     .memeHeight {
         margin-top: 30px !important;
     }
+
 }
 
-@media screen and (max-height: 870px) and (min-width: 1200px) {
-    .mac-img-bottom {
-        margin-bottom: 0px !important;
-    }
 
-    .memeWidth {
-        width: 145px !important;
-        height: 145px !important;
-    }
-}
 
 @media screen and (max-width: 399px) {
     .homepageSE {
@@ -624,6 +625,9 @@ body {
 
     .raffleTicketsSE {
         margin-top: -30px !important;
+    }
+    .menuHeight {
+        max-height: 500px !important;
     }
 }
 

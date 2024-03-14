@@ -175,7 +175,7 @@ function Influencer({ user, setOpen, languageData }) {
 
                 {
                     isDone === false
-                        ? <div className='h-screen overflow-y-auto pb-[100px] (menuScroll)'>
+                        ? <div className='h-screen overflow-y-auto pb-[130px] lg:pb-[100px] (menuScroll)'>
                             <>
                                 <h1 className='text-[18px] lg:text-[32px] text-white text-center  font-semibold'>{languageData?.InfluencerTitle}</h1>
                                 <p className='saira text-[14px] font-medium text-center gradient-linkDouble leading-4'>{languageData?.InfluencerSubTitle} </p>
