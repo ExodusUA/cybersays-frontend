@@ -21,7 +21,6 @@ function Contact({ user, setOpen, languageData }) {
                 languageData?.contactQuestion2,
                 languageData?.contactQuestion3,
                 languageData?.contactQuestion4,
-                languageData?.contactQuestion5,
                 languageData?.contactQuestion6,
                 languageData?.contactQuestion7
             ])

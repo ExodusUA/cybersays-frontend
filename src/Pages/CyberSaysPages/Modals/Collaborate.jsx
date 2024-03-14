@@ -141,7 +141,7 @@ function Collaborate({ user, setOpen, languageData }) {
                                 </div>
                                 <p className='saira text-[12px] font-medium my-1'>{languageData?.collaborateInput3}</p>
                                 <div className='flex justify-center'>
-                                    <textarea className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none h-[100px] resize-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={message} onChange={e => setMessage(e.target.value)} placeholder={languageData?.collaborateInput3} />
+                                    <textarea className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none h-[100px] resize-none ${design === '0' ? '  rounded-[12px]' : ' rounded-[12px] '}`} type="text" value={message} onChange={e => setMessage(e.target.value)} placeholder={languageData?.collaborateInput3} />
                                 </div>
 
                                 <div className='flex justify-center mt-4'>
