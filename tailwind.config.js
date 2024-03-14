@@ -18,6 +18,7 @@ module.exports = {
       'se': { 'raw': '(min-width: 360px)' },
 
       'iphone': { 'raw': '(min-width: 400px)' },
+      'iphone2': { 'raw': '(min-width: 390px)' },
 
       'sm': '640px',
 

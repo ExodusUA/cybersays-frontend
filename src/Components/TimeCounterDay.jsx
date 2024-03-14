@@ -53,7 +53,7 @@ function TimeCounterDay({ languageData, hidden, title, left, leftTitle, block, s
                     </div>
                 </div>
             </div>
-            <div className={`flex justify-center ${block} mt-[-10px]`}>
+            <div className={`flex justify-center ${block}`}>
                 <Link onClick={e => {
                     mixpanel.track('daily_competition_terms', {
                         distinct_id: user?.id,
