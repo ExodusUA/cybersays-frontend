@@ -51,10 +51,10 @@ async function withdrawD24(pixKey, personCODE, country) {
   return response;
 }
 
-async function withdrawXoxoday() {
+async function withdrawXoxoday(email) {
   const res = await axios.post(
     process.env.REACT_APP_API_URL + "/api/v1/user/xoxoDayWithdraw",
-    {},
+    { email },
     {
       headers: {
         token: `${getToken()}`,

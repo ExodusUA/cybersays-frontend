@@ -16,7 +16,7 @@ function OTPVerify({ languageData, isVerified, email }) {
             const res = await userAPI.verifyOTP(codeNumber, email)
             if (res.data.isValid === true) {
                 try {
-                    const res = await withdrawXoxoday()
+                    const res = await withdrawXoxoday(email)
                     if (res.data?.isWithdrawCreated === true) {
                         isVerified(true)
                     } else {
