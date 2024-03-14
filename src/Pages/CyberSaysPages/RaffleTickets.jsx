@@ -164,8 +164,8 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                                         {languageData?.raffleTitle1}
                                     </p>
                                     <div className='flex justify-around sm:justify-center'>
-                                        <p onClick={e => setWinModal(true)} className={`${design === '0' ? 'bg-[#FFED63]' : 'gradient-tourToggle'} px-2 py-[2px] lg:px-4 rounded-[14px] text-[#1E1E1E] saira text-[12px] lg:text-[14px] font-semibold cursor-pointer mt-2 sm:mr-6`}>{languageData?.raffleSubTitleLink}</p>
                                         <p onClick={e => setTourModal(true)} className={`${design === '0' ? 'bg-[#FFED63]' : 'gradient-tourToggle'} px-2 py-[2px] lg:px-4 rounded-[14px] text-[#1E1E1E] saira text-[12px] lg:text-[14px] font-semibold cursor-pointer mt-2 `}>{languageData?.raffleSubTitleLink2}</p>
+                                        <p onClick={e => setWinModal(true)} className={`${design === '0' ? 'bg-[#FFED63]' : 'gradient-tourToggle'} px-2 py-[2px] lg:px-4 rounded-[14px] text-[#1E1E1E] saira text-[12px] lg:text-[14px] font-semibold cursor-pointer mt-2 sm:mr-6`}>{languageData?.raffleSubTitleLink}</p>
                                     </div>
                                 </div>
                                 {/*
@@ -289,7 +289,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                     <span onClick={e => setWinModal(true)} className={`saira  underline ml-2 ${design === '0' ? 'text-[#FFED63]' : 'gradient-link'}`}>{languageData?.raffleRulesLink}</span>
                 </p>
                 */}
-                <div className='flex absolute se:bottom-[130px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
+                <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
                     <TimeCounter left={'m-auto'} leftTitle={'text-center'} title={languageData?.timeCounterTitle} languageData={languageData} block={'hidden'} />
                 </div>
             </div>

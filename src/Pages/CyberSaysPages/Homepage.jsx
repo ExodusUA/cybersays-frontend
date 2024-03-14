@@ -219,7 +219,7 @@ function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
                     </div>
                 </div>
             </div>
-            <div className='flex absolute se:bottom-[130px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
+            <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
                 <TimeCounter title={languageData?.timeCounterTitle} left={'m-auto'} leftTitle={'text-center'} languageData={languageData} block={'hidden'} />
             </div>
         </div>

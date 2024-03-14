@@ -42,7 +42,7 @@ import refferals from '../images/CyberSaysPage/headerRefferals.png'
 import joker from '../images/CyberSaysPage/headerJoker.png'
 import moengage from '@moengage/web-sdk'
 
-function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setChatModal, chatModal, languageData, userCountry, setSelectedButton, selectedButton, setSocialLink, setPromoModal }) {
+function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setChatModal, chatModal, languageData, userCountry, setSelectedButton, selectedButton, setSocialLink, setPromoModal,imLiveURL }) {
 
   const { design, changeDesign } = useDesign()
 
@@ -79,19 +79,23 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
 
   const navigate = useNavigate()
 
-
+  
+  const copyImLiveLink = () => {
+      navigator.clipboard.writeText(imLiveURL)
+      setLinkCopied(true)
+  }
 
   return (
     <div>
-      <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 '>
+      <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md px-4 pb-4 pt-2 '>
         <div className='flex justify-between items-center max-w-[1170px] m-auto md:px-4 '>
           <img onClick={() => setMenuOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../images/NewDesign/closeBtn.png')} alt="close" />
           <div className='flex justify-between items-center'>
-            <p className='2 saira text-white font-semibold text-[12px] lg:text-[20px]'>
+            <p className='2 saira text-white font-semibold text-[12px] lg:text-[20px] mt-[-10px] lg:mt-0'>
               <img className='w-[24px] lg:w-[40px] rounded-full' src={toggleTheme2} alt="toggleTheme2" />
             </p>
 
-            <label class="relative  items-center cursor-pointer mx-2">
+            <label class="relative  items-center cursor-pointer mx-2 mt-[-10px] lg:mt-0">
               <input onClick={e => {
                 mixpanel.track("choose_design", {
                   distinct_id: user?.id,
@@ -117,7 +121,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <div class={`w-[56px] md:w-[72px] border-[2px] h-8 md:h-10  peer-focus:outline-none rounded-full peer  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:start-[4px]  ${design === '0' ? 'after:bg-[#FFED63] border-[#FFED63]' : 'after:bg-[#80d1ee] border-[#80d1ee]'}   after:rounded-full after:h-6 md:after:h-8 after:w-6 md:after:w-8 after:transition-all`}></div>
               <p className='text-[10px] lg:text-[12px] saira font-medium text-center absolute w-[110px] left-[-25px] lg:left-[-15px]'>{languageData?.ModalMenuToggle}</p>
             </label>
-            <p className='saira text-white font-semibold text-[12px] lg:text-[20px] mr-4'><img className='w-[24px] lg:w-[40px] rounded-full' src={toggleTheme1} alt="toggleTheme1" /></p>
+            <p className='saira text-white font-semibold text-[12px] lg:text-[20px] mr-2 lg:mr-4 mt-[-10px] lg:mt-0'><img className='w-[24px] lg:w-[40px] rounded-full' src={toggleTheme1} alt="toggleTheme1" /></p>
             <NewLanguageButton />
             <div onClick={e => {
               setLogoutModal(true)
@@ -147,7 +151,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
           </div>
         </div>
 
-        <div className='max-w-[365px] w-full m-auto h-screen max-h-[800px] overflow-auto  menuScroll menuHeight pb-[80px] lg:pb-4 mt-2'>
+        <div className='max-w-[365px] w-full m-auto h-screen iphone:max-h-[650px] lg:max-h-[720px] overflow-auto  menuScroll menuHeight  lg:pb-4 mt-2'>
           <div className='border-[1px] border-white rounded-[14px] px-2 py-1'>
             <p className='text-[14px] text-center font-normal leading-5 saira'>{languageData?.modalMenuCopyLinkTitle}</p>
             <p className='text-[12px] text-center font-light leading-5 saira flex items-center justify-center'> {languageData?.modalMenuCopyLinkSubTitle}
@@ -156,7 +160,10 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <span className='flex items-center text-[10px] saira font-medium'> <img className='w-[12px] h-[12px] mx-[5px]' src={design === '0' ? refferals : require('../images/NewDesign/header/points.png')} alt="refferals" /> 30</span>
             </p>
             <div className='flex justify-center'>
-              <p onClick={e => setLinkCopied(true)} className={`saira text-[14px] cursor-pointer underline text-center font-bold gradient-link`}>{linkCopied === true ? languageData?.CopyLinkDone : languageData?.CopyLink}</p>
+              <p onClick={e => {
+                setLinkCopied(true)
+                copyImLiveLink()
+                }} className={`saira text-[14px] cursor-pointer underline text-center font-bold gradient-link`}>{linkCopied === true ? languageData?.CopyLinkDone : languageData?.CopyLink}</p>
             </div>
           </div>
           <div className='iphone:gap-3 se:gap-3 mac:!gap-2 grid lg:mt-2 mac:mt-0 '>

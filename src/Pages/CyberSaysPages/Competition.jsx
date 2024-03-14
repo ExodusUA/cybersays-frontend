@@ -80,7 +80,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
             <div className='pt-[57px]  md:pt-[80px] mac-center:!pt-0 px-4 max-w-[1170px] m-auto' >
                 <img className='se:w-[170px]  w-[170px] iphone:w-[240px] double-img-width md:w-[320px] m-auto se:mb-[-3%] iphone:mb-[-13px] lg:mb-[-10px]  relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
                 <div className=' rounded-[14px] text-center se:py-1 mac:!py-0 px-2 mac-center:w-[600px] sm:max-w-[600px] m-auto  competitionSE iphone:mt-[40px] contentForCompetitions md:mt-[60px]'>
-                    <p className={`text-center  ${language === 'es' && 'text-[14px]'} mb-2 text-[18px] lg:text-[30px]  font-semibold flex items-center gap-2 justify-center`}>{languageData?.competitionTitle}
+                    <p className={`text-center  ${language === 'es' && 'text-[14px]'} mb-2 text-[16px] lg:text-[30px]  font-semibold flex items-center gap-2 justify-center`}>{languageData?.competitionTitle}
                         <span className='saira competitionPlaceBG px-2 rounded-[8px] border-[2px] border-[#FCBC1B] text-[12px] '>$69</span>
                         {languageData?.competitionTitle2}</p>
                 </div>
@@ -92,7 +92,7 @@ function Competition({ imLiveURL, user, setLeaderboardModal, loading, setLoading
                         leaderboardData?.userRankData &&
                         <div className=' rounded-[12px] p-1 px-1  flex justify-between max-w-[380px] md:max-w-[100%] m-auto mt-1'>
                             <div className=' leading-4 text-left m-auto'>
-                                <p className={`gradient-linkDouble saira ${language === 'es' && 'text-[12px]'} lg:text-[14px]  font-bold`}>{languageData?.leaderSheetYou} <span className='saira text-[12px]  font-bold'> <span className='saira competitionPlaceBG px-2 rounded-[8px] border-[2px] border-[#FCBC1B] text-[12px] ml-1 mr-[20px]'>#{leaderboardData?.userRankData?.position || 0}</span></span> {languageData?.leaderSheetPoints} <span className='saira competitionPlaceBG px-2 rounded-[8px] border-[2px] border-[#FCBC1B] text-[12px] ml-1'>{Number(user?.points).toFixed(0)}</span></p>
+                                <p className={`gradient-linkDouble saira ${language === 'es' && 'text-[12px]'} text-[12px] lg:text-[14px]  font-bold`}>{languageData?.leaderSheetYou} <span className='saira text-[12px]  font-bold'> <span className='saira competitionPlaceBG px-2 rounded-[8px] border-[2px] border-[#FCBC1B] text-[12px] ml-1 mr-[20px]'>#{leaderboardData?.userRankData?.position || 0}</span></span> {languageData?.leaderSheetPoints} <span className='saira competitionPlaceBG px-2 rounded-[8px] border-[2px] border-[#FCBC1B] text-[12px] ml-1'>{Number(user?.points).toFixed(0)}</span></p>
                             </div>
                         </div>
                     }
