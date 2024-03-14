@@ -86,10 +86,10 @@ function Auth({ languageData }) {
                                         )}
                                         {currentSlide === 1 && (
                                             <>
-                                                {languageData?.authSlide2}
+                                               {languageData?.authSlide2}
 
                                                 <div className=' leading-6 mt-2'>
-                                                    <p className='text-[12px] lg:text-[20px] font-bold'>{languageData?.authSlide2li1}</p>
+                                                    <p className='text-[16px] lg:text-[20px] font-bold'>{languageData?.authSlide2li1}</p>
                                                 </div>
                                             </>
                                         )}
@@ -98,7 +98,7 @@ function Auth({ languageData }) {
                                                 {languageData?.authSlide3}
 
                                                 <div className=' leading-6 mt-2'>
-                                                    <p className='text-[12px] lg:text-[20px] font-bold'>{languageData?.authSlide3li1}</p>
+                                                    <p className='text-[16px] lg:text-[20px] font-bold'>{languageData?.authSlide3li1}</p>
                                                 </div>
                                             </>
                                         )}
@@ -107,7 +107,7 @@ function Auth({ languageData }) {
                                                 {languageData?.authSlide4}
 
                                                 <div className=' leading-6 mt-2'>
-                                                    <p className='text-[12px] lg:text-[20px] font-bold'>{languageData?.authSlide4li1}</p>
+                                                    <p className='text-[16px] lg:text-[20px] font-bold'>{languageData?.authSlide4li1}</p>
                                                 </div>
                                             </>
                                         )}
