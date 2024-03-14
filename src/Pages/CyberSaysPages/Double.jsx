@@ -77,7 +77,7 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
         switch (task) {
             case null:
             case undefined:
-            case 1:
+            case 0:
                 return <div className='max-w-[380px] w-full px-1'>
                     <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
                     <Link onClick={e => {
@@ -86,7 +86,7 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
                     }} to={imLiveURL} target='_blank'> <button className={`w-full border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.doubleTaskBtn1}</button></Link>
                     <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>7 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
                 </div>
-            case 2: return <div className='max-w-[380px] w-full px-1'>
+            case 1: return <div className='max-w-[380px] w-full px-1'>
                 <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
                 <Link onClick={e => {
                     //e.preventDefault()
@@ -94,7 +94,7 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
                 }} to={imLiveURL} target='_blank'><button className={`w-full bg-white   border-[#FFED63]  text-black text-[18px]  saira font-semibold flex justify-center items-center my-1 ${design === '0' ? 'py-1 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.doubleTaskBtn2}</button></Link>
                 <p className='text-center text-[14px] font-semibold saira'><span className=' text-[14px] font-semibold saira gradient-linkDouble'>5 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}</p>
             </div>
-            case 3: return <div className='max-w-[380px] w-full px-1'>
+            case 2: return <div className='max-w-[380px] w-full px-1'>
                 <p className='text-center text-[18px] font-semibold '>{languageData?.doubleBtnTitle}</p>
                 <Link onClick={e => {
                     //e.preventDefault()
@@ -189,7 +189,7 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
                 </div>
                 <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2'>
                     {
-                       taskStatus && taskStatus[2] === 'finished' ? getButtonMarkup(4) : getButtonMarkup(selectedTask)
+                        taskStatus && taskStatus[2] === 'finished' ? getButtonMarkup(4) : getButtonMarkup(selectedTask)
                     }
                 </div>
                 {/*

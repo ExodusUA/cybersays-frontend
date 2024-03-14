@@ -161,8 +161,8 @@ async function verifyOTP(code, email) {
 
 }
 
-async function createPixWithdraw(pixKey, personCODE, email) {
-    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/withdraw', { pixKey, personCODE, email }, {
+async function createPixWithdraw(pixKey, personCODE, email, pixType) {
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/withdraw', { pixKey, personCODE, email, pixType }, {
         headers: {
             token: `${getToken()}`
         }

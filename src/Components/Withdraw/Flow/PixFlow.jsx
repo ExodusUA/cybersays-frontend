@@ -30,7 +30,8 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
         if (CPF === null || CPF === undefined || CPF.length === '') return alert('Please enter a valid CPF')
         try {
             //await withdrawD24(PIX, CPF, userCountry)
-            await userAPI.createPixWithdraw(PIX, CPF, email)
+            let pixType = pixTypeOption === languageData?.pixTypeOption1 && 'CPF' || pixTypeOption === languageData?.pixTypeOption2 && 'PHONE' || pixTypeOption === languageData?.pixTypeOption3 && 'EMAIL' || pixTypeOption === languageData?.pixTypeOption4 && 'EVP'
+            await userAPI.createPixWithdraw(PIX, CPF, email, pixType)
             setConfirm(true)
         } catch (error) {
             setError(true)
@@ -65,10 +66,10 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
                 </div>
                 {
                     pixType && <>
-                        <div className={`bg-white px-3 py-2 lg:py-3 mt-2 border absolute max-w-[600px] w-full ${design === '0' ? 'rounded-[18px]' : 'rounded-[12px]'}`} >
+                        <div className={`bg-white px-3 py-2 lg:py-3 mt-2 border absolute shadow-sm max-w-[600px] w-full ${design === '0' ? 'rounded-[18px]' : 'rounded-[12px]'}`} >
                             {
                                 selectedPixType.map((item, index) => (
-                                    <div key={index} className='flex items-center gap-1 hover:bg-slate-200 rounded-[12px] cursor-pointer' onClick={e => {
+                                    <div key={index} className='flex items-center gap-1 hover:bg-slate-200 rounded-[12px] cursor-pointer h-[50px]' onClick={e => {
                                         setPixTypeOption(item.option)
                                         setPixType(false)
                                     }}>
