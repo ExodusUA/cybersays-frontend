@@ -157,8 +157,8 @@ function MyReferralsModal({ setOpen, user, languageData,scrollToPage }) {
                                 <button onClick={e => scrollToPage(4)} className={`w-full bg-white text-black text-[18px] saira font-semibold py-2 ${design === '0' ? ' rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>
                                     {
                                         isLinkCopied === false
-                                            ? 'Refer your friends 👬'
-                                            : 'Link copied!'
+                                            ? languageData?.myReferBtn
+                                            : languageData?.CopyLinkDone
                                     }
                                 </button>
                             </div>

@@ -682,6 +682,12 @@
     "pixTypeSelectName2": "Enter cellphone",
     "pixTypeSelectName3": "Enter recipient email",
     "pixTypeSelectName4": "Random",
-
-    "verifyCodeSpam": "Não consegue encontrar o e-mail? Verifique sua pasta de spam."
+    "tourUnderSlide": "*Only friends who got referred by you or your referrer to CyberSays can be picked by you to go to Vegas if you win",
+    "transactionWithdraw": "Withdrawn",
+    "transactionTransactionID": "Transaction ID:",
+    "ticketsToggle1": "Vegas Tickets:",
+    "ticketsToggle2": "Points:",
+    "myReferBtn": "Refer your friends 👬",
+    "authNotificationBtn": "Open in",
+    "authNotificationBtnSpan": "Mail App"
 }

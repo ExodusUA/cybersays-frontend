@@ -67,13 +67,13 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
                         <div className='w-[200px] md:w-[400px]'>
                             <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
                             <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>{languageData?.transactionsSection3Left}</p>
-                            <p className='text-[12px] font-normal saira'>Transaction ID: {id} </p>
+                            <p className='text-[12px] font-normal saira'>{languageData?.transactionTransactionID} {id} </p>
 
                         </div>
                     </div>
                     <div className='w-[100px] leading-[18px]'>
                         <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right mb-1'>-{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}{amount}</p>
-                        <p className='text-[12px] font-normal saira  text-right'>Withdrawn</p>
+                        <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionTransactionID}</p>
                     </div>
                 </div>
             case 'competition': return <div className='flex justify-between items-center mt-4'>
