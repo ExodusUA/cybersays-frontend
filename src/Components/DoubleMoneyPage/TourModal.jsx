@@ -137,7 +137,7 @@ function TourModal({ setOpen, languageData, user }) {
                         </svg>
                     </button>
                 </div>
-                <p className={`text-[10px] lg:text-[14px] saira font-medium mt-[80px] `}>*Only friends who got referred by you or your referrer to CyberSays can be picked by you to go to Vegas if you win</p>
+                <p className={`text-[10px] lg:text-[14px] saira font-medium mt-[80px] `}>{languageData?.tourUnderSlide}</p>
             </div>
 
         </div>

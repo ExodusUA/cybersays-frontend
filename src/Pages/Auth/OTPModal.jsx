@@ -70,7 +70,7 @@ function OTPModal({ recaptchaRef, email, refferalCode, special, languageData }) 
                 </div>
 
                 <div className='flex items-center'>
-                    <button className='continue_button w-full h-[52px] rounded-[12px] saira mt-5 duration-200 disabled:opacity-70' onClick={e => handleVerify()}>Open in {email.indexOf('gmail.com') !== -1 ? 'Gmail' : 'Mail App'}</button>
+                    <button className='continue_button w-full h-[52px] rounded-[12px] saira mt-5 duration-200 disabled:opacity-70' onClick={e => handleVerify()}>{languageData?.authNotificationBtn} {email.indexOf('gmail.com') !== -1 ? 'Gmail' : languageData?.authNotificationBtnSpan}</button>
                 </div>
 
 

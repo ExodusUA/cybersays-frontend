@@ -175,11 +175,11 @@ function TicketsHistory({ setOpen, languageData, user, setSelectedButton, select
             <div class=" justify-center flex my-2">
                 <div class={`flex border-[1px]  m-auto rounded-[14px] border-[#FDA62D]  `}>
                     <div onClick={e => setSelectedButton('ticket')} className={`${selectedButton === 'ticket' && 'gradient-tourToggle'}  rounded-[12px] px-[20px] py-[5px] md:py-[6px]  cursor-pointer`}>
-                        <p className={`${selectedButton === 'ticket' && '!text-black'} text-white saira font-bold text-[14px] flex items-center`}>Vegas Tickets:<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? joker : require('../../images/NewDesign/header/ticket.png')} alt="joker" /> {user?.raffle_tickets || 0}</p>
+                        <p className={`${selectedButton === 'ticket' && '!text-black'} text-white saira font-bold text-[14px] flex items-center`}>{languageData?.ticketsToggle1}<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? joker : require('../../images/NewDesign/header/ticket.png')} alt="joker" /> {user?.raffle_tickets || 0}</p>
                     </div>
                     <div onClick={e => setSelectedButton('point')} className={`${selectedButton === 'point' && 'gradient-tourToggle'} rounded-[12px] px-[20px] py-[5px] md:py-[6px] cursor-pointer`}>
                         <p className={`${selectedButton === 'point' && '!text-black'} text-white saira font-bold text-[14px] flex items-center`}>
-                            Points:<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? refferals : require('../../images/NewDesign/header/points.png')} alt="refferals" /> {Number(user?.points).toFixed(0) || 0}
+                        {languageData?.ticketsToggle2}<img className='w-[16px] h-[16px] mx-[5px]' src={design === '0' ? refferals : require('../../images/NewDesign/header/points.png')} alt="refferals" /> {Number(user?.points).toFixed(0) || 0}
                         </p>
                     </div>
                 </div>

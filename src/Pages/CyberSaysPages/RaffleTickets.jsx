@@ -10,9 +10,10 @@ import doubleIcon from '../../images/NewDesign/doubleIcon.svg';
 import mixpanel from 'mixpanel-browser';
 import weekendCoin from '../../images/CyberSaysPage/weekendCoin.png';
 import moengage from '@moengage/web-sdk';
+import { useLanguage } from '../../Helpers/Languages/LanguageContext';
 
 function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModal, scrollToPage, setWinTicketModal }) {
-
+    let { language } = useLanguage()
     const { design } = useDesign()
 
     const [isOpen, setIsOpen] = useState(false)
@@ -87,7 +88,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
 
                                 isTaskCompleted === false
                                     ? <div className='w-full'>
-                                        <p className='text-[18px] md:text-[24px] font-medium saira text-center se:mb-0 iphone:mb-2 mac:!mb-1  md:text-center iphone:px-4'>{languageData?.raffleUnderBtn} </p>
+                                        <p className={`  raffleTicketOverBtn text-[18px] md:text-[22px] font-medium saira text-center se:mb-0 iphone:mb-2 mac:!mb-1  md:text-center iphone:px-4`}>{languageData?.raffleUnderBtn} </p>
                                         <div className='flex justify-between items-start w-full '>
                                             <div className='text-center w-full'>
                                                 <Link onClick={e => {
@@ -159,8 +160,8 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
 
                         isTaskCompleted === false
                             ? <div className=' text-center  md:mx-0 md:py-2 relative z-1 mac2:!mt-[-20px] '>
-                                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] py-2 px-1 lg:px-[60px] mt-[10px] md:mt-0'>
-                                    <p className='  text-[18px] md:text-[32px] raffleTicketsTitle font-semibold leading-5 lg:leading-9'>
+                                <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] py-2 px-1 lg:px-[60px] mt-[10px] md:mt-0 raffleTicketsTitlePX'>
+                                    <p className={` text-[18px] md:text-[32px] raffleTicketsTitle  font-semibold leading-5 lg:leading-9`}>
                                         {languageData?.raffleTitle1}
                                     </p>
                                     <div className='flex justify-around sm:justify-center'>
