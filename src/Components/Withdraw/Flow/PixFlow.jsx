@@ -25,7 +25,7 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
     ]
 
     async function creteWithdraw() {
-        if (PIX === null || PIX === undefined || PIX.length === '') return alert('Please enter a valid PIX')
+        if ((PIX === null || PIX === undefined || PIX.length === '') && pixTypeOption !== languageData?.pixTypeOption1) return alert('Please enter a valid PIX')
         if (CPF === null || CPF === undefined || CPF.length === '') return alert('Please enter a valid CPF')
         try {
             //await withdrawD24(PIX, CPF, userCountry)
