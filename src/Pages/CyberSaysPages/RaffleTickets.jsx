@@ -255,7 +255,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                     }
                 </div>
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-md rounded-[14px] lg:rounded-[24px] py-1 contentForCompetitions mt-1 '>
-                    <p className='  text-[12px] md:text-[14px] font-semibold saira text-center text-[#FBC215]'>
+                    <p className='  text-[11px] md:text-[14px] font-semibold saira text-center text-[#FBC215]'>
                         {languageData?.raffleBotLink1}
                     </p>
 
@@ -281,7 +281,7 @@ function RaffleTickets({ setTourModal, user, imLiveURL, languageData, setWinModa
                             user_email: user?.email,
                             page_name: 'Vegas Weekend'
                         });
-                    }} className={`saira text-[12px] md:text-[14px] font-semibold cursor-pointer text-center  text-[#FD9C36]`}>🤑<span className='underline text-[#FD9C36] saira text-[12px] md:text-[14px]'>{languageData?.raffleBotLink2}</span> 🤑 </p>
+                    }} className={`saira text-[11px] md:text-[14px] font-semibold cursor-pointer text-center  text-[#FD9C36]`}>🤑<span className='underline text-[#FD9C36] saira text-[12px] md:text-[14px]'>{languageData?.raffleBotLink2}</span> 🤑 </p>
 
                 </div>
                 {/*
