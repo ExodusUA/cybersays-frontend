@@ -12,7 +12,7 @@ function OTPModal({ recaptchaRef, email, refferalCode, special, languageData }) 
     const navigate = useNavigate();
 
     function handleVerify() {
-       
+
         if (email.includes('gmail.com')) {
             window.open('https://mail.google.com/', '_blank');
         } else {
@@ -70,7 +70,10 @@ function OTPModal({ recaptchaRef, email, refferalCode, special, languageData }) 
                 </div>
 
                 <div className='flex items-center'>
-                    <button className='continue_button w-full h-[52px] rounded-[12px] saira mt-5 duration-200 disabled:opacity-70' onClick={e => handleVerify()}>Open in {email.indexOf('gmail.com') !== -1 ? 'Gmail' : 'Mail App'}</button>
+                    {
+                        /* <button className='continue_button w-full h-[52px] rounded-[12px] saira mt-5 duration-200 disabled:opacity-70' onClick={e => handleVerify()}>Open in {email.indexOf('gmail.com') !== -1 ? 'Gmail' : 'Mail App'}</button> */
+                    }
+                    <p className='saira text-center w-full mt-4 text-sm'>{languageData?.verifyCodeSpam}</p>
                 </div>
 
 

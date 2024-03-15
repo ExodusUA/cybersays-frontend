@@ -681,5 +681,7 @@
     "pixTypeSelectName1": "Enter CPF / CNPJ",
     "pixTypeSelectName2": "Enter cellphone",
     "pixTypeSelectName3": "Enter recipient email",
-    "pixTypeSelectName4": "Random"
+    "pixTypeSelectName4": "Random",
+
+    "verifyCodeSpam": "Não consegue encontrar o e-mail? Verifique sua pasta de spam."
 }

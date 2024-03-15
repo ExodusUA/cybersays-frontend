@@ -27,7 +27,7 @@ function AuthEmailNotification({ languageData, email }) {
     }, []);
 
     function handleVerify() {
-       
+
         if (email.includes('gmail.com')) {
             window.open('https://mail.google.com/', '_blank');
         } else {
@@ -46,7 +46,11 @@ function AuthEmailNotification({ languageData, email }) {
                     <p className='saira'>{moment.utc(timeLeft.asMilliseconds()).format("mm:ss")}</p>
                 </div>
                 <div className='flex items-center'>
-                    <button className='continue_button w-full h-[52px] rounded-[12px] saira mt-5 duration-200 disabled:opacity-70' onClick={e => handleVerify()}>Open in {email.indexOf('gmail.com') !== -1 ? 'Gmail' : 'Mail App'}</button>
+                    {
+                        /* <button className='continue_button w-full h-[52px] rounded-[12px] saira mt-5 duration-200 disabled:opacity-70' onClick={e => handleVerify()}>Open in {email.indexOf('gmail.com') !== -1 ? 'Gmail' : 'Mail App'}</button> */
+                    }
+                    <p className='saira text-center w-full mt-4 text-sm'>{languageData?.verifyCodeSpam}</p>
+
                 </div>
                 <p className='saira mt-5 hidden'>{languageData?.verifyCodeLink} <Link className='text-[#9D3EFD] saira' to={'/login'}>{languageData?.verifyCodeLinkSpan}</Link></p>
             </div>
