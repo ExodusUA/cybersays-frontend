@@ -31,9 +31,7 @@ function Influencer({ user, setOpen, languageData }) {
     const [phone, setPhone] = useState('');
 
     const selectedWho = [
-        {
-            option: languageData?.InfluencerWhoOption1,
-        },
+        
         {
             option: languageData?.InfluencerWhoOption2,
         },
