@@ -689,5 +689,6 @@
     "ticketsToggle2": "Points:",
     "myReferBtn": "Refer your friends 👬",
     "authNotificationBtn": "Open in",
-    "authNotificationBtnSpan": "Mail App"
+    "authNotificationBtnSpan": "Mail App",
+    "verifyCodeSpam": "Can't find the e-mail? Check your spam folder."
 }

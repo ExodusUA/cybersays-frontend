@@ -27,38 +27,38 @@
                     "newTaskImage": "images\/newTask\/bg_task1.png",
                     "taskImageDesk": "images\/BgTaskDesk1.png",
                     "newTaskImageDesk": "images\/BgNewTaskDesk1.png",
-                    "taskText": "Curta a ImLive, seja tratado como um REI 👑 - e realize todas as suas fantasias!"
+                    "taskText": "Curta a ImLive, seja tratado como um REI 👑 e realize as suas fantasias!"
                 }
             ],
             "taskButton": "1\/3: Registre-se na ImLive!"
         },
         "task2": {
             "taskTitle": "Depositar",
-            "taskTitleOpen": "Boas-vindas reais à ImLive: compre US$ 5 e ganhe 10 créditos",
+            "taskTitleOpen": "Boas-vindas reais à ImLive: compre R$25 e ganhe 10 créditos",
             "taskBlocks": [
                 {
                     "taskImage": "images\/bg-mobile-Task2.png",
                     "newTaskImage": "images\/newTask\/bg_task2.png",
                     "taskImageDesk": "images\/BgTaskDesk2.png",
                     "newTaskImageDesk": "images\/BgNewTaskDesk2.png",
-                    "taskText": "Deposite $5... a ImLive dobrará o crédito. CyberSays dobrará os dólares!"
+                    "taskText": "Deposite R$25... a ImLive dobrará o crédito. CyberSays dobrará o dinheiro!"
                 }
             ],
-            "taskButton": "2\/3: Deposite US$ 5 e ganhe 10 créditos! "
+            "taskButton": "2\/3: Deposite R$25 e ganhe 10 créditos! "
         },
         "task3": {
             "taskTitle": "Gastar",
-            "taskTitleOpen": "Use todos os créditos para obter US$10 de CashBack do CyberSays",
+            "taskTitleOpen": "Use todos os créditos para obter R$50 de CashBack do CyberSays",
             "taskBlocks": [
                 {
                     "taskImage": "images\/bg-mobile-Task3.png",
                     "newTaskImage": "images\/newTask\/bg_task3.png",
                     "taskImageDesk": "images\/BgTaskDesk3.png",
                     "newTaskImageDesk": "images\/BgNewTaskDesk3.png",
-                    "taskText": "Gaste seus 10 créditos na ImLive, seja tratado como um rei e ganhe $10 em dinheiro quando terminar!"
+                    "taskText": "Gaste 10 créditos na ImLive, seja tratado como um rei e ganhe R$50 ao terminar!"
                 }
             ],
-            "taskButton": "3\/3: Gaste todos os créditos e receba $10 de volta!"
+            "taskButton": "3\/3: Gaste todos os créditos e receba R$50 de volta!"
         },
         "task4": {
             "taskTitle": "Sacar seu dinheiro 🤑",
@@ -69,13 +69,13 @@
                     "newTaskImage": "images\/newTask\/bg_task4.png",
                     "taskImageDesk": "images\/BgTaskDesk1.png",
                     "newTaskImageDesk": "images\/BgTaskDesk1.png",
-                    "taskText": "A ImLive dobra seu crédito, nós dobramos seu dinheiro - é uma situação vantajosa para você, com mais $10 na sua carteira!"
+                    "taskText": "A ImLive dobra seu crédito, nós dobramos seu dinheiro - é uma situação vantajosa para você, com mais R$50 na sua carteira!"
                 }
             ],
-            "taskButton": "Receber $10 da CyberSays"
+            "taskButton": "Receber R$50 da CyberSays"
         }
     },
-    "homepageTitle1": "1. Gaste 5$ no tratamento real da ImLive e receba US$10 em dinheiro de volta da CyberSays",
+    "homepageTitle1": "1. Gaste R$25 no tratamento real da ImLive e receba R$50 de volta da CyberSays",
     "homepageTitle2": "2. Adquira o maior número possível de bilhetes para ter a melhor chance de ganhar a promoção de Las Vegas!",
     "homepageTitle3": "3. Termine entre os 10 primeiros e ganhe a competição diária de 69$!",
     "homepageTitle4": "Dobre seu dinheiro e tenha a chance de ganhar o fim de semana em Las Vegas!",
@@ -97,7 +97,7 @@
     "raffleInfoTitle3Span": "Alternativamente, você pode participar do sorteio possuindo bilhetes de sorteio.",
     "raffleInfoTitle4": "Para informações adicionais, consulte os",
     "raffleInfoTitle4Span": "detalhes da competição.",
-    "raffleTitle1": "Não perca a chance de ganhar a incrível Promoção de Las Vegas",
+    "raffleTitle1": "Adquira o máximo de bilhetes para Las Vegas e aumente suas chances de ganhar!",
     "raffleSubTitle1": "Se você aceitou a oferta de dobrar seu dinheiro da ImLive, você pode ser escolhido pelo seu indicado ou indicador para ir a Vegas se eles ganharem.",
     "raffleLink1": "Como ganho o fim de semana em Las Vegas?",
     "raffleTitle2": "Ganhe o fim de semana em Vegas!",
@@ -115,10 +115,10 @@
     "raffleRulesDesc": "*Não é necessário fazer uma compra para participar do sorteio.",
     "raffleRulesLink": "Regras do sorteio",
     "doubleTitle": "Dobre Seu Dinheiro e obtenha sua elegibilidade para o sorteio",
-    "doubleSubtitleSpan": "Uma",
+    "doubleSubtitleSpan": "Um",
     "doubleSubtitle": "aparecerá após a conclusão da tarefa",
     "doublePaid": "Saque",
-    "refferalsTitle": "Ganhe US$ 1, 30 ingressos para o Vegas e 10 pontos de competição para cada amigo indicado que completar a oferta!",
+    "refferalsTitle": "Ganhe US$ 1, 30 ingressos para Vegas e 10 pontos de competição para cada amigo indicado que completar a oferta!",
     "refferalsLink1": "Leia mais sobre seus benefícios de indicação",
     "refferalsSubtitle": "Selecione um texto e uma imagem ou simplesmente compartilhe seu link de indicação com amigos",
     "refferalsImage": "Escolha uma imagem",
@@ -173,7 +173,7 @@
     "withdrawTitle2": "Escolha sua maneira de receber o pagamento:",
     "withdrawTitle3": "Você receberá um voucher em dinheiro em um endereço de e-mail de sua escolha:",
     "withdrawLink": "Clique para ver quais métodos de pagamento estão disponíveis no seu país",
-    "withdrawBtn": "sacar",
+    "withdrawBtn": "Sacar",
     "noTransactions": "Nenhuma transação",
     "ransactionsTitle": "Histórico de Transações",
     "transactionsSection1Left": "Dobrando seu dinheiro e aproveitando o ImLive!",
@@ -538,7 +538,7 @@
     "doubleTaskBtn1": "1\/3: Registre-se na ImLive 🎉",
     "doubleTaskBtn2": "2\/3: Deposite $5, ganhe 10 créditos 💸",
     "doubleTaskBtn3": "3\/3: Gaste todos os créditos e ganhe $10 de volta 🤑",
-    "referralShareBtn1": "Compartilhar o Link de Indicação",
+    "referralShareBtn1": "Compartilhar Link de Indicação",
     "referralShareBtn2": "Link copiado!",
     "ModalMenuToggle": "Escolha o seu design",
     "leaderSheetToday": "Hoje",
@@ -646,12 +646,12 @@
     "collaborateWhoOption3": "Empresa multinacional",
     "collaborateWhoOption4": "Outro",
     "withdrawBannerTitle": "Ou obtenha +38% do valor como créditos na ImLive:",
-    "withdrawBannerMessage": "está esperando por você... Você não consegue dar conta, consegue?",
+    "withdrawBannerMessage": "Não deixe uma mulher esperar! Você não consegue dar conta... ou consegue?",
     "withdrawBannerSpan1": "Obter ",
     "withdrawBannerSpan2": "créditos",
     "withdrawBannerSpan3": "para gastar agora!",
     "withdrawBannerBtn": "Obter agora",
-    "withdrawBannerSubtitle": "* As porcentagens do benefício são calculadas com base na taxa básica de R$6,90 para 1 crédito da ImLive. As porcentagens diminuirão na compra de pacotes de crédito mais altos na ImLive, mas essa opção sempre terá um benefício.",
+    "withdrawBannerSubtitle": "* A taxa padrão de R$6,90 para 1 crédito da ImLive é usada como base para calcular os benefícios. As porcentagens dos benefícios podem diminuir ao comprar pacotes de créditos mais altos na ImLive, mas esta opção sempre oferecerá um benefício.",
     "modalMenuLink17": "Meus ganhos",
     "modalMenuCopyLinkTitle": "Seja o rei de seus amigos indicando-os ao CyberSays e eles lhe agradecerão para sempre... 👑",
     "modalMenuCopyLinkSubTitle": "Para cada amigo que completou a oferta:",
@@ -668,7 +668,6 @@
     "transactionID": "ID da transação:",
     "raffleSubTitleLink2": "Faça o tour em Vegas",
     "CopyLinkDone": "Link Copiado!",
-
     "aboutModalDesc": "",
     "leaderSheetDayAgo": "2 days ago",
     "timeCounterLink2": "Vegas Promotion Rules",
@@ -689,5 +688,6 @@
     "ticketsToggle2": "Points:",
     "myReferBtn": "Refer your friends 👬",
     "authNotificationBtn": "Open in",
-    "authNotificationBtnSpan": "Mail App"
+    "authNotificationBtnSpan": "Mail App",
+    "verifyCodeSpam": "Não consegue encontrar o e-mail? Verifique sua pasta de spam."
 }
