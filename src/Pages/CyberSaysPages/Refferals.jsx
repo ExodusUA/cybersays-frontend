@@ -213,7 +213,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                 }} />
                             </div>
                         </div>
-                        <div className='max-w-[370px] sm:max-w-[900px] m-auto w-full '>
+                        <div className=' sm:max-w-[900px] m-auto w-full '>
                             <Swiper
                                 style={{ zIndex: 0 }}
                                 onSwiper={(swiper) => {
@@ -351,7 +351,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                 }} />
                             </div>
                         </div>
-                        <div className='max-w-[370px] sm:max-w-[900px] m-auto w-full '>
+                        <div className=' sm:max-w-[900px] m-auto w-full '>
 
                             <Swiper
                                 style={{ zIndex: 0 }}
@@ -476,7 +476,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                 </div>
                 */}
                 <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
-                    <div className='sm:max-w-[350px] w-full mx-2'>
+                    <div className='sm:max-w-[350px] w-full mx-4'>
                         <div className='flex justify-center mt-6 mac:mt-2'>
                             <button onClick={e => shareRefferalLink()} className={`w-full bg-white  border-[2px] border-[#FFED63] text-black text-[18px] saira font-semibold se:py-1 iphone:py-2  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>
                                 {
@@ -486,7 +486,7 @@ function Refferals({ user, languageData, setReferralsOpen, dataMessage, setOpenM
                                 }
                             </button>
                         </div>
-                        <p onClick={e => copyShareLink()} className={`saira text-[14px] cursor-pointer underline text-center mb-[-5px] py-2 pb-3 font-semibold  ${linkShareCopied === true ? 'opacity-60' : ''}`}>Copy link</p>
+                        <p onClick={e => copyShareLink()} className={`saira text-[14px] cursor-pointer underline text-center mb-[-5px] py-2 pb-3 font-semibold `}>{linkShareCopied === true ? languageData?.CopyLinkDone : languageData?.CopyLink}</p>
                     </div>
                 </div>
             </div>
