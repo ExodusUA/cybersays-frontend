@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Language from '../Components/Language/Language';
@@ -10,15 +9,21 @@ import LoginForm from './Auth/LoginForm';
 import logoCyber from '../images/logoLogin.png';
 import { useSwipeable } from 'react-swipeable';
 import SocialLink from '../Components/SocialLink';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../Helpers/Languages/LanguageContext';
 
-
 function Auth({ languageData }) {
+    const navigate = useNavigate();
     let { language } = useLanguage();
+
+    if (window.localStorage.getItem('token')) {
+        navigate('/');
+    } else {
+        window.localStorage.removeItem('double');
+    }
+
     const params = new URLSearchParams(window.location.search);
 
-    window.localStorage.removeItem('double');
 
 
     let referralID = window.localStorage.getItem('ref') === 'login' ? null : window.localStorage.getItem('ref');
@@ -40,22 +45,10 @@ function Auth({ languageData }) {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-    
+
     return (
         <>
-            <Helmet>
-                <title>{languageData?.siteTitle}</title>
-                <meta name="description"
-                    content={languageData?.metaDescription} />
-                <meta property="og:title" content={languageData?.siteTitle} />
-                <meta property="og:description"
-                    content={languageData?.metaDescription} />
-            </Helmet>
-
-
             <section  {...handlers} className='w-screen h-screen relative overflow-hidden'>
-
-
                 <div className='lg:flex h-full'>
 
                     <Slider swiperRef={swiperRef} setSwiperRef={setSwiperRef} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} onSlideChange={slideChange} />
@@ -86,7 +79,7 @@ function Auth({ languageData }) {
                                         )}
                                         {currentSlide === 1 && (
                                             <>
-                                               {languageData?.authSlide2}
+                                                {languageData?.authSlide2}
 
                                                 <div className=' leading-6 mt-2'>
                                                     <p className='text-[16px] lg:text-[20px] font-bold'>{languageData?.authSlide2li1}</p>
@@ -117,15 +110,15 @@ function Auth({ languageData }) {
                                 </div>
                                 <LoginForm languageData={languageData} referralID={referralID} />
 
-                        
+
                                 <div className='hidden sm:flex text-left items-center lg:items-start justify-center gap-2 mt-2 lg:mt-4'>
                                     <p className='saira text-[8px] text-[#CACACA]  w-full cursor-pointer select-none font-normal leading-4'>
                                         {languageData?.loginTermsTitle}
 
                                         <Link target='_blank' to='/terms' className='saira text-[8px] font-semibold ml-1 '>
-                                            <span className=' saira text-[8px] font-normal underline'>Terms of Use</span> & 
+                                            <span className=' saira text-[8px] font-normal underline'>Terms of Use</span> &
                                         </Link>
-                                        
+
                                         <Link target='_blank' to={'/privacy'} className='saira text-[8px] font-semibold underline'>
                                             <span className=' saira text-[8px] font-normal underline'> Privacy Policy</span>,
                                         </Link>
@@ -155,13 +148,13 @@ function Auth({ languageData }) {
                                         {languageData?.loginTermsTitle}
 
                                         <Link target='_blank' to='/terms' className='saira text-[8px] font-semibold ml-1 '>
-                                            <span className=' saira text-[8px] font-normal underline'>Terms of Use</span> & 
+                                            <span className=' saira text-[8px] font-normal underline'>Terms of Use</span> &
                                         </Link>
-                                        
+
                                         <Link target='_blank' to={'/privacy'} className='saira text-[8px] font-semibold underline'>
                                             <span className=' saira text-[8px] font-normal underline'> Privacy Policy</span>,
                                         </Link>
-                            
+
                                     </p>
 
                                 </div>

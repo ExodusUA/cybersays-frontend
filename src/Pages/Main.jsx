@@ -5,7 +5,6 @@ import HeaderMenu from '../Components/HomePage/HeaderMenu'
 import ModalMenu from '../Components/ModalMenu'
 import RaffleTickets from './CyberSaysPages/RaffleTickets'
 import Double from './CyberSaysPages/Double'
-import { Helmet } from 'react-helmet'
 import userAPI from '../Requests/user'
 import CircleNavigation from '../Components/CircleNavigation'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
@@ -44,8 +43,7 @@ import SocialLink from '../Components/SocialLink'
 import DoubleComplete from '../Components/DoubleComplete'
 import { useLanguage } from '../Helpers/Languages/LanguageContext'
 import PromoModal from '../Components/Withdraw/ImLivePromoModal'
-import moengage from '@moengage/web-sdk';
-import Referral from './Referral'
+import moengage from '@moengage/web-sdk'
 
 
 var mixpanel = require('mixpanel-browser');
@@ -417,15 +415,6 @@ function Main({ languageData }) {
 
     return (
         <>
-            <Helmet>
-                <title>{languageData?.siteTitle}</title>
-                <meta name="description"
-                    content={languageData?.metaDescription} />
-                <meta property="og:title" content={languageData?.siteTitle} />
-                <meta property="og:description"
-                    content={languageData?.metaDescription} />
-            </Helmet>
-
             <Routes>
                 <Route path="/verify" element={<Verify userData={userData} />} />
                 <Route path="/*" element={<AuthCheck>{HomepageSwiper()}</AuthCheck>} />
