@@ -81,7 +81,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
 
   
   const copyImLiveLink = () => {
-      navigator.clipboard.writeText(imLiveURL)
+    window.navigator.clipboard.writeText(window.location.host + '/' + user?.referral_code)
       setLinkCopied(true)
   }
 
