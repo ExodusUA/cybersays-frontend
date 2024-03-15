@@ -26,6 +26,10 @@ function TaskCard({ state, background, data, index, imLiveURL, rounded, open, ma
     }, [state])
 
     const getMarkup = () => {
+        if (tasks?.includes(3) === true && index === 3) {
+           setSelectedTask(3)
+        }
+
         switch (cardState) {
             case 'active': return activeState()
             case 'finished': return finishedState()
