@@ -7,9 +7,8 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
     const { design } = useDesign()
     const [PIX, setPIX] = useState(null)
     const [CPF, setCPF] = useState(null)
-    const [mail, setMail] = useState(null)
     const [pixType, setPixType] = useState(null)
-    const [pixTypeOption, setPixTypeOption] = useState(languageData?.pixTypeOption1)
+    const [pixTypeOption, setPixTypeOption] = useState(null)
     const selectedPixType = [
         {
             option: languageData?.pixTypeOption1,
@@ -43,8 +42,7 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
         <div className='max-w-[600px] w-full m-auto'>
             <p className='text-[18px] md:text-[32px] font-semibold text-center mt-2'>{languageData?.PIXTitle}</p>
             <div>
-                {
-                    /*
+                
                     <p className='saira text-[12px] font-medium my-1'>{languageData?.pixType}</p>
                 <div className={` bg-white px-3 py-2 lg:py-3 mt-1 border relative ${design === '0' ? 'rounded-[18px]' : 'rounded-[12px]'}`} >
                     <div onClick={e => setPixType(!pixType)} className={`flex  items-center justify-between cursor-pointer`}>
@@ -66,8 +64,7 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
                     </div>
 
                 </div>
-                    */
-                }
+                    
                 {
                     pixType && <>
                         <div className={`bg-white px-3 py-2 lg:py-3 mt-2 border absolute shadow-sm max-w-[600px] w-full ${design === '0' ? 'rounded-[18px]' : 'rounded-[12px]'}`} >
