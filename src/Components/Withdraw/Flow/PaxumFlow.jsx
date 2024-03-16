@@ -3,6 +3,7 @@ import { useDesign } from "../../../Helpers/Design/DesignContext";
 import { Link } from "react-router-dom";
 import { withdrawPaxum } from "../../../Requests/withdraw";
 import { useQueryClient } from "@tanstack/react-query";
+import mixpanel from "mixpanel-browser";
 
 function PaxumFlow({ languageData, setConfirm, setError }) {
   const { design } = useDesign();
@@ -17,6 +18,9 @@ function PaxumFlow({ languageData, setConfirm, setError }) {
 
     try {
       const res = await withdrawPaxum({ paxumID });
+
+      mixpanel.track("Withdraw_request", { method: "Paxum" });
+
       setConfirm(true);
     } catch (error) {
       console.log(error);
