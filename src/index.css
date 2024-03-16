@@ -515,26 +515,53 @@ body {
     height: 1px;
     background: var(--Linear-3, linear-gradient(90deg, #FBD409 0.25%, #FF9141 32.18%, #FF3D7D 64.73%, #B415D7 100%));
 }
+
 .competitionPlaceBG {
     background: linear-gradient(180deg, #9D9D9D 0%, #373737 100%);
 }
+
+.react-date-picker__wrapper {
+    border: none !important;
+}
+
+.react-date-picker__inputGroup {
+    color: #0A1225 !important;
+    font-family: 'saira';
+
+}
+
+.react-date-picker__inputGroup__divider {
+    color: #0a12259a !important;
+    font-family: 'saira';
+    font-size: 16px !important;
+}
+
+.react-date-picker__inputGroup__input:invalid {
+    background: unset !important;
+    outline: none !important;
+}
+
 @media screen and (max-height: 870px) and (min-width: 1200px) {
     .mac-img-bottom {
         margin-bottom: 0px !important;
     }
+
     .menuHeight {
         max-height: 600px !important;
     }
+
     .memeWidth {
         width: 145px !important;
         height: 145px !important;
     }
+
     .mac-overflow-fix {
         margin-top: -200px !important;
     }
 }
+
 @media screen and (max-height: 770px) and (min-width: 1200px) {
-    
+
 
     .refferals-selectMassege {
         margin-top: 10px !important;
@@ -544,9 +571,11 @@ body {
     .mac-img-width {
         width: 800px !important;
     }
+
     .mac-img-width2 {
         width: 640px !important;
     }
+
     .double-subtitle {
         padding-top: 2px !important;
         padding-bottom: 4px !important;
@@ -589,27 +618,34 @@ body {
         height: 300px !important;
         padding-bottom: 10px !important;
     }
+
     .leaderboardsScroll {
         overflow-y: auto !important;
     }
+
     .leaderboardsHeight {
         height: 200px !important;
     }
+
     .homepageMainBlock {
         padding-top: 0px !important;
     }
+
     .raffleTicketsTitle {
         font-size: 21px !important;
     }
+
     .raffleTicketsTitlePX {
         padding-left: 30px !important;
         padding-right: 30px !important;
     }
+
     .menuHeight {
         max-height: 520px !important;
     }
+
     .raffleTicketOverBtn {
-       font-size: 22px !important;
+        font-size: 22px !important;
     }
 }
 
@@ -634,6 +670,7 @@ body {
     .raffleTicketsSE {
         margin-top: -30px !important;
     }
+
     .menuHeight {
         max-height: 500px !important;
     }
@@ -647,6 +684,7 @@ body {
     color: #0A1225;
     font-family: 'saira';
 }
+
 .langaugeBtnShadow {
     box-shadow: 0px 4px 20px 0px rgba(107, 74, 219, 0.70);
 }

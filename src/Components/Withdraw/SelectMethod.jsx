@@ -39,7 +39,7 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
 
   return (
     <div className="">
-      <p className="my-2 text-center text-[18px] font-semibold md:text-[32px]">{languageData?.withdrawTitle2}</p>
+      <p className="my-2 text-center text-[18px] font-semibold md:text-[32px]">1{languageData?.withdrawTitle2}</p>
       <div className={` m-auto  max-w-[390px] md:max-w-[900px]`}>
         <div className="  relative  m-auto justify-center ">
           <div className="flex items-center">
@@ -99,7 +99,7 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                 <SwiperSlide className="min-w-[150px] lg:min-w-[240px]">
                   <div
                     onClick={(e) => selectPayment("visa")}
-                    className={`withdrawBg3 relative m-auto mt-2 flex h-[140px] w-[160px] cursor-pointer items-center justify-center rounded-[14px] md:w-[295px] ${selectedPayment === "visa" && (design === "0" ? "outline outline-[2px] outline-[#FFED63]" : "outline outline-[2px] outline-[#A2DBF0]")} `}
+                    className={`withdrawBg3 relative m-auto my-2 flex h-[140px] w-[150px] cursor-pointer items-center justify-center rounded-[14px] md:w-[240px] ${selectedPayment === "visa" && (design === "0" ? "outline outline-[2px] outline-[#FFED63]" : "outline outline-[2px] outline-[#A2DBF0]")} `}
                   >
                     <img className="w-[68px]" src={withdrawLogo3} alt="withdrawLogo1" />
                     <p className=" saira absolute bottom-1 text-center text-[14px] font-normal">Visa prepaid card</p>

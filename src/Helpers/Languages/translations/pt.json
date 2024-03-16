@@ -689,5 +689,11 @@
     "myReferBtn": "Refer your friends 👬",
     "authNotificationBtn": "Open in",
     "authNotificationBtnSpan": "Mail App",
-    "verifyCodeSpam": "Não consegue encontrar o e-mail? Verifique sua pasta de spam."
+    "verifyCodeSpam": "Não consegue encontrar o e-mail? Verifique sua pasta de spam.",
+    "newVisaFlowInput1": "Full Name",
+    "newVisaFlowInput2": "Email Adress",
+    "newVisaFlowSelect1": "Citizenship",
+    "newVisaFlowInput3": "Birth Date",
+    "newVisaFlowCheckbox": "You agree to our",
+    "newVisaFlowCheckboxSpan": "privacy policy"
 }
