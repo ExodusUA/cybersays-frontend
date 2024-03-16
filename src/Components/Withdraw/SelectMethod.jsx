@@ -37,7 +37,6 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
     }
   };
 
-<<<<<<< Updated upstream
   return (
     <div className="">
       <p className="my-2 text-center text-[18px] font-semibold md:text-[32px]">{languageData?.withdrawTitle2}</p>
@@ -79,111 +78,6 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                     >
                       <img className="w-[40px]" src={withdrawLogo4} alt="withdrawLogo4" />
                       <p className=" saira absolute bottom-1 text-center text-[14px] font-normal">Pix</p>
-=======
-    return (
-        <div className=''>
-            <p className='text-[18px] md:text-[32px] font-semibold text-center my-2'>{languageData?.withdrawTitle2}</p>
-            <div className={` max-w-[390px]  md:max-w-[900px] m-auto`}>
-                <div className='  justify-center  m-auto relative '>
-
-
-                    <div className='flex items-center'>
-                        <img className='w-[44px] h-[44px] mr-3 cursor-pointer buttonPrevGif hidden lg:block' src={left} alt="Left" />
-                        {
-                            userCountry && <Swiper
-                                style={{ zIndex: 0 }}
-                                modules={[Navigation]}
-                                navigation={{
-                                    prevEl: '.buttonPrevGif',
-                                    nextEl: '.buttonNextGif',
-                                }}
-
-                                loop={true}
-                                breakpoints={{
-                                    0: {
-
-                                        slidesPerView: 2.3,
-                                        spaceBetween: 20,
-                                    },
-                                    650: {
-                                        slidesPerView: 2,
-                                        spaceBetween: 5,
-                                    },
-                                    940: {
-                                        slidesPerView: 3,
-                                        spaceBetween: 5,
-                                    },
-                                }}
-                            >
-
-                                {/* BRAZIL */}
-                                {
-                                    (userCountry === 'BR' || userCountry === 'UA') && <SwiperSlide className='min-w-[150px] lg:min-w-[240px]'> <div onClick={e => selectPayment('pix')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg4 m-auto flex justify-center items-center relative mr-2 ${selectedPayment === 'pix' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
-                                        <img className='w-[40px]' src={withdrawLogo4} alt="withdrawLogo4" />
-                                        <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>Pix</p>
-                                    </div>
-                                    </SwiperSlide>
-                                }
-                                {
-                                    (userCountry === 'BR' || userCountry === 'UA') && <SwiperSlide className='min-w-[150px] lg:min-w-[240px]'> <div onClick={e => selectPayment('paxum')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg2 m-auto flex justify-center items-center relative mr-2 ${selectedPayment === 'paxum' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
-                                        <img className='w-[115px]' src={withdrawLogo2} alt="withdrawLogo1" />
-                                        <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>Paxum</p>
-                                    </div>
-                                    </SwiperSlide>
-                                }
-
-                                {/* VISA */}
-
-                                <SwiperSlide className='min-w-[150px] lg:min-w-[240px]'>
-                                    <div onClick={e => selectPayment('visa')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg3 m-auto flex justify-center items-center relative mt-2 ${selectedPayment === 'visa' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
-                                        <img className='w-[68px]' src={withdrawLogo3} alt="withdrawLogo1" />
-                                        <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>Visa prepaid card</p>
-                                    </div>
-                                </SwiperSlide>
-
-                                {/* MEXICO */}
-                                {
-                                    (userCountry === 'MX' || userCountry === 'UA') && <SwiperSlide className='min-w-[150px] lg:min-w-[240px]'> <div onClick={e => selectPayment('spei')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg5 m-auto flex justify-center items-center relative ${selectedPayment === 'spei' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
-                                        <img className='w-[100px]' src={withdrawLogo5} alt="withdrawLogo5" />
-                                        <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>SPEI</p>
-                                    </div>
-                                    </SwiperSlide>
-                                }
-
-                                {/* COLUMBIA */}
-                                {
-                                    (userCountry === 'CO' || userCountry === 'UA') && <SwiperSlide className='min-w-[150px] lg:min-w-[240px]'> <div onClick={e => selectPayment('pse')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg6 m-auto flex justify-center items-center relative ${selectedPayment === 'pse' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
-                                        <img className='w-[100px]' src={withdrawLogo6} alt="withdrawLogo6" />
-                                        <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>PSE</p>
-                                    </div>
-                                    </SwiperSlide>
-                                }
-
-
-                                {/* CHILE */}
-                                {
-                                    (userCountry === 'CL' || userCountry === 'UA') && <SwiperSlide className='min-w-[150px] lg:min-w-[240px]'> <div onClick={e => selectPayment('servipag')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg7 m-auto flex justify-center items-center relative ${selectedPayment === 'servipag' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
-                                        <img className='w-[150px]' src={withdrawLogo7} alt="withdrawLogo7" />
-                                        <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>ServiPag</p>
-                                    </div>
-                                    </SwiperSlide>
-                                }
-
-
-                                <SwiperSlide className='min-w-[150px] lg:min-w-[240px]'>
-                                    <div onClick={e => selectPayment('xoxoday')} className={`my-2 w-[150px] md:w-[240px] h-[140px] cursor-pointer rounded-[14px] withdrawBg1 m-auto flex justify-center items-center relative ${selectedPayment === 'xoxoday' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
-                                        <img className='w-[50px]' src={withdrawLogo1} alt="withdrawLogo1" />
-                                        <p className=' absolute bottom-1 text-center saira font-normal text-[14px] flex items-center'>{languageData?.withdrawGiftTitle} {getLangFlag()}</p>
-                                    </div>
-                                </SwiperSlide>
-
-
-                            </Swiper>
-                        }
-
-                        <img className='w-[44px] h-[44px] ml-3 cursor-pointer buttonNextGif hidden lg:block' src={right} alt="Right" />
-
->>>>>>> Stashed changes
                     </div>
                   </SwiperSlide>
                 )}
@@ -205,7 +99,7 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                 <SwiperSlide className="min-w-[150px] lg:min-w-[240px]">
                   <div
                     onClick={(e) => selectPayment("visa")}
-                    className={`withdrawBg3 relative m-auto mt-2 flex h-[140px] w-[160px] cursor-pointer items-center justify-center rounded-[14px] md:w-[295px] ${selectedPayment === "visa" && (design === "0" ? "outline outline-[2px] outline-[#FFED63]" : "outline outline-[2px] outline-[#A2DBF0]")} `}
+                    className={`withdrawBg3 relative m-auto my-2 mt-2 flex h-[140px] w-[150px] cursor-pointer items-center justify-center rounded-[14px] md:w-[240px] ${selectedPayment === "visa" && (design === "0" ? "outline outline-[2px] outline-[#FFED63]" : "outline outline-[2px] outline-[#A2DBF0]")} `}
                   >
                     <img className="w-[68px]" src={withdrawLogo3} alt="withdrawLogo1" />
                     <p className=" saira absolute bottom-1 text-center text-[14px] font-normal">Visa prepaid card</p>
@@ -267,6 +161,8 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                 </SwiperSlide>
               </Swiper>
             )}
+
+            <img className="buttonNextGif ml-3 hidden h-[44px] w-[44px] cursor-pointer lg:block" src={right} alt="Right" />
 
             <img className="buttonNextGif ml-3 hidden h-[44px] w-[44px] cursor-pointer lg:block" src={right} alt="Right" />
           </div>
