@@ -82,6 +82,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
                 user?.earned !== 0 && user?.earned > 0 && promoModal && <ImLivePromoModal setImLiveSelected={setImLiveSelected} setOpen={setPromoModal} languageData={languageData} />
             }
            
+        
             {
                 imLiveSelected
                     ? <ImLiveFlow setFlowStarted={setFlowStarted} setConfirm={setConfirm} setOpen={setImLiveSelected} languageData={languageData} closeAll={setOpen} />

@@ -21,7 +21,7 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
         if (user && user === undefined) return 'inactive'
         if (user?.completed_tasks === null) return 'inactive'
 
-    let finishedTasks = JSON.parse(user?.completed_tasks) || []
+        let finishedTasks = JSON.parse(user?.completed_tasks) || []
 
 
         let sortedTasks = finishedTasks.sort((a, b) => a - b)
@@ -76,7 +76,7 @@ function Double({ languageData, user, imLiveURL, setOpen, setDoubleComplete }) {
 
     const getButtonMarkup = (task) => {
         console.log('task', task)
-        switch (task-1) {
+        switch (task - 1) {
             case null:
             case undefined:
             case 0:
