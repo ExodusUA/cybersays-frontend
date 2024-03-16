@@ -6,6 +6,7 @@ import withdrawLogo4 from '../../images/NewDesign/withdraw/withdrawLogo4.png'
 import withdrawLogo5 from '../../images/NewDesign/withdraw/withdrawLogo5.png'
 import withdrawLogo6 from '../../images/NewDesign/withdraw/withdrawLogo6.png'
 import withdrawLogo7 from '../../images/NewDesign/withdraw/withdrawLogo7.png'
+import withdrawLogo3 from '../../images/NewDesign/withdraw/withdrawLogo3.png'
 import flag_pt from '../../images/flags/flag-pt.png'
 import flag_mx from '../../images/NewDesign/chatFlag/MX_flag.png'
 import flag_co from '../../images/NewDesign/chatFlag/CO_flag.png'
@@ -82,6 +83,14 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
                                     </SwiperSlide>
                                 }
 
+                                {/* VISA */}
+
+                                <SwiperSlide className='min-w-[150px] lg:min-w-[240px]'>
+                                    <div onClick={e => selectPayment('visa')} className={`w-[160px] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg3 m-auto flex justify-center items-center relative mt-2 ${selectedPayment === 'visa' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
+                                        <img className='w-[68px]' src={withdrawLogo3} alt="withdrawLogo1" />
+                                        <p className=' absolute bottom-1 text-center saira font-normal text-[14px]'>Visa prepaid card</p>
+                                    </div>
+                                </SwiperSlide>
 
                                 {/* MEXICO */}
                                 {

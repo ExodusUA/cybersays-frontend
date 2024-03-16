@@ -30,7 +30,8 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
         try {
             //await withdrawD24(PIX, CPF, userCountry)
             let pixType = pixTypeOption === languageData?.pixTypeOption1 && 'CPF' || pixTypeOption === languageData?.pixTypeOption2 && 'PHONE' || pixTypeOption === languageData?.pixTypeOption3 && 'EMAIL' || pixTypeOption === languageData?.pixTypeOption4 && 'EVP'
-            await userAPI.createPixWithdraw(PIX, CPF, email, pixType)
+            console.log(pixType === 'CPF' ? CPF : PIX, CPF, email, pixType)
+            await userAPI.createPixWithdraw(pixType === 'CPF' ? CPF : PIX, CPF, email, pixType)
             setConfirm(true)
         } catch (error) {
             setError(true)
@@ -86,7 +87,7 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
                     </>
                 }
             </div>
-            
+
             {
                 (pixTypeOption === languageData?.pixTypeOption2 || pixTypeOption === languageData?.pixTypeOption3 || pixTypeOption === languageData?.pixTypeOption4) && <div>
                     <p className='saira text-[12px] font-medium my-1'>{
@@ -106,7 +107,7 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
                 </div>
             }
 
-{
+            {
                 (pixTypeOption === languageData?.pixTypeOption1 || pixTypeOption === languageData?.pixTypeOption2 || pixTypeOption === languageData?.pixTypeOption3 || pixTypeOption === languageData?.pixTypeOption4) && <div>
                     <p className='saira text-[12px] font-medium my-1'>{languageData?.pixTypeSelectName1}</p>
                     <div className='flex justify-center'>
