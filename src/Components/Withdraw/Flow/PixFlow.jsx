@@ -30,7 +30,8 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
         try {
             //await withdrawD24(PIX, CPF, userCountry)
             let pixType = pixTypeOption === languageData?.pixTypeOption1 && 'CPF' || pixTypeOption === languageData?.pixTypeOption2 && 'PHONE' || pixTypeOption === languageData?.pixTypeOption3 && 'EMAIL' || pixTypeOption === languageData?.pixTypeOption4 && 'EVP'
-            await userAPI.createPixWithdraw(PIX, CPF, email, pixType)
+            console.log(pixType === 'CPF' ? CPF : PIX, CPF, email, pixType)
+            await userAPI.createPixWithdraw(pixType === 'CPF' ? CPF : PIX, CPF, email, pixType)
             setConfirm(true)
         } catch (error) {
             setError(true)
@@ -87,6 +88,24 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
                 }
             </div>
 
+            {
+                (pixTypeOption === languageData?.pixTypeOption2 || pixTypeOption === languageData?.pixTypeOption3 || pixTypeOption === languageData?.pixTypeOption4) && <div>
+                    <p className='saira text-[12px] font-medium my-1'>{
+                        pixTypeOption === languageData?.pixTypeOption2 && languageData?.pixTypeSelectName2 ||
+                        pixTypeOption === languageData?.pixTypeOption3 && languageData?.pixTypeSelectName3 ||
+                        pixTypeOption === languageData?.pixTypeOption4 && 'Pix Key'
+                    }</p>
+                    <div className='flex justify-center'>
+                        <input className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={PIX} onChange={e => setPIX(e.target.value)}
+                            placeholder={
+                                pixTypeOption === languageData?.pixTypeOption2 && '(XX)XXXXX-XXXX' ||
+                                pixTypeOption === languageData?.pixTypeOption3 && 'username@cybersays.com' ||
+                                pixTypeOption === languageData?.pixTypeOption4 && 'Pix Key'
+
+                            } />
+                    </div>
+                </div>
+            }
 
             {
                 (pixTypeOption === languageData?.pixTypeOption1 || pixTypeOption === languageData?.pixTypeOption2 || pixTypeOption === languageData?.pixTypeOption3 || pixTypeOption === languageData?.pixTypeOption4) && <div>
@@ -97,26 +116,6 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
                     </div>
                 </div>
             }
-
-            {
-                (pixTypeOption === languageData?.pixTypeOption2 || pixTypeOption === languageData?.pixTypeOption3) && <div>
-                    <p className='saira text-[12px] font-medium my-1'>{
-                        pixTypeOption === languageData?.pixTypeOption2 && languageData?.pixTypeSelectName2 ||
-                        pixTypeOption === languageData?.pixTypeOption3 && languageData?.pixTypeSelectName3 ||
-                        pixTypeOption === languageData?.pixTypeOption4 && languageData?.pixTypeSelectName4
-                    }</p>
-                    <div className='flex justify-center'>
-                        <input className={`w-full bg-white max-w-[600px] text-[16px] saira font-regular p-3 text-black outline-none ${design === '0' ? '  rounded-[50px]' : ' rounded-[12px] '}`} type="text" value={PIX} onChange={e => setPIX(e.target.value)}
-                            placeholder={
-                                pixTypeOption === languageData?.pixTypeOption2 && '(XX)XXXXX-XXXX' ||
-                                pixTypeOption === languageData?.pixTypeOption3 && 'username@cybersays.com' ||
-                                pixTypeOption === languageData?.pixTypeOption4 && 'Random'
-
-                            } />
-                    </div>
-                </div>
-            }
-
 
             <div className='flex justify-center mt-4'>
                 <button onClick={e => creteWithdraw()} className={`w-full bg-white  border-[2px]  text-black text-[18px] saira font-semibold py-3 max-w-[600px]  ${design === '0' ? '  rounded-[50px] border-[2px] bg-white border-[#FFED63]' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawContinue}</button>
