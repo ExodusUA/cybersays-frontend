@@ -1,120 +1,147 @@
-import React, { useState } from 'react'
-import close from '../../images/CyberSaysPage/closeMenu.png'
-import transaction from '../../images/CyberSaysPage/TransactionLogo.png'
-import { useQuery } from '@tanstack/react-query'
-import userAPI from '../../Requests/user'
-import moment from 'moment'
-import { useDesign } from '../../Helpers/Design/DesignContext'
-import Loading from '../Loading'
+import React, { useState } from "react";
+import close from "../../images/CyberSaysPage/closeMenu.png";
+import transaction from "../../images/CyberSaysPage/TransactionLogo.png";
+import { useQuery } from "@tanstack/react-query";
+import userAPI from "../../Requests/user";
+import moment from "moment";
+import { useDesign } from "../../Helpers/Design/DesignContext";
+import Loading from "../Loading";
 
 function TransactionHistory({ setOpen, languageData, user, userCountry, setWithdrawModal }) {
-    const { design } = useDesign()
+  const { design } = useDesign();
 
-    const [transactionsData, setTransactionsData] = useState(null)
+  const [transactionsData, setTransactionsData] = useState(null);
 
-    const { isLoading } = useQuery({
-        queryKey: ['transactions'],
-        queryFn: async () => {
-            const res = await userAPI.getTransactions();
-            setTransactionsData(res.data.transactions[0])
-            return res
-        }
-    })
+  const { isLoading } = useQuery({
+    queryKey: ["transactions"],
+    queryFn: async () => {
+      const res = await userAPI.getTransactions();
+      setTransactionsData(res.data.transactions[0]);
+      return res;
+    },
+  });
 
-    async function getTransactionStatus(status) {
-        switch (status) {
-            case 1: return 'Processing'
-            case 2: return 'Pending'
-            case 3: return 'Approved'
-            case 4: return 'Declined'
-        }
-
+  async function getTransactionStatus(status) {
+    switch (status) {
+      case 1:
+      case 2:
+        return "Pending";
+      case 3:
+        return "Approved";
+      case 4:
+        return "Declined";
     }
+  }
 
-    const getMarkup = (type, datetime, amount, id, status) => {
-        switch (type) {
-            case 'doubling_referral': return <div className='flex justify-between items-center mt-4 '>
-                <div className='flex items-center'>
-                    <img className='w-[32px] h-[32px] mr-2 md:mr-4' src={transaction} alt="transaction" />
-                    <div className='w-[200px] md:w-[400px]'>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira  leading-4 mb-2'>{languageData?.ticketsSection1Left}</p>
-                        <p className='text-[12px] md:text-[14px] font-normal saira '>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
-                    </div>
-                </div>
-                <div className='w-[100px] leading-[18px]'>
-                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}{amount}</p>
-                    <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionsSection1Right}</p>
-                </div>
+  const getMarkup = (type, datetime, amount, id, status) => {
+    switch (type) {
+      case "doubling_referral":
+        return (
+          <div className="mt-4 flex items-center justify-between ">
+            <div className="flex items-center">
+              <img className="mr-2 h-[32px] w-[32px] md:mr-4" src={transaction} alt="transaction" />
+              <div className="w-[200px] md:w-[400px]">
+                <p className="saira mb-2 text-[12px] font-semibold  leading-4 md:text-[14px]">{languageData?.ticketsSection1Left}</p>
+                <p className="saira text-[12px] font-normal md:text-[14px] ">{moment.unix(Number(datetime)).format("DD MMMM, YYYY, hh:mm A")}</p>
+              </div>
             </div>
-            case 'doubling': return <div className='flex justify-between items-center mt-4'>
-                <div className='flex items-center'>
-                    <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
-                    <div className='w-[200px] md:w-[400px]'>
-                        <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>{languageData?.transactionsSection1Left}</p>
-                        <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
-                    </div>
-                </div>
-                <div className='w-[100px] leading-[18px]'>
-                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}{amount}</p>
-                    <p className='text-[12px] font-normal saira text-right'>{languageData?.transactionsSection2Right}</p>
-                </div>
+            <div className="w-[100px] leading-[18px]">
+              <p className="saira mb-1 text-right text-[20px] font-semibold text-[#93CC8E]">
+                +{userCountry === "BR" || userCountry === "UA" ? "R$" : "$"}
+                {amount}
+              </p>
+              <p className="saira text-right text-[12px]  font-normal">{languageData?.transactionsSection1Right}</p>
             </div>
-            case 'withdraw':
-            case 'paxum_withdraw':
-                return <div className='flex justify-between items-center mt-4'>
-                    <div className='flex items-center'>
-                        <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
-                        <div className='w-[200px] md:w-[400px]'>
-                            <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
-                            <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>{languageData?.transactionsSection3Left}</p>
-                            <p className='text-[12px] font-normal saira'>{languageData?.transactionTransactionID} {id} </p>
-
-                        </div>
-                    </div>
-                    <div className='w-[100px] leading-[18px]'>
-                        <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right mb-1'>-{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}{amount}</p>
-                        <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionWithdraw}</p>
-                    </div>
-                </div>
-            case 'competition': return <div className='flex justify-between items-center mt-4'>
-                <div className='flex items-center'>
-                    <img className='w-[32px] h-[32px]  mr-2 md:mr-4' src={transaction} alt="transaction" />
-                    <div className='w-[200px] md:w-[400px]'>
-                        <p className='text-[12px]  md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>
-                            {languageData?.TransactionCompetitionWinner}</p>
-                        <p className='text-[12px] text-[#D7D7D7]  font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
-                    </div>
-                </div>
-                <div className='w-[100px] leading-[18px]'>
-                    <p className='text-[20px] text-[#93CC8E] font-semibold saira text-right mb-1'>+{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}{amount}</p>
-                    <p className='text-[12px] font-normal saira text-right'>{languageData?.transactionsSection2Right}</p>
-                </div>
+          </div>
+        );
+      case "doubling":
+        return (
+          <div className="mt-4 flex items-center justify-between">
+            <div className="flex items-center">
+              <img className="mr-2 h-[32px]  w-[32px] md:mr-4" src={transaction} alt="transaction" />
+              <div className="w-[200px] md:w-[400px]">
+                <p className="saira w-[200px] text-[12px] font-semibold leading-4 md:w-[unset] md:text-[14px]">{languageData?.transactionsSection1Left}</p>
+                <p className="saira text-[12px] font-normal md:text-[14px]">{moment.unix(Number(datetime)).format("DD MMMM, YYYY, hh:mm A")}</p>
+              </div>
             </div>
-        }
+            <div className="w-[100px] leading-[18px]">
+              <p className="saira mb-1 text-right text-[20px] font-semibold text-[#93CC8E]">
+                +{userCountry === "BR" || userCountry === "UA" ? "R$" : "$"}
+                {amount}
+              </p>
+              <p className="saira text-right text-[12px] font-normal">{languageData?.transactionsSection2Right}</p>
+            </div>
+          </div>
+        );
+      case "withdraw":
+      case "paxum_withdraw":
+        return (
+          <div className="mt-4 flex items-center justify-between">
+            <div className="flex items-center">
+              <img className="mr-2 h-[32px]  w-[32px] md:mr-4" src={transaction} alt="transaction" />
+              <div className="w-[200px] md:w-[320px]">
+                <p className="saira w-[130px] text-[10px] font-semibold leading-3 md:w-[unset] md:text-[14px] lg:leading-4">
+                  {languageData?.transactionPendingTitle + " "}
+                  <span className="saira">PIX </span>
+                  {" " + status === 1 || status === 2 ? languageData?.transactionPendingSpan : status === 3 ? languageData?.transactionApprovedSpan : languageData?.transactionRejectedSpan}
+                </p>
+                <p className="saira text-[10px] font-light text-[#D7D7D7] md:text-[14px]">{moment.unix(Number(1)).format("DD MMMM, YYYY, hh:mm A")}</p>
+                <p className="saira text-[10px] font-light leading-3 text-[#D7D7D7] md:text-[14px]">
+                  {languageData?.transactionID} {id}
+                </p>
+              </div>
+            </div>
+            <div className="w-[150px] leading-[18px]">
+              <p className={`saira mb-1 text-right text-[20px] font-semibold ${status === 1 || status === 2 ? "text-[#FF9636]" : status === 3 ? "text-[#50EA56]" : "text-[#FF3C3C]"}`}>
+                +{userCountry === "BR" || userCountry === "UA" ? "R$" : "$"}10
+              </p>
+              <p className={`saira text-right text-[12px] font-normal ${status === 1 || status === 2 ? "text-[#FF9636]" : status === 3 ? "text-[#50EA56]" : "text-[#FF3C3C]"}`}>{languageData?.transactionWithdraw}</p>
+            </div>
+          </div>
+        );
+      case "competition":
+        return (
+          <div className="mt-4 flex items-center justify-between">
+            <div className="flex items-center">
+              <img className="mr-2 h-[32px]  w-[32px] md:mr-4" src={transaction} alt="transaction" />
+              <div className="w-[200px] md:w-[400px]">
+                <p className="saira  w-[200px] text-[12px] font-semibold leading-4 md:w-[unset] md:text-[14px]">{languageData?.TransactionCompetitionWinner}</p>
+                <p className="saira text-[12px]  font-normal text-[#D7D7D7]">{moment.unix(Number(datetime)).format("DD MMMM, YYYY, hh:mm A")}</p>
+              </div>
+            </div>
+            <div className="w-[100px] leading-[18px]">
+              <p className="saira mb-1 text-right text-[20px] font-semibold text-[#93CC8E]">
+                +{userCountry === "BR" || userCountry === "UA" ? "R$" : "$"}
+                {amount}
+              </p>
+              <p className="saira text-right text-[12px] font-normal">{languageData?.transactionsSection2Right}</p>
+            </div>
+          </div>
+        );
     }
+  };
 
-    return (
-        <div className='w-screen h-screen fixed top-0 z-[60] bg-[#1E1E1E] bg-opacity-60 backdrop-blur-md p-4 scrollbarHidden '>
-            <div className='flex justify-end max-w-[600px] m-auto md:my-4'>
-                <img onClick={e => setOpen(false)} className='w-[24px] h-[24px] cursor-pointer' src={design === '0' ? close : require('../../images/NewDesign/closeBtn.png')} alt="close" />
-            </div>
-            <p className='text-[18px] md:text-[32px] font-semibold text-center'>{languageData?.ransactionsTitle}</p>
-            <div className='m-auto max-w-[345px] md:max-w-[600px] w-full mt-3 h-[470px] overflow-scroll'>
-
-                {
-                    isLoading === true || transactionsData === null
-                        ? <div className='flex justify-center h-full items-center'>
-                            <Loading />
-                        </div>
-                        : transactionsData?.length > 0
-                            ? transactionsData?.reverse().map((transaction, index) => {
-                                return getMarkup(transaction.type, transaction.datetime, userCountry === 'BR' || userCountry === 'UA' ? transaction.amount * 5 : transaction.amount, transaction.id, transaction.withdraw_status)
-                            })
-                            : <div className='flex justify-center items-center h-[470px]'>
-                                <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
-                            </div>
-                }
-                {/*
+  return (
+    <div className="scrollbarHidden fixed top-0 z-[60] h-screen w-screen bg-[#1E1E1E] bg-opacity-60 p-4 backdrop-blur-md ">
+      <div className="m-auto flex max-w-[600px] justify-end md:my-4">
+        <img onClick={(e) => setOpen(false)} className="h-[24px] w-[24px] cursor-pointer" src={design === "0" ? close : require("../../images/NewDesign/closeBtn.png")} alt="close" />
+      </div>
+      <p className="text-center text-[18px] font-semibold md:text-[32px]">{languageData?.ransactionsTitle}</p>
+      <div className="m-auto mt-3 h-[470px] w-full max-w-[345px] overflow-scroll md:max-w-[600px]">
+        {isLoading === true || transactionsData === null ? (
+          <div className="flex h-full items-center justify-center">
+            <Loading />
+          </div>
+        ) : transactionsData?.length > 0 ? (
+          transactionsData?.reverse().map((transaction, index) => {
+            return getMarkup(transaction.type, transaction.datetime, userCountry === "BR" || userCountry === "UA" ? transaction.amount * 5 : transaction.amount, transaction.id, transaction.withdraw_status);
+          })
+        ) : (
+          <div className="flex h-[470px] items-center justify-center">
+            <p className="text-center text-[18px] font-semibold">{languageData?.noTransactions}</p>
+          </div>
+        )}
+        {/*
                  APPROVED 
                 <div className='flex justify-between items-center mt-4'>
                     <div className='flex items-center'>
@@ -135,8 +162,7 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
                 </div>
  */}
 
-
-                {/*
+        {/*
                  PENDING 
                 <div className='flex justify-between items-center mt-4'>
                     <div className='flex items-center'>
@@ -157,8 +183,7 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
                 </div>
 */}
 
-
-                {/*
+        {/*
                  REJECTED
                 <div className='flex justify-between items-center mt-4'>
                     <div className='flex items-center'>
@@ -178,17 +203,21 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
                     </div>
                 </div>
                 */}
-            </div>
+      </div>
 
-            <div className='flex justify-center'>
-                <button onClick={e => {
-                    setWithdrawModal(true)
-                    setOpen(false)
-
-                }} className={`w-full bg-white  border-[2px] text-black text-[18px] saira font-semibold py-2 mt-3 max-w-[370px] ${design === '0' ? ' rounded-[50px] border-[2px] bg-white ' : ' rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.withdrawBtn}</button>
-            </div>
-        </div>
-    )
+      <div className="flex justify-center">
+        <button
+          onClick={(e) => {
+            setWithdrawModal(true);
+            setOpen(false);
+          }}
+          className={`saira mt-3  w-full max-w-[370px] border-[2px] bg-white py-2 text-[18px] font-semibold text-black ${design === "0" ? " rounded-[50px] border-[2px] bg-white " : " gradient-homepageBtn rounded-[12px] border-none"}`}
+        >
+          {languageData?.withdrawBtn}
+        </button>
+      </div>
+    </div>
+  );
 }
 
-export default TransactionHistory
+export default TransactionHistory;
