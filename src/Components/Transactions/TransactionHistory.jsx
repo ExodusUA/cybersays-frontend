@@ -73,7 +73,7 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
                     </div>
                     <div className='w-[100px] leading-[18px]'>
                         <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right mb-1'>-{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}{amount}</p>
-                        <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionTransactionID}</p>
+                        <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionWithdraw}</p>
                     </div>
                 </div>
             case 'competition': return <div className='flex justify-between items-center mt-4'>
