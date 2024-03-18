@@ -5,6 +5,7 @@ import { useDesign } from '../../Helpers/Design/DesignContext'
 import promoGirl from '../../images/NewDesign/promoGirl.png'
 import promoGirlMessage from '../../images/NewDesign/promoGirl-message.png'
 import banner from '../../images/NewDesign/withdraw/banner.png'
+import ImLiveBanner from './ImLiveBanner'
 
 
 
@@ -19,23 +20,7 @@ function ImLivePromoModal({ setOpen, languageData, setImLiveSelected }) {
             </div>
             <div onClick={(e) => e.stopPropagation()} className={`max-w-[600px] w-full m-auto relative   p-2 rounded-[12px] lg:px-4 `}>
 
-                <div className=' mt-2 mb-[5px] relative max-w-[390px]  w-full m-auto cursor-pointer'>
-
-                    <img onClick={e => {
-                        setImLiveSelected(true)
-
-                    }} className=' w-full max-w-[400px] m-auto relative z-10' src={banner} alt="banner" />
-                    <p className=' absolute z-50 saira font-medium text-[9px] w-[140px] top-[20px] iphone:top-[25px] right-[5px] leading-[12px] iphone:right-[15px] text-[#A533FF]'> <span className='saira font-extrabold text-[#A533FF]'></span>
-                        {languageData?.withdrawBannerMessage}</p>
-                    <div className=' absolute w-[150px] right-[10px] iphone:right-[15px] top-[75px] iphone:top-[90px] z-10'>
-                        <p className='saira text-[12px] text-center text-[#9430E3] font-bold leading-4'>{languageData?.withdrawBannerSpan1} <span className='saira text-[12px] text-center text-[#9430E3] font-normal'></span> {languageData?.withdrawBannerSpan2} <span className='saira text-[12px] text-center text-black font-medium'>{languageData?.withdrawBannerSpan3}</span></p>
-                        <button className='text-[#9430E3] border-2 border-[#9430E3] w-full text-[12px] saira font-extrabold rounded-[9px] py-[2px] cursor-pointer mt-1'>{languageData?.withdrawBannerBtn}</button>
-                    </div>
-
-
-
-                </div>
-
+                <ImLiveBanner languageData={languageData} setImLiveSelected={setImLiveSelected} selectPayment={() => { }} />
                 {
                     /*
                     <div className='max-w-[350px] w-full m-auto'>
