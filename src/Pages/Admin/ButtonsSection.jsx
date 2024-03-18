@@ -1,7 +1,7 @@
 import React from "react";
 
 function ButtonsSection({ selectedType, setSelectedType, handleSearch }) {
-  const selected = `border-blue-500 bg-transparent text-blue-500 hover:bg-blue-500 hover:text-white`;
+  const selected = `!border-blue-500 !bg-transparent !text-blue-500 !hover:bg-blue-500 !hover:text-white`;
 
   return (
     <div className="flex items-center justify-between">
