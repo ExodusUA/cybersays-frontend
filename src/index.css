@@ -540,7 +540,22 @@ body {
     background: unset !important;
     outline: none !important;
 }
-
+.bannerBtn2 {
+    background: var(--Yellow, linear-gradient(180deg, #FAD604 0%, #FE804D 100%));
+}
+.bannerBtn3 {
+    background: var(--New-linear, linear-gradient(180deg, #FA047A 0%, #FE8D4D 100%));
+}
+.bannerTextBtn2 {
+    background: var(--Yellow, linear-gradient(180deg, #FAD604 0%, #FE804D 100%));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.bannerTextBtn3 {
+    background: var(--New-linear, linear-gradient(180deg, #FA047A 0%, #FE8D4D 100%));
+    -webkit-background-clip: text;
+    color: transparent;
+}
 @media screen and (max-height: 870px) and (min-width: 1200px) {
     .mac-img-bottom {
         margin-bottom: 0px !important;

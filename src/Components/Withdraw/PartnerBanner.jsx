@@ -1,7 +1,7 @@
 import React from "react";
 import banner from "../../images/NewDesign/withdraw/banner2.png";
 
-function ImLiveBanner({ languageData, setImLiveSelected, selectPayment, user }) {
+function PartnerBanner({ languageData, setImLiveSelected, selectPayment, user }) {
   return (
     <div>
       <div onClick={(e) => selectPayment("imlive")} className=" relative m-auto mb-[5px] mt-2  w-full max-w-[390px] cursor-pointer">
@@ -19,7 +19,7 @@ function ImLiveBanner({ languageData, setImLiveSelected, selectPayment, user }) 
           src={banner}
           alt="banner"
         />
-        <p className=" saira absolute right-[5px] top-[20px] z-50 w-[140px] text-[9px] font-medium leading-[12px] text-[#A533FF] iphone:right-[15px] iphone:top-[20px]">
+        <p className=" saira absolute right-[0px] top-[22px] z-50 w-[140px] text-[8px] iphone:text-[9px] font-medium leading-[10px] iphone:leading-[12px] text-[#A533FF] iphone:right-[15px] iphone:top-[25px]">
           {" "}
           <span className="saira font-extrabold text-[#A533FF]">{user?.imlive_username || ""} </span>
           {languageData?.withdrawBannerMessage}
@@ -32,7 +32,7 @@ function ImLiveBanner({ languageData, setImLiveSelected, selectPayment, user }) 
           <button className="saira mt-1 w-full cursor-pointer rounded-[9px] border-2 border-[#9430E3] py-[2px] text-[12px] font-extrabold text-[#9430E3]">{languageData?.withdrawBannerBtn}</button>
         </div>
         <img
-          className=" absolute top-0 h-full max-h-[170px] rounded-b-[10px] rounded-t-[10px]"
+          className=" absolute top-0 h-full min-h-full max-h-[170px] rounded-b-[10px] rounded-t-[10px]"
           src={user?.imlive_image || "https://i0.imlmediahub.com/imagesrv/imp_getimage?qu=77&mark=1&cctrl=public,max-age%3d2592000&is=imlfoh&wm=0&wi=640&fn=0648/1586648/158664801706298200.jpg"}
           alt=""
         />
@@ -53,4 +53,4 @@ function ImLiveBanner({ languageData, setImLiveSelected, selectPayment, user }) 
   );
 }
 
-export default ImLiveBanner;
+export default PartnerBanner;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Confirm from "./Confirm";
 import Error from "./Error";
-import ImLivePromoModal from "../Withdraw/ImLivePromoModal";
+import ImLivePromoModal from "../Withdraw/PartnerPromoModal";
 import ImLiveFlow from "../Withdraw/Flow/ImLiveFlow";
 import PixFlow from "../Withdraw/Flow/PixFlow";
 import WithdrawMain from "../Withdraw/WithdrawMain";
@@ -84,7 +84,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
 
   return (
     <div>
-      {user?.earned !== 0 && user?.earned > 0 && promoModal && <ImLivePromoModal setImLiveSelected={setImLiveSelected} setOpen={setPromoModal} languageData={languageData} user={user} />}
+      {user?.earned !== 0 && user?.earned > 0 && promoModal && <ImLivePromoModal closeAll={setOpen} setImLiveSelected={setImLiveSelected} setOpen={setPromoModal} languageData={languageData} user={user} />}
 
       {imLiveSelected ? (
         <ImLiveFlow setFlowStarted={setFlowStarted} setConfirm={setConfirm} setOpen={setImLiveSelected} languageData={languageData} closeAll={setOpen} setError={setError} />

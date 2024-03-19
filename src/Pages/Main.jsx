@@ -42,7 +42,7 @@ import TicketsHistory from "../Components/Transactions/TicketsHistory";
 import SocialLink from "../Components/SocialLink";
 import DoubleComplete from "../Components/DoubleComplete";
 import { useLanguage } from "../Helpers/Languages/LanguageContext";
-import PromoModal from "../Components/Withdraw/ImLivePromoModal";
+import PromoModal from "../Components/Withdraw/PartnerPromoModal";
 import moengage from "@moengage/web-sdk";
 
 var mixpanel = require("mixpanel-browser");
