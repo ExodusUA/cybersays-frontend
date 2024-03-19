@@ -775,10 +775,10 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
         withdrawModal && <Withdraw setPromoModal={setPromoModal} languageData={languageData} setOpen={setWithdrawModal} user={user} userCountry={userCountry} />
       }
       {
-        transactionsModal && <TransactionHistory languageData={languageData} setOpen={setTransactionsModal} user={user} setWithdrawModal={setWithdrawModal} userCountry={userCountry} />
+        transactionsModal && <TransactionHistory scrollToPage={scrollToPage} languageData={languageData} setOpen={setTransactionsModal} user={user} setWithdrawModal={setWithdrawModal} userCountry={userCountry} />
       }
       {
-        ticketsModal && <TicketsHistory languageData={languageData} setOpen={setTicketsModal} user={user} setSelectedButton={setSelectedButton} selectedButton={selectedButton} />
+        ticketsModal && <TicketsHistory scrollToPage={scrollToPage} languageData={languageData} setOpen={setTicketsModal} user={user} setSelectedButton={setSelectedButton} selectedButton={selectedButton} />
       }
       {
         chatModal && <ChatModal languageData={languageData} setOpen={setChatModal} user={user} />

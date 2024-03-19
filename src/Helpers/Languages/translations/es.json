@@ -696,5 +696,11 @@
     "newVisaFlowSelect1": "Citizenship",
     "newVisaFlowInput3": "Birth Date",
     "newVisaFlowCheckbox": "You agree to our",
-    "newVisaFlowCheckboxSpan": "privacy policy"
+    "newVisaFlowCheckboxSpan": "privacy policy",
+    "transactionStatus": "Status:",
+    "transactionPending": "Pending",
+    "transactionApproved": "Approved",
+    "transactionDeclined": "Declined",
+    "transactionNoData": "No data",
+    "referralInvite": "Invite your friends"
 }

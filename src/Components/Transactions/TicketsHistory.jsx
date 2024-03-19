@@ -7,9 +7,10 @@ import userAPI from '../../Requests/user'
 import moment from 'moment'
 import refferals from '../../images/CyberSaysPage/headerRefferals.png'
 import { useDesign } from '../../Helpers/Design/DesignContext'
+import InviteFriends from './InviteFriends'
 
 
-function TicketsHistory({ setOpen, languageData, user, setSelectedButton, selectedButton }) {
+function TicketsHistory({ setOpen, languageData, user, setSelectedButton, selectedButton,scrollToPage }) {
     const { design } = useDesign()
     const [ticketsData, setTicketsData] = useState(null)
     const [pointsData, setPointsData] = useState(null)
@@ -192,7 +193,8 @@ function TicketsHistory({ setOpen, languageData, user, setSelectedButton, select
                             return ticket.name === 'ticket' ? getTicketsMarkup(ticket.type, ticket.datetime, ticket.amount) : getPointsMarkup(ticket.type, ticket.datetime, ticket.amount)
                         })
                         : <div className='flex justify-center items-center h-[470px]'>
-                            <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
+                            <InviteFriends closeAll={setOpen} languageData={languageData} scrollToPage={scrollToPage} user={user} />
+                            
                         </div>
                 }
             </div>

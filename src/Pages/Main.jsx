@@ -509,10 +509,10 @@ function Main({ languageData }) {
       {rulesModal && <CompetitionRules setOpen={setRulesModal} languageData={languageData} />}
       {infoOffer && <InfoOfferModal setOpen={setInfoOffer} languageData={languageData} />}
       {earnedModal && <Earned setTransactionsModal={setTransactionsModal} languageData={languageData} setOpen={setEarnedModal} user={userData} userCountry={userCountry} />}
-      {ticketShortModal && <Ticket setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setTicketShortModal} user={userData} setSelectedButton={setSelectedButton} />}
-      {pointsModal && <Points setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setPointsModal} user={userData} setSelectedButton={setSelectedButton} />}
+      {ticketShortModal && <Ticket scrollToPage={scrollToPage} setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setTicketShortModal} user={userData} setSelectedButton={setSelectedButton} />}
+      {pointsModal && <Points scrollToPage={scrollToPage} setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setPointsModal} user={userData} setSelectedButton={setSelectedButton} />}
       {transactionsModal && <TransactionHistory setWithdrawModal={setWithdrawModal} languageData={languageData} setOpen={setTransactionsModal} user={userData} userCountry={userCountry} />}
-      {ticketsModal && <TicketsHistory languageData={languageData} setOpen={setTicketsModal} user={userData} setSelectedButton={setSelectedButton} selectedButton={selectedButton} />}
+      {ticketsModal && <TicketsHistory scrollToPage={scrollToPage} languageData={languageData} setOpen={setTicketsModal} user={userData} setSelectedButton={setSelectedButton} selectedButton={selectedButton} />}
       {openMessage && (
         <Message
           user={userData}
