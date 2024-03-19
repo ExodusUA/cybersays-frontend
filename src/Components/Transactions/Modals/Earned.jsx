@@ -55,12 +55,12 @@ function Earned({ setOpen, languageData, user, setTransactionsModal, userCountry
                     <div className='w-[200px] md:w-[400px]'>
                         <p className='text-[12px] md:text-[14px] font-semibold saira w-[200px] md:w-[unset] leading-4'>{languageData?.transactionsSection3Left} {languageData?.transactionsSection3Left2}</p>
                         <p className='text-[12px] md:text-[14px] font-normal saira'>{moment.unix((Number(datetime))).format('DD MMMM, YYYY, hh:mm A')}</p>
-                        <p className='text-[12px] font-normal saira'>Transaction ID: {id} | Status: {status === 1 || status === 2 ? 'Pending' : status === 3 ? 'Approved' : status === 4 ? 'Declined' : 'No Data'}</p>
+                        <p className='text-[12px] font-normal saira'>{languageData?.transactionTransactionID} {id} | {languageData?.transactionStatus} {status === 1 || status === 2 ? languageData?.transactionPending : status === 3 ? languageData?.transactionApproved : status === 4 ? languageData?.transactionDeclined : languageData?.transactionNoData}</p>
                     </div>
                 </div>
                 <div className='w-[100px] leading-[18px]'>
                     <p className='text-[20px] text-[#FF6D6D] font-semibold saira text-right mb-1'>-{userCountry === 'BR' || userCountry === 'UA' ? 'R$' : '$'}{amount}</p>
-                    <p className='text-[12px] font-normal saira  text-right'>Withdrawn</p>
+                    <p className='text-[12px] font-normal saira  text-right'>{languageData?.transactionWithdraw}</p>
                 </div>
             </div>
             case 'competition': return <div className='flex justify-between items-center mt-4'>

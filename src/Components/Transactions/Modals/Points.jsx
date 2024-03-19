@@ -8,8 +8,9 @@ import { useQuery } from "@tanstack/react-query";
 import joker from "../../../images/CyberSaysPage/MyTicketJoker.png";
 import coin from "../../../images/CyberSaysPage/MyTicketCoin.png";
 import Loading from "../../Loading";
+import InviteFriends from "../InviteFriends";
 
-function Points({ setOpen, languageData, user, setTicketsModal, setSelectedButton }) {
+function Points({ setOpen, languageData, user, setTicketsModal, setSelectedButton,scrollToPage }) {
   const { design } = useDesign();
   const [pointsData, setPointsData] = useState(null);
   const [allData, setAllData] = useState(null);
@@ -180,7 +181,7 @@ function Points({ setOpen, languageData, user, setTicketsModal, setSelectedButto
             })
           ) : (
             <div className="flex h-[200px] items-center justify-center">
-              <p className="text-center text-[18px] font-semibold">{languageData?.noTransactions}</p>
+              <InviteFriends closeAll={setOpen} languageData={languageData} scrollToPage={scrollToPage} user={user} />
             </div>
           )}
         </div>

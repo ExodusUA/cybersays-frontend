@@ -8,8 +8,9 @@ import { useQuery } from '@tanstack/react-query'
 import joker from '../../../images/CyberSaysPage/MyTicketJoker.png'
 import coin from '../../../images/CyberSaysPage/MyTicketCoin.png'
 import Loading from '../../Loading'
+import InviteFriends from '../InviteFriends'
 
-function Ticket({ setOpen, languageData, user, setTicketsModal, setSelectedButton }) {
+function Ticket({ setOpen, languageData, user, setTicketsModal, setSelectedButton, scrollToPage}) {
     const { design } = useDesign()
     const [ticketsData, setTicketsData] = useState(null)
     const [allData, setAllData] = useState(null)
@@ -156,7 +157,7 @@ function Ticket({ setOpen, languageData, user, setTicketsModal, setSelectedButto
                                     return ticket.name === 'ticket' ? getTicketsMarkup(ticket.type, ticket.datetime, ticket.amount) : getPointsMarkup(ticket.type, ticket.datetime, ticket.amount)
                                 })
                                 : <div className='flex justify-center items-center h-[200px]'>
-                                    <p className='text-[18px] font-semibold text-center'>{languageData?.noTransactions}</p>
+                                    <InviteFriends closeAll={setOpen} languageData={languageData} scrollToPage={scrollToPage} user={user} />
                                 </div>
                     }
 
