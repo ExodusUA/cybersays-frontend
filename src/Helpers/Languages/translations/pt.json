@@ -6,37 +6,37 @@
   "HeaderButton": "Comece agora",
   "LatestOffers": "Últimas Ofertas",
   "OfferTitle": "nossos parceiros - Experiências de Webcam para Adultos",
-  "OfferDescription": "Registre-se e deposite $5 na nossos parceiros! nossos parceiros dobrará seus créditos, lhe dando 10 ao invés de 5. Após usar seus créditos da nossos parceiros, CyberSays dobrará seu dinheiro, te devolvendo $10 na TreatCoin!",
-  "listTexts": ["Registre-se na nossos parceiros", "Compre 5 créditos e ganhe outros 5 de graça", "Aproveite usando todos os 10 créditos na nossos parceiros", "Ganhe $10 da CyberSays - dobrando os $5 que gastou!"],
+  "OfferDescription": "Registre-se e deposite $5 nos nossos parceiros! nossos parceiros dobrará seus créditos, lhe dando 10 ao invés de 5. Após usar seus créditos dos nossos parceiros, CyberSays dobrará seu dinheiro, te devolvendo $10 na TreatCoin!",
+  "listTexts": ["Registre-se nos nossos parceiros", "Compre 5 créditos e ganhe outros 5 de graça", "Aproveite usando todos os 10 créditos nos nossos parceiros", "Ganhe $10 da CyberSays - dobrando os $5 que gastou!"],
   "OfferButton": "Ganhe X2 Agora!",
   "CopyLink": "Copiar Link",
   "TreatCoins": "Treat Coins",
   "LinkCopied": "Link Copiado!",
   "tasks": {
     "task1": {
-      "taskTitle": "Registre-se na nossos parceiros 🎉",
-      "taskTitleOpen": "Registre-se na nossos parceiros 🎉",
+      "taskTitle": "Registre-se nos nossos parceiros 🎉",
+      "taskTitleOpen": "Registre-se nos nossos parceiros 🎉",
       "taskBlocks": [
         {
           "taskImage": "images/bg-mobile-Task1.png",
           "newTaskImage": "images/newTask/bg_task1.png",
           "taskImageDesk": "images/BgTaskDesk1.png",
           "newTaskImageDesk": "images/BgNewTaskDesk1.png",
-          "taskText": "Curta a nossos parceiros, seja tratado como um REI 👑 e realize as suas fantasias!"
+          "taskText": "Curta os nossos parceiros, seja tratado como um REI 👑 e realize as suas fantasias!"
         }
       ],
-      "taskButton": "1/3: Registre-se na nossos parceiros!"
+      "taskButton": "1/3: Registre-se nos nossos parceiros!"
     },
     "task2": {
       "taskTitle": "Depositar",
-      "taskTitleOpen": "Boas-vindas reais à nossos parceiros: compre R$25 e ganhe 10 créditos",
+      "taskTitleOpen": "Boas-vindas reais dos nossos parceiros: compre R$25 e ganhe 10 créditos",
       "taskBlocks": [
         {
           "taskImage": "images/bg-mobile-Task2.png",
           "newTaskImage": "images/newTask/bg_task2.png",
           "taskImageDesk": "images/BgTaskDesk2.png",
           "newTaskImageDesk": "images/BgNewTaskDesk2.png",
-          "taskText": "Deposite R$25... a nossos parceiros dobrará o crédito. CyberSays dobrará o dinheiro!"
+          "taskText": "Deposite R$25... os nossos parceiros dobrará o crédito. CyberSays dobrará o dinheiro!"
         }
       ],
       "taskButton": "2/3: Deposite R$25 e ganhe 10 créditos! "
@@ -50,7 +50,7 @@
           "newTaskImage": "images/newTask/bg_task3.png",
           "taskImageDesk": "images/BgTaskDesk3.png",
           "newTaskImageDesk": "images/BgNewTaskDesk3.png",
-          "taskText": "Gaste 10 créditos na nossos parceiros, seja tratado como um rei e ganhe R$50 ao terminar!"
+          "taskText": "Gaste 10 créditos nos nossos parceiros, seja tratado como um rei e ganhe R$50 ao terminar!"
         }
       ],
       "taskButton": "3/3: Gaste todos os créditos e receba R$50 de volta!"
@@ -64,17 +64,17 @@
           "newTaskImage": "images/newTask/bg_task4.png",
           "taskImageDesk": "images/BgTaskDesk1.png",
           "newTaskImageDesk": "images/BgTaskDesk1.png",
-          "taskText": "A nossos parceiros dobra seu crédito, nós dobramos seu dinheiro - é uma situação vantajosa para você, com mais R$50 na sua carteira!"
+          "taskText": "os nossos parceiros dobra seu crédito, nós dobramos seu dinheiro - é uma situação vantajosa para você, com mais R$50 na sua carteira!"
         }
       ],
       "taskButton": "Receber R$50 da CyberSays"
     }
   },
-  "homepageTitle1": "1. Gaste R$25 no tratamento real da nossos parceiros e receba R$50 de volta da CyberSays",
+  "homepageTitle1": "1. Gaste R$25 no tratamento real dos nossos parceiros e receba R$50 de volta da CyberSays",
   "homepageTitle2": "2. Adquira o maior número possível de bilhetes para ter a melhor chance de ganhar a promoção de Las Vegas!",
   "homepageTitle3": "3. Termine entre os 10 primeiros e ganhe a competição diária de 69$!",
   "homepageTitle4": "Dobre seu dinheiro e tenha a chance de ganhar o fim de semana em Las Vegas!",
-  "homepageTitle5": "Receba o tratamento de rei na nossos parceiros e ganhe o fim de semana em Las Vegas",
+  "homepageTitle5": "Receba o tratamento de rei nos nossos parceiros e ganhe o fim de semana em Las Vegas",
   "homepageBtn1": "Dobre seu dinheiro ",
   "homepageBtn2": "2/3: Depósito para 200% de Cashback 🤑",
   "homepageBtn3": "3/3: Gaste para 200% de Cashback 🤑",
@@ -93,14 +93,14 @@
   "raffleInfoTitle4": "Para informações adicionais, consulte os",
   "raffleInfoTitle4Span": "detalhes da competição.",
   "raffleTitle1": "Adquira o máximo de bilhetes para Las Vegas e aumente suas chances de ganhar!",
-  "raffleSubTitle1": "Se você aceitou a oferta de dobrar seu dinheiro da nossos parceiros, você pode ser escolhido pelo seu indicado ou indicador para ir a Vegas se eles ganharem.",
+  "raffleSubTitle1": "Se você aceitou a oferta de dobrar seu dinheiro dos nossos parceiros, você pode ser escolhido pelo seu indicado ou indicador para ir a Vegas se eles ganharem.",
   "raffleLink1": "Como ganho o fim de semana em Las Vegas?",
   "raffleTitle2": "Ganhe o fim de semana em Vegas!",
   "raffleSubTitle2": "Elegível para ir a Las Vegas",
   "raffleLink2": "Como ganho o sorteio do fim de semana em Vegas?",
   "raffleUnderBtn": "Colete o máximo de bilhetes de Las Vegas que puder e aumente sua chance de ganhar:",
   "raffleUnderBtn2": "Ganhe mais bilhetes de Las Vegas para aumentar suas chances de ganhar o sorteio:",
-  "raffleLeftBtn": "Aproveite a nossos parceiros 💃",
+  "raffleLeftBtn": "Curta nossos parceiros 💃",
   "raffleLeftSection1": "1 crédito comprado =",
   "raffleLeftSection2": "1 bilhete para Las Vegas",
   "raffleRightBtn": "Indique amigos 🤑",
@@ -113,9 +113,9 @@
   "doubleSubtitleSpan": "Um",
   "doubleSubtitle": "aparecerá após a conclusão da tarefa",
   "doublePaid": "Saque",
-  "refferalsTitle": "Ganhe US$ 1, 30 ingressos para Vegas e 10 pontos de competição para cada amigo indicado que completar a oferta!",
+  "refferalsTitle": "Ganhe R$ 5, 30 ingressos para Vegas e 10 pontos de competição para cada amigo indicado que completar a oferta!",
   "refferalsLink1": "Leia mais sobre seus benefícios de indicação",
-  "refferalsSubtitle": "Selecione um texto e uma imagem ou simplesmente compartilhe seu link de indicação com amigos",
+  "refferalsSubtitle": "Selecione um texto e uma imagem e compartilhe seu link",
   "refferalsImage": "Escolha uma imagem",
   "refferalsLink2": "Escolha uma experiência personalizada",
   "refferalsSome": "Adicione algumas fotos",
@@ -126,7 +126,7 @@
   "competitionTitleSpan": "competição diária",
   "competitionPoints": "Pontos",
   "competitionSubtitle": "Os 2 primeiros lugares recebem US$ 69 cada, 3-10 US$ 6,90 cada.",
-  "competitionLeftBtn": "Aproveite a nossos parceiros 💃",
+  "competitionLeftBtn": "Aproveite os nossos parceiros 💃",
   "competitionLeftSection1": "1 crédito comprado =",
   "competitionLeftSection2": "0,5 pontos de competição",
   "competitionRightBtn": "Indique amigos 🤑",
@@ -187,14 +187,14 @@
   "ticketsSection2Left": "Email enviado",
   "ticketsSection2Right": "Bilhetes para Las Vegas",
   "ticketsSection3Left": "Por",
-  "ticketsSection3Left2": "crédito comprado na nossos parceiros!",
+  "ticketsSection3Left2": "crédito comprado nos nossos parceiros!",
   "ticketsSection3Right": "Bilhetes para Vegas",
   "ticketsSection4Left": "Amigo dobrou com sucesso seu dinheiro e recebeu pontos",
   "ticketsSection4Right": "Pontos",
   "ticketsSection5Left": "Email enviado",
   "ticketsSection5Right": "Pontos",
   "ticketsSection6Left": "Por",
-  "ticketsSection6Left2": "créditos comprados na nossos parceiros!",
+  "ticketsSection6Left2": "créditos comprados nos nossos parceiros!",
   "ticketsSection6Right": "Pontos",
   "aboutModalTitle": "Sobre nós",
   "aboutModalDesc1": "Bem-vindo à CyberSays, sua porta de entrada para transformar o engajamento on-line em recompensas tangíveis e emocionantes!",
@@ -255,7 +255,7 @@
   "logoutConfirmYes": "Sim",
   "winTitle": "Como posso obter bilhetes para ganhar a Promoção de Las Vegas?",
   "winSubTitle": "Como posso obter bilhetes para ganhar a Promoção de LasVegas?",
-  "winPoint1Title": "Compre mais créditos na nossos parceiros.com",
+  "winPoint1Title": "Compre mais créditos nos nossos parceiros",
   "winPoint1li1": "Cada crédito extra que você comprar, além dos 5 primeiros que comprar na oferta Dobre seu Dinheiro, lhe dará 1 bilhete para Las Vegas (sem créditos bônus incluídos).",
   "winPoint2Title": "Indique amigos que completem a oferta Dobre seu Dinheiro",
   "winPoint2li1": "Indique seus amigos e ganhe 30 bilhetes para Las Vegas para cada amigo que completar a oferta Dobre seu Dinheiro",
@@ -268,13 +268,13 @@
   "rulesTitle": "🎉 Bem-vindo à Competição da CyberSays! 🎉",
   "rulesSubTitle": "A partir de [preencha a data], 2024, e continuando diariamente, junte-se a nós na Competição da CyberSays.",
   "rulesPoint1Title": "Para participar:",
-  "rulesPoint1li1": "Faça login na nossos parceiros.com",
+  "rulesPoint1li1": "Faça login nos nossos parceiros",
   "rulesPoint1li2": "Compre 5 créditos e receba um bônus de mais 5",
   "rulesPoint2Title": "Maneiras de ganhar prêmios:",
-  "rulesPoint2li1": "Gaste todos os 10 créditos na nossos parceiros e receba US$10 na CyberSays",
+  "rulesPoint2li1": "Gaste todos os 10 créditos nos nossos parceiros e receba US$10 na CyberSays",
   "rulesPoint2li2": "US$ 69 para o primeiro lugar e US$ 6,90 para o 2º ao 10º - diariamente!",
   "rulesPoint2li3": "US$ 1 + 30 bilhetes para Las Vegas + 10 pontos para cada indicação bem-sucedida que completar a oferta",
-  "rulesPoint2li4": "1 Bilhete para Las Vegas + 0,5 ponto para cada crédito comprado após a primeira compra na nossos parceiros.com",
+  "rulesPoint2li4": "1 Bilhete para Las Vegas + 0,5 ponto para cada crédito comprado após a primeira compra nos nossos parceiros",
   "rulesEnd": "Boa sorte a todos os participantes da Competição da CyberSays!",
   "toolInfoTitle": "O que posso ganhar na CyberSays e como?",
   "toolInfoWhat": "O que?",
@@ -283,8 +283,8 @@
   "toolInfolef2": "Ganhe a promoção de Las Vegas",
   "toolInfolef3": "Ganhe a competição diária de US$69",
   "toolInfoRight1": "Complete a oferta \"Dobre seu dinheiro\"",
-  "toolInfoRight2": "Ganhe bilhetes comprando créditos na nossos parceiros e indique amigos que completem a oferta",
-  "toolInfoRight3": "Ganhe pontos comprando créditos na nossos parceiros e indique amigos que completem a oferta",
+  "toolInfoRight2": "Ganhe bilhetes comprando créditos nos nossos parceiros e indique amigos que completem a oferta",
+  "toolInfoRight3": "Ganhe pontos comprando créditos nos nossos parceiros e indique amigos que completem a oferta",
   "ourMissionTitle": "Nossa Missão",
   "ourMissionSubTitle1": "A CyberSays surgiu da simples ideia de que as plataformas on-line deveriam oferecer um valor mais direto aos seus usuários.",
   "ourMissionSubTitle2": "Estamos empenhados em criar um ambiente em que cada ação - seja um depósito, uma indicação ou uma compra - tenha um resultado gratificante.",
@@ -299,7 +299,7 @@
     },
     {
       "question": "Quais são os requisitos para se qualificar para o cashback instantâneo de US$ 10?",
-      "answers": ["Basta se registrar na nossos parceiros, depositar US$ 5 para receber US$ 10 em créditos, gastar esses créditos e, além disso, você receberá US$ 10 em cashback instantaneamente"]
+      "answers": ["Basta se registrar nos nossos parceiros, depositar US$ 5 para receber US$ 10 em créditos, gastar esses créditos e, além disso, você receberá US$ 10 em cashback instantaneamente"]
     },
     {
       "question": "Posso sacar meu cashback de US$ 10 imediatamente após recebê-lo?",
@@ -334,11 +334,11 @@
     {
       "question": "Quais são as despesas cobertas pelo prêmio do fim de semana em Las Vegas?",
       "answers": [
-        "O prêmio do fim de semana em Las Vegas cobre sua viagem e entretenimento de forma extravagante. Ele inclui passagens de ida e volta para Las Vegas para você e dois amigos que tenham completado a oferta Dobre Seu Dinheiro, se você optar por levá-los, duas noites de hospedagem em um hotel 5 estrelas e US$ 1.000 em créditos nossos parceiros.com para o vencedor. Além disso, você receberá US$ 1.000 em dinheiro e, se for o caso, cada um dos seus dois amigos receberá US$ 500 para aproveitar. O pacote é coroado com um jantar especial e uma experiência de dirigir um Cadillac com 2 estrelas pornôs, avaliando o prêmio total em aproximadamente US$ 5.000."
+        "O prêmio do fim de semana em Las Vegas cobre sua viagem e entretenimento de forma extravagante. Ele inclui passagens de ida e volta para Las Vegas para você e dois amigos que tenham completado a oferta Dobre Seu Dinheiro, se você optar por levá-los, duas noites de hospedagem em um hotel 5 estrelas e US$ 1.000 em créditos nossos parceiros para o vencedor. Além disso, você receberá US$ 1.000 em dinheiro e, se for o caso, cada um dos seus dois amigos receberá US$ 500 para aproveitar. O pacote é coroado com um jantar especial e uma experiência de dirigir um Cadillac com 2 estrelas pornôs, avaliando o prêmio total em aproximadamente US$ 5.000."
       ]
     },
     {
-      "question": "Como faço para comprar créditos adicionais na nossos parceiros?",
+      "question": "Como faço para comprar créditos adicionais nos nossos parceiros?",
       "answers": ["Clique aqui para comprar mais créditos e aumentar suas chances de ganhar a promoção de Las Vegas e US$60 em pontos da competição diária"]
     },
     {
@@ -350,7 +350,7 @@
     {
       "question": "Como funciona a tabela de classificação diária de US$ 69 e como posso ganhar pontos?",
       "answers": [
-        "Ganhe pontos indicando amigos e comprando créditos na nossos parceiros. Quanto mais você engajar, maior será sua posição na tabela de classificação. Para cada amigo que você indicar e concluir a oferta, você ganha 10 pontos. Para cada crédito extra na nossos parceiros que você comprar, você ganha 0,5 ponto. "
+        "Ganhe pontos indicando amigos e comprando créditos nos nossos parceiros. Quanto mais você engajar, maior será sua posição na tabela de classificação. Para cada amigo que você indicar e concluir a oferta, você ganha 10 pontos. Para cada crédito extra nos nossos parceiros que você comprar, você ganha 0,5 ponto. "
       ]
     },
     {
@@ -384,7 +384,7 @@
       "linkName": "Clique aqui"
     },
     {
-      "question": "Por que não vejo meu depósito na nossos parceiros mesmo depois de depositar?",
+      "question": "Por que não vejo meu depósito nos nossos parceiros mesmo depois de depositar?",
       "answers": [
         "Os depósitos normalmente são refletidos em sua conta CyberSays em 3 minutos, creditando a você os fundos correspondentes. Se você não vir seu depósito após 30 minutos, recomendamos entrar em contato com nosso suporte ao cliente para obter assistência."
       ]
@@ -440,7 +440,7 @@
   "withdrawLi6": "6. Caso precise de qualquer assistência, entre em contato com o nosso",
   "withdrawLi6Span": "Suporte ao cliente.",
   "myReferralsTitle": "Minhas indicações para Las Vegas",
-  "myReferralsSubTitle": "Veja se seus amigos indicados aproveitaram a oferta da nossos parceiros de dobrar o dinheiro - somente então você poderá levá-los a Las Vegas se ganhar!",
+  "myReferralsSubTitle": "Veja se seus amigos indicados aproveitaram a oferta dos nossos parceiros de dobrar o dinheiro - somente então você poderá levá-los a Las Vegas se ganhar!",
   "myReferralsDoneTitle": "Você foi indicado por: ",
   "myReferralsDoneSubTitle": "Eles completaram a oferta e estão elegíveis para serem escolhidos para Las Vegas se você ganhar o sorteio!",
   "myReferralsUnDoneTitle": "Você foi indicado por:",
@@ -452,10 +452,10 @@
   "myReferralsSubTitle2": "Você ainda não indicou amigos",
   "winTicketTitle": "👬Ainda posso ir para Las Vegas se meu ingresso não for o vencedor? 👬",
   "winTicketSubTitle": "Sim! Para que você, quem te indicou ou suas indicações sejam escolhidos pelo outro se ganharem a promoção de Las Vegas, você precisará:",
-  "winTicketLiTitle": "Participe da Promoção da CyberSays na nossos parceiros.com:",
+  "winTicketLiTitle": "Participe da Promoção da CyberSays nos nossos parceiros:",
   "winTicketLi1": "Crie uma nova conta ou use uma já existente.",
   "winTicketLi2": "Faça uma compra mínima de cinco créditos para ganhar mais cinco.",
-  "winTicketLi3": "Gastar todos os dez (10) créditos recebidos na nossos parceiros.com.",
+  "winTicketLi3": "Gastar todos os dez (10) créditos recebidos nos nossos parceiros.",
   "winTicketBtn": "Vá para a página Dobre Seu Dinheiro",
   "winTicketEnd": "Boa sorte!",
   "winTicketLink": "Para os termos completos da Promoção de Las Vegas",
@@ -502,7 +502,7 @@
   "doubleCompleteTitleSpan": "caixa de entrada!",
   "doubleCompleteSubTitle": "Seja o rei do camarote indicando seus amigos à CyberSays e eles lhe agradecerão para sempre... 👑",
   "doubleCompleteBtn": "Compartilhar",
-  "doubleTaskBtn1": "1/3: Registre-se na nossos parceiros 🎉",
+  "doubleTaskBtn1": "1/3: Registre-se nos nossos parceiros 🎉",
   "doubleTaskBtn2": "2/3: Deposite $5, ganhe 10 créditos 💸",
   "doubleTaskBtn3": "3/3: Gaste todos os créditos e ganhe $10 de volta 🤑",
   "referralShareBtn1": "Compartilhar Link de Indicação",
@@ -514,7 +514,7 @@
   "promoModalMessage": "Não seja tolo, aceite esta oferta e ganhe +30% 65 reais em vez de 50",
   "promoModalLink": "Não, obrigado",
   "promonossos parceirosDesc": "Não seja tolo, aceite esta oferta e ganhe +30% 65 reais em vez de 50",
-  "confirmLiveDesc": "Tem certeza de que deseja sacar com a nossos parceiros?",
+  "confirmLiveDesc": "Tem certeza de que deseja sacar com os nossos parceiros?",
   "earnedModalTitleBR": "Ultimos R$ ganhos",
   "modalMenuLink14": "Leia Mais",
   "raffleSubTitleLink": "Qual é a promoção de Vegas?",
@@ -588,8 +588,8 @@
   "toolInfoRight4": "Se um amigo que você indicou ou seu indicado ganhou a promoção e você completou a oferta, ele poderá escolher você para ir a Las Vegas!",
   "withdrawConfirmPaxum": "Recebemos sua solicitação. Nossa equipe responderá assim que o saque for bem-sucedido",
   "withdrawBanner": "Ganhe +40%",
-  "withdrawBannerSpan": "do seu dinheiro com a nossos parceiros.",
-  "nossos parceirosPromoDesc": "A nossos parceiros oferece o melhor valor pelo seu dinheiro: receba 1 crédito para cada US$5 + 20% de crédito extra",
+  "withdrawBannerSpan": "do seu dinheiro com os nossos parceiros.",
+  "nossos parceirosPromoDesc": "os nossos parceiros oferece o melhor valor pelo seu dinheiro: receba 1 crédito para cada US$5 + 20% de crédito extra",
   "nossos parceirosPromoVtn": "Aproveite esta oferta",
   "InfluencerInputPhone": "Telefone",
   "InfluencerWho": "Quem é você?",
@@ -612,13 +612,13 @@
   "collaborateWhoOption2": "Agente",
   "collaborateWhoOption3": "Empresa multinacional",
   "collaborateWhoOption4": "Outro",
-  "withdrawBannerTitle": "Ou obtenha +38% do valor como créditos na nossos parceiros:",
+  "withdrawBannerTitle": "Ou obtenha +38% do valor como créditos nos nossos parceiros:",
   "withdrawBannerMessage": "Não deixe uma mulher esperar! Você não consegue dar conta... ou consegue?",
   "withdrawBannerSpan1": "Obter ",
   "withdrawBannerSpan2": "créditos",
   "withdrawBannerSpan3": "para gastar agora!",
   "withdrawBannerBtn": "Obter agora",
-  "withdrawBannerSubtitle": "* A taxa padrão de R$6,90 para 1 crédito da nossos parceiros é usada como base para calcular os benefícios. As porcentagens dos benefícios podem diminuir ao comprar pacotes de créditos mais altos na nossos parceiros, mas esta opção sempre oferecerá um benefício.",
+  "withdrawBannerSubtitle": "* A taxa padrão de R$6,90 para 1 crédito dos nossos parceiros é usada como base para calcular os benefícios. As porcentagens dos benefícios podem diminuir ao comprar pacotes de créditos mais altos nos nossos parceiros, mas esta opção sempre oferecerá um benefício.",
   "modalMenuLink17": "Meus ganhos",
   "modalMenuCopyLinkTitle": "Seja o rei de seus amigos indicando-os ao CyberSays e eles lhe agradecerão para sempre... 👑",
   "modalMenuCopyLinkSubTitle": "Para cada amigo que completou a oferta:",

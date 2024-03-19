@@ -29,7 +29,7 @@
     },
     "task2": {
       "taskTitle": "Deposit",
-      "taskTitleOpen": "Royal welcome to our partners: buy 5$, get 10 credits",
+      "taskTitleOpen": "Royal welcome from partners: buy 5$, get 10 credits",
       "taskBlocks": [
         {
           "taskImage": "images/bg-mobile-Task2.png",
