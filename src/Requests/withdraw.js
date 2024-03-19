@@ -15,7 +15,7 @@ async function withdrawPaxum({ paxumID }) {
 
 async function withdrawImLive() {
   const res = await axios.post(
-    process.env.REACT_APP_API_URL + "/api/v1/user/withdrawImlive",
+    process.env.REACT_APP_API_URL + "/api/v1/user/withdrawPartner",
     {},
     {
       headers: {

@@ -60,7 +60,7 @@ async function changeXoxodayStatus(id, status) {
 /* PARTHER */
 
 async function getPartnerTransactions() {
-  const res = await axios.get(process.env.REACT_APP_API_URL + "/api/v1/user/getWithdrawImliveRecords", {
+  const res = await axios.get(process.env.REACT_APP_API_URL + "/api/v1/user/getWithdrawPartnerRecords", {
     headers: {
       token: `${getToken()}`,
     },
@@ -69,7 +69,7 @@ async function getPartnerTransactions() {
 }
 
 async function changePartnerStatus(id, status) {
-  const res = await axios.post(process.env.REACT_APP_API_URL + "/api/v1/user/processImliveWithdraw", {
+  const res = await axios.post(process.env.REACT_APP_API_URL + "/api/v1/user/processPartnerWithdraw", {
     id,
     status,
   }, {
