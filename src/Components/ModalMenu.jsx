@@ -4,18 +4,12 @@ import link1 from "../images/CyberSaysPage/mobileMenuLink/link1.png";
 import link2 from "../images/CyberSaysPage/mobileMenuLink/link2.png";
 import link3 from "../images/CyberSaysPage/mobileMenuLink/link3.png";
 import link4 from "../images/CyberSaysPage/mobileMenuLink/link4.png";
-import link5 from "../images/CyberSaysPage/mobileMenuLink/link5.png";
 import link6 from "../images/CyberSaysPage/mobileMenuLink/link6.png";
 import link7 from "../images/CyberSaysPage/mobileMenuLink/link7.png";
-import link8 from "../images/CyberSaysPage/mobileMenuLink/link8.png";
-import link9 from "../images/CyberSaysPage/mobileMenuLink/link9.png";
-import link10 from "../images/CyberSaysPage/mobileMenuLink/link10.png";
 import link11 from "../images/NewDesign/modalMenu/link11.png";
 import link12 from "../images/NewDesign/modalMenu/link12.png";
 import link13 from "../images/NewDesign/modalMenu/link13.png";
 import link14 from "../images/NewDesign/modalMenu/link14.png";
-import link15 from "../images/NewDesign/modalMenu/link15.png";
-import link16 from "../images/NewDesign/modalMenu/link16.png";
 import toggleTheme1 from "../images/NewDesign/toggleTheme1.png";
 import toggleTheme2 from "../images/NewDesign/toggleTheme2.png";
 import NewLanguageButton from "./Language/NewLanguageButton";
@@ -866,8 +860,8 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
       {legalModal && <Legal languageData={languageData} setOpen={setLegalModal} user={user} />}
       {settingsModal && <Settings languageData={languageData} setOpen={setSettingsModal} user={user} />}
       {contactModal && <Contact languageData={languageData} setOpen={setContactModal} user={user} />}
-      {collaborate && <Collaborate languageData={languageData} setOpen={setCollaborate} user={user} />}
-      {influencer && <Influencer languageData={languageData} setOpen={setInfluencer} user={user} />}
+      {collaborate && <Collaborate languageData={languageData} setOpen={setCollaborate} user={user} userCountryData={userCountry} />}
+      {influencer && <Influencer languageData={languageData} setOpen={setInfluencer} user={user} userCountryData={userCountry} />}
     </div>
   );
 }

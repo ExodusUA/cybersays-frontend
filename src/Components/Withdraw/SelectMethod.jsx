@@ -16,9 +16,9 @@ import right from "../../images/CyberSaysPage/swiperBtnDesctopRight.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import ImLiveBanner from "./PartnerBanner";
+import PartnerBanner from "./PartnerBanner";
 
-function SelectMethod({ languageData, selectPayment, selectedPayment, userCountry, setImLiveSelected, setFlowStarted, user }) {
+function SelectMethod({ languageData, selectPayment, selectedPayment, userCountry, setPartnerSelected, setFlowStarted, user }) {
   const { design } = useDesign();
 
   const getLangFlag = () => {
@@ -42,12 +42,12 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
     <div className="">
       <p className="my-2 text-center text-[18px] font-semibold md:text-[32px]">{languageData?.withdrawTitle2}</p>
       {user?.earned.toFixed(0) !== "0" && (
-          <>
-            <p className="mt-1 text-center text-[14px] font-semibold">{languageData?.withdrawBannerTitle}</p>
-            <ImLiveBanner languageData={languageData} setImLiveSelected={setImLiveSelected} selectPayment={selectPayment} user={user} />
-            <p className="saira m-auto mt-2 max-w-[390px] text-center text-[10px] font-semibold leading-[12px] text-[#A533FF]">{languageData?.withdrawBannerSubtitle}</p>
-          </>
-        )}
+        <>
+          <p className="mt-1 text-center text-[14px] font-semibold">{languageData?.withdrawBannerTitle}</p>
+          <PartnerBanner languageData={languageData} setPartnerSelected={setPartnerSelected} selectPayment={selectPayment} user={user} />
+          <p className="saira m-auto mt-2 max-w-[390px] text-center text-[10px] font-semibold leading-[12px] text-[#A533FF]">{languageData?.withdrawBannerSubtitle}</p>
+        </>
+      )}
       <div className={` m-auto  max-w-[390px] md:max-w-[900px]`}>
         <div className="  relative  m-auto justify-center ">
           <div className="flex items-center">
@@ -181,8 +181,6 @@ function SelectMethod({ languageData, selectPayment, selectedPayment, userCountr
             {languageData?.withdrawBtn}
           </button>
         </div>
-
-        
       </div>
     </div>
   );

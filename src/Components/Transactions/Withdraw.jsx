@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Confirm from "./Confirm";
 import Error from "./Error";
-import ImLivePromoModal from "../Withdraw/PartnerPromoModal";
-import ImLiveFlow from "../Withdraw/Flow/ImLiveFlow";
+import PartnerPromoModal from "../Withdraw/PartnerPromoModal";
+import PartnerFlow from "../Withdraw/Flow/PartnerFlow";
 import PixFlow from "../Withdraw/Flow/PixFlow";
 import WithdrawMain from "../Withdraw/WithdrawMain";
 import { useDesign } from "../../Helpers/Design/DesignContext";
@@ -32,7 +32,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
 
   const [flowStarted, setFlowStarted] = useState(false);
   const [promoModal, setPromoModal] = useState(true);
-  const [imLiveSelected, setImLiveSelected] = useState(false);
+  const [PartnerSelected, setPartnerSelected] = useState(false);
 
   useEffect(() => {
     mixpanel.track("withdraw_modal", {
@@ -69,8 +69,8 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
         return <PaxumFlow languageData={languageData} setConfirm={setConfirm} setSelectedPayment={setSelectedPayment} setError={setError} />;
       case "visa":
         return <VisaFlow languageData={languageData} setConfirm={setConfirm} setError={setError} />;
-      case "imlive":
-        return <ImLiveFlow setConfirm={setConfirm} setOpen={setImLiveSelected} languageData={languageData} closeAll={setOpen} setFlowStarted={setFlowStarted} setError={setError} />;
+      case "Partner":
+        return <PartnerFlow setConfirm={setConfirm} setOpen={setPartnerSelected} languageData={languageData} closeAll={setOpen} setFlowStarted={setFlowStarted} setError={setError} />;
       case "pse":
         return <PSEFlow languageData={languageData} setConfirm={setConfirm} setError={setError} />;
       case "servipag":
@@ -84,10 +84,10 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
 
   return (
     <div>
-      {user?.earned !== 0 && user?.earned > 0 && promoModal && <ImLivePromoModal closeAll={setOpen} setImLiveSelected={setImLiveSelected} setOpen={setPromoModal} languageData={languageData} user={user} />}
+      {user?.earned !== 0 && user?.earned > 0 && promoModal && <PartnerPromoModal closeAll={setOpen} setPartnerSelected={setPartnerSelected} setOpen={setPromoModal} languageData={languageData} user={user} />}
 
-      {imLiveSelected ? (
-        <ImLiveFlow setFlowStarted={setFlowStarted} setConfirm={setConfirm} setOpen={setImLiveSelected} languageData={languageData} closeAll={setOpen} setError={setError} />
+      {PartnerSelected ? (
+        <PartnerFlow setFlowStarted={setFlowStarted} setConfirm={setConfirm} setOpen={setPartnerSelected} languageData={languageData} closeAll={setOpen} setError={setError} />
       ) : (
         <div className="fixed top-0 z-[60] h-screen w-screen bg-[#1E1E1E] bg-opacity-60 p-4 backdrop-blur-md">
           <div className=" absolute left-1/2 top-4 z-10 w-[95%] max-w-[600px] -translate-x-1/2 transform lg:top-0 lg:w-full">
@@ -108,7 +108,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
             <div className="flex h-screen items-center">{getMethodComponent(selectedPayment)}</div>
           ) : (
             <WithdrawMain
-              setImLiveSelected={setImLiveSelected}
+              setPartnerSelected={setPartnerSelected}
               setFlowStarted={setFlowStarted}
               selectPayment={setSelectedPayment}
               selectedPayment={selectedPayment}
