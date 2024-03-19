@@ -2,7 +2,7 @@ import React from "react";
 import { useDesign } from "../../Helpers/Design/DesignContext";
 import SelectMethod from "./SelectMethod";
 
-function WithdrawMain({ selectPayment, selectedPayment, userCountry, user, languageData, setImLiveSelected, setFlowStarted }) {
+function WithdrawMain({ selectPayment, selectedPayment, userCountry, user, languageData, setPartnerSelected, setFlowStarted }) {
   const { design } = useDesign();
 
   return (
@@ -24,7 +24,7 @@ function WithdrawMain({ selectPayment, selectedPayment, userCountry, user, langu
           <SelectMethod
             user={user}
             setFlowStarted={setFlowStarted}
-            setImLiveSelected={setImLiveSelected}
+            setPartnerSelected={setPartnerSelected}
             languageData={languageData}
             selectPayment={selectPayment}
             selectedPayment={selectedPayment}

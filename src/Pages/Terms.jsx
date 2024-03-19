@@ -1,34 +1,35 @@
-import React from 'react'
-import HeaderProfile from '../Components/HeaderProfile'
-import LanguageSocial from '../Components/Language/LanguageSocial';
-import { useLanguage } from '../Helpers/Languages/LanguageContext';
+import React from "react";
+import HeaderProfile from "../Components/HeaderProfile";
+import LanguageSocial from "../Components/Language/LanguageSocial";
+import { useLanguage } from "../Helpers/Languages/LanguageContext";
 
 function Terms() {
-    let {language} = useLanguage()
-    return (
-        <div>
-            <HeaderProfile />
-            <div className='absolute right-2 lg:right-[20px] top-1 lg:top-3 flex items-center align-start z-20'>
-                <LanguageSocial />
-            </div>
+  let { language } = useLanguage();
+  return (
+    <div>
+      <HeaderProfile />
+      <div className="align-start absolute right-2 top-1 z-20 flex items-center lg:right-[20px] lg:top-3">
+        <LanguageSocial />
+      </div>
 
-            <div className='textStyle max-w-[1240px] m-auto overflow-scroll h-screen pb-[50px] saira p-2' dangerouslySetInnerHTML={
-                {
-                    __html: language === 'pt' ? pt_text : language === 'es' ? es_text : en_text}
-            } />
-
-        </div>
-    );
+      <div
+        className="textStyle saira m-auto h-screen max-w-[1240px] overflow-scroll p-2 pb-[50px]"
+        dangerouslySetInnerHTML={{
+          __html: language === "pt" ? pt_text : language === "es" ? es_text : en_text,
+        }}
+      />
+    </div>
+  );
 }
 
-export default Terms
-let en_text =  `<p style="text-align:center;font-size:16pt!important;"><strong>Cybersays.Club - Terms of Use</strong></p>
+export default Terms;
+let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Cybersays.Club - Terms of Use</strong></p>
 <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Last revised:&nbsp;March 2024</p>
 <p>These Terms of Use (&ldquo;<strong>Terms</strong>&rdquo;) constitute a binding legal agreement between Pythia Grant Ltd. (&quot;<strong>Company</strong>&quot;, &quot;<strong>us</strong>&quot;, or &quot;<strong>we</strong>&quot;) and yourself (&quot;<strong>End User</strong>&quot;, &quot;<strong>you</strong>&quot; or &quot;<strong>your</strong>&quot;), and govern your access and use of all features and other services provided by the Company, including without limitation our website: <a href="http://www.CyberSays.club">www.CyberSays.club</a>&nbsp; www.Cybersays.com, <a href="http://www.EllaComanda.com">www.EllaComanda.com</a>, EllaComandas.com, ElaComanda.com (all as &ldquo;<strong>Website</strong>&rdquo;; collectively the &quot;<strong>Services</strong>&quot;).&nbsp;</p>
 <p><br></p>
 <p>By registering an account and accessing the Services, you affirmatively signify that you have read, understood, and agreed to be bound by these Terms as well as our&nbsp;<em>Privacy Policy</em>, which we may update from time to time, each incorporated herein by reference (&quot;<strong>Policies</strong>&quot;).&nbsp;</p>
 <p>If you do not agree to these Policies, you must not register an account or otherwise use or access the Services. &nbsp;</p>
-<p>By using our Services, you accept unequivocally the terms and conditions of our Partners (as defined below), including but not limited to the terms and conditions specified on <a href="http://www.ImLive.com">www.ImLive.com</a> (&quot;<strong>Partner/s Terms</strong>&quot;).&nbsp;</p>
+<p>By using our Services, you accept unequivocally the terms and conditions of our Partners (as defined below), including but not limited to the terms and conditions specified on <a href="http://www.Partners.com">www.Partners.com</a> (&quot;<strong>Partner/s Terms</strong>&quot;).&nbsp;</p>
 <p>These Terms shall supplement all prior agreements you may have had with us or any of our Affiliates. Therefore, we encourage you to read carefully these Terms and any terms that may concern your use of the Services.</p>
 <p>We may revise the Terms at any time by updating the Terms on our Services. You should periodically visit these Terms to review the current terms that apply to your use of the Services. Any use of the Services by you after our publication of any such changes shall constitute your acceptance of these Terms as modified. We may, at our sole discretion and at any time, discontinue providing the Services, or any part thereof without notice.&nbsp;</p>
 <p>YOU ACKNOWLEDGE THAT THE SERVICES ARE STRICTLY FOR ENTERTAINMENT PURPOSES ONLY.</p>
@@ -48,7 +49,7 @@ let en_text =  `<p style="text-align:center;font-size:16pt!important;"><strong>C
       <li><strong>&quot;Offers&quot;&nbsp;</strong>means any special online deals and its rules, as presented onsite, and may change from time to time, by the Partners or the Company on the Services in which End User can participate in. &nbsp;</li>
   </ol>
 </ol>
-<p>The Offer shall include the possibility of doubling the initial amount purchased by the End User, with respect to their initial purchase only.&nbsp;&nbsp;i.e. for the initial 5 credits purchased, the User shall recive 10 credits for use at ImLive.com.&nbsp;</p>
+<p>The Offer shall include the possibility of doubling the initial amount purchased by the End User, with respect to their initial purchase only.&nbsp;&nbsp;i.e. for the initial 5 credits purchased, the User shall recive 10 credits for use at Partners.com.&nbsp;</p>
 <p>In addition, the User shall be eligible to recive a real cash back amount.&nbsp;Due to the currencies difference &ndash; the values of the cask back amount, at the Offer, shall be as follows:</p>
 <ul>
   <li>For the initial five (5) Credits to be purchased in $USD or in EURO &ndash; the User shall receive ten US dollars ($10 USD) upon spending the entire 10 credits.&nbsp;</li>
@@ -243,13 +244,13 @@ let en_text =  `<p style="text-align:center;font-size:16pt!important;"><strong>C
   <li><strong>Contact Us</strong></li>
 </ol>
 <p>If you have any questions, would like to provide us feedback or receive more information about us, please feel free to email us.&nbsp;</p>
-<p><br></p>`
-let es_text =  `<p style="text-align:center;font-size:16pt!important;"><strong>Cybersays.Club - Condiciones de uso</strong></p>
+<p><br></p>`;
+let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Cybersays.Club - Condiciones de uso</strong></p>
 <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&Uacute;ltima revisi&oacute;n:&nbsp;Febrero 2024</p>
 <p>Las presentes Condiciones de uso (&quot;<strong>Condiciones</strong>&quot;) constituyen un Acuerdo legal vinculante entre Pythia Grant Ltd. (&quot;<strong>Empresa</strong>&quot;, &quot;<strong>nosotros</strong>&quot; o &quot;<strong>nuestro</strong>&quot;) y usted (&quot;<strong>Usuario final</strong>&quot;, &quot;<strong>usted</strong>&quot; o &quot;<strong>su</strong>&quot;), y rigen su acceso y uso de todas las funciones y otros servicios proporcionados por la Empresa, incluido, sin limitaci&oacute;n, nuestro sitio web: <a href="http://www.Cybersays.club">www.Cybersays.club</a> (&quot;<strong>Sitio web</strong>&quot;; colectivamente, los &quot;<strong>Servicios</strong>&quot;).&nbsp;</p>
 <p><br></p>
 <p>Al registrar una cuenta y acceder a los Servicios, usted afirma haber le&iacute;do, comprendido y aceptado quedar vinculado por estas Condiciones, as&iacute; como por nuestra&nbsp;<em>Pol&iacute;tica de Privacidad</em>, que podemos actualizar de vez en cuando, cada una incorporada aqu&iacute; por referencia&nbsp;(&quot;<strong>Pol&iacute;ticas</strong>&quot;).&nbsp;</p>
-<p>Si no est&aacute; de acuerdo con estas Pol&iacute;ticas, no debe registrar una cuenta ni utilizar o acceder de otro modo a los Servicios.&nbsp;&nbsp;Al utilizar nuestros Servicios, usted acepta de forma inequ&iacute;voca los T&eacute;rminos y Condiciones de nuestros Socios (tal y como se definen a continuaci&oacute;n), incluidos, entre otros, los T&eacute;rminos y Condiciones especificados en <a href="http://www.ImLive.com">www.ImLive.com</a> (&quot;<strong>T&eacute;rminos de los Socios</strong>&quot;).&nbsp;</p>
+<p>Si no est&aacute; de acuerdo con estas Pol&iacute;ticas, no debe registrar una cuenta ni utilizar o acceder de otro modo a los Servicios.&nbsp;&nbsp;Al utilizar nuestros Servicios, usted acepta de forma inequ&iacute;voca los T&eacute;rminos y Condiciones de nuestros Socios (tal y como se definen a continuaci&oacute;n), incluidos, entre otros, los T&eacute;rminos y Condiciones especificados en <a href="http://www.Partners.com">www.Partners.com</a> (&quot;<strong>T&eacute;rminos de los Socios</strong>&quot;).&nbsp;</p>
 <p>Estos Acuerdos complementar&aacute;n todos los Acuerdos anteriores que haya podido tener con nosotros o con cualquiera de nuestros Afiliados. Por lo tanto, le animamos a que lea detenidamente estas Condiciones y todos los t&eacute;rminos que puedan afectar a su uso de los Servicios.</p>
 <p>Podemos revisar los T&eacute;rminos en cualquier momento actualizando los T&eacute;rminos en nuestros Servicios. Usted debe visitar peri&oacute;dicamente estos T&eacute;rminos para revisar los t&eacute;rminos actuales que se aplican a su uso de los Servicios. Cualquier uso de los Servicios por su parte tras la publicaci&oacute;n por nuestra parte de cualquiera de dichas modificaciones constituir&aacute; su aceptaci&oacute;n de estos T&eacute;rminos en su versi&oacute;n modificada. Podremos, a nuestra entera discreci&oacute;n y en cualquier momento, dejar de prestar los Servicios, o cualquier parte de los mismos, sin previo aviso.&nbsp;</p>
 <p>USTED RECONOCE QUE LOS SERVICIOS SON ESTRICTAMENTE PARA FINES DE ENTRETENIMIENTO.</p>
@@ -269,7 +270,7 @@ let es_text =  `<p style="text-align:center;font-size:16pt!important;"><strong>C
         <li><strong>&quot;Ofertas&quot;&nbsp;</strong>se refiere a cualquier oferta especial en l&iacute;nea y sus reglas, tal y como se presentan en el sitio web, y pueden cambiar de vez en cuando, por los Socios o la Empresa en los Servicios en los que el Usuario Final puede participar. &nbsp;</li>
     </ol>
 </ol>
-<p>La Oferta incluir&aacute; la posibilidad de duplicar la cantidad inicial adquirida por el Usuario Final, &uacute;nicamente con respecto a su compra inicial. es decir, por los 5 cr&eacute;ditos iniciales adquiridos, el Usuario recibir&aacute; 10 cr&eacute;ditos para su uso en ImLive.com.&nbsp;</p>
+<p>La Oferta incluir&aacute; la posibilidad de duplicar la cantidad inicial adquirida por el Usuario Final, &uacute;nicamente con respecto a su compra inicial. es decir, por los 5 cr&eacute;ditos iniciales adquiridos, el Usuario recibir&aacute; 10 cr&eacute;ditos para su uso en Partners.com.&nbsp;</p>
 <p>Adem&aacute;s, el Usuario podr&aacute; recibir un importe real de devoluci&oacute;n de efectivo. Debido a&nbsp;la diferencia de divisas - los valores del importe de devoluci&oacute;n en efectivo, en la Oferta, ser&aacute;n los siguientes:</p>
 <ul>
     <li>Por los cinco (5) cr&eacute;ditos iniciales que se compren en $USD o en EURO - el Usuario recibir&aacute; diez d&oacute;lares estadounidenses ($10 USD), al gastar la totalidad de los 10 cr&eacute;ditos.&nbsp;</li>
@@ -457,8 +458,8 @@ let es_text =  `<p style="text-align:center;font-size:16pt!important;"><strong>C
     <li><strong>Contacte con nosotros</strong></li>
 </ol>
 <p>Si tiene alguna pregunta, desea hacernos llegar sus comentarios o recibir m&aacute;s informaci&oacute;n sobre nosotros, no dude en enviarnos un correo electr&oacute;nico.&nbsp;</p>
-<p><br></p>`
-let pt_text =  `<p style="text-align:center;font-size:16pt!important;" class="p14">
+<p><br></p>`;
+let pt_text = `<p style="text-align:center;font-size:16pt!important;" class="p14">
 <span class="s1"><strong>Cybersays.Club - Termos de uso</strong></span>
 </p>
 <p class="p36">
@@ -506,8 +507,8 @@ Servi&ccedil;os, voc&ecirc; aceita inequivocamente os termos e
 condi&ccedil;&otilde;es de nossos Parceiros (conforme definido abaixo),
 incluindo, entre outros, os termos e condi&ccedil;&otilde;es especificados
 em
-<a href="http://www.ImLive.com"
-  ><span class="s18">www.ImLive.com</span></a
+<a href="http://www.Partners.com"
+  ><span class="s18">www.Partners.com</span></a
 >
 ("<strong>Termos de Parceiros</strong>").
 </p>
@@ -629,7 +630,7 @@ Servi&ccedil;os.
   inicial comprado pelo Usu&aacute;rio Final, com rela&ccedil;&atilde;o
   apenas &agrave; sua compra inicial, ou seja, para os 5 cr&eacute;ditos
   iniciais comprados, o Usu&aacute;rio receber&aacute; 10 cr&eacute;ditos
-  para uso na ImLive.com.
+  para uso na Partners.com.
 </span>
 </p>
 <p class="p38">
@@ -1679,5 +1680,4 @@ vista como, um endosso ou recomenda&ccedil;&atilde;o de nossa parte.
   vontade para nos enviar um e-mail.
 </span>
 </p>
-<p class="p5">&nbsp;</p>`
-
+<p class="p5">&nbsp;</p>`;

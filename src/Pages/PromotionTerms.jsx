@@ -1,28 +1,27 @@
-import React from 'react'
-import HeaderProfile from '../Components/HeaderProfile'
-import LanguageSocial from '../Components/Language/LanguageSocial';
-import { useLanguage } from '../Helpers/Languages/LanguageContext';
+import React from "react";
+import HeaderProfile from "../Components/HeaderProfile";
+import LanguageSocial from "../Components/Language/LanguageSocial";
+import { useLanguage } from "../Helpers/Languages/LanguageContext";
 
 function PromotionTerms() {
-    let { language } = useLanguage()
-    return (
-        <div>
-
-            <HeaderProfile />
-            <div className='absolute right-2 lg:right-[20px] top-1 lg:top-3 flex items-center align-start z-20'>
-                <LanguageSocial />
-            </div>
-            <div className='textStyle max-w-[1240px] m-auto overflow-scroll h-screen pb-[50px] saira p-2' dangerouslySetInnerHTML={
-                {
-                    __html: language === 'pt' ? pt_text : language === 'es' ? es_text : en_text
-                }
-            } />
-
-        </div>
-    )
+  let { language } = useLanguage();
+  return (
+    <div>
+      <HeaderProfile />
+      <div className="align-start absolute right-2 top-1 z-20 flex items-center lg:right-[20px] lg:top-3">
+        <LanguageSocial />
+      </div>
+      <div
+        className="textStyle saira m-auto h-screen max-w-[1240px] overflow-scroll p-2 pb-[50px]"
+        dangerouslySetInnerHTML={{
+          __html: language === "pt" ? pt_text : language === "es" ? es_text : en_text,
+        }}
+      />
+    </div>
+  );
 }
 
-export default PromotionTerms
+export default PromotionTerms;
 let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Pythia Grant Ltd. &ndash; CyberSays.Club&nbsp;&nbsp;Promotion Terms</strong></p>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Last revised: March 2024</p>
 <p>The following are the terms and conditions of the Company promotion available at,&nbsp;&nbsp;<a href="http://www.CyberSays.com">www.CyberSays.com</a>, <a href="http://www.EllaComanda.com">www.EllaComanda.com</a>, <a href="http://www.Ellacomandas.com">www.Ellacomandas.com</a>, <a href="http://www.Ellacomanda.com">www.Ellacomanda.com</a> &nbsp;(all as &quot;<strong>Cyber Says</strong>&quot; or &quot;<strong>Cyber Says Promotion Terms</strong>&quot;; &quot;<strong>Promotion</strong>&quot;), which is sponsored by Pythia Grant Ltd. (&quot;<strong>Company</strong>&quot;, &quot;<strong>us</strong>&quot; or &quot;<strong>we</strong>&quot; or &quot;<strong>our</strong>&quot;).&nbsp;</p>
@@ -55,7 +54,7 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
 <p><br></p>
 <p>In addition to the cumulative conditions set forth above, to be eligible to participate in the Cyber Says Promotion, you hereby represent and warrant that you will complete <strong>one of the following</strong> conditions:</p>
 <ul>
-  <li>Create a new and legitimate account and make a first purchase on <a href="http://www.ImLive.com">www.ImLive.com</a> ;&nbsp;</li>
+  <li>Create a new and legitimate account and make a first purchase on <a href="http://www.Partners.com">www.Partners.com</a> ;&nbsp;</li>
   <li>Create a new and legitimate account on other third-party websites, as presented and dictated by the Company on the Cyber Says Promotion, from time to time (&quot;<strong>Third Party Website</strong>&quot;)); <strong>OR&nbsp;</strong></li>
   <li>Complete the Free Post Form,&nbsp;&nbsp;as defined below (collectively referred as, &quot;<strong>Eligible Users</strong>&quot;).</li>
 </ul>
@@ -70,7 +69,7 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
 </ul>
 <p><br></p>
 <ol>
-  <li>As part of this Promotion, you acknowledge that (i) any credit bonus received on ImLive.com or any Third Party Website as part of this Promotion is <strong>not redeemable, not refundable and non-exchangeable</strong>; (ii) these credit bonuses must be used on ImLive.com or any relevant Third Party Website <strong>only</strong>; (iii) these credit bonuses do not have any pecuniary value or any kind of value outside of ImLive.com or outside of the applicable Third Party Website; (iv) you are solely liable towards your use of ImLive.com services or any relevant Third Party Website&nbsp;&nbsp;as well as the use of such credits; and (v) you have read <em>ImLive.com terms and conditions</em> or where applicable, the relevant Third Party Website terms and conditions before using the relevant services or using any of the credit bonuses on their services.</li>
+  <li>As part of this Promotion, you acknowledge that (i) any credit bonus received on Partners.com or any Third Party Website as part of this Promotion is <strong>not redeemable, not refundable and non-exchangeable</strong>; (ii) these credit bonuses must be used on Partners.com or any relevant Third Party Website <strong>only</strong>; (iii) these credit bonuses do not have any pecuniary value or any kind of value outside of Partners.com or outside of the applicable Third Party Website; (iv) you are solely liable towards your use of Partners.com services or any relevant Third Party Website&nbsp;&nbsp;as well as the use of such credits; and (v) you have read <em>Partners.com terms and conditions</em> or where applicable, the relevant Third Party Website terms and conditions before using the relevant services or using any of the credit bonuses on their services.</li>
 </ol>
 <p><br></p>
 <ol>
@@ -111,7 +110,7 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
 </ol>
 <p><br></p>
 <ol>
-  <li>Eligible Users will be entitled to earn one (1) ticket to participate in the Promotion for each second and above transaction of purchasing real credit on <a href="http://www.ImLive.com">www.ImLive.com</a> &nbsp;<strong>or</strong> any other Third Party Website (excluding bonus credits), (i.e. starting the 6 real credits purchased and above). &nbsp;</li>
+  <li>Eligible Users will be entitled to earn one (1) ticket to participate in the Promotion for each second and above transaction of purchasing real credit on <a href="http://www.Partners.com">www.Partners.com</a> &nbsp;<strong>or</strong> any other Third Party Website (excluding bonus credits), (i.e. starting the 6 real credits purchased and above). &nbsp;</li>
 </ol>
 <p>Each 1 real credit purchased shall be equal to 1 ticket. &nbsp;</p>
 <p><br></p>
@@ -137,9 +136,9 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
 <p><br></p>
 <p>&quot;<strong>Online Offer</strong>&quot; shall mean completing all of the following steps &ndash;&nbsp;</p>
 <ul>
-  <li><strong>Create a new and legitimate account on ImLive.com&nbsp;</strong><strong>or</strong><strong>&nbsp;where applicable on Third Party Website.</strong></li>
-  <li><strong>Make a minimum purchase of five credits on ImLive.com&nbsp;</strong><strong>or</strong><strong>&nbsp;where applicable on Third Party Website</strong> &ndash; you acknowledge that by making a minimum purchase of five credits on ImLive.com, you will automatically receive a one-time additional bonus of five credits.</li>
-  <li><strong>Spend the entire ten (10) credits that you received on ImLive.com&nbsp;</strong><strong>or</strong><strong>&nbsp;where applicable on Third Party Website.</strong></li>
+  <li><strong>Create a new and legitimate account on Partners.com&nbsp;</strong><strong>or</strong><strong>&nbsp;where applicable on Third Party Website.</strong></li>
+  <li><strong>Make a minimum purchase of five credits on Partners.com&nbsp;</strong><strong>or</strong><strong>&nbsp;where applicable on Third Party Website</strong> &ndash; you acknowledge that by making a minimum purchase of five credits on Partners.com, you will automatically receive a one-time additional bonus of five credits.</li>
+  <li><strong>Spend the entire ten (10) credits that you received on Partners.com&nbsp;</strong><strong>or</strong><strong>&nbsp;where applicable on Third Party Website.</strong></li>
 </ul>
 <p><br></p>
 <ol>
@@ -166,7 +165,7 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
                   <li>The winner and one (1) Referred Friend and one (1) Eligible User that referred the winner (where applicable) <strong>and</strong> completed the Online Offer (&quot;<strong>Referring Friend</strong>&quot;); (both collectively &quot;<strong>Travel Friends</strong>&quot;)</li>
               </ol>
           </li>
-          <li>One thousand dollars ($1,000.00 USD) worth of credits to be used on <a href="http://www.ImLive.com">www.ImLive.com</a> &nbsp;(no redeemable, no exchangeable, no refundable) for the winner <strong>only</strong>; and&nbsp;</li>
+          <li>One thousand dollars ($1,000.00 USD) worth of credits to be used on <a href="http://www.Partners.com">www.Partners.com</a> &nbsp;(no redeemable, no exchangeable, no refundable) for the winner <strong>only</strong>; and&nbsp;</li>
           <li>One thousand dollars ($1,000.00 USD) for the winner and, where applicable, five hundred dollars ($500.00 USD) for each of the two winner&apos;s Travel Friends (see definition below) of allowance as part of the trip to Las Vegas, Dinner with Porn stars and Cadillac drive (collectively section 20.a, 20.b and 20.c referred to as &quot;<strong>Prizes</strong>&quot;). ARV: five thousand dollars ($5,000.00 USD).</li>
       </ol>
   </li>
@@ -315,7 +314,7 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
 <p>CAUTION: ANY ATTEMPT TO DELIBERATELY DAMAGE COMPANY&apos;S SERVICES OR UNDERMINE THE LEGITIMATE OPERATION OF THE PROMOTION OFFERED BY COMPANY IS A VIOLATION OF CRIMINAL AND CIVIL LAWS. SHOULD SUCH AN ATTEMPT BE MADE, COMPANY RESERVES THE RIGHT TO SEEK DAMAGES FROM ANY SUCH INDIVIDUAL TO THE FULLEST EXTENT PERMITTED BY LAW.</p>
 <p>For information, support or questions, please contact us at <a href="mailto:vegas@cybersays.club">vegas@cybersays.club</a>&nbsp;</p>
 <p>&nbsp;</p>
-<p><br></p>`
+<p><br></p>`;
 let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Pythia Grant Ltd. - Condiciones de promoci&oacute;n de CyberSays.Club</strong></p>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&Uacute;ltima revisi&oacute;n: Marzo 2024</p>
 <p>A continuaci&oacute;n se exponen los T&eacute;rminos y Condiciones de la promoci&oacute;n de la Empresa (&quot;<strong>Cyber Says</strong>&quot; y &quot;<strong>Condiciones de la promoci&oacute;n Cyber Says</strong>&quot;; &quot;<strong>Promoci&oacute;n</strong>&quot;), patrocinada por Pythia Grant Ltd. (&quot;<strong>Empresa</strong>&quot;, &quot;<strong>nosotros</strong>&quot; o &quot;<strong>nos</strong>&quot; o &quot;<strong>nuestro</strong>&quot;).&nbsp;</p>
@@ -348,7 +347,7 @@ let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
 <p><br></p>
 <p>Adem&aacute;s de las condiciones acumulativas expuestas anteriormente, para poder participar en la promoci&oacute;n Cyber Says, usted declara y garantiza que cumplir&aacute; <strong>una de las siguientes&nbsp;</strong>condiciones:</p>
 <ul>
-    <li>Crear una cuenta nueva y leg&iacute;tima y realice una primera compra en <a href="http://www.ImLive.com">www.ImLive.com</a> ;&nbsp;</li>
+    <li>Crear una cuenta nueva y leg&iacute;tima y realice una primera compra en <a href="http://www.Partners.com">www.Partners.com</a> ;&nbsp;</li>
     <li>Crear una cuenta nueva y leg&iacute;tima en otros sitios web de terceros, tal y como presente y dicte la Empresa en la promoci&oacute;n Cyber Says, de vez en cuando (&quot;<strong>Sitio web de terceros</strong>&quot;); <strong>O bien&nbsp;</strong></li>
     <li>Culminar el formulario de env&iacute;o gratuito, tal y como se define a continuaci&oacute;n (denominados colectivamente, &quot;<strong>Usuarios Elegibles</strong>&quot;).</li>
 </ul>
@@ -363,7 +362,7 @@ let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
 </ul>
 <p><br></p>
 <ol>
-    <li>Como parte de esta Promoci&oacute;n, usted reconoce que (i) cualquier bonificaci&oacute;n de cr&eacute;dito recibida en ImLive.com o en cualquier Sitio Web de Terceros como parte de esta Promoci&oacute;n <strong>no es canjeable, no es reembolsable y no es intercambiable; (ii) estas bonificaciones de cr&eacute;dito&nbsp;</strong>deben utilizarse &uacute;nicamente en ImLive.com o en cualquier sitio web de terceros pertinente <strong>&uacute;nicamente; (iii) estos bonos de cr&eacute;dito&nbsp;</strong>no tienen ning&uacute;n valor pecuniario ni ning&uacute;n tipo de valor fuera de ImLive.com o fuera del sitio web de terceros pertinente; (iv) usted es el &uacute;nico responsable del uso que haga de los servicios de ImLive.com o de cualquier sitio web de terceros pertinente, as&iacute; como del uso de dichos cr&eacute;ditos; y (v) ha le&iacute;do las <em>los T&eacute;rminos y Condiciones de ImLive.com</em> o, en su caso, los T&eacute;rminos y Condiciones del Sitio Web de Terceros pertinente antes de utilizar los servicios correspondientes o de utilizar cualquiera de los bonos de cr&eacute;dito de sus servicios.</li>
+    <li>Como parte de esta Promoci&oacute;n, usted reconoce que (i) cualquier bonificaci&oacute;n de cr&eacute;dito recibida en Partners.com o en cualquier Sitio Web de Terceros como parte de esta Promoci&oacute;n <strong>no es canjeable, no es reembolsable y no es intercambiable; (ii) estas bonificaciones de cr&eacute;dito&nbsp;</strong>deben utilizarse &uacute;nicamente en Partners.com o en cualquier sitio web de terceros pertinente <strong>&uacute;nicamente; (iii) estos bonos de cr&eacute;dito&nbsp;</strong>no tienen ning&uacute;n valor pecuniario ni ning&uacute;n tipo de valor fuera de Partners.com o fuera del sitio web de terceros pertinente; (iv) usted es el &uacute;nico responsable del uso que haga de los servicios de Partners.com o de cualquier sitio web de terceros pertinente, as&iacute; como del uso de dichos cr&eacute;ditos; y (v) ha le&iacute;do las <em>los T&eacute;rminos y Condiciones de Partners.com</em> o, en su caso, los T&eacute;rminos y Condiciones del Sitio Web de Terceros pertinente antes de utilizar los servicios correspondientes o de utilizar cualquiera de los bonos de cr&eacute;dito de sus servicios.</li>
 </ol>
 <p><br></p>
 <ol>
@@ -404,7 +403,7 @@ let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
 </ol>
 <p><br></p>
 <ol>
-    <li>Los Usuarios Elegibles tendr&aacute;n derecho a ganar un (1) ticket para participar en la Promoci&oacute;n por cada segunda transacci&oacute;n y superior de compra de cr&eacute;ditos reales en www.ImLive.com <strong>o en&nbsp;</strong>cualquier otro Sitio Web de Terceros (excluyendo los cr&eacute;ditos de bonificaci&oacute;n), (es decir, a partir de los 6 cr&eacute;ditos reales comprados y superiores). &nbsp;</li>
+    <li>Los Usuarios Elegibles tendr&aacute;n derecho a ganar un (1) ticket para participar en la Promoci&oacute;n por cada segunda transacci&oacute;n y superior de compra de cr&eacute;ditos reales en www.Partners.com <strong>o en&nbsp;</strong>cualquier otro Sitio Web de Terceros (excluyendo los cr&eacute;ditos de bonificaci&oacute;n), (es decir, a partir de los 6 cr&eacute;ditos reales comprados y superiores). &nbsp;</li>
 </ol>
 <p>Cada cr&eacute;dito real (1) adquirido equivaldr&aacute; a un (1) billete. &nbsp;</p>
 <p><br></p>
@@ -430,9 +429,9 @@ let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
 <p><br></p>
 <p>&quot;<strong>Oferta en l&iacute;nea</strong>&quot; significar&aacute; la culminaci&oacute;n de todos los pasos siguientes -&nbsp;</p>
 <ul>
-    <li><strong>Crear una cuenta nueva y leg&iacute;tima en ImLive.com&nbsp;</strong><strong>o</strong><strong>, en su caso, en el sitio web de terceros.</strong></li>
-    <li><strong>Realice una compra m&iacute;nima de cinco cr&eacute;ditos en&nbsp;</strong>ImLive.com <strong>o</strong><strong>, en su caso, en el sitio web de terceros&nbsp;</strong>- usted reconoce que al realizar una compra m&iacute;nima de cinco cr&eacute;ditos en ImLive.com, recibir&aacute; autom&aacute;ticamente una bonificaci&oacute;n adicional &uacute;nica de cinco cr&eacute;ditos.</li>
-    <li><strong>Gaste la totalidad de los diez (10) cr&eacute;ditos que ha recibido en ImLive.com&nbsp;</strong><strong>o,&nbsp;</strong><strong>en su caso, en el sitio web de terceros.</strong></li>
+    <li><strong>Crear una cuenta nueva y leg&iacute;tima en Partners.com&nbsp;</strong><strong>o</strong><strong>, en su caso, en el sitio web de terceros.</strong></li>
+    <li><strong>Realice una compra m&iacute;nima de cinco cr&eacute;ditos en&nbsp;</strong>Partners.com <strong>o</strong><strong>, en su caso, en el sitio web de terceros&nbsp;</strong>- usted reconoce que al realizar una compra m&iacute;nima de cinco cr&eacute;ditos en Partners.com, recibir&aacute; autom&aacute;ticamente una bonificaci&oacute;n adicional &uacute;nica de cinco cr&eacute;ditos.</li>
+    <li><strong>Gaste la totalidad de los diez (10) cr&eacute;ditos que ha recibido en Partners.com&nbsp;</strong><strong>o,&nbsp;</strong><strong>en su caso, en el sitio web de terceros.</strong></li>
 </ul>
 <p><br></p>
 <ol>
@@ -459,7 +458,7 @@ let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
                     <li>El ganador y un (1) Amigo Recomendado y un (1) Usuario Apto que haya recomendado al ganador (cuando proceda) <strong>y&nbsp;</strong>haya culminado la Oferta en l&iacute;nea (&quot;<strong>Amigo Recomendado</strong>&quot;); (ambos colectivamente &quot;<strong>Amigos Viajeros</strong>&quot;)</li>
                 </ol>
             </li>
-            <li>Mil d&oacute;lares (1.000,00 USD) en cr&eacute;ditos para utilizar en <a href="http://www.ImLive.com">www.ImLive.com</a> (no canjeables ni reembolsables) <strong>s&oacute;lo&nbsp;</strong>para el ganador; y&nbsp;</li>
+            <li>Mil d&oacute;lares (1.000,00 USD) en cr&eacute;ditos para utilizar en <a href="http://www.Partners.com">www.Partners.com</a> (no canjeables ni reembolsables) <strong>s&oacute;lo&nbsp;</strong>para el ganador; y&nbsp;</li>
             <li>Mil d&oacute;lares ($1.000,00 USD) para el ganador y, en su caso, quinientos d&oacute;lares ($500,00 USD) para cada uno de los dos Amigos de viaje del ganador (v&eacute;ase la definici&oacute;n m&aacute;s abajo) de asignaci&oacute;n como parte del viaje a Las Vegas, Cena con estrellas del porno y Paseo en Cadillac (denominados colectivamente &quot;<strong>Premios</strong>&quot; en las secciones 20.a, 20.b y 20.c). VAVP: cinco mil d&oacute;lares ($5.000,00 USD).</li>
         </ol>
     </li>
@@ -606,7 +605,7 @@ let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
 <p><br></p>
 <p>PRECAUCI&Oacute;N: CUALQUIER INTENTO DE DA&Ntilde;AR DELIBERADAMENTE LOS SERVICIOS DE LA EMPRESA O DE SOCAVAR EL FUNCIONAMIENTO LEG&Iacute;TIMO DE LA PROMOCI&Oacute;N OFRECIDA POR LA EMPRESA CONSTITUYE UNA VIOLACI&Oacute;N DE LAS LEYES PENALES Y CIVILES. EN CASO DE QUE SE PRODUZCA TAL INTENTO, LA EMPRESA SE RESERVA EL DERECHO A RECLAMAR DA&Ntilde;OS Y PERJUICIOS A CUALQUIERA DE DICHAS PERSONAS EN LA M&Aacute;XIMA MEDIDA PERMITIDA POR LA LEY.</p>
 <p>Para informaci&oacute;n, asistencia o preguntas, p&oacute;ngase en contacto con nosotros en vegas@cybersays.club. &nbsp;</p>
-<p><br></p>`
+<p><br></p>`;
 let pt_text = `<p style="text-align:center;font-size:16pt!important;" class="p14">
 <span class="s1"
   ><strong
@@ -724,8 +723,8 @@ Says, voc&ecirc; declara e garante que cumprir&aacute;
 <li class="li6">
   Criar uma conta nova e leg&iacute;tima e fa&ccedil;a sua primeira compra
   na
-  <a href="http://www.ImLive.com"
-    ><span class="s3">www.ImLive.com</span></a
+  <a href="http://www.Partners.com"
+    ><span class="s3">www.Partners.com</span></a
   >;
 </li>
 <li class="li6">
@@ -770,22 +769,22 @@ Says, voc&ecirc; declara e garante que cumprir&aacute;
 <ol class="ol1">
 <li class="li6">
   Como parte desta Promo&ccedil;&atilde;o, voc&ecirc; reconhece que (i)
-  qualquer b&ocirc;nus de cr&eacute;dito recebido na ImLive.com ou em
+  qualquer b&ocirc;nus de cr&eacute;dito recebido na Partners.com ou em
   qualquer Site de Terceiros como parte desta Promo&ccedil;&atilde;o
   <strong>n&atilde;o </strong>&eacute;
   <strong
     >resgat&aacute;vel, n&atilde;o &eacute; reembols&aacute;vel e
     n&atilde;o pode ser trocado</strong
   >; (ii) esses b&ocirc;nus de cr&eacute;dito devem ser usados somente na
-  ImLive.com ou em qualquer Site de Terceiros relevante; (iii) esses
+  Partners.com ou em qualquer Site de Terceiros relevante; (iii) esses
   b&ocirc;nus de cr&eacute;dito n&atilde;o t&ecirc;m nenhum valor
-  pecuni&aacute;rio ou qualquer tipo de valor fora da ImLive.com ou fora
+  pecuni&aacute;rio ou qualquer tipo de valor fora da Partners.com ou fora
   do Site de Terceiros aplic&aacute;vel; (iv) voc&ecirc; &eacute; o
   &uacute;nico respons&aacute;vel pelo uso dos servi&ccedil;os da
-  ImLive.com ou de qualquer Site de Terceiros relevante, bem como pelo uso
+  Partners.com ou de qualquer Site de Terceiros relevante, bem como pelo uso
   de tais cr&eacute;ditos; e (v) voc&ecirc; leu
   <span class="s1"
-    ><em>os Termos e Condi&ccedil;&otilde;es da ImLive.com</em></span
+    ><em>os Termos e Condi&ccedil;&otilde;es da Partners.com</em></span
   >
   ou, quando aplic&aacute;vel, os termos e condi&ccedil;&otilde;es do Site
   de Terceiros relevante antes de usar os servi&ccedil;os relevantes ou
@@ -930,8 +929,8 @@ Says, voc&ecirc; declara e garante que cumprir&aacute;
   Os Usu&aacute;rios Eleg&iacute;veis ter&atilde;o direito a ganhar um (1)
   bilhete para participar da Promo&ccedil;&atilde;o para cada segunda
   transa&ccedil;&atilde;o ou mais de compra de cr&eacute;dito real no site
-  <a href="http://www.ImLive.com"
-    ><span class="s3">www.ImLive.com</span></a
+  <a href="http://www.Partners.com"
+    ><span class="s3">www.Partners.com</span></a
   >
   <span class="s1"><strong>ou</strong></span
   ><strong> </strong>em qualquer outro site de terceiros (excluindo
@@ -1026,23 +1025,23 @@ etapas a seguir
 </p>
 <ul class="ul1">
 <li class="li6">
-  <strong>Criar uma conta nova e leg&iacute;tima na ImLive.com </strong
+  <strong>Criar uma conta nova e leg&iacute;tima na Partners.com </strong
   ><span class="s1"><strong>ou</strong></span
   ><strong>, quando aplic&aacute;vel, no Site de Terceiros.</strong>
 </li>
 <li class="li6">
   <strong
-    >Fazer uma compra m&iacute;nima de cinco cr&eacute;ditos na ImLive.com </strong
+    >Fazer uma compra m&iacute;nima de cinco cr&eacute;ditos na Partners.com </strong
   ><span class="s1"><strong>ou</strong></span
   ><strong>, quando aplic&aacute;vel, no site de terceiros </strong>- o
   usu&aacute;rio reconhece que, ao fazer uma compra m&iacute;nima de cinco
-  cr&eacute;ditos na ImLive.com, receber&aacute; automaticamente um
+  cr&eacute;ditos na Partners.com, receber&aacute; automaticamente um
   b&ocirc;nus adicional &uacute;nico de cinco cr&eacute;ditos.
 </li>
 <li class="li6">
   <strong
     >Gastar todos os dez (10) cr&eacute;ditos que voc&ecirc; recebeu na
-    ImLive.com </strong
+    Partners.com </strong
   ><span class="s1"><strong>ou</strong></span
   ><strong>, quando aplic&aacute;vel, no site de terceiros.</strong>
 </li>
@@ -1115,8 +1114,8 @@ etapas a seguir
   <li class="li6">
     US$1.000,00 (mil d&oacute;lares americaos) em cr&eacute;ditos a serem
     usados no site
-    <a href="http://www.ImLive.com"
-      ><span class="s3">www.ImLive.com</span></a
+    <a href="http://www.Partners.com"
+      ><span class="s3">www.Partners.com</span></a
     >
     (n&atilde;o resgat&aacute;veis, n&atilde;o troc&aacute;veis,
     n&atilde;o reembols&aacute;veis)
@@ -1708,4 +1707,4 @@ M&Aacute;XIMA PERMITIDA POR LEI.
 Para obter informa&ccedil;&otilde;es, suporte ou d&uacute;vidas, entre em
 contato conosco pelo e-mail vegas@cybersays.club
 </p>
-<p><br></p>`
+<p><br></p>`;

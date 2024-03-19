@@ -13,7 +13,7 @@ async function withdrawPaxum({ paxumID }) {
   );
 }
 
-async function withdrawImLive() {
+async function withdrawPartner() {
   const res = await axios.post(
     process.env.REACT_APP_API_URL + "/api/v1/user/withdrawPartner",
     {},
@@ -63,4 +63,4 @@ async function withdrawXoxoday(email) {
   );
 }
 
-export { withdrawPaxum, withdrawImLive, withdrawPix, withdrawD24, withdrawXoxoday };
+export { withdrawPaxum, withdrawPartner, withdrawPix, withdrawD24, withdrawXoxoday };

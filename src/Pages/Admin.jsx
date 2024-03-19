@@ -22,7 +22,7 @@ function Admin() {
     } else if (selectedType === "Xoxoday") {
       fetchXoxodayTransaction();
     } else if (selectedType === "Partner") {
-      fetchImliveTransactions();
+      fetchPartnerTransactions();
     }
   }, [selectedType]);
 
@@ -67,7 +67,7 @@ function Admin() {
     });
   };
 
-  const fetchImliveTransactions = async () => {
+  const fetchPartnerTransactions = async () => {
     const res = await getPartnerTransactions();
     res.data = res.data.map((transaction) => {
       transaction.type = "Partner";
@@ -88,7 +88,7 @@ function Admin() {
       } else if (selectedType === "Xoxoday") {
         fetchXoxodayTransaction();
       } else if (selectedType === "Partner") {
-        fetchImliveTransactions();
+        fetchPartnerTransactions();
       }
       return;
     }

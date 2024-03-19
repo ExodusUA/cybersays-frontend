@@ -31,7 +31,7 @@ import infoBtn from "../images/NewDesign/infoBtn.png";
 import ImageModals from "../Components/ImageModals";
 import CompetitionRules from "../Components/CompetitionRules";
 import ToolTipInfo from "../Components/ToolTipInfo";
-import imLiveLinks from "../Helpers/imLiveLinks.json";
+import PartnerLinks from "../Helpers/PartnerLinks.json";
 import WinTicketModal from "../Components/WinTicketModal";
 import InfoOfferModal from "../Components/InfoOfferModal";
 import Earned from "../Components/Transactions/Modals/Earned";
@@ -42,7 +42,7 @@ import TicketsHistory from "../Components/Transactions/TicketsHistory";
 import SocialLink from "../Components/SocialLink";
 import DoubleComplete from "../Components/DoubleComplete";
 import { useLanguage } from "../Helpers/Languages/LanguageContext";
-import PromoModal from "../Components/Withdraw/ImLivePromoModal";
+import PromoModal from "../Components/Withdraw/PartnerPromoModal";
 import moengage from "@moengage/web-sdk";
 
 var mixpanel = require("mixpanel-browser");
@@ -94,7 +94,7 @@ function Main({ languageData }) {
 
   const [promoModal, setPromoModal] = useState(false);
 
-  const [imLiveURL, setImLiveURL] = useState(null);
+  const [PartnerURL, setPartnerURL] = useState(null);
   const navigate = useNavigate();
   const urlParams = new URLSearchParams(window.location.search);
 
@@ -341,15 +341,15 @@ function Main({ languageData }) {
 
   useEffect(() => {
     if (userData && userCountry) {
-      let linkData = imLiveLinks.find((link) => link.CultureCode.indexOf(userCountry) !== -1);
-      console.log(imLiveLinks);
-      if (linkData === undefined) linkData = imLiveLinks.find((link) => link.CultureCode.indexOf("en") !== -1);
+      let linkData = PartnerLinks.find((link) => link.CultureCode.indexOf(userCountry) !== -1);
+      console.log(PartnerLinks);
+      if (linkData === undefined) linkData = PartnerLinks.find((link) => link.CultureCode.indexOf("en") !== -1);
 
-      //let link = `https://imlive.com//wmaster.ashx?QueryID=197&WID=${linkData.CybersaysWid}&linkID=701&from=freevideo6&cbname=CyberSays&c=${linkData.CultureCode}&promocode=${userData?.id}`
+      //let link = `https://Partner.com//wmaster.ashx?QueryID=197&WID=${linkData.CybersaysWid}&linkID=701&from=freevideo6&cbname=CyberSays&c=${linkData.CultureCode}&promocode=${userData?.id}`
       let link = `https://cybersays-proxy.vercel.app?QueryID=197&WID=${linkData.CybersaysWid}&linkID=701&from=freevideo6&cbname=CyberSays&c=${linkData.CultureCode}&promocode=${userData?.id}&task=${
         userData?.completed_tasks?.indexOf("3") !== -1 ? 3 : userData?.completed_tasks?.indexOf("2") ? 2 : 1
       }`;
-      setImLiveURL(link);
+      setPartnerURL(link);
     }
   }, [userData, userCountry]);
 
@@ -389,7 +389,7 @@ function Main({ languageData }) {
           onSlideChange={(swiper) => handleSwiperChange(swiper)}
         >
           <SwiperSlide>
-            <Homepage scrollToPage={scrollToPage} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} imLiveURL={imLiveURL} />
+            <Homepage scrollToPage={scrollToPage} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} PartnerURL={PartnerURL} />
           </SwiperSlide>
           <SwiperSlide>
             <Double
@@ -399,7 +399,7 @@ function Main({ languageData }) {
               activePageIndex={activePageIndex}
               user={userData}
               languageData={languageData}
-              imLiveURL={imLiveURL}
+              PartnerURL={PartnerURL}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -411,7 +411,7 @@ function Main({ languageData }) {
               activePageIndex={activePageIndex}
               user={userData}
               languageData={languageData}
-              imLiveURL={imLiveURL}
+              PartnerURL={PartnerURL}
               setTourModal={setTourModal}
             />
           </SwiperSlide>
@@ -420,7 +420,7 @@ function Main({ languageData }) {
               setSocialLink={setSocialLink}
               setRulesModal={setRulesModal}
               siteData={siteData}
-              imLiveURL={imLiveURL}
+              PartnerURL={PartnerURL}
               user={userData}
               languageData={languageData}
               setLeaderboardModal={setLeaderboardModal}
@@ -472,7 +472,7 @@ function Main({ languageData }) {
           path="/competition"
           element={
             <AuthCheck>
-              <Competition imLiveURL={imLiveURL} user={userData} />
+              <Competition PartnerURL={PartnerURL} user={userData} />
             </AuthCheck>
           }
         />
@@ -481,7 +481,7 @@ function Main({ languageData }) {
       {leaderboardModal && <LeaderboardModal user={userData} languageData={languageData} setOpen={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} />}
       {menuOpen === true && (
         <ModalMenu
-          imLiveURL={imLiveURL}
+          PartnerURL={PartnerURL}
           setPromoModal={setPromoModal}
           setSocialLink={setSocialLink}
           setSelectedButton={setSelectedButton}

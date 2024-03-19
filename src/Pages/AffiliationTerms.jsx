@@ -1,28 +1,27 @@
-import React from 'react'
-import HeaderProfile from '../Components/HeaderProfile'
-import LanguageSocial from '../Components/Language/LanguageSocial';
-import { useLanguage } from '../Helpers/Languages/LanguageContext';
+import React from "react";
+import HeaderProfile from "../Components/HeaderProfile";
+import LanguageSocial from "../Components/Language/LanguageSocial";
+import { useLanguage } from "../Helpers/Languages/LanguageContext";
 
 function AffiliationTerms() {
-    let { language } = useLanguage()
-    return (
-        <div>
-
-            <HeaderProfile />
-            <div className='absolute right-2 lg:right-[20px] top-1 lg:top-3 flex items-center align-start z-20'>
-                <LanguageSocial />
-            </div>
-            <div className='textStyle max-w-[1240px] m-auto overflow-scroll h-screen pb-[50px] saira p-2' dangerouslySetInnerHTML={
-                {
-                    __html: language === 'en' ? en_text : language === 'es' ? es_text : pt_text
-                }
-            } />
-
-        </div>
-    )
+  let { language } = useLanguage();
+  return (
+    <div>
+      <HeaderProfile />
+      <div className="align-start absolute right-2 top-1 z-20 flex items-center lg:right-[20px] lg:top-3">
+        <LanguageSocial />
+      </div>
+      <div
+        className="textStyle saira m-auto h-screen max-w-[1240px] overflow-scroll p-2 pb-[50px]"
+        dangerouslySetInnerHTML={{
+          __html: language === "en" ? en_text : language === "es" ? es_text : pt_text,
+        }}
+      />
+    </div>
+  );
 }
 
-export default AffiliationTerms
+export default AffiliationTerms;
 let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Cybersays.club Referral Program Terms</strong></p>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Last revised: March 2024</p>
 <p>By joining, using or participating in any one of the programs (the &quot;<strong>Program</strong>&quot; or &quot;<strong>Programs</strong>&quot;) operated by Pythia Grant Ltd. &nbsp;&nbsp;(the &quot;<strong>Company</strong>&quot;) through the site <a href="http://www.Cybersays.club">www.Cybersays.club</a> ,&nbsp;&nbsp;<a href="http://www.CyberSays.com">www.CyberSays.com</a>, <a href="http://www.ElaComanda.com">www.ElaComanda.com</a>, <a href="http://www.EllaComanda.com">www.EllaComanda.com</a>, <a href="http://www.Ellacomandas.com">www.Ellacomandas.com</a> &nbsp;(the &quot;<strong>Site&quot;),</strong> you (as defined below), is entering into a binding agreement with the Company.</p>
@@ -33,13 +32,13 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Cy
 <p>Failure to comply with any one of the terms of the Anti-EMAIL and Anti-Spam Policy will lead to immediate termination of your account and forfeiture of all of your eligible payouts.&nbsp;</p>
 <ol>
   <li><strong>Referral Program</strong>:&nbsp;<ol>
-          <li><strong>$1 Pay Per Sign-Up Program -&nbsp;</strong>In this program You will be paid&nbsp;$1USD&nbsp;for every new, legitimate Referred Sign-Up User sends to ImLive.com, within the Referral program period.&nbsp;&nbsp;No targets or minimums are required.<strong>&nbsp;</strong></li>
+          <li><strong>$1 Pay Per Sign-Up Program -&nbsp;</strong>In this program You will be paid&nbsp;$1USD&nbsp;for every new, legitimate Referred Sign-Up User sends to Partners.com, within the Referral program period.&nbsp;&nbsp;No targets or minimums are required.<strong>&nbsp;</strong></li>
           <li><strong>&lsquo;Sign-Up Referred User&rsquo;</strong> shall mean a Referred User who:<ol>
                   <ol>
                       <li>Created a new User account with the Site,&nbsp;<strong>and&nbsp;</strong></li>
-                      <li>Used the referred link to create a new account by registering and signing up for the first time to ImLive.com,&nbsp;<strong>and</strong>&nbsp;</li>
-                      <li>Made a first purchase of 5$ USD (or any other sum as agreed specifically between the parties) on his first Credit purchase, at ImLive.com to receive an additional 5 credit bonus (total of 10 credits)&nbsp;<strong>and</strong>&nbsp;</li>
-                      <li>Spend his entire 10 credits at <a href="http://www.ImLive.com">www.ImLive.com</a> .&nbsp;</li>
+                      <li>Used the referred link to create a new account by registering and signing up for the first time to Partners.com,&nbsp;<strong>and</strong>&nbsp;</li>
+                      <li>Made a first purchase of 5$ USD (or any other sum as agreed specifically between the parties) on his first Credit purchase, at Partners.com to receive an additional 5 credit bonus (total of 10 credits)&nbsp;<strong>and</strong>&nbsp;</li>
+                      <li>Spend his entire 10 credits at <a href="http://www.Partners.com">www.Partners.com</a> .&nbsp;</li>
                   </ol>
               </ol>
           </li>
@@ -96,7 +95,7 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Cy
       </ol>
   </li>
 </ol>
-<p><br></p>`
+<p><br></p>`;
 let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Condiciones del Programa de Referencia de Cybersays.club</strong></p>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &Uacute;ltima revisi&oacute;n: Febrero 2024</p>
 <p>Al inscribirse, utilizar o participar en cualquiera de los programas (el &quot;<strong>Programa</strong>&quot; o los &quot;<strong>Programas&quot;)&nbsp;</strong>operados por Pythia Grant Ltd. (la &quot;<strong>Empresa</strong>&quot;) a trav&eacute;s del sitio <a href="http://www.Cybersays.club">www.Cybersays.club</a> (el &quot;<strong>Sitio</strong>&quot;), usted (tal y como se define a continuaci&oacute;n), est&aacute; estableciendo un Acuerdo vinculante con la Empresa.</p>
@@ -107,13 +106,13 @@ let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Co
 <p>El incumplimiento de cualquiera de los t&eacute;rminos de la Pol&iacute;tica Anti-Email y Anti-Spam dirigir&aacute; a la finalizaci&oacute;n inmediata de su cuenta y la p&eacute;rdida de todos sus pagos elegibles.&nbsp;</p>
 <ol>
     <li><strong>Programa de remisi&oacute;n</strong>:&nbsp;<ol>
-            <li><strong>Programa de pago de $1 por registro -&nbsp;</strong>En este programa se le pagar&aacute;&nbsp;$1USD&nbsp;por cada nuevo y leg&iacute;timo usuario registrado referido que env&iacute;e a ImLive.com, dentro del periodo del programa de referidos.&nbsp;&nbsp;No se requieren objetivos ni m&iacute;nimos<strong>.&nbsp;</strong></li>
+            <li><strong>Programa de pago de $1 por registro -&nbsp;</strong>En este programa se le pagar&aacute;&nbsp;$1USD&nbsp;por cada nuevo y leg&iacute;timo usuario registrado referido que env&iacute;e a Partners.com, dentro del periodo del programa de referidos.&nbsp;&nbsp;No se requieren objetivos ni m&iacute;nimos<strong>.&nbsp;</strong></li>
             <li>Por<strong>&nbsp;&quot;Usuario Referido que se inscribe&quot;&nbsp;</strong>se entender&aacute; un Usuario Referido que:<ol>
                     <ol>
                         <li>Creado una nueva cuenta de usuario Cybersays.Club ,&nbsp;<strong>y&nbsp;</strong></li>
-                        <li>Utiliz&oacute; el enlace referido para crear una nueva cuenta registr&aacute;ndose e inscribi&eacute;ndose por primera vez en ImLive.com,&nbsp;<strong>y</strong><strong>&nbsp;</strong></li>
-                        <li>Realiz&oacute; una primera compra de 5$ USD (o cualquier otra suma acordada espec&iacute;ficamente entre las partes) en su primera compra de cr&eacute;ditos, en ImLive.com para recibir una bonificaci&oacute;n adicional de 5 cr&eacute;ditos (total de 10 cr&eacute;ditos) y&nbsp;</li>
-                        <li>Gaste la totalidad de sus 10 cr&eacute;ditos en ImLive.com.&nbsp;</li>
+                        <li>Utiliz&oacute; el enlace referido para crear una nueva cuenta registr&aacute;ndose e inscribi&eacute;ndose por primera vez en Partners.com,&nbsp;<strong>y</strong><strong>&nbsp;</strong></li>
+                        <li>Realiz&oacute; una primera compra de 5$ USD (o cualquier otra suma acordada espec&iacute;ficamente entre las partes) en su primera compra de cr&eacute;ditos, en Partners.com para recibir una bonificaci&oacute;n adicional de 5 cr&eacute;ditos (total de 10 cr&eacute;ditos) y&nbsp;</li>
+                        <li>Gaste la totalidad de sus 10 cr&eacute;ditos en Partners.com.&nbsp;</li>
                     </ol>
                 </ol>
             </li>
@@ -170,7 +169,7 @@ let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Co
         </ol>
     </li>
 </ol>
-<p><br></p>`
+<p><br></p>`;
 let pt_text = `<p style="text-align:center;font-size:16pt!important;" class="p14">
 <span class="s22"
   ><strong
@@ -232,7 +231,7 @@ conta e na perda de todos os seus pagamentos eleg&iacute;veis.
     ><span class="s22">US$1.00 (um d&oacute;lar americano)</span
     ><span class="s23">
       por cada cadastro de um novo e leg&iacute;timo usu&aacute;rio na
-      ImLive.com, indicado pelo usu&aacute;rio, dentro do per&iacute;odo
+      Partners.com, indicado pelo usu&aacute;rio, dentro do per&iacute;odo
       do Programa de Indica&ccedil;&atilde;o.<span
         class="Apple-converted-space"
         >&nbsp; </span
@@ -257,7 +256,7 @@ conta e na perda de todos os seus pagamentos eleg&iacute;veis.
       <li class="li49">
         <span class="s23"
           >Usou o link indicado para criar uma nova conta, registrando-se
-          e inscrevendo-se pela primeira vez na ImLive.com, </span
+          e inscrevendo-se pela primeira vez na Partners.com, </span
         ><span class="s22"><strong>e</strong></span>
       </li>
       <li class="li48">
@@ -265,13 +264,13 @@ conta e na perda de todos os seus pagamentos eleg&iacute;veis.
           >Fez uma primeira compra de US$5.00 (cinco d&oacute;lares
           americanos) (ou qualquer outro valor acordado especificamente
           entre as partes) em sua primeira compra de cr&eacute;dito na
-          ImLive.com para receber um b&ocirc;nus adicional de 5 (cinco)
+          Partners.com para receber um b&ocirc;nus adicional de 5 (cinco)
           cr&eacute;ditos (total de 10 cr&eacute;ditos) </span
         ><span class="s22"><strong>e</strong></span>
       </li>
       <li class="li48">
         <span class="s23"
-          >Gaste todos os seus 10 cr&eacute;ditos na ImLive.com.
+          >Gaste todos os seus 10 cr&eacute;ditos na Partners.com.
         </span>
       </li>
     </ol>
@@ -598,4 +597,4 @@ de Mercadorias est&aacute; expressamente exclu&iacute;da.
   </li>
 </ol>
 </ol>
-<p><br></p>`
+<p><br></p>`;

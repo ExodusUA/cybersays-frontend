@@ -1,17 +1,17 @@
 import React from "react";
 import close from "../../../images/CyberSaysPage/closeMenu.png";
 import { useDesign } from "../../../Helpers/Design/DesignContext";
-import { withdrawImLive } from "../../../Requests/withdraw";
+import { withdrawPartner } from "../../../Requests/withdraw";
 import mixpanel from "mixpanel-browser";
 
-function ImLiveFlow({ languageData, setConfirm, setFlowStarted, setError, closeAll }) {
+function PartnerFlow({ languageData, setConfirm, setFlowStarted, setError, closeAll }) {
   const { design } = useDesign();
 
-  const handleImLiveFlow = async () => {
+  const handlePartnerFlow = async () => {
     try {
-      const res = await withdrawImLive();
+      const res = await withdrawPartner();
 
-      mixpanel.track("Withdraw_request", { method: "imLive" });
+      mixpanel.track("Withdraw_request", { method: "Partner" });
 
       setConfirm(true);
     } catch (error) {
@@ -37,7 +37,7 @@ function ImLiveFlow({ languageData, setConfirm, setFlowStarted, setError, closeA
               {languageData?.logoutConfirmNo}
             </button>
             <button
-              onClick={(e) => handleImLiveFlow()}
+              onClick={(e) => handlePartnerFlow()}
               className={`saira mt-4  w-full max-w-[350px] bg-[white] p-2 px-6 py-2 text-[18px] font-semibold text-[#5f5f5f] ${design === "0" ? "  rounded-[50px] border-[2px] bg-white " : " gradient-homepageBtn rounded-[12px] border-none"}`}
             >
               {languageData?.logoutConfirmYes}
@@ -49,4 +49,4 @@ function ImLiveFlow({ languageData, setConfirm, setFlowStarted, setError, closeA
   );
 }
 
-export default ImLiveFlow;
+export default PartnerFlow;

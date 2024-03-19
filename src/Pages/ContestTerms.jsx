@@ -1,27 +1,27 @@
-import React from 'react'
-import HeaderProfile from '../Components/HeaderProfile'
-import LanguageSocial from '../Components/Language/LanguageSocial';
-import { useLanguage } from '../Helpers/Languages/LanguageContext';
+import React from "react";
+import HeaderProfile from "../Components/HeaderProfile";
+import LanguageSocial from "../Components/Language/LanguageSocial";
+import { useLanguage } from "../Helpers/Languages/LanguageContext";
 
 function ContestTerms() {
-    let { language } = useLanguage()
-    return (
-        <div>
-            
-            <HeaderProfile />
-            <div className='absolute right-2 lg:right-[20px] top-1 lg:top-3 flex items-center align-start z-20'>
-                <LanguageSocial />
-            </div>
-            <div className='textStyle max-w-[1240px] m-auto overflow-scroll h-screen pb-[50px] saira p-2' dangerouslySetInnerHTML={
-                {
-                    __html: language === 'pt' ? pt_text : language === 'es' ? es_text : en_text}
-            } />
-
-        </div>
-    )
+  let { language } = useLanguage();
+  return (
+    <div>
+      <HeaderProfile />
+      <div className="align-start absolute right-2 top-1 z-20 flex items-center lg:right-[20px] lg:top-3">
+        <LanguageSocial />
+      </div>
+      <div
+        className="textStyle saira m-auto h-screen max-w-[1240px] overflow-scroll p-2 pb-[50px]"
+        dangerouslySetInnerHTML={{
+          __html: language === "pt" ? pt_text : language === "es" ? es_text : en_text,
+        }}
+      />
+    </div>
+  );
 }
 
-export default ContestTerms
+export default ContestTerms;
 let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>CyberSays.Club -&nbsp;&nbsp;Daily Contest Terms</strong></p>
 <p>
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Last modified: March&nbsp;&nbsp;2024
@@ -42,7 +42,7 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Cy
 </p>
 <p>
   Participation in the <strong>Contest</strong> shall be subject to the
-  provisions below and the Company&apos;s Terms and Conditions, ImLive.com Terms
+  provisions below and the Company&apos;s Terms and Conditions, Partners.com Terms
   and Conditions (collectively &quot;<strong>Terms</strong>&quot;) and Privacy
   Policy (&quot;<strong>Privacy Policy</strong>&quot;).
 </p>
@@ -104,32 +104,32 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Cy
 <ul>
   <li>
     Create a new and legitimate account on
-    <a href="http://www.ImLive.com">www.ImLive.com</a>&nbsp;
+    <a href="http://www.Partners.com">www.Partners.com</a>&nbsp;
   </li>
   <li>
     Make a minimum purchase of five (5) credits on
-    <a href="http://www.ImLive.com">www.ImLive.com</a> &nbsp;&ndash; you
+    <a href="http://www.Partners.com">www.Partners.com</a> &nbsp;&ndash; you
     acknowledge that by making a minimum purchase of five credits on
-    <a href="http://www.ImLive.com">www.ImLive.com</a> , you will automatically
+    <a href="http://www.Partners.com">www.Partners.com</a> , you will automatically
     receive a one-time additional bonus of five credits;
   </li>
   <li>
     Spend the entire ten (10) credits that you received on
-    <a href="http://www.ImLive.com">www.ImLive.com</a> .
+    <a href="http://www.Partners.com">www.Partners.com</a> .
   </li>
 </ul>
 <p><br /></p>
 <p>
   As part of this Contest, you acknowledge that (i) any credit bonus received on
-  ImLive.com as part of this Contest is
+  Partners.com as part of this Contest is
   <strong
     >not redeemable, not refundable, not transferable and
     non-exchangeable</strong
-  >; (ii) these credit bonuses must be used on ImLive.com <strong>only</strong>;
+  >; (ii) these credit bonuses must be used on Partners.com <strong>only</strong>;
   (iii) these credit bonuses do not have any pecuniary value or any kind of
-  value outside of ImLive.com; (iv) you are solely liable towards your use of
-  ImLive.com services and the use of such credits; and (v) you have read
-  <em>ImLive.com terms and conditions</em> before using www.ImLive.com&apos;s
+  value outside of Partners.com; (iv) you are solely liable towards your use of
+  Partners.com services and the use of such credits; and (v) you have read
+  <em>Partners.com terms and conditions</em> before using www.Partners.com&apos;s
   services or using any of the credit bonuses on their services.
 </p>
 <p><br /></p>
@@ -247,7 +247,7 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Cy
       </li>
       <li>
         <strong>0.5</strong> virtual points for each real credit purchased at
-        ImLive.com, starting the second purchase (meaning the 11 credits and
+        Partners.com, starting the second purchase (meaning the 11 credits and
         above). I.e. no virtual points will be given for the first 5 credits to
         be purchased).
       </li>
@@ -357,11 +357,11 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Cy
       </li>
       <li>
         two or more Eligible Users have the same number of Referred Friends,
-        then the Eligible User who has purchased the most credits in ImLive.com
+        then the Eligible User who has purchased the most credits in Partners.com
         will be chosen.&nbsp;
       </li>
       <li>
-        two or more Eligible Users have the same amount of ImLive.com&rsquo;s
+        two or more Eligible Users have the same amount of Partners.com&rsquo;s
         credits, then the Eligible User who completed the Online Offer first,
         will be chosen.&nbsp;
       </li>
@@ -730,10 +730,10 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Cy
   For information, support or questions, please contact us at
   <a href="mailto:dailycontest@cybersays.club">dailycontest@cybersays.club</a>
 </p>
-<p><br /></p>`
+<p><br /></p>`;
 let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>CyberSays.Club - Condiciones del concurso diario</strong></p>
 <p>&nbsp; &nbsp; &nbsp;&Uacute;ltima modificaci&oacute;n: febrero 2024</p>
-<p>A continuaci&oacute;n se exponen los t&eacute;rminos y condiciones del concurso diario de la Empresa (&quot;<strong>Cyber Says</strong>&quot; y &quot;<strong>Cyber Says Contest Terms</strong>&quot;; &quot;<strong>Concurso</strong>&quot;), patrocinado por Pythia Grant Ltd (&quot;<strong>Empresa</strong>&quot;, &quot;<strong>nosotros</strong>&quot; o &quot;<strong>nos</strong>&quot; o &quot;<strong>nuestro</strong>&quot;). La participaci&oacute;n en el <strong>Concurso&nbsp;</strong>estar&aacute; sujeta<strong>&nbsp;</strong>a las disposiciones que figuran a continuaci&oacute;n y a los T&eacute;rminos y Condiciones de la Empresa, los T&eacute;rminos y Condiciones de ImLive.com (colectivamente &quot;<strong>T&eacute;rminos</strong>&quot;) y la Pol&iacute;tica de Privacidad (&quot;<strong>Pol&iacute;tica de Privacidad</strong>&quot;).</p>
+<p>A continuaci&oacute;n se exponen los t&eacute;rminos y condiciones del concurso diario de la Empresa (&quot;<strong>Cyber Says</strong>&quot; y &quot;<strong>Cyber Says Contest Terms</strong>&quot;; &quot;<strong>Concurso</strong>&quot;), patrocinado por Pythia Grant Ltd (&quot;<strong>Empresa</strong>&quot;, &quot;<strong>nosotros</strong>&quot; o &quot;<strong>nos</strong>&quot; o &quot;<strong>nuestro</strong>&quot;). La participaci&oacute;n en el <strong>Concurso&nbsp;</strong>estar&aacute; sujeta<strong>&nbsp;</strong>a las disposiciones que figuran a continuaci&oacute;n y a los T&eacute;rminos y Condiciones de la Empresa, los T&eacute;rminos y Condiciones de Partners.com (colectivamente &quot;<strong>T&eacute;rminos</strong>&quot;) y la Pol&iacute;tica de Privacidad (&quot;<strong>Pol&iacute;tica de Privacidad</strong>&quot;).</p>
 <p>Los t&eacute;rminos en may&uacute;sculas utilizados pero no definidos en el presente documento tendr&aacute;n el significado que se les atribuye en las Condiciones.</p>
 <p><br></p>
 <p><strong>General</strong></p>
@@ -758,12 +758,12 @@ let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Cy
 <p><br></p>
 <p>&quot;<strong>Oferta en l&iacute;nea</strong>&quot; significar&aacute; la culminaci&oacute;n de todos los pasos siguientes -&nbsp;</p>
 <ul>
-    <li>Crear una cuenta nueva y leg&iacute;tima en ImLive.com</li>
-    <li>Realizar una compra m&iacute;nima de cinco (5) cr&eacute;ditos en <a href="http://www.ImLive.com">www.ImLive.com</a> - usted reconoce que al realizar una compra m&iacute;nima de cinco cr&eacute;ditos en <a href="http://www.ImLive.com">www.ImLive.com</a> , recibir&aacute; autom&aacute;ticamente una bonificaci&oacute;n adicional &uacute;nica de cinco cr&eacute;ditos;</li>
-    <li>Gastar la totalidad de los diez (10) cr&eacute;ditos que recibi&oacute; en <a href="http://www.ImLive.com">www.ImLive.com</a> .</li>
+    <li>Crear una cuenta nueva y leg&iacute;tima en Partners.com</li>
+    <li>Realizar una compra m&iacute;nima de cinco (5) cr&eacute;ditos en <a href="http://www.Partners.com">www.Partners.com</a> - usted reconoce que al realizar una compra m&iacute;nima de cinco cr&eacute;ditos en <a href="http://www.Partners.com">www.Partners.com</a> , recibir&aacute; autom&aacute;ticamente una bonificaci&oacute;n adicional &uacute;nica de cinco cr&eacute;ditos;</li>
+    <li>Gastar la totalidad de los diez (10) cr&eacute;ditos que recibi&oacute; en <a href="http://www.Partners.com">www.Partners.com</a> .</li>
 </ul>
 <p><br></p>
-<p>Como parte de este Concurso, usted reconoce que (i) cualquier bonificaci&oacute;n de cr&eacute;dito recibida en ImLive.com como parte de este Concurso <strong>no es canjeable, no es reembolsable, no es transferible y no es intercambiable</strong>; (ii) estas bonificaciones de cr&eacute;dito deben utilizarse <strong>&uacute;nicamente en&nbsp;</strong>ImLive.com; (iii) estas bonificaciones de cr&eacute;dito no tienen ning&uacute;n valor pecuniario ni de ning&uacute;n tipo fuera de ImLive.com; (iv) usted es el &uacute;nico responsable del uso que haga de los servicios de ImLive.com y del uso de dichos cr&eacute;ditos; y (v) usted ha le&iacute;do los <em>T&eacute;rminos y CONDICIONES de ImLive.com</em> antes de utilizar los servicios de www.ImLive.com o de utilizar cualquiera de los bonos de cr&eacute;dito de sus servicios.</p>
+<p>Como parte de este Concurso, usted reconoce que (i) cualquier bonificaci&oacute;n de cr&eacute;dito recibida en Partners.com como parte de este Concurso <strong>no es canjeable, no es reembolsable, no es transferible y no es intercambiable</strong>; (ii) estas bonificaciones de cr&eacute;dito deben utilizarse <strong>&uacute;nicamente en&nbsp;</strong>Partners.com; (iii) estas bonificaciones de cr&eacute;dito no tienen ning&uacute;n valor pecuniario ni de ning&uacute;n tipo fuera de Partners.com; (iv) usted es el &uacute;nico responsable del uso que haga de los servicios de Partners.com y del uso de dichos cr&eacute;ditos; y (v) usted ha le&iacute;do los <em>T&eacute;rminos y CONDICIONES de Partners.com</em> antes de utilizar los servicios de www.Partners.com o de utilizar cualquiera de los bonos de cr&eacute;dito de sus servicios.</p>
 <p><br></p>
 <ol>
     <li>Como parte de este Concurso, usted reconoce que la Empresa, a su entera discreci&oacute;n, puede rechazar o descalificar su participaci&oacute;n en el Concurso si alguno de los datos que proporcion&oacute; durante el registro o, en su caso, al culminar la Oferta en l&iacute;nea (i) falta, es inexacto y/o est&aacute; desactualizado; (ii) parece ser falso, fraudulento; o (iii) infringe las Condiciones del Concurso Cyber Says, las Condiciones o cualquier ley o reglamento aplicable.&nbsp;</li>
@@ -805,7 +805,7 @@ let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Cy
 <ol>
     <li>Los Usuarios Elegibles tienen derecho a ganar puntos virtuales de una de las siguientes maneras -.&nbsp;<ol>
             <li><strong>10&nbsp;</strong>puntos virtuales por cada amigo que haya remitido a nuestros Servicios y que sea considerado Usuario Elegible <strong>y</strong><strong>&nbsp;</strong>que haya culminado con &eacute;xito la Oferta en l&iacute;nea;&nbsp;</li>
-            <li><strong>0,5&nbsp;</strong>puntos virtuales por cada cr&eacute;dito real comprado en ImLive.com, a partir de la segunda compra (es decir, a partir de 11 cr&eacute;ditos). Es decir, no se dar&aacute;n puntos virtuales por los 5 primeros cr&eacute;ditos que se compren).</li>
+            <li><strong>0,5&nbsp;</strong>puntos virtuales por cada cr&eacute;dito real comprado en Partners.com, a partir de la segunda compra (es decir, a partir de 11 cr&eacute;ditos). Es decir, no se dar&aacute;n puntos virtuales por los 5 primeros cr&eacute;ditos que se compren).</li>
         </ol>
     </li>
 </ol>
@@ -858,8 +858,8 @@ let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Cy
 <ol>
     <li>En el evento de que -<ol>
             <li>dos o m&aacute;s Usuarios Elegibles alcancen la misma cantidad de puntos virtuales diarios, entonces se elegir&aacute; al Usuario Elegible con el mayor n&uacute;mero de Amigo Referido.&nbsp;</li>
-            <li>dos o m&aacute;s Usuarios Elegibles tienen el mismo n&uacute;mero de Amigos Referidos, entonces se elegir&aacute; al Usuario Elegible que haya comprado m&aacute;s cr&eacute;ditos en ImLive.com.&nbsp;</li>
-            <li>dos o m&aacute;s Usuarios Elegibles tienen la misma cantidad de cr&eacute;ditos de ImLive.com, entonces se elegir&aacute; al Usuario Elegible que haya culminado primero la Oferta en L&iacute;nea.&nbsp;</li>
+            <li>dos o m&aacute;s Usuarios Elegibles tienen el mismo n&uacute;mero de Amigos Referidos, entonces se elegir&aacute; al Usuario Elegible que haya comprado m&aacute;s cr&eacute;ditos en Partners.com.&nbsp;</li>
+            <li>dos o m&aacute;s Usuarios Elegibles tienen la misma cantidad de cr&eacute;ditos de Partners.com, entonces se elegir&aacute; al Usuario Elegible que haya culminado primero la Oferta en L&iacute;nea.&nbsp;</li>
         </ol>
     </li>
 </ol>
@@ -981,7 +981,7 @@ let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Cy
 <p>PRECAUCI&Oacute;N: CUALQUIER INTENTO DE DA&Ntilde;AR DELIBERADAMENTE LOS SERVICIOS DE LA EMPRESA O DE SOCAVAR EL FUNCIONAMIENTO LEG&Iacute;TIMO DEL CONCURSO OFRECIDO POR LA EMPRESA CONSTITUYE UNA VIOLACI&Oacute;N DE LAS LEYES PENALES Y CIVILES. EN CASO DE QUE SE PRODUZCA TAL INTENTO, LA EMPRESA SE RESERVA EL DERECHO A RECLAMAR DA&Ntilde;OS Y PERJUICIOS A CUALQUIERA DE DICHAS PERSONAS EN LA M&Aacute;XIMA MEDIDA PERMITIDA POR LA LEY.</p>
 <p><br></p>
 <p>Para informaci&oacute;n, asistencia o preguntas, p&oacute;ngase en contacto con nosotros en <a href="mailto:dailycontest@cybersays.club">dailycontest@cybersays.club.</a></p>
-<p><br></p>`
+<p><br></p>`;
 let pt_text = `<p style="text-align:center;font-size:16pt!important;" class="p1">
 <span class="s1"
   ><strong
@@ -1007,7 +1007,7 @@ pela Pythia Grant Ltd. ("<strong>Empresa</strong>",
 "<strong>nosso</strong>"). A participa&ccedil;&atilde;o na
 <strong>Competi&ccedil;&atilde;o</strong> estar&aacute; sujeita &agrave;s
 disposi&ccedil;&otilde;es abaixo e aos Termos e Condi&ccedil;&otilde;es da
-Empresa, aos Termos e condi&ccedil;&otilde;es da ImLive.com (coletivamente
+Empresa, aos Termos e condi&ccedil;&otilde;es da Partners.com (coletivamente
 "<strong>Termos</strong>") e &agrave; Pol&iacute;tica de privacidade
 ("<strong>Pol&iacute;tica de privacidade</strong>").
 </p>
@@ -1082,23 +1082,23 @@ documento, ter&atilde;o o significado dado a eles nos Termos.
 etapas a seguir
 </p>
 <ul class="ul1">
-<li class="li6">Criar uma conta nova e leg&iacute;tima na ImLive.com</li>
+<li class="li6">Criar uma conta nova e leg&iacute;tima na Partners.com</li>
 <li class="li6">
   Fazer uma compra m&iacute;nima de cinco (5) cr&eacute;ditos no site
-  <a href="http://www.ImLive.com"
-    ><span class="s3">www.ImLive.com</span></a
+  <a href="http://www.Partners.com"
+    ><span class="s3">www.Partners.com</span></a
   >
   - voc&ecirc; reconhece que, ao fazer uma compra m&iacute;nima de cinco
   cr&eacute;ditos no site
-  <a href="http://www.ImLive.com"
-    ><span class="s3">www.ImLive.com</span></a
+  <a href="http://www.Partners.com"
+    ><span class="s3">www.Partners.com</span></a
   >, voc&ecirc; receber&aacute; automaticamente um b&ocirc;nus adicional
   &uacute;nico de cinco cr&eacute;ditos;
 </li>
 <li class="li6">
   Gaste todos os dez (10) cr&eacute;ditos que voc&ecirc; recebeu na
-  <a href="http://www.ImLive.com"
-    ><span class="s3">www.ImLive.com</span></a
+  <a href="http://www.Partners.com"
+    ><span class="s3">www.Partners.com</span></a
   >
   .
 </li>
@@ -1106,21 +1106,21 @@ etapas a seguir
 <p class="p8">&nbsp;</p>
 <p class="p6">
 Como parte desta Competi&ccedil;&atilde;o, voc&ecirc; reconhece que (i)
-qualquer b&ocirc;nus de cr&eacute;dito recebido na ImLive.com como parte
+qualquer b&ocirc;nus de cr&eacute;dito recebido na Partners.com como parte
 deste Competi&ccedil;&atilde;o n&atilde;o &eacute;
 resgat&aacute;vel<strong
   >, n&atilde;o &eacute; reembols&aacute;vel, n&atilde;o &eacute;
   transfer&iacute;vel e n&atilde;o pode ser trocado</strong
 >; (ii) esses b&ocirc;nus de cr&eacute;dito devem ser usados
-<strong>somente </strong>na ImLive.com; (iii) esses b&ocirc;nus de
+<strong>somente </strong>na Partners.com; (iii) esses b&ocirc;nus de
 cr&eacute;dito n&atilde;o t&ecirc;m nenhum valor pecuni&aacute;rio ou
-qualquer tipo de valor fora da ImLive.com; (iv) voc&ecirc; &eacute; o
-&uacute;nico respons&aacute;vel pelo uso dos servi&ccedil;os da ImLive.com
+qualquer tipo de valor fora da Partners.com; (iv) voc&ecirc; &eacute; o
+&uacute;nico respons&aacute;vel pelo uso dos servi&ccedil;os da Partners.com
 e pelo uso de tais cr&eacute;ditos; e (v) voc&ecirc; leu os
 <span class="s1"
-  ><em>os Termos e Condi&ccedil;&otilde;es da ImLive.com</em></span
+  ><em>os Termos e Condi&ccedil;&otilde;es da Partners.com</em></span
 >
-antes de usar os servi&ccedil;os do www.ImLive.com ou de usar qualquer um
+antes de usar os servi&ccedil;os do www.Partners.com ou de usar qualquer um
 dos b&ocirc;nus de cr&eacute;dito em seus servi&ccedil;os.
 </p>
 <p class="p9">&nbsp;</p>
@@ -1269,7 +1269,7 @@ dos b&ocirc;nus de cr&eacute;dito em seus servi&ccedil;os.
   </li>
   <li class="li6">
     <strong>0,5 </strong>ponto virtual para cada cr&eacute;dito real
-    comprado na ImLive.com, a partir da segunda compra (ou seja, os 11
+    comprado na Partners.com, a partir da segunda compra (ou seja, os 11
     cr&eacute;ditos ou mais). Ou seja, nenhum ponto virtual ser&aacute;
     dado para os primeiros 5 cr&eacute;ditos a serem comprados.
   </li>
@@ -1397,11 +1397,11 @@ dos b&ocirc;nus de cr&eacute;dito em seus servi&ccedil;os.
     dois ou mais Usu&aacute;rios Eleg&iacute;veis tiverem o mesmo
     n&uacute;mero de Amigos Indicados, ser&aacute; escolhido o
     Usu&aacute;rio Eleg&iacute;vel que tiver comprado o maior
-    n&uacute;mero de cr&eacute;ditos na ImLive.com.
+    n&uacute;mero de cr&eacute;ditos na Partners.com.
   </li>
   <li class="li6">
     dois ou mais Usu&aacute;rios Eleg&iacute;veis tiverem a mesma
-    quantidade de cr&eacute;ditos na ImLive.com, ser&aacute; escolhido o
+    quantidade de cr&eacute;ditos na Partners.com, ser&aacute; escolhido o
     Usu&aacute;rio Eleg&iacute;vel que tiver conclu&iacute;do a Oferta
     Online primeiro.
   </li>
@@ -1910,4 +1910,4 @@ contato conosco pelo e-mail
 <a href="mailto:dailycontest@cybersays.club"
   ><span class="s3">dailycontest@cybersays.club</span></a
 >
-</p>`
+</p>`;

@@ -1,229 +1,265 @@
-import React, { useEffect, useState } from 'react'
-import logoCyber from '../../images/CyberSaysPage/logoMain.png'
-import newlogoCyber from '../../images/NewDesign/newLogo_main.png'
-import girlOK from '../../images/NewDesign/Homepage/message3.png'
-import imLiveLogo from '../../images/CyberSaysPage/imLiveLogo.png'
-import TimeCounter from '../../Components/TimeCounter'
-import { Link } from 'react-router-dom'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
-import { useDesign } from '../../Helpers/Design/DesignContext'
-import doubleIcon from '../../images/NewDesign/doubleIcon.svg'
-import arrowTextLeft from '../../images/NewDesign/arrowTextLeft.png'
-import arrowTextRight from '../../images/NewDesign/arrowTextRight.png'
-import { useLanguage } from '../../Helpers/Languages/LanguageContext'
-import mixpanel from 'mixpanel-browser'
-import moengage from '@moengage/web-sdk';
+import React, { useEffect, useState } from "react";
+import logoCyber from "../../images/CyberSaysPage/logoMain.png";
+import newlogoCyber from "../../images/NewDesign/newLogo_main.png";
+import girlOK from "../../images/NewDesign/Homepage/message3.png";
+import PartnerLogo from "../../images/CyberSaysPage/PartnerLogo.png";
+import TimeCounter from "../../Components/TimeCounter";
+import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import { useDesign } from "../../Helpers/Design/DesignContext";
+import doubleIcon from "../../images/NewDesign/doubleIcon.svg";
+import arrowTextLeft from "../../images/NewDesign/arrowTextLeft.png";
+import arrowTextRight from "../../images/NewDesign/arrowTextRight.png";
+import { useLanguage } from "../../Helpers/Languages/LanguageContext";
+import mixpanel from "mixpanel-browser";
+import moengage from "@moengage/web-sdk";
 
+function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
+  let swiperRef;
+  const dataTitle = [
+    {
+      desc: languageData?.homepageTitle1,
+    },
+    {
+      desc: languageData?.homepageTitle2,
+    },
+    {
+      desc: languageData?.homepageTitle3,
+    },
+  ];
 
-function Homepage({ user, imLiveURL, languageData, scrollToPage }) {
-    let swiperRef;
-    const dataTitle = [
-        {
-            desc: languageData?.homepageTitle1,
-        },
-        {
-            desc: languageData?.homepageTitle2,
-        },
-        {
-            desc: languageData?.homepageTitle3,
-        }
-    ]
+  const { language } = useLanguage();
 
-    const { language } = useLanguage()
+  const { design } = useDesign();
 
-    const { design } = useDesign()
+  const [lastTask, setLastTask] = useState(0);
 
-    const [lastTask, setLastTask] = useState(0)
-
-    const getButtonMarkup = (task) => {
-        switch (task) {
-            case 0:
-            case null:
-            case undefined:
-                return <button onClick={e => scrollToPage(1)} className={`w-full    border-[#FFED63]  text-black text-[18px] saira font-semibold flex justify-center items-center ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-[6px] py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn1}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
-            case 1: return <button onClick={e => scrollToPage(1)} className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px] saira font-semibold flex justify-center items-center  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-2 py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn2}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
-            case 2: return <button onClick={e => scrollToPage(1)} className={`w-full   bg-white   border-[#FFED63]  text-black text-[14px] lg:text-[18px] saira font-semibold flex justify-center items-center  ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-2 py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn3}</button>
-            case 3: return <button onClick={e => scrollToPage(1)} className={`w-full  bg-white   border-[#FFED63]  text-black text-[18px] saira font-semibold flex justify-center items-center ${design === '0' ? ' se:py-[6px] py-2 md:py-3 rounded-[50px] border-[2px] bg-white ' : 'se:py-2 py-2 md:py-2 rounded-[12px] border-none gradient-homepageBtn'}`}>{languageData?.homepageBtn4}<img className='ml-1' src={doubleIcon} alt="doubleIcon" /></button>
-        }
+  const getButtonMarkup = (task) => {
+    switch (task) {
+      case 0:
+      case null:
+      case undefined:
+        return (
+          <button
+            onClick={(e) => scrollToPage(1)}
+            className={`saira    flex  w-full items-center justify-center border-[#FFED63] text-[18px] font-semibold text-black ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
+          >
+            {languageData?.homepageBtn1}
+            <img className="ml-1" src={doubleIcon} alt="doubleIcon" />
+          </button>
+        );
+      case 1:
+        return (
+          <button
+            onClick={(e) => scrollToPage(1)}
+            className={`saira  flex   w-full  items-center justify-center border-[#FFED63] bg-white text-[18px] font-semibold text-black  ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-2 md:py-2"}`}
+          >
+            {languageData?.homepageBtn2}
+            <img className="ml-1" src={doubleIcon} alt="doubleIcon" />
+          </button>
+        );
+      case 2:
+        return (
+          <button
+            onClick={(e) => scrollToPage(1)}
+            className={`saira   flex   w-full  items-center justify-center border-[#FFED63] bg-white text-[14px] font-semibold text-black lg:text-[18px]  ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-2 md:py-2"}`}
+          >
+            {languageData?.homepageBtn3}
+          </button>
+        );
+      case 3:
+        return (
+          <button
+            onClick={(e) => scrollToPage(1)}
+            className={`saira  flex   w-full  items-center justify-center border-[#FFED63] bg-white text-[18px] font-semibold text-black ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-2 md:py-2"}`}
+          >
+            {languageData?.homepageBtn4}
+            <img className="ml-1" src={doubleIcon} alt="doubleIcon" />
+          </button>
+        );
     }
+  };
 
-    useEffect(() => {
-        if (user === null) return setLastTask(0)
+  useEffect(() => {
+    if (user === null) return setLastTask(0);
 
-        let tasks = JSON.parse(user?.completed_tasks)
-        if (tasks === null) return setLastTask(0)
-        let lastTask = tasks[tasks.length - 1]
-        setLastTask(lastTask)
-    }, [user])
+    let tasks = JSON.parse(user?.completed_tasks);
+    if (tasks === null) return setLastTask(0);
+    let lastTask = tasks[tasks.length - 1];
+    setLastTask(lastTask);
+  }, [user]);
 
+  return (
+    <div
+      className={` h-screen w-screen ${design === "0" ? "bg-[url(./images/CyberSaysPage/mobile-bg-homepage.jpg)] md:bg-[url(./images/CyberSaysPage/bg-homepage.jpg)]" : " bg-[#200527]"}  relative z-10 bg-cover bg-center bg-no-repeat mac-center:flex`}
+    >
+      <div className="m-auto  max-w-[1170px] px-4 pb-12 pt-[57px] mac-center:!pt-0 md:pt-[80px]">
+        <div className="m-auto max-w-[300px]">
+          <p className=" text-[18px] font-semibold md:text-[32px]"></p>
+        </div>
+        <img className="relative  z-50 m-auto w-[170px] mac2:w-[170px] se:mb-[0px] se:w-[170px] iphone:mb-[-10px]  iphone:w-[240px] md:w-[320px]" src={design === "0" ? logoCyber : newlogoCyber} alt="logoCyber" />
+        <div>
+          <div className="homepageSE contentHomepage mt-0 items-end justify-between iphone2:mt-[30px] md:mt-[70px] md:items-center lg:flex">
+            <div className="mb-2 flex w-full items-center lg:hidden">
+              <div
+                className="buttonPrevText w-[60px]"
+                onClick={(e) => {
+                  mixpanel.track("arrow_text_click", {
+                    distinct_id: user?.id,
+                    is_referred: user?.referral_id ? "Yes" : "No",
+                    language: language,
+                    vegas_tickets: user?.raffle_tickets,
+                    points: user?.points,
+                    user_id: user?.id,
+                    USD_earned: user?.allTimeEarned,
 
-    return (
-        <div className={` w-screen h-screen ${design === '0' ? 'bg-[url(./images/CyberSaysPage/mobile-bg-homepage.jpg)] md:bg-[url(./images/CyberSaysPage/bg-homepage.jpg)]' : ' bg-[#200527]'}  bg-cover bg-no-repeat bg-center relative z-10 mac-center:flex`}>
-            <div className='pt-[57px]  md:pt-[80px] mac-center:!pt-0 px-4 pb-12 max-w-[1170px] m-auto'>
-                <div className='max-w-[300px] m-auto'>
+                    number_referrals: user?.referral_id ? user?.referral_id.length : 0,
+                  });
+                  moengage.track_event("arrow_text_click", {
+                    distinct_id: user?.id,
+                    is_referred: user?.referral_id ? "Yes" : "No",
+                    language: language,
+                    vegas_tickets: user?.raffle_tickets,
+                    points: user?.points,
+                    user_id: user?.id,
+                    USD_earned: user?.allTimeEarned,
+                    language: language,
+                    number_referrals: user?.referral_id ? user?.referral_id.length : 0,
+                  });
+                }}
+              >
+                <svg className=" mr-[10px] w-[20px]  cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path d="M22.6665 29.3333L9.33326 16L22.6665 2.66676" stroke="url(#paint0_linear_518_191)" stroke-width="2.66665" stroke-linecap="round" stroke-linejoin="round" />
+                  <defs>
+                    <linearGradient id="paint0_linear_518_191" x1="15.9999" y1="29.3333" x2="15.9999" y2="2.66676" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#FAD604" />
+                      <stop offset="1" stop-color="#FE804D" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <Swiper
+                modules={[Navigation, Autoplay]}
+                navigation={{
+                  prevEl: ".buttonPrevText",
+                  nextEl: ".buttonNextText",
+                }}
+                loop={true}
+                breakpoints={{
+                  0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                }}
+              >
+                {dataTitle.map((item, index) => (
+                  <SwiperSlide key={item}>
+                    <p className="font-semibold se:text-[16px] iphone:my-3 iphone:text-[18px]">{item.desc}</p>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              <div
+                className="buttonNextText w-[60px]"
+                onClick={(e) => {
+                  mixpanel.track("arrow_text_click", {
+                    distinct_id: user?.id,
+                    is_referred: user?.referral_id ? "Yes" : "No",
+                    language: language,
+                    vegas_tickets: user?.raffle_tickets,
+                    points: user?.points,
+                    user_id: user?.id,
+                    USD_earned: user?.allTimeEarned,
 
-                    <p className=' text-[18px] md:text-[32px] font-semibold'></p>
+                    number_referrals: user?.referral_id ? user?.referral_id.length : 0,
+                  });
+                  moengage.track_event("arrow_text_click", {
+                    distinct_id: user?.id,
+                    is_referred: user?.referral_id ? "Yes" : "No",
+                    language: language,
+                    vegas_tickets: user?.raffle_tickets,
+                    points: user?.points,
+                    user_id: user?.id,
+                    USD_earned: user?.allTimeEarned,
+                    language: language,
+                    number_referrals: user?.referral_id ? user?.referral_id.length : 0,
+                  });
+                }}
+              >
+                <svg className=" ml-[20px] w-[20px] cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path d="M9.3335 2.66675L22.6667 16L9.33349 29.3332" stroke="url(#paint0_linear_518_196)" stroke-width="2.66665" stroke-linecap="round" stroke-linejoin="round" />
+                  <defs>
+                    <linearGradient id="paint0_linear_518_196" x1="16.0001" y1="2.66675" x2="16.0001" y2="29.3332" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#FAD604" />
+                      <stop offset="1" stop-color="#FE804D" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div
+              className={`relative ${design === "0" ? " rounded-[24px] border-[#FFD700] lg:rounded-[32px]" : "  homepageMainBlock rounded-[16px] border-[#A2DBF0]"}  m-auto border-2 px-1 pb-1 pt-8  lg:m-[unset] lg:pt-0`}
+            >
+              <div className="relative m-auto flex w-full max-w-[380px] items-center md:max-w-[470px]">
+                <img
+                  className={`m-auto ${design === "0" ? "mt-[-25px] w-[380px] md:w-[470px] lg:mt-[10px]" : "mt-[-30px] w-[380px] md:mt-0 md:w-[470px]"}`}
+                  src={design === "0" ? girlOK : require("../../images/NewDesign/Homepage/message2.png")}
+                  alt="girlOK"
+                />
+                {/*<Link to={PartnerURL} target='_blank'><img className={`w-[160px] md:w-[240px] md:mt-5 mac:!mt-6 mb-10 ${design === '0' ? 'block' : 'hidden'}`} src={PartnerLogo} alt="PartnerLogo" /></Link>*/}
+                <p
+                  className={` saira absolute font-medium ${design === "0" ? "right-[20px] mt-[35px] w-[115px] text-[16px] leading-6 text-[#FFED63] iphone:right-[35px] lg:right-[10px] lg:mt-[90px] lg:w-[200px] lg:text-[24px] lg:leading-8" : "gradient-linkDouble right-[30px] mt-[20px] w-[165px] text-[22px] leading-6 iphone:right-[40px] lg:right-[40px] lg:mt-[50px] lg:w-[240px] lg:text-[34px] lg:leading-10"}`}
+                >
+                  {languageData?.homepageMessageTitle}
+                </p>
+              </div>
+              <div className=" relative ">{getButtonMarkup(lastTask)}</div>
+            </div>
+            <div className="mb-4 ml-1 w-[200px] sm:w-[unset] md:mb-[unset] md:ml-10">
+              <div className="hidden w-full max-w-[300px] items-center md:max-w-[580px] lg:flex">
+                <div className="buttonPrev2 mr-[20px] cursor-pointer">
+                  <img className="h-[32px] w-[100px]" src={arrowTextLeft} alt="arrowTextLeft" />
                 </div>
-                <img className='se:w-[170px]  w-[170px] iphone:w-[240px] mac2:w-[170px] md:w-[320px] m-auto se:mb-[0px] iphone:mb-[-10px]  relative z-50' src={design === '0' ? logoCyber : newlogoCyber} alt="logoCyber" />
-                <div>
-                    <div className='lg:flex justify-between items-end md:items-center mt-0 homepageSE iphone2:mt-[30px] contentHomepage md:mt-[70px]'>
-                        <div className='w-full lg:hidden flex mb-2 items-center'>
-                            <div className='buttonPrevText w-[60px]' onClick={e => {
-                                mixpanel.track('arrow_text_click', {
-                                    distinct_id: user?.id,
-                                    is_referred: user?.referral_id ? 'Yes' : 'No',
-                                    language: language,
-                                    vegas_tickets: user?.raffle_tickets,
-                                    points: user?.points,
-                                    user_id: user?.id,
-                                    USD_earned: user?.allTimeEarned,
-                                    
-                                    number_referrals: user?.referral_id ? user?.referral_id.length : 0,
-                                })
-                                moengage.track_event('arrow_text_click', {
-                                    distinct_id: user?.id,
-                                    is_referred: user?.referral_id ? 'Yes' : 'No',
-                                    language: language,
-                                    vegas_tickets: user?.raffle_tickets,
-                                    points: user?.points,
-                                    user_id: user?.id,
-                                    USD_earned: user?.allTimeEarned,
-                                    language: language,
-                                    number_referrals: user?.referral_id ? user?.referral_id.length : 0,
-                                })
-                            }}>
-                                <svg className=' w-[20px] cursor-pointer  mr-[10px]' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                    <path d="M22.6665 29.3333L9.33326 16L22.6665 2.66676" stroke="url(#paint0_linear_518_191)" stroke-width="2.66665" stroke-linecap="round" stroke-linejoin="round" />
-                                    <defs>
-                                        <linearGradient id="paint0_linear_518_191" x1="15.9999" y1="29.3333" x2="15.9999" y2="2.66676" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#FAD604" />
-                                            <stop offset="1" stop-color="#FE804D" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </div>
-                            <Swiper
-                                modules={[Navigation, Autoplay]}
-                                navigation={{
-                                    prevEl: '.buttonPrevText',
-                                    nextEl: '.buttonNextText',
-                                }}
-                                loop={true}
-                                breakpoints={{
-                                    0: {
-                                        slidesPerView: 1,
-                                        spaceBetween: 10,
-                                    }
-                                }}
-                            >
-                                {
-                                    dataTitle.map((item, index) => (
-                                        <SwiperSlide key={item}>
-                                            <p className='se:text-[16px] iphone:text-[18px] iphone:my-3 font-semibold'>{item.desc}</p>
-                                        </SwiperSlide>
-                                    ))
-                                }
 
-                            </Swiper>
-                            <div className='buttonNextText w-[60px]' onClick={e => {
-                                mixpanel.track('arrow_text_click', {
-                                    distinct_id: user?.id,
-                                    is_referred: user?.referral_id ? 'Yes' : 'No',
-                                    language: language,
-                                    vegas_tickets: user?.raffle_tickets,
-                                    points: user?.points,
-                                    user_id: user?.id,
-                                    USD_earned: user?.allTimeEarned,
-                                
-                                    number_referrals: user?.referral_id ? user?.referral_id.length : 0,
-                                })
-                                moengage.track_event('arrow_text_click', {
-                                    distinct_id: user?.id,
-                                    is_referred: user?.referral_id ? 'Yes' : 'No',
-                                    language: language,
-                                    vegas_tickets: user?.raffle_tickets,
-                                    points: user?.points,
-                                    user_id: user?.id,
-                                    USD_earned: user?.allTimeEarned,
-                                    language: language,
-                                    number_referrals: user?.referral_id ? user?.referral_id.length : 0,
-                                })
-                            }}>
-                                <svg className=' w-[20px] cursor-pointer ml-[20px]' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                    <path d="M9.3335 2.66675L22.6667 16L9.33349 29.3332" stroke="url(#paint0_linear_518_196)" stroke-width="2.66665" stroke-linecap="round" stroke-linejoin="round" />
-                                    <defs>
-                                        <linearGradient id="paint0_linear_518_196" x1="16.0001" y1="2.66675" x2="16.0001" y2="29.3332" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#FAD604" />
-                                            <stop offset="1" stop-color="#FE804D" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </div>
-                        </div>
-                        <div className={`relative ${design === '0' ? ' border-[#FFD700] rounded-[24px] lg:rounded-[32px]' : '  border-[#A2DBF0] homepageMainBlock rounded-[16px]'}  border-2 px-1 pb-1 pt-8 lg:pt-0  m-auto lg:m-[unset]`}>
-                            <div className='flex items-center relative max-w-[380px] md:max-w-[470px] w-full m-auto'>
-                                <img className={`m-auto ${design === '0' ? 'mt-[-25px] lg:mt-[10px] w-[380px] md:w-[470px]' : 'mt-[-30px] md:mt-0 w-[380px] md:w-[470px]'}`} src={design === '0' ? girlOK : require('../../images/NewDesign/Homepage/message2.png')} alt="girlOK" />
-                                {/*<Link to={imLiveURL} target='_blank'><img className={`w-[160px] md:w-[240px] md:mt-5 mac:!mt-6 mb-10 ${design === '0' ? 'block' : 'hidden'}`} src={imLiveLogo} alt="imLiveLogo" /></Link>*/}
-                                <p className={` saira font-medium absolute ${design === '0' ? 'text-[16px] lg:text-[24px] w-[115px] lg:w-[200px] text-[#FFED63] leading-6 lg:leading-8 right-[20px] iphone:right-[35px] lg:right-[10px] mt-[35px] lg:mt-[90px]' : 'text-[22px] lg:text-[34px] w-[165px] lg:w-[240px] right-[30px] iphone:right-[40px] lg:right-[40px] mt-[20px] lg:mt-[50px] gradient-linkDouble leading-6 lg:leading-10'}`}>{languageData?.homepageMessageTitle}</p>
-                            </div>
-                            <div className=' relative '>
-                                {
-                                    getButtonMarkup(lastTask)
-                                }
-                            </div>
-                        </div>
-                        <div className='ml-1 md:ml-10 w-[200px] sm:w-[unset] mb-4 md:mb-[unset]'>
-                            <div className='max-w-[300px] md:max-w-[580px] w-full hidden lg:flex items-center'>
-                                <div className='buttonPrev2 cursor-pointer mr-[20px]'>
-                                    <img className='w-[100px] h-[32px]' src={arrowTextLeft} alt="arrowTextLeft" />
-                                </div>
+                <Swiper
+                  modules={[Navigation, Autoplay]}
+                  navigation={{
+                    prevEl: ".buttonPrev2",
+                    nextEl: ".buttonNext2",
+                  }}
+                  loop={true}
+                  breakpoints={{
+                    0: {
+                      slidesPerView: 1,
+                      spaceBetween: 10,
+                    },
+                  }}
+                >
+                  {dataTitle.map((item, index) => (
+                    <SwiperSlide key={item}>
+                      <p className="text-[16px] font-semibold md:text-[32px] lg:leading-9">{item.desc}</p>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+                <div className="buttonNext2 ml-[20px] cursor-pointer">
+                  <img className="h-[32px] w-[100px]" src={arrowTextRight} alt="arrowTextRight" />
+                </div>
+              </div>
 
-                                <Swiper
-                                    modules={[Navigation, Autoplay]}
-
-                                    navigation={{
-                                        prevEl: '.buttonPrev2',
-                                        nextEl: '.buttonNext2',
-                                    }}
-                                    loop={true}
-                                    breakpoints={{
-                                        0: {
-                                            slidesPerView: 1,
-                                            spaceBetween: 10,
-                                        }
-                                    }}
-                                >
-                                    {
-                                        dataTitle.map((item, index) => (
-                                            <SwiperSlide key={item}>
-                                                <p className='text-[16px] md:text-[32px] font-semibold lg:leading-9'>{item.desc}</p>
-                                            </SwiperSlide>
-                                        ))
-                                    }
-
-                                </Swiper>
-                                <div className='buttonNext2 cursor-pointer ml-[20px]'>
-                                    <img className='w-[100px] h-[32px]' src={arrowTextRight} alt="arrowTextRight" />
-                                </div>
-
-
-                            </div>
-
-                            {/*
+              {/*
                         <div className='md:block hidden mt-[100px] mac:mt-[150px]'>
                             <TimeCounter title={languageData?.timeCounterTitle2} languageData={languageData} block={'hidden'}  />
                         </div>
                         */}
-                        </div>
-                    </div>
-                </div>
             </div>
-            <div className='flex absolute se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] justify-center w-full  m-auto left-1/2 transform -translate-x-1/2 '>
-                <TimeCounter title={languageData?.timeCounterTitle} left={'m-auto'} leftTitle={'text-center'} languageData={languageData} block={'hidden'} />
-            </div>
+          </div>
         </div>
-    )
+      </div>
+      <div className="absolute left-1/2 m-auto flex w-full -translate-x-1/2 transform justify-center  se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] ">
+        <TimeCounter title={languageData?.timeCounterTitle} left={"m-auto"} leftTitle={"text-center"} languageData={languageData} block={"hidden"} />
+      </div>
+    </div>
+  );
 }
 
-export default Homepage
+export default Homepage;
