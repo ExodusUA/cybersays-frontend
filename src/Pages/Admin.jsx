@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import HeaderProfile from "../Components/HeaderProfile";
 import TableComponent from "./Admin/Table";
-import { getTransactions, getTransactionsD24, getXoxodayTransaction } from "../Requests/admin";
+import { getTransactions, getTransactionsD24, getXoxodayTransaction, getPartnerTransactions } from "../Requests/admin";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -21,6 +21,8 @@ function Admin() {
       fetchTransactionsD24();
     } else if (selectedType === "Xoxoday") {
       fetchXoxodayTransaction();
+    } else if (selectedType === "Partner") {
+      fetchImliveTransactions();
     }
   }, [selectedType]);
 
@@ -65,6 +67,18 @@ function Admin() {
     });
   };
 
+  const fetchImliveTransactions = async () => {
+    const res = await getPartnerTransactions();
+    res.data = res.data.map((transaction) => {
+      transaction.type = "Partner";
+      return transaction;
+    });
+
+    setTransactions((prev) => {
+      return [...prev, ...res.data];
+    });
+  };
+
   const handleSearch = (text) => {
     if (text === "") {
       if (selectedType === "RoyalPag") {
@@ -73,6 +87,8 @@ function Admin() {
         fetchTransactionsD24();
       } else if (selectedType === "Xoxoday") {
         fetchXoxodayTransaction();
+      } else if (selectedType === "Partner") {
+        fetchImliveTransactions();
       }
       return;
     }

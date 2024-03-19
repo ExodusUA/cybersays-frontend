@@ -1,7 +1,7 @@
 import React from "react";
 import banner from "../../images/NewDesign/withdraw/banner2.png";
 
-function ImLiveBanner({ languageData, setImLiveSelected, selectPayment }) {
+function ImLiveBanner({ languageData, setImLiveSelected, selectPayment, user }) {
   return (
     <div>
       <div onClick={(e) => selectPayment("imlive")} className=" relative m-auto mb-[5px] mt-2  w-full max-w-[390px] cursor-pointer">
@@ -19,9 +19,9 @@ function ImLiveBanner({ languageData, setImLiveSelected, selectPayment }) {
           src={banner}
           alt="banner"
         />
-        <p className=" saira absolute right-[5px] top-[20px] z-50 w-[140px] text-[9px] font-medium leading-[12px] text-[#A533FF] iphone:right-[15px] iphone:top-[25px]">
+        <p className=" saira absolute right-[5px] top-[20px] z-50 w-[140px] text-[9px] font-medium leading-[12px] text-[#A533FF] iphone:right-[15px] iphone:top-[20px]">
           {" "}
-          <span className="saira font-extrabold text-[#A533FF]"></span>
+          <span className="saira font-extrabold text-[#A533FF]">{user?.imlive_username || ""} </span>
           {languageData?.withdrawBannerMessage}
         </p>
         <div className=" absolute right-[10px] top-[75px] z-10 w-[150px] iphone:right-[15px] iphone:top-[90px]">
@@ -33,7 +33,7 @@ function ImLiveBanner({ languageData, setImLiveSelected, selectPayment }) {
         </div>
         <img
           className=" absolute top-0 h-full max-h-[170px] rounded-b-[10px] rounded-t-[10px]"
-          src="https://i0.imlmediahub.com/imagesrv/imp_getimage?qu=77&mark=1&cctrl=public,max-age%3d2592000&is=imlfoh&wm=0&wi=640&fn=0648/1586648/158664801706298200.jpg"
+          src={user?.imlive_image || "https://i0.imlmediahub.com/imagesrv/imp_getimage?qu=77&mark=1&cctrl=public,max-age%3d2592000&is=imlfoh&wm=0&wi=640&fn=0648/1586648/158664801706298200.jpg"}
           alt=""
         />
         {/*

@@ -57,4 +57,27 @@ async function changeXoxodayStatus(id, status) {
   return res
 }
 
-export { getTransactions, changeTransactionStatusD24, getTransactionsD24, getXoxodayTransaction, changeXoxodayStatus };
+/* PARTHER */
+
+async function getPartnerTransactions() {
+  const res = await axios.get(process.env.REACT_APP_API_URL + "/api/v1/user/getWithdrawImliveRecords", {
+    headers: {
+      token: `${getToken()}`,
+    },
+  })
+  return res
+}
+
+async function changePartnerStatus(id, status) {
+  const res = await axios.post(process.env.REACT_APP_API_URL + "/api/v1/user/processImliveWithdraw", {
+    id,
+    status,
+  }, {
+    headers: {
+      token: `${getToken()}`,
+    },
+  })
+  return res
+}
+
+export { getTransactions, changeTransactionStatusD24, getTransactionsD24, getXoxodayTransaction, changeXoxodayStatus, getPartnerTransactions, changePartnerStatus };

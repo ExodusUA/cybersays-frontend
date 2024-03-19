@@ -21,6 +21,12 @@ function ButtonsSection({ selectedType, setSelectedType, handleSearch }) {
         <button onClick={(e) => setSelectedType("Visa")} className={`rounded border-2 border-transparent bg-blue-500 px-4 py-2 font-bold text-white duration-300 hover:bg-blue-700 ${selectedType === "Visa" && selected}`}>
           Visa
         </button>
+        <button
+          onClick={(e) => setSelectedType("Partner")}
+          className={`rounded border-2 border-transparent bg-blue-500 px-4 py-2 font-bold text-white duration-300 hover:bg-blue-700 ${selectedType === "Partner" && selected}`}
+        >
+          Partner
+        </button>
       </div>
       <div className="mb-4">
         <input onChange={(e) => handleSearch(e.target.value)} type="text" placeholder="Search by email or id" className="saira w-full rounded border-2 border-blue-500 px-4 py-2 text-black/70" />

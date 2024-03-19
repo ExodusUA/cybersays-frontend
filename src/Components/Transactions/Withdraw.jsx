@@ -84,10 +84,10 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
 
   return (
     <div>
-      {user?.earned !== 0 && user?.earned > 0 && promoModal && <ImLivePromoModal setImLiveSelected={setImLiveSelected} setOpen={setPromoModal} languageData={languageData} />}
+      {user?.earned !== 0 && user?.earned > 0 && promoModal && <ImLivePromoModal setImLiveSelected={setImLiveSelected} setOpen={setPromoModal} languageData={languageData} user={user} />}
 
       {imLiveSelected ? (
-        <ImLiveFlow setFlowStarted={setFlowStarted} setConfirm={setConfirm} setOpen={setImLiveSelected} languageData={languageData} closeAll={setOpen} />
+        <ImLiveFlow setFlowStarted={setFlowStarted} setConfirm={setConfirm} setOpen={setImLiveSelected} languageData={languageData} closeAll={setOpen} setError={setError} />
       ) : (
         <div className="fixed top-0 z-[60] h-screen w-screen bg-[#1E1E1E] bg-opacity-60 p-4 backdrop-blur-md">
           <div className=" absolute left-1/2 top-4 z-10 w-[95%] max-w-[600px] -translate-x-1/2 transform lg:top-0 lg:w-full">

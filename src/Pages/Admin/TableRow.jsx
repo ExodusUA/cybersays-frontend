@@ -1,5 +1,5 @@
 import React from "react";
-import { changeTransactionStatusD24, changeXoxodayStatus } from "../../Requests/admin";
+import { changeTransactionStatusD24, changeXoxodayStatus, changePartnerStatus } from "../../Requests/admin";
 import userAPI from "../../Requests/user";
 import { toast } from "react-toastify";
 
@@ -11,7 +11,7 @@ function TableRow({ transaction, invalidateQueries, index }) {
     } catch (error) {
       toast.error("Error changing transaction status: " + error.response.data.message);
     }
-    invalidateQueries();
+    //invalidateQueries();
   };
 
   const transactionStatusXoxoday = async (id, status) => {
@@ -21,7 +21,7 @@ function TableRow({ transaction, invalidateQueries, index }) {
     } catch (error) {
       toast.error("Error changing transaction status: " + error.response.data.message);
     }
-    invalidateQueries();
+    //invalidateQueries();
   };
 
   const transactionStatusRoyalPage = async (id, status) => {
@@ -31,7 +31,17 @@ function TableRow({ transaction, invalidateQueries, index }) {
     } catch (error) {
       toast.error("Error changing transaction status: " + error.response.data.message);
     }
-    invalidateQueries();
+    //invalidateQueries();
+  };
+
+  const transactionStatusPartner = async (id, status) => {
+    try {
+      const res = await changePartnerStatus(id, status);
+      toast.success("Transaction status changed successfully");
+    } catch (error) {
+      toast.error("Error changing transaction status: " + error.response.data.message);
+    }
+    //invalidateQueries();
   };
 
   const getStatusName = (status) => {
@@ -64,7 +74,13 @@ function TableRow({ transaction, invalidateQueries, index }) {
           <>
             <button
               onClick={() => {
-                transaction.type === "Xoxoday" ? transactionStatusXoxoday(transaction.id, 3) : transaction.type === "RoyalPag" ? transactionStatusRoyalPage(transaction.id, 3) : transactionStatusD24(transaction.id, 3);
+                transaction.type === "Xoxoday"
+                  ? transactionStatusXoxoday(transaction.id, 3)
+                  : transaction.type === "RoyalPag"
+                    ? transactionStatusRoyalPage(transaction.id, 3)
+                    : transaction.type === "Partner"
+                      ? transactionStatusPartner(transaction.id, 3)
+                      : transactionStatusD24(transaction.id, 3);
               }}
               class="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
             >
@@ -72,7 +88,13 @@ function TableRow({ transaction, invalidateQueries, index }) {
             </button>
             <button
               onClick={() => {
-                transaction.type === "Xoxoday" ? transactionStatusXoxoday(transaction.id, 4) : transaction.type === "RoyalPag" ? transactionStatusRoyalPage(transaction.id, 4) : transactionStatusD24(transaction.id, 4);
+                transaction.type === "Xoxoday"
+                  ? transactionStatusXoxoday(transaction.id, 4)
+                  : transaction.type === "RoyalPag"
+                    ? transactionStatusRoyalPage(transaction.id, 4)
+                    : transaction.type === "Partner"
+                      ? transactionStatusPartner(transaction.id, 4)
+                      : transactionStatusD24(transaction.id, 4);
               }}
               class="ml-2 rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
             >

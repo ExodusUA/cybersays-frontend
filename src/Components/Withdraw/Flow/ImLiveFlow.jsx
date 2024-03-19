@@ -15,7 +15,8 @@ function ImLiveFlow({ languageData, setConfirm, setFlowStarted, setError, closeA
 
       setConfirm(true);
     } catch (error) {
-      setConfirm(true);
+      alert(error.response.data.message);
+      setError(true);
     }
   };
   return (
