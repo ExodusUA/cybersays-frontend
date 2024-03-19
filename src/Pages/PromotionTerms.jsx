@@ -31,7 +31,7 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
 <p><strong>NO PURCHASE NECESSARY OR PAYMENT REQUIRED TO ENTER OR WIN A PRIZE</strong><strong>.&nbsp;</strong></p>
 <p><strong>General</strong></p>
 <ol>
-  <li>The Cyber Says Promotion shall commence on March 13<sup>th</sup>, 2024 at: 00:00:01 UTC and shall conclude on July 21<sup>st</sup> , 2024, at: 23:59:59 UTC (the &ldquo;<strong>Promotion Period</strong>&rdquo;).&nbsp;</li>
+  <li>The Cyber Says Promotion shall commence on March 13<sup>th</sup>, 2024 at: 00:00:01 UTC and shall conclude on August 06<sup>st</sup> , 2024, at: 23:59:59 UTC (the &ldquo;<strong>Promotion Period</strong>&rdquo;).&nbsp;</li>
 </ol>
 <p><br></p>
 <ol>
@@ -125,8 +125,8 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
   <ol>
       <li>The subject of the post mail must include &quot;<strong>Free participation request &ndash; Cyber Says Promotion</strong>&quot;;</li>
       <li>The mail must contain your username, Cyber Says ID account number, phone number, email address and date of birth.</li>
-      <li>The mail shall be received by us during the applicable Promotion Period for the relevant Promotion and will be accepted by no later than <strong>July 7, 2024.</strong></li>
-      <li>Irrespective of the above, any mail sent after the end of the Promotion Period will not be deemed valid entries and will not entitle the participant to any ticket, even if the mail was received by us before <strong>July 7,2024</strong>;</li>
+      <li>The mail shall be received by us during the applicable Promotion Period for the relevant Promotion and will be accepted by no later than <strong>August 12, 2024.</strong></li>
+      <li>Irrespective of the above, any mail sent after the end of the Promotion Period will not be deemed valid entries and will not entitle the participant to any ticket, even if the mail was received by us before <strong>August 12,2024</strong>;</li>
       <li>Each one (1) valid mail received by us will allow you to receive one (1) ticket for the Cyber Says Promotion.</li>
   </ol>
 </ol>
@@ -151,7 +151,7 @@ let en_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
 </ol>
 <p><br></p>
 <ol>
-  <li>The winner will be selected randomly on <strong>July 21<sup>st</sup>, 2024</strong>.&nbsp;</li>
+  <li>The winner will be selected randomly on <strong>August 20<sup>st</sup>, 2024</strong>.&nbsp;</li>
 </ol>
 <p><br></p>
 <ol>
@@ -324,7 +324,7 @@ let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
 <p><strong>NO ES NECESARIO REALIZAR NINGUNA COMPRA NI EFECTUAR NING&Uacute;N PAGO PARA ENTRAR O GANAR UN PREMIO</strong><strong>.&nbsp;</strong></p>
 <p><strong>General</strong></p>
 <ol>
-    <li>La promoci&oacute;n Cyber Says comenzar&aacute; el 11 de marzo de 2024 a las: 00:00:01 UTC y concluir&aacute; el 2 de julio de , 2024, a las: 23:59:59 UTC (el &quot;<strong>Periodo de la Promoci&oacute;n</strong>&quot;).&nbsp;</li>
+    <li>La promoci&oacute;n Cyber Says comenzar&aacute; el 11 de marzo de 2024 a las: 00:00:01 UTC y concluir&aacute; el 6 de agosto de , 2024, a las: 23:59:59 UTC (el &quot;<strong>Periodo de la Promoci&oacute;n</strong>&quot;).&nbsp;</li>
 </ol>
 <p><br></p>
 <ol>
@@ -418,8 +418,8 @@ let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
     <ol>
         <li>El asunto del correo debe incluir &quot;<strong>Solicitud de participaci&oacute;n gratuita - Promoci&oacute;n Cyber Says</strong>&quot;;</li>
         <li>El correo debe contener su nombre de usuario, n&uacute;mero de cuenta Cyber Says ID, n&uacute;mero de tel&eacute;fono, direcci&oacute;n de correo electr&oacute;nico y fecha de nacimiento.</li>
-        <li>El correo deber&aacute; ser recibido por nosotros durante el Periodo de Promoci&oacute;n aplicable para la Promoci&oacute;n en cuesti&oacute;n y ser&aacute; aceptado no m&aacute;s tarde del <strong>7 de julio de 2024.</strong></li>
-        <li>Independientemente de lo anterior, cualquier correo enviado una vez finalizado el Periodo de la Promoci&oacute;n no se considerar&aacute; una participaci&oacute;n v&aacute;lida y no dar&aacute; derecho al participante a ninguna entrada, aunque el correo haya sido recibido por nosotros antes del <strong>7 de julio de 2024</strong>;</li>
+        <li>El correo deber&aacute; ser recibido por nosotros durante el Periodo de Promoci&oacute;n aplicable para la Promoci&oacute;n en cuesti&oacute;n y ser&aacute; aceptado no m&aacute;s tarde del <strong>12 de agosto de 2024.</strong></li>
+        <li>Independientemente de lo anterior, cualquier correo enviado una vez finalizado el Periodo de la Promoci&oacute;n no se considerar&aacute; una participaci&oacute;n v&aacute;lida y no dar&aacute; derecho al participante a ninguna entrada, aunque el correo haya sido recibido por nosotros antes del <strong>12 de agosto de 2024</strong>;</li>
         <li>Cada (1) correo v&aacute;lido recibido por nosotros le permitir&aacute; recibir un (1) ticket para la Promoci&oacute;n Cyber Says.</li>
     </ol>
 </ol>
@@ -444,7 +444,7 @@ let es_text = `<p style="text-align:center;font-size:16pt!important;"><strong>Py
 </ol>
 <p><br></p>
 <ol>
-    <li>El ganador ser&aacute; seleccionado al azar el <strong>14 de julio de 2024</strong>.&nbsp;</li>
+    <li>El ganador ser&aacute; seleccionado al azar el <strong>20 de agosto de 2024</strong>.&nbsp;</li>
 </ol>
 <p><br></p>
 <ol>
@@ -657,7 +657,7 @@ documento, ter&atilde;o o significado dado a eles nos Termos.
   A Promo&ccedil;&atilde;o Cyber Says ter&aacute; in&iacute;cio em
   <span class="s1">11 de mar&ccedil;o de 2024 </span>&agrave;s: 00:00:01
   UTC e ser&aacute; encerrada em
-  <span class="s1">2 de julho de 2024</span>, &agrave;s: 23:59:59 UTC (o
+  <span class="s1">6 de agosto de 2024</span>, &agrave;s: 23:59:59 UTC (o
   "<strong>Per&iacute;odo da Promo&ccedil;&atilde;o</strong>").
 </li>
 </ol>
@@ -983,7 +983,7 @@ incluir todos os seguintes dados
     durante o Per&iacute;odo da Promo&ccedil;&atilde;o aplic&aacute;vel
     para a Promo&ccedil;&atilde;o relevante e ser&aacute; aceita
     at&eacute;, no m&aacute;ximo,
-    <span class="s1"><strong>7 de julho de 2024.</strong></span>
+    <span class="s1"><strong>12 de agosto de 2024.</strong></span>
   </li>
   <li class="li6">
     Independentemente do acima exposto, qualquer correspond&ecirc;ncia
@@ -992,7 +992,7 @@ incluir todos os seguintes dados
     inscri&ccedil;&atilde;o v&aacute;lida e n&atilde;o dar&aacute; direito
     a nenhum bilhete, mesmo que a correspond&ecirc;ncia tenha sido
     recebida por n&oacute;s antes de
-    <span class="s1"><strong>7 de julho de 2024</strong></span
+    <span class="s1"><strong>12 de agosto de 2024</strong></span
     >;
   </li>
   <li class="li6">
@@ -1073,7 +1073,7 @@ etapas a seguir
 <ol class="ol1">
 <li class="li6">
   O vencedor ser&aacute; selecionado aleatoriamente em
-  <span class="s1"><strong>14 de julho de 2024</strong></span
+  <span class="s1"><strong>20 de agosto de 2024</strong></span
   >.
 </li>
 </ol>
