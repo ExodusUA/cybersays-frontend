@@ -42,7 +42,7 @@ function DoubleComplete({ setOpen, languageData, user, PartnerURL, userCountry }
           <p className="mx-2 text-center text-[24px] font-semibold leading-8 md:text-[32px] lg:leading-9">
             {languageData?.doubleCompleteTitle1}
             {userCountry === "BR" || userCountry === "UA" ? "R$50" : "$10"}
-            {languageData?.doubleCompleteTitle2}
+            {userCountry === "BR" || userCountry === "UA" ? languageData?.doubleCompleteTitle2.replace("dollars", "") : languageData?.doubleCompleteTitle2}
             {/* <span className=' truncate text-[24px] md:text-[32px] font-semibold ml-1 block lg:inline'>
                         {user?.email}
                     </span> {languageData?.doubleCompleteTitleSpan}*/}
