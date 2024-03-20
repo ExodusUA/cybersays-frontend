@@ -668,5 +668,7 @@
   "transactionApproved": "Approved",
   "transactionDeclined": "Declined",
   "transactionNoData": "No data",
-  "referralInvite": "Invite your friends"
+  "referralInvite": "Invite your friends",
+  "doubleCompleteTitle1": "Congratulations, you have ",
+  "doubleCompleteTitle2": " dollars waiting for you, go get it and withdraw it!"
 }
