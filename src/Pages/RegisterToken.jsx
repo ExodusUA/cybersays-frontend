@@ -3,9 +3,11 @@ import { useNavigate } from "react-router-dom";
 import AuthError from "./Auth/AuthError";
 import { jwtDecode } from "jwt-decode";
 import { processUserRegistration } from "../Requests/auth";
+import { useLanguage } from "../Helpers/Languages/LanguageContext";
 
 function RegisterToken() {
   const navigate = useNavigate();
+  const { language } = useLanguage();
   const [error, setError] = useState(false);
   let urlToken = window.location.href.split("/")[4];
 
@@ -15,7 +17,7 @@ function RegisterToken() {
       navigate("/login");
 
       try {
-        const res = await processUserRegistration(urlToken);
+        const res = await processUserRegistration(urlToken, language);
         if (res.status === 200) {
           window.localStorage.setItem("token", res.data.token);
           navigate("/");

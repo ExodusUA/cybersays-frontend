@@ -45,9 +45,9 @@ async function otpVerify(token, code, refferalCode, email, special, country) {
 
 /* PROCESS USER REGISTRATION */
 
-async function processUserRegistration(token) {
+async function processUserRegistration(token, lang) {
     const res = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/addUser', {
-        token
+        token, lang
     });
     return res
 }
