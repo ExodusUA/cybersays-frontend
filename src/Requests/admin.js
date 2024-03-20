@@ -80,4 +80,25 @@ async function changePartnerStatus(id, status) {
   return res
 }
 
-export { getTransactions, changeTransactionStatusD24, getTransactionsD24, getXoxodayTransaction, changeXoxodayStatus, getPartnerTransactions, changePartnerStatus };
+async function getVisaTransactions() {
+  const res = await axios.get(process.env.REACT_APP_API_URL + "/api/v1/user/getVisaWithdrawRecords", {
+    headers: {
+      token: `${getToken()}`,
+    },
+  })
+  return res
+}
+
+async function processVisaWithdraw(id, status) {
+  const res = await axios.post(process.env.REACT_APP_API_URL + "/api/v1/user/processVisaWithdraw", {
+    id,
+    status,
+  }, {
+    headers: {
+      token: `${getToken()}`,
+    },
+  })
+  return res
+}
+
+export { getTransactions, changeTransactionStatusD24, getTransactionsD24, getXoxodayTransaction, changeXoxodayStatus, getPartnerTransactions, changePartnerStatus, getVisaTransactions, processVisaWithdraw };

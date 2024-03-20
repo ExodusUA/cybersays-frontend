@@ -1,5 +1,5 @@
 import React from "react";
-import { changeTransactionStatusD24, changeXoxodayStatus, changePartnerStatus } from "../../Requests/admin";
+import { changeTransactionStatusD24, changeXoxodayStatus, changePartnerStatus, processVisaWithdraw } from "../../Requests/admin";
 import userAPI from "../../Requests/user";
 import { toast } from "react-toastify";
 
@@ -44,6 +44,16 @@ function TableRow({ transaction, invalidateQueries, index }) {
     //invalidateQueries();
   };
 
+  const transactionStatusVisa = async (id, status) => {
+    try {
+      const res = await processVisaWithdraw(id, status);
+      toast.success("Transaction status changed successfully");
+    } catch (error) {
+      toast.error("Error changing transaction status: " + error.response.data.message);
+    }
+    //invalidateQueries();
+  };
+
   const getStatusName = (status) => {
     switch (status) {
       case 1:
@@ -80,7 +90,9 @@ function TableRow({ transaction, invalidateQueries, index }) {
                     ? transactionStatusRoyalPage(transaction.id, 3)
                     : transaction.type === "Partner"
                       ? transactionStatusPartner(transaction.id, 3)
-                      : transactionStatusD24(transaction.id, 3);
+                      : transaction.type === "Visa"
+                        ? transactionStatusVisa(transaction.id, 3)
+                        : transactionStatusD24(transaction.id, 3);
               }}
               class="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
             >
@@ -94,7 +106,9 @@ function TableRow({ transaction, invalidateQueries, index }) {
                     ? transactionStatusRoyalPage(transaction.id, 4)
                     : transaction.type === "Partner"
                       ? transactionStatusPartner(transaction.id, 4)
-                      : transactionStatusD24(transaction.id, 4);
+                      : transaction.type === "Visa"
+                        ? transactionStatusVisa(transaction.id, 4)
+                        : transactionStatusD24(transaction.id, 4);
               }}
               class="ml-2 rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
             >

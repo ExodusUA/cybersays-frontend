@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useDesign } from "../../../Helpers/Design/DesignContext";
-import OTPVerify from "../OTPVerify";
+import OTPVerifyVisa from "../OTPVerifyVisa";
 import DatePicker from "react-date-picker";
 import "react-date-picker/dist/DatePicker.css";
 import "react-calendar/dist/Calendar.css";
 import { Link } from "react-router-dom";
+import { withdrawVisa } from "../../../Requests/withdraw";
+import mixpanel from "mixpanel-browser";
+import { useLanguage } from "../../../Helpers/Languages/LanguageContext";
 
 function VisaFlow({ languageData, setConfirm, setError }) {
   const { design } = useDesign();
-
+  const { language } = useLanguage();
   const [transfer, setTransfer] = useState("");
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -47,6 +50,19 @@ function VisaFlow({ languageData, setConfirm, setError }) {
       setConfirm(true);
     }
   }, [isVerified]);
+
+  const handleCreateTransaction = async () => {
+    try {
+      const response = await withdrawVisa(fullName, email, citizenshipOption, date, language);
+      mixpanel.track("Withdraw_request", { method: "Visa" });
+
+      if (response.data === "OTP sended") {
+        setStep(2);
+      }
+    } catch (error) {
+      alert(error.response.data.message);
+    }
+  };
 
   return (
     <div className={` m-auto w-full max-w-[600px]`}>
@@ -144,6 +160,7 @@ function VisaFlow({ languageData, setConfirm, setError }) {
           </div>
           <div className="mt-2 flex justify-center lg:mt-4">
             <button
+              onClick={(e) => handleCreateTransaction()}
               disabled={!checkmark}
               className={`saira w-full  border-[2px]  bg-white py-2 text-[18px] font-semibold text-black outline-none ${checkmark ? "opacity-[1]" : "opacity-[0.5]"} ${design === "0" ? "  rounded-[50px] border-[2px] border-[#FFED63] bg-white" : " gradient-homepageBtn rounded-[12px] border-none"}`}
             >
@@ -153,7 +170,7 @@ function VisaFlow({ languageData, setConfirm, setError }) {
         </>
       ) : (
         <>
-          <OTPVerify languageData={languageData} setStep={setStep} email={email} isVerified={setIsVerified} />
+          <OTPVerifyVisa languageData={languageData} setStep={setStep} email={email} isVerified={setIsVerified} />
         </>
       )}
     </div>

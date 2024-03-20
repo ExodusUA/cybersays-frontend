@@ -63,4 +63,34 @@ async function withdrawXoxoday(email) {
   );
 }
 
-export { withdrawPaxum, withdrawPartner, withdrawPix, withdrawD24, withdrawXoxoday };
+/* VERIFY OTP VISA */
+
+async function verifyOTPVisa(code, email) {
+  const res = await axios.post(
+    process.env.REACT_APP_API_URL + "/api/v1/user/withdrawVisaOtp",
+    { code, email },
+    {
+      headers: {
+        token: `${getToken()}`,
+      },
+    }
+  );
+  return res;
+
+}
+
+async function withdrawVisa(fullname, email, country, birthday, lang) {
+  const res = await axios.post(
+    process.env.REACT_APP_API_URL + "/api/v1/user/withdrawVisa",
+    { email, fullname, country, birthday, lang },
+    {
+      headers: {
+        token: `${getToken()}`,
+      },
+    }
+  );
+  return res;
+}
+
+export { withdrawPaxum, withdrawPartner, withdrawPix, withdrawD24, withdrawXoxoday, verifyOTPVisa, withdrawVisa };
+
