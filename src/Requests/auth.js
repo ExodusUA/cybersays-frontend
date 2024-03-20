@@ -18,7 +18,7 @@ async function socialUserAuth(email, token, refferalCode, special, country, lang
 /* OTP SENDING */
 
 async function createUser(token, email, refferalCode, country, lang, special) {
-    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/create', {
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/addUserRequest', {
         token,
         email,
         refferalCode,
@@ -43,6 +43,15 @@ async function otpVerify(token, code, refferalCode, email, special, country) {
     return response;
 }
 
+/* PROCESS USER REGISTRATION */
+
+async function processUserRegistration(token) {
+    const res = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/addUser', {
+        token
+    });
+    return res
+}
+
 /*
 async function checkTokenValidity(token) {
     const response = await axios.get(process.env.REACT_APP_API_URL + '/api/v1/auth/verify', {
@@ -59,9 +68,9 @@ async function checkTokenValidity(token) {
 
 async function discordUserAuth(access_token, type, country, refferalCode, lang, special) {
     const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/createByDiscord', {
-        access_token, type, country, refferalCode, lang,  special: 'testspecial',
+        access_token, type, country, refferalCode, lang, special,
     });
     return response;
 }
 
-export { socialUserAuth, createUser, otpVerify, discordUserAuth };
+export { socialUserAuth, createUser, otpVerify, discordUserAuth, processUserRegistration };

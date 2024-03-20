@@ -4,18 +4,13 @@ import React, { useEffect } from "react";
 import mixpanel from "mixpanel-browser";
 import Auth from "./Pages/Auth";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
-import Token from "./Pages/Token";
 import Main from "./Pages/Main";
-import Privacy from "./Pages/Privacy";
 import DiscordAuth from "./Pages/Auth/DiscordAuth";
 import { DesignProvider } from "./Helpers/Design/DesignContext";
-import Terms from "./Pages/Terms";
-import Policy from "./Pages/Policy";
-import ContestTerms from "./Pages/ContestTerms";
-import PromotionTerms from "./Pages/PromotionTerms";
-import AffiliationTerms from "./Pages/AffiliationTerms";
 import moengage from "@moengage/web-sdk";
 import Admin from "./Pages/Admin";
+import RegisterToken from "./Pages/RegisterToken";
+import AuthToken from "./Pages/AuthToken";
 
 function App() {
   moengage.initialize({
@@ -129,13 +124,8 @@ function App() {
             <Route path="/welcome/*" element={<Main languageData={languageData} />} />
             <Route path="/login" element={<Auth languageData={languageData} />} />
             <Route path="/auth/discord/callback" element={<DiscordAuth />} />
-            <Route path="/privacy" element={<Privacy languageData={languageData} />} />
-            <Route path="/token/*" element={<Token />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/policy" element={<Policy />} />
-            <Route path="/contest-terms" element={<ContestTerms />} />
-            <Route path="/promotion-terms" element={<PromotionTerms />} />
-            <Route path="/affiliation-terms" element={<AffiliationTerms />} />
+            <Route path="/register/*" element={<RegisterToken />} />
+            <Route path="/auth/*" element={<AuthToken />} />
             <Route path="/admin" element={<Admin />} />
           </Routes>
         </BrowserRouter>

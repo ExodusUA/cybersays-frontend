@@ -1,128 +1,121 @@
-import React, { useEffect, useState } from 'react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import Language from '../Components/Language/Language';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import Slider from './Auth/Slider';
-import LoginForm from './Auth/LoginForm';
-import logoCyber from '../images/logoLogin.png';
-import { useSwipeable } from 'react-swipeable';
-import SocialLink from '../Components/SocialLink';
-import { Link, useNavigate } from 'react-router-dom';
-import { useLanguage } from '../Helpers/Languages/LanguageContext';
+import React, { useEffect, useState } from "react";
+import "swiper/css";
+import "swiper/css/navigation";
+import Language from "../Components/Language/Language";
+import "swiper/css";
+import "swiper/css/navigation";
+import Slider from "./Auth/Slider";
+import LoginForm from "./Auth/LoginForm";
+import logoCyber from "../images/logoLogin.png";
+import { useSwipeable } from "react-swipeable";
+import SocialLink from "../Components/SocialLink";
+import { Link, useNavigate } from "react-router-dom";
+import { useLanguage } from "../Helpers/Languages/LanguageContext";
 
 function Auth({ languageData }) {
-    const navigate = useNavigate();
-    let { language } = useLanguage();
+  const navigate = useNavigate();
+  let { language } = useLanguage();
 
-    if (window.localStorage.getItem('token')) {
-        navigate('/');
-    } else {
-        window.localStorage.removeItem('double');
-    }
+  if (window.localStorage.getItem("token")) {
+    navigate("/");
+  } else {
+    window.localStorage.removeItem("double");
+  }
 
-    const params = new URLSearchParams(window.location.search);
+  const params = new URLSearchParams(window.location.search);
 
+  let referralID = window.localStorage.getItem("ref") === "login" ? null : window.localStorage.getItem("ref");
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [socialLink, setSocialLink] = useState(false);
+  const [swiperRef, setSwiperRef] = useState(null);
 
-    let referralID = window.localStorage.getItem('ref') === 'login' ? null : window.localStorage.getItem('ref');
+  const slideChange = (swiper) => {
+    setCurrentSlide(swiper.realIndex);
+    console.log(swiper.realIndex);
+  };
 
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const [socialLink, setSocialLink] = useState(false)
-    const [swiperRef, setSwiperRef] = useState(null);
+  const handlers = useSwipeable({
+    onSwipedLeft: () => swiperRef?.slideNext(),
+    onSwipedRight: () => swiperRef?.slidePrev(),
+  });
 
-    const slideChange = (swiper) => {
-        setCurrentSlide(swiper.realIndex);
-        console.log(swiper.realIndex)
-    };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-    const handlers = useSwipeable({
-        onSwipedLeft: () => swiperRef?.slideNext(),
-        onSwipedRight: () => swiperRef?.slidePrev(),
-    });
+  return (
+    <>
+      <section {...handlers} className="relative h-screen w-screen overflow-hidden">
+        <div className="h-full lg:flex">
+          <Slider swiperRef={swiperRef} setSwiperRef={setSwiperRef} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} onSlideChange={slideChange} />
+          <div className="align-start absolute right-0 top-5 z-10 flex items-center lg:right-[20px]">
+            <Language />
+          </div>
+          <div className="top-10 h-full w-full bg-dark text-center lg:absolute lg:left-10 lg:w-[620px]">
+            <div className="z-10 m-auto w-[90%] lg:relative lg:w-[640px]">
+              <div className="relative z-[10]  w-full rounded-[32px] border-[#DDBBFD] bg-opacity-20 pt-[1px] iphone:pt-[10px] lg:border-2 lg:bg-[#0D0D0D73] lg:px-10 lg:pb-5 lg:pt-10">
+                <div className=" lg:max-w-[600px] ">
+                  <img className="logoLogin  m-auto mt-[-30px] w-[130px] lg:mt-0 lg:w-[250px]" src={logoCyber} alt="Logotype" />
+                  <p
+                    className={`h-[154px] w-full pb-2 text-center text-[20px] font-bold leading-7 text-white se:mt-[0px] lg:w-[100%] lg:text-left lg:text-[32px] lg:leading-9 ${language === "es" && "md:min-h-[210px]"} md:min-h-[180px]`}
+                  >
+                    {currentSlide === 0 && (
+                      <>
+                        {languageData?.authSlide1}
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+                        <div className=" mt-2 leading-6">
+                          <p className="text-[16px] font-bold lg:mt-1 lg:text-[20px]">{languageData?.authSlide1li1}</p>
 
-    return (
-        <>
-            <section  {...handlers} className='w-screen h-screen relative overflow-hidden'>
-                <div className='lg:flex h-full'>
+                          <p className="text-[16px] font-bold lg:mt-1 lg:text-[20px]">{languageData?.authSlide1li2}</p>
 
-                    <Slider swiperRef={swiperRef} setSwiperRef={setSwiperRef} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} onSlideChange={slideChange} />
-                    <div className='absolute right-0 lg:right-[20px] top-5 flex items-center align-start z-10'>
-                        <Language />
-                    </div>
-                    <div className='w-full text-center bg-dark lg:w-[620px] h-full lg:absolute lg:left-10 top-10'>
-                        <div className='w-[90%] lg:w-[640px] m-auto lg:relative z-10'>
+                          <p className="text-[16px] font-bold lg:mt-1 lg:text-[20px]">{languageData?.authSlide1li3}</p>
+                        </div>
+                      </>
+                    )}
+                    {currentSlide === 1 && (
+                      <>
+                        {languageData?.authSlide2}
 
+                        <div className=" mt-2 leading-6">
+                          <p className="text-[16px] font-bold lg:text-[20px]">{languageData?.authSlide2li1}</p>
+                        </div>
+                      </>
+                    )}
+                    {currentSlide === 2 && (
+                      <>
+                        {languageData?.authSlide3}
 
+                        <div className=" mt-2 leading-6">
+                          <p className="text-[16px] font-bold lg:text-[20px]">{languageData?.authSlide3li1}</p>
+                        </div>
+                      </>
+                    )}
+                    {currentSlide === 3 && (
+                      <>
+                        {languageData?.authSlide4}
 
-                            <div className='pt-[1px] iphone:pt-[10px]  w-full relative z-[10] lg:border-2 lg:px-10 lg:pt-10 lg:pb-5 lg:bg-[#0D0D0D73] bg-opacity-20 rounded-[32px] border-[#DDBBFD]'>
-                                <div className=' lg:max-w-[600px] '>
-                                    <img className='w-[130px]  lg:w-[250px] m-auto mt-[-30px] lg:mt-0 logoLogin' src={logoCyber} alt="Logotype" />
-                                    <p className={`w-full lg:w-[100%] text-center lg:text-left text-[20px] leading-7 font-bold lg:text-[32px] text-white lg:leading-9 pb-2 se:mt-[0px] h-[154px] ${language === 'es' && 'md:min-h-[210px]'} md:min-h-[180px]`}>
-                                        {currentSlide === 0 && (
-                                            <>
-                                                {languageData?.authSlide1}
+                        <div className=" mt-2 leading-6">
+                          <p className="text-[16px] font-bold lg:text-[20px]">{languageData?.authSlide4li1}</p>
+                        </div>
+                      </>
+                    )}
+                  </p>
+                </div>
+                <LoginForm languageData={languageData} referralID={referralID} />
 
-                                                <div className=' leading-6 mt-2'>
-                                                    <p className='text-[16px] lg:text-[20px] lg:mt-1 font-bold'>{languageData?.authSlide1li1}</p>
+                <div className="mt-2 hidden items-center justify-center gap-2 text-left sm:flex lg:mt-4 lg:items-start">
+                  <p className="saira w-full cursor-pointer  select-none text-[8px] font-normal leading-4 text-[#CACACA]">
+                    {languageData?.loginTermsTitle}
 
-                                                    <p className='text-[16px] lg:text-[20px] lg:mt-1 font-bold'>{languageData?.authSlide1li2}</p>
+                    <Link target="_blank" to="https://cybersays-legal.vercel.app/terms" className="saira ml-1 text-[8px] font-semibold ">
+                      <span className=" saira text-[8px] font-normal underline">Terms of Use</span> &
+                    </Link>
 
-                                                    <p className='text-[16px] lg:text-[20px] lg:mt-1 font-bold'>{languageData?.authSlide1li3}</p>
-                                                </div>
-                                            </>
-                                        )}
-                                        {currentSlide === 1 && (
-                                            <>
-                                                {languageData?.authSlide2}
-
-                                                <div className=' leading-6 mt-2'>
-                                                    <p className='text-[16px] lg:text-[20px] font-bold'>{languageData?.authSlide2li1}</p>
-                                                </div>
-                                            </>
-                                        )}
-                                        {currentSlide === 2 && (
-                                            <>
-                                                {languageData?.authSlide3}
-
-                                                <div className=' leading-6 mt-2'>
-                                                    <p className='text-[16px] lg:text-[20px] font-bold'>{languageData?.authSlide3li1}</p>
-                                                </div>
-                                            </>
-                                        )}
-                                        {currentSlide === 3 && (
-                                            <>
-                                                {languageData?.authSlide4}
-
-                                                <div className=' leading-6 mt-2'>
-                                                    <p className='text-[16px] lg:text-[20px] font-bold'>{languageData?.authSlide4li1}</p>
-                                                </div>
-                                            </>
-                                        )}
-
-                                    </p>
-
-                                </div>
-                                <LoginForm languageData={languageData} referralID={referralID} />
-
-
-                                <div className='hidden sm:flex text-left items-center lg:items-start justify-center gap-2 mt-2 lg:mt-4'>
-                                    <p className='saira text-[8px] text-[#CACACA]  w-full cursor-pointer select-none font-normal leading-4'>
-                                        {languageData?.loginTermsTitle}
-
-                                        <Link target='_blank' to='/terms' className='saira text-[8px] font-semibold ml-1 '>
-                                            <span className=' saira text-[8px] font-normal underline'>Terms of Use</span> &
-                                        </Link>
-
-                                        <Link target='_blank' to={'/privacy'} className='saira text-[8px] font-semibold underline'>
-                                            <span className=' saira text-[8px] font-normal underline'> Privacy Policy</span>,
-                                        </Link>
-                                        {/*
+                    <Link target="_blank" to={"https://cybersays-legal.vercel.app/privacy"} className="saira text-[8px] font-semibold underline">
+                      <span className=" saira text-[8px] font-normal underline"> Privacy Policy</span>,
+                    </Link>
+                    {/*
                                         <Link target='_blank' to={'/terms'} className='saira text-[12px] font-semibold underline'>
                                             <span className=' saira text-[12px] font-normal underline'>Terms of Use</span>,
                                         </Link>
@@ -139,38 +132,31 @@ function Auth({ languageData }) {
                                             <span className=' saira text-[12px] font-normal underline'>Affliation Terms</span>
                                         </Link>
                                         */}
-                                    </p>
-
-                                </div>
-
-                                <div className=' fixed bottom-6 left-2 max-w-[60vw] sm:block md:bottom-0 md:left-0 md:hidden md:max-w-none text-left flex items-center lg:items-start justify-center gap-2 mt-2 lg:mt-4'>
-                                    <p className='saira text-[8px] text-[#a9a9a9]  w-full cursor-pointer select-none font-normal leading-4'>
-                                        {languageData?.loginTermsTitle}
-
-                                        <Link target='_blank' to='/terms' className='saira text-[8px] font-semibold ml-1 '>
-                                            <span className=' saira text-[8px] font-normal underline'>Terms of Use</span> &
-                                        </Link>
-
-                                        <Link target='_blank' to={'/privacy'} className='saira text-[8px] font-semibold underline'>
-                                            <span className=' saira text-[8px] font-normal underline'> Privacy Policy</span>,
-                                        </Link>
-
-                                    </p>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+                  </p>
                 </div>
 
-                {
-                    socialLink && <SocialLink setOpen={setSocialLink} />
-                }
-            </section>
-        </>
+                <div className=" fixed bottom-6 left-2 mt-2 flex max-w-[60vw] items-center justify-center gap-2 text-left sm:block md:bottom-0 md:left-0 md:hidden md:max-w-none lg:mt-4 lg:items-start">
+                  <p className="saira w-full cursor-pointer  select-none text-[8px] font-normal leading-4 text-[#a9a9a9]">
+                    {languageData?.loginTermsTitle}
 
-    )
+                    <Link target="_blank" to="https://cybersays-legal.vercel.app/terms" className="saira ml-1 text-[8px] font-semibold ">
+                      <span className=" saira text-[8px] font-normal underline">Terms of Use</span> &
+                    </Link>
+
+                    <Link target="_blank" to={"https://cybersays-legal.vercel.app/privacy"} className="saira text-[8px] font-semibold underline">
+                      <span className=" saira text-[8px] font-normal underline"> Privacy Policy</span>,
+                    </Link>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {socialLink && <SocialLink setOpen={setSocialLink} />}
+      </section>
+    </>
+  );
 }
 
-export default Auth
+export default Auth;

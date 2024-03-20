@@ -21,8 +21,7 @@ function WinTicketModal({ setOpen, languageData, user, scrollToPage }) {
           <p className="gradient-linkDouble saira text-center text-[14px] font-medium leading-4 ">{languageData?.winTicketSubTitle}</p>
           <div className="mt-2 rounded-[14px] bg-[#EAEAEA] bg-opacity-40 p-2 backdrop-blur-md lg:rounded-[24px] ">
             <div className="flex items-center">
-              <img className="mr-2 w-[100px]" src={PartnerLogo} alt="PartnerLogo" />
-              <p className="saira w-[200px] text-[16px] font-semibold">{languageData?.winTicketLiTitle}</p>
+              <p className="saira text-[16px] font-semibold">{languageData?.winTicketLiTitle}</p>
             </div>
             <ul className="ml-[20px] mt-1 list-disc">
               <li className="saira text-[12px] font-medium lg:text-[14px]">{languageData?.winTicketLi1}</li>

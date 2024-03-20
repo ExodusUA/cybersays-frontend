@@ -23,7 +23,7 @@ import About from "../Pages/CyberSaysPages/Modals/About";
 import Legal from "../Pages/CyberSaysPages/Modals/Legal";
 import Contact from "../Pages/CyberSaysPages/Modals/Contact";
 import Settings from "../Pages/CyberSaysPages/Modals/Settings";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDesign } from "../Helpers/Design/DesignContext";
 import OurMission from "../Pages/CyberSaysPages/Modals/OurMission";
 import WhyJoin from "../Pages/CyberSaysPages/Modals/WhyJoin";
@@ -761,7 +761,6 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                     <div
                       className="flex items-center"
                       onClick={(e) => {
-                        setSocialLink(true);
                         mixpanel.track("legal", {
                           distinct_id: user?.id,
                           is_referred: user?.referral_id ? "Yes" : "No",
@@ -782,7 +781,10 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                         });
                       }}
                     >
-                      <p className="saira ml-[40px] cursor-pointer text-[20px] font-semibold">{languageData?.modalMenuBottom2}</p>
+                      <Link target="_blank" to={"https://cybersays-legal.vercel.app/"}>
+                        {" "}
+                        <p className="saira ml-[40px] cursor-pointer text-[20px] font-semibold">{languageData?.modalMenuBottom2}</p>
+                      </Link>
                     </div>
                   </div>
                 </>
@@ -857,7 +859,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
       {ourModal && <OurMission languageData={languageData} setOpen={setOurModal} user={user} />}
       {whyModal && <WhyJoin languageData={languageData} setOpen={setWhyModal} user={user} />}
       {FAQModal && <FAQ languageData={languageData} setOpen={setFAQModal} user={user} setContactOpen={setContactModal} setReferralsOpen={setReferralsModal} />}
-      {legalModal && <Legal languageData={languageData} setOpen={setLegalModal} user={user} />}
+
       {settingsModal && <Settings languageData={languageData} setOpen={setSettingsModal} user={user} />}
       {contactModal && <Contact languageData={languageData} setOpen={setContactModal} user={user} />}
       {collaborate && <Collaborate languageData={languageData} setOpen={setCollaborate} user={user} userCountryData={userCountry} />}

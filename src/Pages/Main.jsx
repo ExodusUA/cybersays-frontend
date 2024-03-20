@@ -347,7 +347,7 @@ function Main({ languageData }) {
       if (linkData === undefined) linkData = PartnerLinks.find((link) => link.CultureCode.indexOf("en") !== -1);
 
       //let link = `https://Partner.com//wmaster.ashx?QueryID=197&WID=${linkData.CybersaysWid}&linkID=701&from=freevideo6&cbname=CyberSays&c=${linkData.CultureCode}&promocode=${userData?.id}`
-      let link = `https://cybersays-proxy.vercel.app?QueryID=197&WID=${linkData.CybersaysWid}&linkID=701&from=freevideo6&cbname=CyberSays&c=${linkData.CultureCode}&promocode=${userData?.id}&task=${
+      let link = `https://cybersays-middle.vercel.app?QueryID=197&WID=${linkData.CybersaysWid}&linkID=701&from=freevideo6&cbname=CyberSays&c=${linkData.CultureCode}&promocode=${userData?.id}&task=${
         userData?.completed_tasks?.indexOf("3") !== -1 ? 3 : userData?.completed_tasks?.indexOf("2") ? 2 : 1
       }`;
       setPartnerURL(link);

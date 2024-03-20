@@ -5,38 +5,38 @@
   "HeaderSubTitle": "Buy, enjoy, X2 your money!",
   "HeaderButton": "Start now",
   "LatestOffers": "Latest Offers",
-  "OfferTitle": "our partners - Adult Webcam Experiences",
-  "OfferDescription": "Register and deposit $5 on our partners! our partners will double your credits, giving you 10 instead of 5. After using your our partners credits, CyberSays will double your money, providing you with $10 back in TreatCoin!",
-  "listTexts": ["Register on our partners", "Buy 5 credits and get another 5 for free", "Enjoy using the full 10 credits on our partners", "Get 10$ from CyberSays - doubling the 5$ you spent!"],
+  "OfferTitle": "Our partner - Adult Webcam Experiences",
+  "OfferDescription": "Register and deposit $5 on our partner! Our partner will double your credits, giving you 10 instead of 5. After using your our partner credits, CyberSays will double your money, providing you with $10 back in TreatCoin!",
+  "listTexts": ["Register on our partner's site", "Buy 5 credits and get another 5 for free", "Enjoy using the full 10 credits on our partner", "Get 10$ from CyberSays - doubling the 5$ you spent!"],
   "OfferButton": "Earn X2 Now!",
   "CopyLink": "Copy Link",
   "TreatCoins": "Treat Coins",
   "LinkCopied": "Link Copied!",
   "tasks": {
     "task1": {
-      "taskTitle": "Register to our partners  🎉",
-      "taskTitleOpen": "Register to our partners  🎉",
+      "taskTitle": "Register in our partner's site  🎉",
+      "taskTitleOpen": "Register in our partner's site  🎉",
       "taskBlocks": [
         {
           "taskImage": "images/bg-mobile-Task1.png",
           "newTaskImage": "images/newTask/bg_task1.png",
           "taskImageDesk": "images/BgTaskDesk1.png",
           "newTaskImageDesk": "images/BgNewTaskDesk1.png",
-          "taskText": "Enjoy our partners, be treated like a KING 👑 - and fulfill your wildest fantasies!"
+          "taskText": "Enjoy our partner, be treated like a KING 👑 - and fulfill your fantasies!"
         }
       ],
-      "taskButton": "1/3: Register on our partners 🎉"
+      "taskButton": "1/3: Register on our partner's site 🎉"
     },
     "task2": {
       "taskTitle": "Deposit",
-      "taskTitleOpen": "Royal welcome from partners: buy 5$, get 10 credits",
+      "taskTitleOpen": "Royal welcome from our partner: buy 5$, get 10 credits",
       "taskBlocks": [
         {
           "taskImage": "images/bg-mobile-Task2.png",
           "newTaskImage": "images/newTask/bg_task2.png",
           "taskImageDesk": "images/BgTaskDesk2.png",
           "newTaskImageDesk": "images/BgNewTaskDesk2.png",
-          "taskText": "Deposit $5... our partners will double the credit. CyberSays will double the dollars!"
+          "taskText": "Deposit $5, our partner will double the credits. We will double the dollars!"
         }
       ],
       "taskButton": "2/3: Deposit $5, get 10 credits 💸"
@@ -50,7 +50,7 @@
           "newTaskImage": "images/newTask/bg_task3.png",
           "taskImageDesk": "images/BgTaskDesk3.png",
           "newTaskImageDesk": "images/BgNewTaskDesk3.png",
-          "taskText": "Spend your 10 our partners credits, be treated like a king, and get $10 cash when you’re done!"
+          "taskText": "Spend your 10 partner credits, be treated like a king, and get $10 cash from CyberSays!"
         }
       ],
       "taskButton": "3/3: Spend all credits, get $10 back 🤑"
@@ -64,17 +64,17 @@
           "newTaskImage": "images/newTask/bg_task4.png",
           "taskImageDesk": "images/BgTaskDesk1.png",
           "newTaskImageDesk": "images/BgTaskDesk1.png",
-          "taskText": "our partners doubles your credit, we double your money – it's a win-win for you with an extra $10 in your wallet!"
+          "taskText": "our partner doubles your credit, we double your money – it's a win-win for you with an extra $10 in your wallet!"
         }
       ],
       "taskButton": "Get $10 from CyberSays"
     }
   },
-  "homepageTitle1": "1. Spend 5$ for our partners’s royal treatment & get 10$ cash back from CyberSays",
+  "homepageTitle1": "1. Spend $5 for our partner’s royal treatment & get $10 cashback from CyberSays",
   "homepageTitle2": "2. Get as many tickets as you can for the best chance to win Vegas promotion!",
   "homepageTitle3": "3. Finish in the top 10 and win the 69$ daily competition!",
   "homepageTitle4": "Double your money and have the chance to win the Vegas weekend!",
-  "homepageTitle5": "Get the king treatment in our partners and win the Vegas weekend",
+  "homepageTitle5": "Get the king treatment in our partner and win the Vegas weekend",
   "homepageBtn1": "Double your money ",
   "homepageBtn2": "2/3: Deposit for 200% Cashback",
   "homepageBtn3": "3/3: Spend for 200% Cashback 🤑",
@@ -93,14 +93,14 @@
   "raffleInfoTitle4": " For additional information, please refer to the",
   "raffleInfoTitle4Span": "competition details.",
   "raffleTitle1": "Don’t miss a chance to win the amazing Vegas Promotion",
-  "raffleSubTitle1": "If you took our partners's double-your-money offer, you can be picked by your referral or referrer to go to Vegas if they win.",
+  "raffleSubTitle1": "If you took our partner's double-your-money offer, you can be picked by your referral or referrer to go to Vegas if they win.",
   "raffleLink1": "How do I win the vegas weekend?",
   "raffleTitle2": "Win the Vegas weekend!",
   "raffleSubTitle2": "Eligible to go to vegas",
   "raffleLink2": "How do I win the vegas weekend promotion?",
   "raffleUnderBtn": "Collect as many Vegas tickets as you can & better your chance to win:",
   "raffleUnderBtn2": "Earn more Vegas tickets to increase your draw-winning chances:",
-  "raffleLeftBtn": "Enjoy our partners 💃",
+  "raffleLeftBtn": "Enjoy our partner 💃",
   "raffleLeftSection1": "1 credit bought =",
   "raffleLeftSection2": "1  Vegas ticket",
   "raffleRightBtn": "Refer friends 🤑",
@@ -126,13 +126,13 @@
   "competitionTitleSpan": "daily competition",
   "competitionPoints": "Points",
   "competitionSubtitle": "First 2 places get $69 each, 3-10 $6.90 each.",
-  "competitionLeftBtn": "Enjoy our partners 💃",
+  "competitionLeftBtn": "Enjoy our partner 💃",
   "competitionLeftSection1": "1 credit bought =",
   "competitionLeftSection2": "0.5 competition points",
   "competitionRightBtn": "Refer friends 🤑",
   "competitionRightBtn2": "Link copied!",
   "competitionRightSection1": "Friend doubled money =",
-  "competitionRightSection2": "10 competition points + 1$",
+  "competitionRightSection2": "10 competition points + US$1",
   "competitionRightLink1": "Leaderboards",
   "competitionRightRules": "Rules of the competition",
   "header1": "Earned:",
@@ -171,7 +171,7 @@
   "withdrawBtn": "Withdraw",
   "noTransactions": "No transactions",
   "ransactionsTitle": "Transaction History",
-  "transactionsSection1Left": "Doubling your money and enjoying our partners!",
+  "transactionsSection1Left": "Doubling your money and enjoying our partner!",
   "transactionsSection1Right": "Added to Balance",
   "transactionsSection2Left": "Your friend doubled their money",
   "transactionsSection2Right": "Added to Balance",
@@ -187,14 +187,14 @@
   "ticketsSection2Left": "Sent mail",
   "ticketsSection2Right": "Vegas tickets",
   "ticketsSection3Left": "For",
-  "ticketsSection3Left2": "credits purchased on our partners!",
+  "ticketsSection3Left2": "credits purchased on our partner!",
   "ticketsSection3Right": "Vegas tickets",
   "ticketsSection4Left": "Friend completed succfully double the money and to rceive points",
   "ticketsSection4Right": "Points",
   "ticketsSection5Left": "Sent mail",
   "ticketsSection5Right": "Points",
   "ticketsSection6Left": "For",
-  "ticketsSection6Left2": "credits purchased on our partners!",
+  "ticketsSection6Left2": "credits purchased on our partner!",
   "ticketsSection6Right": "Points",
   "aboutModalTitle": "About us",
   "aboutModalDesc1": "Welcome to CyberSays, your gateway to transforming online engagement into tangible, thrilling rewards!",
@@ -255,7 +255,7 @@
   "logoutConfirmYes": "Yes",
   "winTitle": "How can I get Vegas Tickets to win the Vegas Promotion?",
   "winSubTitle": "How can I get Vegas Tickets to win the Vegas Promotion?",
-  "winPoint1Title": "Buy more credits in our partners.com",
+  "winPoint1Title": "Buy more credits in our partner",
   "winPoint1li1": "⁠Every extra credit you buy on top of the first 5 you buy in the double the money offer will give you 1 Vegas tickets (no bonus credits included)",
   "winPoint2Title": "Refer friends that complete the double the money offer",
   "winPoint2li1": "Refer your friends and get 30 Vegas tickets for each friend that completes the double the money offer",
@@ -268,13 +268,13 @@
   "rulesTitle": "🎉 Welcome to the CyberSays Contest! 🎉",
   "rulesSubTitle": "Starting on [fill in date], 2024, and continuing daily, join us for the CyberSays Contest.",
   "rulesPoint1Title": "To enter:",
-  "rulesPoint1li1": "Sign in to our partners.com",
+  "rulesPoint1li1": "Sign in to our partner",
   "rulesPoint1li2": "⁠Purchase 5 credits and receive a bonus of 5 more",
   "rulesPoint2Title": "Ways to earn rewards:",
-  "rulesPoint2li1": "Spend all 10 credits on our partners and receive $10 USD on CyberSays",
+  "rulesPoint2li1": "Spend all 10 credits on our partner and receive $10 USD on CyberSays",
   "rulesPoint2li2": "$69 USD for the 1st place and $6.90 USD for the 2nd – 10th places each – daily!",
   "rulesPoint2li3": "$1 USD + 30 Vegas Tickets + 10 Points for each successful referral who completes the Offer",
-  "rulesPoint2li4": "1 Vegas Ticket + 0.5 Points for every credit bought after the first purchase on our partners.com",
+  "rulesPoint2li4": "1 Vegas Ticket + 0.5 Points for every credit bought after the first purchase on our partner",
   "rulesEnd": "Best of luck to all participants in the CyberSays Contest!",
   "toolInfoTitle": "What can I get in CyberSays and how?",
   "toolInfoWhat": "What?",
@@ -283,8 +283,8 @@
   "toolInfolef2": "Win the Vegas Promotion",
   "toolInfolef3": "Win the 69$ daily competition",
   "toolInfoRight1": "Complete the “Double your money” offer",
-  "toolInfoRight2": "Collect ticket by buying our partners credits and refer friends that complete the offer",
-  "toolInfoRight3": "Get points by buying our partners credits and refer friends that complete the offer",
+  "toolInfoRight2": "Collect ticket by buying our partner credits and refer friends that complete the offer",
+  "toolInfoRight3": "Get points by buying our partner credits and refer friends that complete the offer",
   "ourMissionTitle": "Our Mission",
   "ourMissionSubTitle1": "CyberSays emerged from the simple idea that online platforms should offer more direct value to their users.",
   "ourMissionSubTitle2": "We're dedicated to creating an environment where every action—whether it's a deposit, a referral, or a purchase—has a rewarding outcome.",
@@ -299,7 +299,7 @@
     },
     {
       "question": "What are the requirements to qualify for the $10 instant cash back?",
-      "answers": ["Simply register on our partners, deposit $5 to receive $10 in credits, spend those credits, and you'll receive on top of that $10 cash back instantly"]
+      "answers": ["Simply register on our partner, deposit $5 to receive $10 in credits, spend those credits, and you'll receive on top of that $10 cash back instantly"]
     },
     {
       "question": "Can I withdraw my $10 cash back immediately after receiving it?",
@@ -330,11 +330,11 @@
     {
       "question": "What expenses are covered in the Vegas weekend prize?",
       "answers": [
-        "The Vegas weekend prize covers your travel and entertainment extravagantly. It includes round-trip tickets to Las Vegas for you and two friends that have completed the double the money offer if you choose to take them, two nights of 5-star hotel accommodation, and $1,000 in our partners.com credits for the winner. Additionally, you'll receive $1,000 cash, and if applicable, each of your two friends will get $500 to enjoy. The package is crowned with a special dinner and a Cadillac drive experience with 2 porn stars, valuing the total prize at approximately $5,000."
+        "The Vegas weekend prize covers your travel and entertainment extravagantly. It includes round-trip tickets to Las Vegas for you and two friends that have completed the double the money offer if you choose to take them, two nights of 5-star hotel accommodation, and $1,000 in our partner credits for the winner. Additionally, you'll receive $1,000 cash, and if applicable, each of your two friends will get $500 to enjoy. The package is crowned with a special dinner and a Cadillac drive experience with 2 porn stars, valuing the total prize at approximately $5,000."
       ]
     },
     {
-      "question": "How do I purchase additional our partners credits?",
+      "question": "How do I purchase additional partner credits?",
       "answers": ["Click here to buy more credits and increase your chances of winning the Vegas promotion and 69$ daily contest points"]
     },
     {
@@ -344,7 +344,7 @@
     {
       "question": "How does the $69 daily leaderboard work, and how can I earn points?",
       "answers": [
-        "Earn points by referring friends and purchasing our partners credits. The more you engage, the higher you climb on the leaderboard. For every friend you refer that completed the offer, you get 10 points. For every extra credit on our partners that you purchase, you get 0.5 points. "
+        "Earn points by referring friends and purchasing our partner credits. The more you engage, the higher you climb on the leaderboard. For every friend you refer that completed the offer, you get 10 points. For every extra credit on our partner that you purchase, you get 0.5 points. "
       ]
     },
     {
@@ -378,7 +378,7 @@
       "linkName": "Click here"
     },
     {
-      "question": "Why don't I see my deposit on our partners even after depositing?",
+      "question": "Why don't I see my deposit on the partner even after depositing?",
       "answers": [
         "Deposits typically reflect on your CyberSays account within 3 minutes, crediting you with the corresponding funds. If you do not see your deposit after 30 minutes, we recommend reaching out to our customer support for assistance. "
       ]
@@ -426,7 +426,7 @@
   "withdrawLi6": "6. In case you need any assistance, contact our",
   "withdrawLi6Span": "customer support.",
   "myReferralsTitle": "My Eligible Referrals for Vegas",
-  "myReferralsSubTitle": "See if your referred friends took the our partners double the money offer—only then can you take them to Vegas if you win!",
+  "myReferralsSubTitle": "See if your referred friends took the our partner double the money offer—only then can you take them to Vegas if you win!",
   "myReferralsDoneTitle": "You’re referred by: ",
   "myReferralsDoneSubTitle": "They completed the offer and are eligible for Vegas pick if you win the draw!",
   "myReferralsUnDoneTitle": "You’re referred by:",
@@ -438,10 +438,10 @@
   "myReferralsSubTitle2": "You haven't referred friends yet",
   "winTicketTitle": "👬Can I still go to Vegas if my ticket didn’t win? 👬",
   "winTicketSubTitle": "Yes! In order for you, your referrer or your referral to be picked by the other if they win the Vegas promotion, you will need to:",
-  "winTicketLiTitle": "Join the CyberSays Promotion on our partners.com:",
+  "winTicketLiTitle": "Join the CyberSays Promotion on our partner:",
   "winTicketLi1": "Create a new account or use an existing one.",
   "winTicketLi2": "Make a minimum purchase of five credits to win five more.",
-  "winTicketLi3": "Spend the entire ten (10) credits received on our partners.com.",
+  "winTicketLi3": "Spend the entire ten (10) credits received on our partner.",
   "winTicketBtn": "Go to Double Your Money page",
   "winTicketEnd": "Good luck!",
   "winTicketLink": "To the Vegas Promotion full terms",
@@ -488,7 +488,7 @@
   "doubleCompleteTitleSpan": "inbox!",
   "doubleCompleteSubTitle": "Be the king of your friends by referring them to CyberSays and they’ll thank you forever... 👑",
   "doubleCompleteBtn": "Share",
-  "doubleTaskBtn1": "1/3: Register on our partners 🎉",
+  "doubleTaskBtn1": "1/3: Register on our partner's site 🎉",
   "doubleTaskBtn2": "2/3: Deposit $5, get 10 credits 💸",
   "doubleTaskBtn3": "3/3: Spend all credits, get $10 back 🤑",
   "referralShareBtn1": "Share Referral Link!",
@@ -499,8 +499,8 @@
   "promoModalTitle": "Withdraw with",
   "promoModalMessage": "Don't be a fool! Take this offer and withdraw 30% more — 65 reais instead of 50.",
   "promoModalLink": "No, thanks",
-  "promoour partnersDesc": "Don't be a fool! Take this offer and withdraw 30% more — 65 reais instead of 50.",
-  "confirmLiveDesc": "Are you sure you want to Withdraw with our partners",
+  "promoImLiveDesc": "Don't be a fool! Take this offer and withdraw 30% more — 65 reais instead of 50.",
+  "confirmLiveDesc": "Are you sure you want to Withdraw with our partner?",
   "earnedModalTitleBR": "Latest R$ earnings",
   "modalMenuLink14": "Read More",
   "raffleSubTitleLink": "How can I earn Vegas tickets?",
@@ -531,7 +531,7 @@
   "visaFlowSelectName3": "Value",
   "visaFlowSelect3": "Visa Prepaid Card",
   "visaFlowBtn": "Continue",
-  "aboutModalDesc5": "CyberSays is a cutting-edge global social referral platform that motivates its community with rewards like contests, prizes, and cashback for interacting with high-quality partners in various sectors.",
+  "aboutModalDesc5": "CyberSays is a cutting-edge global social referral platform that motivates its community with rewards like contests, prizes, and cashback for interacting with high-quality partner in various sectors.",
   "aboutModalDesc6": "Drawing inspiration from the children's game 'Simon Says'; CyberSays also includes gamification elements, ending in amazing rewards and unlimited fun for its users.",
   "loginTermsTitle": "By registering to CyberSays you state you are 18 +years old and you agree to our",
   "loginTermsLink": "Terms & Services",
@@ -552,7 +552,7 @@
   "ServiPagInput3": "National identity card (RUT)",
   "TransactionCompetitionWinner": "Finishing in the 69$ daily competition!",
   "modalMenuLink15": "Join as an influencer",
-  "modalMenuLink16": "Partners Program",
+  "modalMenuLink16": "partner Program",
   "InfluencerTitle": "Join us as an influencer",
   "InfluencerSubTitle": "We’re looking for worldwide and local leading influencers. Join us to be associated with worldwide leading brands and be exposed to amazing opportunities. ",
   "InfluencerInput1": "Email",
@@ -561,7 +561,7 @@
   "InfluencerOptoin1": "Choose who you are",
   "InfluencerInput3": "Your message",
   "InfluencerBtn": "Continue",
-  "collaborateTitle": "Partners Program",
+  "collaborateTitle": "partner Program",
   "collaborateSubTitle": "CyberSays is seeking to collaborate with international businesses that have a global reach, aiming to engage with our high-volume user traffic.",
   "collaborateInput1": "Email",
   "collaborateInput2": "Name",
@@ -574,9 +574,9 @@
   "toolInfoRight4": "If a friend that you referred or your referrer have won the promotion and you completed the offer, they can pick you to go to Vegas!",
   "withdrawConfirmPaxum": "We've received your request. Our team will reply once withdrawal is successful",
   "withdrawBanner": "Get +40%",
-  "withdrawBannerSpan": "of your money with our partners.",
-  "our partnersPromoDesc": "our partners provide you with the best value for your cash: get 1 credit for every 5$ + extra 20% credit",
-  "our partnersPromoVtn": "Take this offer",
+  "withdrawBannerSpan": "of your money with our partner.",
+  "imLivePromoDesc": "our partner provide you with the best value for your cash: get 1 credit for every 5$ + extra 20% credit",
+  "imLivePromoVtn": "Take this offer",
   "InfluencerInputPhone": "Phone",
   "InfluencerWho": "Who are you?",
   "InfluencerWhoSelect": "Choose who you are",
@@ -598,13 +598,13 @@
   "collaborateWhoOption2": "Agent",
   "collaborateWhoOption3": "Worldwide company",
   "collaborateWhoOption4": "Other",
-  "withdrawBannerTitle": "Or get +38% value as our partners credits:",
-  "withdrawBannerMessage": "is waiting for you... You can’t finish the job, can you!?",
+  "withdrawBannerTitle": "Or get +38% value as our partner credits:",
+  "withdrawBannerMessage": "Don’t let a woman wait! You can’t finish the job… or can you? 🙄",
   "withdrawBannerSpan1": "Get ",
   "withdrawBannerSpan2": "credits",
   "withdrawBannerSpan3": "to spend now!",
   "withdrawBannerBtn": "Get Now",
-  "withdrawBannerSubtitle": "* The percentages of the benefit are calculated based on the basic rate of 6.9 BRL for 1 our partners credit. Percentages will go down while buying higher credit packages in our partners, however that option always hold a benefit.",
+  "withdrawBannerSubtitle": "* The percentages of the benefit are calculated based on the basic rate of 6.9 BRL for 1 partner credit. Percentages will go down while buying higher credit packages in our partner, however that option always hold a benefit.",
   "modalMenuLink17": "My earnings",
   "modalMenuCopyLinkTitle": "Be the king of your friends by referring them to CyberSays and they’ll thank you forever... 👑",
   "modalMenuCopyLinkSubTitle": "For every friend that completed offer:",
@@ -621,9 +621,9 @@
   "transactionID": "Transaction ID:",
   "raffleSubTitleLink2": "Take the Vegas Tour",
   "CopyLinkDone": "Link Copied!",
-
   "aboutModalDesc": "",
   "leaderSheetDayAgo": "2 days ago",
+  "verifyCodeSpam": "Can't find the e-mail? Check your spam folder.",
   "timeCounterLink2": "Vegas Promotion Rules",
   "pixType": "Pix type",
   "pixTypeOption1": "CPF / CNPJ",
@@ -643,7 +643,6 @@
   "myReferBtn": "Refer your friends 👬",
   "authNotificationBtn": "Open in",
   "authNotificationBtnSpan": "Mail App",
-  "verifyCodeSpam": "Can't find the e-mail? Check your spam folder.",
   "newVisaFlowInput1": "Full Name",
   "newVisaFlowInput2": "Email Adress",
   "newVisaFlowSelect1": "Citizenship",
