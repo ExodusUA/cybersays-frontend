@@ -545,7 +545,7 @@ function Main({ languageData }) {
         <img onClick={(e) => setToolInfo(!toolInfo)} className="w-[24px] cursor-pointer sm:w-12" src={infoBtn} alt="Chat" />
       </div>
       {toolInfo && <ToolTipInfo setToolInfo={setToolInfo} languageData={languageData} user={userData} />}
-      {doubleComplete && <DoubleComplete setOpen={setDoubleComplete} languageData={languageData} user={userData} />}
+      {<DoubleComplete setOpen={setDoubleComplete} languageData={languageData} user={userData} userCountry={userCountry} />}
 
       {promoModal && <PromoModal setOpen={setPromoModal} languageData={languageData} user={userData} />}
     </>

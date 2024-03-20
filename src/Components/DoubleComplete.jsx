@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import close from "../images/CyberSaysPage/closeMenu.png";
 import { useDesign } from "../Helpers/Design/DesignContext";
 import congrats from "../images/CyberSaysPage/congrats.png";
+import { useLanguage } from "../Helpers/Languages/LanguageContext";
 
-function DoubleComplete({ setOpen, languageData, user, PartnerURL }) {
+function DoubleComplete({ setOpen, languageData, user, PartnerURL, userCountry }) {
   const [pdfLoading, setPdfLoading] = useState(false);
   const [isLinkShared, setIsLinkShared] = useState(false);
 
   const { design } = useDesign();
+  const { language } = useLanguage();
 
   const shareRefferalLink = () => {
     if (navigator.share) {
@@ -38,7 +40,8 @@ function DoubleComplete({ setOpen, languageData, user, PartnerURL }) {
         </div>
         <div className="  m-auto max-w-[600px] ">
           <p className="mx-2 text-center text-[24px] font-semibold leading-8 md:text-[32px] lg:leading-9">
-            {languageData?.doubleCompleteTitle}{" "}
+            {userCountry === "BR" || userCountry === "UA" ? "R$50" : "$10"}
+            {languageData?.doubleCompleteTitle}
             {/* <span className=' truncate text-[24px] md:text-[32px] font-semibold ml-1 block lg:inline'>
                         {user?.email}
                     </span> {languageData?.doubleCompleteTitleSpan}*/}
