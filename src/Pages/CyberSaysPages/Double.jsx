@@ -54,7 +54,7 @@ function Double({ languageData, user, PartnerURL, setOpen, setDoubleComplete }) 
     if (user === null) return setLastTask(0);
 
     let tasks = JSON.parse(user?.completed_tasks);
-    if (tasks === null) {
+    if (tasks === null || user?.completed_tasks === null) {
       setLastTask(0);
       setSelectedTask(1);
       return;
