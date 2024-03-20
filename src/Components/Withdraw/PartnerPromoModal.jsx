@@ -7,7 +7,7 @@ import Banner3 from "./Banners/Banner3";
 
 function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, closeAll }) {
   const { design } = useDesign();
-  const [disabled, setDisabled] = useState(false);
+  const [disabled, setDisabled] = useState(true);
   const [countdown, setCountdown] = useState(10);
   const [randomBanner, setRandomBanner] = useState(null);
 
