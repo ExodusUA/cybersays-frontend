@@ -105,7 +105,19 @@ function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, cl
       <div className="absolute left-1/2 top-2 my-1 flex w-full max-w-[600px] -translate-x-1/2 transform justify-end px-4 md:my-4">
         <img onClick={(e) => closeAll(false)} className="h-[24px] w-[24px] cursor-pointer" src={design === "0" ? close : require("../../images/NewDesign/closeBtn.png")} alt="close" />
       </div>
-      <div className={`relative m-auto w-full max-w-[600px]   rounded-[12px] p-2 lg:px-4 `}>{getBannerMarkup()}</div>
+      <div className={`relative m-auto w-full max-w-[600px]   rounded-[12px] p-2 lg:px-4`}>
+        {/*getBannerMarkup()*/}
+        <Banner3
+            handleButtonClick={handleButtonClick}
+            disabled={disabled}
+            countdown={countdown}
+            setOpen={setOpen}
+            languageData={languageData}
+            setPartnerSelected={setPartnerSelected}
+            selectPayment={() => {}}
+            user={user}
+          />
+        </div>
     </div>
   );
 }
