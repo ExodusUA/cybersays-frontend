@@ -3,7 +3,8 @@ import banner from "../../images/NewDesign/withdraw/banner2.png";
 import bannerDesk from "../../images/NewDesign/withdraw/banner2Desk.png";
 
 function PartnerBanner({ languageData, setPartnerSelected, selectPayment, user }) {
-  const [bannerSrc, setBannerSrc] = useState(banner);
+  let windowWidth = window.innerWidth;
+  const [bannerSrc, setBannerSrc] = useState(windowWidth < 640 ? banner : bannerDesk);
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,7 +23,7 @@ function PartnerBanner({ languageData, setPartnerSelected, selectPayment, user }
 
   return (
     <div>
-      <div onClick={(e) => selectPayment("Partner")} className=" relative m-auto mb-[5px] mt-2  w-full max-w-[345px] sm:max-w-[600px] cursor-pointer">
+      <div onClick={(e) => selectPayment("Partner")} className=" relative m-auto mb-[5px] mt-2  w-full max-w-[345px] sm:max-w-[600px] cursor-pointer ">
         {/*
                                 <div onClick={e => selectPayment('visa')} className={`w-[160px] md:w-[295px] h-[140px] cursor-pointer rounded-[14px] withdrawBg3 m-auto flex justify-center items-center relative mt-2 ${selectedPayment === 'visa' && (design === '0' ? 'outline outline-[2px] outline-[#FFED63]' : 'outline outline-[2px] outline-[#A2DBF0]')} `}>
                                 <img className='w-[68px]' src={withdrawLogo3} alt="withdrawLogo1" />
@@ -33,7 +34,7 @@ function PartnerBanner({ languageData, setPartnerSelected, selectPayment, user }
           onClick={(e) => {
             setPartnerSelected(true);
           }}
-          className=" relative z-10 m-auto w-full max-w-[345px] sm:max-w-[600px]"
+          className=" relative z-10 m-auto w-full max-w-[345px] sm:max-w-[600px] "
           src={bannerSrc}
           alt="banner"
         />
