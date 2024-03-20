@@ -126,6 +126,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/*" element={<Main languageData={languageData} />} />
+            <Route path="/welcome/*" element={<Main languageData={languageData} />} />
             <Route path="/login" element={<Auth languageData={languageData} />} />
             <Route path="/auth/discord/callback" element={<DiscordAuth />} />
             <Route path="/privacy" element={<Privacy languageData={languageData} />} />

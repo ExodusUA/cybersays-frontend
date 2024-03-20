@@ -161,9 +161,9 @@ function Main({ languageData }) {
     queryKey: ["userData"],
     queryFn: async () => {
       const res = await userAPI.getUserData();
-      if (res.id === undefined) return navigate("/login");
-      if (res.first_login === 1) return navigate("/welcome");
       setUserData(res);
+      if (res.id === undefined) return navigate("/login");
+      if (res.first_login === 0) return navigate("/welcome");
 
       return res;
     },
