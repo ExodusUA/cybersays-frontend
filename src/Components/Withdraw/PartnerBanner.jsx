@@ -38,14 +38,14 @@ function PartnerBanner({ languageData, setPartnerSelected, selectPayment, user }
           src={bannerSrc}
           alt="banner"
         />
-        <p className=" saira absolute right-[0px] sm:right-[17px] top-[22px] sm:top-[30px] z-50 w-[140px] sm:w-[200px] text-[8px] sm:text-[12px] font-medium leading-[10px] text-[#A533FF] iphone:right-[10px] iphone:top-[25px] iphone:text-[9px] iphone:leading-[10px]">
+        <p className=" saira absolute right-[0px] sm:right-[18px] top-[22px] sm:top-[30px] z-50 w-[140px] sm:w-[200px] text-[8px] sm:text-[12px] font-medium leading-[10px] text-[#A533FF] iphone:right-[0px] iphone:top-[25px] iphone:text-[9px] sm:leading-[14px]">
           {" "}
           <span className="saira font-extrabold text-[#A533FF]">{user?.Partner_username || ""} </span>
           {languageData?.withdrawBannerMessage}
         </p>
-        <div className=" absolute right-[10px] sm:right-[30px] top-[75px] sm:top-[100px] z-10 w-[150px] sm:w-[200px] iphone:right-[15px] iphone:top-[90px]">
+        <div className=" absolute right-[10px] sm:right-[40px] top-[75px] sm:top-[100px] z-10 w-[150px] sm:w-[200px] iphone:right-[15px] iphone:top-[90px]">
           <p className="saira text-center text-[12px] sm:text-[16px] font-bold leading-4 text-[#9430E3]">
-            {languageData?.withdrawBannerSpan1} <span className="saira text-center text-[12px] sm:text-[16px] font-normal text-[#9430E3]"></span> {languageData?.withdrawBannerSpan2}{" "}
+            {languageData?.withdrawBannerSpan1} <span className="saira text-center text-[12px] sm:text-[16px] font-normal text-[#9430E3]">11111</span> {languageData?.withdrawBannerSpan2}{" "}
             <span className="saira text-center text-[12px] sm:text-[16px] font-medium text-black">{languageData?.withdrawBannerSpan3}</span>
           </p>
           <button className="saira mt-1 w-full cursor-pointer rounded-[9px] border-2 border-[#9430E3] py-[2px] text-[12px] font-extrabold text-[#9430E3] sm:hidden">{languageData?.withdrawBannerBtn}</button>
