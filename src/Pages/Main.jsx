@@ -512,7 +512,7 @@ function Main({ languageData }) {
       {earnedModal && <Earned setTransactionsModal={setTransactionsModal} languageData={languageData} setOpen={setEarnedModal} user={userData} userCountry={userCountry} />}
       {ticketShortModal && <Ticket scrollToPage={scrollToPage} setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setTicketShortModal} user={userData} setSelectedButton={setSelectedButton} />}
       {pointsModal && <Points scrollToPage={scrollToPage} setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setPointsModal} user={userData} setSelectedButton={setSelectedButton} />}
-      {transactionsModal && <TransactionHistory setWithdrawModal={setWithdrawModal} languageData={languageData} setOpen={setTransactionsModal} user={userData} userCountry={userCountry} />}
+      {transactionsModal && <TransactionHistory scrollToPage={scrollToPage} setWithdrawModal={setWithdrawModal} languageData={languageData} setOpen={setTransactionsModal} user={userData} userCountry={userCountry} />}
       {ticketsModal && <TicketsHistory scrollToPage={scrollToPage} languageData={languageData} setOpen={setTicketsModal} user={userData} setSelectedButton={setSelectedButton} selectedButton={selectedButton} />}
       {openMessage && (
         <Message

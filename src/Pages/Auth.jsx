@@ -46,7 +46,7 @@ function Auth({ languageData }) {
 
   return (
     <>
-      <section {...handlers} className="relative h-screen w-screen overflow-hidden">
+      <section {...handlers} className="relative h-screen w-screen overflow-hidden bg-[#0B1628]">
         <div className="h-full lg:flex">
           <Slider swiperRef={swiperRef} setSwiperRef={setSwiperRef} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} onSlideChange={slideChange} />
           <div className="align-start absolute right-0 top-5 z-10 flex items-center lg:right-[20px]">
