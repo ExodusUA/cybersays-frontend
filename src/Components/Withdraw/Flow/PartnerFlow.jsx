@@ -13,9 +13,15 @@ function PartnerFlow({ languageData, setConfirm, setFlowStarted, setError, close
 
       mixpanel.track("Withdraw_request", { method: "Partner" });
 
-      setConfirm(true);
+      console.log(res.data);
+      if (res.data.status === "success") {
+        setConfirm(true);
+        setFlowStarted(false);
+      } else {
+        alert(res.data.message);
+        setError(true);
+      }
     } catch (error) {
-      alert(error.response.data.message);
       setError(true);
     }
   };

@@ -23,6 +23,7 @@ async function withdrawPartner() {
       },
     }
   );
+  return res
 }
 
 async function withdrawPix(pixKey, personCODE, email) {

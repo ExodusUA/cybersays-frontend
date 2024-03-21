@@ -75,6 +75,9 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
         );
       case "withdraw":
       case "paxum_withdraw":
+      case "visa_withdraw":
+      case "xoxoday_withdraw":
+      case "imlive_withdraw":
         return (
           <div className="mt-4 flex items-center justify-between">
             <div className="flex items-center">
@@ -82,7 +85,7 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
               <div className="w-[200px] md:w-[320px]">
                 <p className="saira w-[130px] text-[10px] font-semibold leading-3 md:w-[unset] md:text-[14px] lg:leading-4">
                   {languageData?.transactionPendingTitle + " "}
-                  <span className="saira">PIX </span>
+                  <span className="saira">{type === "paxum_withdraw" ? "PIX" : type === "visa_withdraw" ? "Visa" : type === "xoxoday_withdraw" ? "Xoxoday" : type === "imlive_withdraw" ? "Partner" : "PIX"} </span>
                   {" " + status === 1 || status === 2 ? languageData?.transactionPendingSpan : status === 3 ? languageData?.transactionApprovedSpan : languageData?.transactionRejectedSpan}
                 </p>
                 <p className="saira text-[10px] font-light text-[#D7D7D7] md:text-[14px]">{moment.unix(Number(1)).format("DD MMMM, YYYY, hh:mm A")}</p>
