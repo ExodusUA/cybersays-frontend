@@ -183,17 +183,17 @@ function Main({ languageData }) {
     /* MIXPANEL */
 
     let utmData = {
-      utm_source: window.localStorage.getItem("utm_source"),
-      utm_medium: window.localStorage.getItem("utm_medium"),
-      utm_campaign: window.localStorage.getItem("utm_campaign"),
-      utm_term: window.localStorage.getItem("utm_term"),
-      utm_content: window.localStorage.getItem("utm_content"),
+      utm_source: urlParams.get("utm_source") || window.localStorage.getItem("utm_source"),
+      utm_medium: urlParams.get("utm_medium") || window.localStorage.getItem("utm_medium"),
+      utm_campaign: urlParams.get("utm_campaign") || window.localStorage.getItem("utm_campaign"),
+      utm_term: urlParams.get("utm_term") || window.localStorage.getItem("utm_term"),
+      utm_content: urlParams.get("utm_content") || window.localStorage.getItem("utm_content"),
     };
 
     // delete nulls
 
     mixpanel.track("page_view", {
-      distinct_id: uid || "not_set",
+      distinct_id: uid === "welcome" ? userData.id : "not_set" || "not_set",
       ...utmData,
       is_referred: userData?.referral_id ? "Yes" : "No",
       vegas_tickets: userData?.raffle_tickets,
@@ -203,7 +203,7 @@ function Main({ languageData }) {
       page_name: activePageIndex === 0 ? "Home" : activePageIndex === 1 ? "Double" : activePageIndex === 2 ? "Vegas Weekend" : activePageIndex === 3 ? "Competition" : activePageIndex === 4 ? "My referrals" : "Not set",
     });
     moengage.track_event("page_view", {
-      distinct_id: uid || "not_set",
+      distinct_id: uid === "welcome" ? userData.id : "not_set" || "not_set",
       ...utmData,
       is_referred: userData?.referral_id ? "Yes" : "No",
       vegas_tickets: userData?.raffle_tickets,

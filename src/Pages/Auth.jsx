@@ -11,10 +11,13 @@ import { useSwipeable } from "react-swipeable";
 import SocialLink from "../Components/SocialLink";
 import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "../Helpers/Languages/LanguageContext";
+import mixpanel from "mixpanel-browser";
+import moengage from "@moengage/web-sdk";
 
 function Auth({ languageData }) {
   const navigate = useNavigate();
   let { language } = useLanguage();
+  const urlParams = new URLSearchParams(window.location.search);
 
   if (window.localStorage.getItem("token")) {
     navigate("/");
@@ -42,6 +45,31 @@ function Auth({ languageData }) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    /* MIXPANEL */
+
+    let utmData = {
+      utm_source: urlParams.get("utm_source") || window.localStorage.getItem("utm_source"),
+      utm_medium: urlParams.get("utm_medium") || window.localStorage.getItem("utm_medium"),
+      utm_campaign: urlParams.get("utm_campaign") || window.localStorage.getItem("utm_campaign"),
+      utm_term: urlParams.get("utm_term") || window.localStorage.getItem("utm_term"),
+      utm_content: urlParams.get("utm_content") || window.localStorage.getItem("utm_content"),
+    };
+
+    // delete nulls
+
+    mixpanel.track("page_view", {
+      distinct_id: "not_set",
+      ...utmData,
+      page_name: "Login",
+    });
+    moengage.track_event("page_view", {
+      distinct_id: "not_set",
+      ...utmData,
+      page_name: "Login",
+    });
   }, []);
 
   return (

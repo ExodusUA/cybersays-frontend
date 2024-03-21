@@ -7,10 +7,8 @@ import Banner3 from "./Banners/Banner3";
 import { withdrawPartner } from "../../Requests/withdraw";
 import mixpanel from "mixpanel-browser";
 
-function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, closeAll, setConfirm, setError }) {
+function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, closeAll, setConfirm, setError, setBannerNumber, bannerNumber }) {
   const { design } = useDesign();
-
-  const [bannerNumber, setBannerNumber] = useState(1);
 
   const getBannerMarkup = () => {
     switch (bannerNumber) {

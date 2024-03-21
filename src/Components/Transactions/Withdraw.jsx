@@ -69,7 +69,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
       case "paxum":
         return <PaxumFlow languageData={languageData} setConfirm={setConfirm} setSelectedPayment={setSelectedPayment} setError={setError} />;
       case "visa":
-        return <VisaFlow languageData={languageData} setConfirm={setConfirm} setError={setError} user={user} />;
+        return <VisaFlow languageData={languageData} setConfirm={setConfirm} setError={setError} user={user} userCountry={userCountry} />;
       case "Partner":
         return <PartnerFlow setConfirm={setConfirm} setOpen={setPartnerSelected} languageData={languageData} closeAll={setOpen} setFlowStarted={setFlowStarted} setError={setError} />;
       case "pse":
@@ -108,20 +108,28 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
     }
   }, [PartnerSelected]);
 
+  const [bannerNumber, setBannerNumber] = useState(1);
+
+  const bannerBack = () => {
+    if (bannerNumber === 1) {
+      setBannerNumber(3);
+    } else {
+      setBannerNumber(bannerNumber - 1);
+    }
+  };
+
   return (
     <div>
-      {user?.earned !== 0 && user?.earned > 0 && promoModal && (
-        <PartnerPromoModal setConfirm={setConfirm} setError={setError} closeAll={setOpen} setPartnerSelected={setPartnerSelected} setOpen={setPromoModal} languageData={languageData} user={user} />
-      )}
-
       <div className="fixed top-0 z-[60] h-screen w-screen bg-[#1E1E1E] bg-opacity-60 p-4 backdrop-blur-md">
         <div className=" absolute left-1/2 top-4 z-10 w-[95%] max-w-[600px] -translate-x-1/2 transform lg:top-0 lg:w-full">
           <div className={`m-auto flex w-full justify-between md:my-4`}>
             <svg
               onClick={(e) => {
-                setFlowStarted(false);
-                if (!flowStarted) {
+                if (user?.earned === 0) {
                   setOpen(false);
+                } else {
+                  setPromoModal(true);
+                  bannerBack();
                 }
               }}
               className="cursor-pointer"

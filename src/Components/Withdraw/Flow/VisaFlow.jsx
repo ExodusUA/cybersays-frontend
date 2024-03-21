@@ -9,7 +9,7 @@ import { withdrawVisa } from "../../../Requests/withdraw";
 import mixpanel from "mixpanel-browser";
 import { useLanguage } from "../../../Helpers/Languages/LanguageContext";
 
-function VisaFlow({ languageData, setConfirm, setError, user }) {
+function VisaFlow({ languageData, setConfirm, setError, user, userCountry }) {
   const { design } = useDesign();
   const { language } = useLanguage();
   const [transfer, setTransfer] = useState("");
@@ -54,6 +54,7 @@ function VisaFlow({ languageData, setConfirm, setError, user }) {
   const handleCreateTransaction = async () => {
     if (withdrawBlocked === true) {
       alert("Withdraw blocked!");
+      return;
     }
     try {
       const response = await withdrawVisa(fullName, email, citizenshipOption, date, language);
@@ -89,7 +90,9 @@ function VisaFlow({ languageData, setConfirm, setError, user }) {
         <>
           <p className="my-2 text-center text-[18px] font-semibold md:text-[32px] lg:leading-[40px]">{languageData?.visaFlowTitle}</p>
           <div className={`bg-[#EAEAEA] bg-opacity-30 backdrop-blur-lg ${design === "0" ? "rounded-[30px]" : " rounded-[12px]"} px-8`}>
-            <p className={`text-[14px]  ${design === "0" ? "text-[#FFED63]" : "gradient-linkDouble font-semibold"} saira mt-1 py-1  text-center font-bold`}>{languageData?.visaFlowSubTitle}</p>
+            <p className={`text-[14px]  ${design === "0" ? "text-[#FFED63]" : "gradient-linkDouble font-semibold"} saira mt-1 py-1  text-center font-bold`}>
+              {languageData?.visaFlowSubTitle + `${userCountry === "BR" || userCountry === "UA" ? "R$125" : "$25"}` + languageData?.visaFlowSubTitle2}
+            </p>
           </div>
           <p className="saira mb-1 mt-3 text-[12px]">{languageData?.newVisaFlowInput1}</p>
           <input
