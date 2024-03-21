@@ -47,7 +47,7 @@ function Banner1({ languageData, setPartnerSelected, selectPayment, user, setOpe
           onClick={(e) => {
             withdraw();
           }}
-          disabled={!disabled}
+          
           className={`saira w-full  max-w-[370px]  rounded-[12px] border-[2px] text-[18px] font-semibold outline-none ${disabled ? `gradient-homepageBtn border-none py-2 text-[#1E1E1E]` : " border-[2px] border-[#515151] bg-transparent py-3 text-[#7f7f7f]"}`}
         >
           {languageData?.bannerBtn1}

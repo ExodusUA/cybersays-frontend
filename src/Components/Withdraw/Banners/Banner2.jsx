@@ -78,7 +78,7 @@ function Banner2({ languageData, setPartnerSelected, selectPayment, user, setOpe
             setPartnerSelected(true);
             setOpen(false);
           }}
-          disabled={disabled}
+          
           className={`saira w-full  max-w-[370px]  rounded-[12px] border-[2px] text-[18px]  font-semibold outline-none ${disabled ? "bannerBtn2 border-none py-2 text-[#1E1E1E]" : " border-[2px] border-[#515151] bg-transparent py-3 text-[#7f7f7f]"}`}
         >
           {languageData?.bannerBtn1}
