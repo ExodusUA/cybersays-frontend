@@ -16,6 +16,7 @@ import SPEIFlow from "../Withdraw/Flow/SPEIFlow";
 import mixpanel from "mixpanel-browser";
 import { useLanguage } from "../../Helpers/Languages/LanguageContext";
 import moengage from "@moengage/web-sdk";
+import { withdrawPartner } from "../../Requests/withdraw";
 
 function Withdraw({ user, setOpen, languageData, userCountry }) {
   const { design } = useDesign();
@@ -68,7 +69,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
       case "paxum":
         return <PaxumFlow languageData={languageData} setConfirm={setConfirm} setSelectedPayment={setSelectedPayment} setError={setError} />;
       case "visa":
-        return <VisaFlow languageData={languageData} setConfirm={setConfirm} setError={setError} />;
+        return <VisaFlow languageData={languageData} setConfirm={setConfirm} setError={setError} user={user} />;
       case "Partner":
         return <PartnerFlow setConfirm={setConfirm} setOpen={setPartnerSelected} languageData={languageData} closeAll={setOpen} setFlowStarted={setFlowStarted} setError={setError} />;
       case "pse":
@@ -82,58 +83,80 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
     }
   };
 
+  useEffect(() => {
+    if (PartnerSelected === true) {
+      const PartnerPayment = async () => {
+        try {
+          const res = await withdrawPartner();
+
+          mixpanel.track("Withdraw_request", { method: "Partner" });
+
+          console.log(res.data);
+          if (res.data.status === "success") {
+            setConfirm(true);
+            setFlowStarted(false);
+          } else {
+            alert(res.data.message);
+            setError(true);
+          }
+        } catch (error) {
+          setError(true);
+        }
+      };
+
+      PartnerPayment();
+    }
+  }, [PartnerSelected]);
+
   return (
     <div>
       {user?.earned !== 0 && user?.earned > 0 && promoModal && (
         <PartnerPromoModal setConfirm={setConfirm} setError={setError} closeAll={setOpen} setPartnerSelected={setPartnerSelected} setOpen={setPromoModal} languageData={languageData} user={user} />
       )}
 
-      {PartnerSelected ? (
-        <PartnerFlow setFlowStarted={setFlowStarted} setConfirm={setConfirm} setOpen={setPartnerSelected} languageData={languageData} closeAll={setOpen} setError={setError} />
-      ) : (
-        <div className="fixed top-0 z-[60] h-screen w-screen bg-[#1E1E1E] bg-opacity-60 p-4 backdrop-blur-md">
-          <div className=" absolute left-1/2 top-4 z-10 w-[95%] max-w-[600px] -translate-x-1/2 transform lg:top-0 lg:w-full">
-            <div className={`m-auto flex w-full justify-between md:my-4`}>
-              <svg
-                onClick={(e) => {
-                  setFlowStarted(false);
-                  if (!flowStarted) {
-                    setOpen(false);
-                  }
-                }}
-                className="cursor-pointer"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path d="M17 22L7 12L17 2" stroke="url(#paint0_linear_26_11821)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <defs>
-                  <linearGradient id="paint0_linear_26_11821" x1="17" y1="11.8039" x2="7" y2="11.8039" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#8FE5EC" />
-                    <stop offset="1" stop-color="#DDBAFC" />
-                  </linearGradient>
-                </defs>
-              </svg>
-              <img onClick={(e) => setOpen(false)} className="h-[24px] w-[24px] cursor-pointer" src={design === "0" ? close : require("../../images/NewDesign/closeBtn.png")} alt="close" />
-            </div>
+      <div className="fixed top-0 z-[60] h-screen w-screen bg-[#1E1E1E] bg-opacity-60 p-4 backdrop-blur-md">
+        <div className=" absolute left-1/2 top-4 z-10 w-[95%] max-w-[600px] -translate-x-1/2 transform lg:top-0 lg:w-full">
+          <div className={`m-auto flex w-full justify-between md:my-4`}>
+            <svg
+              onClick={(e) => {
+                setFlowStarted(false);
+                if (!flowStarted) {
+                  setOpen(false);
+                }
+              }}
+              className="cursor-pointer"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path d="M17 22L7 12L17 2" stroke="url(#paint0_linear_26_11821)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <defs>
+                <linearGradient id="paint0_linear_26_11821" x1="17" y1="11.8039" x2="7" y2="11.8039" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#8FE5EC" />
+                  <stop offset="1" stop-color="#DDBAFC" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <img onClick={(e) => setOpen(false)} className="h-[24px] w-[24px] cursor-pointer" src={design === "0" ? close : require("../../images/NewDesign/closeBtn.png")} alt="close" />
           </div>
-          {flowStarted ? (
-            <div className="flex h-screen items-center">{getMethodComponent(selectedPayment)}</div>
-          ) : (
-            <WithdrawMain
-              setPartnerSelected={setPartnerSelected}
-              setFlowStarted={setFlowStarted}
-              selectPayment={setSelectedPayment}
-              selectedPayment={selectedPayment}
-              userCountry={userCountry}
-              user={user}
-              languageData={languageData}
-            />
-          )}
         </div>
-      )}
+        {flowStarted ? (
+          <div className="flex h-screen items-center">{getMethodComponent(selectedPayment)}</div>
+        ) : (
+          <WithdrawMain
+            setPartnerSelected={setPartnerSelected}
+            setFlowStarted={setFlowStarted}
+            selectPayment={setSelectedPayment}
+            selectedPayment={selectedPayment}
+            userCountry={userCountry}
+            user={user}
+            languageData={languageData}
+          />
+        )}
+      </div>
+
       {confirm && <Confirm selectPayment={setSelectedPayment} selectedPayment={selectedPayment} setOpen={setConfirm} languageData={languageData} closeAll={setOpen} />}
 
       {error && <Error setOpen={setError} languageData={languageData} closeAll={setOpen} />}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import close from "../../../images/CyberSaysPage/closeMenu.png";
 import { useDesign } from "../../../Helpers/Design/DesignContext";
 import { withdrawPartner } from "../../../Requests/withdraw";
@@ -7,24 +7,11 @@ import mixpanel from "mixpanel-browser";
 function PartnerFlow({ languageData, setConfirm, setFlowStarted, setError, closeAll }) {
   const { design } = useDesign();
 
-  const handlePartnerFlow = async () => {
-    try {
-      const res = await withdrawPartner();
+  useEffect(() => {
+    handlePartnerFlow();
+  }, []);
 
-      mixpanel.track("Withdraw_request", { method: "Partner" });
-
-      console.log(res.data);
-      if (res.data.status === "success") {
-        setConfirm(true);
-        setFlowStarted(false);
-      } else {
-        alert(res.data.message);
-        setError(true);
-      }
-    } catch (error) {
-      setError(true);
-    }
-  };
+  const handlePartnerFlow = async () => {};
   return (
     <div className="fixed top-0 z-[60] flex h-screen w-screen bg-[#1E1E1E] bg-opacity-60 p-4 backdrop-blur-md">
       <div className=" m-auto w-full max-w-[600px]">

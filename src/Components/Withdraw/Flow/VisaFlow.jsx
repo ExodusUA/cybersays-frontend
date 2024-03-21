@@ -9,7 +9,7 @@ import { withdrawVisa } from "../../../Requests/withdraw";
 import mixpanel from "mixpanel-browser";
 import { useLanguage } from "../../../Helpers/Languages/LanguageContext";
 
-function VisaFlow({ languageData, setConfirm, setError }) {
+function VisaFlow({ languageData, setConfirm, setError, user }) {
   const { design } = useDesign();
   const { language } = useLanguage();
   const [transfer, setTransfer] = useState("");
@@ -52,6 +52,9 @@ function VisaFlow({ languageData, setConfirm, setError }) {
   }, [isVerified]);
 
   const handleCreateTransaction = async () => {
+    if (withdrawBlocked === true) {
+      alert("Withdraw blocked!");
+    }
     try {
       const response = await withdrawVisa(fullName, email, citizenshipOption, date, language);
       mixpanel.track("Withdraw_request", { method: "Visa" });
@@ -64,6 +67,22 @@ function VisaFlow({ languageData, setConfirm, setError }) {
     }
   };
 
+  const [hasCard, setHasCard] = useState(false);
+  const [withdrawBlocked, setWithdrawBlocked] = useState(false);
+
+  useEffect(() => {
+    if (!user) return;
+    if (user.visa_id === null) {
+      setHasCard(false);
+    } else {
+      setHasCard(true);
+    }
+
+    if (user?.earned < 1000 && user?.visa_id) {
+      setWithdrawBlocked(true);
+    }
+  }, [user]);
+
   return (
     <div className={` m-auto w-full max-w-[600px]`}>
       {step === 1 ? (
@@ -74,6 +93,7 @@ function VisaFlow({ languageData, setConfirm, setError }) {
           </div>
           <p className="saira mb-1 mt-3 text-[12px]">{languageData?.newVisaFlowInput1}</p>
           <input
+            readOnly={withdrawBlocked}
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
             className="saira h-[45px] w-full rounded-[12px] bg-white px-3  text-[#1E1E1E] outline-none focus:ring-0"
@@ -82,6 +102,7 @@ function VisaFlow({ languageData, setConfirm, setError }) {
           />
           <p className="saira mb-1 mt-3 text-[12px]">{languageData?.newVisaFlowInput2}</p>
           <input
+            readOnly={withdrawBlocked}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="saira h-[45px] w-full rounded-[12px] bg-white px-3  text-[#1E1E1E] outline-none focus:ring-0"
@@ -90,7 +111,7 @@ function VisaFlow({ languageData, setConfirm, setError }) {
           />
           <p className="saira my-1 text-[12px] font-medium">{languageData?.newVisaFlowSelect1}</p>
           <div className={` relative mt-1 border bg-white px-3 py-2 lg:py-3 ${design === "0" ? "rounded-[18px]" : "rounded-[12px]"}`}>
-            <div onClick={(e) => setCitizenship(!citizenship)} className={`flex  cursor-pointer items-center justify-between`}>
+            <div onClick={(e) => setCitizenship(!citizenship)} className={`flex  cursor-pointer items-center justify-between ${withdrawBlocked && "pointer-events-none opacity-70"}`}>
               <div className="flex items-center">
                 <p className="saira text-[16px] font-normal text-[#1E1E1E]">{citizenshipOption || "Select Citizenship"}</p>
               </div>
@@ -136,6 +157,7 @@ function VisaFlow({ languageData, setConfirm, setError }) {
             className={"saira saira w-full rounded-[12px] bg-white px-3 py-3 text-black outline-none focus:ring-0"}
             onChange={setDate}
             value={date}
+            disabled={withdrawBlocked}
             disableCalendar={true}
             clearIcon={true}
             monthPlaceholder={"MM"}
