@@ -3,7 +3,7 @@ import banner from "../../../images/NewDesign/withdraw/Banners/banner3.png";
 import bannerDesk from "../../../images/NewDesign/withdraw/Banners/bannerDesc3.png";
 import { useState, useEffect } from "react";
 
-function Banner3({ languageData, setPartnerSelected, selectPayment, user, setOpen, setBannerNumber, withdraw }) {
+function Banner3({ languageData, setPartnerSelected, selectPayment, user, setOpen, handleButtonClick, withdraw }) {
   const [disabled, setDisabled] = useState(true);
   const [countdown, setCountdown] = useState(10);
 
@@ -46,7 +46,6 @@ function Banner3({ languageData, setPartnerSelected, selectPayment, user, setOpe
             setPartnerSelected(true);
             setOpen(false);
           }}
-          
           className={`saira w-full  rounded-[12px]  border-[2px] text-[18px]  font-semibold outline-none sm:max-w-[370px]  ${disabled ? ` bannerBtn3 border-none py-2 text-[#1E1E1E]` : "  border-[2px] border-[#515151] bg-transparent py-3 text-[#7f7f7f]"}`}
         >
           {languageData?.bannerBtn1}
@@ -55,7 +54,7 @@ function Banner3({ languageData, setPartnerSelected, selectPayment, user, setOpe
       </div>
       <div className="mt-2 flex justify-center">
         <button
-          onClick={(e) => setBannerNumber(3)}
+          onClick={handleButtonClick}
           className={`saira w-full border-[1px] py-3 text-[18px] font-semibold outline-none sm:max-w-[370px]  ${disabled ? "border-[#515151] bg-transparent text-[#7f7f7f]" : "bannerBtn3 border-none text-black"} rounded-[12px] `}
           disabled={disabled}
         >

@@ -26,7 +26,7 @@ function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, cl
           />
         );
 
-      case 3:
+      case 2:
         return (
           <Banner2
             withdraw={withDrawPartner}
@@ -40,7 +40,7 @@ function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, cl
           />
         );
 
-      case 2:
+      case 3:
         return (
           <Banner3
             withdraw={withDrawPartner}
