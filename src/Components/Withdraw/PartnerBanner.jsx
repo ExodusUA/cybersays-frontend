@@ -42,8 +42,9 @@ function PartnerBanner({ languageData, setPartnerSelected, selectPayment, user, 
         />
         <p className=" saira absolute right-[0px] top-[22px] z-50 w-[140px] text-[8px] font-medium leading-[10px] text-[#A533FF] iphone:right-[0px] iphone:top-[25px] iphone:text-[9px] sm:right-[18px] sm:top-[30px] sm:w-[200px] sm:text-[12px] sm:leading-[14px]">
           {" "}
-          <span className="saira font-extrabold text-[#A533FF]">{user?.imlive_username || ""} </span>
           {languageData?.withdrawBannerMessage}
+          <span className="saira font-extrabold text-[#A533FF]">{user?.imlive_username || ""} </span>
+          {languageData?.withdrawBannerMessage2}
         </p>
         <div className=" absolute right-[10px] top-[75px] z-10 w-[150px] iphone:right-[15px] iphone:top-[90px] sm:right-[40px] sm:top-[100px] sm:w-[200px]">
           <p className="saira text-center text-[12px] font-bold leading-4 text-[#9430E3] sm:text-[16px]">
