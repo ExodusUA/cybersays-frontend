@@ -4,10 +4,12 @@ import done from "../../images/CyberSaysPage/card_done.png";
 import { useDesign } from "../../Helpers/Design/DesignContext";
 import mixpanel from "mixpanel-browser";
 import moengage from "@moengage/web-sdk";
+import { useLanguage } from "../../Helpers/Languages/LanguageContext";
 
 function TaskCardDesktop({ state, background, data, index, PartnerURL, rounded, open, manualSelect, setSelectedTask, tasks, user, mt, languageData, lastTask }) {
   const { design } = useDesign();
-
+  
+  const { language } = useLanguage();
   const [cardState, setCardState] = useState(null);
 
   useEffect(() => {
@@ -47,7 +49,7 @@ function TaskCardDesktop({ state, background, data, index, PartnerURL, rounded, 
     return (
       <>
         <div className={`mx-1 flex cursor-pointer items-center  justify-between pt-1 sm:mx-1`}>
-          <p className="saira flex items-center text-[12px] font-medium md:text-[14px]">
+          <p className={`saira flex items-center text-[12px] font-medium md:text-[14px] ${language !== 'en' && 'md:text-[13px]'}`}>
             {index}. {data?.taskTitleOpen}
             {/*
                     <span className='truncate saira text-[12px] md:text-[14px] font-medium ml-1 w-[50px] md:w-[180px] block'>

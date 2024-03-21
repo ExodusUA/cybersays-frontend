@@ -6,8 +6,9 @@ import userAPI from "../../Requests/user";
 import moment from "moment";
 import { useDesign } from "../../Helpers/Design/DesignContext";
 import Loading from "../Loading";
+import InviteFriends from "./InviteFriends";
 
-function TransactionHistory({ setOpen, languageData, user, userCountry, setWithdrawModal }) {
+function TransactionHistory({ setOpen, languageData, user, userCountry, setWithdrawModal, scrollToPage }) {
   const { design } = useDesign();
 
   const [transactionsData, setTransactionsData] = useState(null);
@@ -141,7 +142,7 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
           })
         ) : (
           <div className="flex h-[470px] items-center justify-center">
-            <p className="text-center text-[18px] font-semibold">{languageData?.noTransactions}</p>
+            <InviteFriends closeAll={setOpen} languageData={languageData} scrollToPage={scrollToPage} user={user} />
           </div>
         )}
         {/*
