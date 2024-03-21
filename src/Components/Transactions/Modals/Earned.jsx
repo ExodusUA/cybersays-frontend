@@ -132,7 +132,7 @@ function Earned({ setOpen, languageData, user, setTransactionsModal, userCountry
             })
           ) : (
             <div className="flex h-[200px] items-center justify-center">
-              <p className="text-center text-[18px] font-semibold">{languageData?.noTransactions}</p>
+              <p className="text-center text-[18px] font-semibold">{languageData?.noTransactionsToday}</p>
             </div>
           )}
         </div>
