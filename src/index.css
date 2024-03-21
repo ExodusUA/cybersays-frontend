@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Saira&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Saira&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
@@ -553,6 +553,11 @@ body {
 }
 .bannerTextBtn3 {
     background: var(--New-linear, linear-gradient(180deg, #FA047A 0%, #FE8D4D 100%));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.bannerTextBtn4 {
+    background: linear-gradient(196deg, #D418D6 11.15%, #ED1E79 88.85%);
     -webkit-background-clip: text;
     color: transparent;
 }
