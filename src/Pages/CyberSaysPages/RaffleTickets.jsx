@@ -350,7 +350,7 @@ function RaffleTickets({ setTourModal, user, PartnerURL, languageData, setWinMod
                 </p>
                 */}
         <div className="absolute left-1/2 m-auto flex w-full -translate-x-1/2 transform justify-center  se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] ">
-          <TimeCounter left={"m-auto"} leftTitle={"text-center"} title={languageData?.timeCounterTitle} languageData={languageData} block={"block"} />
+          <TimeCounter setWinModal={setWinModal} left={"m-auto"} leftTitle={"text-center"} title={languageData?.timeCounterTitle} languageData={languageData} block={"block"} />
         </div>
       </div>
     </div>
