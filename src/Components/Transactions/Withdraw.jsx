@@ -84,7 +84,9 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
 
   return (
     <div>
-      {user?.earned !== 0 && user?.earned > 0 && promoModal && <PartnerPromoModal closeAll={setOpen} setPartnerSelected={setPartnerSelected} setOpen={setPromoModal} languageData={languageData} user={user} />}
+      {user?.earned !== 0 && user?.earned > 0 && promoModal && (
+        <PartnerPromoModal setConfirm={setConfirm} setError={setError} closeAll={setOpen} setPartnerSelected={setPartnerSelected} setOpen={setPromoModal} languageData={languageData} user={user} />
+      )}
 
       {PartnerSelected ? (
         <PartnerFlow setFlowStarted={setFlowStarted} setConfirm={setConfirm} setOpen={setPartnerSelected} languageData={languageData} closeAll={setOpen} setError={setError} />
@@ -92,12 +94,20 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
         <div className="fixed top-0 z-[60] h-screen w-screen bg-[#1E1E1E] bg-opacity-60 p-4 backdrop-blur-md">
           <div className=" absolute left-1/2 top-4 z-10 w-[95%] max-w-[600px] -translate-x-1/2 transform lg:top-0 lg:w-full">
             <div className={`m-auto flex w-full justify-between md:my-4`}>
-              <svg onClick={(e) => {
-                setFlowStarted(false)
-                if (!flowStarted) { 
-                  setOpen(false);
-                }
-                }} className="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <svg
+                onClick={(e) => {
+                  setFlowStarted(false);
+                  if (!flowStarted) {
+                    setOpen(false);
+                  }
+                }}
+                className="cursor-pointer"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
                 <path d="M17 22L7 12L17 2" stroke="url(#paint0_linear_26_11821)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 <defs>
                   <linearGradient id="paint0_linear_26_11821" x1="17" y1="11.8039" x2="7" y2="11.8039" gradientUnits="userSpaceOnUse">

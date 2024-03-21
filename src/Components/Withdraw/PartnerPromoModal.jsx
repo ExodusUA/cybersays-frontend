@@ -4,89 +4,90 @@ import { useDesign } from "../../Helpers/Design/DesignContext";
 import Banner1 from "./Banners/Banner1";
 import Banner2 from "./Banners/Banner2";
 import Banner3 from "./Banners/Banner3";
+import { withdrawPartner } from "../../Requests/withdraw";
+import mixpanel from "mixpanel-browser";
 
-function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, closeAll }) {
+function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, closeAll, setConfirm, setError }) {
   const { design } = useDesign();
-  const [disabled, setDisabled] = useState(true);
-  const [countdown, setCountdown] = useState(10);
-  const [randomBanner, setRandomBanner] = useState(null);
 
-  useEffect(() => {
-    const random = Math.floor(Math.random() * 3) + 1;
-    setRandomBanner(random);
-
-    const timer = setTimeout(() => {
-      setDisabled(false);
-      setCountdown(0);
-    }, 10000);
-
-    const countdownTimer = setInterval(() => {
-      setCountdown((prevCount) => prevCount - 1);
-    }, 1000);
-
-    return () => {
-      clearTimeout(timer);
-      clearInterval(countdownTimer);
-    };
-  }, []);
+  const [bannerNumber, setBannerNumber] = useState(1);
 
   const getBannerMarkup = () => {
-    switch (randomBanner) {
+    switch (bannerNumber) {
       case 1:
         return (
           <Banner1
+            withdraw={withDrawPartner}
             handleButtonClick={handleButtonClick}
-            disabled={disabled}
-            countdown={countdown}
             setOpen={setOpen}
             languageData={languageData}
             setPartnerSelected={setPartnerSelected}
             selectPayment={() => {}}
             user={user}
-          />
-        );
-
-      case 2:
-        return (
-          <Banner2
-            handleButtonClick={handleButtonClick}
-            disabled={disabled}
-            countdown={countdown}
-            setOpen={setOpen}
-            languageData={languageData}
-            setPartnerSelected={setPartnerSelected}
-            selectPayment={() => {}}
-            user={user}
+            setBannerNumber={setBannerNumber}
           />
         );
 
       case 3:
         return (
-          <Banner3
+          <Banner2
+            withdraw={withDrawPartner}
             handleButtonClick={handleButtonClick}
-            disabled={disabled}
-            countdown={countdown}
             setOpen={setOpen}
             languageData={languageData}
             setPartnerSelected={setPartnerSelected}
             selectPayment={() => {}}
             user={user}
+            setBannerNumber={setBannerNumber}
+          />
+        );
+
+      case 2:
+        return (
+          <Banner3
+            withdraw={withDrawPartner}
+            handleButtonClick={handleButtonClick}
+            setOpen={setOpen}
+            languageData={languageData}
+            setPartnerSelected={setPartnerSelected}
+            selectPayment={() => {}}
+            user={user}
+            setBannerNumber={setBannerNumber}
           />
         );
 
       default:
         return (
           <Banner1
+            withdraw={withDrawPartner}
             handleButtonClick={handleButtonClick}
-            disabled={disabled}
-            countdown={countdown}
             setOpen={setOpen}
             languageData={languageData}
             setPartnerSelected={setPartnerSelected}
             selectPayment={() => {}}
             user={user}
+            setBannerNumber={setBannerNumber}
           />
         );
+    }
+  };
+
+  const withDrawPartner = async () => {
+    try {
+      const res = await withdrawPartner();
+
+      mixpanel.track("Withdraw_request", { method: "Partner" });
+
+      console.log(res.data);
+      if (res.data.status === "success") {
+        setConfirm(true);
+        setOpen(false);
+      } else {
+        alert(res.data.message);
+        setError(true);
+      }
+    } catch (error) {
+      setError(true);
     }
   };
 
@@ -99,10 +100,7 @@ function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, cl
       <div className="absolute left-1/2 top-2 my-1 flex w-full max-w-[600px] -translate-x-1/2 transform justify-end px-4 md:my-4">
         <img onClick={(e) => closeAll(false)} className="h-[24px] w-[24px] cursor-pointer" src={design === "0" ? close : require("../../images/NewDesign/closeBtn.png")} alt="close" />
       </div>
-      <div className={`relative m-auto w-full max-w-[600px]   rounded-[12px] p-2 lg:px-4`}>
-        {getBannerMarkup()}
-      
-      </div>
+      <div className={`relative m-auto w-full max-w-[600px]   rounded-[12px] p-2 lg:px-4`}>{getBannerMarkup()}</div>
     </div>
   );
 }
