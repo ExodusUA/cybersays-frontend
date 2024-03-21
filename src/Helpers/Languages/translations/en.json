@@ -14,8 +14,8 @@
   "LinkCopied": "Link Copied!",
   "tasks": {
     "task1": {
-      "taskTitle": "Register in our partner's site  🎉",
-      "taskTitleOpen": "Register in our partner's site  🎉",
+      "taskTitle": "Register on our partner's site  🎉",
+      "taskTitleOpen": "Register on our partner's site  🎉",
       "taskBlocks": [
         {
           "taskImage": "images/bg-mobile-Task1.png",
@@ -265,8 +265,8 @@
   "winPoint3li3": "Every letter you send can include one form only and will reward you with one ticket",
   "winPointEnd": "Good luck!",
   "winPointEndLink": "To the Vegas Promotion full terms",
-  "rulesTitle": "🎉 Welcome to the CyberSays Contest! 🎉",
-  "rulesSubTitle": "Starting on [fill in date], 2024, and continuing daily, join us for the CyberSays Contest.",
+  "rulesTitle": "🎉 Welcome to the CyberSays Competition! 🎉",
+  "rulesSubTitle": "Starting on March 15th, 2024, and continuing daily, join us for the CyberSays Competition.",
   "rulesPoint1Title": "To enter:",
   "rulesPoint1li1": "Sign in to our partner",
   "rulesPoint1li2": "⁠Purchase 5 credits and receive a bonus of 5 more",
@@ -275,7 +275,7 @@
   "rulesPoint2li2": "$69 USD for the 1st place and $6.90 USD for the 2nd – 10th places each – daily!",
   "rulesPoint2li3": "$1 USD + 30 Vegas Tickets + 10 Points for each successful referral who completes the Offer",
   "rulesPoint2li4": "1 Vegas Ticket + 0.5 Points for every credit bought after the first purchase on our partner",
-  "rulesEnd": "Best of luck to all participants in the CyberSays Contest!",
+  "rulesEnd": "Best of luck to all participants in the CyberSays Competition!",
   "toolInfoTitle": "What can I get in CyberSays and how?",
   "toolInfoWhat": "What?",
   "toolInfoHow": "How?",

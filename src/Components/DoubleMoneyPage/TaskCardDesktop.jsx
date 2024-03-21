@@ -49,7 +49,7 @@ function TaskCardDesktop({ state, background, data, index, PartnerURL, rounded, 
     return (
       <>
         <div className={`mx-1 flex cursor-pointer items-center  justify-between pt-1 sm:mx-1`}>
-          <p className={`saira flex items-center text-[12px] font-medium md:text-[14px] ${language !== 'en' && 'md:text-[13px]'}`}>
+          <p className={`saira flex items-center text-[12px] font-medium md:text-[14px] ${language !== 'en' && 'md:!text-[13px]'}`}>
             {index}. {data?.taskTitleOpen}
             {/*
                     <span className='truncate saira text-[12px] md:text-[14px] font-medium ml-1 w-[50px] md:w-[180px] block'>
@@ -76,11 +76,11 @@ function TaskCardDesktop({ state, background, data, index, PartnerURL, rounded, 
                 <p
                   className={`saira absolute  text-left text-[10px] font-medium leading-[12px] text-black ${
                     index === 1
-                      ? `${design === "0" ? "right-[25px] top-[15px] w-[150px] sm:right-[45px] sm:top-[42px] sm:w-[125px]" : "right-[15px] top-[17px] w-[180px] text-[14px] leading-[16px] text-white sm:right-[25px] sm:top-[45px] sm:w-[135px]"}`
+                      ? `${design === "0" ? "right-[25px] top-[15px] w-[150px] sm:right-[45px] sm:top-[45px] sm:w-[125px]" : "right-[15px] top-[17px] w-[180px] text-[14px] leading-[16px] text-white sm:right-[25px] sm:top-[45px] sm:w-[135px]"}`
                       : index === 2
                         ? `${design === "0" ? "left-[35px] top-[15px]  w-[140px] sm:left-[40px] sm:top-[15px] sm:w-[100px]" : "left-[30px] top-[20px] w-[200px] text-[14px] leading-[16px] text-white sm:left-[25px] sm:top-[35px] sm:w-[140px]"}`
                         : index === 3
-                          ? `${design === "0" ? "right-[35px] top-[15px] w-[160px] sm:right-[25px] sm:top-[20px] sm:w-[110px]" : "right-[35px] top-[18px] w-[205px] text-[14px] leading-[16px] text-white sm:right-[20px] sm:top-[32px] sm:w-[160px]"}`
+                          ? `${design === "0" ? "right-[35px] top-[15px] w-[160px] sm:right-[25px] sm:top-[25px] sm:w-[110px]" : "right-[35px] top-[18px] w-[205px] text-[14px] leading-[16px] text-white sm:right-[20px] sm:top-[32px] sm:w-[160px]"}`
                           : index === 4
                             ? `${design === "0" ? "left-[60px] top-[10px] w-[165px] sm:left-[100px] sm:top-[15px] sm:w-[280px]" : "left-[40px] top-[18px] w-[200px] text-[14px] leading-[16px] text-white sm:left-[70px] sm:top-[30px] sm:w-[340px]"}`
                             : ""
@@ -122,7 +122,7 @@ function TaskCardDesktop({ state, background, data, index, PartnerURL, rounded, 
                 page: "Double your Money",
               });
             }}
-            className={`saira gradient-link mb-[-5px] cursor-pointer pb-0  pt-1 text-center text-[14px] font-semibold underline`}
+            className={`saira  mb-[-5px] cursor-pointer pb-0  pt-1 text-center text-[14px] font-semibold underline ${design === "0" ? 'white' : 'gradient-link'}`}
           >
             {linkCopied === true ? languageData?.CopyLinkDone : languageData?.CopyLink}
           </p>
@@ -134,7 +134,7 @@ function TaskCardDesktop({ state, background, data, index, PartnerURL, rounded, 
   const finishedState = () => {
     return (
       <div className="mx-1 flex cursor-pointer items-center justify-between sm:mx-3" onClick={(e) => setSelectedTask(index)}>
-        <p className="saira text-[12px] font-medium md:text-[14px]">
+        <p className={`saira text-[12px] font-medium md:text-[14px] ${language !== 'en' && 'md:!text-[13px]'}`}>
           {index}. {data?.taskTitle}
         </p>
         {tasks?.includes(index) ? (
@@ -149,7 +149,7 @@ function TaskCardDesktop({ state, background, data, index, PartnerURL, rounded, 
   const inactiveState = () => {
     return (
       <div className="mx-1 flex cursor-pointer items-center justify-between  sm:mx-3" onClick={(e) => setSelectedTask(index)}>
-        <p className="saira text-[12px] font-medium md:text-[14px]">
+        <p className={`saira text-[12px] font-medium md:text-[14px] ${language !== 'en' && 'md:!text-[13px]'}`}>
           {index}. {data?.taskTitle}
         </p>
         {tasks?.includes(index) ? (

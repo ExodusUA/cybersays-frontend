@@ -3,7 +3,7 @@ import { useDesign } from "../Helpers/Design/DesignContext";
 import { Link } from "react-router-dom";
 const moment = require("moment-timezone");
 
-function TimeCounter({ languageData, hidden, title, left, leftTitle, block, setSocialLink }) {
+function TimeCounter({ languageData, hidden, title, left, leftTitle, block, setSocialLink, setWinModal }) {
   const { design } = useDesign();
 
   const endDate = moment.tz("2024-08-06 23:59:59", "America/Sao_Paulo");
@@ -59,9 +59,7 @@ function TimeCounter({ languageData, hidden, title, left, leftTitle, block, setS
       </div>
 
       <div className={`flex justify-center ${block} mt-[-6px]`}>
-        <Link target="_blank" to={"/promotion-terms"}>
-          <p className={`saira cursor-pointer text-center  text-[12px] font-semibold underline  sm:text-[14px] ${design === "0" ? "text-[#FFED63]" : "gradient-link "}`}>{languageData?.timeCounterLink2}</p>
-        </Link>
+        <p onClick={(e) => setWinModal(true)} className={`saira cursor-pointer text-center  text-[12px] font-semibold underline  sm:text-[14px] ${design === "0" ? "text-[#FFED63]" : "gradient-link "}`}>{languageData?.timeCounterLink2}</p>
       </div>
     </div>
   );
