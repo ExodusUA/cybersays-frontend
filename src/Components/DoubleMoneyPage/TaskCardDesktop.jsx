@@ -8,7 +8,7 @@ import { useLanguage } from "../../Helpers/Languages/LanguageContext";
 
 function TaskCardDesktop({ state, background, data, index, PartnerURL, rounded, open, manualSelect, setSelectedTask, tasks, user, mt, languageData, lastTask }) {
   const { design } = useDesign();
-  
+
   const { language } = useLanguage();
   const [cardState, setCardState] = useState(null);
 
@@ -49,7 +49,7 @@ function TaskCardDesktop({ state, background, data, index, PartnerURL, rounded, 
     return (
       <>
         <div className={`mx-1 flex cursor-pointer items-center  justify-between pt-1 sm:mx-1`}>
-          <p className={`saira flex items-center text-[12px] font-medium md:text-[14px] ${language !== 'en' && 'md:!text-[13px]'}`}>
+          <p className={`saira flex items-center text-[12px] font-medium md:text-[14px] ${language !== "en" && "md:!text-[13px]"}`}>
             {index}. {data?.taskTitleOpen}
             {/*
                     <span className='truncate saira text-[12px] md:text-[14px] font-medium ml-1 w-[50px] md:w-[180px] block'>
@@ -102,7 +102,7 @@ function TaskCardDesktop({ state, background, data, index, PartnerURL, rounded, 
             onClick={(e) => {
               copyPartnerLink();
               mixpanel.track("copy_link", {
-                distinct_id: "not_set",
+                distinct_id: user?.id,
                 is_referred: user?.referral_id ? "Yes" : "No",
                 vegas_tickets: user?.raffle_tickets,
                 points: user?.points,
@@ -112,7 +112,7 @@ function TaskCardDesktop({ state, background, data, index, PartnerURL, rounded, 
                 page: "Double your Money",
               });
               moengage.track_event("copy_link", {
-                distinct_id: "not_set",
+                distinct_id: user?.id,
                 is_referred: user?.referral_id ? "Yes" : "No",
                 vegas_tickets: user?.raffle_tickets,
                 points: user?.points,
@@ -122,7 +122,7 @@ function TaskCardDesktop({ state, background, data, index, PartnerURL, rounded, 
                 page: "Double your Money",
               });
             }}
-            className={`saira  mb-[-5px] cursor-pointer pb-0  pt-1 text-center text-[14px] font-semibold underline ${design === "0" ? 'white' : 'gradient-link'}`}
+            className={`saira  mb-[-5px] cursor-pointer pb-0  pt-1 text-center text-[14px] font-semibold underline ${design === "0" ? "white" : "gradient-link"}`}
           >
             {linkCopied === true ? languageData?.CopyLinkDone : languageData?.CopyLink}
           </p>
@@ -134,7 +134,7 @@ function TaskCardDesktop({ state, background, data, index, PartnerURL, rounded, 
   const finishedState = () => {
     return (
       <div className="mx-1 flex cursor-pointer items-center justify-between sm:mx-3" onClick={(e) => setSelectedTask(index)}>
-        <p className={`saira text-[12px] font-medium md:text-[14px] ${language !== 'en' && 'md:!text-[13px]'}`}>
+        <p className={`saira text-[12px] font-medium md:text-[14px] ${language !== "en" && "md:!text-[13px]"}`}>
           {index}. {data?.taskTitle}
         </p>
         {tasks?.includes(index) ? (
@@ -149,7 +149,7 @@ function TaskCardDesktop({ state, background, data, index, PartnerURL, rounded, 
   const inactiveState = () => {
     return (
       <div className="mx-1 flex cursor-pointer items-center justify-between  sm:mx-3" onClick={(e) => setSelectedTask(index)}>
-        <p className={`saira text-[12px] font-medium md:text-[14px] ${language !== 'en' && 'md:!text-[13px]'}`}>
+        <p className={`saira text-[12px] font-medium md:text-[14px] ${language !== "en" && "md:!text-[13px]"}`}>
           {index}. {data?.taskTitle}
         </p>
         {tasks?.includes(index) ? (

@@ -79,7 +79,7 @@ function VisaFlow({ languageData, setConfirm, setError, user, userCountry }) {
       setHasCard(true);
     }
 
-    if (user?.earned < 1000 && user?.visa_id) {
+    if (user?.earned < 25 && user?.visa_id === null) {
       setWithdrawBlocked(true);
     }
   }, [user]);

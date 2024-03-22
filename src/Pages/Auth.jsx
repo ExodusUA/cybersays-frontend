@@ -15,9 +15,35 @@ import mixpanel from "mixpanel-browser";
 import moengage from "@moengage/web-sdk";
 
 function Auth({ languageData }) {
+  const urlParams = new URLSearchParams(window.location.search);
+
+  useEffect(() => {
+    /* MIXPANEL */
+
+    let utmData = {
+      utm_source: urlParams.get("utm_source") || window.localStorage.getItem("utm_source"),
+      utm_medium: urlParams.get("utm_medium") || window.localStorage.getItem("utm_medium"),
+      utm_campaign: urlParams.get("utm_campaign") || window.localStorage.getItem("utm_campaign"),
+      utm_term: urlParams.get("utm_term") || window.localStorage.getItem("utm_term"),
+      utm_content: urlParams.get("utm_content") || window.localStorage.getItem("utm_content"),
+    };
+
+    // delete nulls
+
+    mixpanel.track("page_view", {
+      distinct_id: "not_set",
+      ...utmData,
+      page_name: "Login",
+    });
+    moengage.track_event("page_view", {
+      distinct_id: "not_set",
+      ...utmData,
+      page_name: "Login",
+    });
+  }, []);
+
   const navigate = useNavigate();
   let { language } = useLanguage();
-  const urlParams = new URLSearchParams(window.location.search);
 
   if (window.localStorage.getItem("token")) {
     navigate("/");
@@ -45,31 +71,6 @@ function Auth({ languageData }) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    /* MIXPANEL */
-
-    let utmData = {
-      utm_source: urlParams.get("utm_source") || window.localStorage.getItem("utm_source"),
-      utm_medium: urlParams.get("utm_medium") || window.localStorage.getItem("utm_medium"),
-      utm_campaign: urlParams.get("utm_campaign") || window.localStorage.getItem("utm_campaign"),
-      utm_term: urlParams.get("utm_term") || window.localStorage.getItem("utm_term"),
-      utm_content: urlParams.get("utm_content") || window.localStorage.getItem("utm_content"),
-    };
-
-    // delete nulls
-
-    mixpanel.track("page_view", {
-      distinct_id: "not_set",
-      ...utmData,
-      page_name: "Login",
-    });
-    moengage.track_event("page_view", {
-      distinct_id: "not_set",
-      ...utmData,
-      page_name: "Login",
-    });
   }, []);
 
   return (
@@ -136,11 +137,11 @@ function Auth({ languageData }) {
                   <p className="saira w-full cursor-pointer  select-none text-[8px] font-normal leading-4 text-[#CACACA]">
                     {languageData?.loginTermsTitle}
 
-                    <Link target="_blank" to="https://cybersays-legal.vercel.app/terms" className="saira ml-1 text-[8px] font-semibold ">
+                    <Link target="_blank" to="https://www.cyber-says.club/terms" className="saira ml-1 text-[8px] font-semibold ">
                       <span className=" saira text-[8px] font-normal underline">Terms of Use</span> &
                     </Link>
 
-                    <Link target="_blank" to={"https://cybersays-legal.vercel.app/privacy"} className="saira text-[8px] font-semibold underline">
+                    <Link target="_blank" to={"https://www.cyber-says.club/privacy"} className="saira text-[8px] font-semibold underline">
                       <span className=" saira text-[8px] font-normal underline"> Privacy Policy</span>,
                     </Link>
                     {/*
@@ -167,11 +168,11 @@ function Auth({ languageData }) {
                   <p className="saira w-full cursor-pointer  select-none text-[8px] font-normal leading-4 text-[#a9a9a9]">
                     {languageData?.loginTermsTitle}
 
-                    <Link target="_blank" to="https://cybersays-legal.vercel.app/terms" className="saira ml-1 text-[8px] font-semibold ">
+                    <Link target="_blank" to="https://www.cyber-says.club/terms" className="saira ml-1 text-[8px] font-semibold ">
                       <span className=" saira text-[8px] font-normal underline">Terms of Use</span> &
                     </Link>
 
-                    <Link target="_blank" to={"https://cybersays-legal.vercel.app/privacy"} className="saira text-[8px] font-semibold underline">
+                    <Link target="_blank" to={"https://www.cyber-says.club/privacy"} className="saira text-[8px] font-semibold underline">
                       <span className=" saira text-[8px] font-normal underline"> Privacy Policy</span>,
                     </Link>
                   </p>

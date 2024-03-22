@@ -14,9 +14,10 @@ function OTPVerify({ languageData, isVerified, email }) {
 
     const res = await userAPI.verifyOTP(codeNumber, email);
     if (res.data.isValid === true) {
+      mixpanel.track("Withdraw_request", { method: "Xoxoday" });
       try {
         const response = await withdrawXoxoday(email);
-        mixpanel.track("Withdraw_request", { method: "Xoxoday" });
+
         isVerified(true);
       } catch (error) {
         alert("Error! Maybe we don`t have a suitable campaign for you, please try again later");
@@ -25,7 +26,6 @@ function OTPVerify({ languageData, isVerified, email }) {
     } else {
       try {
         const response = await withdrawXoxoday(email);
-        mixpanel.track("Withdraw_request", { method: "Xoxoday" });
         isVerified(true);
       } catch (error) {
         alert("Error! Maybe we don`t have a suitable campaign for you, please try again later");

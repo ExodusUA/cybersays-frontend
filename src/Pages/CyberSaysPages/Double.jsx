@@ -305,7 +305,7 @@ function Double({ languageData, user, PartnerURL, setOpen, setDoubleComplete }) 
             onClick={(e) => {
               setOpen(true);
               mixpanel.track("way_to_get_paid", {
-                distinct_id: "not_set",
+                distinct_id: user?.id,
                 is_referred: user?.referral_id ? "Yes" : "No",
                 vegas_tickets: user?.raffle_tickets,
                 points: user?.points,
@@ -315,7 +315,7 @@ function Double({ languageData, user, PartnerURL, setOpen, setDoubleComplete }) 
                 page: "Double your Money",
               });
               moengage.track_event("way_to_get_paid", {
-                distinct_id: "not_set",
+                distinct_id: user?.id,
                 is_referred: user?.referral_id ? "Yes" : "No",
                 vegas_tickets: user?.raffle_tickets,
                 points: user?.points,

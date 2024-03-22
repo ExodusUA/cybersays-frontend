@@ -781,7 +781,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                         });
                       }}
                     >
-                      <Link target="_blank" to={"https://cybersays-legal.vercel.app/"}>
+                      <Link target="_blank" to={"https://www.cyber-says.club/"}>
                         {" "}
                         <p className="saira ml-[40px] cursor-pointer text-[20px] font-semibold">{languageData?.modalMenuBottom2}</p>
                       </Link>

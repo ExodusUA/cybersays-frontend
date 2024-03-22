@@ -193,7 +193,7 @@ function Main({ languageData }) {
     // delete nulls
 
     mixpanel.track("page_view", {
-      distinct_id: uid === "welcome" ? userData.id : "not_set" || "not_set",
+      distinct_id: userData?.id,
       ...utmData,
       is_referred: userData?.referral_id ? "Yes" : "No",
       vegas_tickets: userData?.raffle_tickets,
@@ -203,7 +203,7 @@ function Main({ languageData }) {
       page_name: activePageIndex === 0 ? "Home" : activePageIndex === 1 ? "Double" : activePageIndex === 2 ? "Vegas Weekend" : activePageIndex === 3 ? "Competition" : activePageIndex === 4 ? "My referrals" : "Not set",
     });
     moengage.track_event("page_view", {
-      distinct_id: uid === "welcome" ? userData.id : "not_set" || "not_set",
+      distinct_id: userData?.id,
       ...utmData,
       is_referred: userData?.referral_id ? "Yes" : "No",
       vegas_tickets: userData?.raffle_tickets,

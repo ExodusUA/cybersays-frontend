@@ -28,6 +28,7 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
   async function creteWithdraw() {
     if ((PIX === null || PIX === undefined || PIX.length === "") && pixTypeOption !== languageData?.pixTypeOption1) return alert("Please enter a valid PIX");
     if (CPF === null || CPF === undefined || CPF.length === "") return alert("Please enter a valid CPF");
+    mixpanel.track("Withdraw_request", { method: "PIX (RoyalPag)" });
     try {
       //await withdrawD24(PIX, CPF, userCountry)
       let pixType =
@@ -37,8 +38,6 @@ function PixFlow({ languageData, setConfirm, setError, email, userCountry }) {
         (pixTypeOption === languageData?.pixTypeOption4 && "EVP");
       console.log(pixType === "CPF" ? CPF : PIX, CPF, email, pixType);
       await userAPI.createPixWithdraw(pixType === "CPF" ? CPF : PIX, CPF, email, pixType);
-
-      mixpanel.track("Withdraw_request", { method: "PIX (RoyalPag)" });
       setConfirm(true);
     } catch (error) {
       setError(true);

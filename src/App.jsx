@@ -18,7 +18,45 @@ function App() {
     debug_logs: 0,
     cluster: "DC_2",
   });
+
+  /* UTM SAVING */
   const params = new URLSearchParams(window.location.search);
+  useEffect(() => {
+    const utm_source = params.get("utm_source");
+    const utm_medium = params.get("utm_medium");
+    const utm_campaign = params.get("utm_campaign");
+    const utm_term = params.get("utm_term");
+    const utm_content = params.get("utm_content");
+
+    if (utm_source) {
+      window.localStorage.setItem("utm_source", utm_source);
+    }
+
+    if (utm_medium) {
+      window.localStorage.setItem("utm_medium", utm_medium);
+    }
+
+    if (utm_campaign) {
+      window.localStorage.setItem("utm_campaign", utm_campaign);
+    }
+
+    if (utm_term) {
+      window.localStorage.setItem("utm_term", utm_term);
+    }
+
+    if (utm_content) {
+      window.localStorage.setItem("utm_content", utm_content);
+    }
+  }, []);
+
+  mixpanel.init(process.env.REACT_APP_MIXPANEL_PROJECT_TOKEN, {
+    utm_campaign: params.get("utm_campaign") || window.localStorage.getItem("utm_campaign"),
+    utm_source: params.get("utm_source") || window.localStorage.getItem("utm_source"),
+    utm_medium: params.get("utm_medium") || window.localStorage.getItem("utm_medium"),
+    utm_term: params.get("utm_term") || window.localStorage.getItem("utm_term"),
+    utm_content: params.get("utm_content") || window.localStorage.getItem("utm_content"),
+  });
+
   const ref = window.location.pathname.split("/")[1];
 
   useEffect(() => {
@@ -65,55 +103,6 @@ function App() {
     let langData = languages[language];
     setLanguageData(langData);
   }, [language]);
-
-  /* UTM SAVING */
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const utm_source = params.get("utm_source");
-    const utm_medium = params.get("utm_medium");
-    const utm_campaign = params.get("utm_campaign");
-    const utm_term = params.get("utm_term");
-    const utm_content = params.get("utm_content");
-
-    if (utm_source) {
-      window.localStorage.setItem("utm_source", utm_source);
-    }
-
-    if (utm_medium) {
-      window.localStorage.setItem("utm_medium", utm_medium);
-    }
-
-    if (utm_campaign) {
-      window.localStorage.setItem("utm_campaign", utm_campaign);
-    }
-
-    if (utm_term) {
-      window.localStorage.setItem("utm_term", utm_term);
-    }
-
-    if (utm_content) {
-      window.localStorage.setItem("utm_content", utm_content);
-    }
-  }, []);
-
-  mixpanel.init(process.env.REACT_APP_MIXPANEL_PROJECT_TOKEN, {
-    utm_campaign: getParameterByName("utm_campaign"),
-    utm_source: getParameterByName("utm_source"),
-    utm_medium: getParameterByName("utm_medium"),
-    utm_term: getParameterByName("utm_term"),
-    utm_content: getParameterByName("utm_content"),
-  });
-
-  function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-      results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return "";
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-  }
 
   return (
     <QueryClientProvider client={queryClient}>

@@ -108,7 +108,7 @@ function TaskCard({ state, background, data, index, PartnerURL, rounded, open, m
           onClick={(e) => {
             copyPartnerLink();
             mixpanel.track("copy_link", {
-              distinct_id: "not_set",
+              distinct_id: user?.id,
               is_referred: user?.referral_id ? "Yes" : "No",
               vegas_tickets: user?.raffle_tickets,
               points: user?.points,
@@ -118,7 +118,7 @@ function TaskCard({ state, background, data, index, PartnerURL, rounded, open, m
               page: "Double your Money",
             });
             moengage.track_event("copy_link", {
-              distinct_id: "not_set",
+              distinct_id: user?.id,
               is_referred: user?.referral_id ? "Yes" : "No",
               vegas_tickets: user?.raffle_tickets,
               points: user?.points,

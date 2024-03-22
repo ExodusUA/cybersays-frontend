@@ -87,9 +87,8 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
     if (PartnerSelected === true) {
       const PartnerPayment = async () => {
         try {
-          const res = await withdrawPartner();
-
           mixpanel.track("Withdraw_request", { method: "Partner" });
+          const res = await withdrawPartner();
 
           console.log(res.data);
           if (res.data.status === "success") {
@@ -120,20 +119,6 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
 
   return (
     <div>
-      {user?.earned !== 0 && user?.earned > 0 && promoModal && (
-        <PartnerPromoModal
-          setBannerNumber={setBannerNumber}
-          bannerNumber={bannerNumber}
-          setConfirm={setConfirm}
-          setError={setError}
-          closeAll={setOpen}
-          setPartnerSelected={setPartnerSelected}
-          setOpen={setPromoModal}
-          languageData={languageData}
-          user={user}
-        />
-      )}
-
       <div className="fixed top-0 z-[60] h-screen w-screen bg-[#1E1E1E] bg-opacity-60 p-4 backdrop-blur-md">
         <div className=" absolute left-1/2 top-4 z-10 w-[95%] max-w-[600px] -translate-x-1/2 transform lg:top-0 lg:w-full">
           <div className={`m-auto flex w-full justify-between md:my-4`}>

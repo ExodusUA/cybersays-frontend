@@ -78,7 +78,7 @@ function TimeCounterDay({ languageData, hidden, title, left, leftTitle, block, s
               number_referrals: user?.referral_id ? user?.referral_id.length : 0,
             });
           }}
-          to="https://cybersays-legal.vercel.app/contest-terms"
+          to="https://www.cyber-says.club/contest-terms"
           target="_blank"
         >
           {" "}

@@ -169,7 +169,7 @@ function RaffleTickets({ setTourModal, user, PartnerURL, languageData, setWinMod
                       onClick={(e) => {
                         setWinModal(true);
                         mixpanel.track("raffle_rules", {
-                          distinct_id: "not_set",
+                          distinct_id: user?.id,
                           is_referred: user?.referral_id ? "Yes" : "No",
                           vegas_tickets: user?.raffle_tickets,
                           points: user?.points,
@@ -179,7 +179,7 @@ function RaffleTickets({ setTourModal, user, PartnerURL, languageData, setWinMod
                           page_name: "Vegas Weekend",
                         });
                         moengage.track_event("raffle_rules", {
-                          distinct_id: "not_set",
+                          distinct_id: user?.id,
                           is_referred: user?.referral_id ? "Yes" : "No",
                           vegas_tickets: user?.raffle_tickets,
                           points: user?.points,
@@ -318,7 +318,7 @@ function RaffleTickets({ setTourModal, user, PartnerURL, languageData, setWinMod
             onClick={(e) => {
               setWinTicketModal(true);
               mixpanel.track("how_vegas_weekend", {
-                distinct_id: "not_set",
+                distinct_id: user?.id,
                 is_referred: user?.referral_id ? "Yes" : "No",
                 vegas_tickets: user?.raffle_tickets,
                 points: user?.points,
@@ -328,7 +328,7 @@ function RaffleTickets({ setTourModal, user, PartnerURL, languageData, setWinMod
                 page_name: "Vegas Weekend",
               });
               moengage.track_event("how_vegas_weekend", {
-                distinct_id: "not_set",
+                distinct_id: user?.id,
                 is_referred: user?.referral_id ? "Yes" : "No",
                 vegas_tickets: user?.raffle_tickets,
                 points: user?.points,
