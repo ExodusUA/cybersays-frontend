@@ -89,7 +89,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
         try {
           const res = await withdrawPartner();
 
-          mixpanel.track("Withdraw_request", { method: "Partner" });
+          //mixpanel.track("Withdraw_request", { method: "Partner" });
 
           console.log(res.data);
           if (res.data.status === "success") {

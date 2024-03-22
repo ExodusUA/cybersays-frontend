@@ -58,7 +58,7 @@ function VisaFlow({ languageData, setConfirm, setError, user, userCountry }) {
     }
     try {
       const response = await withdrawVisa(fullName, email, citizenshipOption, date, language);
-      mixpanel.track("Withdraw_request", { method: "Visa" });
+      //mixpanel.track("Withdraw_request", { method: "Visa" });
 
       if (response.data === "OTP sended") {
         setStep(2);

@@ -74,7 +74,7 @@ function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, cl
     try {
       const res = await withdrawPartner();
 
-      mixpanel.track("Withdraw_request", { method: "Partner" });
+      //mixpanel.track("Withdraw_request", { method: "Partner" });
 
       console.log(res.data);
       if (res.data.status === "success") {

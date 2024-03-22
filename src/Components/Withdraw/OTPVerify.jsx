@@ -14,7 +14,7 @@ function OTPVerify({ languageData, isVerified, email }) {
 
     const res = await userAPI.verifyOTP(codeNumber, email);
     if (res.data.isValid === true) {
-      mixpanel.track("Withdraw_request", { method: "Xoxoday" });
+      // mixpanel.track("Withdraw_request", { method: "Xoxoday" });
       try {
         const response = await withdrawXoxoday(email);
 
