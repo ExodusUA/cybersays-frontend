@@ -16,14 +16,12 @@ function LeaderboardList({ leaderboardData, languageData, day }) {
 
   const displayedUsers = leaderboardData.slice(0, 10);
 
-  const maskEmail = (email) => {
-    ///mask email like exo*******@gmail.com
-
-    let emailArray = email.split("@");
-    let maskedEmail = emailArray[0].substring(0, 3) + "******@" + emailArray[1];
-
-    return maskedEmail;
-  };
+  function maskEmail(email) {
+    let [username, domain] = email.split("@");
+    let maskedUsername = username.slice(0, 3);
+    let maskedDomain = maskedUsername + "******@*****.***";
+    return maskedDomain;
+  }
 
   return (
     <div className="relative">
