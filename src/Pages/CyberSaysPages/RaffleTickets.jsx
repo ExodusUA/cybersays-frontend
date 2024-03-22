@@ -130,7 +130,7 @@ function RaffleTickets({ setTourModal, user, PartnerURL, languageData, setWinMod
             >
               {isTaskCompleted === false ? (
                 <div className="w-full">
-                  <p className={`  raffleTicketOverBtn saira text-center text-[18px] font-medium mac:!mb-1 se:mb-0 iphone:mb-2 iphone:px-4  md:text-center md:text-[22px]`}>{languageData?.raffleUnderBtn} </p>
+                  <p className={`  raffleTicketOverBtn saira text-center text-[18px] font-medium mac:!mb-1 se:mb-0 iphone:mb-2 iphone:px-4  md:text-center md:text-[22px] ${language !== "en" && "!text-[16px]"}`}>{languageData?.raffleUnderBtn} </p>
                   <div className="flex w-full items-start justify-between ">
                     <div className="w-full text-center">
                       <Link
@@ -210,17 +210,17 @@ function RaffleTickets({ setTourModal, user, PartnerURL, languageData, setWinMod
           {isTaskCompleted === false ? (
             <div className=" z-1  relative text-center mac2:!mt-[-20px] md:mx-0 md:py-2 ">
               <div className="raffleTicketsTitlePX mt-[10px] rounded-[14px] bg-[#EAEAEA] bg-opacity-20 px-1 py-2 backdrop-blur-md md:mt-0 lg:rounded-[24px] lg:px-[60px]">
-                <p className={` raffleTicketsTitle text-[18px] font-semibold  leading-5 md:text-[32px] lg:leading-9`}>{languageData?.raffleTitle1}</p>
+                <p className={` raffleTicketsTitle text-[18px] font-semibold  leading-5 md:text-[32px] lg:leading-9 ${language !== "en" && "!text-[16px]"}`}>{languageData?.raffleTitle1}</p>
                 <div className="flex justify-around sm:justify-center">
                   <p
                     onClick={(e) => setTourModal(true)}
-                    className={`${design === "0" ? "bg-[#FFED63]" : "gradient-tourToggle"} saira mt-2 cursor-pointer rounded-[14px] px-2 py-[2px] text-[12px] font-semibold text-[#1E1E1E] sm:mr-6 lg:px-4 lg:text-[14px]`}
+                    className={`${design === "0" ? "bg-[#FFED63]" : "gradient-tourToggle"} ${language !== "en" && "px-1 !text-[11px] leading-3 mr-1"} saira mt-2 cursor-pointer rounded-[14px] px-2 py-[2px] text-[12px] font-semibold text-[#1E1E1E] sm:mr-6 lg:px-4 lg:text-[14px]`}
                   >
                     {languageData?.raffleSubTitleLink2}
                   </p>
                   <p
                     onClick={(e) => setWinModal(true)}
-                    className={`${design === "0" ? "bg-[#FFED63]" : "gradient-tourToggle"} saira mt-2 cursor-pointer rounded-[14px] px-2 py-[2px] text-[12px] font-semibold text-[#1E1E1E] lg:px-4 lg:text-[14px] `}
+                    className={`${design === "0" ? "bg-[#FFED63]" : "gradient-tourToggle"} ${language !== "en" && "px-1 !text-[11px] leading-3"} saira mt-2 cursor-pointer rounded-[14px] px-2 py-[2px] text-[12px] font-semibold text-[#1E1E1E] lg:px-4 lg:text-[14px] `}
                   >
                     {languageData?.raffleSubTitleLink}
                   </p>

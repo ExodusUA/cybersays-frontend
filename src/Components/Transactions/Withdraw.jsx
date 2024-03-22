@@ -131,6 +131,7 @@ function Withdraw({ user, setOpen, languageData, userCountry }) {
           setOpen={setPromoModal}
           languageData={languageData}
           user={user}
+          userCountry={userCountry}
         />
       )}
 
