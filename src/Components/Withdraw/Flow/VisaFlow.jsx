@@ -52,6 +52,10 @@ function VisaFlow({ languageData, setConfirm, setError, user, userCountry }) {
   }, [isVerified]);
 
   const handleCreateTransaction = async () => {
+    if (user?.earned === 0) {
+      alert("You don't have enough money to withdraw");
+      return;
+    }
     if (withdrawBlocked === true) {
       alert("Withdraw blocked!");
       return;
@@ -73,13 +77,14 @@ function VisaFlow({ languageData, setConfirm, setError, user, userCountry }) {
 
   useEffect(() => {
     if (!user) return;
+
     if (user.visa_id === null) {
       setHasCard(false);
     } else {
       setHasCard(true);
     }
 
-    if (user?.earned < 25 && user?.visa_id === null) {
+    if (user?.earned < 25 && user?.visa_id === 0) {
       setWithdrawBlocked(true);
     }
   }, [user]);
