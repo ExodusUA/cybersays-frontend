@@ -2,7 +2,7 @@ import React from "react";
 import banner from "../../../images/NewDesign/withdraw/Banners/banner1.png";
 import { useState, useEffect } from "react";
 
-function Banner1({ languageData, setPartnerSelected, selectPayment, user, setOpen, setBannerNumber, withdraw, userCountry}) {
+function Banner1({ languageData, setPartnerSelected, selectPayment, user, setOpen, setBannerNumber, withdraw, userCountry }) {
   const [disabled, setDisabled] = useState(true);
   const [countdown, setCountdown] = useState(10);
 
@@ -47,7 +47,6 @@ function Banner1({ languageData, setPartnerSelected, selectPayment, user, setOpe
           onClick={(e) => {
             withdraw();
           }}
-          
           className={`saira w-full  max-w-[370px]  rounded-[12px] border-[2px] text-[18px] font-semibold outline-none ${disabled ? `gradient-homepageBtn border-none py-2 text-[#1E1E1E]` : " border-[2px] border-[#515151] bg-transparent py-3 text-[#7f7f7f]"}`}
         >
           {languageData?.bannerBtn1}

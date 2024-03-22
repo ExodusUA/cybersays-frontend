@@ -42,7 +42,7 @@ function Banner2({ languageData, setPartnerSelected, selectPayment, user, setOpe
     let userPoints = Number(user.points) + 30;
     let rankArray = leaderboardData.todayUsers; //points: string, position: number
 
-    let userRank = rankArray?.filter((user) => Number(user.points) > userPoints);
+    let userRank = rankArray?.filter((user) => Number(user?.points) > userPoints);
     if (userRank === undefined) return;
     setWinningPlace(userRank.length + 1);
   }, [leaderboardData, user]);
