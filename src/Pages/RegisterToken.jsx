@@ -4,6 +4,7 @@ import AuthError from "./Auth/AuthError";
 import { jwtDecode } from "jwt-decode";
 import { processUserRegistration } from "../Requests/auth";
 import { useLanguage } from "../Helpers/Languages/LanguageContext";
+import moengage from "@moengage/web-sdk";
 
 function RegisterToken() {
   const navigate = useNavigate();
@@ -20,6 +21,8 @@ function RegisterToken() {
         const res = await processUserRegistration(urlToken, language);
         if (res.status === 200) {
           window.localStorage.setItem("token", res.data.token);
+          const decoded = jwtDecode(res.data.token);
+          await moengage.add_unique_user_id(decoded.userId);
           navigate("/");
         }
       } catch (error) {

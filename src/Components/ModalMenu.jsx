@@ -835,7 +835,8 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                   {languageData?.logoutConfirmNo}
                 </button>
                 <button
-                  onClick={(e) => {
+                  onClick={async (e) => {
+                    await moengage.destroy_session();
                     window.localStorage.removeItem("token");
                     navigate("/login");
                   }}
