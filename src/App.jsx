@@ -17,6 +17,7 @@ function App() {
     app_id: "GL6LO1GVSQI7L67UCUGV3MRJ",
     debug_logs: 0,
     cluster: "DC_2",
+    enableSPA: true,
   });
 
   /* UTM SAVING */
