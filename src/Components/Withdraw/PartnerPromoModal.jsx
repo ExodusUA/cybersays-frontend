@@ -7,7 +7,7 @@ import Banner3 from "./Banners/Banner3";
 import { withdrawPartner } from "../../Requests/withdraw";
 import mixpanel from "mixpanel-browser";
 
-function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, closeAll, setConfirm, setError, setBannerNumber, bannerNumber }) {
+function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, closeAll, setConfirm, setError, setBannerNumber, bannerNumber, userCountry }) {
   const { design } = useDesign();
 
   const getBannerMarkup = () => {
@@ -20,9 +20,10 @@ function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, cl
             setOpen={setOpen}
             languageData={languageData}
             setPartnerSelected={setPartnerSelected}
-            selectPayment={() => {}}
+            selectPayment={() => { }}
             user={user}
             setBannerNumber={setBannerNumber}
+            userCountry={userCountry}
           />
         );
 
@@ -34,7 +35,7 @@ function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, cl
             setOpen={setOpen}
             languageData={languageData}
             setPartnerSelected={setPartnerSelected}
-            selectPayment={() => {}}
+            selectPayment={() => { }}
             user={user}
             setBannerNumber={setBannerNumber}
           />
@@ -48,7 +49,7 @@ function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, cl
             setOpen={setOpen}
             languageData={languageData}
             setPartnerSelected={setPartnerSelected}
-            selectPayment={() => {}}
+            selectPayment={() => { }}
             user={user}
             setBannerNumber={setBannerNumber}
           />
@@ -62,7 +63,7 @@ function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, cl
             setOpen={setOpen}
             languageData={languageData}
             setPartnerSelected={setPartnerSelected}
-            selectPayment={() => {}}
+            selectPayment={() => { }}
             user={user}
             setBannerNumber={setBannerNumber}
           />

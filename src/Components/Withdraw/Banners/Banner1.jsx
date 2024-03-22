@@ -2,7 +2,7 @@ import React from "react";
 import banner from "../../../images/NewDesign/withdraw/Banners/banner1.png";
 import { useState, useEffect } from "react";
 
-function Banner1({ languageData, setPartnerSelected, selectPayment, user, setOpen, setBannerNumber, withdraw }) {
+function Banner1({ languageData, setPartnerSelected, selectPayment, user, setOpen, setBannerNumber, withdraw, userCountry}) {
   const [disabled, setDisabled] = useState(true);
   const [countdown, setCountdown] = useState(10);
 
@@ -39,7 +39,7 @@ function Banner1({ languageData, setPartnerSelected, selectPayment, user, setOpe
         <p className="saira mt-2 text-center text-[16px] font-medium">{languageData?.banner1text2}</p>
         <p className="saira bannerTextBtn2 my-3 text-center text-[40px] font-extrabold leading-7">{languageData?.banner1text3}</p>
         <p className="saira bannerTextBtn3 mt-2 text-center text-[20px] font-extrabold leading-6">
-          {languageData?.banner1text4} {user?.imlive_username || ""} {languageData?.banner1text4span}
+          {languageData?.banner1text4} {userCountry === "BR" || userCountry === "UA" ? "R$50" : "$10"} {languageData?.banner1text4span2} {user?.imlive_username || ""} {languageData?.banner1text4span}
         </p>
       </div>
       <div className="mt-2 flex justify-center">
