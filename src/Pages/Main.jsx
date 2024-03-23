@@ -162,8 +162,12 @@ function Main({ languageData }) {
     queryFn: async () => {
       const res = await userAPI.getUserData();
       setUserData(res);
-      if (res.id === undefined) return navigate("/login");
-      if (res.first_login === 0) return navigate("/welcome");
+
+      //let params = new URLSearchParams(window.location.search);
+
+      if (res.id === undefined) return navigate(`/login`);
+
+      if (res.first_login === 0) return navigate(`/welcome`);
 
       return res;
     },
@@ -362,6 +366,14 @@ function Main({ languageData }) {
       window.localStorage.setItem("double", "completed");
     }
   }, [userData]);
+
+  useEffect(() => {
+    //remove all params from url
+
+    if (window.location.search !== "") {
+      //window.history.pushState({}, document.title, window.location.pathname);
+    }
+  }, []);
 
   const HomepageSwiper = () => {
     return (

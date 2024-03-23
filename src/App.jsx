@@ -11,6 +11,7 @@ import moengage from "@moengage/web-sdk";
 import Admin from "./Pages/Admin";
 import RegisterToken from "./Pages/RegisterToken";
 import AuthToken from "./Pages/AuthToken";
+import AuthVerify from "./Pages/AuthVerify";
 
 function App() {
   moengage.initialize({
@@ -28,6 +29,12 @@ function App() {
     const utm_campaign = params.get("utm_campaign");
     const utm_term = params.get("utm_term");
     const utm_content = params.get("utm_content");
+
+    const fbclid = params.get("fbclid");
+
+    if (fbclid) {
+      //window.localStorage.setItem("fbclid", fbclid);
+    }
 
     if (utm_source) {
       window.localStorage.setItem("utm_source", utm_source);
@@ -113,6 +120,7 @@ function App() {
             <Route path="/*" element={<Main languageData={languageData} />} />
             <Route path="/welcome/*" element={<Main languageData={languageData} />} />
             <Route path="/login" element={<Auth languageData={languageData} />} />
+            <Route path="/verify-login" element={<AuthVerify languageData={languageData} />} />
             <Route path="/auth/discord/callback" element={<DiscordAuth />} />
             <Route path="/register/*" element={<RegisterToken />} />
             <Route path="/auth/*" element={<AuthToken />} />

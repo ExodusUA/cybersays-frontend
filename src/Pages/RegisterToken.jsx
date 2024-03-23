@@ -23,7 +23,12 @@ function RegisterToken() {
           window.localStorage.setItem("token", res.data.token);
           const decoded = jwtDecode(res.data.token);
           await moengage.add_unique_user_id(decoded.userId);
-          navigate("/");
+
+          let fbc = document.cookie.match(/_fbc=([^;]+)/);
+
+          let queryParams = "";
+
+          navigate(`/${queryParams}`);
         }
       } catch (error) {
         setError(true);

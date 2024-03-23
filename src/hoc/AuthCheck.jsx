@@ -1,20 +1,34 @@
-import { Navigate } from 'react-router-dom';
+import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const AuthCheck = ({ children }) => {
+  const token = localStorage.getItem("token");
+  const navigate = useNavigate();
 
-    const token = localStorage.getItem('token')
+  let params = new URLSearchParams(window.location.search);
+  let email = params.get("email");
 
-    let params = new URLSearchParams(window.location.search);
-    let email = params.get('email');
+  let queryParams = "";
 
-    if (!token) {
-        return <Navigate to={`${email === null ? '/login' : '/login?email=' + email}`} />
-    } else {
+  let fbc = document.cookie.match(/_fbc=([^;]+)/);
+  let fbp = document.cookie.match(/_fbp=([^;]+)/);
 
-        //const decoded = jwtDecode(token)
+  let fbclid = params.get("fbclid");
+
+  if (fbclid !== null && !queryParams.includes("fbclid")) {
+    queryParams = `?fbclid=${fbclid}`;
+
+    if (fbc) {
+      queryParams += `&fbclid=${fbc[1].split(".")[0]}`;
     }
+  }
 
-    return <>{children}</>
+  if (!token) {
+    return <Navigate to={`${email === null ? `/login?${queryParams}` : "/login?email=" + email}${queryParams}`} />;
+  } else {
+    //const decoded = jwtDecode(token)
+  }
 
-}
-export default AuthCheck
+  return <>{children}</>;
+};
+export default AuthCheck;

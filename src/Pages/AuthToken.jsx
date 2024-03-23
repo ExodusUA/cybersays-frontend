@@ -20,7 +20,13 @@ function AuthToken() {
         if (decoded.userId) {
           window.localStorage.setItem("token", urlToken);
           await moengage.add_unique_user_id(decoded.userId);
-          navigate("/");
+
+          let fbc = document.cookie.match(/_fbc=([^;]+)/);
+
+          let queryParams = "";
+          if (fbc) queryParams += `?fbclid=${fbc.split(".")[1]}`;
+
+          navigate(`/${queryParams}`);
         }
       } catch (error) {
         setError(true);

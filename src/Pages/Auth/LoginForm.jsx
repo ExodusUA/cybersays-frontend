@@ -107,11 +107,13 @@ function LoginForm({ languageData, referralID }) {
 
       await handleMixpanelEvent(true, "email");
 
-      setActiveModal("notification");
+      //setActiveModal("notification");
+      navigate("/verify-login");
       setLoading(false);
     } catch (error) {
       handleMixpanelEvent(false, "email");
       setLoading(false);
+      console.log(error);
       alert("Error: ", error.message);
     }
   };
