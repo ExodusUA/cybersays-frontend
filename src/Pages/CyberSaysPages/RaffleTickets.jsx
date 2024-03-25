@@ -130,7 +130,11 @@ function RaffleTickets({ setTourModal, user, PartnerURL, languageData, setWinMod
             >
               {isTaskCompleted === false ? (
                 <div className="w-full">
-                  <p className={`  raffleTicketOverBtn saira text-center ${language !== "en" && "!text-[14px] iphone:!text-[16px] leading-5"} text-[18px] font-medium mac:!mb-1 se:mb-0 iphone:mb-2 iphone:px-4  md:text-center md:!text-[22px] `}>{languageData?.raffleUnderBtn} </p>
+                  <p
+                    className={`  raffleTicketOverBtn saira text-center ${language !== "en" && "!text-[14px] leading-5 iphone:!text-[16px]"} text-[18px] font-medium mac:!mb-1 se:mb-0 iphone:mb-2 iphone:px-4  md:text-center md:!text-[22px] `}
+                  >
+                    {languageData?.raffleUnderBtn}{" "}
+                  </p>
                   <div className="flex w-full items-start justify-between ">
                     <div className="w-full text-center">
                       <Link
@@ -214,7 +218,7 @@ function RaffleTickets({ setTourModal, user, PartnerURL, languageData, setWinMod
                 <div className="flex justify-around sm:justify-center">
                   <p
                     onClick={(e) => setTourModal(true)}
-                    className={`${design === "0" ? "bg-[#FFED63]" : "gradient-tourToggle"} ${language !== "en" && "px-1 text-[11px] leading-3 mr-1"} saira mt-2 cursor-pointer rounded-[14px] px-2 py-[4px] text-[12px] font-semibold text-[#1E1E1E] sm:mr-6 lg:px-4 lg:text-[14px]`}
+                    className={`${design === "0" ? "bg-[#FFED63]" : "gradient-tourToggle"} ${language !== "en" && "mr-1 px-1 text-[11px] leading-3"} saira mt-2 cursor-pointer rounded-[14px] px-2 py-[4px] text-[12px] font-semibold text-[#1E1E1E] sm:mr-6 lg:px-4 lg:text-[14px]`}
                   >
                     {languageData?.raffleSubTitleLink2}
                   </p>
@@ -349,7 +353,7 @@ function RaffleTickets({ setTourModal, user, PartnerURL, languageData, setWinMod
                     <span onClick={e => setWinModal(true)} className={`saira  underline ml-2 ${design === '0' ? 'text-[#FFED63]' : 'gradient-link'}`}>{languageData?.raffleRulesLink}</span>
                 </p>
                 */}
-        <div className="absolute left-1/2 m-auto flex w-full -translate-x-1/2 transform justify-center  se:bottom-[140px] iphone:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] ">
+        <div className="absolute left-1/2 m-auto flex w-full -translate-x-1/2 transform justify-center  se:bottom-[140px] iphone2:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] ">
           <TimeCounter setWinModal={setWinModal} left={"m-auto"} leftTitle={"text-center"} title={languageData?.timeCounterTitle} languageData={languageData} block={"block"} />
         </div>
       </div>
