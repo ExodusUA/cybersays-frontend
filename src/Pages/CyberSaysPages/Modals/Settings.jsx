@@ -20,11 +20,6 @@ function Settings({ user, setOpen, languageData }) {
 
   const [isSended, setIsSended] = useState(false);
 
-  const handleSend = () => {
-    if (email === "" || username === "") return alert("Please fill all fields");
-    setIsSended(true);
-  };
-
   const [checkmark, setCheckmark] = useState(true);
 
   const [deleteStep, setDeleteStep] = useState(0);
@@ -33,9 +28,28 @@ function Settings({ user, setOpen, languageData }) {
 
   const deleteAccountHandler = async () => {
     try {
-      await userAPI.deleteUser();
+      console.log(user);
+      await userAPI.deleteUser(user.id);
       localStorage.removeItem("token");
       navigate("/login");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const changeUserData = async () => {
+    if (email === "") return alert("Please fill all fields");
+    if (email.indexOf("@") === -1 || email.indexOf(".") === -1) return alert("Please enter a valid email");
+    try {
+      const res = await userAPI.changeUserData(username, email, user.id);
+      if (res.data.isUpdated === true) {
+        setIsSended(true);
+        setTimeout(() => {
+          setIsSended(false);
+        }, 3000);
+      } else {
+        alert("An error occured");
+      }
     } catch (error) {
       console.log(error);
     }
@@ -85,7 +99,7 @@ function Settings({ user, setOpen, languageData }) {
               <div className="flex justify-center">
                 <button
                   className={`w-full bg-[white] ${design === "0" ? "  rounded-[18px] border-[2px] bg-white text-[#5f5f5f]" : " gradient-homepageBtn rounded-[12px] border-none text-black"} saira mt-4 max-w-[350px] p-2 px-6 py-3   font-semibold`}
-                  onClick={(e) => handleSend()}
+                  onClick={(e) => changeUserData()}
                 >
                   {isSended ? languageData?.settingsBtnDone : languageData?.settingsBtn}
                 </button>
@@ -107,7 +121,7 @@ function Settings({ user, setOpen, languageData }) {
                 onClick={(e) => setDeleteStep(2)}
                 className={`w-full bg-[white]  ${design === "0" ? "  rounded-[18px]  bg-white text-[#5f5f5f]" : " gradient-homepageBtn rounded-[12px] border-none text-black"} saira mt-4 max-w-[350px] rounded-[50px] p-2 px-6 py-3 text-[18px] font-semibold text-[#5f5f5f]`}
               >
-                {languageData?.authContinue}
+                Continue
               </button>
             </div>
           ) : deleteStep === 2 ? (

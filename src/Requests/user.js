@@ -21,12 +21,9 @@ async function getUserData() {
 
 /* DELETE USER */
 
-async function deleteUser() {
+async function deleteUser(userID) {
 
-    let token = getToken();
-    let decodedToken = jwtDecode(token);
-
-    const response = await axios.delete(process.env.REACT_APP_API_URL + '/api/v1/user/delete/' + decodedToken.id, {
+    const response = await axios.delete(process.env.REACT_APP_API_URL + '/api/v1/user/delete/' + userID, {
         headers: {
             token: `${getToken()}`
         }
@@ -223,5 +220,14 @@ async function messageInfluencer(email, fields) {
     return response;
 }
 
+async function changeUserData(newUsername, newEmail, userId) {
+    const response = await axios.post(process.env.REACT_APP_API_URL + '/api/v1/user/updateUserData', { userId, newEmail, newUsername }, {
+        headers: {
+            token: `${getToken()}`
+        }
+    });
+    return response;
 
-export default { processPixWithdraw, getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTickets, getPoints, sendEmail, getModeratorData, getPDF, generateOTP, verifyOTP, createPixWithdraw, createTicket, uploadAttachment, messageCollaborate, messageInfluencer };
+}
+
+export default { processPixWithdraw, getUserData, deleteUser, changePaymentType, updateUserAvatar, getReferralsList, getTransactions, getTickets, getPoints, sendEmail, getModeratorData, getPDF, generateOTP, verifyOTP, createPixWithdraw, createTicket, uploadAttachment, messageCollaborate, messageInfluencer, changeUserData };
