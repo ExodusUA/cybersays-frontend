@@ -38,8 +38,8 @@ function LeaderboardModal({ setOpen, leaderboardData, loading, languageData, use
           <div className="m-auto flex max-w-[380px] justify-between rounded-[12px] bg-[#EAEAEA]  bg-opacity-20 p-1 px-1 backdrop-blur-md md:max-w-[100%]">
             <div className=" m-auto text-left leading-4">
               <p className="gradient-linkDouble saira text-[14px] font-bold lg:text-[18px]">
-                {languageData?.leaderSheetYou} <span className="saira text-[14px] font-bold lg:text-[18px]"> #{leaderboardData?.userRankData?.position || 0},</span> {languageData?.leaderSheetPoints}{" "}
-                <span className="saira text-[14px] font-bold lg:text-[18px]">{Number(user?.points).toFixed(0)}</span>
+                {languageData?.leaderSheetYou} <span className="saira text-[14px] font-bold lg:text-[18px]"> #{user?.points == 0 ? 0 : leaderboardData?.userRankData?.user_rank || 0},</span>{" "}
+                {languageData?.leaderSheetPoints} <span className="saira text-[14px] font-bold lg:text-[18px]">{Number(user?.points).toFixed(0)}</span>
               </p>
             </div>
           </div>

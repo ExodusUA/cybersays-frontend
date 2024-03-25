@@ -97,7 +97,7 @@ function Competition({ PartnerURL, user, setLeaderboardModal, loading, setLoadin
                   {languageData?.leaderSheetYou}{" "}
                   <span className="saira text-[12px]  font-bold">
                     {" "}
-                    <span className="saira competitionPlaceBG ml-1 mr-[20px] rounded-[8px] border-[2px] border-[#FCBC1B] px-2 text-[12px]">#{leaderboardData?.userRankData?.position || 0}</span>
+                    <span className="saira competitionPlaceBG ml-1 mr-[20px] rounded-[8px] border-[2px] border-[#FCBC1B] px-2 text-[12px]">#{user?.points == 0 ? 0 : leaderboardData?.userRankData?.user_rank || 0}</span>
                   </span>{" "}
                   {languageData?.leaderSheetPoints} <span className="saira competitionPlaceBG ml-1 rounded-[8px] border-[2px] border-[#FCBC1B] px-2 text-[12px]">{Number(user?.points).toFixed(0)}</span>
                 </p>

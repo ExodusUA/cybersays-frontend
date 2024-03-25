@@ -1,5 +1,5 @@
 import React from "react";
-import { changeTransactionStatusD24, changeXoxodayStatus, changePartnerStatus, processVisaWithdraw } from "../../Requests/admin";
+import { changeTransactionStatusD24, changeXoxodayStatus, changePartnerStatus, processVisaWithdraw, processPaxumWithdraw } from "../../Requests/admin";
 import userAPI from "../../Requests/user";
 import { toast } from "react-toastify";
 
@@ -54,6 +54,16 @@ function TableRow({ transaction, invalidateQueries, index }) {
     //invalidateQueries();
   };
 
+  const transactionStatusPaxum = async (id, status) => {
+    try {
+      const res = await processPaxumWithdraw(id, status);
+      toast.success("Transaction status changed successfully");
+    } catch (error) {
+      toast.error("Error changing transaction status");
+    }
+    //invalidateQueries();
+  };
+
   const getStatusName = (status) => {
     switch (status) {
       case 1:
@@ -94,7 +104,9 @@ function TableRow({ transaction, invalidateQueries, index }) {
                       ? transactionStatusPartner(transaction.id, 3)
                       : transaction.type === "Visa"
                         ? transactionStatusVisa(transaction.id, 3)
-                        : transactionStatusD24(transaction.id, 3);
+                        : transaction.type === "Paxum"
+                          ? transactionStatusPaxum(transaction.id, 3)
+                          : transactionStatusD24(transaction.id, 3);
               }}
               class="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
             >
@@ -110,7 +122,9 @@ function TableRow({ transaction, invalidateQueries, index }) {
                       ? transactionStatusPartner(transaction.id, 4)
                       : transaction.type === "Visa"
                         ? transactionStatusVisa(transaction.id, 4)
-                        : transactionStatusD24(transaction.id, 4);
+                        : transaction.type === "Paxum"
+                          ? transactionStatusPaxum(transaction.id, 4)
+                          : transactionStatusD24(transaction.id, 4);
               }}
               class="ml-2 rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
             >

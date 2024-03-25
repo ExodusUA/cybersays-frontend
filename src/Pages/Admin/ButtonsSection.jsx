@@ -27,6 +27,12 @@ function ButtonsSection({ selectedType, setSelectedType, handleSearch }) {
         >
           Partner
         </button>
+        <button
+          onClick={(e) => setSelectedType("Paxum")}
+          className={`rounded border-2 border-transparent bg-blue-500 px-4 py-2 font-bold text-white duration-300 hover:bg-blue-700 ${selectedType === "Paxum" && selected}`}
+        >
+          Paxum
+        </button>
       </div>
       <div className="mb-4">
         <input onChange={(e) => handleSearch(e.target.value)} type="text" placeholder="Search by email or id" className="saira w-full rounded border-2 border-blue-500 px-4 py-2 text-black/70" />

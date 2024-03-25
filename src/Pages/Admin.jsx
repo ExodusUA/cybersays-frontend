@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import HeaderProfile from "../Components/HeaderProfile";
 import TableComponent from "./Admin/Table";
-import { getTransactions, getTransactionsD24, getXoxodayTransaction, getPartnerTransactions, getVisaTransactions } from "../Requests/admin";
+import { getTransactions, getTransactionsD24, getXoxodayTransaction, getPartnerTransactions, getVisaTransactions, getPaxumTransactions } from "../Requests/admin";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -25,6 +25,8 @@ function Admin() {
       fetchPartnerTransactions();
     } else if (selectedType === "Visa") {
       fetchVisaTransactions();
+    } else if (selectedType === "Paxum") {
+      fetchPaxumTransactions();
     }
   }, [selectedType]);
 
@@ -93,6 +95,18 @@ function Admin() {
     });
   };
 
+  const fetchPaxumTransactions = async () => {
+    const res = await getPaxumTransactions();
+    res.data = res.data.map((transaction) => {
+      transaction.type = "Paxum";
+      return transaction;
+    });
+
+    setTransactions((prev) => {
+      return [...prev, ...res.data];
+    });
+  };
+
   const handleSearch = (text) => {
     if (text === "") {
       if (selectedType === "RoyalPag") {
@@ -105,6 +119,8 @@ function Admin() {
         fetchPartnerTransactions();
       } else if (selectedType === "Visa") {
         fetchVisaTransactions();
+      } else if (selectedType === "Paxum") {
+        fetchPaxumTransactions();
       }
       return;
     }

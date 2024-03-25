@@ -101,4 +101,25 @@ async function processVisaWithdraw(id, status) {
   return res
 }
 
-export { getTransactions, changeTransactionStatusD24, getTransactionsD24, getXoxodayTransaction, changeXoxodayStatus, getPartnerTransactions, changePartnerStatus, getVisaTransactions, processVisaWithdraw };
+async function getPaxumTransactions() {
+  const res = await axios.get(process.env.REACT_APP_API_URL + "/api/v1/user/getPaxumWithdrawRecords", {
+    headers: {
+      token: `${getToken()}`,
+    },
+  })
+  return res
+}
+
+async function processPaxumWithdraw(id, status) {
+  const res = await axios.post(process.env.REACT_APP_API_URL + "/api/v1/user/processPaxumWithdraw", {
+    id,
+    status,
+  }, {
+    headers: {
+      token: `${getToken()}`,
+    },
+  })
+  return res
+}
+
+export { getTransactions, changeTransactionStatusD24, getTransactionsD24, getXoxodayTransaction, changeXoxodayStatus, getPartnerTransactions, changePartnerStatus, getVisaTransactions, processVisaWithdraw, getPaxumTransactions, processPaxumWithdraw };

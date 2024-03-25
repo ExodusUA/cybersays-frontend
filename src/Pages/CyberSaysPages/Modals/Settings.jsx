@@ -70,13 +70,17 @@ function Settings({ user, setOpen, languageData }) {
               My User ID: <span className="font-regular saira">{user.id}</span>
             </p>
             <div className="mt-4">
-              <p className="saira text-[14px] text-white">{languageData?.settingsUserName}</p>
+              <>
+                {/*
+               <p className="saira text-[14px] text-white">{languageData?.settingsUserName}</p>
               <input
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 className={`w-full border bg-white ${design === "0" ? "rounded-[18px] border-[#FFED63]" : "rounded-[12px] border-[#A2DBF0]"}  saira input-fix mt-1 px-6 py-3 text-[#888888]`}
                 placeholder="Username"
               />
+              */}
+              </>
 
               <p className="saira mt-6 text-[14px] text-white">{languageData?.settingsUserEmail}</p>
               <input
