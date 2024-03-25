@@ -709,7 +709,7 @@
   "banner1text4": "Get 12 credits as 38%+ value on your ",
   "banner1text4span2": "and return to",
   "banner1text4span": "now",
-  "banner2text1": "Earn 6.90$ instead of 5$",
+  "banner2text1": "Make more money winning the fabulous 69$ daily competitin now",
   "banner2text2": "WIN-WIN",
   "banner2text3": "Take the credits, get 30 competition points, become",
   "banner2text3span": "at the daily competition and earn 6.90$ finishing at the top 10!",
@@ -718,5 +718,10 @@
   "banner3text3": "Zoom through vegas in a Cadillac with two hot stars. Experience the glitz and glomour with two of yout best friends. Enjoy dinner + Nightclub with your new hot star friends!",
   "banner3text4": "You can have +5 tickets",
   "withdrawBannerMessage2": "wait! You can’t finish the job… or can you? 🙄",
-  "noTransactionsToday": "No ha realizado ninguna transacción hoy"
+  "noTransactionsToday": "No ha realizado ninguna transacción hoy",
+
+  "banner1offer": "(credits) credits for your (money) to get back to",
+  "banner1offerSpan": "! BEST VALUE",
+  "banner2winner": "By getting the credits you immediately get 30 points for today’s competition result that will entitle you place",
+  "banner2winnerSpan": "worth Y."
 }

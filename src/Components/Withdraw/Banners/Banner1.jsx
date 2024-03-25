@@ -1,5 +1,6 @@
 import React from "react";
 import banner from "../../../images/NewDesign/withdraw/Banners/banner1.png";
+import offer from "../../../images/NewDesign/withdraw/bestOffer.png";
 import { useState, useEffect } from "react";
 
 function Banner1({ languageData, setPartnerSelected, selectPayment, user, setOpen, setBannerNumber, withdraw, userCountry }) {
@@ -38,9 +39,13 @@ function Banner1({ languageData, setPartnerSelected, selectPayment, user, setOpe
         />
         <p className="saira mt-2 text-center text-[16px] font-medium">{languageData?.banner1text2}</p>
         <p className="saira bannerTextBtn2 my-3 text-center text-[40px] font-extrabold leading-7">{languageData?.banner1text3}</p>
-        <p className="saira bannerTextBtn3 mt-2 text-center text-[20px] font-extrabold leading-6">
+        {/*<p className="saira bannerTextBtn3 mt-2 text-center text-[20px] font-extrabold leading-6">
           {languageData?.banner1text4} {userCountry === "BR" || userCountry === "UA" ? "R$50" : "$10"} {languageData?.banner1text4span2} {user?.imlive_username || ""} {languageData?.banner1text4span}
-        </p>
+        </p>*/}
+        <div className="relative">
+          <img className="w-full max-w-[345px] rounded-xl sm:max-w-[370px]" src={offer} alt="offer" />
+          <p className="saira bannerTextBtn3 mt-2 text-center text-[18px] lg:text-[19px] font-extrabold leading-6 absolute top-[5px] px-2">{languageData?.banner1offer} {user?.imlive_username || ""}{languageData?.banner1offerSpan}</p>
+        </div>
       </div>
       <div className="mt-2 flex justify-center">
         <button

@@ -55,6 +55,7 @@ module.exports = {
       'new-homepage-des': "url('./images/NewDesign/Bg/homepage_des.png')",
       'new-bg-promo': "url('./images/NewDesign/bgPromo.png')",
       'new-bg-promo-des': "url('./images/NewDesign/Bg/promo_des.png')",
+      'best-offer': "url('./images/NewDesign/withdraw/bestOffer.png')",
     })
   },
   plugins: [],

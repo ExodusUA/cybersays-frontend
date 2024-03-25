@@ -61,16 +61,23 @@ function Banner2({ languageData, setPartnerSelected, selectPayment, user, setOpe
           onClick={(e) => {
             setPartnerSelected(true);
           }}
-          className=" relative z-10 m-auto min-h-full w-full max-w-[230px] sm:max-w-[250px]"
+          className=" relative z-10 m-auto min-h-full w-full"
           src={banner}
           alt="banner"
         />
+        {/*
         <p className="saira bannerTextBtn4 mt-3 flex items-center justify-center text-center text-[20px] font-extrabold leading-5">
           {languageData?.banner2text2} <span className="text-[20px]">🤴</span>
         </p>
+
         <p className="saira bannerTextBtn3 text-center text-[20px]  font-extrabold leading-5">
           {languageData?.banner2text3} (#{winningPlace}) {languageData?.banner2text3span}
         </p>
+        */}
+        <p className="saira bannerTextBtn3 text-center text-[20px]  font-extrabold leading-5 mt-2">
+          {languageData?.banner2winner} (#{winningPlace}) {languageData?.banner2winnerSpan}
+        </p>
+        
       </div>
       <div className="mt-2 flex justify-center">
         <button
