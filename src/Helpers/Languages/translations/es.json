@@ -718,5 +718,10 @@
   "banner3text4": "Puedes tener +5 entradas",
   "withdrawBannerMessage2": "espere! No puedes terminar el trabajo... ¿o sí? 🙄",
   "visaFlowSubTitle2": "en este tipo de pago",
-  "noTransactionsToday": "No ha realizado ninguna transacción hoy"
+  "noTransactionsToday": "No ha realizado ninguna transacción hoy",
+
+  "banner1offer": "(credits) credits for your (money) to get back to",
+  "banner1offerSpan": "! BEST VALUE",
+  "banner2winner": "By getting the credits you immediately get 30 points for today’s competition result that will entitle you place",
+  "banner2winnerSpan": "worth Y."
 }
