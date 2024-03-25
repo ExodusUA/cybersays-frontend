@@ -30,18 +30,18 @@
           "taskText": "Disfruta del socio, se tratado como un REY 👑, ¡y cumple tus fantasías!"
         }
       ],
-      "taskButton": "¡1/3: Regístrese en el site de nuestro socio 🎉"
+      "taskButton": "1/3 Comienza ahora 🎉"
     },
     "task2": {
       "taskTitle": "Depositar",
-      "taskTitleOpen": "Bienvenida real de nuestro socio: compre US$5 y reciba 10 créditos",
+      "taskTitleOpen": "Bienvenida real de nuestro socio: deposita $5 y siente el placer.",
       "taskBlocks": [
         {
           "taskImage": "images/bg-mobile-Task2.png",
           "newTaskImage": "images/newTask/bg_task2.png",
           "taskImageDesk": "images/BgTaskDesk2.png",
           "newTaskImageDesk": "images/BgNewTaskDesk2.png",
-          "taskText": "Deposita $5, nuestro socio duplicará los créditos. ¡CyberSays duplicará los dólares!"
+          "taskText": "Deposita $5 en nuestro socio, iy CyberSays duplicará el dinero!"
         }
       ],
       "taskButton": "2/3: Depósito de US$ 5, 10 créditos 💸"
@@ -55,7 +55,7 @@
           "newTaskImage": "images/newTask/bg_task3.png",
           "taskImageDesk": "images/BgTaskDesk3.png",
           "newTaskImageDesk": "images/BgNewTaskDesk3.png",
-          "taskText": "Gasta tus 10 créditos en nuestro socio, recibe el trato de la realeza y obtén $10 en efectivo al terminar."
+          "taskText": "Gasta tus 5 créditos en el socio, sé tratado como un rey y gana $10 en CyberSays."
         }
       ],
       "taskButton": "3/3: ¡Gasta todos los créditos y te devuelvo 10 $!"
@@ -307,7 +307,7 @@
     {
       "question": "¿Cuáles son los requisitos para calificar para el reembolso instantáneo de $10?",
       "answers": [
-        "Sólo tienes que registrarte en nuestro socio, depositar 5 $ para recibir 10 $ en créditos, gastar esos créditos y recibirás además 10 $ de devolución en efectivo al instante."
+        "Sólo tienes que registrarte en nuestro socio, depositar $5 para recibir $5 in credits, gastar esos créditos y recibirás además 10 $ de devolución en efectivo al instante."
       ]
     },
     {
@@ -482,7 +482,7 @@
   "winTicketLiTitle": "Únase a la promoción CyberSays en nuestro socio:",
   "winTicketLi1": "Crea una cuenta nueva o utiliza una existente.",
   "winTicketLi2": "Haz una compra mínima de cinco créditos para ganar cinco más.",
-  "winTicketLi3": "Gaste la totalidad de los diez (10) créditos recibidos en nuestro socio.",
+  "winTicketLi3": "Gasta los cinco (5) créditos recibidos en nuestro socio.",
   "winTicketBtn": "Ir a la página Duplica Tu Dinero",
   "winTicketEnd": "¡Buena suerte!",
   "winTicketLink": "Ir a los términos completos de la Promoción Vegas",
@@ -529,7 +529,7 @@
   "doubleCompleteTitleSpan": "¡Buzón de entrada!",
   "doubleCompleteSubTitle": "Sé el rey de tus amigos recomendándolos a CyberSays y te lo agradecerán por siempre... 👑",
   "doubleCompleteBtn": "Compartir",
-  "doubleTaskBtn1": "1/3: Regístrese en el site de nuestro socio 🎉",
+  "doubleTaskBtn1": "1/3 Comienza ahora 🎉",
   "doubleTaskBtn2": "2/3: Deposita $5, obtén 10 créditos 💸",
   "doubleTaskBtn3": "3/3: Gasta todos los créditos, obtén $10 de regreso 🤑",
   "referralShareBtn1": "¡Comparta el enlace de referencia!",
