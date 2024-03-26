@@ -44,8 +44,13 @@ function Banner1({ languageData, setPartnerSelected, selectPayment, user, setOpe
         </p>*/}
         <div className="relative">
           <img className="w-full max-w-[345px] rounded-xl sm:max-w-[370px]" src={offer} alt="offer" />
-          <p className="saira bannerTextBtn3 mt-2 text-center text-[18px] lg:text-[19px] font-extrabold leading-6 absolute top-[5px] px-2">
-            0 {languageData?.banner1offer} 0 {languageData?.banner1offer2} {user?.imlive_username || ""}{languageData?.banner1offerSpan}</p>
+          <p className="saira bannerTextBtn3 absolute top-[5px] mt-2 px-2 text-center text-[18px] font-extrabold leading-6 lg:text-[19px]">
+            {user?.earned + " "}
+            {languageData?.banner1offer}
+            {userCountry === "BR" || userCountry === "UA" ? "R$" + user?.earned * 5 + " " : "$" + user?.earned + " "}
+            {languageData?.banner1offer2} {user?.imlive_username || ""}
+            {languageData?.banner1offerSpan}
+          </p>
         </div>
       </div>
       <div className="mt-2 flex justify-center">
