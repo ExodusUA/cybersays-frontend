@@ -714,20 +714,23 @@
   "banner2text3": "Take the credits, get 30 competition points, become",
   "banner2text3span": "at the daily competition and earn 6.90$ finishing at the top 10!",
   "banner3text1": "Vegas Promotion",
-  "banner3text2": "You have 0 Vegas tickets now. Boost your $50R by 38% to gain 12 credits AND 5 tickets for a chance to win the Vegas Promotion!",
-  "banner3text3": "Zoom through vegas in a Cadillac with two hot stars. Experience the glitz and glomour with two of yout best friends. Enjoy dinner + Nightclub with your new hot star friends!",
+  "banner3text2": "Boost your $50R by 38% to gain 12 credits and 5 Vegas tickets for a chance to win the Vegas Promotion",
+  "banner3text3": "Experience Vegas glam in a Cadillac with two stars and your best friends. Enjoy dinner and a nightclub parting with them!",
   "banner3text4": "You can have +5 tickets",
+  
   "withdrawBannerMessage2": "wait! You can’t finish the job… or can you? 🙄",
   "noTransactionsToday": "No ha realizado ninguna transacción hoy",
 
   "banner1offer": "credits for your ",
   "banner1offer2": "to get back to",
   "banner1offerSpan": "! BEST VALUE",
-  "banner2winner": "By purchasing credits, you instantly receive 30 points for today's competition, which qualifies you for the top spot",
-  "banner2winnerSpan": ", valued at $69.",
+  "banner2winner": "By taking the credits you immediately get 30 points for today’s competition result that will entitle you place",
+  "banner2winnerSpan": ", worth $Y.",
   "homepageNewTitle1": "Experience HOT LIVE action while:",
   "homepageNewTitle2": "1. Doubling your money",
   "homepageNewTitle3": "2. Winning $69 in the daily competition ",
-  "homepageNewTitle4": "3. Getting a chance at Vegas promotion"
+  "homepageNewTitle4": "3. Getting a chance at Vegas promotion",
 
+  "banner3text5Span": "You have:",
+  "banner3text5": "tickets"
 }

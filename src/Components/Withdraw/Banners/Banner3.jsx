@@ -38,7 +38,8 @@ function Banner3({ languageData, setPartnerSelected, selectPayment, user, setOpe
         />
 
         <p className="saira mt-4 text-center text-[12px] font-semibold leading-[14px]">{languageData?.banner3text3}</p>
-        <p className="bannerTextBtn2 text-center text-[22px] font-semibold sm:text-[26px]">{languageData?.banner3text4}</p>
+        <p className="bannerTextBtn2 text-center text-[22px] font-semibold sm:text-[26px]">{languageData?.banner3text5Span} # {languageData?.banner3text5}</p>
+        <p className="bannerTextBtn2 text-center text-[22px] font-semibold sm:text-[26px] leading-5">{languageData?.banner3text4}</p>
       </div>
       <div className="mt-2 flex justify-center lg:mt-8">
         <button

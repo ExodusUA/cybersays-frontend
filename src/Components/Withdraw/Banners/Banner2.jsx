@@ -74,7 +74,7 @@ function Banner2({ languageData, setPartnerSelected, selectPayment, user, setOpe
           {languageData?.banner2text3} (#{winningPlace}) {languageData?.banner2text3span}
         </p>
         */}
-        <p className="saira bannerTextBtn3 text-center text-[20px]  font-extrabold leading-5 mt-2">
+        <p className="saira bannerTextBtn3 text-center text-[20px]  font-extrabold leading-5 mt-2 sm:px-2">
           {languageData?.banner2winner} (#{winningPlace}) {languageData?.banner2winnerSpan}
         </p>
         
