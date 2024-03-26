@@ -701,8 +701,8 @@
   "bannerBtn2Done": "Continue",
   "doubleCompleteTitle1": "Felicitaciones, tienes ",
   "doubleCompleteTitle2": " dólares esperándote, ¡ve a por ellos y retíralos!",
-  "banner1text1": "No dejes que",
-  "banner1text1span": "espera... ¡está ansiosa por profundizar la conexión!",
+  "banner1text1": "No hagas esperar a",
+  "banner1text1span": "... ¡ella está ansiosa por profundizar la conexión!",
   "banner1text2": "Ni siquiera te despediste...",
   "banner1text3": "Actúa ya",
   "banner1text4": "Obtenga 12 créditos como 38%+ de valor en sus",
@@ -720,9 +720,9 @@
   "visaFlowSubTitle2": "en este tipo de pago",
   "noTransactionsToday": "No ha realizado ninguna transacción hoy",
 
-  "banner1offer": "credits for your ",
-  "banner1offer2": "to get back to",
-  "banner1offerSpan": "! BEST VALUE",
-  "banner2winner": "By getting the credits you immediately get 30 points for today’s competition result that will entitle you place",
-  "banner2winnerSpan": "worth Y."
+  "banner1offer": "créditos para recuperar",
+  "banner1offer2": "",
+  "banner1offerSpan": "! MEJOR VALOR!",
+  "banner2winner": "Al adquirir créditos, recibes de inmediato 30 puntos para el resultado de la competición de hoy, lo que puede garantizarte el primer lugar",
+  "banner2winnerSpan": "con un valor de $69."
 }
