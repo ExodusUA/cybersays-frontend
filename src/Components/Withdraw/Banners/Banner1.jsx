@@ -37,7 +37,7 @@ function Banner1({ languageData, setPartnerSelected, selectPayment, user, setOpe
           src={user?.imlive_image || banner}
           alt="banner"
         />
-        <p className="saira mt-2 text-center text-[16px] font-medium">{languageData?.banner1text2}</p>
+        <p className="saira mt-2 text-center text-[16px] font-medium">"{languageData?.banner1text2}"</p>
         <p className="saira bannerTextBtn2 my-3 text-center text-[40px] font-extrabold leading-7">{languageData?.banner1text3}</p>
         {/*<p className="saira bannerTextBtn3 mt-2 text-center text-[20px] font-extrabold leading-6">
           {languageData?.banner1text4} {userCountry === "BR" || userCountry === "UA" ? "R$50" : "$10"} {languageData?.banner1text4span2} {user?.imlive_username || ""} {languageData?.banner1text4span}

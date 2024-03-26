@@ -20,7 +20,7 @@ function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, cl
             setOpen={setOpen}
             languageData={languageData}
             setPartnerSelected={setPartnerSelected}
-            selectPayment={() => { }}
+            selectPayment={() => {}}
             user={user}
             setBannerNumber={setBannerNumber}
             userCountry={userCountry}
@@ -35,8 +35,9 @@ function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, cl
             setOpen={setOpen}
             languageData={languageData}
             setPartnerSelected={setPartnerSelected}
-            selectPayment={() => { }}
+            selectPayment={() => {}}
             user={user}
+            userCountry={userCountry}
             setBannerNumber={setBannerNumber}
           />
         );
@@ -49,8 +50,9 @@ function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, cl
             setOpen={setOpen}
             languageData={languageData}
             setPartnerSelected={setPartnerSelected}
-            selectPayment={() => { }}
+            selectPayment={() => {}}
             user={user}
+            userCountry={userCountry}
             setBannerNumber={setBannerNumber}
           />
         );
@@ -63,8 +65,9 @@ function PartnerPromoModal({ setOpen, languageData, setPartnerSelected, user, cl
             setOpen={setOpen}
             languageData={languageData}
             setPartnerSelected={setPartnerSelected}
-            selectPayment={() => { }}
+            selectPayment={() => {}}
             user={user}
+            userCountry={userCountry}
             setBannerNumber={setBannerNumber}
           />
         );

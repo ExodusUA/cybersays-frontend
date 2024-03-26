@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import banner from "../../../images/NewDesign/withdraw/Banners/banner2.png";
 import infoAPI from "../../../Requests/info";
 
-function Banner2({ languageData, setPartnerSelected, selectPayment, user, setOpen, setBannerNumber, withdraw }) {
+function Banner2({ languageData, setPartnerSelected, selectPayment, user, setOpen, setBannerNumber, withdraw, userCountry }) {
   const [disabled, setDisabled] = useState(true);
   const [countdown, setCountdown] = useState(10);
 
@@ -74,10 +74,12 @@ function Banner2({ languageData, setPartnerSelected, selectPayment, user, setOpe
           {languageData?.banner2text3} (#{winningPlace}) {languageData?.banner2text3span}
         </p>
         */}
-        <p className="saira bannerTextBtn3 text-center text-[20px]  font-extrabold leading-5 mt-2 sm:px-2">
-          {languageData?.banner2winner} (#{winningPlace}) {languageData?.banner2winnerSpan}
-        </p>
-        
+        {winningPlace < 11 && (
+          <p className="saira bannerTextBtn3 mt-2 text-center  text-[20px] font-extrabold leading-5 sm:px-2">
+            {languageData?.banner2winner} (#{winningPlace}){languageData?.banner2winnerSpan}
+            {winningPlace > 2 ? (userCountry === "BR" || userCountry === "UA" ? "R$34.5" : "$6.9") : userCountry === "BR" || userCountry === "UA" ? "R$345" : "$69"}
+          </p>
+        )}
       </div>
       <div className="mt-2 flex justify-center">
         <button
