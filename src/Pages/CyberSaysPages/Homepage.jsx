@@ -41,42 +41,50 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
       case null:
       case undefined:
         return (
+          <Link to={PartnerURL} target='_blank'>
           <button
-            onClick={(e) => scrollToPage(1)}
+            
             className={`saira    flex  w-full items-center justify-center border-[#FFED63] text-[18px] font-semibold text-black ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
           >
             {languageData?.homepageBtn1}
             <img className="ml-1" src={doubleIcon} alt="doubleIcon" />
           </button>
+          </Link>
         );
       case 1:
         return (
+          <Link to={PartnerURL} target='_blank'>
           <button
-            onClick={(e) => scrollToPage(1)}
+            
             className={`saira  flex   w-full  items-center justify-center border-[#FFED63] bg-white text-[18px] font-semibold text-black  ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-2 md:py-2"}`}
           >
             {languageData?.homepageBtn2}
             <img className="ml-1" src={doubleIcon} alt="doubleIcon" />
           </button>
+          </Link>
         );
       case 2:
         return (
+          <Link to={PartnerURL} target='_blank'>
           <button
-            onClick={(e) => scrollToPage(1)}
+            
             className={`saira   flex   w-full  items-center justify-center border-[#FFED63] bg-white text-[14px] font-semibold text-black lg:text-[18px]  ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-2 md:py-2"}`}
           >
             {languageData?.homepageBtn3}
           </button>
+          </Link>
         );
       case 3:
         return (
+          <Link to={PartnerURL} target='_blank'>
           <button
-            onClick={(e) => scrollToPage(1)}
+            
             className={`saira  flex   w-full  items-center justify-center border-[#FFED63] bg-white text-[18px] font-semibold text-black ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-2 md:py-2"}`}
           >
             {languageData?.homepageBtn4}
             <img className="ml-1" src={doubleIcon} alt="doubleIcon" />
           </button>
+          </Link>
         );
     }
   };
@@ -102,6 +110,13 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
         <div>
           <div className="homepageSE contentHomepage mt-0 items-end justify-between iphone2:mt-[30px] md:mt-[70px] md:items-center lg:flex">
             <div className="mb-2 flex w-full items-center lg:hidden">
+              <div className="text-center m-auto">
+                <p className=" font-semibold text-[16px]">{languageData?.homepageNewTitle1}</p>
+                <p className="m-auto font-semibold text-[16px]">{languageData?.homepageNewTitle2}</p>
+                <p className="m-auto font-semibold text-[16px]">{languageData?.homepageNewTitle3}</p>
+                <p className="m-auto font-semibold text-[16px]">{languageData?.homepageNewTitle4}</p>
+              </div>
+              {/*
               <div
                 className="buttonPrevText w-[60px]"
                 onClick={(e) => {
@@ -196,7 +211,9 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
                   </defs>
                 </svg>
               </div>
+              */}
             </div>
+
             <div
               className={`relative ${design === "0" ? " rounded-[24px] border-[#FFD700] lg:rounded-[32px]" : "  homepageMainBlock rounded-[16px] border-[#A2DBF0]"}  m-auto border-2 px-1 pb-1 pt-8  lg:m-[unset] lg:pt-0`}
             >
@@ -208,7 +225,7 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
                 />
                 {/*<Link to={PartnerURL} target='_blank'><img className={`w-[160px] md:w-[240px] md:mt-5 mac:!mt-6 mb-10 ${design === '0' ? 'block' : 'hidden'}`} src={PartnerLogo} alt="PartnerLogo" /></Link>*/}
                 <p
-                  className={` saira absolute font-medium ${design === "0" ? "right-[20px] mt-[35px] w-[115px] text-[16px] leading-6 text-[#FFED63] iphone:right-[35px] lg:right-[10px] lg:mt-[90px] lg:w-[200px] lg:text-[24px] lg:leading-8" : "gradient-linkDouble right-[30px] mt-[20px] w-[165px] text-[22px] leading-6 iphone:right-[40px] lg:right-[40px] lg:mt-[50px] lg:w-[240px] lg:text-[34px] lg:leading-10"}`}
+                  className={` saira absolute font-medium ${design === "0" ? "right-[10px] mt-[35px] w-[135px] text-[16px] leading-6 text-[#FFED63] iphone:right-[25px] lg:right-[10px] lg:mt-[90px] lg:w-[200px] lg:text-[24px] lg:leading-8" : "gradient-linkDouble right-[10px] mt-[20px] w-[185px] text-[22px] leading-6 iphone:right-[30px] lg:right-[10px] lg:mt-[50px] lg:w-[280px] lg:text-[34px] lg:leading-10"}`}
                 >
                   {languageData?.homepageMessageTitle}
                 </p>
@@ -216,11 +233,18 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
               <div className=" relative ">{getButtonMarkup(lastTask)}</div>
             </div>
             <div className="mb-4 ml-1 w-[200px] sm:w-[unset] md:mb-[unset] md:ml-10">
+              <div className="hidden w-full max-w-[300px] items-center md:max-w-[580px] lg:block">
+                <p className="font-semibold text-[20px]">{languageData?.homepageNewTitle1}</p>
+                <p className="font-semibold text-[20px]">{languageData?.homepageNewTitle2}</p>
+                <p className="font-semibold text-[20px]">{languageData?.homepageNewTitle3}</p>
+                <p className="font-semibold text-[20px]">{languageData?.homepageNewTitle4}</p>
+              </div>
+              {/*
               <div className="hidden w-full max-w-[300px] items-center md:max-w-[580px] lg:flex">
                 <div className="buttonPrev2 mr-[20px] cursor-pointer">
                   <img className="h-[32px] w-[100px]" src={arrowTextLeft} alt="arrowTextLeft" />
                 </div>
-
+                
                 <Swiper
                   modules={[Navigation, Autoplay]}
                   navigation={{
@@ -241,11 +265,12 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
                     </SwiperSlide>
                   ))}
                 </Swiper>
+                
                 <div className="buttonNext2 ml-[20px] cursor-pointer">
                   <img className="h-[32px] w-[100px]" src={arrowTextRight} alt="arrowTextRight" />
                 </div>
               </div>
-
+*/}
               {/*
                         <div className='md:block hidden mt-[100px] mac:mt-[150px]'>
                             <TimeCounter title={languageData?.timeCounterTitle2} languageData={languageData} block={'hidden'}  />
