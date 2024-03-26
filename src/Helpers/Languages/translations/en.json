@@ -44,7 +44,7 @@
           "taskText": "Deposit $5 on our partner, and CyberSays will double the money!"
         }
       ],
-      "taskButton": "2/3: Deposit $5, get 10 credits 💸"
+      "taskButton": "2/3: Deposit $5, get 5 credits 💸"
     },
     "task3": {
       "taskTitle": "Spend",
@@ -530,7 +530,7 @@
   "doubleCompleteSubTitle": "Be the king of your friends by referring them to CyberSays and they’ll thank you forever... 👑",
   "doubleCompleteBtn": "Share",
   "doubleTaskBtn1": "1/3: Start now 🎉",
-  "doubleTaskBtn2": "2/3: Deposit $5, get 10 credits 💸",
+  "doubleTaskBtn2": "2/3: Deposit $5, get 5 credits 💸",
   "doubleTaskBtn3": "3/3: Spend all credits, get $10 back 🤑",
   "referralShareBtn1": "Share Referral Link!",
   "referralShareBtn2": "Link copied!",

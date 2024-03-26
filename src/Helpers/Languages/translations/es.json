@@ -44,7 +44,7 @@
           "taskText": "Deposita $5 en nuestro socio, iy CyberSays duplicará el dinero!"
         }
       ],
-      "taskButton": "2/3: Depósito de US$ 5, 10 créditos 💸"
+      "taskButton": "2/3: Depósito de US$ 5, 5 créditos 💸"
     },
     "task3": {
       "taskTitle": "Gastar",
@@ -530,7 +530,7 @@
   "doubleCompleteSubTitle": "Sé el rey de tus amigos recomendándolos a CyberSays y te lo agradecerán por siempre... 👑",
   "doubleCompleteBtn": "Compartir",
   "doubleTaskBtn1": "1/3 Comienza ahora 🎉",
-  "doubleTaskBtn2": "2/3: Deposita $5, obtén 10 créditos 💸",
+  "doubleTaskBtn2": "2/3: Deposita $5, obtén 5 créditos 💸",
   "doubleTaskBtn3": "3/3: Gasta todos los créditos, obtén $10 de regreso 🤑",
   "referralShareBtn1": "¡Comparta el enlace de referencia!",
   "referralShareBtn2": "¡Link copiado!",
