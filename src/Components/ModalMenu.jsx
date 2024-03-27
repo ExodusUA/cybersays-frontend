@@ -246,33 +246,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <img className="mr-2 h-[32px] w-[32px]" src={design === "0" ? link2 : require("../images/NewDesign/modalMenu/link2.png")} alt="link2" />
               <p className="saira text-[20px] font-semibold">{languageData?.modalMenuLink2}</p>
             </div>
-            <div
-              className="flex items-center"
-              onClick={(e) => {
-                scrollToPage(2);
-                mixpanel.track("the_Vegas_Wknd", {
-                  distinct_id: user?.id,
-                  is_referred: user?.referral_id ? "Yes" : "No",
-                  vegas_tickets: user?.raffle_tickets,
-                  points: user?.points,
-                  user_id: user?.id,
-                  USD_earned: user?.allTimeEarned,
-                  page_name: "Menu",
-                });
-                moengage.track_event("the_Vegas_Wknd", {
-                  distinct_id: user?.id,
-                  is_referred: user?.referral_id ? "Yes" : "No",
-                  vegas_tickets: user?.raffle_tickets,
-                  points: user?.points,
-                  user_id: user?.id,
-                  USD_earned: user?.allTimeEarned,
-                  page_name: "Menu",
-                });
-              }}
-            >
-              <img className="mr-2 h-[32px] w-[32px]" src={link3} alt="link3" />
-              <p className="saira cursor-pointer text-[20px] font-semibold">{languageData?.modalMenuLink3}</p>
-            </div>
+            
             <div
               className="flex cursor-pointer items-center"
               onClick={(e) => {
@@ -301,6 +275,33 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <p className="saira cursor-pointer text-[20px] font-semibold">
                 {languageData?.modalMenuLink6} {siteData?.currentDay} {languageData?.modalMenuLink6Span}
               </p>
+            </div>
+            <div
+              className="flex items-center"
+              onClick={(e) => {
+                scrollToPage(2);
+                mixpanel.track("the_Vegas_Wknd", {
+                  distinct_id: user?.id,
+                  is_referred: user?.referral_id ? "Yes" : "No",
+                  vegas_tickets: user?.raffle_tickets,
+                  points: user?.points,
+                  user_id: user?.id,
+                  USD_earned: user?.allTimeEarned,
+                  page_name: "Menu",
+                });
+                moengage.track_event("the_Vegas_Wknd", {
+                  distinct_id: user?.id,
+                  is_referred: user?.referral_id ? "Yes" : "No",
+                  vegas_tickets: user?.raffle_tickets,
+                  points: user?.points,
+                  user_id: user?.id,
+                  USD_earned: user?.allTimeEarned,
+                  page_name: "Menu",
+                });
+              }}
+            >
+              <img className="mr-2 h-[32px] w-[32px]" src={link3} alt="link3" />
+              <p className="saira cursor-pointer text-[20px] font-semibold">{languageData?.modalMenuLink3}</p>
             </div>
             <div
               className="flex items-center"
