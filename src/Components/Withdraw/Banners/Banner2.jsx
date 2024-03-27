@@ -87,7 +87,7 @@ function Banner2({ languageData, setPartnerSelected, selectPayment, user, setOpe
             setPartnerSelected(true);
             setOpen(false);
           }}
-          className={`saira w-full  max-w-[370px]  rounded-[12px] border-[2px] text-[18px]  font-semibold outline-none ${disabled ? "bannerBtn2 border-none py-2 text-[#1E1E1E]" : " border-[2px] border-[#515151] bg-transparent py-3 text-[#7f7f7f]"}`}
+          className={`saira w-full  max-w-[370px]  rounded-[12px] border-[2px] text-[18px]  font-semibold outline-none bannerBtn2 border-none text-[#1E1E1E] ${disabled ? `py-2 opacity-[1]` : `py-3 opacity-[0.6]`}`}
         >
           {languageData?.bannerBtn1}
           <p className="saira text-[18px] leading-5 text-white">{disabled ? `${countdown} ${languageData?.bannerBtn2} ⏱️` : ""}</p>
@@ -96,7 +96,7 @@ function Banner2({ languageData, setPartnerSelected, selectPayment, user, setOpe
       <div className="mt-2 flex justify-center">
         <button
           onClick={(e) => setBannerNumber(3)}
-          className={`saira w-full max-w-[370px] border-[1px] py-3 text-[18px] font-semibold outline-none ${disabled ? " border-[#515151] bg-transparent text-[#7f7f7f]" : "bannerBtn2 border-none text-black"} rounded-[12px] `}
+          className={`saira w-full max-w-[370px] border-[1px] py-3 text-[18px] font-semibold outline-none bannerBtn2 border-none text-black rounded-[12px] `}
           disabled={disabled}
         >
           {languageData?.bannerBtn2Done}

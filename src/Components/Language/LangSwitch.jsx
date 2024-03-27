@@ -37,7 +37,7 @@ function LanguageSwitcher({ setIsLangOpen }) {
                     <p className={`tracking-widest text-[16px] duration-300 font-semibold`}>ES</p>
                 </li>
 
-                <li className='flex gap-3 item-center md:mb-2 cursor-pointer group' onClick={() => handleLanguageChange('pt')}>
+                <li className='flex gap-3 item-center cursor-pointer group' onClick={() => handleLanguageChange('pt')}>
                     <img className='w-[22px] h-[22px] object-contain ml-1' src={flag_pt} alt="PT" />
                     <p className={`tracking-widest text-[16px] duration-300 font-semibold`}>PT</p>
                 </li>

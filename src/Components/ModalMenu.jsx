@@ -82,11 +82,11 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
         <div className="m-auto flex max-w-[1170px] items-center justify-between md:px-4 ">
           <img onClick={() => setMenuOpen(false)} className="h-[24px] w-[24px] cursor-pointer" src={design === "0" ? close : require("../images/NewDesign/closeBtn.png")} alt="close" />
           <div className="flex items-center justify-between">
-            <p className="2 saira mt-[-10px] text-[12px] font-semibold text-white lg:mt-0 lg:text-[20px]">
+            <p className="2 saira  text-[12px] font-semibold text-white lg:mt-0 lg:text-[20px]">
               <img className="w-[24px] rounded-full lg:w-[40px]" src={toggleTheme2} alt="toggleTheme2" />
             </p>
 
-            <label class="relative  mx-2 mt-[-10px] cursor-pointer items-center lg:mt-0">
+            <label class="relative  mx-1 cursor-pointer items-center lg:mt-0 ">
               <input
                 onClick={(e) => {
                   mixpanel.track("choose_design", {
@@ -115,11 +115,11 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                 class="peer sr-only"
               />
               <div
-                class={`peer h-8 w-[56px] rounded-full border-[2px]  after:absolute after:start-[4px] after:top-[4px]  after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none md:h-10 md:w-[72px] rtl:peer-checked:after:-translate-x-full  ${design === "0" ? "border-[#FFED63] after:bg-[#FFED63]" : "border-[#80d1ee] after:bg-[#80d1ee]"}   after:h-6 after:w-6 after:rounded-full after:transition-all md:after:h-8 md:after:w-8`}
+                class={`peer h-7 w-[48px] rounded-full border-[2px]  after:absolute after:start-[4px] after:top-[4px]  after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none md:h-10 md:w-[72px] rtl:peer-checked:after:-translate-x-full  ${design === "0" ? "border-[#FFED63] after:bg-[#FFED63]" : "border-[#80d1ee] after:bg-[#80d1ee]"}   after:h-5 after:w-5 after:rounded-full after:transition-all md:after:h-8 md:after:w-8`}
               ></div>
               <p className="saira absolute left-[-25px] w-[110px] text-center text-[10px] font-medium lg:left-[-15px] lg:text-[12px]">{languageData?.ModalMenuToggle}</p>
             </label>
-            <p className="saira mr-2 mt-[-10px] text-[12px] font-semibold text-white lg:mr-4 lg:mt-0 lg:text-[20px]">
+            <p className="saira  text-[12px] font-semibold text-white lg:mr-4 lg:mt-0 lg:text-[20px] mr-8">
               <img className="w-[24px] rounded-full lg:w-[40px]" src={toggleTheme1} alt="toggleTheme1" />
             </p>
             <NewLanguageButton />
@@ -145,7 +145,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                   page_name: "Menu",
                 });
               }}
-              className={`ml-3 h-[28px] min-w-[28px] border-[2px] lg:h-[34px] lg:min-w-[34px] ${design === "0" ? " border-[#FFED63]" : "border-[#A2DBF0]"} flex cursor-pointer items-center justify-center rounded-full  bg-[#626161]`}
+              className={`ml-3 h-[28px] min-w-[28px] border-[2px] lg:h-[38px] lg:min-w-[38px] ${design === "0" ? " border-[#FFED63]" : "border-[#A2DBF0]"} flex cursor-pointer items-center justify-center rounded-full  bg-[#626161]`}
             >
               <svg className="ml-[-5px]" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -161,7 +161,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
         </div>
 
         <div className="menuScroll menuHeight m-auto mt-2 h-screen w-full max-w-[365px]  overflow-auto iphone:max-h-[570px]  lg:max-h-[720px] lg:pb-4">
-          <div className="rounded-[14px] border-[1px] border-white px-2 py-1">
+          <div className="rounded-[14px] border-[1px] border-white px-2 py-1 mt-3">
             <p className="saira text-center text-[14px] font-normal leading-5">{languageData?.modalMenuCopyLinkTitle}</p>
             <p className="saira flex items-center justify-center text-center text-[12px] font-light leading-5">
               {" "}
@@ -191,7 +191,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               </p>
             </div>
           </div>
-          <div className="grid mac:mt-0 mac:!gap-2 se:gap-3 iphone:gap-3 lg:mt-2 ">
+          <div className="grid mac:mt-2 mac:!gap-2 se:gap-3 iphone:gap-3 lg:mt-2 ">
             <div
               className="flex items-center"
               onClick={(e) => {
@@ -274,33 +274,6 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
               <p className="saira cursor-pointer text-[20px] font-semibold">{languageData?.modalMenuLink3}</p>
             </div>
             <div
-              className="flex items-center"
-              onClick={(e) => {
-                setTourModal(true);
-                mixpanel.track("Vegas Weekend Tour", {
-                  distinct_id: user?.id,
-                  is_referred: user?.referral_id ? "Yes" : "No",
-                  vegas_tickets: user?.raffle_tickets,
-                  points: user?.points,
-                  user_id: user?.id,
-                  USD_earned: user?.allTimeEarned,
-                  page_name: "Menu",
-                });
-                moengage.track_event("Vegas Weekend Tour", {
-                  distinct_id: user?.id,
-                  is_referred: user?.referral_id ? "Yes" : "No",
-                  vegas_tickets: user?.raffle_tickets,
-                  points: user?.points,
-                  user_id: user?.id,
-                  USD_earned: user?.allTimeEarned,
-                  page_name: "Menu",
-                });
-              }}
-            >
-              <img className="mr-2 h-[32px] w-[32px]" src={link13} alt="link10" />
-              <p className="saira cursor-pointer text-[20px] font-semibold ">{languageData?.modalMenuBottom5}</p>
-            </div>
-            <div
               className="flex cursor-pointer items-center"
               onClick={(e) => {
                 scrollToPage(3);
@@ -329,6 +302,34 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
                 {languageData?.modalMenuLink6} {siteData?.currentDay} {languageData?.modalMenuLink6Span}
               </p>
             </div>
+            <div
+              className="flex items-center"
+              onClick={(e) => {
+                setTourModal(true);
+                mixpanel.track("Vegas Weekend Tour", {
+                  distinct_id: user?.id,
+                  is_referred: user?.referral_id ? "Yes" : "No",
+                  vegas_tickets: user?.raffle_tickets,
+                  points: user?.points,
+                  user_id: user?.id,
+                  USD_earned: user?.allTimeEarned,
+                  page_name: "Menu",
+                });
+                moengage.track_event("Vegas Weekend Tour", {
+                  distinct_id: user?.id,
+                  is_referred: user?.referral_id ? "Yes" : "No",
+                  vegas_tickets: user?.raffle_tickets,
+                  points: user?.points,
+                  user_id: user?.id,
+                  USD_earned: user?.allTimeEarned,
+                  page_name: "Menu",
+                });
+              }}
+            >
+              <img className="mr-2 h-[32px] w-[32px]" src={link13} alt="link10" />
+              <p className="saira cursor-pointer text-[20px] font-semibold ">{languageData?.modalMenuBottom5}</p>
+            </div>
+            
             <div
               className="flex items-center"
               onClick={(e) => {

@@ -7,7 +7,12 @@
   "LatestOffers": "Últimas Ofertas",
   "OfferTitle": "Nosso parceiro - Experiências de Webcam para Adultos",
   "OfferDescription": "Registre-se e deposite R$25 no nosso parceiro! Nosso parceiro dobrará seus créditos, lhe dando R$50 ao invés de R$25. Após usar seus créditos do nosso parceiro, CyberSays dobrará seu dinheiro, te devolvendo R$50 na TreatCoin!",
-  "listTexts": ["Registre-se no site do nosso parceiro", "Compre 5 créditos e ganhe outros 5 de graça", "Aproveite usando todos os 10 créditos no nosso parceiro", "Ganhe $10 da CyberSays - dobrando os $5 que gastou!"],
+  "listTexts": [
+    "Registre-se no site do nosso parceiro",
+    "Compre 5 créditos e ganhe outros 5 de graça",
+    "Aproveite usando todos os 10 créditos no nosso parceiro",
+    "Ganhe $10 da CyberSays - dobrando os $5 que gastou!"
+  ],
   "OfferButton": "Ganhe X2 Agora!",
   "CopyLink": "Copiar Link",
   "TreatCoins": "Treat Coins",
@@ -100,7 +105,7 @@
   "raffleLink2": "Como ganho o sorteio do fim de semana em Vegas?",
   "raffleUnderBtn": "Colete o máximo de bilhetes de Las Vegas que puder e aumente sua chance de ganhar:",
   "raffleUnderBtn2": "Ganhe mais bilhetes de Las Vegas para aumentar suas chances de ganhar o sorteio:",
-  "raffleLeftBtn": "Curta nosso parceiro 💃",
+  "raffleLeftBtn": "Desfrute de Experiências Ao Vivo 💃",
   "raffleLeftSection1": "1 crédito comprado =",
   "raffleLeftSection2": "1 bilhete para Las Vegas",
   "raffleRightBtn": "Indique amigos 🤑",
@@ -126,7 +131,7 @@
   "competitionTitleSpan": "competição diária",
   "competitionPoints": "Pontos",
   "competitionSubtitle": "Os 2 primeiros lugares recebem US$ 69 cada, 3-10 US$ 6,90 cada.",
-  "competitionLeftBtn": "Curta o nosso parceiro 💃",
+  "competitionLeftBtn": "Desfrute de Experiências Ao Vivo 💃",
   "competitionLeftSection1": "1 crédito comprado =",
   "competitionLeftSection2": "0,5 pontos de competição",
   "competitionRightBtn": "Indique amigos 🤑",
@@ -295,15 +300,21 @@
   "FAQ_Questions": [
     {
       "question": "O que estou fazendo aqui?",
-      "answers": ["Você está aqui para garantir 100% do dobro do seu depósito inicial, concorrer a uma chance de ganhar um fim de semana emocionante em Las Vegas e participar da nossa competição diária de US$69"]
+      "answers": [
+        "Você está aqui para garantir 100% do dobro do seu depósito inicial, concorrer a uma chance de ganhar um fim de semana emocionante em Las Vegas e participar da nossa competição diária de US$69"
+      ]
     },
     {
       "question": "Quais são os requisitos para se qualificar para o cashback instantâneo de US$ 10?",
-      "answers": ["Basta se registrar no nosso parceiro, depositar R$25 para receber R$25 em créditos, gastar esses créditos e, além disso, você receberá R$50 em cashback instantaneamente"]
+      "answers": [
+        "Basta se registrar no nosso parceiro, depositar R$25 para receber R$25 em créditos, gastar esses créditos e, além disso, você receberá R$50 em cashback instantaneamente"
+      ]
     },
     {
       "question": "Posso sacar meu cashback de US$ 10 imediatamente após recebê-lo?",
-      "answers": ["Sim, seu cashback de US$ 10 estará disponível para saque imediato"]
+      "answers": [
+        "Sim, seu cashback de US$ 10 estará disponível para saque imediato"
+      ]
     },
     {
       "question": "Como posso convidar amigos para participar da CyberSays e quais são o nosso benefícios?",
@@ -319,11 +330,15 @@
     },
     {
       "question": "Quais são as regras da promoção de Vegas?",
-      "answers": ["Lorem ipsum"]
+      "answers": [
+        "Lorem ipsum"
+      ]
     },
     {
       "question": "Há um limite para o número de amigos que posso indicar para a CyberSays?",
-      "answers": ["Não, não há limite. Indique quantos amigos você quiser e ganhe mais!"]
+      "answers": [
+        "Não, não há limite. Indique quantos amigos você quiser e ganhe mais!"
+      ]
     },
     {
       "question": "Como são escolhidos os vencedores do fim de semana em Las Vegas?",
@@ -339,7 +354,9 @@
     },
     {
       "question": "Como faço para comprar créditos adicionais no parceiro?",
-      "answers": ["Clique aqui para comprar mais créditos e aumentar suas chances de ganhar a promoção de Las Vegas e US$60 em pontos da competição diária"]
+      "answers": [
+        "Clique aqui para comprar mais créditos e aumentar suas chances de ganhar a promoção de Las Vegas e US$60 em pontos da competição diária"
+      ]
     },
     {
       "question": "Há algum limite para a quantidade de créditos que posso comprar?",
@@ -355,27 +372,39 @@
     },
     {
       "question": "Quais são os prêmios para as 10 primeiras posições na tabela de classificação diária?",
-      "answers": ["Os dois primeiros lugares ganham US$ 69 cada, e os lugares de 3 a 10 ganham US$ 6,90 cada, todos os dias."]
+      "answers": [
+        "Os dois primeiros lugares ganham US$ 69 cada, e os lugares de 3 a 10 ganham US$ 6,90 cada, todos os dias."
+      ]
     },
     {
       "question": "Com que frequência a tabela de classificação e os prêmios são atualizados?",
-      "answers": ["A tabela de classificação e os prêmios são atualizados imediatamente, em tempo real."]
+      "answers": [
+        "A tabela de classificação e os prêmios são atualizados imediatamente, em tempo real."
+      ]
     },
     {
       "question": "Posso ganhar recompensas diárias várias vezes?",
-      "answers": ["Sim, você pode ganhar recompensas diárias sempre que estiver entre os 10 primeiros da tabela de classificação."]
+      "answers": [
+        "Sim, você pode ganhar recompensas diárias sempre que estiver entre os 10 primeiros da tabela de classificação."
+      ]
     },
     {
       "question": "O que acontece se houver um empate na tabela de classificação diária?",
-      "answers": ["Em caso de empate, será escolhido o usuário com o maior número de amigos indicados, seguido pelo usuário com o maior número de créditos comprados e, por fim, pelo que concluir a oferta mais cedo."]
+      "answers": [
+        "Em caso de empate, será escolhido o usuário com o maior número de amigos indicados, seguido pelo usuário com o maior número de créditos comprados e, por fim, pelo que concluir a oferta mais cedo."
+      ]
     },
     {
       "question": "Há alguma taxa ou encargo para depositar ou sacar dinheiro?",
-      "answers": ["Não, não há taxas ou encargos para nenhuma transação financeira em nossa plataforma."]
+      "answers": [
+        "Não, não há taxas ou encargos para nenhuma transação financeira em nossa plataforma."
+      ]
     },
     {
       "question": "Como posso monitorar minhas indicações e recompensas em tempo real?",
-      "answers": ["para monitorar suas indicações e recompensas à medida que elas acontecem."],
+      "answers": [
+        "para monitorar suas indicações e recompensas à medida que elas acontecem."
+      ],
       "link": "#",
       "linkName": "Clique aqui"
     },
@@ -387,7 +416,9 @@
     },
     {
       "question": "Com quem posso entrar em contato para obter suporte se tiver problemas com a minha conta ou com as recompensas?",
-      "answers": ["para acessar nosso chat para qualquer assistência que você precisar."],
+      "answers": [
+        "para acessar nosso chat para qualquer assistência que você precisar."
+      ],
       "link": "[contactForm]",
       "linkName": "Clique aqui"
     },
@@ -523,7 +554,7 @@
   "NamePage4": "Competição",
   "NamePage5": "Meus indicados",
   "withdrawGiftTitle": "Gift Card / Dinheiro",
-  "doubleBtnEndTask": "Ganhe o fim de semana em Las Vegas💃",
+  "doubleBtnEndTask": "Ganhe a Competição Diária de $69!",
   "paxumFlowTitle": "Você receberá um voucher em dinheiro no e-mail de sua escolha:",
   "paxumFlowInput": "Digite sua ID da Paxum",
   "paxumFlowPlaceholder": "Digite sua ID da Paxum",
@@ -688,17 +719,17 @@
   "withdrawBannerMessage2": "esperando! Você não consegue dar conta... ou consegue? 🙄",
   "visaFlowSubTitle2": "nesse tipo de pagamento",
   "noTransactionsToday": "Você ainda não fez nenhuma transação hoje",
-
   "banner1offer": "créditos para recuperar",
   "banner1offer2": "",
   "banner1offerSpan": "!",
   "banner2winner": "Ao adquirir créditos, você recebe imediatamente 30 pontos para o resultado da competição de hoje, o que pode lhe garantir o primeiro lugar",
   "banner2winnerSpan": "no valor de ",
   "homepageNewTitle1": "Experimente ação AO VIVO QUENTE",
-  "homepageNewTitle2": "1. Duplicando o seu dinheiro",
+  "homepageNewTitle2": "1. Dobrando seu dinheiro - valorizamos o seu tempo",
   "homepageNewTitle3": "2. Ganhando $69 na competição diária ",
   "homepageNewTitle4": "3. Tendo uma chance na promoção de Vegas",
-
   "banner3text5Span": "Você tem:",
-  "banner3text5": "tickets"
+
+  "banner3text5": "tickets",
+  "homepageFinishCTA": "Ganhe a Competição Diária de $69!"
 }
