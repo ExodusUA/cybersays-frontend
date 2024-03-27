@@ -416,19 +416,6 @@ function Main({ languageData }) {
             />
           </SwiperSlide>
           <SwiperSlide>
-            <RaffleTickets
-              setWinTicketModal={setWinTicketModal}
-              scrollToPage={scrollToPage}
-              setWinModal={setWinModal}
-              setActivePageIndex={setActivePageIndex}
-              activePageIndex={activePageIndex}
-              user={userData}
-              languageData={languageData}
-              PartnerURL={PartnerURL}
-              setTourModal={setTourModal}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
             <Competition
               setSocialLink={setSocialLink}
               setRulesModal={setRulesModal}
@@ -443,6 +430,19 @@ function Main({ languageData }) {
               activePageIndex={activePageIndex}
               setLeaderboardData={setLeaderboardData}
               setLoading={setLoading}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <RaffleTickets
+              setWinTicketModal={setWinTicketModal}
+              scrollToPage={scrollToPage}
+              setWinModal={setWinModal}
+              setActivePageIndex={setActivePageIndex}
+              activePageIndex={activePageIndex}
+              user={userData}
+              languageData={languageData}
+              PartnerURL={PartnerURL}
+              setTourModal={setTourModal}
             />
           </SwiperSlide>
           <SwiperSlide>

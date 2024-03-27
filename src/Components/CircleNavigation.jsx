@@ -16,7 +16,7 @@ import moengage from '@moengage/web-sdk';
 function CircleNavigation({ setActivePageIndex, activePageIndex, languageData, user }) {
 
     const { design } = useDesign()
-    const {language} = useLanguage()
+    const { language } = useLanguage()
 
     let [swiper, setSwiper] = useState(null);
 
@@ -77,7 +77,7 @@ function CircleNavigation({ setActivePageIndex, activePageIndex, languageData, u
             USD_earned: user?.allTimeEarned,
             number_referrals: user?.referral_id ? user?.referral_id.length : 0,
         })
-    }  
+    }
 
     return (
         <div className='flex justify-center'>
@@ -133,16 +133,16 @@ function CircleNavigation({ setActivePageIndex, activePageIndex, languageData, u
                     <SwiperSlide>
                         <div className={`text-black relative text-center duration-200 flex justify-center  ${currentSlide === 2 ? 'top-0' : 'top-8 md:top-[60px]'}`}>
                             <div>
-                                <img className={`w-[32px] h-[32px] md:w-[48px] ${design === '0' ? 'md:h-[42px]' : 'md:h-[48px]'}  m-auto ${design === '0' ? '' : currentSlide === 2 ? 'border-[2px] border-[#FDA52F] rounded-full' : 'border-[2px] border-[#A2DBF0] rounded-full'}`} src={design === '0' ? link5 : require('../images/NewDesign/circleMenu/page2.png')} alt="link5" />
-                                <p className='saira text-[12px] md:text-[16px] w-[200px] font-semibold md:mt-2'>{languageData?.NamePage3}</p>
+                                <img className={`w-[32px] h-[32px] md:w-[48px] md:h-[48px] m-auto ${design === '0' ? '' : currentSlide === 2 ? 'border-[2px] border-[#FDA52F] rounded-full' : 'border-[2px] border-[#A2DBF0] rounded-full'}`} src={design === '0' ? link2 : require('../images/NewDesign/circleMenu/page2.png')} alt="link2" />
+                                <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>{languageData?.NamePage4}</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className={`text-black relative text-center duration-200 flex justify-center  ${currentSlide === 3 ? 'top-0' : 'top-8 md:top-[60px]'}`}>
                             <div>
-                                <img className={`w-[32px] h-[32px] md:w-[48px] md:h-[48px] m-auto ${design === '0' ? '' : currentSlide === 3 ? 'border-[2px] border-[#FDA52F] rounded-full' : 'border-[2px] border-[#A2DBF0] rounded-full'}`} src={design === '0' ? link2 : require('../images/NewDesign/circleMenu/page2.png')} alt="link2" />
-                                <p className='saira text-[12px] md:text-[16px] font-semibold md:mt-2'>{languageData?.NamePage4}</p>
+                                <img className={`w-[32px] h-[32px] md:w-[48px] ${design === '0' ? 'md:h-[42px]' : 'md:h-[48px]'}  m-auto ${design === '0' ? '' : currentSlide === 3 ? 'border-[2px] border-[#FDA52F] rounded-full' : 'border-[2px] border-[#A2DBF0] rounded-full'}`} src={design === '0' ? link5 : require('../images/NewDesign/circleMenu/page2.png')} alt="link5" />
+                                <p className='saira text-[12px] md:text-[16px] w-[200px] font-semibold md:mt-2'>{languageData?.NamePage3}</p>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -154,7 +154,7 @@ function CircleNavigation({ setActivePageIndex, activePageIndex, languageData, u
                             </div>
                         </div>
                     </SwiperSlide>
-                    
+
                 </Swiper>
                 <div className='w-[380px] h-[380px] md:w-[500px] md:h-[500px] rounded-full border-[2px] border-white absolute bottom-[-345px] md:bottom-[-425px]'>
 
