@@ -146,7 +146,7 @@ function RaffleTickets({ setTourModal, user, PartnerURL, languageData, setWinMod
                         to={PartnerURL}
                       >
                         <button
-                          className={` saira  w-[97%] border-[2px]  border-[#FFED63] bg-white p-0 text-[14px] font-semibold text-black md:w-[95%] md:py-2 lg:text-[18px] ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
+                          className={` saira  w-[97%] border-[2px]  border-[#FFED63] bg-white p-0 text-[13px] font-semibold text-black md:w-[95%] md:py-2 lg:text-[18px] ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
                         >
                           {languageData?.raffleLeftBtn}
                         </button>
@@ -158,7 +158,7 @@ function RaffleTickets({ setTourModal, user, PartnerURL, languageData, setWinMod
                     <div className="w-full text-center">
                       <button
                         onClick={(e) => shareRefferalLink()}
-                        className={` saira  w-[97%] border-[2px]  border-[#FFED63] bg-white p-0 !text-[14px] font-semibold text-black md:w-[95%] md:py-2 lg:!text-[18px] ${language !== "en" && "px-2 !text-[12px]"} ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
+                        className={` saira  w-[97%] border-[2px]  border-[#FFED63] bg-white p-0 !text-[13px] font-semibold text-black md:w-[95%] md:py-2 lg:!text-[18px] ${language !== "en" && "px-2 !text-[12px]"} ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
                       >
                         {isLinkCopied === false ? languageData?.raffleRightBtn : languageData?.raffleRightBtn2}
                       </button>

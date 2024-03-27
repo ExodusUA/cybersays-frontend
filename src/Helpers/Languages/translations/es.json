@@ -105,7 +105,7 @@
   "raffleLink2": "¿Cómo puedo ganar el sorteo del fin de semana en Las Vegas?",
   "raffleUnderBtn": "Reúne tantos boletos de Las Vegas como puedas y aumenta tus posibilidades de ganar:",
   "raffleUnderBtn2": "Gane más tickets de Las Vegas para aumentar tus posibilidades de ganar el sorteo:",
-  "raffleLeftBtn": "Disfruta de nuestro socio 💃",
+  "raffleLeftBtn": "Disfruta de Experiencias en Vivo 💃",
   "raffleLeftSection1": "1 crédito comprado =",
   "raffleLeftSection2": "1 billete para Las Vegas",
   "raffleRightBtn": "Refiere a tus amigos 🤑",
@@ -131,7 +131,7 @@
   "competitionTitleSpan": "competencia diaria",
   "competitionPoints": "Puntos",
   "competitionSubtitle": "Los primeros 2 lugares reciben $69 cada uno, 3-10 $6.90 cada uno.",
-  "competitionLeftBtn": "Disfruta de nuestro socio 💃",
+  "competitionLeftBtn": "Disfruta de Experiencias en Vivo 💃",
   "competitionLeftSection1": "1 crédito comprado =",
   "competitionLeftSection2": "0,5 puntos de competición",
   "competitionRightBtn": "Refiere a tus amigos 🤑",
@@ -149,7 +149,7 @@
   "modalMenuLink4": "Referir para obtener tickets",
   "modalMenuLink5": "Mis Referencias Elegibles para Las Vegas",
   "modalMenuLink6": "La",
-  "modalMenuLink6Span": "69$ Concurso diario",
+  "modalMenuLink6Span": "$69 Concurso diario",
   "modalMenuLink7": "Retire su dinero",
   "modalMenuLink8": "Sala de chat",
   "modalMenuLink9": "Historial de Transacciones",
@@ -306,11 +306,15 @@
     },
     {
       "question": "¿Cuáles son los requisitos para calificar para el reembolso instantáneo de $10?",
-      "answers": ["Sólo tienes que registrarte en nuestro socio, depositar $5 para recibir $5 in credits, gastar esos créditos y recibirás además 10 $ de devolución en efectivo al instante."]
+      "answers": [
+        "Sólo tienes que registrarte en nuestro socio, depositar $5 para recibir $5 in credits, gastar esos créditos y recibirás además 10 $ de devolución en efectivo al instante."
+      ]
     },
     {
       "question": "¿Puedo retirar mi reembolso de $10 inmediatamente después de recibirlo?",
-      "answers": ["Sí, tu reembolso de $10 en efectivo está disponible para retiro inmediato"]
+      "answers": [
+        "Sí, tu reembolso de $10 en efectivo está disponible para retiro inmediato"
+      ]
     },
     {
       "question": "¿Cómo puedo invitar a mis amigos a unirse a CyberSays y cuáles son nuestras ventajas?",
@@ -326,11 +330,15 @@
     },
     {
       "question": "¿Cuáles son las reglas de la promoción de Las Vegas?",
-      "answers": ["Lorem ipsum"]
+      "answers": [
+        "Lorem ipsum"
+      ]
     },
     {
       "question": "¿Existe un límite en el número de amigos que puedo recomendar a CyberSays?",
-      "answers": ["No, no hay límite. ¡Recomienda a tantos amigos como quieras y gana más!"]
+      "answers": [
+        "No, no hay límite. ¡Recomienda a tantos amigos como quieras y gana más!"
+      ]
     },
     {
       "question": "¿Cómo se elige a los ganadores del fin de semana de Las Vegas?",
@@ -346,7 +354,9 @@
     },
     {
       "question": "¿Cómo puedo comprar créditos adicionales del socio?",
-      "answers": ["Haz clic aquí para comprar más créditos y aumentar tus posibilidades de ganar la promoción de Las Vegas y los puntos del concurso diario de 69$."]
+      "answers": [
+        "Haz clic aquí para comprar más créditos y aumentar tus posibilidades de ganar la promoción de Las Vegas y los puntos del concurso diario de 69$."
+      ]
     },
     {
       "question": "¿Existe algún límite sobre la cantidad de créditos que puedo comprar?",
@@ -362,27 +372,39 @@
     },
     {
       "question": "¿Cuáles son las recompensas por las 10 primeras posiciones en la tabla de clasificación diaria?",
-      "answers": ["Los dos primeros puestos ganan 69 $ cada uno, y los puestos del 3 al 10 ganan 6,90 $ cada uno, todos los días."]
+      "answers": [
+        "Los dos primeros puestos ganan 69 $ cada uno, y los puestos del 3 al 10 ganan 6,90 $ cada uno, todos los días."
+      ]
     },
     {
       "question": "¿Con qué frecuencia se actualizan la tabla de clasificación y las recompensas?",
-      "answers": ["La clasificación y las recompensas se actualizan inmediatamente, en tiempo real."]
+      "answers": [
+        "La clasificación y las recompensas se actualizan inmediatamente, en tiempo real."
+      ]
     },
     {
       "question": "¿Puedo ganar premios diarios varias veces?",
-      "answers": ["Sí, puedes ganar recompensas diarias cada vez que encabeces el top 10 de la tabla de clasificación."]
+      "answers": [
+        "Sí, puedes ganar recompensas diarias cada vez que encabeces el top 10 de la tabla de clasificación."
+      ]
     },
     {
       "question": "¿Qué ocurre si hay un empate en la clasificación diaria?",
-      "answers": ["En caso de empate, se elegirá al usuario con más amigos recomendados, seguido del que tenga más créditos comprados y, a continuación, el que antes haya completado la oferta."]
+      "answers": [
+        "En caso de empate, se elegirá al usuario con más amigos recomendados, seguido del que tenga más créditos comprados y, a continuación, el que antes haya completado la oferta."
+      ]
     },
     {
       "question": "¿Hay comisiones por ingresar o retirar dinero?",
-      "answers": ["No, en nuestra plataforma no se cobran comisiones ni gastos por ninguna transacción financiera."]
+      "answers": [
+        "No, en nuestra plataforma no se cobran comisiones ni gastos por ninguna transacción financiera."
+      ]
     },
     {
       "question": "¿Cómo puedo seguir mis recomendaciones y recompensas en tiempo real?",
-      "answers": [" para supervisar tus recomendaciones y recompensas a medida que se producen."],
+      "answers": [
+        " para supervisar tus recomendaciones y recompensas a medida que se producen."
+      ],
       "link": "#",
       "linkName": "Haz clic aquí"
     },
@@ -394,7 +416,9 @@
     },
     {
       "question": "¿Con quién puedo ponerme en contacto si tengo problemas con mi cuenta o mis premios?",
-      "answers": [" para acceder a nuestro chat y recibir la ayuda que necesites."],
+      "answers": [
+        " para acceder a nuestro chat y recibir la ayuda que necesites."
+      ],
       "link": "[contactForm]",
       "linkName": "Haz clic aquí"
     },
@@ -530,7 +554,7 @@
   "NamePage4": "Competencia",
   "NamePage5": "Mis referidos",
   "withdrawGiftTitle": "Tarjeta regalo / Efectivo",
-  "doubleBtnEndTask": "Gana el fin de semana de Las Vegas💃",
+  "doubleBtnEndTask": "¡Gana la Competencia Diaria de $69!",
   "paxumFlowTitle": "Recibirás un vale en efectivo en el correo electrónico que elijas:",
   "paxumFlowInput": "Introduzca su ID de Paxum",
   "paxumFlowPlaceholder": "Introduzca su ID de Paxum",
@@ -695,17 +719,17 @@
   "withdrawBannerMessage2": "espere! No puedes terminar el trabajo... ¿o sí? 🙄",
   "visaFlowSubTitle2": "en este tipo de pago",
   "noTransactionsToday": "No ha realizado ninguna transacción hoy",
-
   "banner1offer": "créditos para recuperar",
   "banner1offer2": "",
   "banner1offerSpan": "!",
   "banner2winner": "Al adquirir créditos, recibes de inmediato 30 puntos para el resultado de la competición de hoy, lo que puede garantizarte el primer lugar",
   "banner2winnerSpan": "con un valor de  ",
   "homepageNewTitle1": "Experimenta acción CALIENTE EN VIVO",
-  "homepageNewTitle2": "1. Duplicando tu dinero",
+  "homepageNewTitle2": "1. Doblando tu dinero - valoramos tu tiempo",
   "homepageNewTitle3": "2. Ganando $69 en la competencia diaria ",
   "homepageNewTitle4": "3. Teniendo una oportunidad en la promoción de Vegas",
-
   "banner3text5Span": "Tú tienes:",
-  "banner3text5": "tickets"
+
+  "banner3text5": "tickets",
+  "homepageFinishCTA": "¡Gana la Competencia Diaria de $69!"
 }

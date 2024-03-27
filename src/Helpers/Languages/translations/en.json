@@ -7,7 +7,12 @@
   "LatestOffers": "Latest Offers",
   "OfferTitle": "Our partner - Adult Webcam Experiences",
   "OfferDescription": "Register and deposit $5 on our partner! Our partner will double your credits, giving you 10 instead of 5. After using your our partner credits, CyberSays will double your money, providing you with $10 back in TreatCoin!",
-  "listTexts": ["Register on our partner's site", "Buy 5 credits and get another 5 for free", "Enjoy using the full 10 credits on our partner", "Get 10$ from CyberSays - doubling the 5$ you spent!"],
+  "listTexts": [
+    "Register on our partner's site",
+    "Buy 5 credits and get another 5 for free",
+    "Enjoy using the full 10 credits on our partner",
+    "Get 10$ from CyberSays - doubling the 5$ you spent!"
+  ],
   "OfferButton": "Earn X2 Now!",
   "CopyLink": "Copy Link",
   "TreatCoins": "Treat Coins",
@@ -100,7 +105,7 @@
   "raffleLink2": "How do I win the vegas weekend promotion?",
   "raffleUnderBtn": "Collect as many Vegas tickets as you can & better your chance to win:",
   "raffleUnderBtn2": "Earn more Vegas tickets to increase your draw-winning chances:",
-  "raffleLeftBtn": "Enjoy our partner 💃",
+  "raffleLeftBtn": "Enjoy Live Experiences 💃",
   "raffleLeftSection1": "1 credit bought =",
   "raffleLeftSection2": "1  Vegas ticket",
   "raffleRightBtn": "Refer friends 🤑",
@@ -126,7 +131,7 @@
   "competitionTitleSpan": "daily competition",
   "competitionPoints": "Points",
   "competitionSubtitle": "First 2 places get $69 each, 3-10 $6.90 each.",
-  "competitionLeftBtn": "Enjoy our partner 💃",
+  "competitionLeftBtn": "Enjoy Live Experiences 💃",
   "competitionLeftSection1": "1 credit bought =",
   "competitionLeftSection2": "0.5 competition points",
   "competitionRightBtn": "Refer friends 🤑",
@@ -144,7 +149,7 @@
   "modalMenuLink4": "Refer to get tickets",
   "modalMenuLink5": "My Eligible Referrals for Vegas",
   "modalMenuLink6": "The",
-  "modalMenuLink6Span": "69$ Daily Competition",
+  "modalMenuLink6Span": "$69 Daily Competition",
   "modalMenuLink7": "Withdraw your money",
   "modalMenuLink8": "Chat room",
   "modalMenuLink9": "Transaction History",
@@ -295,15 +300,21 @@
   "FAQ_Questions": [
     {
       "question": "What am I doing here?",
-      "answers": ["You are here to guaranteed 100% double your initial cash deposit, compete for a chance to win a thrilling Vegas weekend, and participate in our 69$ daily contest."]
+      "answers": [
+        "You are here to guaranteed 100% double your initial cash deposit, compete for a chance to win a thrilling Vegas weekend, and participate in our 69$ daily contest."
+      ]
     },
     {
       "question": "What are the requirements to qualify for the $10 instant cash back?",
-      "answers": ["Simply register on our partnet, deposit $5 to receive $5 in credits, spend those credits, and you'll receive on top of that $10 cash back instantly"]
+      "answers": [
+        "Simply register on our partnet, deposit $5 to receive $5 in credits, spend those credits, and you'll receive on top of that $10 cash back instantly"
+      ]
     },
     {
       "question": "Can I withdraw my $10 cash back immediately after receiving it?",
-      "answers": ["Yes, your $10 cash back is available for immediate withdrawal"]
+      "answers": [
+        "Yes, your $10 cash back is available for immediate withdrawal"
+      ]
     },
     {
       "question": "How can I invite friends to join CyberSays, and what are our benefits?",
@@ -313,19 +324,27 @@
     },
     {
       "question": "What steps must my friends complete for them to qualify for the Vegas trip?",
-      "answers": ["Your friends need to register through your referral link and complete the double money offer for you to be eligible to invite up to 2 of them as your travel companions for the Vegas trip."]
+      "answers": [
+        "Your friends need to register through your referral link and complete the double money offer for you to be eligible to invite up to 2 of them as your travel companions for the Vegas trip."
+      ]
     },
     {
       "question": "What are the Vegas promotion rules?",
-      "answers": ["Lorem ipsum"]
+      "answers": [
+        "Lorem ipsum"
+      ]
     },
     {
       "question": "Is there a limit to how many friends I can refer to CyberSays?",
-      "answers": ["No, there is no limit. Refer as many friends as you like and earn more!"]
+      "answers": [
+        "No, there is no limit. Refer as many friends as you like and earn more!"
+      ]
     },
     {
       "question": "How are winners for the Vegas weekend chosen?",
-      "answers": ["Winners are selected through a live draw in the presence of a lawyer and an accountant, ensuring fairness and transparency. Link to Vegas weekend rules"]
+      "answers": [
+        "Winners are selected through a live draw in the presence of a lawyer and an accountant, ensuring fairness and transparency. Link to Vegas weekend rules"
+      ]
     },
     {
       "question": "What expenses are covered in the Vegas weekend prize?",
@@ -335,11 +354,15 @@
     },
     {
       "question": "How do I purchase additional partner credits?",
-      "answers": ["Click here to buy more credits and increase your chances of winning the Vegas promotion and 69$ daily contest points"]
+      "answers": [
+        "Click here to buy more credits and increase your chances of winning the Vegas promotion and 69$ daily contest points"
+      ]
     },
     {
       "question": "Are there any limits on how many credits I can buy?",
-      "answers": ["No, there are no limits to how many credits you can purchase. As long as you purchase more, you have better chance to win the Vegas promotion or finish in the top 10 in the 69$ daily contest."]
+      "answers": [
+        "No, there are no limits to how many credits you can purchase. As long as you purchase more, you have better chance to win the Vegas promotion or finish in the top 10 in the 69$ daily contest."
+      ]
     },
     {
       "question": "How does the $69 daily leaderboard work, and how can I earn points?",
@@ -349,27 +372,39 @@
     },
     {
       "question": "What are the rewards for the top 10 positions in the daily leaderboard?",
-      "answers": ["The top two places win $69 each, and places 3-10 win $6.90 each, every day."]
+      "answers": [
+        "The top two places win $69 each, and places 3-10 win $6.90 each, every day."
+      ]
     },
     {
       "question": "How often are the leaderboard and rewards updated?",
-      "answers": ["The leaderboard and rewards are updated immediately, in real-time."]
+      "answers": [
+        "The leaderboard and rewards are updated immediately, in real-time."
+      ]
     },
     {
       "question": "Can I win daily rewards multiple times?",
-      "answers": ["Yes, you can win daily rewards as often as you top the leaderboard top 10."]
+      "answers": [
+        "Yes, you can win daily rewards as often as you top the leaderboard top 10."
+      ]
     },
     {
       "question": "What happens if there’s a tie on the daily leaderboard?",
-      "answers": ["In the event of a tie, the user with the most referred friends is chosen, followed by the one with the most purchased credits, and then by the earliest completion of the offer."]
+      "answers": [
+        "In the event of a tie, the user with the most referred friends is chosen, followed by the one with the most purchased credits, and then by the earliest completion of the offer."
+      ]
     },
     {
       "question": "Are there any fees or charges for depositing or withdrawing money?",
-      "answers": ["No, there are no fees or charges for any financial transactions on our platform."]
+      "answers": [
+        "No, there are no fees or charges for any financial transactions on our platform."
+      ]
     },
     {
       "question": "How can I track my referrals and rewards in real-time?",
-      "answers": [" to monitor your referrals and rewards as they happen."],
+      "answers": [
+        " to monitor your referrals and rewards as they happen."
+      ],
       "link": "[referralsModal]",
       "linkName": "Click here"
     },
@@ -381,13 +416,23 @@
     },
     {
       "question": "Who can I contact for support if I encounter issues with my account or rewards?",
-      "answers": [" to reach our chat for any assistance you need."],
+      "answers": [
+        " to reach our chat for any assistance you need."
+      ],
       "link": "[contactForm]",
       "linkName": "Click here"
     },
     {
       "question": "What are the terms of service?",
-      "answers": ["For all the details on our policies: ", "- Terms of Service", "- Daily Contest Terms", "- Promotion Terms", "- Cookie Policy ", "- Privacy Policy", "- Affiliation Terms"]
+      "answers": [
+        "For all the details on our policies: ",
+        "- Terms of Service",
+        "- Daily Contest Terms",
+        "- Promotion Terms",
+        "- Cookie Policy ",
+        "- Privacy Policy",
+        "- Affiliation Terms"
+      ]
     }
   ],
   "dataMessageDesc1": "Imagine us in Vegas if we win. Game for an adventure?",
@@ -509,7 +554,7 @@
   "NamePage4": "Competition",
   "NamePage5": "My referrals",
   "withdrawGiftTitle": "Gift Card / Cash",
-  "doubleBtnEndTask": "Win the Vegas weekend💃",
+  "doubleBtnEndTask": "Win the $69 Daily Competition!",
   "paxumFlowTitle": "You’ll get a cash voucher to an email of your choice:",
   "paxumFlowInput": "Enter your Paxum ID",
   "paxumFlowPlaceholder": "Enter your Paxum ID",
@@ -549,7 +594,7 @@
   "ServiPagInput3": "National identity card (RUT)",
   "TransactionCompetitionWinner": "Finishing in the 69$ daily competition!",
   "modalMenuLink15": "Join as an influencer",
-  "modalMenuLink16": "partner Program",
+  "modalMenuLink16": "Partner Program",
   "InfluencerTitle": "Join us as an influencer",
   "InfluencerSubTitle": "We’re looking for worldwide and local leading influencers. Join us to be associated with worldwide leading brands and be exposed to amazing opportunities. ",
   "InfluencerInput1": "Email",
@@ -558,7 +603,7 @@
   "InfluencerOptoin1": "Choose who you are",
   "InfluencerInput3": "Your message",
   "InfluencerBtn": "Continue",
-  "collaborateTitle": "partner Program",
+  "collaborateTitle": "Partner Program",
   "collaborateSubTitle": "CyberSays is seeking to collaborate with international businesses that have a global reach, aiming to engage with our high-volume user traffic.",
   "collaborateInput1": "Email",
   "collaborateInput2": "Name",
@@ -603,7 +648,7 @@
   "withdrawBannerBtn": "Get Now",
   "withdrawBannerSubtitle": "* The percentages of the benefit are calculated based on the basic rate of 6.9 BRL for 1 partner credit. Percentages will go down while buying higher credit packages in our partner, however that option always hold a benefit.",
   "modalMenuLink17": "My earnings",
-  "modalMenuCopyLinkTitle": "Be the king of your friends by referring them to CyberSays and they’ll thank you forever... 👑",
+  "modalMenuCopyLinkTitle": "Be the king of your friends - refer them",
   "modalMenuCopyLinkSubTitle": "For every friend that completed offer:",
   "modalMenuLink18": "Customer support",
   "transactionApprovedTitle": "Your withdrawal request through ",
@@ -672,20 +717,19 @@
   "banner3text2": "Boost your $R50 by 38% to gain 12 credits and 5 Vegas tickets for a chance to win the Vegas Promotion",
   "banner3text3": "Experience Vegas glam in a Cadillac with two stars and your best friends. Enjoy dinner and a nightclub parting with them!",
   "banner3text4": "You can have +5 tickets",
-
   "withdrawBannerMessage2": "wait! You can’t finish the job… or can you? 🙄",
   "noTransactionsToday": "No ha realizado ninguna transacción hoy",
-
   "banner1offer": "credits for your ",
   "banner1offer2": "to get back to",
   "banner1offerSpan": "!",
   "banner2winner": "By taking the credits you immediately get 30 points for today’s competition result that will entitle you place",
   "banner2winnerSpan": ", worth ",
   "homepageNewTitle1": "Experience HOT LIVE action while:",
-  "homepageNewTitle2": "1. Doubling your money",
+  "homepageNewTitle2": "1. Doubling your money - we value your time",
   "homepageNewTitle3": "2. Winning $69 in the daily competition ",
   "homepageNewTitle4": "3. Getting a chance at Vegas promotion",
-
   "banner3text5Span": "You have:",
-  "banner3text5": "tickets"
+
+  "banner3text5": "tickets",
+  "homepageFinishCTA": "Win the $69 Daily Competition!"
 }
