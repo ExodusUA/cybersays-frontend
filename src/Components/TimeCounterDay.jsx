@@ -12,7 +12,7 @@ function TimeCounterDay({ languageData, hidden, title, left, leftTitle, block, s
   const { language } = useLanguage();
 
   function calculateTimeLeft() {
-    const endOfDay = moment().endOf("day");
+    const endOfDay = moment().utc().endOf("day");
     const duration = moment.duration(endOfDay.diff(moment()));
     return {
       hoursRemaining: duration.hours(),
