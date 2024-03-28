@@ -238,7 +238,7 @@
   "authSlide1li2": "2. Ten la oportunidad de ganar la promoción de Las Vegas",
   "authSlide1li3": "3. Gana el concurso diario de 69$",
   "authSlide2": "1. ¡Deposite y Doble!",
-  "authSlide2li1": "Deposita 5$ en el sitio de nuestro colaborador, disfruta utilizándolos, ¡y duplícalos para obtener una devolución inmediata de 10$ de CyberSays!",
+  "authSlide2li1": "Deposita 5$ en el sitio de nuestro socio - disfruta usándolos y duplícalo para obtener inmediatamente una devolución de 10$ en efectivo de CyberSays... ¡porque valoramos tu tiempo!",
   "authSlide3": "2. Las Vegas con Amigos",
   "authSlide3li1": "Consigue entradas para Las Vegas para tener la oportunidad de ganar nuestra increíble promoción de Las Vegas: ¡un fin de semana de tus sueños que nunca olvidarás!",
   "authSlide4": "3. Gana el concurso diario de US$69",
@@ -306,15 +306,11 @@
     },
     {
       "question": "¿Cuáles son los requisitos para calificar para el reembolso instantáneo de $10?",
-      "answers": [
-        "Sólo tienes que registrarte en nuestro socio, depositar $5 para recibir $5 in credits, gastar esos créditos y recibirás además 10 $ de devolución en efectivo al instante."
-      ]
+      "answers": ["Sólo tienes que registrarte en nuestro socio, depositar $5 para recibir $5 in credits, gastar esos créditos y recibirás además 10 $ de devolución en efectivo al instante."]
     },
     {
       "question": "¿Puedo retirar mi reembolso de $10 inmediatamente después de recibirlo?",
-      "answers": [
-        "Sí, tu reembolso de $10 en efectivo está disponible para retiro inmediato"
-      ]
+      "answers": ["Sí, tu reembolso de $10 en efectivo está disponible para retiro inmediato"]
     },
     {
       "question": "¿Cómo puedo invitar a mis amigos a unirse a CyberSays y cuáles son nuestras ventajas?",
@@ -330,15 +326,11 @@
     },
     {
       "question": "¿Cuáles son las reglas de la promoción de Las Vegas?",
-      "answers": [
-        "Lorem ipsum"
-      ]
+      "answers": ["Lorem ipsum"]
     },
     {
       "question": "¿Existe un límite en el número de amigos que puedo recomendar a CyberSays?",
-      "answers": [
-        "No, no hay límite. ¡Recomienda a tantos amigos como quieras y gana más!"
-      ]
+      "answers": ["No, no hay límite. ¡Recomienda a tantos amigos como quieras y gana más!"]
     },
     {
       "question": "¿Cómo se elige a los ganadores del fin de semana de Las Vegas?",
@@ -354,9 +346,7 @@
     },
     {
       "question": "¿Cómo puedo comprar créditos adicionales del socio?",
-      "answers": [
-        "Haz clic aquí para comprar más créditos y aumentar tus posibilidades de ganar la promoción de Las Vegas y los puntos del concurso diario de 69$."
-      ]
+      "answers": ["Haz clic aquí para comprar más créditos y aumentar tus posibilidades de ganar la promoción de Las Vegas y los puntos del concurso diario de 69$."]
     },
     {
       "question": "¿Existe algún límite sobre la cantidad de créditos que puedo comprar?",
@@ -372,39 +362,27 @@
     },
     {
       "question": "¿Cuáles son las recompensas por las 10 primeras posiciones en la tabla de clasificación diaria?",
-      "answers": [
-        "Los dos primeros puestos ganan 69 $ cada uno, y los puestos del 3 al 10 ganan 6,90 $ cada uno, todos los días."
-      ]
+      "answers": ["Los dos primeros puestos ganan 69 $ cada uno, y los puestos del 3 al 10 ganan 6,90 $ cada uno, todos los días."]
     },
     {
       "question": "¿Con qué frecuencia se actualizan la tabla de clasificación y las recompensas?",
-      "answers": [
-        "La clasificación y las recompensas se actualizan inmediatamente, en tiempo real."
-      ]
+      "answers": ["La clasificación y las recompensas se actualizan inmediatamente, en tiempo real."]
     },
     {
       "question": "¿Puedo ganar premios diarios varias veces?",
-      "answers": [
-        "Sí, puedes ganar recompensas diarias cada vez que encabeces el top 10 de la tabla de clasificación."
-      ]
+      "answers": ["Sí, puedes ganar recompensas diarias cada vez que encabeces el top 10 de la tabla de clasificación."]
     },
     {
       "question": "¿Qué ocurre si hay un empate en la clasificación diaria?",
-      "answers": [
-        "En caso de empate, se elegirá al usuario con más amigos recomendados, seguido del que tenga más créditos comprados y, a continuación, el que antes haya completado la oferta."
-      ]
+      "answers": ["En caso de empate, se elegirá al usuario con más amigos recomendados, seguido del que tenga más créditos comprados y, a continuación, el que antes haya completado la oferta."]
     },
     {
       "question": "¿Hay comisiones por ingresar o retirar dinero?",
-      "answers": [
-        "No, en nuestra plataforma no se cobran comisiones ni gastos por ninguna transacción financiera."
-      ]
+      "answers": ["No, en nuestra plataforma no se cobran comisiones ni gastos por ninguna transacción financiera."]
     },
     {
       "question": "¿Cómo puedo seguir mis recomendaciones y recompensas en tiempo real?",
-      "answers": [
-        " para supervisar tus recomendaciones y recompensas a medida que se producen."
-      ],
+      "answers": [" para supervisar tus recomendaciones y recompensas a medida que se producen."],
       "link": "[referralsModal]",
       "linkName": "Haz clic aquí"
     },
@@ -416,9 +394,7 @@
     },
     {
       "question": "¿Con quién puedo ponerme en contacto si tengo problemas con mi cuenta o mis premios?",
-      "answers": [
-        " para acceder a nuestro chat y recibir la ayuda que necesites."
-      ],
+      "answers": [" para acceder a nuestro chat y recibir la ayuda que necesites."],
       "link": "[contactForm]",
       "linkName": "Haz clic aquí"
     },
