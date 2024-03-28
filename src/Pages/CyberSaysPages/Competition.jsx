@@ -149,7 +149,7 @@ function Competition({ PartnerURL, user, setLeaderboardModal, loading, setLoadin
           )}
           {/*<p className='text-center text-[12px] sm:text-[12px] font-medium my-1 lg:my-0'>{languageData?.competitionOverBtn}</p>*/}
           <div className="m-auto mt-2 flex sm:mt-1 sm:max-w-[400px] md:max-w-[unset]">
-            <div className="w-full text-center md:mx-2">
+            <div className="w-full text-center md:mx-1">
               <Link
                 target="_blank"
                 onClick={(e) => {
@@ -177,23 +177,23 @@ function Competition({ PartnerURL, user, setLeaderboardModal, loading, setLoadin
                 to={PartnerURL}
               >
                 <button
-                  className={` border-[2px]  border-[#FFED63] bg-white text-black ${language === "es" && "!text-[10px]"} saira w-[98%] p-2 text-[11px] font-semibold sm:px-6 md:w-full lg:text-[18px] ${design === "0" ? " rounded-[50px] border-[2px] bg-white p-2 sm:px-6 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
+                  className={` border-[2px]  border-[#FFED63] bg-white text-black ${language !== "en" ? "text-[12px] lg:text-[15px]" : 'text-[11px] lg:text-[18px]'} saira w-[98%] p-2  font-semibold sm:px-0 md:w-full  ${design === "0" ? " rounded-[50px] border-[2px] bg-white p-2 sm:px-6 " : "gradient-homepageBtn rounded-[8px] sm:rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
                 >
                   {languageData?.competitionLeftBtn}
                 </button>
               </Link>
-              <p className="saira mt-1 text-[12px] font-medium sm:text-[12px]">
+              <p className="saira mt-1 text-[10px] font-medium sm:text-[11px]">
                 {languageData?.competitionLeftSection1} {languageData?.competitionLeftSection2}
               </p>
             </div>
-            <div className="w-full text-center md:mx-2">
+            <div className="w-full text-center md:mx-1">
               <button
                 onClick={(e) => shareRefferalLink()}
-                className={` border-[2px]  border-[#FFED63] bg-white  text-black ${language === "es" && "!text-[10px]"}  saira w-[98%] text-[11px] font-semibold md:w-full  lg:text-[18px]  ${design === "0" ? " rounded-[50px] border-[2px] bg-white p-2 sm:px-6 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
+                className={` border-[2px]  border-[#FFED63] bg-white  text-black ${language !== "en" ? "text-[12px] lg:text-[15px]" : 'text-[11px] lg:text-[18px]'} saira w-[98%] font-semibold md:w-full ${design === "0" ? " rounded-[50px] border-[2px] bg-white p-2 sm:px-0 " : `gradient-homepageBtn rounded-[8px] sm:rounded-[12px] border-none py-2 ${language !== "en" ? 'se:py-[15px]' : 'se:py-[6px]'}  md:py-2`}`}
               >
                 {isLinkCopied === false ? languageData?.competitionRightBtn : languageData?.competitionRightBtn2}
               </button>
-              <p className="saira mt-1 text-[12px] font-medium sm:text-[12px]">
+              <p className="saira mt-1 text-[10px] font-medium sm:text-[11px]">
                 {languageData?.competitionRightSection1} {languageData?.competitionRightSection2}
               </p>
             </div>

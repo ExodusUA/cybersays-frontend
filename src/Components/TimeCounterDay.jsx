@@ -35,19 +35,19 @@ function TimeCounterDay({ languageData, hidden, title, left, leftTitle, block, s
     <div>
       <p className={`timeCounter-title text-[18px] font-semibold se:leading-5 iphone:leading-[unset] md:leading-[unset] lg:px-4 lg:text-[32px] ${leftTitle}`}>{languageData?.timeCounterTitle2}</p>
       <div className={`lg:w-[300px] ${left} ${hidden}`}>
-        <div className="flex items-center justify-center gap-[18px] leading-4 lg:justify-between  ">
+        <div className="flex items-center justify-center gap-[18px] leading-5 lg:justify-between  ">
           <div className="text-center">
-            <h2 className={`text-[16px] md:text-[28px] md:font-black ${design === "0" ? "text-[#FFED63]" : "gradient-timeCounter"}`}>{hoursRemaining}</h2>
+            <h2 className={`text-[16px] md:text-[26px] font-black ${design === "0" ? "text-[#FFED63]" : "gradient-timeCounter"}`}>{hoursRemaining}</h2>
             <p className={`${design === "0" ? "text-[#FFED63]" : "gradient-timeCounter"} text-center text-[12px] font-semibold`}>{languageData?.timeCounterHours}</p>
           </div>
           <p className={`${design === "0" ? "text-[#FFED63]" : "gradient-timeCounter"} text-[18px]`}>:</p>
           <div className="text-center">
-            <h2 className={`text-[16px] md:text-[28px] md:font-black ${design === "0" ? "text-[#FFED63]" : "gradient-timeCounter"}`}>{minutesRemaining}</h2>
+            <h2 className={`text-[16px] md:text-[26px] font-black ${design === "0" ? "text-[#FFED63]" : "gradient-timeCounter"}`}>{minutesRemaining}</h2>
             <p className={`${design === "0" ? "text-[#FFED63]" : "gradient-timeCounter"} text-center text-[12px] font-semibold`}>{languageData?.timeCounterMinutes}</p>
           </div>
           <p className={`${design === "0" ? "text-[#FFED63]" : "gradient-timeCounter"} text-[18px]`}>:</p>
           <div className="text-center">
-            <h2 className={`text-[16px] md:text-[28px] md:font-black ${design === "0" ? "text-[#FFED63]" : "gradient-timeCounter"}`}>{secondsRemaining}</h2>
+            <h2 className={`text-[16px] md:text-[26px] font-black ${design === "0" ? "text-[#FFED63]" : "gradient-timeCounter"}`}>{secondsRemaining}</h2>
             <p className={`${design === "0" ? "text-[#FFED63]" : "gradient-timeCounter"} text-center text-[12px] font-semibold`}>{languageData?.timeCounterSeconds}</p>
           </div>
         </div>

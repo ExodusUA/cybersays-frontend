@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import TaskCardDesktop from "../../Components/DoubleMoneyPage/TaskCardDesktop";
 import mixpanel from "mixpanel-browser";
 import moengage from "@moengage/web-sdk";
+import DoubleNewTask from "../../Components/DoubleNewTask";
 
 function Double({ languageData, user, PartnerURL, setOpen, setDoubleComplete }) {
   const { design } = useDesign();
@@ -203,6 +204,8 @@ function Double({ languageData, user, PartnerURL, setOpen, setDoubleComplete }) 
           </span>
           {languageData?.doubleSubtitle}
         </p>
+        <DoubleNewTask />
+        {/*
         <div className="m-auto block max-w-[600px] lg:hidden">
           {taskStatus !== null && (
             <>
@@ -245,10 +248,12 @@ function Double({ languageData, user, PartnerURL, setOpen, setDoubleComplete }) 
                 index={3}
                 PartnerURL={PartnerURL}
               />
-              {/*<TaskCard user={user} tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task4} setSelectedTask={setSelectedTask} state={taskStatus[3]} manualSelect={selectedTask !== null} open={selectedTask === 4} background={design === '0' ? '#76C2E3' : '#9E64D8'} rounded={'rounded-[20px] !pb-[5px]'} index={4} PartnerURL={PartnerURL} />*/}
+              //<TaskCard user={user} tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task4} setSelectedTask={setSelectedTask} state={taskStatus[3]} manualSelect={selectedTask !== null} open={selectedTask === 4} background={design === '0' ? '#76C2E3' : '#9E64D8'} rounded={'rounded-[20px] !pb-[5px]'} index={4} PartnerURL={PartnerURL} />
             </>
           )}
         </div>
+        */}
+        {/*
         <div className="m-auto mt-[-10px] hidden max-w-[920px] lg:flex">
           {taskStatus !== null && (
             <>
@@ -296,10 +301,11 @@ function Double({ languageData, user, PartnerURL, setOpen, setDoubleComplete }) 
                 index={3}
                 PartnerURL={PartnerURL}
               />
-              {/*<TaskCard user={user} tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task4} setSelectedTask={setSelectedTask} state={taskStatus[3]} manualSelect={selectedTask !== null} open={selectedTask === 4} background={design === '0' ? '#76C2E3' : '#9E64D8'} rounded={'rounded-[20px] !pb-[5px]'} index={4} PartnerURL={PartnerURL} />*/}
+              //<TaskCard user={user} tasks={JSON.parse(user?.completed_tasks)} data={languageData?.tasks?.task4} setSelectedTask={setSelectedTask} state={taskStatus[3]} manualSelect={selectedTask !== null} open={selectedTask === 4} background={design === '0' ? '#76C2E3' : '#9E64D8'} rounded={'rounded-[20px] !pb-[5px]'} index={4} PartnerURL={PartnerURL} />
             </>
           )}
         </div>
+        */}
         <div className="flex justify-center">
           <p
             onClick={(e) => {
@@ -330,9 +336,11 @@ function Double({ languageData, user, PartnerURL, setOpen, setDoubleComplete }) 
             {languageData?.doublePaid}
           </p>
         </div>
+        {/*
         <div className="absolute left-1/2 m-auto flex w-full -translate-x-1/2 transform justify-center  px-3 se:bottom-[140px] iphone2:bottom-[156px] sm:bottom-[80px] md:bottom-[112px]">
           {taskStatus && taskStatus[2] === "finished" ? getButtonMarkup(4) : getButtonMarkup(selectedTask)}
         </div>
+        */}
         {/*
                 <div className='bg-[#EAEAEA] bg-opacity-20 backdrop-blur-lg rounded-[20px] max-w-[600px] m-auto p-4'>
                     <p className='text-[20px] md:text-[32px] font-semibold text-center '>We have doubled your money!</p>
