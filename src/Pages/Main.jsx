@@ -413,6 +413,7 @@ function Main({ languageData }) {
               user={userData}
               languageData={languageData}
               PartnerURL={PartnerURL}
+              userCountry={userCountry}
             />
           </SwiperSlide>
           <SwiperSlide>

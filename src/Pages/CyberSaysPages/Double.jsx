@@ -9,7 +9,7 @@ import mixpanel from "mixpanel-browser";
 import moengage from "@moengage/web-sdk";
 import DoubleNewTask from "../../Components/DoubleNewTask";
 
-function Double({ languageData, user, PartnerURL, setOpen, setDoubleComplete }) {
+function Double({ languageData, user, PartnerURL, userCountry }) {
   const { design } = useDesign();
 
   const [isOpen, setIsOpen] = useState(false);
@@ -194,7 +194,7 @@ function Double({ languageData, user, PartnerURL, setOpen, setDoubleComplete }) 
         </div>
 
         <p
-          className={`text-[12px] md:text-[14px] ${design === "0" ? "text-[#FFED63]" : "gradient-linkDouble font-semibold"}  double-subtitle contentForDouble mb-5 mt-0 flex cursor-pointer items-center justify-center text-center iphone:py-2 iphone2:mt-[60px]  md:mt-[10px] 2xl:mt-[80px] md:py-2`}
+          className={`text-[12px] md:text-[14px] ${design === "0" ? "text-[#FFED63]" : "gradient-linkDouble font-semibold"}  double-subtitle contentForDouble mb-5 mt-0 flex cursor-pointer items-center justify-center text-center iphone:py-2 iphone2:mt-[60px]  md:mt-[10px] md:py-2 2xl:mt-[80px]`}
         >
           {languageData?.doubleSubtitleSpan}
           <span className="mx-1">
@@ -204,7 +204,7 @@ function Double({ languageData, user, PartnerURL, setOpen, setDoubleComplete }) 
           </span>
           {languageData?.doubleSubtitle}
         </p>
-        <DoubleNewTask PartnerURL={PartnerURL} languageData={languageData}  />
+        <DoubleNewTask PartnerURL={PartnerURL} languageData={languageData} userCountry={userCountry} />
         {/*
         <div className="m-auto block max-w-[600px] lg:hidden">
           {taskStatus !== null && (
@@ -307,9 +307,7 @@ function Double({ languageData, user, PartnerURL, setOpen, setDoubleComplete }) 
         </div>
         */}
 
-
-
-{/*
+        {/*
         <div className="flex justify-center">
           <p
             onClick={(e) => {
@@ -341,13 +339,6 @@ function Double({ languageData, user, PartnerURL, setOpen, setDoubleComplete }) 
           </p>
         </div>
 */}
-
-
-
-
-
-
-
 
         {/*
         <div className="absolute left-1/2 m-auto flex w-full -translate-x-1/2 transform justify-center  px-3 se:bottom-[140px] iphone2:bottom-[156px] sm:bottom-[80px] md:bottom-[112px]">
