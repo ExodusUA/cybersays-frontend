@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react";
 import logoCyber from "../../images/CyberSaysPage/logoMain.png";
-import TaskCard from "../../Components/DoubleMoneyPage/TaskCard";
 import { useDesign } from "../../Helpers/Design/DesignContext";
 import newlogoCyber from "../../images/NewDesign/newLogo_main.png";
 import { Link } from "react-router-dom";
-import TaskCardDesktop from "../../Components/DoubleMoneyPage/TaskCardDesktop";
-import mixpanel from "mixpanel-browser";
-import moengage from "@moengage/web-sdk";
 import DoubleNewTask from "../../Components/DoubleNewTask";
 
 function Double({ languageData, user, PartnerURL, userCountry }) {
@@ -204,7 +200,7 @@ function Double({ languageData, user, PartnerURL, userCountry }) {
           </span>
           {languageData?.doubleSubtitle}
         </p>
-        <DoubleNewTask PartnerURL={PartnerURL} languageData={languageData} userCountry={userCountry} />
+        <DoubleNewTask PartnerURL={PartnerURL} languageData={languageData} userCountry={userCountry} user={user} />
         {/*
         <div className="m-auto block max-w-[600px] lg:hidden">
           {taskStatus !== null && (

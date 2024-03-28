@@ -133,6 +133,14 @@ function Main({ languageData }) {
 
   const [selectedMessage, setSelectedMassege] = useState(null);
 
+  let utmData = {
+    utm_source: urlParams.get("utm_source") || window.localStorage.getItem("utm_source"),
+    utm_medium: urlParams.get("utm_medium") || window.localStorage.getItem("utm_medium"),
+    utm_campaign: urlParams.get("utm_campaign") || window.localStorage.getItem("utm_campaign"),
+    utm_term: urlParams.get("utm_term") || window.localStorage.getItem("utm_term"),
+    utm_content: urlParams.get("utm_content") || window.localStorage.getItem("utm_content"),
+  };
+
   const [userCountry, setUserCountry] = useState(null);
 
   useEffect(() => {
@@ -168,7 +176,10 @@ function Main({ languageData }) {
       if (res.id === undefined) return navigate(`/login`);
 
       if (res.first_login === 0) return navigate(`/welcome`);
-
+      mixpanel.identify(res?.id);
+      mixpanel.people.set({
+        ...utmData,
+      });
       return res;
     },
   });
@@ -185,14 +196,6 @@ function Main({ languageData }) {
 
   useEffect(() => {
     /* MIXPANEL */
-
-    let utmData = {
-      utm_source: urlParams.get("utm_source") || window.localStorage.getItem("utm_source"),
-      utm_medium: urlParams.get("utm_medium") || window.localStorage.getItem("utm_medium"),
-      utm_campaign: urlParams.get("utm_campaign") || window.localStorage.getItem("utm_campaign"),
-      utm_term: urlParams.get("utm_term") || window.localStorage.getItem("utm_term"),
-      utm_content: urlParams.get("utm_content") || window.localStorage.getItem("utm_content"),
-    };
 
     // delete nulls
 

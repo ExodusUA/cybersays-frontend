@@ -5,6 +5,7 @@ import { jwtDecode } from "jwt-decode";
 import { processUserRegistration } from "../Requests/auth";
 import { useLanguage } from "../Helpers/Languages/LanguageContext";
 import moengage from "@moengage/web-sdk";
+import mixpanel from "mixpanel-browser";
 
 function RegisterToken() {
   const navigate = useNavigate();
@@ -27,7 +28,6 @@ function RegisterToken() {
           let fbc = document.cookie.match(/_fbc=([^;]+)/);
 
           let queryParams = "";
-
           navigate(`/${queryParams}`);
         }
       } catch (error) {
