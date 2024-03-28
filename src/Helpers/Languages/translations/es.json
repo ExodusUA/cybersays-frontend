@@ -405,7 +405,7 @@
       "answers": [
         " para supervisar tus recomendaciones y recompensas a medida que se producen."
       ],
-      "link": "#",
+      "link": "[referralsModal]",
       "linkName": "Haz clic aquí"
     },
     {
@@ -429,7 +429,7 @@
         "- Términos de servicio",
         "- Términos del concurso diario",
         "- Términos de la promoción",
-        "- Política de cookies",
+        "- Política de Cookies",
         "- Política de privacidad",
         "- Términos de afiliación"
       ]
@@ -732,5 +732,5 @@
 
   "banner3text5": "tickets",
   "homepageFinishCTA": "¡Gana la Competencia Diaria de $69!",
-  "newTaskDouble": "Buy $5, spend them, and get $10 immediately as virtual"
+  "newTaskDouble": "Compra 5 $, gástalos y obtén 10 $ inmediatamente como virtuales"
 }
