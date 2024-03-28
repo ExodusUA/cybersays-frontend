@@ -187,14 +187,14 @@ function Double({ languageData, user, PartnerURL, setOpen, setDoubleComplete }) 
           src={design === "0" ? logoCyber : newlogoCyber}
           alt="logoCyber"
         />
-        <div className="m-auto mt-[10px] mac:max-w-[550px] md:mx-[120px] md:mt-0 md:max-w-[1200px]">
+        <div className="m-auto mt-[10px] md:mt-0 md:max-w-[600px]">
           <div className={`m-auto bg-[#EAEAEA] bg-opacity-20  px-4 py-2 text-center backdrop-blur-lg se:max-w-[280px]  iphone:max-w-[unset] md:py-2 ${design === "0" ? "rounded-[100px]" : "rounded-[14px]"}`}>
             <p className="text-[14px] font-semibold mac2:text-[14px] mac2:!leading-[22px] se:leading-4  iphone:text-[18px] iphone:leading-[unset] md:text-[28px]">{languageData?.doubleTitle}</p>
           </div>
         </div>
 
         <p
-          className={`text-[12px] md:text-[14px] ${design === "0" ? "text-[#FFED63]" : "gradient-linkDouble font-semibold"}  double-subtitle contentForDouble mb-5 mt-0 flex cursor-pointer items-center justify-center text-center iphone:py-2 iphone2:mt-[60px] md:mt-[80px] md:py-2`}
+          className={`text-[12px] md:text-[14px] ${design === "0" ? "text-[#FFED63]" : "gradient-linkDouble font-semibold"}  double-subtitle contentForDouble mb-5 mt-0 flex cursor-pointer items-center justify-center text-center iphone:py-2 iphone2:mt-[60px]  md:mt-[10px] 2xl:mt-[80px] md:py-2`}
         >
           {languageData?.doubleSubtitleSpan}
           <span className="mx-1">
@@ -204,7 +204,7 @@ function Double({ languageData, user, PartnerURL, setOpen, setDoubleComplete }) 
           </span>
           {languageData?.doubleSubtitle}
         </p>
-        <DoubleNewTask />
+        <DoubleNewTask PartnerURL={PartnerURL} languageData={languageData}  />
         {/*
         <div className="m-auto block max-w-[600px] lg:hidden">
           {taskStatus !== null && (
@@ -306,6 +306,10 @@ function Double({ languageData, user, PartnerURL, setOpen, setDoubleComplete }) 
           )}
         </div>
         */}
+
+
+
+{/*
         <div className="flex justify-center">
           <p
             onClick={(e) => {
@@ -336,6 +340,15 @@ function Double({ languageData, user, PartnerURL, setOpen, setDoubleComplete }) 
             {languageData?.doublePaid}
           </p>
         </div>
+*/}
+
+
+
+
+
+
+
+
         {/*
         <div className="absolute left-1/2 m-auto flex w-full -translate-x-1/2 transform justify-center  px-3 se:bottom-[140px] iphone2:bottom-[156px] sm:bottom-[80px] md:bottom-[112px]">
           {taskStatus && taskStatus[2] === "finished" ? getButtonMarkup(4) : getButtonMarkup(selectedTask)}
