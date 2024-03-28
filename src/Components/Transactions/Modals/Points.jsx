@@ -10,7 +10,7 @@ import coin from "../../../images/CyberSaysPage/MyTicketCoin.png";
 import Loading from "../../Loading";
 import InviteFriends from "../InviteFriends";
 
-function Points({ setOpen, languageData, user, setTicketsModal, setSelectedButton,scrollToPage }) {
+function Points({ setOpen, languageData, user, setTicketsModal, setSelectedButton, scrollToPage }) {
   const { design } = useDesign();
   const [pointsData, setPointsData] = useState(null);
   const [allData, setAllData] = useState(null);
@@ -153,6 +153,22 @@ function Points({ setOpen, languageData, user, setTicketsModal, setSelectedButto
             </div>
             <div className="w-[100px]">
               <p className="saira text-right text-[20px] font-semibold text-[#CAB8E8]">+{amount}</p>
+              <p className="saira text-right text-[12px]  font-normal">{languageData?.ticketsSection6Right}</p>
+            </div>
+          </div>
+        );
+      case "end_daily":
+        return (
+          <div className="mt-2 flex items-center justify-between">
+            <div className="flex items-center">
+              <img className="mr-2 h-[32px] w-[32px] md:mr-4" src={coin} alt="transaction" />
+              <div className="w-[200px] md:w-[400px]">
+                <p className="saira mb-1 w-[180px] text-[12px] font-semibold leading-4 md:w-[unset] md:text-[14px]">End Daily Competition</p>
+                <p className="saira text-[12px] font-normal md:text-[14px] ">{moment.unix(Number(datetime)).format("DD MMMM, YYYY, hh:mm A")}</p>
+              </div>
+            </div>
+            <div className="w-[100px]">
+              <p className="saira text-right text-[20px] font-semibold text-red-600">-{amount}</p>
               <p className="saira text-right text-[12px]  font-normal">{languageData?.ticketsSection6Right}</p>
             </div>
           </div>
