@@ -250,7 +250,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
             <div
               className="flex cursor-pointer items-center"
               onClick={(e) => {
-                scrollToPage(3);
+                scrollToPage(2);
                 mixpanel.track("refer_To_Get_Tickets", {
                   distinct_id: user?.id,
                   is_referred: user?.referral_id ? "Yes" : "No",
@@ -279,7 +279,7 @@ function CyberSaysMobileMenu({ setMenuOpen, scrollToPage, user, siteData, setCha
             <div
               className="flex items-center"
               onClick={(e) => {
-                scrollToPage(2);
+                scrollToPage(3);
                 mixpanel.track("the_Vegas_Wknd", {
                   distinct_id: user?.id,
                   is_referred: user?.referral_id ? "Yes" : "No",
