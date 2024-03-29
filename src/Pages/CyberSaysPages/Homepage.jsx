@@ -65,8 +65,8 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
               onClick={(e) => handleEvent()}
               className={`saira    flex  w-full items-center justify-center border-[#FFED63] text-[18px] font-semibold text-black ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
             >
-              {languageData?.NamePage2}
-              <img className="ml-1" src={doubleIcon} alt="doubleIcon" />
+              {languageData?.homepageBtnNew}
+              {/*<img className="ml-1" src={doubleIcon} alt="doubleIcon" />*/}
             </button>
           </Link>
         );
@@ -77,8 +77,8 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
               onClick={(e) => handleEvent()}
               className={`saira  flex   w-full  items-center justify-center border-[#FFED63] bg-white text-[18px] font-semibold text-black  ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-2 md:py-2"}`}
             >
-              {languageData?.NamePage2}
-              <img className="ml-1" src={doubleIcon} alt="doubleIcon" />
+              {languageData?.homepageBtnNew}
+              
             </button>
           </Link>
         );
@@ -89,8 +89,8 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
               onClick={(e) => handleEvent()}
               className={`saira   flex   w-full  items-center justify-center border-[#FFED63] bg-white text-[14px] font-semibold text-black lg:text-[18px]  ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-2 md:py-2"}`}
             >
-              {languageData?.NamePage2}
-              <img className="ml-1" src={doubleIcon} alt="doubleIcon" />
+              {languageData?.homepageBtnNew}
+             
             </button>
           </Link>
         );
