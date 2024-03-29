@@ -78,7 +78,6 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
               className={`saira  flex   w-full  items-center justify-center border-[#FFED63] bg-white text-[18px] font-semibold text-black  ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-2 md:py-2"}`}
             >
               {languageData?.homepageBtnNew}
-              
             </button>
           </Link>
         );
@@ -90,7 +89,6 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
               className={`saira   flex   w-full  items-center justify-center border-[#FFED63] bg-white text-[14px] font-semibold text-black lg:text-[18px]  ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-2 md:py-2"}`}
             >
               {languageData?.homepageBtnNew}
-             
             </button>
           </Link>
         );
@@ -245,7 +243,7 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
                 />
                 {/*<Link to={PartnerURL} target='_blank'><img className={`w-[160px] md:w-[240px] md:mt-5 mac:!mt-6 mb-10 ${design === '0' ? 'block' : 'hidden'}`} src={PartnerLogo} alt="PartnerLogo" /></Link>*/}
                 <p
-                  className={` saira absolute font-medium ${design === "0" ? "right-[10px] mt-[35px] w-[135px] text-[16px] leading-6 text-[#FFED63] iphone:right-[25px] lg:right-[10px] lg:mt-[90px] lg:w-[200px] lg:text-[24px] lg:leading-8" : "gradient-linkDouble right-[10px] mt-[20px] w-[185px] text-[22px] leading-6 iphone:right-[30px] lg:right-[10px] lg:mt-[50px] lg:w-[280px] lg:text-[34px] lg:leading-10"}`}
+                  className={` saira absolute font-medium ${design === "0" ? "right-[10px] mt-[35px] w-[135px] text-[16px] leading-6 text-[#FFED63] iphone:right-[25px] lg:right-[10px] lg:mt-[90px] lg:w-[200px] lg:text-[20px] lg:leading-8" : "gradient-linkDouble right-[10px] mt-[20px] w-[185px] text-[22px] leading-6 iphone:right-[30px] lg:right-[10px] lg:mt-[50px] lg:w-[280px] lg:text-[27px] lg:leading-10"}`}
                 >
                   {languageData?.homepageMessageTitle}
                 </p>
