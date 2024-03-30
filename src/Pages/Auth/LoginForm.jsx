@@ -23,6 +23,7 @@ function LoginForm({ languageData, referralID }) {
   const [activeModal, setActiveModal] = useState(null);
   const queryParams = new URLSearchParams(window.location.search);
   let refferalCode = referralID;
+
   let special = window.localStorage.getItem("uid");
 
   if (special === undefined || special === null) special = null;

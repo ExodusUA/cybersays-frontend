@@ -560,7 +560,8 @@
   "ServiPagInput1": "Email",
   "ServiPagInput2": "Nome",
   "ServiPagInput3": "National identity card (RUT)",
-  "TransactionCompetitionWinner": "Terminando na competição diária de US$69!",
+  "TransactionCompetitionWinner": "Terminando #",
+  "TransactionCompetitionWinner2": "na competição diária de US$69!",
   "modalMenuLink15": "Junte-se como influenciador",
   "modalMenuLink16": "Programa de parceiro",
   "InfluencerTitle": "Registre-se como influenciador",
@@ -701,6 +702,6 @@
 
   "banner3text5": "bilhetes",
   "homepageFinishCTA": "Ganhe a Competição Diária de US$69!",
-  "newTaskDouble": "Compre R$25, gaste-os e receba R$50 imediatamente como virtual",
+  "newTaskDouble": "Compre R$25, gaste-os e receba R$50 imediatamente como",
   "homepageBtnNew": "Receba para Experimentar nosso Produto 👑"
 }

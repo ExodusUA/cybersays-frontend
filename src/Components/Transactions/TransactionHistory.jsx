@@ -34,7 +34,7 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
     }
   }
 
-  const getMarkup = (type, datetime, amount, id, status) => {
+  const getMarkup = (type, datetime, amount, id, status, competition_rank) => {
     switch (type) {
       case "doubling_referral":
         return (
@@ -109,8 +109,11 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
             <div className="flex items-center">
               <img className="mr-2 h-[32px]  w-[32px] md:mr-4" src={transaction} alt="transaction" />
               <div className="w-[200px] md:w-[400px]">
-                <p className="saira  w-[200px] text-[12px] font-semibold leading-4 md:w-[unset] md:text-[14px]">{languageData?.TransactionCompetitionWinner}</p>
-                <p className="saira text-[12px]  font-normal text-[#D7D7D7]">{moment.unix(Number(datetime)).format("DD MMMM, YYYY, hh:mm A")}</p>
+                <p className="saira  w-[200px] text-[12px] font-semibold leading-4 md:w-[unset] md:text-[14px]">
+                  {languageData?.TransactionCompetitionWinner}
+                  {competition_rank} {languageData?.TransactionCompetitionWinner2}
+                </p>
+                <p className="saira  text-[12px] font-normal md:text-[14px]">{moment.unix(Number(datetime)).format("DD MMMM, YYYY, hh:mm A")}</p>
               </div>
             </div>
             <div className="w-[100px] leading-[18px]">
@@ -118,7 +121,7 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
                 +{userCountry === "BR" || userCountry === "UA" ? "R$" : "$"}
                 {amount}
               </p>
-              <p className="saira text-right text-[12px] font-normal">{languageData?.transactionsSection2Right}</p>
+              <p className="saira text-right text-[12px]  font-normal">{languageData?.transactionsSection2Right}</p>
             </div>
           </div>
         );
@@ -138,7 +141,14 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
           </div>
         ) : transactionsData?.length > 0 ? (
           transactionsData?.reverse().map((transaction, index) => {
-            return getMarkup(transaction.type, transaction.datetime, userCountry === "BR" || userCountry === "UA" ? transaction.amount * 5 : transaction.amount, transaction.id, transaction.withdraw_status);
+            return getMarkup(
+              transaction.type,
+              transaction.datetime,
+              userCountry === "BR" || userCountry === "UA" ? transaction.amount * 5 : transaction.amount,
+              transaction.id,
+              transaction.withdraw_status,
+              transaction.competition_rank,
+            );
           })
         ) : (
           <div className="flex h-[470px] items-center justify-center">

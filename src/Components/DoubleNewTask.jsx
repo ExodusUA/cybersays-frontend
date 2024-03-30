@@ -3,10 +3,12 @@ import done from "../images/NewDesign/newTaskDone.png";
 import notReady from "../images/NewDesign/Task/notReady.png";
 import { useDesign } from "../Helpers/Design/DesignContext";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../Helpers/Languages/LanguageContext";
 
 function DoubleNewTask({ languageData, PartnerURL, userCountry, user }) {
   const { design } = useDesign();
   const [tasksActive, setTasksActive] = useState(false);
+  const { language } = useLanguage();
 
   useEffect(() => {
     let tasks = JSON.parse(user?.completed_tasks || "[]");
@@ -26,7 +28,7 @@ function DoubleNewTask({ languageData, PartnerURL, userCountry, user }) {
         <Link to={PartnerURL} target="_blank">
           <div className=" newTaskTitleBg w-[160px] rounded-[12px] border-[2px] border-[#FC4266] p-2 sm:w-[220px]">
             <p className="saira bannerTextBtn3 px-1 text-center text-[16px] font-extrabold leading-[19px] sm:text-[24px] sm:leading-[28px]">
-              {languageData?.newTaskDouble} {userCountry === "BR" || userCountry === "UA" ? "PIX" : "Visa"}
+              {languageData?.newTaskDouble} {userCountry === "BR" || userCountry === "UA" ? "PIX" : language === "en" ? "virtual Visa" : language === "es" ? "virtuales Visa" : "virtual Visa"}
               <span className="saira bannerTextBtn3 ml-1 text-[16px] sm:text-[24px]"></span>
             </p>
           </div>

@@ -547,7 +547,8 @@
   "ServiPagInput1": "Email",
   "ServiPagInput2": "Name",
   "ServiPagInput3": "National identity card (RUT)",
-  "TransactionCompetitionWinner": "Finishing in the 69$ daily competition!",
+  "TransactionCompetitionWinner": "Finishing #",
+  "TransactionCompetitionWinner2": "in the 69$ daily competition!",
   "modalMenuLink15": "Join as an influencer",
   "modalMenuLink16": "Partner Program",
   "InfluencerTitle": "Join us as an influencer",
@@ -687,6 +688,6 @@
 
   "banner3text5": "tickets",
   "homepageFinishCTA": "Win the $69 Daily Competition!",
-  "newTaskDouble": "Buy $5, spend them, and get $10 immediately as virtual",
+  "newTaskDouble": "Buy $5, spend them, and get $10 immediately as ",
   "homepageBtnNew": "Get Paid to Try Our Product 👑"
 }
