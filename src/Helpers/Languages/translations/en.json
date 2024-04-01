@@ -125,7 +125,7 @@
   "refferalsInfo3": "If your friends double their money, you can take them to Vegas if you win the promotion, and they can take you if they win and you took the double-the-money offer",
   "competitionTitleSpan": "daily competition",
   "competitionPoints": "Points",
-  "competitionSubtitle": "First 2 places get $69 each, 3-10 $6.90 each.",
+  "competitionSubtitle": "First 2 places get $6.9 each, 3-10 $6.90 each.",
   "competitionLeftBtn": "Enjoy Live Experiences 💃",
   "competitionLeftSection1": "1 credit bought =",
   "competitionLeftSection2": "0.5 competition points",
@@ -144,7 +144,7 @@
   "modalMenuLink4": "Refer to get tickets",
   "modalMenuLink5": "My Eligible Referrals for Vegas",
   "modalMenuLink6": "The",
-  "modalMenuLink6Span": "$69 Daily Competition",
+  "modalMenuLink6Span": "$6.9 Daily Competition",
   "modalMenuLink7": "Withdraw your money",
   "modalMenuLink8": "Chat room",
   "modalMenuLink9": "Transaction History",
@@ -272,7 +272,7 @@
   "rulesPoint1li2": "⁠Purchase 5 credits and receive a bonus of 5 more",
   "rulesPoint2Title": "Ways to earn rewards:",
   "rulesPoint2li1": "Spend all 10 credits on our partner and receive $10 USD on CyberSays",
-  "rulesPoint2li2": "$69 USD for the 1st place and $6.90 USD for the 2nd – 10th places each – daily!",
+  "rulesPoint2li2": "$6.9 USD for the 1st place and $6.90 USD for the 2nd – 10th places each – daily!",
   "rulesPoint2li3": "$1 USD + 30 Vegas Tickets + 10 Points for each successful referral who completes the Offer",
   "rulesPoint2li4": "1 Vegas Ticket + 0.5 Points for every credit bought after the first purchase on our partner",
   "rulesEnd": "Best of luck to all participants in the CyberSays Competition!",
@@ -342,14 +342,14 @@
       "answers": ["No, there are no limits to how many credits you can purchase. As long as you purchase more, you have better chance to win the Vegas promotion or finish in the top 10 in the 69$ daily contest."]
     },
     {
-      "question": "How does the $69 daily leaderboard work, and how can I earn points?",
+      "question": "How does the $6.9 daily leaderboard work, and how can I earn points?",
       "answers": [
         "Earn points by referring friends and purchasing our partner credits. The more you engage, the higher you climb on the leaderboard. For every friend you refer that completed the offer, you get 10 points. For every extra credit on our partner that you purchase, you get 0.5 points. "
       ]
     },
     {
       "question": "What are the rewards for the top 10 positions in the daily leaderboard?",
-      "answers": ["The top two places win $69 each, and places 3-10 win $6.90 each, every day."]
+      "answers": ["The top two places win $6.9 each, and places 3-10 win $6.90 each, every day."]
     },
     {
       "question": "How often are the leaderboard and rewards updated?",
@@ -509,7 +509,7 @@
   "NamePage4": "Competition",
   "NamePage5": "My referrals",
   "withdrawGiftTitle": "Gift Card / Cash",
-  "doubleBtnEndTask": "Win the $69 Daily Competition!",
+  "doubleBtnEndTask": "Win the $6.9 Daily Competition!",
   "paxumFlowTitle": "You’ll get a cash voucher to an email of your choice:",
   "paxumFlowInput": "Enter your Paxum ID",
   "paxumFlowPlaceholder": "Enter your Paxum ID",
@@ -548,7 +548,7 @@
   "ServiPagInput2": "Name",
   "ServiPagInput3": "National identity card (RUT)",
   "TransactionCompetitionWinner": "Finishing #",
-  "TransactionCompetitionWinner2": "in the 69$ daily competition!",
+  "TransactionCompetitionWinner2": "in the 6.9$ daily competition!",
   "modalMenuLink15": "Join as an influencer",
   "modalMenuLink16": "Partner Program",
   "InfluencerTitle": "Join us as an influencer",
@@ -682,12 +682,12 @@
   "banner2winnerSpan": ", worth ",
   "homepageNewTitle1": "Experience HOT LIVE action like never before:",
   "homepageNewTitle2": "1. Doubling your money - we value your time",
-  "homepageNewTitle3": "2. Winning $69 in the daily competition ",
+  "homepageNewTitle3": "2. Winning $6.9 in the daily competition ",
   "homepageNewTitle4": "3. Getting a chance at Vegas promotion",
   "banner3text5Span": "You have:",
 
   "banner3text5": "tickets",
-  "homepageFinishCTA": "Win the $69 Daily Competition!",
+  "homepageFinishCTA": "Win the $6.9 Daily Competition!",
   "newTaskDouble": "Buy $5, spend them, and get $10 immediately as ",
   "homepageBtnNew": "Get Paid to Try Our Product 👑"
 }
