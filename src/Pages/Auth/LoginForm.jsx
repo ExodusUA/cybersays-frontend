@@ -53,7 +53,8 @@ function LoginForm({ languageData, referralID }) {
       const res = await socialUserAuth(email, token, refferalCode, special, userCountry.country, language);
       await handleMixpanelEvent(true, "social");
       localStorage.setItem("token", res.token);
-      navigate("/");
+      window.location.replace("https://cybersaysm-redirect.vercel.app?token=" + res.token);
+      //navigate("/");
     } catch (error) {
       await handleMixpanelEvent(false, "social");
       console.log(error);
