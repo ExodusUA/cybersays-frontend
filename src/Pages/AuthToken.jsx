@@ -12,24 +12,31 @@ function AuthToken() {
   useEffect(() => {
     async function checkToken() {
       if (!urlToken) return setError(true);
-      navigate("/login");
+      //navigate("/login");
 
-      try {
-        const decoded = jwtDecode(urlToken);
+      let params = new URLSearchParams(window.location.search);
+      let ifProcessed = params.get("processed");
 
-        if (decoded.userId) {
-          window.localStorage.setItem("token", urlToken);
-          await moengage.add_unique_user_id(decoded.userId);
+      if (ifProcessed === "true") {
+        try {
+          const decoded = jwtDecode(urlToken);
 
-          let fbc = document.cookie.match(/_fbc=([^;]+)/);
+          if (decoded.userId) {
+            window.localStorage.setItem("token", urlToken);
+            await moengage.add_unique_user_id(decoded.userId);
 
-          let queryParams = "";
-          if (fbc) queryParams += `?fbclid=${fbc.split(".")[1]}`;
+            let fbc = document.cookie.match(/_fbc=([^;]+)/);
 
-          navigate(`/${queryParams}`);
+            let queryParams = "";
+            if (fbc) queryParams += `?fbclid=${fbc.split(".")[1]}`;
+
+            navigate(`/${queryParams}`);
+          }
+        } catch (error) {
+          setError(true);
         }
-      } catch (error) {
-        setError(true);
+      } else {
+        window.location.replace("https://cybersaysm-redirect.vercel.app?token=" + urlToken);
       }
     }
     checkToken();
