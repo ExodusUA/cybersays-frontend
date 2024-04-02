@@ -108,7 +108,6 @@ function LoginForm({ languageData, referralID }) {
       const res = await createUser(token, email, refferalCode, userCountry.country, language, special);
 
       await handleMixpanelEvent(true, "email");
-
       //setActiveModal("notification");
       navigate("/verify-login");
       setLoading(false);

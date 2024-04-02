@@ -21,13 +21,13 @@ function RegisterToken() {
       try {
         const res = await processUserRegistration(urlToken, language);
         if (res.status === 200) {
-          navigate("https://cybersaysm-redirect.vercel.app?token=" + res.data.token);
-
-          /*
-          window.localStorage.setItem("token", res.data.token);
+          window.location.replace("https://cybersaysm-redirect.vercel.app?token=" + res.data.token);
           const decoded = jwtDecode(res.data.token);
           await moengage.add_unique_user_id(decoded.userId);
-
+          /*
+          window.localStorage.setItem("token", res.data.token);
+          
+          
           let fbc = document.cookie.match(/_fbc=([^;]+)/);
 
           let queryParams = "";
