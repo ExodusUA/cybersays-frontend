@@ -3,11 +3,16 @@
   "metaDescription": "Aproveite e ganhe na TreatCoin através da CyberSays!",
   "HeaderTitle": "CyberSays... <span class='text-gradient'>Dobre seu dinheiro!</span>",
   "HeaderSubTitle": "Compre, aproveite, e X2 seu dinheiro!",
-  "HeaderButton": "Comece agora",
+  "HeaderButton": "Seja pago para experimentar o ImLive",
   "LatestOffers": "Últimas Ofertas",
   "OfferTitle": "Nosso parceiro - Experiências de Webcam para Adultos",
   "OfferDescription": "Registre-se e deposite R$25 no nosso parceiro! Nosso parceiro dobrará seus créditos, lhe dando R$50 ao invés de R$25. Após usar seus créditos do nosso parceiro, CyberSays dobrará seu dinheiro, te devolvendo R$50 na TreatCoin!",
-  "listTexts": ["Registre-se no site do nosso parceiro", "Compre 5 créditos e ganhe outros 5 de graça", "Aproveite usando todos os 10 créditos no nosso parceiro", "Ganhe $10 da CyberSays - dobrando os $5 que gastou!"],
+  "listTexts": [
+    "Registre-se no site do nosso parceiro",
+    "Compre 5 créditos e ganhe outros 5 de graça",
+    "Aproveite usando todos os 10 créditos no nosso parceiro",
+    "Ganhe $10 da CyberSays - dobrando os $5 que gastou!"
+  ],
   "OfferButton": "Ganhe X2 Agora!",
   "CopyLink": "Copiar Link",
   "TreatCoins": "Treat Coins",
@@ -109,7 +114,7 @@
   "raffleRightSection2": "30 bilhetes de sorteio + R$5",
   "raffleRulesDesc": "*Não é necessário fazer uma compra para participar do sorteio.",
   "raffleRulesLink": "Regras do sorteio",
-  "doubleTitle": "Dobre Seu Dinheiro e obtenha sua elegibilidade para o sorteio",
+  "doubleTitle": "Dobre Seu Dinheiro - Se Divirta!",
   "doubleSubtitleSpan": "Um",
   "doubleSubtitle": "aparecerá após a conclusão da tarefa",
   "doublePaid": "Saque",
@@ -144,7 +149,7 @@
   "modalMenuLink4": "Indique para ganhar bilhetes",
   "modalMenuLink5": "Minhas Indicações Elegíveis para Vegas",
   "modalMenuLink6": "A",
-  "modalMenuLink6Span": "Competição diária de US$6.9",
+  "modalMenuLink6Span": "Competição diária de US$69",
   "modalMenuLink7": "Sacar seu dinheiro",
   "modalMenuLink8": "Sala de bate-papo",
   "modalMenuLink9": "Histórico de transações",
@@ -231,12 +236,12 @@
   "authSlide1": "“Meu desejo é sua ordem - deixe a emoção invadir você.”",
   "authSlide1li1": "1. Dobre seu dinheiro - valorizamos seu tempo",
   "authSlide1li2": "2. Tenha a chance de ganhar a promoção de Las Vegas",
-  "authSlide1li3": "3. Conquiste a competição de US$6.9",
+  "authSlide1li3": "3. Conquiste a competição de US$69",
   "authSlide2": "1. Deposite e Dobre!",
   "authSlide2li1": "Deposite 5$ no site do nosso parceiro - aproveite para usá-los e dobre para receber imediatamente um retorno de 10$ em dinheiro da CyberSays... porque valorizamos o seu tempo!",
   "authSlide3": "2. Las Vegas com Amigos!",
   "authSlide3li1": "Adquira bilhetes para Las Vegas e tenha a chance de ganhar a nossa incrível promoção de Las Vegas - um fim de semana dos seus sonhos que você nunca esquecerá!",
-  "authSlide4": "3. Ganhe a competição diária de US$6.9",
+  "authSlide4": "3. Ganhe a competição diária de US$69",
   "authSlide4li1": "Ganhe pontos ao engajar mais na CyberSays. Termine em primeiro lugar em nosso top 10 para ganhar US69, diariamente! ",
   "authEnterEmail": "Digite seu e-mail",
   "authContinue": "Continuar",
@@ -281,7 +286,7 @@
   "toolInfoHow": "Como?",
   "toolInfolef1": "R$50,00 no seu bolso",
   "toolInfolef2": "Ganhe a promoção de Las Vegas",
-  "toolInfolef3": "Ganhe a competição diária de US$6.9",
+  "toolInfolef3": "Ganhe a competição diária de US$69",
   "toolInfoRight1": "Complete a oferta \"Dobre seu dinheiro\"",
   "toolInfoRight2": "Consiga bilhetes comprando créditos no nosso parceiro e indique amigos que completem a oferta",
   "toolInfoRight3": "Ganhe pontos comprando créditos no nosso parceiro e indique amigos que completem a oferta",
@@ -295,15 +300,21 @@
   "FAQ_Questions": [
     {
       "question": "O que estou fazendo aqui?",
-      "answers": ["Você está aqui para garantir 100% do dobro do seu depósito inicial, concorrer a uma chance de ganhar um fim de semana emocionante em Las Vegas e participar da nossa competição diária de US$6.9"]
+      "answers": [
+        "Você está aqui para garantir 100% do dobro do seu depósito inicial, concorrer a uma chance de ganhar um fim de semana emocionante em Las Vegas e participar da nossa competição diária de US$69"
+      ]
     },
     {
       "question": "Quais são os requisitos para se qualificar para o cashback instantâneo de US$ 10?",
-      "answers": ["Basta se registrar no nosso parceiro, depositar R$25 para receber R$25 em créditos, gastar esses créditos e, além disso, você receberá R$50 em cashback instantaneamente"]
+      "answers": [
+        "Basta se registrar no nosso parceiro, depositar R$25 para receber R$25 em créditos, gastar esses créditos e, além disso, você receberá R$50 em cashback instantaneamente"
+      ]
     },
     {
       "question": "Posso sacar meu cashback de US$ 10 imediatamente após recebê-lo?",
-      "answers": ["Sim, seu cashback de US$ 10 estará disponível para saque imediato"]
+      "answers": [
+        "Sim, seu cashback de US$ 10 estará disponível para saque imediato"
+      ]
     },
     {
       "question": "Como posso convidar amigos para participar da CyberSays e quais são o nosso benefícios?",
@@ -323,7 +334,9 @@
     },
     {
       "question": "Há um limite para o número de amigos que posso indicar para a CyberSays?",
-      "answers": ["Não, não há limite. Indique quantos amigos você quiser e ganhe mais!"]
+      "answers": [
+        "Não, não há limite. Indique quantos amigos você quiser e ganhe mais!"
+      ]
     },
     {
       "question": "Como são escolhidos os vencedores do fim de semana em Las Vegas?",
@@ -339,12 +352,14 @@
     },
     {
       "question": "Como faço para comprar créditos adicionais no parceiro?",
-      "answers": ["Clique aqui para comprar mais créditos e aumentar suas chances de ganhar a promoção de Las Vegas e US$60 em pontos da competição diária"]
+      "answers": [
+        "Clique aqui para comprar mais créditos e aumentar suas chances de ganhar a promoção de Las Vegas e US$60 em pontos da competição diária"
+      ]
     },
     {
       "question": "Há algum limite para a quantidade de créditos que posso comprar?",
       "answers": [
-        "Não, não há limites para a quantidade de créditos que você pode comprar. Desde que compre mais, você terá mais chances de ganhar a promoção de Las Vegas ou terminar entre os 10 primeiros na competição diária de US$6.9."
+        "Não, não há limites para a quantidade de créditos que você pode comprar. Desde que compre mais, você terá mais chances de ganhar a promoção de Las Vegas ou terminar entre os 10 primeiros na competição diária de US$69."
       ]
     },
     {
@@ -355,27 +370,39 @@
     },
     {
       "question": "Quais são os prêmios para as 10 primeiras posições na tabela de classificação diária?",
-      "answers": ["Os dois primeiros lugares ganham US$ 69 cada, e os lugares de 3 a 10 ganham US$ 6,90 cada, todos os dias."]
+      "answers": [
+        "Os dois primeiros lugares ganham US$ 69 cada, e os lugares de 3 a 10 ganham US$ 6,90 cada, todos os dias."
+      ]
     },
     {
       "question": "Com que frequência a tabela de classificação e os prêmios são atualizados?",
-      "answers": ["A tabela de classificação e os prêmios são atualizados imediatamente, em tempo real."]
+      "answers": [
+        "A tabela de classificação e os prêmios são atualizados imediatamente, em tempo real."
+      ]
     },
     {
       "question": "Posso ganhar recompensas diárias várias vezes?",
-      "answers": ["Sim, você pode ganhar recompensas diárias sempre que estiver entre os 10 primeiros da tabela de classificação."]
+      "answers": [
+        "Sim, você pode ganhar recompensas diárias sempre que estiver entre os 10 primeiros da tabela de classificação."
+      ]
     },
     {
       "question": "O que acontece se houver um empate na tabela de classificação diária?",
-      "answers": ["Em caso de empate, será escolhido o usuário com o maior número de amigos indicados, seguido pelo usuário com o maior número de créditos comprados e, por fim, pelo que concluir a oferta mais cedo."]
+      "answers": [
+        "Em caso de empate, será escolhido o usuário com o maior número de amigos indicados, seguido pelo usuário com o maior número de créditos comprados e, por fim, pelo que concluir a oferta mais cedo."
+      ]
     },
     {
       "question": "Há alguma taxa ou encargo para depositar ou sacar dinheiro?",
-      "answers": ["Não, não há taxas ou encargos para nenhuma transação financeira em nossa plataforma."]
+      "answers": [
+        "Não, não há taxas ou encargos para nenhuma transação financeira em nossa plataforma."
+      ]
     },
     {
       "question": "Como posso monitorar minhas indicações e recompensas em tempo real?",
-      "answers": ["para monitorar suas indicações e recompensas à medida que elas acontecem."],
+      "answers": [
+        "para monitorar suas indicações e recompensas à medida que elas acontecem."
+      ],
       "link": "#",
       "linkName": "Clique aqui"
     },
@@ -387,7 +414,9 @@
     },
     {
       "question": "Com quem posso entrar em contato para obter suporte se tiver problemas com a minha conta ou com as recompensas?",
-      "answers": ["para acessar nosso chat para qualquer assistência que você precisar."],
+      "answers": [
+        "para acessar nosso chat para qualquer assistência que você precisar."
+      ],
       "link": "[contactForm]",
       "linkName": "Clique aqui"
     },
@@ -459,12 +488,12 @@
   "leaderSheetPoints": "Pontos de Competição",
   "leaderSheetFriends": "Amigos Indicados",
   "raffleRulesDescSpan": "Leia Mais.",
-  "competitionOverBtn": "Obtenha o máximo de pontos que puder para ganhar a competição diária de US$6.9:",
+  "competitionOverBtn": "Obtenha o máximo de pontos que puder para ganhar a competição diária de US$69:",
   "infoOfferTitle": "O que eu recebo quando indico um amigo que completa a oferta \"Dobre seu dinheiro\"?",
   "infoOfferPoint1": "Um amigo que ficará extremamente grato por você ajudá-lo de forma generosa",
   "infoOfferPoint2": "US$1 pode ser sacado em dinheiro imediatamente",
   "infoOfferPoint3": "30 bilhetes para Las Vegas que aumentam sua chance de ganhar a promoção de Las Vegas",
-  "infoOfferPoint4": "10 pontos de competição diários de US$6.9 que o aproximam dos 10 melhores",
+  "infoOfferPoint4": "10 pontos de competição diários de US$69 que o aproximam dos 10 melhores",
   "infoOfferPoint5": "Um amigo que você pode escolher para ir a Las Vegas se ganhar a promoção",
   "infoOfferPoint6": "Seu amigo poderá escolher você para ir a Las Vegas se ele ganhou a promoção e você completou a oferta \"Dobre seu dinheiro\"",
   "earnedModalTitle": "Últimos ganhos em dólar",
@@ -523,7 +552,7 @@
   "NamePage4": "Competição",
   "NamePage5": "Meus indicados",
   "withdrawGiftTitle": "Gift Card / Dinheiro",
-  "doubleBtnEndTask": "Ganhe a Competição Diária de $6.9!",
+  "doubleBtnEndTask": "Ganhe a Competição Diária de $69!",
   "paxumFlowTitle": "Você receberá um voucher em dinheiro no e-mail de sua escolha:",
   "paxumFlowInput": "Digite sua ID da Paxum",
   "paxumFlowPlaceholder": "Digite sua ID da Paxum",
@@ -545,7 +574,7 @@
   "aboutModalDesc6": "Inspirado no jogo infantil \"Simon Says\", o CyberSays também inclui elementos de gamificação, resultando em recompensas incríveis e diversão ilimitada para seus usuários.",
   "loginTermsTitle": "Ao se registrar na CyberSays, você declara que tem +18 anos e que concorda com o nosso",
   "loginTermsLink": "Termos e Serviços",
-  "homepageMessageTitle": "Tudo que você quer fazer... AO VIVO",
+  "homepageMessageTitle": "Diga a ela o que fazer e ela fará... AO VIVO",
   "SPEITitle": "Você receberá um voucher em dinheiro em um e-mail de sua escolha:",
   "SPEIInput1": "Nome",
   "SPEIInput2": "Sobrenome",
@@ -561,7 +590,7 @@
   "ServiPagInput2": "Nome",
   "ServiPagInput3": "National identity card (RUT)",
   "TransactionCompetitionWinner": "Terminando #",
-  "TransactionCompetitionWinner2": "na competição diária de US$6.9!",
+  "TransactionCompetitionWinner2": "na competição diária de US$69!",
   "modalMenuLink15": "Junte-se como influenciador",
   "modalMenuLink16": "Programa de parceiro",
   "InfluencerTitle": "Registre-se como influenciador",
@@ -696,12 +725,22 @@
   "banner2winnerSpan": "no valor de ",
   "homepageNewTitle1": "Experimente ação AO VIVO intensa como nunca:",
   "homepageNewTitle2": "1. Dobre seu dinheiro - valorizamos seu tempo",
-  "homepageNewTitle3": "2. Ganhe $6.9 na competição diária",
+  "homepageNewTitle3": "2. Ganhe $69 na competição diária",
   "homepageNewTitle4": "3. Tenha uma chance na promoção de Vegas",
   "banner3text5Span": "Você tem:",
 
   "banner3text5": "bilhetes",
-  "homepageFinishCTA": "Ganhe a Competição Diária de US$6.9!",
-  "newTaskDouble": "Compre R$25, gaste-os e receba R$50 imediatamente como",
-  "homepageBtnNew": "Receba para Experimentar nosso Produto 👑"
+  "homepageFinishCTA": "Ganhe a Competição Diária de US$69!",
+  "newTaskDouble": "Compre R$25, gaste-os e receba R$50 imediatamente como ",
+
+  "homepageBtnNew1": "1. Seja pago para experimentar ImLive 👑",
+  "homepageBtnNew2": "2. Ganhe $6.9 na competição diária",
+  "homepageBtnNew3": "3. Tenha a chance de ganhar a promoção de Vegas",
+  "homepageNewPoint1": "Seja pago para experimentar",
+  "homepageNewPoint2": "Ganhe $6.9 na competição diária",
+  "homepageNewPoint3": "⁠Tenha a chance de ganhar a promoção de Vegas",
+  "homepageStep1": "Cadastre-se",
+  "homepageStep2": "Compre R$25",
+  "homepageStep3": "Gaste tudo",
+  "homepageStep4": "Receba R$50"
 }

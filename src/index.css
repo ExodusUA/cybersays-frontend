@@ -677,16 +677,36 @@ body {
     .raffleTicketOverBtn {
         font-size: 22px !important;
     }
+    
 }
 
 @media screen and (max-height: 791px) and (min-width: 1200px) {
     .memeHeight {
         margin-top: 30px !important;
     }
-
+    
 }
 
-
+@media screen and (max-height: 805px) and (min-width: 1200px) {
+    
+    .homepageLeftBlock {
+        max-width: 390px !important;
+    }
+    .homepageLeftBlockTitle {
+        font-size: 20px !important;
+        width: 220px !important;
+        line-height: 24px !important;
+        right: 20px !important;
+        margin-top: 50px !important;
+    }
+    .homepageLeftBlockTitle2 {
+        font-size: 15px !important;
+        width: 170px !important;
+        line-height: 20px !important;
+        right: 10px !important;
+        margin-top: 75px !important;
+    }
+}
 
 @media screen and (max-width: 390px) {
     .homepageSE {

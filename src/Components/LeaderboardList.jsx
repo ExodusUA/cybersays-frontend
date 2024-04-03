@@ -34,7 +34,7 @@ function LeaderboardList({ leaderboardData, languageData, day }) {
             <p className="saira text-center text-[16px] font-bold">2</p>
             <img className={`m-auto h-[80px] w-[80px] rounded-full border-[2px] object-cover ${design === "0" ? "border-[#FFED63]" : "border-[#A1B3B0]"}`} src={twoSt} alt="twoSt" />
             <p className="saira mx-2 truncate text-center text-[12px] font-medium md:mx-1 md:text-[14px]">{maskEmail(leaderboardData[1].email)}</p>
-            <p className={`saira text-center text-[14px] font-medium md:text-[16px] ${design === "0" ? "text-[#FFED63]" : "text-[#A1B3B0]"}`}>$6.9</p>
+            <p className={`saira text-center text-[14px] font-medium md:text-[16px] ${design === "0" ? "text-[#FFED63]" : "text-[#A1B3B0]"}`}>$69</p>
             <p className="saira text-center text-[14px] font-medium text-[#FFED63] md:text-[14px]">
               {Number(leaderboardData[1].points).toFixed(0)} {languageData?.leaderboardsPoints}{" "}
             </p>
@@ -47,7 +47,7 @@ function LeaderboardList({ leaderboardData, languageData, day }) {
             <img className="m-auto mb-2 h-[32px] w-[32px]" src={crown} alt="crown" />
             <img className={`m-auto h-[120px] w-[120px] rounded-full border-[2px] border-[#FFED63] object-cover ${design === "0" ? "border-[#FFED63]" : "border-[#F2BB02]"}`} src={oneSt} alt="twoSt" />
             <p className="saira mx-3 truncate text-center text-[12px] font-medium md:mx-2 md:text-[14px]">{maskEmail(leaderboardData[0].email)}</p>
-            <p className={`saira text-center text-[14px] font-medium text-[#FFED63] md:text-[16px] ${design === "0" ? "text-[#FFED63]" : "text-[#F2BB02]"}`}>$6.9</p>
+            <p className={`saira text-center text-[14px] font-medium text-[#FFED63] md:text-[16px] ${design === "0" ? "text-[#FFED63]" : "text-[#F2BB02]"}`}>$69</p>
             <p className="saira text-center text-[14px] font-medium text-[#FFED63] md:text-[14px]">
               {Number(leaderboardData[0].points).toFixed(0)} {languageData?.leaderboardsPoints}{" "}
             </p>

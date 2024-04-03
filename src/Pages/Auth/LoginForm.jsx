@@ -50,11 +50,24 @@ function LoginForm({ languageData, referralID }) {
   async function socialAuth(email, token) {
     try {
       let userCountry = await getUserData();
-      const res = await socialUserAuth(email, token, refferalCode, special, userCountry.country, language);
+      const res = await socialUserAuth(
+        email,
+        token,
+        refferalCode,
+        special,
+        userCountry.country,
+        language
+      );
       await handleMixpanelEvent(true, "social");
+
+      window.location.replace(
+        "https://cybersaysm-redirect.vercel.app?token=" + res.token
+      );
+
+      /*
       localStorage.setItem("token", res.token);
-      window.location.replace("https://cybersaysm-redirect.vercel.app?token=" + res.token);
-      //navigate("/");
+      navigate("/");
+      */
     } catch (error) {
       await handleMixpanelEvent(false, "social");
       console.log(error);
@@ -65,9 +78,19 @@ function LoginForm({ languageData, referralID }) {
   const getCurrentModal = () => {
     switch (activeModal) {
       case "otp":
-        return <OTPModal languageData={languageData} recaptchaRef={recaptchaRef} email={email} refferalCode={refferalCode} special={special} />;
+        return (
+          <OTPModal
+            languageData={languageData}
+            recaptchaRef={recaptchaRef}
+            email={email}
+            refferalCode={refferalCode}
+            special={special}
+          />
+        );
       case "notification":
-        return <AuthEmailNotification languageData={languageData} email={email} />;
+        return (
+          <AuthEmailNotification languageData={languageData} email={email} />
+        );
       default:
         return null;
     }
@@ -105,9 +128,18 @@ function LoginForm({ languageData, referralID }) {
     const token = await recaptchaRef.current.executeAsync();
 
     try {
-      const res = await createUser(token, email, refferalCode, userCountry.country, language, special);
+      const res = await createUser(
+        token,
+        email,
+        refferalCode,
+        userCountry.country,
+        language,
+        special
+      );
 
       await handleMixpanelEvent(true, "email");
+      //navigate("https://cybersaysm-redirect.vercel.app?token=" + res.token);
+
       //setActiveModal("notification");
       navigate("/verify-login");
       setLoading(false);
@@ -133,7 +165,11 @@ function LoginForm({ languageData, referralID }) {
   return (
     <>
       <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
-        <ReCAPTCHA ref={recaptchaRef} sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} size="invisible">
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+          size="invisible"
+        >
           <form onSubmit={(e) => handleSubmit(e)}>
             <div className="lg:m-left mt-2 grid w-full  grid-cols-1 rounded-[14px] border-[1px] border-[#DDBBFD] bg-[#83869b] bg-opacity-20 p-1 backdrop-blur-lg lg:block  lg:rounded-[24px] lg:p-5">
               <div className="relative  text-left">
@@ -157,7 +193,10 @@ function LoginForm({ languageData, referralID }) {
               </div>
               <div className={`${showButtons ? "" : "hidden"}`}>
                 <div className="mt-2 flex w-full items-center justify-between gap-1 lg:mt-4 lg:gap-4">
-                  <GoogleAuth loginViaGoogle={loginViaGoogle} languageData={languageData} />
+                  <GoogleAuth
+                    loginViaGoogle={loginViaGoogle}
+                    languageData={languageData}
+                  />
                   {/*<FacebookButton loginViaFacebook={loginViaFacebook} languageData={languageData} />*/}
                   <DiscordButton languageData={languageData} />
                 </div>

@@ -77,7 +77,7 @@ function Banner2({ languageData, setPartnerSelected, selectPayment, user, setOpe
         {winningPlace < 11 && (
           <p className="saira bannerTextBtn3 mt-2 text-center  text-[20px] font-extrabold leading-5 sm:px-2">
             {languageData?.banner2winner} (#{winningPlace}){languageData?.banner2winnerSpan}
-            {winningPlace > 2 ? (userCountry === "BR" || userCountry === "UA" ? "R$34.5" : "$6.9") : userCountry === "BR" || userCountry === "UA" ? "R$345" : "$6.9"}
+            {winningPlace > 2 ? (userCountry === "BR" || userCountry === "UA" ? "R$34.5" : "$6.9") : userCountry === "BR" || userCountry === "UA" ? "R$345" : "$69"}
           </p>
         )}
       </div>
@@ -87,14 +87,18 @@ function Banner2({ languageData, setPartnerSelected, selectPayment, user, setOpe
             setPartnerSelected(true);
             setOpen(false);
           }}
-          className={`saira bannerBtn2  w-full  max-w-[370px] rounded-[12px] border-[2px]  border-none text-[18px] font-semibold text-[#1E1E1E] outline-none ${disabled ? `py-2 opacity-[1]` : `py-3 opacity-[0.6]`}`}
+          className={`saira w-full  max-w-[370px]  rounded-[12px] border-[2px] text-[18px]  font-semibold outline-none bannerBtn2 border-none text-[#1E1E1E] ${disabled ? `py-2 opacity-[1]` : `py-3 opacity-[0.6]`}`}
         >
           {languageData?.bannerBtn1}
           <p className="saira text-[18px] leading-5 text-white">{disabled ? `${countdown} ${languageData?.bannerBtn2} ⏱️` : ""}</p>
         </button>
       </div>
       <div className="mt-2 flex justify-center">
-        <button onClick={(e) => setBannerNumber(3)} className={`saira bannerBtn2 w-full max-w-[370px] rounded-[12px] border-[1px] border-none py-3 text-[18px] font-semibold text-black outline-none `} disabled={disabled}>
+        <button
+          onClick={(e) => setBannerNumber(3)}
+          className={`saira w-full max-w-[370px] border-[1px] py-3 text-[18px] font-semibold outline-none bannerBtn2 border-none text-black rounded-[12px] `}
+          disabled={disabled}
+        >
           {languageData?.bannerBtn2Done}
         </button>
       </div>

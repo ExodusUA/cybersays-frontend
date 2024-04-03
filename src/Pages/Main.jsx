@@ -77,7 +77,9 @@ function Main({ languageData }) {
       desc: languageData?.dataMessageDesc8,
     },
   ];
-  const [messageCopied, setMessagetCopied] = useState(Array(dataMessage.length).fill(false));
+  const [messageCopied, setMessagetCopied] = useState(
+    Array(dataMessage.length).fill(false)
+  );
   const copyToMessage = (text, messageIndex) => {
     const textarea = document.createElement("textarea");
     textarea.value = text;
@@ -134,11 +136,18 @@ function Main({ languageData }) {
   const [selectedMessage, setSelectedMassege] = useState(null);
 
   let utmData = {
-    utm_source: urlParams.get("utm_source") || window.localStorage.getItem("utm_source"),
-    utm_medium: urlParams.get("utm_medium") || window.localStorage.getItem("utm_medium"),
-    utm_campaign: urlParams.get("utm_campaign") || window.localStorage.getItem("utm_campaign"),
-    utm_term: urlParams.get("utm_term") || window.localStorage.getItem("utm_term"),
-    utm_content: urlParams.get("utm_content") || window.localStorage.getItem("utm_content"),
+    utm_source:
+      urlParams.get("utm_source") || window.localStorage.getItem("utm_source"),
+    utm_medium:
+      urlParams.get("utm_medium") || window.localStorage.getItem("utm_medium"),
+    utm_campaign:
+      urlParams.get("utm_campaign") ||
+      window.localStorage.getItem("utm_campaign"),
+    utm_term:
+      urlParams.get("utm_term") || window.localStorage.getItem("utm_term"),
+    utm_content:
+      urlParams.get("utm_content") ||
+      window.localStorage.getItem("utm_content"),
   };
 
   const [userCountry, setUserCountry] = useState(null);
@@ -207,7 +216,18 @@ function Main({ languageData }) {
       points: userData?.points,
       user_id: userData?.id,
       USD_earned: userData?.allTimeEarned,
-      page_name: activePageIndex === 0 ? "Home" : activePageIndex === 1 ? "Double" : activePageIndex === 2 ? "Vegas Weekend" : activePageIndex === 3 ? "Competition" : activePageIndex === 4 ? "My referrals" : "Not set",
+      page_name:
+        activePageIndex === 0
+          ? "Home"
+          : activePageIndex === 1
+            ? "Double"
+            : activePageIndex === 2
+              ? "Vegas Weekend"
+              : activePageIndex === 3
+                ? "Competition"
+                : activePageIndex === 4
+                  ? "My referrals"
+                  : "Not set",
     });
     moengage.track_event("page_view", {
       distinct_id: userData?.id,
@@ -217,7 +237,18 @@ function Main({ languageData }) {
       points: userData?.points,
       user_id: userData?.id,
       USD_earned: userData?.allTimeEarned,
-      page_name: activePageIndex === 0 ? "Home" : activePageIndex === 1 ? "Double" : activePageIndex === 2 ? "Vegas Weekend" : activePageIndex === 3 ? "Competition" : activePageIndex === 4 ? "My referrals" : "Not set",
+      page_name:
+        activePageIndex === 0
+          ? "Home"
+          : activePageIndex === 1
+            ? "Double"
+            : activePageIndex === 2
+              ? "Vegas Weekend"
+              : activePageIndex === 3
+                ? "Competition"
+                : activePageIndex === 4
+                  ? "My referrals"
+                  : "Not set",
     });
   }, []);
 
@@ -349,14 +380,16 @@ function Main({ languageData }) {
 
   useEffect(() => {
     if (userData && userCountry) {
-      let linkData = PartnerLinks.find((link) => link.CultureCode.indexOf(userCountry) !== -1);
-      console.log(PartnerLinks);
-      if (linkData === undefined) linkData = PartnerLinks.find((link) => link.CultureCode.indexOf("en") !== -1);
+      let linkData = PartnerLinks.find(
+        (link) => link.CultureCode.indexOf(userCountry) !== -1
+      );
+      if (linkData === undefined)
+        linkData = PartnerLinks.find(
+          (link) => link.CultureCode.indexOf("en") !== -1
+        );
 
-      //let link = `https://Partner.com//wmaster.ashx?QueryID=197&WID=${linkData.CybersaysWid}&linkID=701&from=freevideo6&cbname=CyberSays&c=${linkData.CultureCode}&promocode=${userData?.id}`
-      let link = `https://cybersaysm.vercel.app?QueryID=197&WID=${linkData.CybersaysWid}&linkID=701&from=freevideo6&cbname=CyberSays&c=${linkData.CultureCode}&lang=${language.toLowerCase()}&promocode=${userData?.id}&task=${
-        userData?.completed_tasks?.indexOf("3") !== -1 ? 3 : userData?.completed_tasks?.indexOf("2") ? 2 : 1
-      }`;
+      let link = `https://imlive.com/wmaster2.ashx?QueryID=197&WID=${linkData.CybersaysWid}&linkID=701&from=freevideo6&cbname=CyberSays&c=${linkData.CultureCode}&promocode=${userData?.id}`;
+
       setPartnerURL(link);
     }
   }, [userData, userCountry]);
@@ -364,7 +397,11 @@ function Main({ languageData }) {
   useEffect(() => {
     if (userData === null) return;
 
-    if (window.localStorage.getItem("double") !== "completed" && userData?.completed_tasks && userData?.completed_tasks?.indexOf("3") !== -1) {
+    if (
+      window.localStorage.getItem("double") !== "completed" &&
+      userData?.completed_tasks &&
+      userData?.completed_tasks?.indexOf("3") !== -1
+    ) {
       setDoubleComplete(true);
       window.localStorage.setItem("double", "completed");
     }
@@ -405,7 +442,14 @@ function Main({ languageData }) {
           onSlideChange={(swiper) => handleSwiperChange(swiper)}
         >
           <SwiperSlide>
-            <Homepage scrollToPage={scrollToPage} setActivePageIndex={setActivePageIndex} activePageIndex={activePageIndex} user={userData} languageData={languageData} PartnerURL={PartnerURL} />
+            <Homepage
+              scrollToPage={scrollToPage}
+              setActivePageIndex={setActivePageIndex}
+              activePageIndex={activePageIndex}
+              user={userData}
+              languageData={languageData}
+              PartnerURL={PartnerURL}
+            />
           </SwiperSlide>
           <SwiperSlide>
             <Double
@@ -458,7 +502,11 @@ function Main({ languageData }) {
               saveAvatar={saveAvatar}
               selectedImage={selectedImage}
               setSelectedImage={setSelectedImage}
-              message={selectedMessage !== null ? dataMessage[selectedMessage].desc : ""}
+              message={
+                selectedMessage !== null
+                  ? dataMessage[selectedMessage].desc
+                  : ""
+              }
               copyToMessage={copyToMessage}
               setSelectedMassege={setSelectedMassege}
               selectedMessage={selectedMessage}
@@ -475,7 +523,12 @@ function Main({ languageData }) {
 
           <SwiperSlide></SwiperSlide>
         </Swiper>
-        <CircleNavigation languageData={languageData} activePageIndex={activePageIndex} setActivePageIndex={setActivePageIndex} user={userData} />
+        <CircleNavigation
+          languageData={languageData}
+          activePageIndex={activePageIndex}
+          setActivePageIndex={setActivePageIndex}
+          user={userData}
+        />
       </div>
     );
   };
@@ -495,7 +548,15 @@ function Main({ languageData }) {
         />
         <Route path="/terms" element={<Terms languageData={languageData} />} />
       </Routes>
-      {leaderboardModal && <LeaderboardModal user={userData} languageData={languageData} setOpen={setLeaderboardModal} loading={loading} leaderboardData={leaderboardData} />}
+      {leaderboardModal && (
+        <LeaderboardModal
+          user={userData}
+          languageData={languageData}
+          setOpen={setLeaderboardModal}
+          loading={loading}
+          leaderboardData={leaderboardData}
+        />
+      )}
       {menuOpen === true && (
         <ModalMenu
           PartnerURL={PartnerURL}
@@ -515,21 +576,108 @@ function Main({ languageData }) {
           user={userData}
         />
       )}
-      {tourModal && <TourModal user={userData} languageData={languageData} setOpen={setTourModal} />}
-      {withdrawModal && <Withdraw languageData={languageData} setOpen={setWithdrawModal} user={userData} userCountry={userCountry} />}
+      {tourModal && (
+        <TourModal
+          user={userData}
+          languageData={languageData}
+          setOpen={setTourModal}
+        />
+      )}
+      {withdrawModal && (
+        <Withdraw
+          languageData={languageData}
+          setOpen={setWithdrawModal}
+          user={userData}
+          userCountry={userCountry}
+        />
+      )}
 
-      {referralsOpen && <MyReferralsModal languageData={languageData} setOpen={setReferralsOpen} user={userData} />}
+      {referralsOpen && (
+        <MyReferralsModal
+          languageData={languageData}
+          setOpen={setReferralsOpen}
+          user={userData}
+        />
+      )}
 
-      {chatModal && <ChatModal languageData={languageData} setOpen={setChatModal} user={userData} userCountry={userCountry} />}
-      {winMoadal && <WinVegasModal languageData={languageData} setOpen={setWinModal} user={userData} />}
-      {winTicketMoadal && <WinTicketModal scrollToPage={scrollToPage} languageData={languageData} setOpen={setWinTicketModal} user={userData} />}
-      {rulesModal && <CompetitionRules setOpen={setRulesModal} languageData={languageData} />}
-      {infoOffer && <InfoOfferModal setOpen={setInfoOffer} languageData={languageData} />}
-      {earnedModal && <Earned setTransactionsModal={setTransactionsModal} languageData={languageData} setOpen={setEarnedModal} user={userData} userCountry={userCountry} />}
-      {ticketShortModal && <Ticket scrollToPage={scrollToPage} setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setTicketShortModal} user={userData} setSelectedButton={setSelectedButton} />}
-      {pointsModal && <Points scrollToPage={scrollToPage} setTicketsModal={setTicketsModal} languageData={languageData} setOpen={setPointsModal} user={userData} setSelectedButton={setSelectedButton} />}
-      {transactionsModal && <TransactionHistory scrollToPage={scrollToPage} setWithdrawModal={setWithdrawModal} languageData={languageData} setOpen={setTransactionsModal} user={userData} userCountry={userCountry} />}
-      {ticketsModal && <TicketsHistory scrollToPage={scrollToPage} languageData={languageData} setOpen={setTicketsModal} user={userData} setSelectedButton={setSelectedButton} selectedButton={selectedButton} />}
+      {chatModal && (
+        <ChatModal
+          languageData={languageData}
+          setOpen={setChatModal}
+          user={userData}
+          userCountry={userCountry}
+        />
+      )}
+      {winMoadal && (
+        <WinVegasModal
+          languageData={languageData}
+          setOpen={setWinModal}
+          user={userData}
+        />
+      )}
+      {winTicketMoadal && (
+        <WinTicketModal
+          scrollToPage={scrollToPage}
+          languageData={languageData}
+          setOpen={setWinTicketModal}
+          user={userData}
+        />
+      )}
+      {rulesModal && (
+        <CompetitionRules setOpen={setRulesModal} languageData={languageData} />
+      )}
+      {infoOffer && (
+        <InfoOfferModal setOpen={setInfoOffer} languageData={languageData} />
+      )}
+      {earnedModal && (
+        <Earned
+          setTransactionsModal={setTransactionsModal}
+          languageData={languageData}
+          setOpen={setEarnedModal}
+          user={userData}
+          userCountry={userCountry}
+        />
+      )}
+      {ticketShortModal && (
+        <Ticket
+          scrollToPage={scrollToPage}
+          setTicketsModal={setTicketsModal}
+          languageData={languageData}
+          setOpen={setTicketShortModal}
+          user={userData}
+          setSelectedButton={setSelectedButton}
+        />
+      )}
+      {pointsModal && (
+        <Points
+          scrollToPage={scrollToPage}
+          setTicketsModal={setTicketsModal}
+          languageData={languageData}
+          setOpen={setPointsModal}
+          user={userData}
+          setSelectedButton={setSelectedButton}
+        />
+      )}
+      {transactionsModal && (
+        <TransactionHistory
+          scrollToPage={scrollToPage}
+          setWithdrawModal={setWithdrawModal}
+          languageData={languageData}
+          setOpen={setTransactionsModal}
+          user={userData}
+          userCountry={userCountry}
+        />
+      )}
+      {ticketsModal && (
+        <TicketsHistory
+          scrollToPage={scrollToPage}
+          languageData={languageData}
+          setOpen={setTicketsModal}
+          user={userData}
+          setSelectedButton={setSelectedButton}
+          selectedButton={selectedButton}
+        />
+      )}
       {openMessage && (
         <Message
           user={userData}
@@ -539,31 +687,81 @@ function Main({ languageData }) {
           selectedMessage={selectedMessage}
           messageCopied={messageCopied}
           copyToMessage={copyToMessage}
-          message={selectedMessage !== null ? dataMessage[selectedMessage].desc : ""}
+          message={
+            selectedMessage !== null ? dataMessage[selectedMessage].desc : ""
+          }
           setOpenMassege={setOpenMassege}
         />
       )}
-      {openAvatar && <AvatarModal inputRef={inputRef} setSelectedImage={setSelectedImage} selectedImage={selectedImage} handleImageChange={handleImageChange} saveAvatar={saveAvatar} setOpenAvatar={setOpenAvatar} />}
+      {openAvatar && (
+        <AvatarModal
+          inputRef={inputRef}
+          setSelectedImage={setSelectedImage}
+          selectedImage={selectedImage}
+          handleImageChange={handleImageChange}
+          saveAvatar={saveAvatar}
+          setOpenAvatar={setOpenAvatar}
+        />
+      )}
       {socialLink && <SocialLink setOpen={setSocialLink} />}
-      {imageModal && <ImageModals setSelectedImage={setSelectedImage} selectedImage={selectedImage} setOpen={setImageModal} languageData={languageData} />}
+      {imageModal && (
+        <ImageModals
+          setSelectedImage={setSelectedImage}
+          selectedImage={selectedImage}
+          setOpen={setImageModal}
+          languageData={languageData}
+        />
+      )}
 
-      <div className={`fixed bottom-4 right-2 z-[99] hidden sm:bottom-8 sm:right-8 ${menuOpen && "hidden"}`}>
+      <div
+        className={`fixed bottom-4 right-2 z-[99] hidden sm:bottom-8 sm:right-8 ${menuOpen && "hidden"}`}
+      >
         <img
           onClick={(e) => {
             setChatModal(true);
           }}
           className="w-[24px] cursor-pointer sm:w-12"
-          src={design === "0" ? chatImage : require("../images/NewDesign/chatBtn.png")}
+          src={
+            design === "0"
+              ? chatImage
+              : require("../images/NewDesign/chatBtn.png")
+          }
           alt="Chat"
         />
       </div>
-      <div className={`fixed bottom-4 left-2 z-[99] sm:bottom-8 sm:left-8 ${menuOpen && "hidden"}`}>
-        <img onClick={(e) => setToolInfo(!toolInfo)} className="w-[24px] cursor-pointer sm:w-12" src={infoBtn} alt="Chat" />
+      <div
+        className={`fixed bottom-4 left-2 z-[99] sm:bottom-8 sm:left-8 ${menuOpen && "hidden"}`}
+      >
+        <img
+          onClick={(e) => setToolInfo(!toolInfo)}
+          className="w-[24px] cursor-pointer sm:w-12"
+          src={infoBtn}
+          alt="Chat"
+        />
       </div>
-      {toolInfo && <ToolTipInfo setToolInfo={setToolInfo} languageData={languageData} user={userData} />}
-      {doubleComplete && <DoubleComplete setOpen={setDoubleComplete} languageData={languageData} user={userData} userCountry={userCountry} />}
+      {toolInfo && (
+        <ToolTipInfo
+          setToolInfo={setToolInfo}
+          languageData={languageData}
+          user={userData}
+        />
+      )}
+      {doubleComplete && (
+        <DoubleComplete
+          setOpen={setDoubleComplete}
+          languageData={languageData}
+          user={userData}
+          userCountry={userCountry}
+        />
+      )}
 
-      {promoModal && <PromoModal setOpen={setPromoModal} languageData={languageData} user={userData} />}
+      {promoModal && (
+        <PromoModal
+          setOpen={setPromoModal}
+          languageData={languageData}
+          user={userData}
+        />
+      )}
     </>
   );
 }

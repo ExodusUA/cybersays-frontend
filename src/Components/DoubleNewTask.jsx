@@ -4,6 +4,8 @@ import notReady from "../images/NewDesign/Task/notReady.png";
 import { useDesign } from "../Helpers/Design/DesignContext";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../Helpers/Languages/LanguageContext";
+import logo from "../images/NewDesign/Homepage/logoIm.png";
+
 
 function DoubleNewTask({ languageData, PartnerURL, userCountry, user }) {
   const { design } = useDesign();
@@ -22,7 +24,7 @@ function DoubleNewTask({ languageData, PartnerURL, userCountry, user }) {
 
   return (
     <div className="m-auto w-full max-w-[600px]">
-      <div style={{ border: "2px solid var(--Linear, #8FE5EC)" }} className="relative flex w-full justify-end rounded-[14px] bg-newTaskBg bg-cover bg-no-repeat px-7 py-5 sm:px-5 sm:py-8">
+      <div style={{ border: "2px solid var(--Linear, #8FE5EC)" }} className="relative flex w-full justify-end rounded-[14px] bg-newTaskBg bg-cover bg-no-repeat px-7 py-5 sm:px-5 sm:pt-8 sm:pb-6">
         {tasksActive === true ? <img className="absolute right-2 top-2 h-[18px] w-[18px]" src={done} alt="done" /> : <img className="absolute right-2 top-2 h-[18px] w-[18px]" src={notReady} alt="notReady" />}
 
         <Link to={PartnerURL} target="_blank">
@@ -32,6 +34,7 @@ function DoubleNewTask({ languageData, PartnerURL, userCountry, user }) {
               <span className="saira bannerTextBtn3 ml-1 text-[16px] sm:text-[24px]"></span>
             </p>
           </div>
+          <img className="w-[105px] m-auto mt-2" src={logo} alt="logo" />
         </Link>
       </div>
       <p className="mt-8 text-center text-[18px] font-semibold sm:text-[32px]">{languageData?.doubleBtnTitle}</p>
@@ -39,7 +42,7 @@ function DoubleNewTask({ languageData, PartnerURL, userCountry, user }) {
         <button
           className={`saira my-1 flex w-full items-center justify-center border-[#FFED63] bg-white text-[18px] font-semibold text-black ${design === "0" ? "rounded-[50px] border-[2px] bg-white py-1 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
         >
-          {languageData?.HeaderButton}🎉
+          {languageData?.HeaderButton}👑
         </button>
       </Link>
     </div>

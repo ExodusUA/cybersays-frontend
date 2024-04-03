@@ -83,7 +83,7 @@ function Competition({ PartnerURL, user, setLeaderboardModal, loading, setLoadin
         <div className=" competitionSE contentForCompetitions m-auto rounded-[14px] px-2 text-center mac:!py-0 mac-center:w-[600px]  se:py-1 iphone2:mt-[40px] sm:max-w-[600px] md:mt-[60px]">
           <p className={`text-center  ${language === "es" && "text-[14px]"} mb-2 flex items-center  justify-center gap-2 text-[16px] font-semibold lg:text-[30px]`}>
             {languageData?.competitionTitle}
-            <span className="saira competitionPlaceBG rounded-[8px] border-[2px] border-[#FCBC1B] px-2 text-[12px] lg:rounded-[12px] lg:text-[24px]">$6.9</span>
+            <span className="saira competitionPlaceBG rounded-[8px] border-[2px] border-[#FCBC1B] px-2 text-[12px] lg:rounded-[12px] lg:text-[24px]">$69</span>
             {languageData?.competitionTitle2}
           </p>
         </div>
@@ -111,7 +111,7 @@ function Competition({ PartnerURL, user, setLeaderboardModal, loading, setLoadin
                 <div className="mt-[20px] ">
                   {/*<img className='w-[26px] h-[26px] sm:w-[40px] sm:h-[40px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto mt-[2px]' src={cup2} alt="cup2" />*/}
                   <div className="m-auto mt-[2px] flex h-[47px] w-[47px] items-center justify-center  rounded-full border-[3px] border-[#5F7571] bg-[#A1B3B0] sm:h-[54px] sm:w-[54px]">
-                    <p className="saira text-[10px] font-bold text-white lg:text-[12px]">$6.9</p>
+                    <p className="saira text-[10px] font-bold text-white lg:text-[12px]">$69</p>
                   </div>
                   <p className="saira mt-1 text-[8px] font-bold leading-3">#2</p>
                   <p className={`saira text-[12px] font-medium  ${design === "0" ? "text-[#FFED63]" : "text-[#A1B3B0]"}`}>
@@ -125,7 +125,7 @@ function Competition({ PartnerURL, user, setLeaderboardModal, loading, setLoadin
                 </div>
                 {/* <img className='w-[34px] h-[34px] sm:w-[56px] sm:h-[56px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto mt-[2px]' src={cup1} alt="cup2" />*/}
                 <div className="m-auto mt-[2px] flex h-[50px] w-[50px] items-center justify-center  rounded-full border-[3px] border-[#E5A200] bg-[#F8C100] sm:h-[64px] sm:w-[64px]">
-                  <p className="saira text-[14px] font-bold text-white lg:text-[18px]">$6.9</p>
+                  <p className="saira text-[14px] font-bold text-white lg:text-[18px]">$69</p>
                 </div>
                 <p className="saira mt-1 text-center text-[8px] font-bold leading-3">#1</p>
                 <p className={`saira mt-1 text-[12px] font-medium ${design === "0" ? "text-[#FFED63]" : "text-[#F2BB02]"}`}>
@@ -136,7 +136,7 @@ function Competition({ PartnerURL, user, setLeaderboardModal, loading, setLoadin
               {
                 <div className="mt-[20px] ">
                   {/*<img className='w-[26px] h-[26px] sm:w-[40px] sm:h-[40px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto mt-[2px]' src={cup3} alt="cup2" />*/}
-                  <div className="m-auto mt-[2px] flex h-[47px] w-[47px] items-center justify-center  rounded-full border-[3px] border-[#DC6.900] bg-[#F28300] sm:h-[54px] sm:w-[54px]">
+                  <div className="m-auto mt-[2px] flex h-[47px] w-[47px] items-center justify-center  rounded-full border-[3px] border-[#DC6900] bg-[#F28300] sm:h-[54px] sm:w-[54px]">
                     <p className="saira text-[10px] font-bold text-white lg:text-[12px]">$6.90</p>
                   </div>
                   <p className="saira mt-1 text-[8px] font-bold leading-3">#3 - #10</p>
@@ -177,7 +177,7 @@ function Competition({ PartnerURL, user, setLeaderboardModal, loading, setLoadin
                 to={PartnerURL}
               >
                 <button
-                  className={` border-[2px]  border-[#FFED63] bg-white text-black ${language !== "en" ? "text-[12px] lg:text-[15px]" : "text-[11px] lg:text-[18px]"} saira w-[98%] p-2  font-semibold sm:px-0 md:w-full  ${design === "0" ? " rounded-[50px] border-[2px] bg-white p-2 sm:px-6 " : "gradient-homepageBtn rounded-[8px] border-none py-2 se:py-[6px] sm:rounded-[12px] md:py-2"}`}
+                  className={` border-[2px]  border-[#FFED63] bg-white text-black ${language !== "en" ? "text-[12px] lg:text-[15px]" : 'text-[11px] lg:text-[18px]'} saira w-[98%] p-2  font-semibold sm:px-0 md:w-full  ${design === "0" ? " rounded-[50px] border-[2px] bg-white p-2 sm:px-6 " : "gradient-homepageBtn rounded-[8px] sm:rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
                 >
                   {languageData?.competitionLeftBtn}
                 </button>
@@ -189,7 +189,7 @@ function Competition({ PartnerURL, user, setLeaderboardModal, loading, setLoadin
             <div className="w-full text-center md:mx-1">
               <button
                 onClick={(e) => shareRefferalLink()}
-                className={` border-[2px]  border-[#FFED63] bg-white  text-black ${language !== "en" ? "text-[12px] lg:text-[15px]" : "text-[11px] lg:text-[18px]"} saira w-[98%] font-semibold md:w-full ${design === "0" ? " rounded-[50px] border-[2px] bg-white p-2 sm:px-0 " : `gradient-homepageBtn rounded-[8px] border-none py-2 sm:rounded-[12px] ${language !== "en" ? "se:py-[15px]" : "se:py-[6px]"}  md:py-2`}`}
+                className={` border-[2px]  border-[#FFED63] bg-white  text-black ${language !== "en" ? "text-[12px] lg:text-[15px]" : 'text-[11px] lg:text-[18px]'} saira w-[98%] font-semibold md:w-full ${design === "0" ? " rounded-[50px] border-[2px] bg-white p-2 sm:px-0 " : `gradient-homepageBtn rounded-[8px] sm:rounded-[12px] border-none py-2 ${language !== "en" ? 'se:py-[15px]' : 'se:py-[6px]'}  md:py-2`}`}
               >
                 {isLinkCopied === false ? languageData?.competitionRightBtn : languageData?.competitionRightBtn2}
               </button>

@@ -8,7 +8,7 @@ function AuthToken() {
   const navigate = useNavigate();
   const [error, setError] = useState(false);
   let urlToken = window.location.href.split("/")[4];
-  console.log("urlToken", urlToken);
+  console.log("token:", urlToken);
 
   useEffect(() => {
     async function checkToken() {
@@ -42,7 +42,9 @@ function AuthToken() {
           setError(true);
         }
       } else {
-        window.location.replace("https://cybersaysm-redirect.vercel.app?token=" + token);
+        window.location.replace(
+          "https://cybersaysm-redirect.vercel.app?token=" + token
+        );
       }
     }
     checkToken();
