@@ -83,7 +83,7 @@ function Competition({ PartnerURL, user, setLeaderboardModal, loading, setLoadin
         <div className=" competitionSE contentForCompetitions m-auto rounded-[14px] px-2 text-center mac:!py-0 mac-center:w-[600px]  se:py-1 iphone2:mt-[40px] sm:max-w-[600px] md:mt-[60px]">
           <p className={`text-center  ${language === "es" && "text-[14px]"} mb-2 flex items-center  justify-center gap-2 text-[16px] font-semibold lg:text-[30px]`}>
             {languageData?.competitionTitle}
-            <span className="saira competitionPlaceBG rounded-[8px] border-[2px] border-[#FCBC1B] px-2 text-[12px] lg:rounded-[12px] lg:text-[24px]">$69</span>
+            <span className="saira competitionPlaceBG rounded-[8px] border-[2px] border-[#FCBC1B] px-2 text-[12px] lg:rounded-[12px] lg:text-[24px]">$6.9</span>
             {languageData?.competitionTitle2}
           </p>
         </div>
@@ -97,7 +97,7 @@ function Competition({ PartnerURL, user, setLeaderboardModal, loading, setLoadin
                   {languageData?.leaderSheetYou}{" "}
                   <span className="saira text-[12px]  font-bold">
                     {" "}
-                    <span className="saira competitionPlaceBG ml-1 mr-[20px] rounded-[8px] border-[2px] border-[#FCBC1B] px-2 text-[12px]">#{user?.points == 0 ? 0 : leaderboardData?.userRankData?.user_rank || 0}</span>
+                    <span className="saira competitionPlaceBG ml-1 mr-[20px] rounded-[8px] border-[2px] border-[#FCBC1B] px-2 text-[12px]">#{user?.points == 0 ? 0 : leaderboardData?.userRankData?.position || 0}</span>
                   </span>{" "}
                   {languageData?.leaderSheetPoints} <span className="saira competitionPlaceBG ml-1 rounded-[8px] border-[2px] border-[#FCBC1B] px-2 text-[12px]">{Number(user?.points).toFixed(0)}</span>
                 </p>
@@ -177,7 +177,7 @@ function Competition({ PartnerURL, user, setLeaderboardModal, loading, setLoadin
                 to={PartnerURL}
               >
                 <button
-                  className={` border-[2px]  border-[#FFED63] bg-white text-black ${language !== "en" ? "text-[12px] lg:text-[15px]" : 'text-[11px] lg:text-[18px]'} saira w-[98%] p-2  font-semibold sm:px-0 md:w-full  ${design === "0" ? " rounded-[50px] border-[2px] bg-white p-2 sm:px-6 " : "gradient-homepageBtn rounded-[8px] sm:rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
+                  className={` border-[2px]  border-[#FFED63] bg-white text-black ${language !== "en" ? "text-[12px] lg:text-[15px]" : "text-[11px] lg:text-[18px]"} saira w-[98%] p-2  font-semibold sm:px-0 md:w-full  ${design === "0" ? " rounded-[50px] border-[2px] bg-white p-2 sm:px-6 " : "gradient-homepageBtn rounded-[8px] border-none py-2 se:py-[6px] sm:rounded-[12px] md:py-2"}`}
                 >
                   {languageData?.competitionLeftBtn}
                 </button>
@@ -189,7 +189,7 @@ function Competition({ PartnerURL, user, setLeaderboardModal, loading, setLoadin
             <div className="w-full text-center md:mx-1">
               <button
                 onClick={(e) => shareRefferalLink()}
-                className={` border-[2px]  border-[#FFED63] bg-white  text-black ${language !== "en" ? "text-[12px] lg:text-[15px]" : 'text-[11px] lg:text-[18px]'} saira w-[98%] font-semibold md:w-full ${design === "0" ? " rounded-[50px] border-[2px] bg-white p-2 sm:px-0 " : `gradient-homepageBtn rounded-[8px] sm:rounded-[12px] border-none py-2 ${language !== "en" ? 'se:py-[15px]' : 'se:py-[6px]'}  md:py-2`}`}
+                className={` border-[2px]  border-[#FFED63] bg-white  text-black ${language !== "en" ? "text-[12px] lg:text-[15px]" : "text-[11px] lg:text-[18px]"} saira w-[98%] font-semibold md:w-full ${design === "0" ? " rounded-[50px] border-[2px] bg-white p-2 sm:px-0 " : `gradient-homepageBtn rounded-[8px] border-none py-2 sm:rounded-[12px] ${language !== "en" ? "se:py-[15px]" : "se:py-[6px]"}  md:py-2`}`}
               >
                 {isLinkCopied === false ? languageData?.competitionRightBtn : languageData?.competitionRightBtn2}
               </button>

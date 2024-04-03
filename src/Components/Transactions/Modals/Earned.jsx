@@ -65,6 +65,7 @@ function Earned({ setOpen, languageData, user, setTransactionsModal, userCountry
       case "visa_withdraw":
       case "xoxoday_withdraw":
       case "imlive_withdraw":
+      case "points_withdraw":
         return (
           <div className="mt-4 flex items-center justify-between">
             <div className="flex items-center">
@@ -75,14 +76,17 @@ function Earned({ setOpen, languageData, user, setTransactionsModal, userCountry
                   <span className="saira">{type === "paxum_withdraw" ? "PIX" : type === "visa_withdraw" ? "Visa" : type === "xoxoday_withdraw" ? "Xoxoday" : type === "imlive_withdraw" ? "Partner" : "PIX"} </span>
                   {" " + status === 1 || status === 2 ? languageData?.transactionPendingSpan : status === 3 ? languageData?.transactionApprovedSpan : languageData?.transactionRejectedSpan}
                 </p>
-                <p className="saira text-[10px] font-light text-[#D7D7D7] md:text-[14px]">{moment.unix(Number(1)).format("DD MMMM, YYYY, hh:mm A")}</p>
+                <p className="saira text-[10px] font-light text-[#D7D7D7] md:text-[14px]">{moment.unix(Number(datetime)).format("DD MMMM, YYYY, hh:mm A")}</p>
                 <p className="saira text-[10px] font-light leading-3 text-[#D7D7D7] md:text-[14px]">
                   {languageData?.transactionID} {id}
                 </p>
               </div>
             </div>
             <div className="w-[150px] leading-[18px]">
-              <p className={`saira mb-1 text-right text-[20px] font-semibold ${status === 1 || status === 2 ? "text-[#FF9636]" : status === 3 ? "text-[#50EA56]" : "text-[#FF3C3C]"}`}>+{userCountry === "BR" || userCountry === "UA" ? "R$" : "$"}10</p>
+              <p className={`saira mb-1 text-right text-[20px] font-semibold ${status === 1 || status === 2 ? "text-[#FF9636]" : status === 3 ? "text-[#50EA56]" : "text-[#FF3C3C]"}`}>
+                -{userCountry === "BR" || userCountry === "UA" ? "R$" : "$"}
+                {amount}
+              </p>
               <p className={`saira text-right text-[12px] font-normal ${status === 1 || status === 2 ? "text-[#FF9636]" : status === 3 ? "text-[#50EA56]" : "text-[#FF3C3C]"}`}>{languageData?.transactionWithdraw}</p>
             </div>
           </div>
@@ -114,7 +118,10 @@ function Earned({ setOpen, languageData, user, setTransactionsModal, userCountry
 
   return (
     <div onClick={(e) => setOpen(false)} className="fixed top-0 z-[99999] flex h-screen  w-screen items-center p-4 ">
-      <div onClick={(e) => e.stopPropagation()} className={`relative m-auto w-full max-w-[600px] rounded-[12px] border-[1px] bg-[#0A1225B2] bg-opacity-70 p-2 backdrop-blur-md lg:px-4 ${design === "0" ? " border-[#FFD700]" : "  border-[#A2DBF0]"}`}>
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className={`relative m-auto w-full max-w-[600px] rounded-[12px] border-[1px] bg-[#0A1225B2] bg-opacity-70 p-2 backdrop-blur-md lg:px-4 ${design === "0" ? " border-[#FFD700]" : "  border-[#A2DBF0]"}`}
+      >
         <div className="flex justify-end md:mt-4 ">
           <img onClick={(e) => setOpen(false)} className="h-[24px] w-[24px] cursor-pointer" src={design === "0" ? close : require("../../../images/NewDesign/closeBtn.png")} alt="close" />
         </div>
@@ -126,7 +133,14 @@ function Earned({ setOpen, languageData, user, setTransactionsModal, userCountry
             </div>
           ) : transactionsData?.length > 0 ? (
             transactionsData?.reverse().map((transaction, index) => {
-              return getMarkup(transaction.type, transaction.datetime, userCountry === "BR" || userCountry === "UA" ? transaction.amount * 5 : transaction.amount, transaction.id, transaction.withdraw_status, transaction.competition_rank);
+              return getMarkup(
+                transaction.type,
+                transaction.datetime,
+                userCountry === "BR" || userCountry === "UA" ? transaction.amount * 5 : transaction.amount,
+                transaction.id,
+                transaction.withdraw_status,
+                transaction.competition_rank,
+              );
             })
           ) : (
             <div className="flex h-[200px] items-center justify-center">

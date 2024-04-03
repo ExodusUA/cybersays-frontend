@@ -79,6 +79,7 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
       case "visa_withdraw":
       case "xoxoday_withdraw":
       case "imlive_withdraw":
+      case "points_withdraw":
         return (
           <div className="mt-4 flex items-center justify-between">
             <div className="flex items-center">
@@ -89,7 +90,7 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
                   <span className="saira">{type === "paxum_withdraw" ? "PIX" : type === "visa_withdraw" ? "Visa" : type === "xoxoday_withdraw" ? "Xoxoday" : type === "imlive_withdraw" ? "Partner" : "PIX"} </span>
                   {" " + status === 1 || status === 2 ? languageData?.transactionPendingSpan : status === 3 ? languageData?.transactionApprovedSpan : languageData?.transactionRejectedSpan}
                 </p>
-                <p className="saira text-[10px] font-light text-[#D7D7D7] md:text-[14px]">{moment.unix(Number(1)).format("DD MMMM, YYYY, hh:mm A")}</p>
+                <p className="saira text-[10px] font-light text-[#D7D7D7] md:text-[14px]">{moment.unix(Number(datetime)).format("DD MMMM, YYYY, hh:mm A")}</p>
                 <p className="saira text-[10px] font-light leading-3 text-[#D7D7D7] md:text-[14px]">
                   {languageData?.transactionID} {id}
                 </p>
@@ -97,7 +98,8 @@ function TransactionHistory({ setOpen, languageData, user, userCountry, setWithd
             </div>
             <div className="w-[150px] leading-[18px]">
               <p className={`saira mb-1 text-right text-[20px] font-semibold ${status === 1 || status === 2 ? "text-[#FF9636]" : status === 3 ? "text-[#50EA56]" : "text-[#FF3C3C]"}`}>
-                +{userCountry === "BR" || userCountry === "UA" ? "R$" : "$"}10
+                -{userCountry === "BR" || userCountry === "UA" ? "R$" : "$"}
+                {amount}
               </p>
               <p className={`saira text-right text-[12px] font-normal ${status === 1 || status === 2 ? "text-[#FF9636]" : status === 3 ? "text-[#50EA56]" : "text-[#FF3C3C]"}`}>{languageData?.transactionWithdraw}</p>
             </div>
