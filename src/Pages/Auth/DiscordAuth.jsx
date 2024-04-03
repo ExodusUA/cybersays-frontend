@@ -8,28 +8,17 @@ function DiscordAuth() {
 
   const queryParams = new URLSearchParams(window.location.search);
   const fragment = new URLSearchParams(window.location.hash.slice(1));
-  const [accessToken, tokenType] = [
-    fragment.get("access_token"),
-    fragment.get("token_type"),
-  ];
+  const [accessToken, tokenType] = [fragment.get("access_token"), fragment.get("token_type")];
 
-  let refferalCode =
-    queryParams.get("ref") || window.localStorage.getItem("ref");
+  let refferalCode = queryParams.get("ref") || window.localStorage.getItem("ref");
   if (refferalCode === undefined || refferalCode === null) refferalCode = null;
 
   useEffect(() => {
     const auth = async () => {
       try {
         let userCountry = await getUserData();
-        const res = await discordUserAuth(
-          accessToken,
-          tokenType,
-          userCountry.country,
-          refferalCode
-        );
-        window.location.replace(
-          "https://cybersaysm-redirect.vercel.app?token=" + res.data.token
-        );
+        const res = await discordUserAuth(accessToken, tokenType, userCountry.country, refferalCode);
+        window.location.replace(`https://cybersaysm-redirect.vercel.app?${process.env.REACT_APP_DEV ? "dev=true" : "dev=false"}&token=` + res.data.token);
         /*
                 localStorage.setItem('token', res.data.token);
                 navigate('/')
@@ -50,7 +39,7 @@ function DiscordAuth() {
     }
   };
 
-  return <div className="text-black saira">Loading...</div>;
+  return <div className="saira text-black">Loading...</div>;
 }
 
 export default DiscordAuth;

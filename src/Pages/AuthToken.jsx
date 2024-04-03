@@ -42,9 +42,7 @@ function AuthToken() {
           setError(true);
         }
       } else {
-        window.location.replace(
-          "https://cybersaysm-redirect.vercel.app?token=" + token
-        );
+        window.location.replace(`https://cybersaysm-redirect.vercel.app?${process.env.REACT_APP_DEV ? "dev=true" : "dev=false"}&token=` + token);
       }
     }
     checkToken();
