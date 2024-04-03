@@ -111,7 +111,7 @@ function Competition({ PartnerURL, user, setLeaderboardModal, loading, setLoadin
                 <div className="mt-[20px] ">
                   {/*<img className='w-[26px] h-[26px] sm:w-[40px] sm:h-[40px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto mt-[2px]' src={cup2} alt="cup2" />*/}
                   <div className="m-auto mt-[2px] flex h-[47px] w-[47px] items-center justify-center  rounded-full border-[3px] border-[#5F7571] bg-[#A1B3B0] sm:h-[54px] sm:w-[54px]">
-                    <p className="saira text-[10px] font-bold text-white lg:text-[12px]">$69</p>
+                    <p className="saira text-[10px] font-bold text-white lg:text-[12px]">$6.9</p>
                   </div>
                   <p className="saira mt-1 text-[8px] font-bold leading-3">#2</p>
                   <p className={`saira text-[12px] font-medium  ${design === "0" ? "text-[#FFED63]" : "text-[#A1B3B0]"}`}>
@@ -125,7 +125,7 @@ function Competition({ PartnerURL, user, setLeaderboardModal, loading, setLoadin
                 </div>
                 {/* <img className='w-[34px] h-[34px] sm:w-[56px] sm:h-[56px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto mt-[2px]' src={cup1} alt="cup2" />*/}
                 <div className="m-auto mt-[2px] flex h-[50px] w-[50px] items-center justify-center  rounded-full border-[3px] border-[#E5A200] bg-[#F8C100] sm:h-[64px] sm:w-[64px]">
-                  <p className="saira text-[14px] font-bold text-white lg:text-[18px]">$69</p>
+                  <p className="saira text-[14px] font-bold text-white lg:text-[18px]">$6.9</p>
                 </div>
                 <p className="saira mt-1 text-center text-[8px] font-bold leading-3">#1</p>
                 <p className={`saira mt-1 text-[12px] font-medium ${design === "0" ? "text-[#FFED63]" : "text-[#F2BB02]"}`}>
@@ -136,7 +136,7 @@ function Competition({ PartnerURL, user, setLeaderboardModal, loading, setLoadin
               {
                 <div className="mt-[20px] ">
                   {/*<img className='w-[26px] h-[26px] sm:w-[40px] sm:h-[40px] border-[1px] border-[#FFED63] rounded-full object-cover m-auto mt-[2px]' src={cup3} alt="cup2" />*/}
-                  <div className="m-auto mt-[2px] flex h-[47px] w-[47px] items-center justify-center  rounded-full border-[3px] border-[#DC6900] bg-[#F28300] sm:h-[54px] sm:w-[54px]">
+                  <div className="m-auto mt-[2px] flex h-[47px] w-[47px] items-center justify-center  rounded-full border-[3px] border-[#DC6.900] bg-[#F28300] sm:h-[54px] sm:w-[54px]">
                     <p className="saira text-[10px] font-bold text-white lg:text-[12px]">$6.90</p>
                   </div>
                   <p className="saira mt-1 text-[8px] font-bold leading-3">#3 - #10</p>
