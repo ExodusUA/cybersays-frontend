@@ -257,7 +257,7 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
                 />
                 {/*<Link to={PartnerURL} target='_blank'><img className={`w-[160px] md:w-[240px] md:mt-5 mac:!mt-6 mb-10 ${design === '0' ? 'block' : 'hidden'}`} src={PartnerLogo} alt="PartnerLogo" /></Link>*/}
                 <p
-                  className={` saira absolute font-medium ${design === "0" ? "right-[20px] mt-[35px] w-[110px] text-[14px] leading-4 text-[#FFED63] iphone:right-[25px] lg:right-[40px] lg:mt-[90px] lg:w-[150px] lg:text-[20px] lg:leading-7 homepageLeftBlockTitle2" : `gradient-linkDouble right-[15px] mt-[10px] w-[200px] text-[18px] leading-5 iphone:right-[30px]  lg:mt-[60px] lg:w-[270px] lg:text-[22px] lg:leading-7 homepageLeftBlockTitle ${language === "es" ? "lg:right-[-35px] mac:!right-[-15px]" : 'lg:right-[10px]'}`}`}
+                  className={` saira absolute font-medium ${design === "0" ? "right-[20px] mt-[35px] w-[110px] text-[14px] leading-4 text-[#FFED63] iphone:right-[25px] lg:right-[40px] lg:mt-[90px] lg:w-[150px] lg:text-[20px] lg:leading-7 homepageLeftBlockTitle2" : `gradient-linkDouble right-[20px] mt-[10px] w-[200px] text-[18px] leading-5 iphone:right-[30px]  lg:mt-[60px] lg:w-[270px] lg:text-[22px] lg:leading-7 homepageLeftBlockTitle ${language === "es" ? "lg:right-[-35px] mac:!right-[-15px]" : 'lg:right-[20px]'}`}`}
                 >
                   {languageData?.homepageMessageTitle}
                 </p>
