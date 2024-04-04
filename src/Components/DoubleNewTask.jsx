@@ -7,7 +7,7 @@ import { useLanguage } from "../Helpers/Languages/LanguageContext";
 import logo from "../images/NewDesign/Homepage/logoIm.png";
 
 
-function DoubleNewTask({ languageData, PartnerURL, userCountry, user }) {
+function DoubleNewTask({ languageData, PartnerURL, userCountry, user, getButtonMarkup, lastTask }) {
   const { design } = useDesign();
   const [tasksActive, setTasksActive] = useState(false);
   const { language } = useLanguage();
@@ -39,11 +39,9 @@ function DoubleNewTask({ languageData, PartnerURL, userCountry, user }) {
       </div>
       <p className="mt-8 text-center text-[18px] font-semibold sm:text-[32px]">{languageData?.doubleBtnTitle}</p>
       <Link to={PartnerURL} target="_blank">
-        <button
-          className={`saira my-1 flex w-full items-center justify-center border-[#FFED63] bg-white text-[18px] font-semibold text-black ${design === "0" ? "rounded-[50px] border-[2px] bg-white py-1 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
-        >
-          {languageData?.HeaderButton}👑
-        </button>
+        
+          {getButtonMarkup(lastTask)}
+       
       </Link>
     </div>
   );
