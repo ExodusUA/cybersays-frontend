@@ -87,7 +87,7 @@ function Auth({ languageData }) {
                 <div className=" lg:max-w-[600px]">
                   <img className="logoLogin  m-auto mt-[-30px] w-[130px] lg:mt-0 lg:w-[250px]" src={logoCyber} alt="Logotype" />
                   <p
-                    className={`h-[154px] w-full pb-2 text-center text-[20px] font-bold leading-7 text-white se:mt-[0px] lg:w-[100%] lg:text-left lg:text-[32px] lg:leading-9 ${language === "es" && "md:min-h-[210px]"} md:min-h-[180px]`}
+                    className={`h-[154px] w-full pb-2 text-center text-[20px] font-bold leading-7 text-white se:mt-[0px] lg:w-[100%] lg:text-left lg:text-[28px] lg:leading-9 ${language === "es" && "md:min-h-[210px]"} md:min-h-[180px]`}
                   >
                     {currentSlide === 0 && (
                       <>
@@ -107,9 +107,9 @@ function Auth({ languageData }) {
                         {languageData?.authSlide2}
 
                         <div className=" mt-2 leading-6">
-                          <p className="text-[16px] font-bold lg:text-[20px]">{languageData?.authSlide2li1}</p>
-                          <p className="text-[16px] font-bold lg:text-[20px]">{languageData?.authSlide2li2}</p>
-                          <p className="text-[16px] font-bold lg:text-[20px]">{languageData?.authSlide2li3}</p>
+                          <p className="text-[14px] font-bold lg:text-[16px]">{languageData?.authSlide2li1}</p>
+                          <p className="text-[14px] font-bold lg:text-[16px]">{languageData?.authSlide2li2}</p>
+                          <p className="text-[14px] font-bold lg:text-[16px]">{languageData?.authSlide2li3}</p>
                         </div>
                       </>
                     )}
