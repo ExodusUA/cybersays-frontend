@@ -13,6 +13,7 @@ import point1 from "../../images/NewDesign/Homepage/point_1.png";
 import point2 from "../../images/NewDesign/Homepage/point_2.png";
 import point3 from "../../images/NewDesign/Homepage/point_3.png";
 import logoIM from "../../images/NewDesign/Homepage/logoIm2.png";
+import stepsDesk from "../../images/NewDesign/homepageStepDesk.svg";
 
 
 function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
@@ -82,7 +83,7 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
               onClick={(e) => handleEvent()}
               className={`saira  flex   w-full  items-center justify-center border-[#FFED63] bg-white text-[18px] font-semibold text-black  ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-2 md:py-2"}`}
             >
-              {languageData?.homepageBtnNew2}
+              {languageData?.homepageBtnNew1}
             </button>
           </Link>
         );
@@ -93,7 +94,7 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
               onClick={(e) => handleEvent()}
               className={`saira   flex   w-full  items-center justify-center border-[#FFED63] bg-white text-[14px] font-semibold text-black lg:text-[18px]  ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-2 md:py-2"}`}
             >
-              {languageData?.homepageBtnNew3}
+              {languageData?.homepageBtnNew1}
             </button>
           </Link>
         );
@@ -134,10 +135,9 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
           <div className="homepageSE contentHomepage mt-0 items-end  iphone2:mt-[30px] md:mt-[70px] md:items-center lg:flex">
             <div className="mb-2 flex w-full items-center lg:hidden">
               <div className=" text-center">
-                <div className="flex items-center">
+                <div className="flex items-start">
                   <img className="w-[17px] mr-2" src={point1} alt="point1" />
-                  <p className="saira text-[14px] font-semibold">{languageData?.homepageNewPoint1}</p>
-                  <img className="w-[75px] ml-2" src={logoIM} alt="logoIM" />
+                  <p className="saira text-[14px] font-semibold text-left">{languageData?.homepageNewPoint1}<img className="w-[75px] ml-2 inline-image" src={logoIM} alt="logoIM" /></p>
                 </div>
                 <div className="flex items-center ">
                   <img className="w-[17px] mr-2" src={point2} alt="point2" />
@@ -265,13 +265,13 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
               <div className=" relative ">{getButtonMarkup(lastTask)}</div>
             </div>
             <div className="mb-4 ml-1 w-[200px] sm:w-[unset] md:mb-[unset] md:ml-10  hidden  lg:block">
-              <div className=" w-full max-w-[300px] items-center md:max-w-[780px]">
-                <div className="flex items-center">
+              <div className=" w-full max-w-[300px] items-center md:max-w-[560px]">
+                <div className="flex items-start">
                   <img className="w-[33px] mr-2" src={point1} alt="point1" />
-                  <p className={`saira font-semibold ${language === "es" ? 'text-[22px]' : 'text-[24px]'}`}>{languageData?.homepageNewPoint1}</p>
-                  <img className="w-[170px] ml-2" src={logoIM} alt="logoIM" />
+                  <p className={`saira font-semibold ${language === "es" ? 'text-[22px]' : 'text-[24px]'}`}>{languageData?.homepageNewPoint1}<img className="w-[130px] ml-2 inline-image" src={logoIM} alt="logoIM" /></p>
+
                 </div>
-                <div className="flex items-center mt-[50px]">
+                <div className="flex items-center mt-[30px]">
                   <img className="w-[33px] mr-2" src={point2} alt="point2" />
                   <p className={`saira font-semibold ${language === "es" ? 'text-[22px]' : 'text-[24px]'}`}>{languageData?.homepageNewPoint2}</p>
                 </div>
@@ -320,6 +320,7 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
             </div>
 
           </div>
+          {/*
           <div className="flex items-start max-w-[320px] sm:max-w-[600px] w-full m-auto mt-2">
             <div className="m-auto w-[150px] ">
               <p className="w-[24px] h-[24px] bg-[#610057] border-[1px] border-[#FFED63] rounded-full flex items-center justify-center m-auto text-[10px] saira">1</p>
@@ -346,6 +347,14 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
             <p className="text-[12px] sm:text-[14px] saira font-extrabold text-center max-w-[100px]">{languageData?.homepageStep2}</p>
             <p className="text-[12px] sm:text-[14px] saira font-extrabold text-center max-w-[100px]">{languageData?.homepageStep3}</p>
             <p className="text-[12px] sm:text-[14px] saira font-extrabold text-center max-w-[100px]">{languageData?.homepageStep4}</p>
+          </div>
+          */}
+          <img className="max-w-[300px] sm:max-w-[500px] 2xl:max-w-[630px] w-full m-auto mt-1" src={stepsDesk} alt="stepsDesk" />
+          <div className="flex justify-between items-center sm:items-start 2xl:items-center max-w-[350px] sm:max-w-[550px] 2xl:max-w-[720px] w-full m-auto">
+            <p className="text-[12px] sm:text-[14px] 2xl:text-[24px] saira font-extrabold text-center w-[150px] sm:leading-4 2xl:leading-6 sm:pr-[20px] 2xl:pr-0">{languageData?.homepageStep1}</p>
+            <p className="text-[12px] sm:text-[14px] 2xl:text-[24px] saira font-extrabold text-center w-[200px] sm:leading-4 2xl:leading-6 pl-[10px] 2xl:pl-[30px]">{languageData?.homepageStep2}</p>
+            <p className="text-[12px] sm:text-[14px] 2xl:text-[24px] saira font-extrabold text-center w-[200px] sm:leading-4 2xl:leading-6 sm:pl-[20px]">{languageData?.homepageStep3}</p>
+            <p className="text-[12px] sm:text-[14px] 2xl:text-[24px] saira font-extrabold text-center w-[200px] sm:leading-4 2xl:leading-6 pl-[10px] sm:pl-[40px]">{languageData?.homepageStep4}</p>
           </div>
         </div>
       </div>

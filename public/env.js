@@ -92,7 +92,7 @@ window.env = {
   "VSCODE_GIT_ASKPASS_NODE": "C:\\Users\\danie\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
   "VSCODE_GIT_IPC_HANDLE": "\\\\.\\pipe\\vscode-git-9e6e667ddd-sock",
   "VSCODE_INJECTION": "1",
-  "VSCODE_NONCE": "cc099cd1-0df4-4d3e-b9d6-e313ff471402",
+  "VSCODE_NONCE": "cf0c8cbd-d95b-4ab6-af38-a6469e7aedb3",
   "windir": "C:\\WINDOWS",
   "ZES_ENABLE_SYSMAN": "1"
 };
