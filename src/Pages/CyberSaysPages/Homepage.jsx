@@ -136,6 +136,7 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage, userCountry })
         <div>
           <div className="homepageSE contentHomepage relative   mt-0 items-end iphone2:mt-[30px] md:mt-[70px] md:items-center lg:flex">
             <div className="mb-2 flex w-full items-center lg:hidden">
+              {/*
               <div className=" text-center">
                 <div className="flex items-start">
                   <img className="mr-2 w-[17px]" src={point1} alt="point1" />
@@ -153,6 +154,23 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage, userCountry })
                 <div className="mt-[5px] flex items-center">
                   <img className="mr-2 w-[17px]" src={point3} alt="point3" />
                   <p className="saira text-[14px] font-semibold">{languageData?.homepageNewPoint3}</p>
+                </div>
+              </div>
+*/}
+              <div className="relative  block sm:hidden">
+                <img className="m-auto mt-1 w-full max-w-[300px] sm:max-w-[500px] 2xl:max-w-[630px]" src={language === 'en' && stepsDesk || language === 'es' && stepsES || language === 'pt' && stepsPT} alt="stepsDesk" />
+                <div className="m-auto flex w-full max-w-[350px] items-center justify-between sm:max-w-[550px] sm:items-start 2xl:max-w-[720px] 2xl:items-center ">
+                  <p className="saira w-[150px] text-center text-[12px] font-extrabold sm:pr-[20px] sm:text-[14px] sm:leading-4 2xl:pr-0 2xl:text-[24px] 2xl:leading-6">
+                    {languageData?.homepageStep1}
+                    {userCountry === "BR" || userCountry === "UA" ? " R$25" : " $5"}
+                  </p>
+                  <p className="saira w-[200px] pl-[10px] text-center text-[12px] font-extrabold sm:text-[14px] sm:leading-4 2xl:pl-[30px] 2xl:text-[24px] 2xl:leading-6">{languageData?.homepageStep2}</p>
+                  <p className="saira w-[200px] text-center text-[12px] font-extrabold sm:pl-[20px] sm:text-[14px] sm:leading-4 2xl:text-[24px] 2xl:leading-6">
+                    {languageData?.homepageStep3} {userCountry === "BR" || userCountry === "UA" ? " R$50" : " $10"}
+                  </p>
+                  <p className="saira w-[200px] pl-[10px] text-center text-[12px] font-extrabold sm:pl-[40px] sm:text-[14px] sm:leading-4 2xl:text-[24px] 2xl:leading-6">
+                    {languageData?.homepageStep4} {userCountry === "BR" || userCountry === "UA" ? " R$100" : " $20"}
+                  </p>
                 </div>
               </div>
               {/*
@@ -254,7 +272,7 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage, userCountry })
             </div>
 
             <div
-              className={`relative ${design === "0" ? " rounded-[24px] border-[#FFD700] lg:rounded-[32px]" : "  homepageMainBlock rounded-[16px] border-[#A2DBF0]"}  m-auto border-2 px-1 pb-1 pt-8  lg:m-[unset] lg:pt-0`}
+              className={`relative ${design === "0" ? " rounded-[24px] border-[#FFD700] lg:rounded-[32px]" : "  homepageMainBlock rounded-[16px] border-[#A2DBF0]"}  m-auto border-2 px-1 pb-1 pt-8  lg:m-[unset] lg:pt-0 mt-6 sm:mt-0`}
             >
               <div className=" relative m-auto flex w-full max-w-[380px] items-center md:max-w-[470px]">
                 <img
@@ -393,22 +411,7 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage, userCountry })
             <p className="text-[12px] sm:text-[14px] saira font-extrabold text-center max-w-[100px]">{languageData?.homepageStep4}</p>
           </div>
           */}
-          <div className="relative  block sm:hidden">
-            <img className="m-auto mt-1 w-full max-w-[300px] sm:max-w-[500px] 2xl:max-w-[630px]" src={language === 'en' && stepsDesk || language === 'es' && stepsES || language === 'pt' && stepsPT} alt="stepsDesk" />
-            <div className="m-auto flex w-full max-w-[350px] items-center justify-between sm:max-w-[550px] sm:items-start 2xl:max-w-[720px] 2xl:items-center ">
-              <p className="saira w-[150px] text-center text-[12px] font-extrabold sm:pr-[20px] sm:text-[14px] sm:leading-4 2xl:pr-0 2xl:text-[24px] 2xl:leading-6">
-                {languageData?.homepageStep1}
-                {userCountry === "BR" || userCountry === "UA" ? " R$25" : " $5"}
-              </p>
-              <p className="saira w-[200px] pl-[10px] text-center text-[12px] font-extrabold sm:text-[14px] sm:leading-4 2xl:pl-[30px] 2xl:text-[24px] 2xl:leading-6">{languageData?.homepageStep2}</p>
-              <p className="saira w-[200px] text-center text-[12px] font-extrabold sm:pl-[20px] sm:text-[14px] sm:leading-4 2xl:text-[24px] 2xl:leading-6">
-                {languageData?.homepageStep3} {userCountry === "BR" || userCountry === "UA" ? " R$50" : " $10"}
-              </p>
-              <p className="saira w-[200px] pl-[10px] text-center text-[12px] font-extrabold sm:pl-[40px] sm:text-[14px] sm:leading-4 2xl:text-[24px] 2xl:leading-6">
-                {languageData?.homepageStep4} {userCountry === "BR" || userCountry === "UA" ? " R$100" : " $20"}
-              </p>
-            </div>
-          </div>
+
         </div>
       </div>
       <div className="absolute left-1/2 m-auto flex w-full -translate-x-1/2 transform justify-center  se:bottom-[140px] iphone2:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] ">
