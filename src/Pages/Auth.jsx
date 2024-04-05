@@ -106,10 +106,10 @@ function Auth({ languageData }) {
                       <>
                         {languageData?.authSlide2}
 
-                        <div className=" mt-2 leading-6">
-                          <p className="text-[13px] font-bold lg:text-[16px]">{languageData?.authSlide2li1}</p>
-                          <p className="text-[13px] font-bold lg:text-[16px]">{languageData?.authSlide2li2}</p>
-                          <p className="text-[13px] font-bold lg:text-[16px]">{languageData?.authSlide2li3}</p>
+                        <div className=" mt-2 leading-5">
+                          <p className="text-[12px] font-bold lg:text-[16px]">{languageData?.authSlide2li1}</p>
+                          <p className="text-[12px] font-bold lg:text-[16px]">{languageData?.authSlide2li2}</p>
+                          <p className="text-[12px] font-bold lg:text-[16px]">{languageData?.authSlide2li3}</p>
                         </div>
                       </>
                     )}
