@@ -58,6 +58,7 @@ module.exports = {
       'best-offer': "url('./images/NewDesign/withdraw/bestOffer.png')",
       'newTaskBg': "url('./images/NewDesign/newTaskBG.png')",
       'promo-desktop': "url('./images/Promo/bg_desktop.png')",
+      'promo-mobile': "url('./images/Promo/bg-mobile.png')",
 
       'promo-card-1': "url('./images/Promo/card1.png')",
       'promo-card-2': "url('./images/Promo/card2.png')",

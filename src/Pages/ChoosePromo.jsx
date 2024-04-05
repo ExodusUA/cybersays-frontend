@@ -44,7 +44,7 @@ function ChoosePromo({ languageData }) {
   }, [userData, userCountry]);
 
   return (
-    <section className="bg-promo-desktop h-screen w-screen overflow-y-scroll py-4 md:overflow-hidden">
+    <section className="bg-promo-mobile lg:bg-promo-desktop h-screen w-screen overflow-y-scroll py-4 md:overflow-hidden">
       <div className="flex justify-center text-center">
         <Link to={"/"} target="_blank">
           <img className="m-auto w-[80%] max-w-[470px] md:w-full" src={promo_logos} alt="Promo Logos" />
@@ -56,7 +56,7 @@ function ChoosePromo({ languageData }) {
         <p className="inter m-auto max-w-[660px] text-[14px] font-light">{languageData?.promoSubtitle}</p>
       </div>
 
-      <div className="mt-6 grid scale-100 grid-cols-1 justify-center gap-4 text-center md:mt-16 lg:grid-cols-3">
+      <div className="mt-6 grid scale-[85%] grid-cols-1 justify-center gap-4 text-center md:mt-16 md:scale-100 lg:grid-cols-3">
         <Link to={partnerURL} target="_blank">
           <div className="bg-promo-card-1 relative m-auto h-[155px] w-[360px] rounded-xl bg-cover md:h-[180px] md:w-[350px] 2xl:h-[220px] 2xl:w-[430px]">
             <div className="z-1 absolute left-0 top-0 h-full w-full bg-black/20"></div>
