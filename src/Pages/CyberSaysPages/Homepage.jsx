@@ -17,7 +17,6 @@ import stepsDesk from "../../images/NewDesign/homepageStepDesk.svg";
 import stepsPT from "../../images/NewDesign/homepageStepPT.svg";
 import stepsES from "../../images/NewDesign/homepageStepES.svg";
 
-
 function Homepage({ user, PartnerURL, languageData, scrollToPage, userCountry }) {
   let swiperRef;
   const dataTitle = [
@@ -157,8 +156,12 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage, userCountry })
                 </div>
               </div>
 */}
-              <div className="relative  block sm:hidden w-full">
-                <img className="m-auto mt-1 w-full max-w-[300px] sm:max-w-[500px] 2xl:max-w-[630px]" src={language === 'en' && stepsDesk || language === 'es' && stepsES || language === 'pt' && stepsPT} alt="stepsDesk" />
+              <div className="relative  block w-full sm:hidden">
+                <img
+                  className="m-auto mt-1 w-full max-w-[300px] sm:max-w-[500px] 2xl:max-w-[630px]"
+                  src={(language === "en" && stepsDesk) || (language === "es" && stepsES) || (language === "pt" && stepsPT)}
+                  alt="stepsDesk"
+                />
                 <div className="m-auto flex w-full max-w-[350px] items-center justify-between sm:max-w-[550px] sm:items-start 2xl:max-w-[720px] 2xl:items-center ">
                   <p className="saira w-[150px] text-center text-[12px] font-extrabold sm:pr-[20px] sm:text-[14px] sm:leading-4 2xl:pr-0 2xl:text-[24px] 2xl:leading-6">
                     {languageData?.homepageStep1}
@@ -272,7 +275,7 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage, userCountry })
             </div>
 
             <div
-              className={`relative ${design === "0" ? " rounded-[24px] border-[#FFD700] lg:rounded-[32px]" : "  homepageMainBlock rounded-[16px] border-[#A2DBF0]"}  m-auto border-2 px-1 pb-1 pt-8  lg:m-[unset] lg:pt-0 mt-12 sm:mt-0`}
+              className={`relative ${design === "0" ? " rounded-[24px] border-[#FFD700] lg:rounded-[32px]" : "  homepageMainBlock rounded-[16px] border-[#A2DBF0]"}  m-auto mt-24 border-2 px-1 pb-1  pt-8 sm:mt-0 lg:m-[unset] lg:pt-0`}
             >
               <div className=" relative m-auto flex w-full max-w-[380px] items-center md:max-w-[470px]">
                 <img
@@ -312,36 +315,41 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage, userCountry })
                 </div>
               </div>
               */}
-              <div className=" justify-center hidden sm:flex">
+              <div className=" hidden justify-center sm:flex">
                 <div>
-                  <p className="bg-[#610057] text-[20px] border-[2px] border-[#FFED63] rounded-full flex justify-center w-[49px] saira font-semibold m-auto">1</p>
-                  <p className="saira w-[150px] text-center font-extrabold text-[26px] leading-7 m-auto">
+                  <p className="saira m-auto flex w-[49px] justify-center rounded-full border-[2px] border-[#FFED63] bg-[#610057] text-[20px] font-semibold">1</p>
+                  <p className="saira m-auto w-[150px] text-center text-[26px] font-extrabold leading-7">
                     {languageData?.homepageStep1}
                     {userCountry === "BR" || userCountry === "UA" ? " R$25" : " $5"}
                   </p>
-                  <hr className="border-none w-[2px] h-[40px] bg-[#FF00E5] m-auto my-2" />
-                  <p className="bg-[#610057] text-[20px] border-[2px] border-[#FFED63] rounded-full flex justify-center w-[49px] saira font-semibold m-auto">2</p>
-                  <p className="saira w-[150px] text-center font-extrabold text-[26px] leading-7 m-auto">{languageData?.homepageStep2}</p>
+                  <hr className="m-auto my-2 h-[40px] w-[2px] border-none bg-[#FF00E5]" />
+                  <p className="saira m-auto flex w-[49px] justify-center rounded-full border-[2px] border-[#FFED63] bg-[#610057] text-[20px] font-semibold">2</p>
+                  <p className="saira m-auto w-[150px] text-center text-[26px] font-extrabold leading-7">{languageData?.homepageStep2}</p>
                   <svg className="m-auto mt-4" width="125" height="28" viewBox="0 0 125 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M40.5133 2.94656C41.0361 2.64474 41.2152 1.97627 40.9134 1.4535C40.6115 0.930733 39.9431 0.751619 39.4203 1.05344L40.5133 2.94656ZM0.943956 23.6374C0.787721 24.2205 1.13374 24.8198 1.71682 24.9761L11.2186 27.522C11.8016 27.6783 12.401 27.3323 12.5572 26.7492C12.7134 26.1661 12.3674 25.5668 11.7843 25.4105L3.33834 23.1475L5.60144 14.7015C5.75767 14.1184 5.41165 13.5191 4.82858 13.3628C4.2455 13.2066 3.64618 13.5526 3.48994 14.1357L0.943956 23.6374ZM34.6744 3.79348C34.1516 4.0953 33.9725 4.76377 34.2744 5.28654C34.5762 5.80931 35.2446 5.98842 35.7674 5.6866L34.6744 3.79348ZM26.2756 11.1667C26.7984 10.8649 26.9775 10.1964 26.6757 9.67362C26.3739 9.15085 25.7054 8.97174 25.1826 9.27356L26.2756 11.1667ZM15.6909 14.7536C15.1681 15.0555 14.989 15.7239 15.2908 16.2467C15.5926 16.7695 16.2611 16.9486 16.7839 16.6468L15.6909 14.7536ZM7.29209 22.1268C7.81486 21.825 7.99398 21.1565 7.69215 20.6338C7.39033 20.111 6.72187 19.9319 6.1991 20.2337L7.29209 22.1268ZM39.4203 1.05344L34.6744 3.79348L35.7674 5.6866L40.5133 2.94656L39.4203 1.05344ZM25.1826 9.27356L15.6909 14.7536L16.7839 16.6468L26.2756 11.1667L25.1826 9.27356ZM6.1991 20.2337L1.45321 22.9738L2.5462 24.8669L7.29209 22.1268L6.1991 20.2337Z" fill="#FF00E5" />
-                    <path d="M84.4535 2.94656C83.9307 2.64474 83.7516 1.97627 84.0534 1.4535C84.3553 0.930733 85.0237 0.751619 85.5465 1.05344L84.4535 2.94656ZM124.023 23.6374C124.179 24.2205 123.833 24.8198 123.25 24.9761L113.748 27.522C113.165 27.6783 112.566 27.3323 112.41 26.7492C112.253 26.1661 112.599 25.5668 113.182 25.4105L121.628 23.1475L119.365 14.7015C119.209 14.1184 119.555 13.5191 120.138 13.3628C120.721 13.2066 121.321 13.5526 121.477 14.1357L124.023 23.6374ZM90.2924 3.79348C90.8152 4.0953 90.9943 4.76377 90.6924 5.28654C90.3906 5.80931 89.7222 5.98842 89.1994 5.6866L90.2924 3.79348ZM98.6912 11.1667C98.1684 10.8649 97.9893 10.1964 98.2911 9.67362C98.5929 9.15085 99.2614 8.97174 99.7842 9.27356L98.6912 11.1667ZM109.276 14.7536C109.799 15.0555 109.978 15.7239 109.676 16.2467C109.374 16.7695 108.706 16.9486 108.183 16.6468L109.276 14.7536ZM117.675 22.1268C117.152 21.825 116.973 21.1565 117.275 20.6338C117.576 20.111 118.245 19.9319 118.768 20.2337L117.675 22.1268ZM85.5465 1.05344L90.2924 3.79348L89.1994 5.6866L84.4535 2.94656L85.5465 1.05344ZM99.7842 9.27356L109.276 14.7536L108.183 16.6468L98.6912 11.1667L99.7842 9.27356ZM118.768 20.2337L123.514 22.9738L122.421 24.8669L117.675 22.1268L118.768 20.2337Z" fill="#FF00E5" />
+                    <path
+                      d="M40.5133 2.94656C41.0361 2.64474 41.2152 1.97627 40.9134 1.4535C40.6115 0.930733 39.9431 0.751619 39.4203 1.05344L40.5133 2.94656ZM0.943956 23.6374C0.787721 24.2205 1.13374 24.8198 1.71682 24.9761L11.2186 27.522C11.8016 27.6783 12.401 27.3323 12.5572 26.7492C12.7134 26.1661 12.3674 25.5668 11.7843 25.4105L3.33834 23.1475L5.60144 14.7015C5.75767 14.1184 5.41165 13.5191 4.82858 13.3628C4.2455 13.2066 3.64618 13.5526 3.48994 14.1357L0.943956 23.6374ZM34.6744 3.79348C34.1516 4.0953 33.9725 4.76377 34.2744 5.28654C34.5762 5.80931 35.2446 5.98842 35.7674 5.6866L34.6744 3.79348ZM26.2756 11.1667C26.7984 10.8649 26.9775 10.1964 26.6757 9.67362C26.3739 9.15085 25.7054 8.97174 25.1826 9.27356L26.2756 11.1667ZM15.6909 14.7536C15.1681 15.0555 14.989 15.7239 15.2908 16.2467C15.5926 16.7695 16.2611 16.9486 16.7839 16.6468L15.6909 14.7536ZM7.29209 22.1268C7.81486 21.825 7.99398 21.1565 7.69215 20.6338C7.39033 20.111 6.72187 19.9319 6.1991 20.2337L7.29209 22.1268ZM39.4203 1.05344L34.6744 3.79348L35.7674 5.6866L40.5133 2.94656L39.4203 1.05344ZM25.1826 9.27356L15.6909 14.7536L16.7839 16.6468L26.2756 11.1667L25.1826 9.27356ZM6.1991 20.2337L1.45321 22.9738L2.5462 24.8669L7.29209 22.1268L6.1991 20.2337Z"
+                      fill="#FF00E5"
+                    />
+                    <path
+                      d="M84.4535 2.94656C83.9307 2.64474 83.7516 1.97627 84.0534 1.4535C84.3553 0.930733 85.0237 0.751619 85.5465 1.05344L84.4535 2.94656ZM124.023 23.6374C124.179 24.2205 123.833 24.8198 123.25 24.9761L113.748 27.522C113.165 27.6783 112.566 27.3323 112.41 26.7492C112.253 26.1661 112.599 25.5668 113.182 25.4105L121.628 23.1475L119.365 14.7015C119.209 14.1184 119.555 13.5191 120.138 13.3628C120.721 13.2066 121.321 13.5526 121.477 14.1357L124.023 23.6374ZM90.2924 3.79348C90.8152 4.0953 90.9943 4.76377 90.6924 5.28654C90.3906 5.80931 89.7222 5.98842 89.1994 5.6866L90.2924 3.79348ZM98.6912 11.1667C98.1684 10.8649 97.9893 10.1964 98.2911 9.67362C98.5929 9.15085 99.2614 8.97174 99.7842 9.27356L98.6912 11.1667ZM109.276 14.7536C109.799 15.0555 109.978 15.7239 109.676 16.2467C109.374 16.7695 108.706 16.9486 108.183 16.6468L109.276 14.7536ZM117.675 22.1268C117.152 21.825 116.973 21.1565 117.275 20.6338C117.576 20.111 118.245 19.9319 118.768 20.2337L117.675 22.1268ZM85.5465 1.05344L90.2924 3.79348L89.1994 5.6866L84.4535 2.94656L85.5465 1.05344ZM99.7842 9.27356L109.276 14.7536L108.183 16.6468L98.6912 11.1667L99.7842 9.27356ZM118.768 20.2337L123.514 22.9738L122.421 24.8669L117.675 22.1268L118.768 20.2337Z"
+                      fill="#FF00E5"
+                    />
                   </svg>
-                  <div className="flex justify-between mt-3">
+                  <div className="mt-3 flex justify-between">
                     <div>
-                      <p className="bg-[#610057] text-[20px] border-[2px] border-[#FFED63] rounded-full flex justify-center w-[80px] px-2 saira font-semibold m-auto">200%</p>
-                      <p className="saira w-[200px] text-center font-extrabold text-[26px] leading-7 mt-1">
+                      <p className="saira m-auto flex w-[80px] justify-center rounded-full border-[2px] border-[#FFED63] bg-[#610057] px-2 text-[20px] font-semibold">200%</p>
+                      <p className="saira mt-1 w-[200px] text-center text-[26px] font-extrabold leading-7">
                         {languageData?.homepageStep3} {userCountry === "BR" || userCountry === "UA" ? " R$50" : " $10"}
                       </p>
                     </div>
                     <div>
-                      <p className="bg-[#610057] text-[20px] border-[2px] border-[#FFED63] rounded-full flex justify-center w-[80px] px-2 saira font-semibold m-auto">400%</p>
-                      <p className="saira w-[200px] text-center font-extrabold text-[26px] leading-7 mt-1">
+                      <p className="saira m-auto flex w-[80px] justify-center rounded-full border-[2px] border-[#FFED63] bg-[#610057] px-2 text-[20px] font-semibold">400%</p>
+                      <p className="saira mt-1 w-[200px] text-center text-[26px] font-extrabold leading-7">
                         {languageData?.homepageStep4} {userCountry === "BR" || userCountry === "UA" ? " R$100" : " $20"}
                       </p>
                     </div>
                   </div>
                 </div>
-
               </div>
               {/*
               <div className="hidden w-full max-w-[300px] items-center md:max-w-[580px] lg:flex">
@@ -411,7 +419,6 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage, userCountry })
             <p className="text-[12px] sm:text-[14px] saira font-extrabold text-center max-w-[100px]">{languageData?.homepageStep4}</p>
           </div>
           */}
-
         </div>
       </div>
       <div className="absolute left-1/2 m-auto flex w-full -translate-x-1/2 transform justify-center  se:bottom-[140px] iphone2:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] ">
