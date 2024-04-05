@@ -12,6 +12,7 @@ import Admin from "./Pages/Admin";
 import RegisterToken from "./Pages/RegisterToken";
 import AuthToken from "./Pages/AuthToken";
 import AuthVerify from "./Pages/AuthVerify";
+import ChoosePromo from "./Pages/ChoosePromo";
 
 function App() {
   moengage.initialize({
@@ -125,6 +126,7 @@ function App() {
             <Route path="/register/*" element={<RegisterToken />} />
             <Route path="/auth/*" element={<AuthToken />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="/choose-promotions" element={<ChoosePromo languageData={languageData} />} />
           </Routes>
         </BrowserRouter>
       </DesignProvider>

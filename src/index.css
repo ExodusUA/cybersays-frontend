@@ -2,739 +2,761 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Saira&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Saira&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,900;1,900&display=swap");
 
 * {
-    font-family: 'Orbitron', sans-serif;
-    color: white;
+  font-family: "Orbitron", sans-serif;
+  color: white;
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.roboto-condensed {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
 }
 
 .text-gradient {
-    background: var(--Linear, linear-gradient(105deg, #FF1CBB -23.05%, #088CD9 88.21%));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: var(--Linear, linear-gradient(105deg, #ff1cbb -23.05%, #088cd9 88.21%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .gradient-button {
-    background: linear-gradient(#0A1225, #0A1225) padding-box,
-        linear-gradient(to right, #FF1CBB, #088CD9) border-box;
-    border-radius: 12px;
-    border: 2px solid transparent;
+  background:
+    linear-gradient(#0a1225, #0a1225) padding-box,
+    linear-gradient(to right, #ff1cbb, #088cd9) border-box;
+  border-radius: 12px;
+  border: 2px solid transparent;
 }
 
 .gradient-userButton {
-    background: linear-gradient(#28364C, #28364C) padding-box,
-        linear-gradient(to right, #FF1CBB, #088CD9) border-box;
-    border-radius: 12px;
-    border: 2px solid transparent;
+  background:
+    linear-gradient(#28364c, #28364c) padding-box,
+    linear-gradient(to right, #ff1cbb, #088cd9) border-box;
+  border-radius: 12px;
+  border: 2px solid transparent;
 }
 
 .gradient-number {
-    background: linear-gradient(#405C68, #405C68) padding-box,
-        linear-gradient(to right, #FF1CBB, #088CD9) border-box;
-    border-radius: 100%;
-    border: 1px solid transparent;
+  background:
+    linear-gradient(#405c68, #405c68) padding-box,
+    linear-gradient(to right, #ff1cbb, #088cd9) border-box;
+  border-radius: 100%;
+  border: 1px solid transparent;
 }
 
 .gradient-gift {
-    background: linear-gradient(#3D3456, #3D3456) padding-box,
-        linear-gradient(to right, #FF1CBB, #088CD9) border-box;
-    border-radius: 100%;
-    border: 1px solid transparent;
+  background:
+    linear-gradient(#3d3456, #3d3456) padding-box,
+    linear-gradient(to right, #ff1cbb, #088cd9) border-box;
+  border-radius: 100%;
+  border: 1px solid transparent;
 }
 
 .gradient-gift {
-    background: linear-gradient(#3D3456, #3D3456) padding-box,
-        linear-gradient(to right, #FF1CBB, #088CD9) border-box;
-    border-radius: 100%;
-    border: 1px solid transparent;
+  background:
+    linear-gradient(#3d3456, #3d3456) padding-box,
+    linear-gradient(to right, #ff1cbb, #088cd9) border-box;
+  border-radius: 100%;
+  border: 1px solid transparent;
 }
 
 .gradient-circle {
-    background: linear-gradient(#0A1D2C, #0A1D2C) padding-box,
-        linear-gradient(#111931, #2D4283, #2B58DE, #2D4283, #111931) border-box;
-    border-radius: 100%;
-    border: 5px solid transparent;
+  background:
+    linear-gradient(#0a1d2c, #0a1d2c) padding-box,
+    linear-gradient(#111931, #2d4283, #2b58de, #2d4283, #111931) border-box;
+  border-radius: 100%;
+  border: 5px solid transparent;
 }
 
 .gradient-line {
-    border-radius: 50px;
-    background: var(--Linear, linear-gradient(105deg, #FF1CBB -23.05%, #088CD9 88.21%));
+  border-radius: 50px;
+  background: var(--Linear, linear-gradient(105deg, #ff1cbb -23.05%, #088cd9 88.21%));
 }
 
 .gradient-border {
-    border-radius: 12px;
-    border: 2px solid transparent;
-    background: var(--Linear, linear-gradient(105deg, #FF1CBB -23.05%, #088CD9 88.21%));
-
+  border-radius: 12px;
+  border: 2px solid transparent;
+  background: var(--Linear, linear-gradient(105deg, #ff1cbb -23.05%, #088cd9 88.21%));
 }
 
 .gradient-milestone1 {
-    background: var(--New-linear-3, linear-gradient(143deg, #02DF85 0%, #7D318E 47.76%, #2104D5 94.54%));
+  background: var(--New-linear-3, linear-gradient(143deg, #02df85 0%, #7d318e 47.76%, #2104d5 94.54%));
 }
 
 .gradient-milestone2 {
-    background: var(--New-liner, linear-gradient(143deg, #E4034F 0%, #9E3DB3 47.76%, #0BE1DE 94.54%));
+  background: var(--New-liner, linear-gradient(143deg, #e4034f 0%, #9e3db3 47.76%, #0be1de 94.54%));
 }
 
 .gradient-milestone3 {
-    background: linear-gradient(143deg, #F29B3C 0%, #F359BF 47.76%, #D40059 94.54%);
+  background: linear-gradient(143deg, #f29b3c 0%, #f359bf 47.76%, #d40059 94.54%);
 }
 
 .gradient-milestoneHeader {
-    background: var(--Linear, linear-gradient(105deg, #FF1CBB -23.05%, #088CD9 88.21%));
+  background: var(--Linear, linear-gradient(105deg, #ff1cbb -23.05%, #088cd9 88.21%));
 }
 
 .gradient-progressBarBg {
-    background: var(--Spectrum, linear-gradient(180deg, rgba(100, 97, 89, 0.05) 21.45%, rgba(255, 234, 180, 0.25) 100%));
+  background: var(--Spectrum, linear-gradient(180deg, rgba(100, 97, 89, 0.05) 21.45%, rgba(255, 234, 180, 0.25) 100%));
 }
 
 .bg-milestone {
-    background: var(--bg2, linear-gradient(171deg, #1D123B 0%, #1B325E 51.63%, #1D123B 99.13%));
+  background: var(--bg2, linear-gradient(171deg, #1d123b 0%, #1b325e 51.63%, #1d123b 99.13%));
 }
 
 .gradient-milestoneBtn {
-    border-radius: 12px;
-    border: 1px solid var(--Common-white, #F5F5F5);
-    background: var(--Linear, linear-gradient(105deg, #FF1CBB -23.05%, #088CD9 88.21%));
-    box-shadow: 0px 4px 20px 0px rgba(107, 74, 219, 0.70);
+  border-radius: 12px;
+  border: 1px solid var(--Common-white, #f5f5f5);
+  background: var(--Linear, linear-gradient(105deg, #ff1cbb -23.05%, #088cd9 88.21%));
+  box-shadow: 0px 4px 20px 0px rgba(107, 74, 219, 0.7);
 }
 
 .saira {
-    font-family: Saira !important;
+  font-family: Saira !important;
 }
 
 .gradient {
-    background: linear-gradient(to right, #FF1CBB, #088CD9);
-    border-radius: 12px;
-    box-shadow: 0px 4px 20px 0px rgba(107, 74, 219, 0.70);
+  background: linear-gradient(to right, #ff1cbb, #088cd9);
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px 0px rgba(107, 74, 219, 0.7);
 }
 
 body {
-    overflow-x: hidden;
-    overflow-y: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .transition-custom {
-    transition-timing-function: cubic-bezier(1, 0.01, 0.31, 0.98);
-    transition: 0.5s;
+  transition-timing-function: cubic-bezier(1, 0.01, 0.31, 0.98);
+  transition: 0.5s;
 }
 
 .black-gradient {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 56.85%, #000000e4 90.32%), transparent 50% / cover no-repeat;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 56.85%, #000000e4 90.32%),
+    transparent 50% / cover no-repeat;
 }
 
 .oveerflow-fix {
-    padding-top: 100px !important;
+  padding-top: 100px !important;
 }
 
 .continue_button {
-    background: var(--linear-dark, linear-gradient(105deg, #7A115B -23.05%, #0B5783 88.21%));
+  background: var(--linear-dark, linear-gradient(105deg, #7a115b -23.05%, #0b5783 88.21%));
 }
 
 .scrollOff::-webkit-scrollbar {
-    width: 0;
+  width: 0;
 }
 
 .swiper-pagination-bullet {
-    background-color: white !important;
-    opacity: 1 !important;
+  background-color: white !important;
+  opacity: 1 !important;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #FFED63 !important;
+  background-color: #ffed63 !important;
 }
 
 ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
+  width: 0px;
+  background: transparent;
 }
 
 .menuScroll::-webkit-scrollbar {
-    width: 5px;
-    background-color: transparent;
+  width: 5px;
+  background-color: transparent;
 }
 
 .menuScroll::-webkit-scrollbar-thumb {
-    width: 5px;
-    border-radius: 22px;
-    height: 40px;
-    background-color: #A2DBF0;
-
+  width: 5px;
+  border-radius: 22px;
+  height: 40px;
+  background-color: #a2dbf0;
 }
 
 .swiper-pagination {
-    position: relative !important;
-    margin-top: 10px;
+  position: relative !important;
+  margin-top: 10px;
 }
 
 .animated-image {
-
-    animation: scaleLoop 2s infinite;
+  animation: scaleLoop 2s infinite;
 }
 
 @keyframes scaleLoop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
 
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.2);
-    }
+  50% {
+    transform: scale(1.2);
+  }
 }
 
 .input-fix {
-    outline: none;
+  outline: none;
 }
 
 .gradient-homepageBtn {
-    background: var(--Linear, linear-gradient(105deg, #8FE5EC -23.05%, #DDBAFC 88.21%));
+  background: var(--Linear, linear-gradient(105deg, #8fe5ec -23.05%, #ddbafc 88.21%));
 }
 
 .gradient-headerBlock {
-    border: 2px solid;
-    border-image: var(--Linear, linear-gradient(105deg, #8FE5EC -23.05%, #DDBAFC 88.21%)) 1;
-    border-radius: 50px;
+  border: 2px solid;
+  border-image: var(--Linear, linear-gradient(105deg, #8fe5ec -23.05%, #ddbafc 88.21%)) 1;
+  border-radius: 50px;
 }
 
 .gradient-timeCounter {
-    background: var(--Linear, linear-gradient(105deg, #8FE5EC -23.05%, #DDBAFC 88.21%));
-    -webkit-background-clip: text;
-    color: transparent;
+  background: var(--Linear, linear-gradient(105deg, #8fe5ec -23.05%, #ddbafc 88.21%));
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .gradient-link {
-    background: var(--New-CS-yellow, linear-gradient(180deg, #FAD604 0%, #FE804D 100%));
-    -webkit-background-clip: text;
-    color: transparent;
-    text-decoration: underline;
-    position: relative;
-    display: inline-block;
+  background: var(--New-CS-yellow, linear-gradient(180deg, #fad604 0%, #fe804d 100%));
+  -webkit-background-clip: text;
+  color: transparent;
+  text-decoration: underline;
+  position: relative;
+  display: inline-block;
 }
 
 .gradient-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 2px;
-    width: 100%;
-    height: 1px;
-    background: var(--New-CS-yellow, linear-gradient(180deg, #FE8648 0%, #FE804D 100%));
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 1px;
+  background: var(--New-CS-yellow, linear-gradient(180deg, #fe8648 0%, #fe804d 100%));
 }
 
 .gradient-link2 {
-    background: var(--Linear, linear-gradient(105deg, #8FE5EC -23.05%, #DDBAFC 88.21%));
-    -webkit-background-clip: text;
-    color: transparent;
-    text-decoration: underline;
-    position: relative;
-    display: inline-block;
+  background: var(--Linear, linear-gradient(105deg, #8fe5ec -23.05%, #ddbafc 88.21%));
+  -webkit-background-clip: text;
+  color: transparent;
+  text-decoration: underline;
+  position: relative;
+  display: inline-block;
 }
 
 .gradient-link2::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 2px;
-    width: 100%;
-    height: 1px;
-    background: var(--Linear, linear-gradient(105deg, #8FE5EC -23.05%, #DDBAFC 88.21%));
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 1px;
+  background: var(--Linear, linear-gradient(105deg, #8fe5ec -23.05%, #ddbafc 88.21%));
 }
 
 .gradient-linkDouble {
-    background: var(--New-CS-yellow, linear-gradient(180deg, #FAD604 0%, #FE804D 100%));
-    -webkit-background-clip: text;
-    color: transparent;
+  background: var(--New-CS-yellow, linear-gradient(180deg, #fad604 0%, #fe804d 100%));
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .gradient-withdrawBorder {
-    border-bottom: 2px solid;
-    border-image: var(--Linear, linear-gradient(105deg, #8FE5EC -23.05%, #DDBAFC 88.21%)) 1;
-    border-radius: 50px;
+  border-bottom: 2px solid;
+  border-image: var(--Linear, linear-gradient(105deg, #8fe5ec -23.05%, #ddbafc 88.21%)) 1;
+  border-radius: 50px;
 }
 
 .gradient-tourToggle {
-    background: linear-gradient(180deg, #FAD604 0%, #FE804D 100%);
+  background: linear-gradient(180deg, #fad604 0%, #fe804d 100%);
 }
 
 .moving-element {
-    transition: transform 0.5s ease;
-    /* Анімація зміни положення зі згладжуванням */
+  transition: transform 0.5s ease;
+  /* Анімація зміни положення зі згладжуванням */
 }
 
 .gradient-goodluck {
-    background: linear-gradient(90deg, #FBD409 0.25%, #FF9141 32.18%, #FF3D7D 64.73%, #B415D7 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg, #fbd409 0.25%, #ff9141 32.18%, #ff3d7d 64.73%, #b415d7 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .dot-li {
-    background: var(--New-CS-yellow, linear-gradient(180deg, #FAD604 0%, #FE804D 100%));
+  background: var(--New-CS-yellow, linear-gradient(180deg, #fad604 0%, #fe804d 100%));
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 .feedShow {
-    animation: fadeIn 0.6s ease forwards;
-    /* Використовуємо анімацію fadeIn з тривалістю 0.6 секунд */
+  animation: fadeIn 0.6s ease forwards;
+  /* Використовуємо анімацію fadeIn з тривалістю 0.6 секунд */
 }
 
 .toolInfoBg1 {
-    background: var(--Yellow, linear-gradient(180deg, #FAD604 0%, #FE804D 100%));
+  background: var(--Yellow, linear-gradient(180deg, #fad604 0%, #fe804d 100%));
 }
 
 .toolInfoBg2 {
-    background: var(--Blue-Pink, linear-gradient(90deg, #8FE5EC 0%, #DDBAFC 100%));
+  background: var(--Blue-Pink, linear-gradient(90deg, #8fe5ec 0%, #ddbafc 100%));
 }
 
 .toolInfoBg3 {
-    background: var(--Purple, linear-gradient(180deg, #FB2C8B 0%, #B114D3 100%));
+  background: var(--Purple, linear-gradient(180deg, #fb2c8b 0%, #b114d3 100%));
 }
 
 .toolInfoBg4 {
-    background: var(--New-linear, linear-gradient(180deg, #FA047A 0%, #FE8D4D 100%));
+  background: var(--New-linear, linear-gradient(180deg, #fa047a 0%, #fe8d4d 100%));
 }
 
 .blurLogin {
-    background: rgba(20, 25, 41, 0.40);
-    backdrop-filter: blur(10px);
+  background: rgba(20, 25, 41, 0.4);
+  backdrop-filter: blur(10px);
 }
 
 .textStyle * {
-    color: black;
-    font-family: Saira !important;
+  color: black;
+  font-family: Saira !important;
 }
 
 .checkbox-container {
-    display: flex;
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 16px;
-    user-select: none;
+  display: flex;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
 }
 
 .checkbox-container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
 .checkmark {
-    position: absolute;
-    top: 2;
-    left: 0;
-    height: 16px;
-    width: 16px;
-    background-color: white;
-    border: 3px solid #1E1E1E;
-    border-radius: 100%;
+  position: absolute;
+  top: 2;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: white;
+  border: 3px solid #1e1e1e;
+  border-radius: 100%;
 }
 
-
-
-.checkbox-container input:checked~.checkmark {
-    background-color: #1E1E1E;
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #1e1e1e;
 }
 
 .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
+  content: "";
+  position: absolute;
+  display: none;
 }
 
-.checkbox-container input:checked~.checkmark:after {
-    display: block;
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
 }
 
 .checkbox-container .checkmark:after {
-    left: 0px;
-    top: 0px;
-    width: 10px;
-    height: 10px;
-    border: 2px solid white;
-    background: #1E1E1E;
-    border-radius: 100%;
-
+  left: 0px;
+  top: 0px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid white;
+  background: #1e1e1e;
+  border-radius: 100%;
 }
 
 .textStyle p {
-    font-size: 12pt !important;
+  font-size: 12pt !important;
 }
 
 .placeBg {
-    background: var(--Card-bg, linear-gradient(94deg, #711876 0%, #355FA3 100%));
+  background: var(--Card-bg, linear-gradient(94deg, #711876 0%, #355fa3 100%));
 }
 
 .react-international-phone-input {
-    width: 100%;
-    border: none;
-    border-radius: 8px;
-    background: #F5F5F5 !important;
-    padding: 16px;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
-    letter-spacing: -1px;
-    color: #000000;
-    outline: none;
-    border: 0 !important;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: #f5f5f5 !important;
+  padding: 16px;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -1px;
+  color: #000000;
+  outline: none;
+  border: 0 !important;
 }
 
 .react-international-phone-country-selector-button {
-    background: #F5F5F5 !important;
-    border: 0 !important;
+  background: #f5f5f5 !important;
+  border: 0 !important;
 }
 
 .react-international-phone-input {
-    color: black !important;
-    border: 0 !important;
-    font-size: 16px !important;
+  color: black !important;
+  border: 0 !important;
+  font-size: 16px !important;
 }
 
 .react-international-phone-country-selector-dropdown {
-    background: white !important;
-    color: black !important;
-    border: 0 !important;
-    outline: none !important;
+  background: white !important;
+  color: black !important;
+  border: 0 !important;
+  outline: none !important;
 }
 
 .react-international-phone-country-selector-dropdown * {
-    background: white !important;
-    border: 0 !important;
-    color: black !important;
-    font-family: Saira !important;
-    outline: none !important;
+  background: white !important;
+  border: 0 !important;
+  color: black !important;
+  font-family: Saira !important;
+  outline: none !important;
 }
 
 @media screen and (max-width: 600px) {
-    table {
-        width: 100% !important;
-        /* Змінюємо ширину таблиці для менших екранів */
-    }
+  table {
+    width: 100% !important;
+    /* Змінюємо ширину таблиці для менших екранів */
+  }
 
-    .textStyle p {
-        font-size: 10pt !important;
-    }
+  .textStyle p {
+    font-size: 10pt !important;
+  }
 }
 
 .blur-image {
-    filter: blur(115px);
-    /* Змініть 5px на те значення, яке вам потрібно */
+  filter: blur(115px);
+  /* Змініть 5px на те значення, яке вам потрібно */
 }
 
 .custom-borderTask {
-    border-width: 3px;
-    border-style: solid;
-    border-color: transparent;
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparent;
 }
 
 .withdrawBg1 {
-    background: linear-gradient(179deg, #FFE69E -22.77%, #FDA92B 56.15%, #BC6117 113.63%);
+  background: linear-gradient(179deg, #ffe69e -22.77%, #fda92b 56.15%, #bc6117 113.63%);
 }
 
 .withdrawBg2 {
-    background: linear-gradient(179deg, #3B689A -22.77%, #2B4868 56.15%, #1D3147 113.63%);
+  background: linear-gradient(179deg, #3b689a -22.77%, #2b4868 56.15%, #1d3147 113.63%);
 }
 
 .withdrawBg3 {
-    background: linear-gradient(179deg, #2C50A6 -22.77%, #2C4087 56.15%, #2A3061 113.63%);
+  background: linear-gradient(179deg, #2c50a6 -22.77%, #2c4087 56.15%, #2a3061 113.63%);
 }
 
 .withdrawBg4 {
-    background: linear-gradient(179deg, #B5F2E9 -22.77%, #6AC9BC 56.15%, #3E9589 113.63%);
+  background: linear-gradient(179deg, #b5f2e9 -22.77%, #6ac9bc 56.15%, #3e9589 113.63%);
 }
 
 .withdrawBg5 {
-    background: linear-gradient(179deg, #FFF -22.77%, #CECBCB 56.15%, #777 113.63%);
+  background: linear-gradient(179deg, #fff -22.77%, #cecbcb 56.15%, #777 113.63%);
 }
 
 .withdrawBg6 {
-    background: linear-gradient(172deg, #93B3E3 -4.59%, #2C5BA6 89.21%);
+  background: linear-gradient(172deg, #93b3e3 -4.59%, #2c5ba6 89.21%);
 }
 
 .withdrawBg7 {
-    background: linear-gradient(172deg, #CDD7DE -4.59%, #7D868C 89.21%);
+  background: linear-gradient(172deg, #cdd7de -4.59%, #7d868c 89.21%);
 }
 
 .custom-select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url('./images/NewDesign/withdraw/selectArrow.svg');
-    background-repeat: no-repeat;
-    background-position: calc(100% - 1rem) center;
-    cursor: pointer;
-    padding-right: 1rem;
-    color: #1E1E1E;
-    font-family: Inter;
-    width: 100%;
-    padding: 0.75rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("./images/NewDesign/withdraw/selectArrow.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 1rem) center;
+  cursor: pointer;
+  padding-right: 1rem;
+  color: #1e1e1e;
+  font-family: Inter;
+  width: 100%;
+  padding: 0.75rem;
 }
 
 .custom-select option[value="default"] {
-    display: none !important;
-
+  display: none !important;
 }
 
-
-
 .gradient-TermsLink {
-    background: var(--Linear-3, linear-gradient(90deg, #FBD409 0.25%, #FF9141 32.18%, #FF3D7D 64.73%, #B415D7 100%));
-    -webkit-background-clip: text;
-    color: transparent;
-    text-decoration: underline;
-    position: relative;
-    display: inline-block;
+  background: var(--Linear-3, linear-gradient(90deg, #fbd409 0.25%, #ff9141 32.18%, #ff3d7d 64.73%, #b415d7 100%));
+  -webkit-background-clip: text;
+  color: transparent;
+  text-decoration: underline;
+  position: relative;
+  display: inline-block;
 }
 
 .gradient-TermsLink::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0px;
-    width: 100%;
-    height: 1px;
-    background: var(--Linear-3, linear-gradient(90deg, #FBD409 0.25%, #FF9141 32.18%, #FF3D7D 64.73%, #B415D7 100%));
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 1px;
+  background: var(--Linear-3, linear-gradient(90deg, #fbd409 0.25%, #ff9141 32.18%, #ff3d7d 64.73%, #b415d7 100%));
 }
 
 .competitionPlaceBG {
-    background: linear-gradient(180deg, #9D9D9D 0%, #373737 100%);
+  background: linear-gradient(180deg, #9d9d9d 0%, #373737 100%);
 }
 
 .react-date-picker__wrapper {
-    border: none !important;
+  border: none !important;
 }
 
 .react-date-picker__inputGroup {
-    color: #0A1225 !important;
-    font-family: 'saira';
-
+  color: #0a1225 !important;
+  font-family: "saira";
 }
 
 .react-date-picker__inputGroup__divider {
-    color: #0a12259a !important;
-    font-family: 'saira';
-    font-size: 16px !important;
+  color: #0a12259a !important;
+  font-family: "saira";
+  font-size: 16px !important;
 }
 
 .react-date-picker__inputGroup__input:invalid {
-    background: unset !important;
-    outline: none !important;
+  background: unset !important;
+  outline: none !important;
 }
 
 .bannerBtn2 {
-    background: var(--Yellow, linear-gradient(180deg, #FAD604 0%, #FE804D 100%));
+  background: var(--Yellow, linear-gradient(180deg, #fad604 0%, #fe804d 100%));
 }
 
 .bannerBtn3 {
-    background: var(--New-linear, linear-gradient(180deg, #FA047A 0%, #FE8D4D 100%));
+  background: var(--New-linear, linear-gradient(180deg, #fa047a 0%, #fe8d4d 100%));
 }
 
 .bannerTextBtn2 {
-    background: var(--Yellow, linear-gradient(180deg, #FAD604 0%, #FE804D 100%));
-    -webkit-background-clip: text;
-    color: transparent;
+  background: var(--Yellow, linear-gradient(180deg, #fad604 0%, #fe804d 100%));
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .bannerTextBtn3 {
-    background: var(--New-linear, linear-gradient(180deg, #FA047A 0%, #FE8D4D 100%));
-    -webkit-background-clip: text;
-    color: transparent;
+  background: var(--New-linear, linear-gradient(180deg, #fa047a 0%, #fe8d4d 100%));
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .bannerTextBtn4 {
-    background: linear-gradient(196deg, #D418D6 11.15%, #ED1E79 88.85%);
-    -webkit-background-clip: text;
-    color: transparent;
+  background: linear-gradient(196deg, #d418d6 11.15%, #ed1e79 88.85%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .newTaskTitleBg {
-    background: var(--BG2, linear-gradient(111deg, rgba(140, 17, 17, 0.40) 0%, rgba(60, 7, 74, 0.40) 73.79%));
+  background: var(--BG2, linear-gradient(111deg, rgba(140, 17, 17, 0.4) 0%, rgba(60, 7, 74, 0.4) 73.79%));
 }
 
 @media screen and (max-height: 870px) and (min-width: 1200px) {
-    .mac-img-bottom {
-        margin-bottom: 0px !important;
-    }
+  .mac-img-bottom {
+    margin-bottom: 0px !important;
+  }
 
-    .menuHeight {
-        max-height: 600px !important;
-    }
+  .menuHeight {
+    max-height: 600px !important;
+  }
 
-    .memeWidth {
-        width: 145px !important;
-        height: 145px !important;
-    }
+  .memeWidth {
+    width: 145px !important;
+    height: 145px !important;
+  }
 
-    .mac-overflow-fix {
-        margin-top: -200px !important;
-    }
+  .mac-overflow-fix {
+    margin-top: -200px !important;
+  }
 }
 
 @media screen and (max-height: 770px) and (min-width: 1200px) {
+  .refferals-selectMassege {
+    margin-top: 10px !important;
+    margin-bottom: 0px !important;
+  }
 
+  .mac-img-width {
+    width: 800px !important;
+  }
 
-    .refferals-selectMassege {
-        margin-top: 10px !important;
-        margin-bottom: 0px !important;
-    }
+  .mac-img-width2 {
+    width: 640px !important;
+  }
 
-    .mac-img-width {
-        width: 800px !important;
-    }
+  .double-subtitle {
+    padding-top: 2px !important;
+    padding-bottom: 4px !important;
+  }
 
-    .mac-img-width2 {
-        width: 640px !important;
-    }
+  .double-img-width {
+    width: 210px !important;
+    margin-bottom: -10px !important;
+  }
 
-    .double-subtitle {
-        padding-top: 2px !important;
-        padding-bottom: 4px !important;
-    }
+  .referral-title {
+    padding-bottom: 0px !important;
+  }
 
-    .double-img-width {
-        width: 210px !important;
-        margin-bottom: -10px !important;
-    }
+  .timeCounter-title {
+    font-size: 22px !important;
+  }
 
-    .referral-title {
-        padding-bottom: 0px !important;
-    }
+  .contentForDesktop {
+    margin-top: 0px !important;
+  }
 
-    .timeCounter-title {
-        font-size: 22px !important;
-    }
+  .contentForCompetitions {
+    margin-top: 8px !important;
+  }
 
-    .contentForDesktop {
-        margin-top: 0px !important;
-    }
+  .contentForDouble {
+    margin-top: 40px !important;
+  }
 
-    .contentForCompetitions {
-        margin-top: 8px !important;
-    }
+  .contentHomepage {
+    margin-top: 20px !important;
+  }
 
-    .contentForDouble {
-        margin-top: 40px !important;
-    }
+  .logoLogin {
+    width: 150px !important;
+  }
 
-    .contentHomepage {
-        margin-top: 20px !important;
-    }
+  .withdrawHeight {
+    height: 300px !important;
+    padding-bottom: 10px !important;
+  }
 
-    .logoLogin {
-        width: 150px !important;
-    }
+  .leaderboardsScroll {
+    overflow-y: auto !important;
+  }
 
-    .withdrawHeight {
-        height: 300px !important;
-        padding-bottom: 10px !important;
-    }
+  .leaderboardsHeight {
+    height: 200px !important;
+  }
 
-    .leaderboardsScroll {
-        overflow-y: auto !important;
-    }
+  .homepageMainBlock {
+    padding-top: 0px !important;
+  }
 
-    .leaderboardsHeight {
-        height: 200px !important;
-    }
+  .raffleTicketsTitle {
+    font-size: 21px !important;
+  }
 
-    .homepageMainBlock {
-        padding-top: 0px !important;
-    }
+  .raffleTicketsTitlePX {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
 
-    .raffleTicketsTitle {
-        font-size: 21px !important;
-    }
+  .menuHeight {
+    max-height: 520px !important;
+  }
 
-    .raffleTicketsTitlePX {
-        padding-left: 30px !important;
-        padding-right: 30px !important;
-    }
-
-    .menuHeight {
-        max-height: 520px !important;
-    }
-
-    .raffleTicketOverBtn {
-        font-size: 22px !important;
-    }
-    
+  .raffleTicketOverBtn {
+    font-size: 22px !important;
+  }
 }
 
 @media screen and (max-height: 791px) and (min-width: 1200px) {
-    .memeHeight {
-        margin-top: 30px !important;
-    }
-    
+  .memeHeight {
+    margin-top: 30px !important;
+  }
 }
 
 @media screen and (max-height: 805px) and (min-width: 1200px) {
-    
-    .homepageLeftBlock {
-        max-width: 390px !important;
-    }
-    .homepageLeftBlockTitle {
-        font-size: 20px !important;
-        width: 220px !important;
-        line-height: 24px !important;
-        right: 20px !important;
-        margin-top: 50px !important;
-    }
-    .homepageLeftBlockTitle2 {
-        font-size: 15px !important;
-        width: 170px !important;
-        line-height: 20px !important;
-        right: 10px !important;
-        margin-top: 75px !important;
-    }
+  .homepageLeftBlock {
+    max-width: 390px !important;
+  }
+  .homepageLeftBlockTitle {
+    font-size: 20px !important;
+    width: 220px !important;
+    line-height: 24px !important;
+    right: 20px !important;
+    margin-top: 50px !important;
+  }
+  .homepageLeftBlockTitle2 {
+    font-size: 15px !important;
+    width: 170px !important;
+    line-height: 20px !important;
+    right: 10px !important;
+    margin-top: 75px !important;
+  }
 }
 
 @media screen and (max-width: 390px) {
-    .homepageSE {
-        margin-top: 0px !important;
-    }
+  .homepageSE {
+    margin-top: 0px !important;
+  }
 
-    .competitionSE {
-        margin-top: 6px !important;
-    }
+  .competitionSE {
+    margin-top: 6px !important;
+  }
 
-    .raffleTicketsSE {
-        margin-top: -30px !important;
-    }
+  .raffleTicketsSE {
+    margin-top: -30px !important;
+  }
 
-    .menuHeight {
-        max-height: 500px !important;
-    }
+  .menuHeight {
+    max-height: 500px !important;
+  }
 }
 
-.dark-text> {
-    color: #0A1225;
+.dark-text > {
+  color: #0a1225;
 }
 
 .Toastify__toast-body div {
-    color: #0A1225;
-    font-family: 'saira';
+  color: #0a1225;
+  font-family: "saira";
 }
 
 .langaugeBtnShadow {
-    box-shadow: 0px 4px 20px 0px rgba(107, 74, 219, 0.70);
+  box-shadow: 0px 4px 20px 0px rgba(107, 74, 219, 0.7);
+}
+
+.promoTextGradient {
+  background: linear-gradient(143deg, #c33ce4 22.42%, #8a54e7 39.7%, #4c57ee 59.57%, #1c2682 77.58%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.yellowButton {
+  border-radius: 5.968px;
+  border-top: 1.194px solid #fc0;
+  color: #441f00;
+  font-weight: 600;
+  font-size: 15px;
+  background: linear-gradient(180deg, #fc0 0%, #f98706 100%);
 }

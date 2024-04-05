@@ -57,6 +57,11 @@ module.exports = {
       'new-bg-promo-des': "url('./images/NewDesign/Bg/promo_des.png')",
       'best-offer': "url('./images/NewDesign/withdraw/bestOffer.png')",
       'newTaskBg': "url('./images/NewDesign/newTaskBG.png')",
+      'promo-desktop': "url('./images/Promo/bg_desktop.png')",
+
+      'promo-card-1': "url('./images/Promo/card1.png')",
+      'promo-card-2': "url('./images/Promo/card2.png')",
+      'promo-card-3': "url('./images/Promo/card3.png')",
     })
   },
   plugins: [],
