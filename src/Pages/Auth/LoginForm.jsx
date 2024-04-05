@@ -141,7 +141,7 @@ function LoginForm({ languageData, referralID }) {
       <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
         <ReCAPTCHA ref={recaptchaRef} sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} size="invisible">
           <form onSubmit={(e) => handleSubmit(e)}>
-            <div className="lg:m-left mt-2 grid w-full  grid-cols-1 rounded-[14px] border-[1px] border-[#DDBBFD] bg-[#83869b] bg-opacity-20 p-1 backdrop-blur-lg lg:block  lg:rounded-[24px] lg:p-5">
+            <div className="lg:m-left mt-14 grid w-full  grid-cols-1 rounded-[14px] border-[1px] border-[#DDBBFD] bg-[#83869b] bg-opacity-20 p-1 backdrop-blur-lg lg:block  lg:rounded-[24px] lg:p-5">
               <div className="relative  text-left">
                 <input
                   onBlur={(e) => {
