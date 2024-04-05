@@ -157,7 +157,7 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage, userCountry })
                 </div>
               </div>
 */}
-              <div className="relative  block sm:hidden">
+              <div className="relative  block sm:hidden w-full">
                 <img className="m-auto mt-1 w-full max-w-[300px] sm:max-w-[500px] 2xl:max-w-[630px]" src={language === 'en' && stepsDesk || language === 'es' && stepsES || language === 'pt' && stepsPT} alt="stepsDesk" />
                 <div className="m-auto flex w-full max-w-[350px] items-center justify-between sm:max-w-[550px] sm:items-start 2xl:max-w-[720px] 2xl:items-center ">
                   <p className="saira w-[150px] text-center text-[12px] font-extrabold sm:pr-[20px] sm:text-[14px] sm:leading-4 2xl:pr-0 2xl:text-[24px] 2xl:leading-6">
@@ -272,7 +272,7 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage, userCountry })
             </div>
 
             <div
-              className={`relative ${design === "0" ? " rounded-[24px] border-[#FFD700] lg:rounded-[32px]" : "  homepageMainBlock rounded-[16px] border-[#A2DBF0]"}  m-auto border-2 px-1 pb-1 pt-8  lg:m-[unset] lg:pt-0 mt-6 sm:mt-0`}
+              className={`relative ${design === "0" ? " rounded-[24px] border-[#FFD700] lg:rounded-[32px]" : "  homepageMainBlock rounded-[16px] border-[#A2DBF0]"}  m-auto border-2 px-1 pb-1 pt-8  lg:m-[unset] lg:pt-0 mt-12 sm:mt-0`}
             >
               <div className=" relative m-auto flex w-full max-w-[380px] items-center md:max-w-[470px]">
                 <img
