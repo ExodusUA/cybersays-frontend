@@ -14,6 +14,9 @@ import point2 from "../../images/NewDesign/Homepage/point_2.png";
 import point3 from "../../images/NewDesign/Homepage/point_3.png";
 import logoIM from "../../images/NewDesign/Homepage/logoIm2.png";
 import stepsDesk from "../../images/NewDesign/homepageStepDesk.svg";
+import stepsPT from "../../images/NewDesign/homepageStepPT.svg";
+import stepsES from "../../images/NewDesign/homepageStepES.svg";
+
 
 function Homepage({ user, PartnerURL, languageData, scrollToPage, userCountry }) {
   let swiperRef;
@@ -355,7 +358,7 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage, userCountry })
           </div>
           */}
           <div className="relative bottom-2">
-            <img className="m-auto mt-1 w-full max-w-[300px] sm:max-w-[500px] 2xl:max-w-[630px]" src={stepsDesk} alt="stepsDesk" />
+            <img className="m-auto mt-1 w-full max-w-[300px] sm:max-w-[500px] 2xl:max-w-[630px]" src={language === 'en' && stepsDesk || language === 'es' && stepsES || language === 'pt' && stepsPT} alt="stepsDesk" />
             <div className="m-auto flex w-full max-w-[350px] items-center justify-between sm:max-w-[550px] sm:items-start 2xl:max-w-[720px] 2xl:items-center ">
               <p className="saira w-[150px] text-center text-[12px] font-extrabold sm:pr-[20px] sm:text-[14px] sm:leading-4 2xl:pr-0 2xl:text-[24px] 2xl:leading-6">
                 {languageData?.homepageStep1}
