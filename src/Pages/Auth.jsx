@@ -82,7 +82,7 @@ function Auth({ languageData }) {
             <Language />
           </div>
           <div className="top-10 h-full w-full bg-dark text-center lg:absolute lg:left-10 lg:w-[620px]">
-            <div className="z-10 m-auto w-[90%] lg:relative lg:w-[640px]">
+            <div className="z-10 m-auto w-[95%] lg:relative lg:w-[640px]">
               <div className="relative z-[10]  w-full rounded-[32px] border-[#DDBBFD] bg-opacity-20 pt-[1px] iphone:pt-[10px] lg:border-2 lg:bg-[#0D0D0D73] lg:px-10 lg:pb-5 lg:pt-10">
                 <div className=" lg:max-w-[600px]">
                   <img className="logoLogin  m-auto mt-[-30px] w-[100px] lg:mt-0 lg:w-[200px]" src={logoCyber} alt="Logotype" />
@@ -94,11 +94,11 @@ function Auth({ languageData }) {
                         {languageData?.authSlide1}
 
                         <div className=" mt-2 leading-6">
-                          <p className="text-[16px] font-bold lg:mt-1 lg:text-[20px]">{languageData?.authSlide1li1}</p>
+                          <p className="text-[14px] font-bold lg:mt-1 lg:text-[20px]">{languageData?.authSlide1li1}</p>
 
-                          <p className="text-[16px] font-bold lg:mt-1 lg:text-[20px]">{languageData?.authSlide1li2}</p>
+                          <p className="text-[14px] font-bold lg:mt-1 lg:text-[20px]">{languageData?.authSlide1li2}</p>
 
-                          <p className="text-[16px] font-bold lg:mt-1 lg:text-[20px]">{languageData?.authSlide1li3}</p>
+                          <p className="text-[14px] font-bold lg:mt-1 lg:text-[20px]">{languageData?.authSlide1li3}</p>
                         </div>
                       </>
                     )}
@@ -107,9 +107,9 @@ function Auth({ languageData }) {
                         {languageData?.authSlide2}
 
                         <div className=" mt-2 leading-6">
-                          <p className="text-[14px] font-bold lg:text-[16px]">{languageData?.authSlide2li1}</p>
-                          <p className="text-[14px] font-bold lg:text-[16px]">{languageData?.authSlide2li2}</p>
-                          <p className="text-[14px] font-bold lg:text-[16px]">{languageData?.authSlide2li3}</p>
+                          <p className="text-[13px] font-bold lg:text-[16px]">{languageData?.authSlide2li1}</p>
+                          <p className="text-[13px] font-bold lg:text-[16px]">{languageData?.authSlide2li2}</p>
+                          <p className="text-[13px] font-bold lg:text-[16px]">{languageData?.authSlide2li3}</p>
                         </div>
                       </>
                     )}

@@ -22,7 +22,7 @@ function Slider({ onSlideChange, setCurrentSlide, currentSlide, setSwiperRef, sw
   return (
     <div className="relative lg:w-[100%] ">
       <Swiper
-        className="h-[30vh] md:h-[45vh] lg:h-full"
+        className="h-[27vh] md:h-[45vh] lg:h-full"
         onSwiper={(swiper) => setSwiperRef(swiper)}
         modules={[Navigation, Autoplay]}
         spaceBetween={0}
