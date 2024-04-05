@@ -73,8 +73,8 @@ function Double({ languageData, user, PartnerURL, userCountry }) {
       case undefined:
       case 0:
         return (
-          <div className="w-full max-w-[430px] px-1">
-            <p className="text-center text-[18px] font-semibold ">{languageData?.doubleBtnTitle}</p>
+          <div className="w-full  px-1">
+
             <Link
               onClick={(e) => {
                 //e.preventDefault()
@@ -87,18 +87,16 @@ function Double({ languageData, user, PartnerURL, userCountry }) {
               <button
                 className={`saira my-1  flex w-full  items-center justify-center border-[#FFED63] text-[18px] font-semibold text-black ${design === "0" ? "rounded-[50px] border-[2px] bg-white py-1 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
               >
-                {languageData?.doubleTaskBtn1}
+                {languageData?.homepageBtnNew1}
               </button>
             </Link>
-            <p className="saira text-center text-[14px] font-semibold">
-              <span className=" saira gradient-linkDouble text-[14px] font-semibold">7 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}
-            </p>
+
           </div>
         );
       case 1:
         return (
-          <div className="w-full max-w-[430px] px-1">
-            <p className="text-center text-[18px] font-semibold ">{languageData?.doubleBtnTitle}</p>
+          <div className="w-full  px-1">
+
             <Link
               onClick={(e) => {
                 //e.preventDefault()
@@ -110,18 +108,16 @@ function Double({ languageData, user, PartnerURL, userCountry }) {
               <button
                 className={`saira my-1   flex  w-full items-center  justify-center border-[#FFED63] bg-white text-[18px] font-semibold text-black ${design === "0" ? "rounded-[50px] border-[2px] bg-white py-1 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
               >
-                {languageData?.doubleTaskBtn2}
+                {languageData?.homepageBtnNew1}
               </button>
             </Link>
-            <p className="saira text-center text-[14px] font-semibold">
-              <span className=" saira gradient-linkDouble text-[14px] font-semibold">5 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}
-            </p>
+
           </div>
         );
       case 2:
         return (
-          <div className="w-full max-w-[430px] px-1">
-            <p className="text-center text-[18px] font-semibold ">{languageData?.doubleBtnTitle}</p>
+          <div className="w-full px-1">
+
             <Link
               onClick={(e) => {
                 //e.preventDefault()
@@ -133,18 +129,16 @@ function Double({ languageData, user, PartnerURL, userCountry }) {
               <button
                 className={`saira  my-1   flex  w-full items-center  justify-center border-[#FFED63] bg-white text-[18px] font-semibold text-black ${design === "0" ? "rounded-[50px] border-[2px] bg-white py-1 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
               >
-                {languageData?.doubleTaskBtn3}
+                {languageData?.homepageBtnNew1}
               </button>
             </Link>
-            <p className="saira text-center text-[14px] font-semibold">
-              <span className=" saira gradient-linkDouble text-[14px] font-semibold">3 {languageData?.doubleBtnAway}</span> {languageData?.doubleBtnFrom}
-            </p>
+
           </div>
         );
       case 3:
         return (
-          <div className="w-full max-w-[430px] px-1">
-            <p className="text-center text-[18px] font-semibold ">{languageData?.doubleBtnTitle}</p>
+          <div className="w-full px-1">
+
             <Link
               onClick={(e) => {
                 //e.preventDefault()
@@ -156,7 +150,7 @@ function Double({ languageData, user, PartnerURL, userCountry }) {
               <button
                 className={`saira  my-1   flex  w-full items-center  justify-center border-[#FFED63] bg-white text-[18px] font-semibold text-black ${design === "0" ? "rounded-[50px] border-[2px] bg-white py-1 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
               >
-                {languageData?.doubleBtnEndTask}
+                {languageData?.homepageBtnNew1}
               </button>
             </Link>
           </div>
@@ -200,7 +194,7 @@ function Double({ languageData, user, PartnerURL, userCountry }) {
           </span>
           {languageData?.doubleSubtitle}
         </p>
-        <DoubleNewTask PartnerURL={PartnerURL} languageData={languageData} userCountry={userCountry} user={user} />
+        <DoubleNewTask lastTask={lastTask} getButtonMarkup={getButtonMarkup} PartnerURL={PartnerURL} languageData={languageData} userCountry={userCountry} user={user} />
         {/*
         <div className="m-auto block max-w-[600px] lg:hidden">
           {taskStatus !== null && (

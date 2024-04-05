@@ -696,11 +696,11 @@ body {
 
 @media screen and (max-height: 805px) and (min-width: 1200px) {
   .homepageLeftBlock {
-    max-width: 390px !important;
+    max-width: 360px !important;
   }
   .homepageLeftBlockTitle {
-    font-size: 20px !important;
-    width: 220px !important;
+    font-size: 18px !important;
+    width: 200px !important;
     line-height: 24px !important;
     right: 20px !important;
     margin-top: 50px !important;
@@ -713,8 +713,18 @@ body {
     margin-top: 75px !important;
   }
 }
-
+.inline-image {
+  display: inline-block;
+  width: 130px;
+  background-image: url("./images/NewDesign/Homepage/logoIm2.png");
+  background-size: cover;
+  vertical-align: middle;
+  margin-right: 5px;
+}
 @media screen and (max-width: 390px) {
+  .inline-image {
+    width: 55px;
+  }
   .homepageSE {
     margin-top: 0px !important;
   }
