@@ -85,9 +85,9 @@ function Auth({ languageData }) {
             <div className="z-10 m-auto w-[90%] lg:relative lg:w-[640px]">
               <div className="relative z-[10]  w-full rounded-[32px] border-[#DDBBFD] bg-opacity-20 pt-[1px] iphone:pt-[10px] lg:border-2 lg:bg-[#0D0D0D73] lg:px-10 lg:pb-5 lg:pt-10">
                 <div className=" lg:max-w-[600px]">
-                  <img className="logoLogin  m-auto mt-[-30px] w-[130px] lg:mt-0 lg:w-[250px]" src={logoCyber} alt="Logotype" />
+                  <img className="logoLogin  m-auto mt-[-30px] w-[100px] lg:mt-0 lg:w-[200px]" src={logoCyber} alt="Logotype" />
                   <p
-                    className={`h-[154px] w-full pb-2 text-center text-[20px] font-bold leading-7 text-white se:mt-[0px] lg:w-[100%] lg:text-left lg:text-[28px] lg:leading-9 ${language === "es" && "md:min-h-[210px]"} md:min-h-[180px]`}
+                    className={`h-[180px] w-full pb-2 text-center text-[20px] font-bold leading-7 text-white se:mt-[0px] lg:w-[100%] lg:text-left lg:text-[26px] lg:leading-9 ${language === "es" && "md:min-h-[210px]"} md:min-h-[240px]`}
                   >
                     {currentSlide === 0 && (
                       <>

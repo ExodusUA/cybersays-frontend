@@ -15,8 +15,7 @@ import point3 from "../../images/NewDesign/Homepage/point_3.png";
 import logoIM from "../../images/NewDesign/Homepage/logoIm2.png";
 import stepsDesk from "../../images/NewDesign/homepageStepDesk.svg";
 
-
-function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
+function Homepage({ user, PartnerURL, languageData, scrollToPage, userCountry }) {
   let swiperRef;
   const dataTitle = [
     {
@@ -66,7 +65,7 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
       case null:
       case undefined:
         return (
-          <Link to={PartnerURL} target="_blank">
+          <Link to={"/choose-promotions"}>
             <button
               onClick={(e) => handleEvent()}
               className={`saira    flex  w-full items-center justify-center border-[#FFED63] text-[18px] font-semibold text-black ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
@@ -78,7 +77,7 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
         );
       case 1:
         return (
-          <Link to={PartnerURL} target="_blank">
+          <Link to={"/choose-promotions"}>
             <button
               onClick={(e) => handleEvent()}
               className={`saira  flex   w-full  items-center justify-center border-[#FFED63] bg-white text-[18px] font-semibold text-black  ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-2 md:py-2"}`}
@@ -89,7 +88,7 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
         );
       case 2:
         return (
-          <Link to={PartnerURL} target="_blank">
+          <Link to={"/choose-promotions"}>
             <button
               onClick={(e) => handleEvent()}
               className={`saira   flex   w-full  items-center justify-center border-[#FFED63] bg-white text-[14px] font-semibold text-black lg:text-[18px]  ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-2 md:py-2"}`}
@@ -100,7 +99,7 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
         );
       case 3:
         return (
-          <Link to={PartnerURL} target="_blank">
+          <Link to={"/choose-promotions"}>
             <button
               onClick={(e) => handleEvent()}
               className={`saira  flex   w-full  items-center justify-center border-[#FFED63] bg-white text-[18px] font-semibold text-black ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-2 md:py-2"}`}
@@ -132,19 +131,22 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
         </div>
         <img className="relative  z-50 m-auto w-[170px] mac2:w-[170px] se:mb-[0px] se:w-[170px] iphone:mb-[-10px]  iphone:w-[240px] md:w-[320px]" src={design === "0" ? logoCyber : newlogoCyber} alt="logoCyber" />
         <div>
-          <div className="homepageSE contentHomepage mt-0 items-end  iphone2:mt-[30px] md:mt-[70px] md:items-center lg:flex">
+          <div className="homepageSE contentHomepage relative bottom-4  mt-0 items-end iphone2:mt-[30px] md:mt-[70px] md:items-center lg:flex">
             <div className="mb-2 flex w-full items-center lg:hidden">
               <div className=" text-center">
                 <div className="flex items-start">
-                  <img className="w-[17px] mr-2" src={point1} alt="point1" />
-                  <p className="saira text-[14px] font-semibold text-left">{languageData?.homepageNewPoint1}<img className="w-[75px] ml-2 inline-image" src={logoIM} alt="logoIM" /></p>
+                  <img className="mr-2 w-[17px]" src={point1} alt="point1" />
+                  <p className="saira text-left text-[14px] font-semibold">
+                    {languageData?.homepageNewPoint1}
+                    <img className="inline-image ml-2 w-[75px]" src={logoIM} alt="logoIM" />
+                  </p>
                 </div>
                 <div className="flex items-center ">
-                  <img className="w-[17px] mr-2" src={point2} alt="point2" />
+                  <img className="mr-2 w-[17px]" src={point2} alt="point2" />
                   <p className="saira text-[14px] font-semibold">{languageData?.homepageNewPoint2}</p>
                 </div>
-                <div className="flex items-center mt-[5px]">
-                  <img className="w-[17px] mr-2" src={point3} alt="point3" />
+                <div className="mt-[5px] flex items-center">
+                  <img className="mr-2 w-[17px]" src={point3} alt="point3" />
                   <p className="saira text-[14px] font-semibold">{languageData?.homepageNewPoint3}</p>
                 </div>
               </div>
@@ -249,7 +251,7 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
             <div
               className={`relative ${design === "0" ? " rounded-[24px] border-[#FFD700] lg:rounded-[32px]" : "  homepageMainBlock rounded-[16px] border-[#A2DBF0]"}  m-auto border-2 px-1 pb-1 pt-8  lg:m-[unset] lg:pt-0`}
             >
-              <div className="relative m-auto flex w-full max-w-[380px] items-center md:max-w-[470px] homepageLeftBlock">
+              <div className="homepageLeftBlock relative m-auto flex w-full max-w-[380px] items-center md:max-w-[470px]">
                 <img
                   className={`m-auto ${design === "0" ? "mt-[-25px] w-[380px] md:w-[470px] lg:mt-[10px]" : "mt-[-30px] w-[380px] md:mt-0 md:w-[470px]"}`}
                   src={design === "0" ? girlOK : require("../../images/NewDesign/Homepage/message2.png")}
@@ -257,27 +259,31 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
                 />
                 {/*<Link to={PartnerURL} target='_blank'><img className={`w-[160px] md:w-[240px] md:mt-5 mac:!mt-6 mb-10 ${design === '0' ? 'block' : 'hidden'}`} src={PartnerLogo} alt="PartnerLogo" /></Link>*/}
                 <p
-                  className={` saira absolute font-medium ${design === "0" ? "right-[20px] mt-[35px] w-[110px] text-[14px] leading-4 text-[#FFED63] iphone:right-[25px] lg:right-[40px] lg:mt-[90px] lg:w-[150px] lg:text-[20px] lg:leading-7 homepageLeftBlockTitle2" : `gradient-linkDouble right-[20px] mt-[10px] w-[200px] text-[18px] leading-5 iphone:right-[30px]  lg:mt-[60px] lg:w-[270px] lg:text-[22px] lg:leading-7 homepageLeftBlockTitle ${language === "es" ? "lg:right-[-35px] mac:!right-[-15px]" : 'lg:right-[20px]'}`}`}
+                  className={` saira absolute font-medium ${design === "0" ? "homepageLeftBlockTitle2 right-[20px] mt-[35px] w-[110px] text-[14px] leading-4 text-[#FFED63] iphone:right-[25px] lg:right-[40px] lg:mt-[90px] lg:w-[150px] lg:text-[20px] lg:leading-7" : `gradient-linkDouble homepageLeftBlockTitle right-[20px] mt-[10px] w-[200px] text-[18px] leading-5  iphone:right-[30px] lg:mt-[60px] lg:w-[270px] lg:text-[22px] lg:leading-7 ${language === "es" ? "mac:!right-[-15px] lg:right-[-35px]" : "lg:right-[20px]"}`}`}
                 >
                   {languageData?.homepageMessageTitle}
                 </p>
               </div>
               <div className=" relative ">{getButtonMarkup(lastTask)}</div>
             </div>
-            <div className="mb-4 ml-1 w-[200px] sm:w-[unset] md:mb-[unset] md:ml-10  hidden  lg:block">
+            <div className="mb-4 ml-1 hidden w-[200px] sm:w-[unset] md:mb-[unset]  md:ml-10  lg:block">
               <div className=" w-full max-w-[300px] items-center md:max-w-[560px]">
                 <div className="flex items-start">
-                  <img className="w-[33px] mr-2" src={point1} alt="point1" />
-                  <p className={`saira font-semibold ${language === "es" ? 'text-[22px]' : 'text-[24px]'}`}>{languageData?.homepageNewPoint1}<img className="w-[130px] ml-2 inline-image" src={logoIM} alt="logoIM" /></p>
-
+                  <img className="mr-2 w-[33px]" src={point1} alt="point1" />
+                  <p className={`saira font-semibold ${language === "es" ? "text-[22px]" : "text-[24px]"}`}>
+                    {languageData?.homepageNewPoint1}
+                    <br />
+                    {languageData?.homepageNewPoint1_1}
+                    <img className="inline-image ml-2 w-[130px]" src={logoIM} alt="logoIM" />
+                  </p>
                 </div>
-                <div className="flex items-center mt-[30px]">
-                  <img className="w-[33px] mr-2" src={point2} alt="point2" />
-                  <p className={`saira font-semibold ${language === "es" ? 'text-[22px]' : 'text-[24px]'}`}>{languageData?.homepageNewPoint2}</p>
+                <div className="mt-[30px] flex items-center">
+                  <img className="mr-2 w-[33px]" src={point2} alt="point2" />
+                  <p className={`saira font-semibold ${language === "es" ? "text-[22px]" : "text-[24px]"}`}>{languageData?.homepageNewPoint2}</p>
                 </div>
-                <div className="flex items-center mt-[50px]">
-                  <img className="w-[33px] mr-2" src={point3} alt="point3" />
-                  <p className={`saira font-semibold ${language === "es" ? 'text-[22px]' : 'text-[24px]'}`}>{languageData?.homepageNewPoint3}</p>
+                <div className="mt-[50px] flex items-center">
+                  <img className="mr-2 w-[33px]" src={point3} alt="point3" />
+                  <p className={`saira font-semibold ${language === "es" ? "text-[22px]" : "text-[24px]"}`}>{languageData?.homepageNewPoint3}</p>
                 </div>
               </div>
               {/*
@@ -318,7 +324,6 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
                         </div>
                         */}
             </div>
-
           </div>
           {/*
           <div className="flex items-start max-w-[320px] sm:max-w-[600px] w-full m-auto mt-2">
@@ -349,17 +354,28 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage }) {
             <p className="text-[12px] sm:text-[14px] saira font-extrabold text-center max-w-[100px]">{languageData?.homepageStep4}</p>
           </div>
           */}
-          <img className="max-w-[300px] sm:max-w-[500px] 2xl:max-w-[630px] w-full m-auto mt-1" src={stepsDesk} alt="stepsDesk" />
-          <div className="flex justify-between items-center sm:items-start 2xl:items-center max-w-[350px] sm:max-w-[550px] 2xl:max-w-[720px] w-full m-auto">
-            <p className="text-[12px] sm:text-[14px] 2xl:text-[24px] saira font-extrabold text-center w-[150px] sm:leading-4 2xl:leading-6 sm:pr-[20px] 2xl:pr-0">{languageData?.homepageStep1}</p>
-            <p className="text-[12px] sm:text-[14px] 2xl:text-[24px] saira font-extrabold text-center w-[200px] sm:leading-4 2xl:leading-6 pl-[10px] 2xl:pl-[30px]">{languageData?.homepageStep2}</p>
-            <p className="text-[12px] sm:text-[14px] 2xl:text-[24px] saira font-extrabold text-center w-[200px] sm:leading-4 2xl:leading-6 sm:pl-[20px]">{languageData?.homepageStep3}</p>
-            <p className="text-[12px] sm:text-[14px] 2xl:text-[24px] saira font-extrabold text-center w-[200px] sm:leading-4 2xl:leading-6 pl-[10px] sm:pl-[40px]">{languageData?.homepageStep4}</p>
+          <div className="relative bottom-2">
+            <img className="m-auto mt-1 w-full max-w-[300px] sm:max-w-[500px] 2xl:max-w-[630px]" src={stepsDesk} alt="stepsDesk" />
+            <div className="m-auto flex w-full max-w-[350px] items-center justify-between sm:max-w-[550px] sm:items-start 2xl:max-w-[720px] 2xl:items-center ">
+              <p className="saira w-[150px] text-center text-[12px] font-extrabold sm:pr-[20px] sm:text-[14px] sm:leading-4 2xl:pr-0 2xl:text-[24px] 2xl:leading-6">
+                {languageData?.homepageStep1}
+                {userCountry === "BR" || userCountry === "UA" ? " R$25" : " $5"}
+              </p>
+              <p className="saira w-[200px] pl-[10px] text-center text-[12px] font-extrabold sm:text-[14px] sm:leading-4 2xl:pl-[30px] 2xl:text-[24px] 2xl:leading-6">{languageData?.homepageStep2}</p>
+              <p className="saira w-[200px] text-center text-[12px] font-extrabold sm:pl-[20px] sm:text-[14px] sm:leading-4 2xl:text-[24px] 2xl:leading-6">
+                {languageData?.homepageStep3} {userCountry === "BR" || userCountry === "UA" ? " R$50" : " $10"}
+              </p>
+              <p className="saira w-[200px] pl-[10px] text-center text-[12px] font-extrabold sm:pl-[40px] sm:text-[14px] sm:leading-4 2xl:text-[24px] 2xl:leading-6">
+                {languageData?.homepageStep4} {userCountry === "BR" || userCountry === "UA" ? " R$100" : " $20"}
+              </p>
+            </div>
           </div>
         </div>
       </div>
       <div className="absolute left-1/2 m-auto flex w-full -translate-x-1/2 transform justify-center  se:bottom-[140px] iphone2:bottom-[156px] sm:bottom-[80px] md:bottom-[112px] ">
-        <TimeCounter title={languageData?.timeCounterTitle} left={"m-auto"} leftTitle={"text-center"} languageData={languageData} block={"hidden"} />
+        {
+          // <TimeCounter title={languageData?.timeCounterTitle} left={"m-auto"} leftTitle={"text-center"} languageData={languageData} block={"hidden"} />
+        }
       </div>
     </div>
   );
