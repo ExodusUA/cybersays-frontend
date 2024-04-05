@@ -87,7 +87,7 @@ function Auth({ languageData }) {
                 <div className=" lg:max-w-[600px]">
                   <img className="logoLogin  m-auto mt-[-30px] w-[100px] lg:mt-0 lg:w-[200px]" src={logoCyber} alt="Logotype" />
                   <p
-                    className={`h-[180px] w-full pb-2 text-center text-[20px] font-bold leading-7 text-white se:mt-[0px] lg:w-[100%] lg:text-left lg:text-[26px] lg:leading-9 ${language === "es" && "md:min-h-[210px]"} md:min-h-[240px]`}
+                    className={`h-[220px] w-full pb-2 text-center text-[20px] font-bold leading-7 text-white se:mt-[0px] lg:w-[100%] lg:text-left lg:text-[26px] lg:leading-9 ${language === "es" && "md:min-h-[210px]"} md:min-h-[240px]`}
                   >
                     {currentSlide === 0 && (
                       <>
