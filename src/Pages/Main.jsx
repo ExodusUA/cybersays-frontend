@@ -352,7 +352,7 @@ function Main({ languageData }) {
       let linkData = PartnerLinks.find((link) => link.CultureCode.indexOf(userCountry) !== -1);
       if (linkData === undefined) linkData = PartnerLinks.find((link) => link.CultureCode.indexOf("en") !== -1);
 
-      let link = `https://imlive.com/wmaster2.ashx?QueryID=197&WID=${linkData.CybersaysWid}&linkID=701&from=freevideo6&cbname=CyberSays&c=${linkData.CultureCode}&promocode=${userData?.id}`;
+      let link = `https://imlive.com/wmaster2.ashx?QueryID=197&WID=${linkData.CybersaysWid}&linkID=701&from=freevideo6&cbname=CyberSays&c=${linkData.CultureCode}&promocode=${userData?.id}&func=signup`;
 
       setPartnerURL(link);
     }

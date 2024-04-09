@@ -67,41 +67,41 @@ function Homepage({ user, PartnerURL, languageData, scrollToPage, userCountry })
       case null:
       case undefined:
         return (
-          <Link to={"/choose-promotions"}>
+          <Link to={PartnerURL} target="_blank">
             <button
               onClick={(e) => handleEvent()}
               className={`saira    flex  w-full items-center justify-center border-[#FFED63] text-[18px] font-semibold text-black ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-[6px] md:py-2"}`}
             >
-              {languageData?.homepageBtnNew1}
+              {languageData?.homepageBtnNew1} {userCountry === "BR" || userCountry === "UA" ? "R$25" : "$5"} {languageData?.homepageBtnNew1_1}
               {/*<img className="ml-1" src={doubleIcon} alt="doubleIcon" />*/}
             </button>
           </Link>
         );
       case 1:
         return (
-          <Link to={"/choose-promotions"}>
+          <Link to={PartnerURL} target="_blank">
             <button
               onClick={(e) => handleEvent()}
               className={`saira  flex   w-full  items-center justify-center border-[#FFED63] bg-white text-[18px] font-semibold text-black  ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-2 md:py-2"}`}
             >
-              {languageData?.homepageBtnNew1}
+              {languageData?.homepageBtnNew1} {userCountry === "BR" || userCountry === "UA" ? "R$25" : "$5"} {languageData?.homepageBtnNew1_1}
             </button>
           </Link>
         );
       case 2:
         return (
-          <Link to={"/choose-promotions"}>
+          <Link to={PartnerURL} target="_blank">
             <button
               onClick={(e) => handleEvent()}
               className={`saira   flex   w-full  items-center justify-center border-[#FFED63] bg-white text-[14px] font-semibold text-black lg:text-[18px]  ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-2 md:py-2"}`}
             >
-              {languageData?.homepageBtnNew1}
+              {languageData?.homepageBtnNew1} {userCountry === "BR" || userCountry === "UA" ? "R$25" : "$5"} {languageData?.homepageBtnNew1_1}
             </button>
           </Link>
         );
       case 3:
         return (
-          <Link to={"/choose-promotions"}>
+          <Link to={PartnerURL} target="_blank">
             <button
               onClick={(e) => handleEvent()}
               className={`saira  flex   w-full  items-center justify-center border-[#FFED63] bg-white text-[18px] font-semibold text-black ${design === "0" ? " rounded-[50px] border-[2px] bg-white py-2 se:py-[6px] md:py-3 " : "gradient-homepageBtn rounded-[12px] border-none py-2 se:py-2 md:py-2"}`}
